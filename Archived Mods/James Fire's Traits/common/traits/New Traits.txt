@@ -1,0 +1,197 @@
+trait_agrarian_adv = {
+	cost = 4
+	advanced_trait = yes
+	initial = no
+
+	randomized = no
+	opposites = { "trait_agrarian"}
+	allowed_archetypes = { BIOLOGICAL }
+	modifier = {
+		planet_jobs_food_produces_mult = 0.25
+	}
+}
+
+trait_thrifty_adv = {
+	cost = 4
+	advanced_trait = yes
+	initial = no
+
+	randomized = no
+	opposites = { "trait_thrifty" }
+	allowed_archetypes = { BIOLOGICAL }
+	modifier = {
+		planet_jobs_energy_produces_mult = 0.25
+	}
+}
+
+trait_industrious_adv = {
+	cost = 4
+	advanced_trait = yes 
+	initial = no
+
+	randomized = no
+	opposites = { "trait_industrious" }
+	allowed_archetypes = { BIOLOGICAL }
+	modifier = {
+		planet_jobs_minerals_produces_mult = 0.25
+	}
+}
+
+trait_genius_leader = {
+	cost = 4
+	allowed_archetypes = { BIOLOGICAL }
+	icon = "gfx/interface/icons/traits/trait_robot_logic_engines.dds"
+	advanced_trait = yes
+	randomized = no
+	initial = no
+	opposites = { "trait_slow_learners" "trait_talented" }
+	modifier = {
+		species_leader_exp_gain = 0.50
+		leader_skill_levels = 2
+		leaders_upkeep_mult = 1.00
+	}
+}
+
+trait_robot_adv_power_drills = {
+	cost = 2
+	initial = no
+
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	prerequisites = { tech_nano_robo_engineering }
+
+	modifier = {
+		planet_jobs_minerals_produces_mult = 0.20
+	}
+}
+
+trait_robot_adv_harvesters = {
+	cost = 2
+	initial = no
+
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	prerequisites = { tech_nano_robo_engineering }
+	
+	opposites = { trait_robot_harvesters }
+
+	modifier = {
+		planet_jobs_food_produces_mult = 0.20
+	}
+}
+
+trait_robot_efficient_programming = {
+	cost = 2
+	initial = no
+
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	prerequisites = { tech_nano_robo_engineering }
+	opposites = { trait_robot_efficient_processors }
+
+	modifier = {
+		planet_pops_upkeep_mult = -0.20
+	}
+}
+
+trait_robot_adv_logic_engines = {
+	cost = 4
+	initial = no
+
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	prerequisites = { tech_nano_robo_engineering }
+	opposites = { trait_robot_logic_engines }
+
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.1
+		planet_jobs_physics_research_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
+		leader_skill_levels = 1
+	}
+}
+
+trait_robot_adv_hardware = {
+	cost = 4
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	prerequisites = { "tech_nano_robo_engineering" }
+	opposites = { "trait_robot_adv_hardware_2" }
+
+	modifier = {
+		planet_jobs_produces_mult = 0.75
+		planet_pops_energy_upkeep_mult = 0.75
+		planet_pops_upkeep_mult = 0.25
+		leader_skill_levels = 4
+	}
+}
+
+trait_robot_adv_hardware_2 = {
+	cost = 7
+	initial = no
+	randomized = no
+	allowed_archetypes = { MACHINE ROBOT }
+	prerequisites = { "tech_nano_robo_engineering" }
+	opposites = { "trait_robot_adv_hardware" }
+
+	modifier = {
+		planet_jobs_produces_mult = 1.00
+		planet_pops_energy_upkeep_mult = 1.50
+		planet_pops_upkeep_mult = 0.5
+		leader_skill_levels = 7
+	}
+}
+
+trait_decentralized_nervous_sys = {
+	cost = 4
+	initial = no
+	randomized = no
+	allowed_archetypes = { BIOLOGICAL }
+	prerequisites = { "tech_nano_bio_engineering" }
+	opposites = { "trait_nerve_stapled" "trait_decentralized_nervous_sys_2" }
+
+	modifier = {
+		planet_jobs_produces_mult = 0.75
+		planet_pops_food_upkeep_mult = 0.75
+		planet_pops_upkeep_mult = 0.25
+		leader_skill_levels = 4
+	}
+}
+
+trait_decentralized_nervous_sys_2 = {
+	cost = 7
+	initial = no
+	randomized = no
+	allowed_archetypes = { BIOLOGICAL }
+	prerequisites = { "tech_nano_bio_engineering" }
+	opposites = { "trait_nerve_stapled" "trait_decentralized_nervous_sys" }
+
+	modifier = {
+		planet_jobs_produces_mult = 1.00
+		planet_pops_food_upkeep_mult = 1.50
+		planet_pops_upkeep_mult = 0.5
+		leader_skill_levels = 7
+	}
+}
+
+
+#Psionic
+
+trait_psi_amp = {
+	cost = 2
+	initial = no
+	randomized = no
+	allowed_archetypes = { BIOLOGICAL }
+	icon = "gfx/interface/icons/traits/trait_robot_logic_engines.dds"
+	prerequisites = { "tech_psionic_amps" }
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.1
+		planet_jobs_physics_research_produces_mult = 0.1
+		planet_jobs_society_research_produces_mult = 0.1
+		planet_jobs_energy_produces_mult = 0.20
+		planet_jobs_unity_produces_mult = 0.20
+		leader_skill_levels = 4
+	}
+}
+

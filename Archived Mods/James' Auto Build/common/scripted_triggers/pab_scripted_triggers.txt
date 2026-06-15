@@ -1,0 +1,1332 @@
+#TODO trigger is_have_all_growth is_have_unity is_have_special is_have_desposit
+
+
+
+is_disctrict_flag = {
+    if = {
+        limit = {
+            OR = {
+                has_planet_flag = "district_city_flag"
+                has_planet_flag = "district_hive_flag"
+                has_planet_flag = "district_nexus_flag"
+                has_planet_flag = "district_arcology_housing_flag"
+                has_planet_flag = "district_arcology_arms_industry_flag"
+                has_planet_flag = "district_arcology_civilian_industry_flag"
+                has_planet_flag = "district_arcology_leisure_flag"
+                has_planet_flag = "district_generator_flag"
+                has_planet_flag = "district_mining_flag"
+                has_planet_flag = "district_farming_flag"
+                has_planet_flag = "district_generator_uncapped_flag"
+                has_planet_flag = "district_mining_uncapped_flag"
+                has_planet_flag = "district_farming_uncapped_flag"
+                has_planet_flag = "district_hab_housing_flag"
+                has_planet_flag = "district_hab_energy_flag"
+                has_planet_flag = "district_hab_cultural_flag"
+                has_planet_flag = "district_hab_science_flag"
+                has_planet_flag = "district_hab_commercial_flag"
+            }
+        }
+    }
+}
+
+is_new_building_flag = {
+    if = {
+        limit = {
+            OR = {
+                has_planet_flag = "building_robot_assembly_plant_flag"
+                has_planet_flag = "building_nanite_transmuter_flag"
+                has_planet_flag = "building_ministry_production_flag"
+                has_planet_flag = "building_production_center_flag"
+                has_planet_flag = "building_chemical_plant_flag"
+                has_planet_flag = "building_crystal_plant_flag"
+                has_planet_flag = "building_refinery_flag"
+                has_planet_flag = "building_foundry_1_flag"
+                has_planet_flag = "building_factory_1_flag"
+                has_planet_flag = "building_machine_assembly_plant_flag"
+                has_planet_flag = "building_noble_estates_flag"
+                has_planet_flag = "building_bureaucratic_complex_flag"
+                has_planet_flag = "building_slave_processing_flag"
+                has_planet_flag = "building_precinct_house_flag"
+                has_planet_flag = "building_sentinel_posts_flag"
+                has_planet_flag = "building_psi_corps_flag"
+                has_planet_flag = "building_clone_vats_flag"
+                has_planet_flag = "building_mote_harvesters_flag"
+                has_planet_flag = "building_gas_extractors_flag"
+                has_planet_flag = "building_crystal_mines_flag"
+                has_planet_flag = "building_betharian_power_plant_flag"
+                has_planet_flag = "building_xeno_zoo_flag"
+                has_planet_flag = "building_military_academy_flag"
+                has_planet_flag = "building_stronghold_flag"
+                has_planet_flag = "building_planetary_shield_generator_flag"
+                has_planet_flag = "building_autochthon_monument_flag"
+                has_planet_flag = "building_temple_flag"
+                has_planet_flag = "building_hive_node_flag"
+                has_planet_flag = "building_uplink_node_flag"
+                has_planet_flag = "building_organic_sanctuary_flag"
+                has_planet_flag = "building_corporate_monument_flag"
+                has_planet_flag = "building_commercial_zone_flag"
+                has_planet_flag = "building_galactic_stock_exchange_flag"
+                has_planet_flag = "building_research_lab_1_flag"
+                has_planet_flag = "building_institute_flag"
+                has_planet_flag = "building_supercomputer_flag"
+                has_planet_flag = "building_hydroponics_farm_flag"
+                has_planet_flag = "building_food_processing_facility_flag"
+                has_planet_flag = "building_mineral_purification_plant_flag"
+                has_planet_flag = "building_energy_grid_flag"
+                has_planet_flag = "building_resource_silo_flag"
+                has_planet_flag = "building_bio_reactor_flag"
+                has_planet_flag = "building_luxury_residence_flag"
+                has_planet_flag = "building_communal_housing_flag"
+                has_planet_flag = "building_drone_storage_flag"
+                has_planet_flag = "building_hive_warren_flag"
+                has_planet_flag = "building_holo_theatres_flag"
+                has_planet_flag = "building_clinic_flag"
+                has_planet_flag = "building_maintenance_depot_flag"
+                has_planet_flag = "building_spawning_pool_flag"
+                has_planet_flag = "building_slave_huts_flag"
+                has_planet_flag = "building_overseer_homes_flag"
+            }
+        }
+    }
+}
+
+is_upgrade_building_flag = {
+    if = {
+        limit = {
+            OR = {
+                has_planet_flag = "building_foundry_2_flag"
+                has_planet_flag = "building_foundry_3_flag"
+                has_planet_flag = "building_factory_2_flag"
+                has_planet_flag = "building_factory_3_flag"
+                has_planet_flag = "building_paradise_dome_flag"
+                has_planet_flag = "building_communal_housing_large_flag"
+                has_planet_flag = "building_drone_megastorage_flag"
+                has_planet_flag = "building_expanded_warren_flag"
+                has_planet_flag = "building_hyper_entertainment_forum_flag"
+                has_planet_flag = "building_hospital_flag"
+                has_planet_flag = "building_capital_flag"
+                has_planet_flag = "building_mineral_purification_hub_flag"
+                has_planet_flag = "building_energy_nexus_flag"
+                has_planet_flag = "building_food_processing_center_flag"
+                has_planet_flag = "building_research_lab_2_flag"
+                has_planet_flag = "building_research_lab_3_flag"
+                has_planet_flag = "building_commercial_megaplex_flag"
+                has_planet_flag = "building_major_capital_flag"
+                has_planet_flag = "building_system_capital_flag"
+                has_planet_flag = "building_machine_capital_flag"
+                has_planet_flag = "building_machine_major_capital_flag"
+                has_planet_flag = "building_machine_system_capital_flag"
+                has_planet_flag = "building_hive_major_capital_flag"
+                has_planet_flag = "building_hab_major_capital_flag"
+                has_planet_flag = "building_resort_major_capital_flag"
+                has_planet_flag = "building_slave_major_capital_flag"
+                has_planet_flag = "building_hall_judgment_flag"
+                has_planet_flag = "building_fortress_flag"
+                has_planet_flag = "building_heritage_site_flag"
+                has_planet_flag = "building_hypercomms_forum_flag"
+                has_planet_flag = "building_autocurating_vault_flag"
+                has_planet_flag = "building_holotemple_flag"
+                has_planet_flag = "building_sacred_nexus_flag"
+                has_planet_flag = "building_citadel_of_faith_flag"
+                has_planet_flag = "building_hive_cluster_flag"
+                has_planet_flag = "building_hive_confluence_flag"
+                has_planet_flag = "building_network_junction_flag"
+                has_planet_flag = "building_system_conflux_flag"
+                has_planet_flag = "building_alpha_hub_flag"
+                has_planet_flag = "building_organic_paradise_flag"
+                has_planet_flag = "building_corporate_site_flag"
+                has_planet_flag = "building_corporate_forum_flag"
+                has_planet_flag = "building_corporate_vault_flag"
+            }
+        }
+    }
+}
+
+pab_can_build_capital = {
+    OR ={
+        AND = {
+            OR = {
+                has_building = "building_colony_shelter"
+                has_building = "building_deployment_post"
+                has_building = "building_hab_capital"
+                has_building = "building_resort_capital"
+                has_building = "building_slave_capital"
+            }
+            owner = { has_technology = tech_planetary_government }
+            num_pops >= 10
+        }
+        AND = {
+            OR = {
+                has_building = "building_capital"
+                has_building = "building_machine_capital"
+                has_building = "building_hive_capital"
+            }
+            owner = { has_technology = tech_colonial_centralization }
+            num_pops >= 40
+        }
+        AND = {
+            OR = {
+                has_building = "building_major_capital"
+                has_building = "building_machine_major_capital"
+            }
+            owner = { has_technology = tech_galactic_administration }
+            num_pops >= 80
+        }
+    }
+}
+
+pab_can_build_growth = {
+    free_building_slots > 0
+    OR = {
+        AND = {
+            owner = { has_ascension_perk = ap_engineered_evolution }
+            NOT = { has_building = building_clone_vats }
+        }
+        AND = {
+            owner = { is_hive_empire = yes }
+            NOT = { has_building = building_spawning_pool }
+        }
+        AND = {
+            owner = { is_machine_empire = yes }
+            NOT = { has_building = building_machine_assembly_plant }
+        }
+        AND = {
+            owner = { 
+                has_technology = tech_frontier_health 
+                is_gestalt = no
+            }
+            NOT = { has_building = building_clinic }
+            NOT = { has_building = building_hospital }
+        }
+        AND = {
+            owner = { 
+                has_technology = tech_robotic_workers 
+                NOT = { has_policy_flag = robots_outlawed }
+                is_gestalt = no
+            }
+            NOT = { has_building = building_robot_assembly_plant }
+        }
+    }
+}
+
+pab_can_build_unity = {
+    free_building_slots > 0
+    OR = {
+        AND = {
+            owner = { is_hive_empire = yes }
+            NOT = { has_building =  building_hive_node }
+            NOT = { has_building =  building_hive_cluster }
+            NOT = { has_building =  building_hive_confluence }
+        }
+        AND = {
+            owner = { is_machine_empire = yes }
+            NOT = { has_building =  building_uplink_node }
+            NOT = { has_building =  building_network_junction }
+            NOT = { has_building =  building_system_conflux }
+            NOT = { has_building =  building_alpha_hub }
+        }
+        AND = {
+            owner = { is_spiritualist = yes }
+            NOT = { has_building =  building_temple }
+            NOT = { has_building =  building_holotemple }
+            NOT = { has_building =  building_sacred_nexus }
+            NOT = { has_building =  building_citadel_of_faith }
+        }
+        AND = {
+            owner = { is_megacorp = yes }
+            NOT = { has_building =  building_corporate_monument }
+            NOT = { has_building =  building_corporate_site }
+            NOT = { has_building =  building_corporate_forum }
+            NOT = { has_building =  building_corporate_vault }
+        }
+        AND = {
+            owner = { 
+                is_megacorp = no
+                is_spiritualist = no
+                is_gestalt = no
+            }
+            NOT = { has_building =  building_autochthon_monument }
+            NOT = { has_building =  building_heritage_site }
+            NOT = { has_building =  building_hypercomms_forum }
+            NOT = { has_building =  building_autocurating_vault }
+        }
+    }
+}
+
+pab_can_build_housing = {
+    free_housing < 1 
+    free_district_slots > 0
+}
+
+pab_can_build_amenities = {
+    free_building_slots > 0
+    free_amenities <= 0 
+    OR = {
+        owner = { is_gestalt = yes }
+        has_technology = tech_holo_entertainment
+    }
+}
+
+pab_can_build_crime = {
+    free_building_slots > 0
+    planet_crime >=20 
+    OR = {
+        owner = {  has_technology = tech_planetary_government }
+        has_modifier = slave_colony
+    }
+}
+
+pab_can_build_resource_focus = {
+    free_building_slots > 0
+    OR = {
+        AND = {
+            has_planet_flag = "pab_mineral"
+            owner = { has_technology = tech_mineral_purification_1 }
+            NOT = { has_building =  building_mineral_purification_plant }
+            NOT = { has_building =  building_mineral_purification_hub }
+        }
+        AND = {
+            has_planet_flag = "pab_energy"
+            owner = { has_technology = tech_power_hub_1 }
+            NOT = { has_building =  building_energy_grid }
+            NOT = { has_building =  building_energy_nexus }
+        }
+        AND = {
+            has_planet_flag = "pab_food"
+            owner = { has_technology = tech_food_processing_1 }
+            NOT = { has_building =  building_food_processing_facility }
+            NOT = { has_building =  building_food_processing_center }
+        }
+    }
+}
+
+pab_can_build_manufacture_focus = {
+    free_building_slots > 0
+	OR = {
+		has_building = "building_major_capital"
+		has_building = "building_system_capital"
+		has_building = "building_machine_major_capital"
+		has_building = "building_machine_system_capital"
+		has_building = "building_hive_major_capital"
+	}
+    OR = {
+        AND = {
+            has_planet_flag = "pab_alloy"
+            owner = { has_technology = tech_global_production_strategy }
+            NOT = { has_building =  building_ministry_production }
+            NOT = { has_building =  building_production_center }
+        }
+        AND = {
+            has_planet_flag = "pab_consumer"
+            owner = { has_technology = tech_global_production_strategy }
+            NOT = { has_building =  building_ministry_production }
+            NOT = { has_building =  building_production_center }
+        }
+        AND = {
+            has_planet_flag = "pab_research"
+            owner = { has_technology = tech_global_research_initiative }
+            NOT = { has_building =  building_institute }
+            NOT = { has_building =  building_supercomputer }
+        }
+        AND = {
+            has_planet_flag = "pab_trade"
+            owner = { has_technology = tech_galactic_markets }
+            NOT = { has_building =  building_galactic_stock_exchange }
+        }
+    }
+}
+
+pab_can_build_focus_buildings = {
+    free_building_slots > 0
+    OR = {
+        AND = {
+            has_planet_flag = "pab_alloy"
+            owner = { has_technology = tech_basic_industry }
+        }
+        AND = {
+            has_planet_flag = "pab_consumer"
+            owner = { has_technology = tech_basic_industry }
+        }
+        AND = {
+            has_planet_flag = "pab_research"
+            owner = { has_technology = tech_basic_science_lab_1 }
+        }
+        AND = {
+            has_planet_flag = "pab_trade"
+            owner = { has_technology = tech_interplanetary_commerce }
+        }
+        AND = {
+            has_planet_flag = "pab_refinery"
+            owner = { 
+                OR = {
+                    has_technology = tech_exotic_gases 
+                    has_technology = tech_volatile_motes
+                    has_technology = tech_rare_crystals
+                }
+            }
+        }
+        AND = {
+            has_planet_flag = "pab_bastion"
+            owner = { has_technology = tech_planetary_defenses }
+        }
+    }
+}
+
+pab_can_build_mining_districts = {
+    OR = {
+        num_free_districts = { type = district_mining value > 0 }
+        AND = {
+            OR = {
+                is_planet_class = pc_hive
+                is_planet_class = pc_machine 
+            }
+            num_free_districts = { type = district_mining_uncapped value > 0 }
+        }
+    }
+    has_planet_flag = "pab_mineral"
+}
+
+pab_can_build_energy_districts = {
+    OR = {
+        num_free_districts = { type = district_generator value > 0 }
+        AND = {
+            OR = {
+                is_planet_class = pc_hive
+                is_planet_class = pc_machine 
+                is_planet_class = pc_ringworld_habitable
+            }
+            num_free_districts = { type = district_generator_uncapped value > 0 }
+        }
+    }
+    has_planet_flag = "pab_energy"
+}
+
+pab_can_build_food_districts = {
+    OR = {
+        num_free_districts = { type = district_farming value > 0 }
+        AND = {
+            OR = {
+                is_planet_class = pc_hive
+                is_planet_class = pc_ringworld_habitable
+            }
+            num_free_districts = { type = district_farming_uncapped value > 0 }
+        }
+    }
+    has_planet_flag = "pab_food"
+}
+
+pab_can_build_disctrict_focus = {
+    free_district_slots > 0 
+    OR = {
+        AND = {
+            OR = {
+                num_free_districts = { type = district_mining value > 0 }
+				AND = {
+					OR = {
+					    is_planet_class = pc_hive
+					    is_planet_class = pc_machine 
+					}
+					num_free_districts = { type = district_mining_uncapped value > 0 }
+				}
+            }
+            has_planet_flag = "pab_mineral"
+        }
+        AND = {
+            OR = {
+                num_free_districts = { type = district_generator value > 0 }
+				AND = {
+					OR = {
+					    is_planet_class = pc_hive
+					    is_planet_class = pc_machine 
+					    is_planet_class = pc_ringworld_habitable
+					}
+					num_free_districts = { type = district_generator_uncapped value > 0 }
+				}
+            }
+            has_planet_flag = "pab_energy"
+        }
+        AND = {
+            OR = {
+                num_free_districts = { type = district_farming value > 0 }
+				AND = {
+					OR = {
+					    is_planet_class = pc_hive
+					    is_planet_class = pc_ringworld_habitable
+					}
+					num_free_districts = { type = district_farming_uncapped value > 0 }
+				}
+            }
+            has_planet_flag = "pab_food"
+        }
+        AND = {
+            is_planet_class = pc_city
+            has_planet_flag = "pab_alloy"
+        }
+        AND = {
+            is_planet_class = pc_city
+            has_planet_flag = "pab_consumer"
+        }
+        AND = {
+            is_planet_class = pc_habitat
+            owner = { is_gestalt = yes }
+            has_planet_flag = "pab_energy"
+        }
+        AND = {
+            is_planet_class = pc_habitat
+            has_planet_flag = "pab_research"
+        }
+        AND = {
+            is_planet_class = pc_habitat
+            owner = { is_gestalt = no }
+            has_planet_flag = "pab_trade"
+        }
+    }
+}
+
+pab_can_build_desposit = {
+    free_building_slots > 0
+    OR = {
+        AND ={
+            OR = {
+                AND = {
+                    has_planet_flag = "mote_count_1"
+                    num_buildings = {
+                    type = building_mote_harvesters
+                    value < 1
+                    }
+                }
+                AND = {
+                    has_planet_flag = "mote_count_2"
+                    num_buildings = {
+                    type = building_mote_harvesters
+                    value < 2
+                    }
+                }
+                AND = {
+                    has_planet_flag = "mote_count_3"
+                    num_buildings = {
+                    type = building_mote_harvesters
+                    value < 3
+                    }
+                }
+            }
+            NOT = { has_modifier = resort_colony }
+            owner = { has_technology = tech_mine_volatile_motes }
+        }
+        AND ={
+            OR = {
+                AND = {
+                    has_planet_flag = "gas_count_1"
+                    num_buildings = {
+                    type = building_gas_extractors
+                    value < 1
+                    }
+                }
+                AND = {
+                    has_planet_flag = "gas_count_2"
+                    num_buildings = {
+                    type = building_gas_extractors
+                    value < 2
+                    }
+                }
+                AND = {
+                    has_planet_flag = "gas_count_3"
+                    num_buildings = {
+                    type = building_gas_extractors
+                    value < 3
+                    }
+                }
+            }
+            NOT = { has_modifier = resort_colony }
+            owner = { has_technology = tech_mine_exotic_gases }
+        }
+        AND ={
+            OR = {
+                AND = {
+                    has_planet_flag = "crystal_count_1"
+                    num_buildings = {
+                    type = building_crystal_mines
+                    value < 1
+                    }
+                }
+                AND = {
+                    has_planet_flag = "crystal_count_2"
+                    num_buildings = {
+                    type = building_crystal_mines
+                    value < 2
+                    }
+                }
+                AND = {
+                    has_planet_flag = "crystal_count_3"
+                    num_buildings = {
+                    type = building_crystal_mines
+                    value < 3
+                    }
+                }
+            }
+            NOT = { has_modifier = resort_colony }
+            owner = { has_technology = tech_mine_rare_crystals }
+        }
+        AND ={
+            NOT = { has_modifier = resort_colony }
+            has_deposit = d_betharian_deposit
+            NOT = { has_building = building_betharian_power_plant }
+            owner = { has_technology = tech_mine_betharian }
+        }
+        AND ={
+            has_deposit = d_alien_pets_deposit
+            NOT = { has_building = building_xeno_zoo }
+            owner = { 
+                is_regular_empire = yes 
+                has_technology = tech_alien_life_studies
+            }
+        }
+    }
+}
+
+pab_can_remove_blocker = {
+    OR = {
+        owner = {
+            has_policy_flag = pab_2000_mineral
+            has_resource = { type = energy amount >= 2000 }
+        }
+        owner = {
+            has_policy_flag = pab_5000_mineral
+            has_resource = { type = energy amount >= 5000 }
+        }
+        owner = {
+            has_policy_flag = pab_10000_mineral
+            has_resource = { type = energy amount >= 10000 }
+        }
+    }
+    OR = {
+        AND = {
+            any_deposit = {
+                is_deposit_type = d_dense_jungle
+            }
+            owner = { has_technology = tech_dense_jungle }
+        }
+        AND = {
+            any_deposit = {
+                is_deposit_type = d_toxic_kelp
+            }
+            owner = { has_technology = tech_toxic_kelp }
+        }
+        AND = {
+            any_deposit = {
+                is_deposit_type = d_deep_sinkhole
+            }
+            owner = { has_technology = tech_deep_sinkhole }
+        }
+        AND = {
+            any_deposit = {
+                is_deposit_type = d_quicksand_basin
+            }
+            owner = { has_technology = tech_quicksand_basin }
+        }
+        AND = {
+            any_deposit = {
+                is_deposit_type = d_noxious_swamp
+            }
+            owner = { has_technology = tech_noxious_swamp }
+        }
+        AND = {
+            any_deposit = {
+                is_deposit_type = d_massive_glacier
+            }
+            owner = { has_technology = tech_massive_glacier }
+        }
+        AND = {
+            any_deposit = {
+                is_deposit_type = d_dangerous_wildlife_blocker
+            }
+            owner = { has_technology = tech_dangerous_wildlife }
+        }
+        AND = {
+            any_deposit = {
+                is_deposit_type = d_mountain_range
+            }
+            owner = { has_technology = tech_mountain_range }
+        }
+        AND = {
+            any_deposit = {
+                is_deposit_type = d_active_volcano
+            }
+            owner = { has_technology = tech_volcano }
+        }
+        any_deposit = {
+            OR = {
+                is_deposit_type = d_infestation
+                is_deposit_type = d_quarantine_zone
+                is_deposit_type = d_slums
+                is_deposit_type = d_crater
+                is_deposit_type = d_dead_subterraneans
+                is_deposit_type = d_sinkhole_subterraneans
+                is_deposit_type = d_failing_infrastructure
+                is_deposit_type = d_decrepit_dwellings
+                is_deposit_type = d_tomb_world_ruins
+                is_deposit_type = d_tomb_world_wasteland
+                is_deposit_type = d_machine_empire_ruins
+                is_deposit_type = d_exterminators_ruins
+                is_deposit_type = d_former_battlefield
+                is_deposit_type = d_strip_mine
+                is_deposit_type = d_unsupervised_settlement
+                is_deposit_type = d_collapsed_burrows
+                is_deposit_type = d_assimilators_ruins
+                is_deposit_type = d_fungoid_extermination
+                is_deposit_type = d_exofungus_blocker
+                is_deposit_type = d_egg_cracking
+                is_deposit_type = d_radioactive_wasteland
+                is_deposit_type = d_bomb_crater
+                is_deposit_type = d_city_ruins
+                is_deposit_type = d_ruined_arcology
+            }
+        }
+    }
+}
+
+pab_can_replace_buildings = {
+    AND = {
+        free_building_slots < 1
+        OR = {
+            num_pops >= 75
+            AND = {
+                num_pops >= 70
+                owner = { 
+                    has_tradition = tr_diplomacy_insider_trading 
+                    OR = {
+                        has_valid_civic = civic_fanatic_purifiers
+                        has_valid_civic = civic_inwards_perfection
+                        is_hive_empire = yes
+                        has_valid_civic = civic_barbaric_despoilers
+                    }
+                }
+            }
+        }
+    }
+    OR = {
+        AND = {
+            planet_crime >= 20
+            OR = {
+                NOT = { has_building = building_precinct_house }
+                owner = { NOT = { has_technology =  tech_colonial_centralization } }
+            }
+        }
+        AND = {
+            free_amenities <= -5
+            OR = {
+                NOT = { has_building =  building_holo_theatres }
+                owner = { NOT = { has_technology =  tech_hyper_entertainment_forum } }
+            }
+        }
+    }
+}
+
+pab_can_replace_districts = {
+    free_district_slots < 1
+    AND = {
+        free_building_slots < 1
+        OR = {
+            num_pops >= 75
+            AND = {
+                num_pops >= 70
+                owner = { 
+                    has_tradition = tr_diplomacy_insider_trading 
+                    OR = {
+                        has_valid_civic = civic_fanatic_purifiers
+                        has_valid_civic = civic_inwards_perfection
+                        is_hive_empire = yes
+                        has_valid_civic = civic_barbaric_despoilers
+                    }
+                }
+            }
+        }
+    }
+    OR = {
+        AND = {
+            free_housing <= -3
+        }
+        AND = {
+            free_housing >= 10
+            OR = {
+                num_free_districts = { type = district_mining value > 0 }
+                is_planet_class = pc_hive
+                is_planet_class = pc_machine
+            }
+            has_planet_flag = pab_mineral
+        }
+        AND = {
+            free_housing >= 10
+            OR = {
+                num_free_districts = { type = district_generator value > 0 }
+                is_planet_class = pc_hive
+                is_planet_class = pc_machine
+                is_planet_class = pc_ringworld_habitable
+            }
+            has_planet_flag = pab_energy
+        }
+        AND = {
+            free_housing >= 10
+            OR = {
+                num_free_districts = { type = district_farming value > 0 }
+                is_planet_class = pc_hive
+                is_planet_class = pc_ringworld_habitable
+            }
+            has_planet_flag = pab_food
+        }
+    }
+}
+
+pab_can_upgrade_tier2 = {
+    NOT = { owner = { has_policy_flag = pab_upgrade_disabled }}
+    has_upgraded_capital = yes
+    OR = {
+        AND = {
+            OR = {
+                has_building = building_autochthon_monument
+                has_building = building_corporate_monument
+                has_building = building_uplink_node
+            }
+            owner = { has_technology = tech_heritage_site }
+        }
+        AND = {
+            has_building = building_temple
+            owner = { has_technology = tech_holographic_rituals }
+        }
+        AND = {
+            has_building = building_hive_node
+            owner = { has_technology = tech_hive_cluster }
+        }
+        AND = {
+            owner = { 
+                OR = {
+                    AND = {
+                        has_policy_flag = pab_2000_mineral 
+                        has_resource  = {type = exotic_gases amount >= 200 }
+                    }
+                    AND = {
+                        has_policy_flag = pab_5000_mineral 
+                        has_resource  = {type = exotic_gases amount >= 500 }
+                    }
+                    AND = {
+                        has_policy_flag = pab_10000_mineral 
+                        has_resource  = {type = exotic_gases amount >= 1000 }
+                    }
+                }
+            }
+            OR = {
+                AND = {
+                    has_planet_flag = pab_energy
+                    has_building = building_energy_grid
+                    NOT = { has_building = building_energy_nexus }
+                    owner = { has_technology = tech_power_hub_2 }
+                }
+                AND = {
+                    has_building = building_clinic
+                    NOT = { has_building = building_hospital }
+                    owner = { has_technology = tech_frontier_hospital }
+                }
+                AND = {
+                    has_planet_flag = pab_research
+                    has_building = building_research_lab_1
+                    owner = { has_technology = tech_basic_science_lab_2 }
+                }
+                AND = {
+                    free_amenities <= 0
+                    has_building = building_holo_theatres
+                    owner = { has_technology = tech_hyper_entertainment_forum }
+                }
+                AND = {
+                    planet_crime >= 20
+                    has_building = building_precinct_house
+                    owner = { has_technology = tech_colonial_centralization }
+                }
+            }
+        } #gas stuff
+        AND = {
+            owner = { 
+                OR = {
+                    AND = {
+                        has_policy_flag = pab_2000_mineral 
+                        has_resource  = {type = volatile_motes amount >= 200 }
+                    }
+                    AND = {
+                        has_policy_flag = pab_5000_mineral 
+                        has_resource  = {type = volatile_motes amount >= 500 }
+                    }
+                    AND = {
+                        has_policy_flag = pab_10000_mineral 
+                        has_resource  = {type = volatile_motes amount >= 1000 }
+                    }
+                }
+            }
+            OR = {
+                AND = {
+                    has_planet_flag = pab_mineral
+                    has_building = building_mineral_purification_plant
+                    NOT = { has_building = building_mineral_purification_hub }
+                    owner = { has_technology = tech_mineral_purification_2 }
+                }
+                AND = {
+                    has_planet_flag = pab_food
+                    has_building = building_food_processing_facility
+                    NOT = { has_building = building_food_processing_center }
+                    owner = { has_technology = tech_food_processing_2 }
+                }
+                AND = {
+                    has_planet_flag = pab_bastion
+                    has_building = building_stronghold
+                    owner = { has_technology = tech_global_defense_grid }
+                }
+                AND = {
+                    has_planet_flag = pab_alloy
+                    has_building = building_foundry_1
+                    owner = { has_technology = tech_alloys_1 }
+                }
+            }
+        } #mote stuff
+        AND = {
+            owner = { 
+                OR = {
+                    AND = {
+                        has_policy_flag = pab_2000_mineral 
+                        has_resource  = {type = rare_crystals amount >= 200 }
+                    }
+                    AND = {
+                        has_policy_flag = pab_5000_mineral 
+                        has_resource  = {type = rare_crystals amount >= 500 }
+                    }
+                    AND = {
+                        has_policy_flag = pab_10000_mineral 
+                        has_resource  = {type = rare_crystals amount >= 1000 }
+                    }
+                }
+            }
+            OR = {
+                AND = {
+                    has_planet_flag = pab_trade
+                    has_building = building_commercial_zone
+                    owner = { has_technology = tech_interstellar_economics }
+                }
+                AND = {
+                    has_planet_flag = pab_consumer
+                    has_building = building_factory_1
+                    owner = { has_technology = tech_luxuries_1 }
+                }
+            }
+        } #crystal stuff
+    }
+}
+
+pab_can_upgrade_tier3 = {
+    NOT = { owner = { has_policy_flag = pab_upgrade_disabled }}
+    has_major_upgraded_capital = yes
+    OR = {
+        AND = {
+            owner = { 
+                OR = {
+                    AND = {
+                        has_policy_flag = pab_2000_mineral 
+                        has_resource  = {type = rare_crystals amount >= 200 }
+                    }
+                    AND = {
+                        has_policy_flag = pab_5000_mineral 
+                        has_resource  = {type = rare_crystals amount >= 500 }
+                    }
+                    AND = {
+                        has_policy_flag = pab_10000_mineral 
+                        has_resource  = {type = rare_crystals amount >= 1000 }
+                    }
+                }
+            }
+            OR = {
+                AND = {
+                    has_planet_flag = pab_consumer
+                    has_building = building_factory_2
+                    owner = { has_technology = tech_luxuries_2 }
+                }
+                AND = {
+                    OR = {
+                        has_building = building_heritage_site
+                        has_building = building_network_junction
+                        has_building = building_corporate_site
+                    }
+                    owner = { has_technology = tech_hypercomms_forum }
+                }
+                AND = {
+                    has_building = building_holotemple
+                    owner = { has_technology = tech_consecration_fields }
+                }
+                AND = {
+                    has_building = building_hive_cluster
+                    owner = { has_technology = tech_hive_confluence }
+                }
+            }
+        }# crystal stuff
+        AND = {
+            owner = { 
+                OR = {
+                    AND = {
+                        has_policy_flag = pab_2000_mineral 
+                        has_resource  = {type = exotic_gases amount >= 200 }
+                    }
+                    AND = {
+                        has_policy_flag = pab_5000_mineral 
+                        has_resource  = {type = exotic_gases amount >= 500 }
+                    }
+                    AND = {
+                        has_policy_flag = pab_10000_mineral 
+                        has_resource  = {type = exotic_gases amount >= 1000 }
+                    }
+                }
+            }
+            OR = {
+                AND = {
+                    has_planet_flag = pab_research
+                    has_building = building_research_lab_2
+                    owner = { has_technology = tech_basic_science_lab_3 }
+                }
+            }
+        }#gas stuff
+        AND = {
+            owner = { 
+                OR = {
+                    AND = {
+                        has_policy_flag = pab_2000_mineral 
+                        has_resource  = {type = volatile_motes amount >= 200 }
+                    }
+                    AND = {
+                        has_policy_flag = pab_5000_mineral 
+                        has_resource  = {type = volatile_motes amount >= 500 }
+                    }
+                    AND = {
+                        has_policy_flag = pab_10000_mineral 
+                        has_resource  = {type = volatile_motes amount >= 1000 }
+                    }
+                }
+            }
+            OR = {
+                AND = {
+                    has_planet_flag = pab_alloy
+                    has_building = building_foundry_2
+                    owner = { has_technology = tech_alloys_2 }
+                }
+            }
+        }#mote stuff
+    }
+}
+
+pab_can_upgrade_tier4 = {
+    NOT = { owner = { has_policy_flag = pab_upgrade_disabled }}
+    has_fully_upgraded_capital = yes
+    AND = {
+        owner = { 
+            OR = {
+                AND = {
+                    has_policy_flag = pab_2000_mineral 
+                    has_resource  = {type = rare_crystals amount >= 200 }
+                }
+                AND = {
+                    has_policy_flag = pab_5000_mineral 
+                    has_resource  = {type = rare_crystals amount >= 500 }
+                }
+                AND = {
+                    has_policy_flag = pab_10000_mineral 
+                    has_resource  = {type = rare_crystals amount >= 1000 }
+                }
+            }
+        }
+        OR = {
+            AND = {
+                OR = {
+                    has_building = building_hypercomms_forum
+                    has_building = building_system_conflux
+                    has_building = building_corporate_forum
+                }
+                owner = { has_technology = tech_autocurating_vault }
+            }
+            AND = {
+                has_building = building_sacred_nexus
+                owner = { has_technology = tech_transcendent_faith }
+            }
+        }
+    }# crystal stuff
+}
+
+pab_can_delete_wrong_focus_buildings = {
+    owner = { has_policy_flag = pab_rebuild_enabled }
+    OR = {
+        AND = {
+            has_planet_flag = pab_alloy
+            OR = {
+                has_building = building_research_lab_1
+                has_building = building_research_lab_2
+                has_building = building_research_lab_3
+                has_building = building_institute
+                has_building = building_supercomputer
+
+                has_building = building_factory_1
+                has_building = building_factory_2
+                has_building = building_factory_3
+
+                has_building = building_commercial_zone
+                has_building = building_commercial_megaplex
+                has_building = building_galactic_stock_exchange
+
+                has_building = building_stronghold
+                has_building = building_fortress
+
+                has_building = building_chemical_plant
+                has_building = building_crystal_plant
+                has_building = building_refinery
+            }
+        }
+        AND = {
+            has_planet_flag = pab_consumer
+            OR = {
+                has_building = building_research_lab_1
+                has_building = building_research_lab_2
+                has_building = building_research_lab_3
+                has_building = building_institute
+                has_building = building_supercomputer
+
+                has_building = building_foundry_1
+                has_building = building_foundry_2
+                has_building = building_foundry_3
+
+                has_building = building_commercial_zone
+                has_building = building_commercial_megaplex
+                has_building = building_galactic_stock_exchange
+
+                has_building = building_stronghold
+                has_building = building_fortress
+
+                has_building = building_chemical_plant
+                has_building = building_crystal_plant
+                has_building = building_refinery
+            }
+        }
+        AND = {
+            has_planet_flag = pab_research
+            OR = {
+                has_building = building_factory_1
+                has_building = building_factory_2
+                has_building = building_factory_3
+                has_building = building_ministry_production
+                has_building = building_production_center
+
+                has_building = building_foundry_1
+                has_building = building_foundry_2
+                has_building = building_foundry_3
+
+                has_building = building_commercial_zone
+                has_building = building_commercial_megaplex
+                has_building = building_galactic_stock_exchange
+
+                has_building = building_stronghold
+                has_building = building_fortress
+
+                has_building = building_chemical_plant
+                has_building = building_crystal_plant
+                has_building = building_refinery
+            }
+        }
+        AND = {
+            has_planet_flag = pab_trade
+            OR = {
+                has_building = building_factory_1
+                has_building = building_factory_2
+                has_building = building_factory_3
+                has_building = building_ministry_production
+                has_building = building_production_center
+
+                has_building = building_foundry_1
+                has_building = building_foundry_2
+                has_building = building_foundry_3
+
+                has_building = building_research_lab_1
+                has_building = building_research_lab_2
+                has_building = building_research_lab_3
+                has_building = building_institute
+                has_building = building_supercomputer
+
+                has_building = building_stronghold
+                has_building = building_fortress
+
+                has_building = building_chemical_plant
+                has_building = building_crystal_plant
+                has_building = building_refinery
+            }
+        }
+        AND = {
+            has_planet_flag = pab_refinery
+            OR = {
+                has_building = building_factory_1
+                has_building = building_factory_2
+                has_building = building_factory_3
+                has_building = building_ministry_production
+                has_building = building_production_center
+
+                has_building = building_foundry_1
+                has_building = building_foundry_2
+                has_building = building_foundry_3
+
+                has_building = building_research_lab_1
+                has_building = building_research_lab_2
+                has_building = building_research_lab_3
+                has_building = building_institute
+                has_building = building_supercomputer
+
+                has_building = building_stronghold
+                has_building = building_fortress
+
+                has_building = building_commercial_zone
+                has_building = building_commercial_megaplex
+                has_building = building_galactic_stock_exchange
+            }
+        }
+        AND = {
+            has_planet_flag = pab_bastion
+            OR = {
+                has_building = building_factory_1
+                has_building = building_factory_2
+                has_building = building_factory_3
+                has_building = building_ministry_production
+                has_building = building_production_center
+
+                has_building = building_foundry_1
+                has_building = building_foundry_2
+                has_building = building_foundry_3
+
+                has_building = building_research_lab_1
+                has_building = building_research_lab_2
+                has_building = building_research_lab_3
+                has_building = building_institute
+                has_building = building_supercomputer
+
+                has_building = building_chemical_plant
+                has_building = building_crystal_plant
+                has_building = building_refinery
+
+                has_building = building_commercial_zone
+                has_building = building_commercial_megaplex
+                has_building = building_galactic_stock_exchange
+            }
+        }
+        AND = {
+            has_planet_flag = pab_food
+            OR = {
+                has_building = building_energy_grid
+                has_building = building_energy_nexus
+
+                has_building = building_mineral_purification_plant
+                has_building = building_mineral_purification_hub
+            }
+        }
+        AND = {
+            has_planet_flag = pab_energy
+            OR = {
+                has_building = building_food_processing_facility
+                has_building = building_food_processing_center
+
+                has_building = building_mineral_purification_plant
+                has_building = building_mineral_purification_hub
+            }
+        }
+        AND = {
+            has_planet_flag = pab_mineral
+            OR = {
+                has_building = building_food_processing_facility
+                has_building = building_food_processing_center
+
+                has_building = building_energy_grid
+                has_building = building_energy_nexus
+            }
+        }
+    }
+}
+
+pab_can_delete_wrong_focus_district = {
+    owner = { has_policy_flag = pab_rebuild_enabled }
+    OR = {
+        AND = {
+            NOT = { has_planet_flag = pab_mineral }
+            OR = {
+                num_districts = {
+                    type = district_mining
+                    value > 0
+                }
+                num_districts = {
+                    type = district_mining_uncapped
+                    value > 0
+                }
+            }
+        }
+        AND = {
+            NOT = { has_planet_flag = pab_energy }
+            OR = {
+                num_districts = {
+                    type = district_generator
+                    value > 0
+                }
+                num_districts = {
+                    type = district_generator_uncapped
+                    value > 0
+                }
+                num_districts = {
+                    type = district_hab_energy
+                    value > 0
+                }
+            }
+        }
+        AND = {
+            NOT = { has_planet_flag = pab_food }
+            OR = {
+                num_districts = {
+                    type = district_farming
+                    value > 0
+                }
+                num_districts = {
+                    type = district_farming_uncapped
+                    value > 0
+                }
+            }
+        }
+        AND = {
+            NOT = { has_planet_flag = pab_research }
+            OR = {
+                num_districts = {
+                    type = district_hab_science
+                    value > 0
+                }
+            }
+        }
+        AND = {
+            NOT = { has_planet_flag = pab_alloy }
+            OR = {
+                num_districts = {
+                    type = district_arcology_arms_industry
+                    value > 0
+                }
+            }
+        }
+        AND = {
+            NOT = { has_planet_flag = pab_consumer }
+            OR = {
+                num_districts = {
+                    type = district_arcology_civilian_industry
+                    value > 0
+                }
+            }
+        }
+        AND = {
+            NOT = { has_planet_flag = pab_trade }
+            OR = {
+                num_districts = {
+                    type = district_hab_commercial
+                    value > 0
+                }
+            }
+        }
+    }
+}

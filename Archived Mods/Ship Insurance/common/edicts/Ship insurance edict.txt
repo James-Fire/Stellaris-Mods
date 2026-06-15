@@ -1,0 +1,52 @@
+@PolicyTerm = 3600
+
+@Insured1 = 100
+@Insured2 =	300
+@Insured3 =	500
+@Insured4 =	1000
+@Insured5 =	1500
+@Insured6 =	2000
+@Insured7 =	2500
+@Insured8 = 3000
+@Insured9 = 3500
+@Insured10 = 4000
+@Insured11 = 4500
+@Insured12 = 5000
+@Insured13 = 5500
+@Insured14 = 6000
+@Insured15 = 6500
+@Insured16 = 7000
+@Insured17 = 7500
+@Insured18 = 8000
+@Insured19 = 8500
+@Insured20 = 9000
+@Insured21 = 9500
+@Insured22 = 10000
+
+country_edict = {
+	name = "ship_insurance"
+	length = 0
+	cost = { energy = @Insured1 }
+	edict_cap_usage = 1
+	
+	allow = {
+		fleet_power > 1000
+		NOT = { has_valid_civic = civic_fanatic_purifiers }
+		NOT = { has_valid_civic = civic_hive_devouring_swarm }
+		NOT = { has_valid_civic = civic_machine_terminator }
+		AND = {
+			OR = {
+				is_gestalt = yes
+				has_ethic = ethic_authoritarian
+			}
+			num_communications > 0
+		}		
+	}
+	
+	effect = {
+		apply_insurance_modifier = yes
+		set_country_flag = has_insurance
+	}
+	modifier = {
+	}
+}

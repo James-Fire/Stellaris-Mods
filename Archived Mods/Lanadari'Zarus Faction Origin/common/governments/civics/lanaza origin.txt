@@ -1,0 +1,34 @@
+origin_lanaza = {
+	is_origin = yes
+	#icon = "gfx/interface/icons/origins/origin_autofab.dds"
+	#picture = GFX_origin_autofab
+	description = "origin_tooltip_lanaza_effects"
+
+	playable = {
+		always = yes
+	}
+	
+	potential = {
+		always = yes
+	}
+	possible = {
+		always = yes
+		civics = {
+			NOT = {
+				#value = civic_agrarian_idyll
+			}
+		}
+	}
+	traits = {
+		trait = trait_lanaza_habitability
+	}
+	random_weight = {
+		base = 0
+		modifier = {
+			factor = 0
+			always = yes
+		}
+	}
+	modifier = {
+	}
+}

@@ -1,0 +1,2871 @@
+ring_world_1 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = yes
+	prerequisites = { "tech_ring_world" }
+
+	build_time = @ukn_ringworld_p0_build_time_default
+	resources = {
+		category = ukn_megastructure_site
+		cost = {
+			influence = @ukn_ringworld_p0_cost_influence_default
+			unity = @ukn_ringworld_p0_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p0_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p0_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p0_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p0_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p0_upkeep_energy_default
+		}
+	}
+#######################
+
+	potential = {
+		OR = {
+			AND = {
+				NOT = { has_global_flag = gigastructures_enabled }
+			}
+			AND = {
+				has_global_flag = gigastructures_enabled
+				NOT = { has_global_flag = vanilla_ringworld_disabled }
+				OR = {
+					check_variable = { which = giga_vanilla_ringworld_cap value = 0 }						# No Cap
+					check_variable = { which = giga_current_vanilla_ringworld value < giga_vanilla_ringworld_cap }
+				}
+			}
+		}
+	}
+	
+	possible = {
+		custom_tooltip = { fail_text = "requires_inside_border"						is_inside_border = from }
+		custom_tooltip = { fail_text = "requires_surveyed_system"					giga_system_is_surveyed = yes }
+		custom_tooltip = { fail_text = "requires_no_habitable_planets"				giga_any_hab_planets = no }
+		custom_tooltip = { fail_text = "requires_no_binary_trinary"					giga_is_bitrinary = no }
+		custom_tooltip = { fail_text = "requires_no_existing_megastructure"			has_no_non_gate_megastructure = yes }
+		custom_tooltip = { fail_text = "requires_no_crisis_system"					NOT = { any_system_planet = { has_planet_flag = crisis_vital_planet } } }
+		custom_tooltip = {
+			fail_text = "requires_not_capped"
+			from = {
+				OR = {
+					check_variable = { which = giga_vanilla_ringworld_cap value = 0 }						# No Cap
+					check_variable = { which = giga_current_vanilla_ringworld value < giga_vanilla_ringworld_cap }
+				}
+			}
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = { fail_text = "must_build_around_star"					is_star = yes }
+			custom_tooltip = { fail_text = "requires_no_anomaly"					has_anomaly = no }
+			custom_tooltip = { fail_text = "requires_planets_for_material"			hidden:solar_system = { any_system_planet = { NOT = { is_star = yes } } } }
+			custom_tooltip = { fail_text = "requires_standard_planet_class"			giga_is_standard_star = yes }
+		}
+	}
+
+	ai_weight = {
+		weight = 300	# Default = 100
+
+		# Can we afford the upkeep
+
+		# Do we want the production
+
+		# Is this system a good location?
+		modifier = { factor = 0.1	any_neighbor_system = { exists = owner NOT = { owner = { is_same_value = from } } } }
+		modifier = { factor = 0.5	any_neighbor_system = { any_neighbor_system = { exists = owner NOT = { owner = { is_same_value = from } } } } }
+
+		# Do we lean towards this from federation/ethic/civic?
+
+		# How many of this megastructure can the AI build?
+		modifier = { factor = 0.00 from = { has_country_flag = has_recently_built_vanilla_ring } }
+		modifier = { factor = 0.00	from = { check_variable = { which = completed_ringworlds value > 1 } } }
+		modifier = { factor = 0.25	from = { check_variable = { which = completed_ringworlds value = 1 } } }
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					has_country_flag = giga_started_ringworld
+					has_country_flag = giga_started_t_ringworld
+					has_country_flag = giga_started_b_ringworld
+					has_country_flag = giga_started_g_ringworld
+				}
+			}
+		}
+	}
+
+	on_build_complete = {
+		set_star_flag = ring_world_built
+		set_variable = { which = ring_segments value = 0 }
+		from = {
+			set_timed_country_flag = { flag = has_recently_built_vanilla_ring years = 20 }
+			set_country_flag = giga_started_ringworld
+			change_variable = { which = giga_current_vanilla_ringworld value = 1 }
+		}
+		fromfrom.planet = {
+			if = { limit = { exists = orbital_station } orbital_station = { dismantle = yes } }
+			set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+			set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+		}
+	}
+}
+
+
+ring_world_2_intermediate = {
+	entity = ""
+	construction_entity = "vanilla_full_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_1 }
+	prerequisites = { "tech_ring_world" }
+
+	build_time = @ukn_ringworld_p1_build_time_default
+	resources = {
+		category = ukn_megastructure_frame
+		cost = {
+			unity = @ukn_ringworld_p1_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p1_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p1_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_p1_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_p1_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_p1_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p1_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p1_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p1_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+
+	on_build_start = {
+		if = {
+			limit = {
+				from = {
+					NOR = {
+						graphical_culture = arthropoid_01
+						graphical_culture = avian_01
+						graphical_culture = fungoid_01
+						graphical_culture = humanoid_01
+						graphical_culture = mammalian_01
+						graphical_culture = molluscoid_01
+						graphical_culture = plantoid_01
+						graphical_culture = reptilian_01
+						graphical_culture = lithoid_01
+						graphical_culture = necroid_01
+					}
+				}
+			}
+			fromfrom = { 
+				set_graphical_culture = mammalian_01
+			}
+		}
+		else = {
+			fromfrom = {
+				set_graphical_culture = root.from
+			}
+		}
+	}
+
+	on_build_complete = {
+		giga_remove_system_planets = yes
+		ukn_remove_system_debris = yes
+		set_asteroid_belt = { radius = 0 }
+		remove_megastructure = fromfrom
+		spawn_megastructure = {
+			name = "NAME_Ring_Section_A"
+			type = "ring_world_2_a"
+			orbit_angle = 0
+			orbit_distance = 45
+			owner = from
+			graphical_culture = fromfrom
+			planet = star
+		}
+		spawn_megastructure = {
+			name = "NAME_Ring_Section_B"
+			type = "ring_world_2_b"
+			orbit_angle = 90
+			orbit_distance = 45
+			owner = from
+			graphical_culture = fromfrom
+			planet = star
+		}
+		spawn_megastructure = {
+			name = "NAME_Ring_Section_C"
+			type = "ring_world_2_c"
+			orbit_angle = 180
+			orbit_distance = 45
+			owner = from
+			graphical_culture = fromfrom
+			planet = star
+		}
+		spawn_megastructure = {
+			name = "NAME_Ring_Section_D"
+			type = "ring_world_2_d"
+			orbit_angle = 270
+			orbit_distance = 45
+			owner = from
+			graphical_culture = fromfrom
+			planet = star
+		}
+	}
+}
+##################################|
+
+
+ring_world_3_intermediate_dummy_text = {
+	entity = ""
+	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_2_intermediate }
+	prerequisites = { "tech_ring_world" }
+	
+	build_time = @ukn_ringworld_p2_build_time_default
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			unity = @ukn_ringworld_p2_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p2_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p2_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_p2_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_p2_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_p2_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p2_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p2_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p2_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	potential = {
+		NOT = { has_technology = tech_ring_world }
+	}
+}
+#[COMPLETE] Habitable Ringworld
+ring_world_4_habitable_dummy_text = {
+	entity = ""
+#	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_3_intermediate_dummy_text }
+	prerequisites = { "tech_ring_world" }
+	
+	build_time = @ukn_ringworld_p3_city_build_time_default
+	resources = {
+		category = ukn_megastructure_habitable
+		cost = {
+			unity = @ukn_ringworld_p3_city_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p3_city_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_city_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_city_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_city_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p3_city_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p3_city_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	potential = {
+		NOT = { has_technology = tech_ring_world }
+	}
+}
+
+#[COMPLETE] Habitable Ringworld
+ring_world_4_complete_dummy_text = {
+	entity = ""
+#	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_4_habitable_dummy_text }
+	prerequisites = { "tech_ring_world" }
+	show_prereqs = yes
+
+	build_time = 47400
+	resources = {
+		category = megastructures
+		cost = {
+			influence = @ukn_ringworld_p0_cost_influence_default
+			unity = @ukn_ringworld_p0_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p0_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p0_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p0_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p0_cost_ukn_causalitons_default
+		}
+		cost = {
+			unity = @ukn_ringworld_p1_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p1_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p1_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_p1_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_p1_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_p1_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p1_cost_ukn_causalitons_default
+		}
+		cost = {
+			unity = @ukn_ringworld_p2_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p2_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p2_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_p2_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_p2_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_p2_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p2_cost_ukn_causalitons_default
+		}
+		cost = {
+			unity = @ukn_ringworld_p2_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p2_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p2_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_p2_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_p2_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_p2_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p2_cost_ukn_causalitons_default
+		}
+		cost = {
+			unity = @ukn_ringworld_p2_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p2_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p2_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_p2_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_p2_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_p2_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p2_cost_ukn_causalitons_default
+		}
+		cost = {
+			unity = @ukn_ringworld_p2_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p2_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p2_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_p2_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_p2_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_p2_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p2_cost_ukn_causalitons_default
+		}
+		cost = {
+			unity = @ukn_ringworld_p3_city_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p3_city_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_city_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_city_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_city_cost_ukn_causalitons_default
+		}
+		cost = {
+			unity = @ukn_ringworld_p3_city_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p3_city_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_city_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_city_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_city_cost_ukn_causalitons_default
+		}
+		cost = {
+			unity = @ukn_ringworld_p3_city_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p3_city_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_city_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_city_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_city_cost_ukn_causalitons_default
+		}
+		cost = {
+			unity = @ukn_ringworld_p3_city_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p3_city_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_city_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_city_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_city_cost_ukn_causalitons_default
+		}
+	}
+#######################
+
+	potential = {
+		NOT = { has_technology = tech_ring_world }
+	}
+}
+
+
+ring_world_2_a = {
+	entity = "vanilla_quarter_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_2_intermediate }
+	upgrade_desc = hide
+	potential = { always = no }
+}
+ring_world_2_b = {
+	entity = "vanilla_quarter_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_2_intermediate }
+	upgrade_desc = hide
+	potential = { always = no }
+}
+ring_world_2_c = {
+	entity = "vanilla_quarter_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_2_intermediate }
+	upgrade_desc = hide
+	potential = { always = no }
+}
+ring_world_2_d = {
+	entity = "vanilla_quarter_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_2_intermediate }
+	upgrade_desc = hide
+	potential = { always = no }
+}
+
+
+#[0-DEGREE] Quadrant
+ring_world_3_a_intermediate = {
+	entity = ""
+	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_2_a }
+	upgrade_desc = hide
+	prerequisites = { "tech_ring_world" }
+	prereq_name = "RING_WORLD_SHOW_NAME"
+	
+	build_time = @ukn_ringworld_p2_build_time_default
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			unity = @ukn_ringworld_p2_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p2_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p2_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_p2_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_p2_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_p2_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p2_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p2_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p2_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+#		from = { set_country_flag = has_built_or_repaired_megastructure	# Backup }
+
+#[+0-DEGREE] Support ("Seam") Section
+		spawn_planet = {
+			class = "pc_ringworld_seam"
+			location = fromfrom
+			init_effect = {
+				set_name = "Support Section"
+				set_planet_entity = {
+					entity = "vanilla_seam_entity"
+					graphical_culture = root.from
+				}
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+			}
+		}
+		remove_megastructure = fromfrom
+		
+#[+30-DEGREE] Support ("Tech") Section
+		spawn_megastructure = {
+			name = "Support Section"
+			type = "ring_world_3_tech"
+			orbit_angle = 30
+			orbit_distance = 45
+			owner = from
+			graphical_culture = fromfrom
+		}
+		if = {
+			limit = { owner = { UKN_USES_TERRESTRIAL_SECTIONS = yes } }
+#[-30-DEGREE] Uninhabitable ("Terrestrial") Section
+			spawn_megastructure = {
+				name = "Terrestrial Ring Section A"
+				type = "ring_world_3_uninhabitable_default"
+				orbit_angle = 330
+				orbit_distance = 45
+				owner = from
+				graphical_culture = fromfrom
+			}
+		}
+		if = {
+			limit = { owner = { UKN_USES_DESOLATE_SECTIONS = yes } }
+#[-30-DEGREE] Uninhabitable ("Desolate") Section
+			spawn_megastructure = {
+				name = "Desolate Ring Section A"
+				type = "ring_world_3_uninhabitable_machine"
+				orbit_angle = 330
+				orbit_distance = 45
+				owner = from
+				graphical_culture = fromfrom
+			}
+		}
+	}
+}
+#[90-DEGREE] Quadrant
+ring_world_3_b_intermediate = {
+	entity = ""
+	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_2_b }
+	upgrade_desc = hide
+	prerequisites = { "tech_ring_world" }
+	prereq_name = "RING_WORLD_SHOW_NAME"
+	
+	build_time = @ukn_ringworld_p2_build_time_default
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			unity = @ukn_ringworld_p2_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p2_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p2_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_p2_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_p2_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_p2_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p2_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p2_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p2_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+#		from = { set_country_flag = has_built_or_repaired_megastructure	# Backup }
+
+#[+0-DEGREE] Support ("Seam") Section
+		spawn_planet = {
+			class = "pc_ringworld_seam"
+			location = fromfrom
+			init_effect = {
+				set_name = "Support Section"
+				set_planet_entity = {
+					entity = "vanilla_seam_entity"
+					graphical_culture = root.from
+				}
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+			}
+		}
+		remove_megastructure = fromfrom
+
+#[+30-DEGREE] Support ("Tech") Section
+		spawn_megastructure = {
+			name = "Support Section"
+			type = "ring_world_3_tech"
+			orbit_angle = 120
+			orbit_distance = 45
+			owner = from
+			graphical_culture = fromfrom
+		}
+		if = {
+			limit = { owner = { UKN_USES_TERRESTRIAL_SECTIONS = yes } }
+#[-30-DEGREE] Uninhabitable ("Terrestrial") Section
+			spawn_megastructure = {
+				name = "Terrestrial Ring Section B"
+				type = "ring_world_3_uninhabitable_default"
+				orbit_angle = 60
+				orbit_distance = 45
+				owner = from
+				graphical_culture = fromfrom
+			}
+		}
+		if = {
+			limit = { owner = { UKN_USES_DESOLATE_SECTIONS = yes } }
+#[-30-DEGREE] Uninhabitable ("Desolate") Section
+			spawn_megastructure = {
+				name = "Desolate Ring Section B"
+				type = "ring_world_3_uninhabitable_machine"
+				orbit_angle = 60
+				orbit_distance = 45
+				owner = from
+				graphical_culture = fromfrom
+			}
+		}
+	}
+}
+#[180-DEGREE] Quadrant
+ring_world_3_c_intermediate = {
+	entity = ""
+	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_2_c }
+	upgrade_desc = hide
+	prerequisites = { "tech_ring_world" }
+	prereq_name = "RING_WORLD_SHOW_NAME"
+	
+	build_time = @ukn_ringworld_p2_build_time_default
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			unity = @ukn_ringworld_p2_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p2_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p2_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_p2_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_p2_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_p2_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p2_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p2_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p2_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+#		from = { set_country_flag = has_built_or_repaired_megastructure	# Backup }
+
+#[+0-DEGREE] Support ("Seam") Section
+		spawn_planet = {
+			class = "pc_ringworld_seam"
+			location = fromfrom
+			init_effect = {
+				set_name = "Support Section"
+				set_planet_entity = {
+					entity = "vanilla_seam_entity"
+					graphical_culture = root.from
+				}
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+			}
+		}
+		remove_megastructure = fromfrom
+
+#[+30-DEGREE] Support ("Tech") Section
+		spawn_megastructure = {
+			name = "Support Section"
+			type = "ring_world_3_tech"
+			orbit_angle = 210
+			orbit_distance = 45
+			owner = from
+			graphical_culture = fromfrom
+		}
+		if = {
+			limit = { owner = { UKN_USES_TERRESTRIAL_SECTIONS = yes } }
+#[-30-DEGREE] Uninhabitable ("Terrestrial") Section
+			spawn_megastructure = {
+				name = "Terrestrial Ring Section C"
+				type = "ring_world_3_uninhabitable_default"
+				orbit_angle = 150
+				orbit_distance = 45
+				owner = from
+				graphical_culture = fromfrom
+			}
+		}
+		if = {
+			limit = { owner = { UKN_USES_DESOLATE_SECTIONS = yes } }
+#[-30-DEGREE] Uninhabitable ("Desolate") Section
+			spawn_megastructure = {
+				name = "Desolate Ring Section C"
+				type = "ring_world_3_uninhabitable_machine"
+				orbit_angle = 150
+				orbit_distance = 45
+				owner = from
+				graphical_culture = fromfrom
+			}
+		}
+	}
+}
+#[270-DEGREE] Quadrant
+ring_world_3_d_intermediate = {
+	entity = ""
+	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_2_d }
+	upgrade_desc = hide
+	prerequisites = { "tech_ring_world" }
+	prereq_name = "RING_WORLD_SHOW_NAME"
+	
+	build_time = @ukn_ringworld_p2_build_time_default
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			unity = @ukn_ringworld_p2_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p2_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p2_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_p2_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_p2_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_p2_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p2_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p2_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p2_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+#		from = { set_country_flag = has_built_or_repaired_megastructure	# Backup }
+
+#[+0-DEGREE] Support ("Seam") Section
+		spawn_planet = {
+			class = "pc_ringworld_seam"
+			location = fromfrom
+			init_effect = {
+				set_name = "Support Section"
+				set_planet_entity = {
+					entity = "vanilla_seam_entity"
+					graphical_culture = root.from
+				}
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+			}
+		}
+		remove_megastructure = fromfrom
+
+#[+30-DEGREE] Support ("Tech") Section
+		spawn_megastructure = {
+			name = "Support Section"
+			type = "ring_world_3_tech"
+			orbit_angle = 300
+			orbit_distance = 45
+			owner = from
+			graphical_culture = fromfrom
+		}
+		if = {
+			limit = { owner = { UKN_USES_TERRESTRIAL_SECTIONS = yes } }
+#[-30-DEGREE] Uninhabitable ("Terrestrial") Section
+			spawn_megastructure = {
+				name = "Terrestrial Ring Section D"
+				type = "ring_world_3_uninhabitable_default"
+				orbit_angle = 240
+				orbit_distance = 45
+				owner = from
+				graphical_culture = fromfrom
+			}
+		}
+		if = {
+			limit = { owner = { UKN_USES_DESOLATE_SECTIONS = yes } }
+#[-30-DEGREE] Uninhabitable ("Desolate") Section
+			spawn_megastructure = {
+				name = "Desolate Ring Section D"
+				type = "ring_world_3_uninhabitable_machine"
+				orbit_angle = 240
+				orbit_distance = 45
+				owner = from
+				graphical_culture = fromfrom
+			}
+		}
+	}
+}
+
+
+ring_world_3_tech = {
+	entity = "vanilla_tech_entity"
+	portrait = "GFX_megastructure_ukn_ringworld_tech"
+	upgrade_from = { ring_world_3_a_intermediate ring_world_3_b_intermediate ring_world_3_c_intermediate ring_world_3_d_intermediate }
+	upgrade_desc = hide
+	potential = { always = no }
+}
+ring_world_3_uninhabitable_default = {
+	entity = "vanilla_gaia_habitable_entity"
+	portrait = "GFX_megastructure_ukn_ringworld_terrestrial"
+	upgrade_from = { ring_world_3_a_intermediate ring_world_3_b_intermediate ring_world_3_c_intermediate ring_world_3_d_intermediate }
+	upgrade_desc = hide
+	potential = { always = no }
+}
+ring_world_3_uninhabitable_machine = {
+	entity = "vanilla_gaia_habitable_entity"
+	portrait = "GFX_megastructure_ukn_ringworld_desolate"
+	upgrade_from = { ring_world_3_a_intermediate ring_world_3_b_intermediate ring_world_3_c_intermediate ring_world_3_d_intermediate }
+	upgrade_desc = hide
+	potential = { always = no }
+}
+
+
+#[DEFAULT] Ringworld Support Upgrade (8 Sections Total)
+ring_world_3_tech_upgrade_default = {
+	entity = "vanilla_gaia_habitable_entity"
+#	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_ukn_ringworld_terrestrial"
+	upgrade_from = { ring_world_3_tech }
+	upgrade_desc = hide
+	prerequisites = { "giga_tech_ringworld_upgrade" }
+	prereq_name = "RING_WORLD_SHOW_NAME"
+	
+	potential = {
+		owner = { UKN_USES_TERRESTRIAL_SECTIONS = yes }
+	}
+	
+	build_time = @ukn_ringworld_p2_tech_upgrade_build_time_default
+	resources = {
+		category = ukn_gigastructure_main
+		cost = {
+			unity = @ukn_ringworld_p2_tech_upgrade_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p2_tech_upgrade_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p2_tech_upgrade_cost_ukn_meta_materials_default
+####
+			ukn_condensics = @ukn_ringworld_p2_tech_upgrade_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_p2_tech_upgrade_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p2_tech_upgrade_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p2_tech_upgrade_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p2_tech_upgrade_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	possible = {
+		exists = from
+		from = { has_technology = tech_ring_world }
+		custom_tooltip = { fail_text = "requires_surveyed_system"					giga_system_is_surveyed = yes }
+	}
+
+	on_build_start = {
+		if = {
+			limit = {
+				from = {
+					NOR = {
+						graphical_culture = arthropoid_01
+						graphical_culture = avian_01
+						graphical_culture = fungoid_01
+						graphical_culture = humanoid_01
+						graphical_culture = mammalian_01
+						graphical_culture = molluscoid_01
+						graphical_culture = plantoid_01
+						graphical_culture = reptilian_01
+						graphical_culture = lithoid_01
+						graphical_culture = necroid_01
+					}
+				}
+			}
+			fromfrom = { set_graphical_culture = mammalian_01 }
+		}
+		else = { fromfrom = { set_graphical_culture = root.from } }
+	}
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+		ukn_set_auxiliary_ringworld_section_terrestrial_name = yes
+	}
+}
+
+#[MACHINE] Ringworld Support Upgrade (8 Sections Total)
+ring_world_3_tech_upgrade_machine = {
+	entity = "vanilla_gaia_habitable_entity"
+#	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_ukn_ringworld_desolate"
+	upgrade_from = { ring_world_3_tech }
+	upgrade_desc = hide
+	prerequisites = { "giga_tech_ringworld_upgrade" }
+	prereq_name = "RING_WORLD_SHOW_NAME"
+	
+	potential = {
+		owner = { UKN_USES_DESOLATE_SECTIONS = yes }
+	}
+	
+	build_time = @ukn_ringworld_p2_tech_upgrade_build_time_default
+	resources = {
+		category = ukn_gigastructure_main
+		cost = {
+			unity = @ukn_ringworld_p2_tech_upgrade_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p2_tech_upgrade_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p2_tech_upgrade_cost_ukn_meta_materials_default
+####
+			ukn_condensics = @ukn_ringworld_p2_tech_upgrade_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_p2_tech_upgrade_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p2_tech_upgrade_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p2_tech_upgrade_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p2_tech_upgrade_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	possible = {
+		exists = from
+		from = { has_technology = tech_ring_world }
+		custom_tooltip = { fail_text = "requires_surveyed_system"					giga_system_is_surveyed = yes }
+	}
+
+	on_build_start = {
+		if = {
+			limit = {
+				from = {
+					NOR = {
+						graphical_culture = arthropoid_01
+						graphical_culture = avian_01
+						graphical_culture = fungoid_01
+						graphical_culture = humanoid_01
+						graphical_culture = mammalian_01
+						graphical_culture = molluscoid_01
+						graphical_culture = plantoid_01
+						graphical_culture = reptilian_01
+						graphical_culture = lithoid_01
+						graphical_culture = necroid_01
+					}
+				}
+			}
+			fromfrom = { set_graphical_culture = mammalian_01 }
+		}
+		else = { fromfrom = { set_graphical_culture = root.from } }
+	}
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+		ukn_set_auxiliary_ringworld_section_desolate_name = yes
+	}
+}
+
+
+#[COMPLETE] Gaia Ringworld
+ring_world_4_gaia_intermediate = {
+	entity = ""
+#	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_3_uninhabitable_default ring_world_3_uninhabitable_machine }
+	upgrade_desc = hide
+	prerequisites = { "tech_ring_world" }
+	prereq_name = "RING_WORLD_SHOW_NAME"
+	
+	potential = {
+		owner = { UKN_CAN_BUILD_GAIA_WORLDS = yes }
+	}
+	
+	build_time = @ukn_ringworld_p3_gaia_build_time_default
+	resources = {
+		category = ukn_megastructure_habitable
+		cost = {
+			unity = @ukn_ringworld_p3_gaia_cost_unity_default
+####
+			food = @ukn_ringworld_p3_gaia_cost_food_default
+			consumer_goods = @ukn_ringworld_p3_gaia_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_gaia_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_gaia_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_gaia_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p3_gaia_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p3_gaia_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+		from = {
+			set_country_flag = has_built_or_repaired_megastructure	# Backup
+			set_country_flag = ukn_has_built_megastructure 	# Triggers Master Builders
+		}
+
+		spawn_planet = {
+			class = "pc_ringworld_habitable"
+			location = fromfrom
+			orbit_angle_offset = 2.95
+			size = 10
+			init_effect = {
+				set_planet_entity = {
+					entity = "vanilla_gaia_habitable_entity"
+					graphical_culture = root.from
+				}
+				set_graphical_culture = root.from
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				clear_blockers = yes
+				save_event_target_as = ring_section
+				trigger_megastructure_icon = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
+				set_planet_flag = giga_ringworld_van
+			}
+		}
+		ukn_set_habitable_ringworld_section_name = yes
+		remove_megastructure = fromfrom
+	}
+}
+#[COMPLETE] Arcology Ringworld
+ring_world_4_city_intermediate = {
+	entity = ""
+#	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_3_uninhabitable_default ring_world_3_uninhabitable_machine }
+	upgrade_desc = hide
+	prerequisites = { "tech_ring_world" }
+	prereq_name = "RING_WORLD_SHOW_NAME"
+	
+	potential = {
+		owner = { UKN_CAN_BUILD_CITY_WORLDS = yes }
+	}
+	
+	build_time = @ukn_ringworld_p3_city_build_time_default
+	resources = {
+		category = ukn_megastructure_habitable
+		cost = {
+			unity = @ukn_ringworld_p3_city_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p3_city_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_city_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_city_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_city_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p3_city_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p3_city_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+		from = {
+			set_country_flag = has_built_or_repaired_megastructure	# Backup
+			set_country_flag = ukn_has_built_megastructure 	# Triggers Master Builders
+		}
+
+		spawn_planet = {
+			class = "pc_ringworld_city"
+			location = fromfrom
+			orbit_angle_offset = 2.95
+			size = 10
+			init_effect = {
+				set_planet_entity = {
+					entity = "vanilla_ecu_habitable_entity"
+					graphical_culture = root.from
+				}
+				set_graphical_culture = root.from
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				clear_blockers = yes
+				save_event_target_as = ring_section
+				trigger_megastructure_icon = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
+				set_planet_flag = giga_ringworld_van
+			}
+		}
+		ukn_set_habitable_ringworld_section_name = yes
+		remove_megastructure = fromfrom
+	}
+}
+#[COMPLETE] Machine Ringworld
+ring_world_4_machine_intermediate = {
+	entity = ""
+#	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_3_uninhabitable_default ring_world_3_uninhabitable_machine }
+	upgrade_desc = hide
+	prerequisites = { "tech_ring_world" }
+	prereq_name = "RING_WORLD_SHOW_NAME"
+	
+	potential = {
+		owner = { UKN_CAN_BUILD_MACHINE_WORLDS = yes }
+	}
+	
+	build_time = @ukn_ringworld_p3_machine_build_time_default
+	resources = {
+		category = ukn_megastructure_habitable
+		cost = {
+			unity = @ukn_ringworld_p3_machine_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p3_machine_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_machine_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_machine_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_machine_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p3_machine_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p3_machine_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+		from = {
+			set_country_flag = has_built_or_repaired_megastructure	# Backup
+			set_country_flag = ukn_has_built_megastructure 	# Triggers Master Builders
+		}
+
+		spawn_planet = {
+			class = "pc_ringworld_machine"
+			location = fromfrom
+			orbit_angle_offset = 2.95
+			size = 10
+			init_effect = {
+				set_planet_entity = {
+					entity = "vanilla_machine_habitable_entity"
+					graphical_culture = root.from
+				}
+				set_graphical_culture = root.from
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				clear_blockers = yes
+				save_event_target_as = ring_section
+				trigger_megastructure_icon = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
+				set_planet_flag = giga_ringworld_van
+			}
+		}
+		ukn_set_habitable_ringworld_section_name = yes
+		remove_megastructure = fromfrom
+	}
+}
+#[COMPLETE] Hive Ringworld
+ring_world_4_hive_intermediate = {
+	entity = ""
+#	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_3_uninhabitable_default ring_world_3_uninhabitable_machine }
+	upgrade_desc = hide
+	prerequisites = { "tech_ring_world" }
+	prereq_name = "RING_WORLD_SHOW_NAME"
+	
+	potential = {
+		owner = { UKN_CAN_BUILD_HIVE_WORLDS = yes }
+	}
+	
+	build_time = @ukn_ringworld_p3_hive_build_time_default
+	resources = {
+		category = ukn_megastructure_habitable
+		cost = {
+			unity = @ukn_ringworld_p3_hive_cost_unity_default
+####
+			food = @ukn_ringworld_p3_hive_cost_food_default
+			consumer_goods = @ukn_ringworld_p3_hive_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_hive_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_hive_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_hive_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p3_hive_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p3_hive_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+		from = {
+			set_country_flag = has_built_or_repaired_megastructure	# Backup
+			set_country_flag = ukn_has_built_megastructure 	# Triggers Master Builders
+		}
+
+		spawn_planet = {
+			class = "pc_ringworld_hive"
+			location = fromfrom
+			orbit_angle_offset = 2.95
+			size = 10
+			init_effect = {
+				set_planet_entity = {
+					entity = "vanilla_hive_habitable_entity"
+					graphical_culture = root.from
+				}
+				set_graphical_culture = root.from
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				clear_blockers = yes
+				save_event_target_as = ring_section
+				trigger_megastructure_icon = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
+				set_planet_flag = giga_ringworld_van
+			}
+		}
+		ukn_set_habitable_ringworld_section_name = yes
+		remove_megastructure = fromfrom
+	}
+}
+#[COMPLETE] Computer Ringworld
+ring_world_4_computer_intermediate = {
+	entity = ""
+#	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_3_uninhabitable_default ring_world_3_uninhabitable_machine }
+	upgrade_desc = hide
+	prerequisites = { "tech_ring_world" }
+	prereq_name = "RING_WORLD_SHOW_NAME"
+	
+	potential = {
+		owner = { UKN_CAN_BUILD_COMPUTER_WORLDS = yes }
+	}
+	
+	build_time = @ukn_ringworld_p3_computer_build_time_default
+	resources = {
+		category = ukn_megastructure_habitable
+		cost = {
+			unity = @ukn_ringworld_p3_computer_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p3_computer_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_computer_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_computer_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_computer_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p3_computer_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p3_computer_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+		from = {
+			set_country_flag = has_built_or_repaired_megastructure	# Backup
+			set_country_flag = ukn_has_built_megastructure 	# Triggers Master Builders
+		}
+
+		spawn_planet = {
+			class = "pc_ringworld_computer"
+			location = fromfrom
+			orbit_angle_offset = 2.95
+			size = 10
+			init_effect = {
+				set_planet_entity = {
+					entity = "vanilla_computer_habitable_entity"
+					graphical_culture = root.from
+				}
+				set_graphical_culture = root.from
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				clear_blockers = yes
+				save_event_target_as = ring_section
+				trigger_megastructure_icon = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
+				set_planet_flag = giga_ringworld_van
+			}
+		}
+		ukn_set_habitable_ringworld_section_name = yes
+		remove_megastructure = fromfrom
+	}
+}
+#[COMPLETE] Praetori Ringworld
+ring_world_4_military_intermediate = {
+	entity = ""
+#	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_3_uninhabitable_default ring_world_3_uninhabitable_machine }
+	upgrade_desc = hide
+	prerequisites = { "tech_ring_world" }
+	prereq_name = "RING_WORLD_SHOW_NAME"
+	
+	potential = {
+		owner = { UKN_CAN_BUILD_MILITARY_WORLDS = yes }
+	}
+	
+	build_time = @ukn_ringworld_p3_military_build_time_default
+	resources = {
+		category = ukn_megastructure_habitable
+		cost = {
+			unity = @ukn_ringworld_p3_military_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p3_military_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_military_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_military_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_military_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p3_military_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p3_military_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+		from = {
+			set_country_flag = has_built_or_repaired_megastructure	# Backup
+			set_country_flag = ukn_has_built_megastructure 	# Triggers Master Builders
+		}
+
+		spawn_planet = {
+			class = "pc_ringworld_military"
+			location = fromfrom
+			orbit_angle_offset = 2.95
+			size = 10
+			init_effect = {
+				set_planet_entity = {
+					entity = "vanilla_military_habitable_entity"
+					graphical_culture = root.from
+				}
+				set_graphical_culture = root.from
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				clear_blockers = yes
+				save_event_target_as = ring_section
+				trigger_megastructure_icon = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
+				set_planet_flag = giga_ringworld_van
+			}
+		}
+		ukn_set_habitable_ringworld_section_name = yes
+		remove_megastructure = fromfrom
+	}
+}
+
+
+#[UPGRADED] Gaia Ringworld
+ring_world_4_tech_upgraded_gaia_intermediate = {
+	entity = ""
+#	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_3_tech_upgrade_default ring_world_3_tech_upgrade_machine }
+	upgrade_desc = hide
+	prerequisites = { "giga_tech_ringworld_upgrade" }
+	prereq_name = "RING_WORLD_SHOW_NAME"
+	
+	potential = {
+		owner = { UKN_CAN_BUILD_GAIA_WORLDS = yes }
+	}
+	
+	build_time = @ukn_ringworld_p3_gaia_build_time_default
+	resources = {
+		category = ukn_megastructure_habitable
+		cost = {
+			unity = @ukn_ringworld_p3_gaia_cost_unity_default
+####
+			food = @ukn_ringworld_p3_gaia_cost_food_default
+			consumer_goods = @ukn_ringworld_p3_gaia_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_gaia_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_gaia_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_gaia_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p3_gaia_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p3_gaia_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+		from = {
+			set_country_flag = has_built_or_repaired_gigastructure	# Backup
+			set_country_flag = ukn_has_built_gigastructure	# Triggers Terastructures
+		}
+
+		spawn_planet = {
+			class = "pc_ringworld_habitable"
+			location = fromfrom
+			orbit_angle_offset = -2.95
+			size = 10
+			init_effect = {
+				set_planet_entity = {
+					entity = "vanilla_gaia_habitable_entity"
+					graphical_culture = root.from
+				}
+				set_graphical_culture = root.from
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				clear_blockers = yes
+				save_event_target_as = ring_section
+				trigger_megastructure_icon = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
+				set_planet_flag = giga_ringworld_van
+			}
+		}
+		ukn_set_habitable_ringworld_section_name = yes
+		remove_megastructure = fromfrom
+	}
+}
+#[UPGRADED] Arcology Ringworld
+ring_world_4_tech_upgraded_city_intermediate = {
+	entity = ""
+#	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_3_tech_upgrade_default ring_world_3_tech_upgrade_machine }
+	upgrade_desc = hide
+	prerequisites = { "giga_tech_ringworld_upgrade" }
+	prereq_name = "RING_WORLD_SHOW_NAME"
+	
+	potential = {
+		owner = { UKN_CAN_BUILD_CITY_WORLDS = yes }
+	}
+	
+	build_time = @ukn_ringworld_p3_city_build_time_default
+	resources = {
+		category = ukn_megastructure_habitable
+		cost = {
+			unity = @ukn_ringworld_p3_city_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p3_city_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_city_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_city_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_city_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p3_city_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p3_city_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+		from = {
+			set_country_flag = has_built_or_repaired_gigastructure	# Backup
+			set_country_flag = ukn_has_built_gigastructure	# Triggers Terastructures
+		}
+
+		spawn_planet = {
+			class = "pc_ringworld_city"
+			location = fromfrom
+			orbit_angle_offset = -2.95
+			size = 10
+			init_effect = {
+				set_planet_entity = {
+					entity = "vanilla_ecu_habitable_entity"
+					graphical_culture = root.from
+				}
+				set_graphical_culture = root.from
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				clear_blockers = yes
+				save_event_target_as = ring_section
+				trigger_megastructure_icon = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
+				set_planet_flag = giga_ringworld_van
+			}
+		}
+		ukn_set_habitable_ringworld_section_name = yes
+		remove_megastructure = fromfrom
+	}
+}
+#[UPGRADED] Machine Ringworld
+ring_world_4_tech_upgraded_machine_intermediate = {
+	entity = ""
+#	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_3_tech_upgrade_default ring_world_3_tech_upgrade_machine }
+	upgrade_desc = hide
+	prerequisites = { "giga_tech_ringworld_upgrade" }
+	prereq_name = "RING_WORLD_SHOW_NAME"
+	
+	potential = {
+		owner = { UKN_CAN_BUILD_MACHINE_WORLDS = yes }
+	}
+	
+	build_time = @ukn_ringworld_p3_machine_build_time_default
+	resources = {
+		category = ukn_megastructure_habitable
+		cost = {
+			unity = @ukn_ringworld_p3_machine_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p3_machine_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_machine_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_machine_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_machine_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p3_machine_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p3_machine_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+		from = {
+			set_country_flag = has_built_or_repaired_gigastructure	# Backup
+			set_country_flag = ukn_has_built_gigastructure	# Triggers Terastructures
+		}
+
+		spawn_planet = {
+			class = "pc_ringworld_machine"
+			location = fromfrom
+			orbit_angle_offset = -2.95
+			size = 10
+			init_effect = {
+				set_planet_entity = {
+					entity = "vanilla_machine_habitable_entity"
+					graphical_culture = root.from
+				}
+				set_graphical_culture = root.from
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				clear_blockers = yes
+				save_event_target_as = ring_section
+				trigger_megastructure_icon = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
+				set_planet_flag = giga_ringworld_van
+			}
+		}
+		ukn_set_habitable_ringworld_section_name = yes
+		remove_megastructure = fromfrom
+	}
+}
+#[UPGRADED] Hive Ringworld
+ring_world_4_tech_upgraded_hive_intermediate = {
+	entity = ""
+#	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_3_tech_upgrade_default ring_world_3_tech_upgrade_machine }
+	upgrade_desc = hide
+	prerequisites = { "giga_tech_ringworld_upgrade" }
+	prereq_name = "RING_WORLD_SHOW_NAME"
+	
+	potential = {
+		owner = { UKN_CAN_BUILD_HIVE_WORLDS = yes }
+	}
+	
+	build_time = @ukn_ringworld_p3_hive_build_time_default
+	resources = {
+		category = ukn_megastructure_habitable
+		cost = {
+			unity = @ukn_ringworld_p3_hive_cost_unity_default
+####
+			food = @ukn_ringworld_p3_hive_cost_food_default
+			consumer_goods = @ukn_ringworld_p3_hive_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_hive_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_hive_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_hive_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p3_hive_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p3_hive_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+		from = {
+			set_country_flag = has_built_or_repaired_gigastructure	# Backup
+			set_country_flag = ukn_has_built_gigastructure	# Triggers Terastructures
+		}
+
+		spawn_planet = {
+			class = "pc_ringworld_hive"
+			location = fromfrom
+			orbit_angle_offset = -2.95
+			size = 10
+			init_effect = {
+				set_planet_entity = {
+					entity = "vanilla_hive_habitable_entity"
+					graphical_culture = root.from
+				}
+				set_graphical_culture = root.from
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				clear_blockers = yes
+				save_event_target_as = ring_section
+				trigger_megastructure_icon = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
+				set_planet_flag = giga_ringworld_van
+			}
+		}
+		ukn_set_habitable_ringworld_section_name = yes
+		remove_megastructure = fromfrom
+	}
+}
+#[UPGRADED] Computer Ringworld
+ring_world_4_tech_upgraded_computer_intermediate = {
+	entity = ""
+#	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_3_tech_upgrade_default ring_world_3_tech_upgrade_machine }
+	upgrade_desc = hide
+	prerequisites = { "giga_tech_ringworld_upgrade" }
+	prereq_name = "RING_WORLD_SHOW_NAME"
+	
+	potential = {
+		owner = { UKN_CAN_BUILD_COMPUTER_WORLDS = yes }
+	}
+	
+	build_time = @ukn_ringworld_p3_computer_build_time_default
+	resources = {
+		category = ukn_megastructure_habitable
+		cost = {
+			unity = @ukn_ringworld_p3_computer_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p3_computer_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_computer_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_computer_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_computer_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p3_computer_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p3_computer_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+		from = {
+			set_country_flag = has_built_or_repaired_gigastructure	# Backup
+			set_country_flag = ukn_has_built_gigastructure	# Triggers Terastructures
+		}
+
+		spawn_planet = {
+			class = "pc_ringworld_computer"
+			location = fromfrom
+			orbit_angle_offset = -2.95
+			size = 10
+			init_effect = {
+				set_planet_entity = {
+					entity = "vanilla_computer_habitable_entity"
+					graphical_culture = root.from
+				}
+				set_graphical_culture = root.from
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				clear_blockers = yes
+				save_event_target_as = ring_section
+				trigger_megastructure_icon = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
+				set_planet_flag = giga_ringworld_van
+			}
+		}
+		ukn_set_habitable_ringworld_section_name = yes
+		remove_megastructure = fromfrom
+	}
+}
+#[UPGRADED] Praetori Ringworld
+ring_world_4_tech_upgraded_military_intermediate = {
+	entity = ""
+#	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_3_tech_upgrade_default ring_world_3_tech_upgrade_machine }
+	upgrade_desc = hide
+	prerequisites = { "giga_tech_ringworld_upgrade" }
+	prereq_name = "RING_WORLD_SHOW_NAME"
+	
+	potential = {
+		owner = { UKN_CAN_BUILD_MILITARY_WORLDS = yes }
+	}
+	
+	build_time = @ukn_ringworld_p3_military_build_time_default
+	resources = {
+		category = ukn_megastructure_habitable
+		cost = {
+			unity = @ukn_ringworld_p3_military_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p3_military_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_military_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_military_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_military_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p3_military_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p3_military_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+		from = {
+			set_country_flag = has_built_or_repaired_gigastructure	# Backup
+			set_country_flag = ukn_has_built_gigastructure	# Triggers Terastructures
+		}
+
+		spawn_planet = {
+			class = "pc_ringworld_military"
+			location = fromfrom
+			orbit_angle_offset = -2.95
+			size = 10
+			init_effect = {
+				set_planet_entity = {
+					entity = "vanilla_military_habitable_entity"
+					graphical_culture = root.from
+				}
+				set_graphical_culture = root.from
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				clear_blockers = yes
+				save_event_target_as = ring_section
+				trigger_megastructure_icon = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
+				set_planet_flag = giga_ringworld_van
+			}
+		}
+		ukn_set_habitable_ringworld_section_name = yes
+		remove_megastructure = fromfrom
+	}
+}
+
+
+ring_world_ruined_a = {
+	entity = "vanilla_ruined_quarter_entity"
+	portrait = "GFX_megastructure_construction_background"
+	potential = { always = no }
+}
+ring_world_ruined_b = {
+	entity = "vanilla_ruined_quarter_entity"
+	portrait = "GFX_megastructure_construction_background"
+	potential = { always = no }
+}
+ring_world_ruined_c = {
+	entity = "vanilla_ruined_quarter_entity"
+	portrait = "GFX_megastructure_construction_background"
+	potential = { always = no }
+}
+ring_world_ruined_d = {
+	entity = "vanilla_ruined_quarter_entity"
+	portrait = "GFX_megastructure_construction_background"
+	potential = { always = no }
+}
+ring_world_ruined_srw_devastated = {
+	entity = "vanilla_ruined_quarter_entity"
+	portrait = "GFX_megastructure_ukn_ringworld_devastated"
+	potential = { always = no }
+}
+
+
+#[0-DEGREE] (Restore) Quadrant
+ring_world_restore_a_intermediate = {
+	entity = ""
+	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_ruined_a }
+	
+	build_time = @ukn_ringworld_restore_build_time_default
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			influence = @ukn_ringworld_restore_cost_influence_default
+			unity = @ukn_ringworld_restore_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_restore_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_restore_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_restore_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_restore_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_restore_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_restore_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_restore_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_restore_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	possible = {
+		exists = from
+		from = { has_technology = tech_mega_engineering }
+		custom_tooltip = { fail_text = "requires_surveyed_system"					giga_system_is_surveyed = yes }
+	}
+
+	on_build_start = {
+		if = {
+			limit = {
+				from = {
+					NOR = {
+						graphical_culture = arthropoid_01
+						graphical_culture = avian_01
+						graphical_culture = fungoid_01
+						graphical_culture = humanoid_01
+						graphical_culture = mammalian_01
+						graphical_culture = molluscoid_01
+						graphical_culture = plantoid_01
+						graphical_culture = reptilian_01
+						graphical_culture = lithoid_01
+						graphical_culture = necroid_01
+					}
+				}
+			}
+			fromfrom = { set_graphical_culture = mammalian_01 }
+		}
+		else = { fromfrom = { set_graphical_culture = root.from } }
+	}
+
+	ai_weight = { weight = 300 modifier = { weight = 0 from = { is_country_type = fallen_empire } } } # If we can build it, we will build it
+	on_build_complete = {
+		ukn_remove_system_debris = yes
+		from = {
+			set_country_flag = ukn_has_repaired_megastructure
+			set_country_flag = has_built_or_repaired_megastructure	# Backup
+			country_event = { id = utopia.2017 }
+		}
+
+#[+0-DEGREE] Support ("Seam") Section
+		spawn_planet = {
+			class = "pc_ringworld_seam"
+			location = fromfrom
+			init_effect = {
+				set_name = "Support Section"
+				set_planet_entity = {
+					entity = "vanilla_seam_entity"
+					graphical_culture = root.from
+				}
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+			}
+		}
+		remove_megastructure = fromfrom
+		
+#[+30-DEGREE] Support ("Tech") Section
+		spawn_megastructure = {
+			name = "Support Section"
+			type = "ring_world_3_tech"
+			orbit_angle = 30
+			orbit_distance = 45
+			owner = from
+			graphical_culture = fromfrom
+		}
+		if = {
+			limit = { owner = { UKN_USES_TERRESTRIAL_SECTIONS = yes } }
+#[-30-DEGREE] Uninhabitable ("Terrestrial") Section
+			spawn_megastructure = {
+				name = "Terrestrial Ring Section A"
+				type = "ring_world_3_uninhabitable_default"
+				orbit_angle = 330
+				orbit_distance = 45
+				owner = from
+				graphical_culture = fromfrom
+			}
+		}
+		if = {
+			limit = { owner = { UKN_USES_DESOLATE_SECTIONS = yes } }
+#[-30-DEGREE] Uninhabitable ("Desolate") Section
+			spawn_megastructure = {
+				name = "Desolate Ring Section A"
+				type = "ring_world_3_uninhabitable_machine"
+				orbit_angle = 330
+				orbit_distance = 45
+				owner = from
+				graphical_culture = fromfrom
+			}
+		}
+	}
+}
+#[90-DEGREE] (Restore) Quadrant
+ring_world_restore_b_intermediate = {
+	entity = ""
+	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_ruined_b }
+	
+	build_time = @ukn_ringworld_restore_build_time_default
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			influence = @ukn_ringworld_restore_cost_influence_default
+			unity = @ukn_ringworld_restore_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_restore_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_restore_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_restore_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_restore_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_restore_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_restore_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_restore_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_restore_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	possible = {
+		exists = from
+		from = { has_technology = tech_mega_engineering }
+		custom_tooltip = { fail_text = "requires_surveyed_system"					giga_system_is_surveyed = yes }
+	}
+
+	on_build_start = {
+		if = {
+			limit = {
+				from = {
+					NOR = {
+						graphical_culture = arthropoid_01
+						graphical_culture = avian_01
+						graphical_culture = fungoid_01
+						graphical_culture = humanoid_01
+						graphical_culture = mammalian_01
+						graphical_culture = molluscoid_01
+						graphical_culture = plantoid_01
+						graphical_culture = reptilian_01
+						graphical_culture = lithoid_01
+						graphical_culture = necroid_01
+					}
+				}
+			}
+			fromfrom = { set_graphical_culture = mammalian_01 }
+		}
+		else = { fromfrom = { set_graphical_culture = root.from } }
+	}
+
+	ai_weight = { weight = 300 modifier = { weight = 0 from = { is_country_type = fallen_empire } } } # If we can build it, we will build it
+	on_build_complete = {
+		ukn_remove_system_debris = yes
+		from = {
+			set_country_flag = ukn_has_repaired_megastructure
+			set_country_flag = has_built_or_repaired_megastructure	# Backup
+			country_event = { id = utopia.2017 }
+		}
+
+		change_variable = { which = ring_segments value = 1 }
+		if = {
+			limit = { check_variable = { which = ring_segments value >= 4 } }
+			set_variable = { which = ring_segments value = 0 }
+			from = {
+				remove_country_flag = giga_started_ringworld
+				change_variable = { which = completed_ringworlds value = 1 }
+			}
+		}
+
+#[+0-DEGREE] Support ("Seam") Section
+		spawn_planet = {
+			class = "pc_ringworld_seam"
+			location = fromfrom
+			init_effect = {
+				set_name = "Support Section"
+				set_planet_entity = {
+					entity = "vanilla_seam_entity"
+					graphical_culture = root.from
+				}
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+			}
+		}
+		remove_megastructure = fromfrom
+
+#[+30-DEGREE] Support ("Tech") Section
+		spawn_megastructure = {
+			name = "Support Section"
+			type = "ring_world_3_tech"
+			orbit_angle = 120
+			orbit_distance = 45
+			owner = from
+			graphical_culture = fromfrom
+		}
+		if = {
+			limit = { owner = { UKN_USES_TERRESTRIAL_SECTIONS = yes } }
+#[-30-DEGREE] Uninhabitable ("Terrestrial") Section
+			spawn_megastructure = {
+				name = "Terrestrial Ring Section B"
+				type = "ring_world_3_uninhabitable_default"
+				orbit_angle = 60
+				orbit_distance = 45
+				owner = from
+				graphical_culture = fromfrom
+			}
+		}
+		if = {
+			limit = { owner = { UKN_USES_DESOLATE_SECTIONS = yes } }
+#[-30-DEGREE] Uninhabitable ("Desolate") Section
+			spawn_megastructure = {
+				name = "Desolate Ring Section B"
+				type = "ring_world_3_uninhabitable_machine"
+				orbit_angle = 60
+				orbit_distance = 45
+				owner = from
+				graphical_culture = fromfrom
+			}
+		}
+	}
+}
+#[180-DEGREE] (Restore) Quadrant
+ring_world_restore_c_intermediate = {
+	entity = ""
+	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_ruined_c }
+	
+	build_time = @ukn_ringworld_restore_build_time_default
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			influence = @ukn_ringworld_restore_cost_influence_default
+			unity = @ukn_ringworld_restore_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_restore_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_restore_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_restore_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_restore_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_restore_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_restore_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_restore_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_restore_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	possible = {
+		exists = from
+		from = { has_technology = tech_mega_engineering }
+		custom_tooltip = { fail_text = "requires_surveyed_system"					giga_system_is_surveyed = yes }
+	}
+
+	on_build_start = {
+		if = {
+			limit = {
+				from = {
+					NOR = {
+						graphical_culture = arthropoid_01
+						graphical_culture = avian_01
+						graphical_culture = fungoid_01
+						graphical_culture = humanoid_01
+						graphical_culture = mammalian_01
+						graphical_culture = molluscoid_01
+						graphical_culture = plantoid_01
+						graphical_culture = reptilian_01
+						graphical_culture = lithoid_01
+						graphical_culture = necroid_01
+					}
+				}
+			}
+			fromfrom = { set_graphical_culture = mammalian_01 }
+		}
+		else = { fromfrom = { set_graphical_culture = root.from } }
+	}
+
+	ai_weight = { weight = 300 modifier = { weight = 0 from = { is_country_type = fallen_empire } } } # If we can build it, we will build it
+	on_build_complete = {
+		ukn_remove_system_debris = yes
+		from = {
+			set_country_flag = ukn_has_repaired_megastructure
+			set_country_flag = has_built_or_repaired_megastructure	# Backup
+			country_event = { id = utopia.2017 }
+		}
+
+		change_variable = { which = ring_segments value = 1 }
+		if = {
+			limit = { check_variable = { which = ring_segments value >= 4 } }
+			set_variable = { which = ring_segments value = 0 }
+			from = {
+				remove_country_flag = giga_started_ringworld
+				change_variable = { which = completed_ringworlds value = 1 }
+			}
+		}
+
+#[+0-DEGREE] Support ("Seam") Section
+		spawn_planet = {
+			class = "pc_ringworld_seam"
+			location = fromfrom
+			init_effect = {
+				set_name = "Support Section"
+				set_planet_entity = {
+					entity = "vanilla_seam_entity"
+					graphical_culture = root.from
+				}
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+			}
+		}
+		remove_megastructure = fromfrom
+
+#[+30-DEGREE] Support ("Tech") Section
+		spawn_megastructure = {
+			name = "Support Section"
+			type = "ring_world_3_tech"
+			orbit_angle = 210
+			orbit_distance = 45
+			owner = from
+			graphical_culture = fromfrom
+		}
+		if = {
+			limit = { owner = { UKN_USES_TERRESTRIAL_SECTIONS = yes } }
+#[-30-DEGREE] Uninhabitable ("Terrestrial") Section
+			spawn_megastructure = {
+				name = "Terrestrial Ring Section C"
+				type = "ring_world_3_uninhabitable_default"
+				orbit_angle = 150
+				orbit_distance = 45
+				owner = from
+				graphical_culture = fromfrom
+			}
+		}
+		if = {
+			limit = { owner = { UKN_USES_DESOLATE_SECTIONS = yes } }
+#[-30-DEGREE] Uninhabitable ("Desolate") Section
+			spawn_megastructure = {
+				name = "Desolate Ring Section C"
+				type = "ring_world_3_uninhabitable_machine"
+				orbit_angle = 150
+				orbit_distance = 45
+				owner = from
+				graphical_culture = fromfrom
+			}
+		}
+	}
+}
+#[270-DEGREE] (Restore) Quadrant
+ring_world_restore_d_intermediate = {
+	entity = ""
+	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_ruined_d }
+	
+	build_time = @ukn_ringworld_restore_build_time_default
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			influence = @ukn_ringworld_restore_cost_influence_default
+			unity = @ukn_ringworld_restore_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_restore_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_restore_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_restore_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_restore_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_restore_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_restore_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_restore_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_restore_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	possible = {
+		exists = from
+		from = { has_technology = tech_mega_engineering }
+		custom_tooltip = { fail_text = "requires_surveyed_system"					giga_system_is_surveyed = yes }
+	}
+
+	on_build_start = {
+		if = {
+			limit = {
+				from = {
+					NOR = {
+						graphical_culture = arthropoid_01
+						graphical_culture = avian_01
+						graphical_culture = fungoid_01
+						graphical_culture = humanoid_01
+						graphical_culture = mammalian_01
+						graphical_culture = molluscoid_01
+						graphical_culture = plantoid_01
+						graphical_culture = reptilian_01
+						graphical_culture = lithoid_01
+						graphical_culture = necroid_01
+					}
+				}
+			}
+			fromfrom = { set_graphical_culture = mammalian_01 }
+		}
+		else = { fromfrom = { set_graphical_culture = root.from } }
+	}
+
+	ai_weight = { weight = 300 modifier = { weight = 0 from = { is_country_type = fallen_empire } } } # If we can build it, we will build it
+	on_build_complete = {
+		ukn_remove_system_debris = yes
+		from = {
+			set_country_flag = ukn_has_repaired_megastructure
+			set_country_flag = has_built_or_repaired_megastructure	# Backup
+			country_event = { id = utopia.2017 }
+		}
+
+		change_variable = { which = ring_segments value = 1 }
+		if = {
+			limit = { check_variable = { which = ring_segments value >= 4 } }
+			set_variable = { which = ring_segments value = 0 }
+			from = {
+				remove_country_flag = giga_started_ringworld
+				change_variable = { which = completed_ringworlds value = 1 }
+			}
+		}
+
+#[+0-DEGREE] Support ("Seam") Section
+		spawn_planet = {
+			class = "pc_ringworld_seam"
+			location = fromfrom
+			init_effect = {
+				set_name = "Support Section"
+				set_planet_entity = {
+					entity = "vanilla_seam_entity"
+					graphical_culture = root.from
+				}
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+			}
+		}
+		remove_megastructure = fromfrom
+
+#[+30-DEGREE] Support ("Tech") Section
+		spawn_megastructure = {
+			name = "Support Section"
+			type = "ring_world_3_tech"
+			orbit_angle = 300
+			orbit_distance = 45
+			owner = from
+			graphical_culture = fromfrom
+		}
+		if = {
+			limit = { owner = { UKN_USES_TERRESTRIAL_SECTIONS = yes } }
+#[-30-DEGREE] Uninhabitable ("Terrestrial") Section
+			spawn_megastructure = {
+				name = "Terrestrial Ring Section D"
+				type = "ring_world_3_uninhabitable_default"
+				orbit_angle = 240
+				orbit_distance = 45
+				owner = from
+				graphical_culture = fromfrom
+			}
+		}
+		if = {
+			limit = { owner = { UKN_USES_DESOLATE_SECTIONS = yes } }
+#[-30-DEGREE] Uninhabitable ("Desolate") Section
+			spawn_megastructure = {
+				name = "Desolate Ring Section D"
+				type = "ring_world_3_uninhabitable_machine"
+				orbit_angle = 240
+				orbit_distance = 45
+				owner = from
+				graphical_culture = fromfrom
+			}
+		}
+	}
+}
+
+
+#[90-DEGREE] (Restore) Quadrant [SRW]
+ring_world_restore_srw_devastated_intermediate = {
+	entity = ""
+	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_ruined_srw_devastated }
+	
+	build_time = @ukn_ringworld_restore_build_time_default
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			influence = @ukn_ringworld_restore_cost_influence_default
+			unity = @ukn_ringworld_restore_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_restore_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_restore_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_restore_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_restore_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_restore_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_restore_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_restore_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_restore_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	possible = {
+		exists = from
+		from = { has_technology = tech_mega_engineering }
+		custom_tooltip = { fail_text = "requires_surveyed_system"					giga_system_is_surveyed = yes }
+	}
+
+	on_build_start = {
+		if = {
+			limit = {
+				from = {
+					NOR = {
+						graphical_culture = arthropoid_01
+						graphical_culture = avian_01
+						graphical_culture = fungoid_01
+						graphical_culture = humanoid_01
+						graphical_culture = mammalian_01
+						graphical_culture = molluscoid_01
+						graphical_culture = plantoid_01
+						graphical_culture = reptilian_01
+						graphical_culture = lithoid_01
+						graphical_culture = necroid_01
+					}
+				}
+			}
+			fromfrom = { set_graphical_culture = mammalian_01 }
+		}
+		else = { fromfrom = { set_graphical_culture = root.from } }
+	}
+
+	ai_weight = { weight = 300 modifier = { weight = 0 from = { is_country_type = fallen_empire } } } # If we can build it, we will build it
+	on_build_complete = {
+		ukn_remove_system_debris = yes
+		from = {
+			set_country_flag = ukn_has_repaired_megastructure
+			set_country_flag = has_built_or_repaired_megastructure	# Backup
+			country_event = { id = utopia.2017 }
+		}
+
+		change_variable = { which = ring_segments value = 1 }
+		if = {
+			limit = { check_variable = { which = ring_segments value >= 4 } }
+			set_variable = { which = ring_segments value = 0 }
+			from = {
+				remove_country_flag = giga_started_ringworld
+				change_variable = { which = completed_ringworlds value = 1 }
+			}
+		}
+
+#[+0-DEGREE] Support ("Seam") Section
+		spawn_planet = {
+			class = "pc_ringworld_seam"
+			location = fromfrom
+			init_effect = {
+				set_name = "Support Section"
+				set_planet_entity = {
+					entity = "vanilla_seam_entity"
+					graphical_culture = root.from
+				}
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+			}
+		}
+		remove_megastructure = fromfrom
+
+#[+30-DEGREE] Support ("Tech") Section
+		spawn_megastructure = {
+			name = "Support Section"
+			type = "ring_world_3_tech"
+			orbit_angle = 120
+			orbit_distance = 45
+			owner = from
+			graphical_culture = fromfrom
+		}
+		if = {
+			limit = { owner = { UKN_USES_TERRESTRIAL_SECTIONS = yes } }
+#[-30-DEGREE] Uninhabitable ("Terrestrial") Section
+			spawn_megastructure = {
+				name = "Terrestrial Ring Section B"
+				type = "ring_world_3_uninhabitable_default"
+				orbit_angle = 60
+				orbit_distance = 45
+				owner = from
+				graphical_culture = fromfrom
+			}
+		}
+		if = {
+			limit = { owner = { UKN_USES_DESOLATE_SECTIONS = yes } }
+#[-30-DEGREE] Uninhabitable ("Desolate") Section
+			spawn_megastructure = {
+				name = "Desolate Ring Section B"
+				type = "ring_world_3_uninhabitable_machine"
+				orbit_angle = 60
+				orbit_distance = 45
+				owner = from
+				graphical_culture = fromfrom
+			}
+		}
+	}
+}
+
+
+# UNUSED ##########################|
+#(Here so other mods which spawn vanilla ringworlds/vanilla ruined ringworlds don't break)
+ring_world_2 = {
+	entity = "vanilla_quarter_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_2_intermediate }
+	upgrade_desc = hide
+	potential = { always = no }
+}
+##################################|
+
+
+# UNUSED ###########################|
+#(Here so other mods which spawn vanilla ringworlds/vanilla ruined ringworlds don't break)
+ring_world_3_intermediate = {
+	entity = ""
+	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_2 }
+	prerequisites = { "tech_ring_world" }
+	prereq_name = "RING_WORLD_SHOW_NAME"
+	
+	build_time = @ukn_ringworld_p2_build_time_default
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			unity = @ukn_ringworld_p2_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p2_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p2_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_p2_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_p2_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_p2_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p2_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p2_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p2_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+		from = { set_country_flag = has_built_or_repaired_megastructure	# Backup }
+
+		spawn_planet = {
+			class = "pc_ringworld_tech"
+			location = fromfrom
+			orbit_angle_offset = 30
+			init_effect = {
+				set_name = "Ring Section"
+				set_planet_entity = {
+					entity = "vanilla_tech_entity"
+					graphical_culture = root.from
+				}
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
+			}
+		}
+		spawn_planet = {
+			class = "pc_ringworld_seam"
+			location = fromfrom
+			init_effect = {
+				set_name = "Ring Section"
+				set_planet_entity = {
+					entity = "vanilla_seam_entity"
+					graphical_culture = root.from
+				}
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+			}
+		}
+		spawn_planet = {
+			class = "pc_ringworld_habitable"
+			location = fromfrom
+			orbit_angle_offset = -30
+			init_effect = {
+				set_planet_entity = {
+					entity = "vanilla_gaia_habitable_entity"
+					graphical_culture = root.from
+				}
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				clear_blockers = yes
+				save_event_target_as = ring_section
+				trigger_megastructure_icon = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
+				set_planet_flag = giga_ringworld_van
+			}
+		}
+		ukn_set_habitable_ringworld_section_name = yes
+		remove_megastructure = fromfrom
+	}
+}
+##################################|
+
+
+# UNUSED ###########################|
+#(Here so other mods which spawn vanilla ringworlds/vanilla ruined ringworlds don't break)
+ring_world_ruined = {
+	entity = "vanilla_ruined_quarter_entity"
+	portrait = "GFX_megastructure_construction_background"
+	potential = { always = no }
+}
+##################################|
+
+
+# UNUSED ###########################|
+#(Here so other mods which spawn vanilla ringworlds/vanilla ruined ringworlds don't break)
+# Restored Ring World Segment
+ring_world_restored = {
+	entity = ""
+	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_ruined }
+	
+	build_time = @ukn_ringworld_restore_build_time_default
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			influence = @ukn_ringworld_restore_cost_influence_default
+			unity = @ukn_ringworld_restore_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_restore_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_restore_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_restore_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_restore_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_restore_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_restore_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_restore_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_restore_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	possible = {
+		exists = from
+		from = { has_technology = tech_mega_engineering }
+		custom_tooltip = { fail_text = "requires_surveyed_system"					giga_system_is_surveyed = yes }
+	}
+
+	ai_weight = {
+		weight = 300
+		modifier = {
+			weight = 0
+			from = { is_country_type = fallen_empire }
+		}
+	}
+
+	on_build_start = {
+		if = {
+			limit = {
+				from = {
+					NOR = {
+						graphical_culture = arthropoid_01
+						graphical_culture = avian_01
+						graphical_culture = fungoid_01
+						graphical_culture = humanoid_01
+						graphical_culture = mammalian_01
+						graphical_culture = molluscoid_01
+						graphical_culture = plantoid_01
+						graphical_culture = reptilian_01
+						graphical_culture = lithoid_01
+						graphical_culture = necroid_01
+					}
+				}
+			}
+			fromfrom = { set_graphical_culture = mammalian_01 }
+		}
+		else = { fromfrom = { set_graphical_culture = root.from } }
+	}
+
+	on_build_complete = {
+		ukn_remove_system_debris = yes
+
+		change_variable = { which = ring_segments value = 1 }
+		if = {
+			limit = { check_variable = { which = ring_segments value >= 4 } }
+			set_variable = { which = ring_segments value = 0 }
+			from = {
+				remove_country_flag = giga_started_ringworld
+				change_variable = { which = completed_ringworlds value = 1 }
+			}
+		}
+
+		from = {
+			set_country_flag = has_built_or_repaired_megastructure	# Backup
+			country_event = { id = utopia.2017 }
+		}
+
+		spawn_planet = {
+			class = "pc_ringworld_tech"
+			location = fromfrom
+			orbit_angle_offset = 30
+			init_effect = {
+				set_name = "Ring Section"
+				set_planet_entity = {
+					entity = "vanilla_tech_entity"
+					graphical_culture = root.from
+				}
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
+			}
+		}
+		spawn_planet = {
+			class = "pc_ringworld_seam"
+			location = fromfrom
+			init_effect = {
+				set_name = "Ring Section"
+				set_planet_entity = {
+					entity = "vanilla_seam_entity"
+					graphical_culture = root.from
+				}
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+			}
+		}
+		spawn_planet = {
+			class = "pc_ringworld_habitable"
+			location = fromfrom
+			orbit_angle_offset = -30
+			init_effect = {
+				set_planet_entity = {
+					entity = "vanilla_gaia_habitable_entity"
+					graphical_culture = root.from
+				}
+				set_surveyed = { surveyed = yes surveyor = from }
+				set_all_comms_surveyed = yes
+				clear_blockers = yes
+				save_event_target_as = ring_section
+				trigger_megastructure_icon = yes
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+				set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+				set_planet_flag = colony_event			# Vanilla uses to prevent unwanted events on planets
+				set_planet_flag = giga_ringworld_van
+			}
+		}
+		ukn_set_habitable_ringworld_section_name = yes
+		remove_megastructure = fromfrom
+	}
+}
+##################################|
+
+
+ring_world_3_intermediate_dummy_text = {
+	entity = ""
+	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_2_intermediate }
+	prerequisites = { "tech_ring_world" }
+	
+	build_time = @ukn_ringworld_p2_build_time_default
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			unity = @ukn_ringworld_p2_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p2_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p2_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_p2_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_p2_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_p2_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p2_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p2_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p2_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	potential = {
+		NOT = { has_technology = tech_ring_world }
+	}
+}
+#[COMPLETE] Habitable Ringworld
+ring_world_4_habitable_dummy_text = {
+	entity = ""
+#	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_3_intermediate_dummy_text }
+	prerequisites = { "tech_ring_world" }
+	
+	build_time = @ukn_ringworld_p3_city_build_time_default
+	resources = {
+		category = ukn_megastructure_habitable
+		cost = {
+			unity = @ukn_ringworld_p3_city_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p3_city_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_city_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_city_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_city_cost_ukn_causalitons_default
+		}
+		upkeep = {
+			energy = @ukn_ringworld_p3_city_upkeep_energy_default
+			ukn_meta_materials = @ukn_ringworld_p3_city_upkeep_ukn_meta_materials_default
+		}
+	}
+#######################
+
+	potential = {
+		NOT = { has_technology = tech_ring_world }
+	}
+}
+
+#[COMPLETE] Habitable Ringworld
+ring_world_4_complete_dummy_text = {
+	entity = ""
+#	construction_entity = "vanilla_quarter_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { ring_world_4_habitable_dummy_text }
+	prerequisites = { "tech_ring_world" }
+	show_prereqs = yes
+
+	build_time = 47400
+	resources = {
+		category = megastructures
+		cost = {
+			influence = @ukn_ringworld_p0_cost_influence_default
+			unity = @ukn_ringworld_p0_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p0_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p0_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p0_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p0_cost_ukn_causalitons_default
+		}
+		cost = {
+			unity = @ukn_ringworld_p1_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p1_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p1_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_p1_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_p1_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_p1_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p1_cost_ukn_causalitons_default
+		}
+		cost = {
+			unity = @ukn_ringworld_p2_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p2_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p2_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_p2_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_p2_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_p2_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p2_cost_ukn_causalitons_default
+		}
+		cost = {
+			unity = @ukn_ringworld_p2_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p2_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p2_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_p2_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_p2_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_p2_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p2_cost_ukn_causalitons_default
+		}
+		cost = {
+			unity = @ukn_ringworld_p2_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p2_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p2_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_p2_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_p2_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_p2_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p2_cost_ukn_causalitons_default
+		}
+		cost = {
+			unity = @ukn_ringworld_p2_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p2_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p2_cost_ukn_meta_materials_default
+####
+			ukn_femtomatter = @ukn_ringworld_p2_cost_ukn_femtomatter_default
+#			ukn_condensics = @ukn_ringworld_p2_cost_ukn_condensics_default
+#			ukn_quasi_matter = @ukn_ringworld_p2_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p2_cost_ukn_causalitons_default
+		}
+		cost = {
+			unity = @ukn_ringworld_p3_city_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p3_city_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_city_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_city_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_city_cost_ukn_causalitons_default
+		}
+		cost = {
+			unity = @ukn_ringworld_p3_city_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p3_city_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_city_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_city_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_city_cost_ukn_causalitons_default
+		}
+		cost = {
+			unity = @ukn_ringworld_p3_city_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p3_city_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_city_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_city_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_city_cost_ukn_causalitons_default
+		}
+		cost = {
+			unity = @ukn_ringworld_p3_city_cost_unity_default
+####
+			consumer_goods = @ukn_ringworld_p3_city_cost_consumer_goods_default
+			ukn_meta_materials = @ukn_ringworld_p3_city_cost_ukn_meta_materials_default
+#			ukn_quasi_matter = @ukn_ringworld_p3_city_cost_ukn_quasi_matter_default
+#			ukn_causalitons = @ukn_ringworld_p3_city_cost_ukn_causalitons_default
+		}
+	}
+#######################
+
+	potential = {
+		NOT = { has_technology = tech_ring_world }
+	}
+}

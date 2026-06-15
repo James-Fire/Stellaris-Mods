@@ -1,0 +1,67 @@
+# Green Tiberium
+sr_tiberium_green = {
+	prerequisites = { "tech_tiberium_green" }
+	category = advanced
+	visibility_prerequisite = { always = yes }
+	tradable = yes
+	market_amount = 20
+	market_price = 50
+	max = 500
+	
+	deficit_modifier = green_tiberium_deficit
+	
+	ai_weight = {
+		weight = 5
+	}
+
+	ai_wants = {
+		base = 500
+	}
+
+}
+
+# Blue Tiberium
+sr_tiberium_blue = {
+	prerequisites = { "tech_tiberium_blue" }
+	category = advanced
+	visibility_prerequisite = { always = yes }
+	tradable = yes
+	market_amount = 10
+	market_price = 100
+	max = 500
+	
+	deficit_modifier = blue_tiberium_deficit
+	
+	ai_weight = {
+		weight = 5
+	}
+
+	ai_wants = {
+		base = 500
+	}
+	
+
+}
+
+# Liquid Tiberium
+sr_tiberium_liquid = {
+	prerequisites = { "tech_tiberium_liquid" }
+	category = advanced
+	visibility_prerequisite = { always = yes }
+	tradable = yes
+	market_amount = 5
+	market_price = 150
+	max = 1
+	
+	deficit_modifier = liquid_tiberium_deficit
+	
+	ai_weight = {
+		weight = 5
+	}
+
+	ai_wants = {
+		base = 50
+	}
+	
+
+}

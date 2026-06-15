@@ -1,0 +1,22 @@
+tiberium_cleanup = {
+	icon = "GFX_edict_type_policy"
+	length = 3600
+	resources = {
+		category = campaigns
+		cost = {
+			energy = 5000
+			alloys = 250
+		}
+	}
+
+	modifier = {
+	}
+	
+	potential = {
+		has_technology = tech_tiberium_green
+	}
+	
+	ai_weight = {
+		weight = 0
+	}	
+}

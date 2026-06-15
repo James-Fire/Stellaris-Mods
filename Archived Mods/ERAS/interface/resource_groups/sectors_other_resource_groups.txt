@@ -1,0 +1,22 @@
+sectors_others_group = {
+	resources = {
+		sr_living_metal
+		ehof_sr_sentient_metal
+		sr_zro
+		minor_artifacts
+		exotic_gases
+		rare_crystals
+        acot_sr_dark_energy
+        acot_sr_stellarite
+        acot_sr_light_matter
+        esc_living_crystal
+        esc_gravitic_anomaly
+        esc_psionic_charge
+        esc_transdimensional_vortex
+        esc_enigmatic_energy
+	}
+	localization = {
+		"RESOURCE_GROUP_BALANCE_ONLY" = default
+		"RESOURCE_GROUP_BALANCE_ONLY_NEG" = { balance < 0 }
+	}
+}

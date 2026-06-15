@@ -1,0 +1,1523 @@
+#Missiles
+##################################
+##   Liquid Tiberium Missiles 	##
+##################################
+weapon_component_template = {
+	key = "LIQUID_TIBERIUM_MISSILE_1"
+	size = small
+	entity = "turret_missile_medium_entity"
+	
+	icon = "GFX_ship_part_lt_missile_1"
+	icon_frame = 1
+	damage = { min = 36.0 max = 48.0 }
+	windup = { min = 1.0 max = 15.0 }
+	total_fire_time = 60
+	range = 100.0
+	accuracy = 1.0
+	tracking = 0.25
+	shield_penetration = 1.0
+	hull_damage = 1.25
+	missile_speed = 18.0
+	missile_evasion = 0.0
+	missile_health = 6.0
+	missile_armor = 0.0
+	missile_shield = 0.0
+	missile_retarget_range = 100.0
+	type = missile
+	
+	prerequisites = { "tech_tiberium_missile_core_1" }
+	upgrades_to = "LIQUID_TIBERIUM_MISSILE_2"
+	component_set = "liquid_tiberium_missile_1"
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery }
+	ai_weight = {
+		weight = 1
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t1_cost
+			sr_tiberium_liquid = 0.01
+		}		
+		upkeep = {
+			energy = @m_t1_upkeep_energy
+			alloys = @m_t1_upkeep_alloys
+			sr_tiberium_liquid = 0.01
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LIQUID_TIBERIUM_MISSILE_2"
+	size = small
+	entity = "turret_missile_medium_entity"
+	
+	icon = "GFX_ship_part_lt_missile_2"
+	icon_frame = 1
+	damage = { min = 47.0 max = 62.0 }
+	windup = { min = 1.0 max = 15.0 }
+	total_fire_time = 60
+	range = 100.0
+	accuracy = 1.0
+	tracking = 0.25
+	shield_penetration = 1.0
+	hull_damage = 1.25
+	missile_speed = 18.0
+	missile_evasion = 0.0
+	missile_health = 6.0
+	missile_armor = 0.0
+	missile_shield = 0.0
+	missile_retarget_range = 100.0
+	type = missile
+	
+	prerequisites = { "tech_tiberium_missile_core_2" }
+	upgrades_to = "LIQUID_TIBERIUM_MISSILE_3"
+	component_set = "liquid_tiberium_missile_2"
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery }
+	ai_weight = {
+		weight = 1
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t2_cost
+			sr_tiberium_liquid = 0.02
+		}		
+		upkeep = {
+			energy = @m_t2_upkeep_energy
+			alloys = @m_t2_upkeep_alloys
+			sr_tiberium_liquid = 0.02
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LIQUID_TIBERIUM_MISSILE_3"
+	size = small
+	entity = "turret_missile_medium_entity"
+	
+	icon = "GFX_ship_part_lt_missile_3"
+	icon_frame = 1
+	damage = { min = 61.0 max = 82.0 }
+	windup = { min = 1.0 max = 15.0 }
+	total_fire_time = 60
+	range = 100.0
+	accuracy = 1.0
+	tracking = 0.25
+	shield_penetration = 1.0
+	hull_damage = 1.25
+	missile_speed = 18.0
+	missile_evasion = 0.0
+	missile_health = 6.0
+	missile_armor = 0.0
+	missile_shield = 0.0
+	missile_retarget_range = 100.0
+	type = missile
+	
+	prerequisites = { "tech_tiberium_missile_core_3" }
+	upgrades_to = "LIQUID_TIBERIUM_MISSILE_4"
+	component_set = "liquid_tiberium_missile_3"
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery }
+	ai_weight = {
+		weight = 1
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t3_cost
+			sr_tiberium_liquid = 0.04
+		}		
+		upkeep = {
+			energy = @m_t3_upkeep_energy
+			alloys = @m_t3_upkeep_alloys
+			sr_tiberium_liquid = 0.04
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LIQUID_TIBERIUM_MISSILE_4"
+	size = small
+	entity = "turret_missile_medium_entity"
+	
+	icon = "GFX_ship_part_lt_missile_4"
+	icon_frame = 1
+	damage = { min = 79 max = 106 }
+	windup = { min = 1.0 max = 15.0 }
+	total_fire_time = 60
+	range = 100.0
+	accuracy = 1.0
+	tracking = 0.25
+	shield_penetration = 1.0
+	hull_damage = 1.25
+	missile_speed = 18.0
+	missile_evasion = 0.0
+	missile_health = 6.0
+	missile_armor = 0.0
+	missile_shield = 0.0
+	missile_retarget_range = 100.0
+	type = missile
+	
+	prerequisites = { "tech_tiberium_missile_core_4" }
+	upgrades_to = "LIQUID_TIBERIUM_MISSILE_5"
+	component_set = "liquid_tiberium_missile_4"
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery }
+	ai_weight = {
+		weight = 1
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t4_cost
+			sr_tiberium_liquid = 0.08
+		}		
+		upkeep = {
+			energy = @m_t4_upkeep_energy
+			alloys = @m_t4_upkeep_alloys
+			sr_tiberium_liquid = 0.08
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LIQUID_TIBERIUM_MISSILE_5"
+	size = small
+	entity = "turret_missile_medium_entity"
+	
+	icon = "GFX_ship_part_lt_missile_5"
+	icon_frame = 1
+	damage = { min = 103 max = 137 }
+	windup = { min = 1.0 max = 15.0 }
+	total_fire_time = 60
+	range = 100.0
+	accuracy = 1.0
+	tracking = 0.25
+	shield_penetration = 1.0
+	hull_damage = 1.25
+	missile_speed = 18.0
+	missile_evasion = 0.0
+	missile_health = 6.0
+	missile_armor = 0.0
+	missile_shield = 0.0
+	missile_retarget_range = 100.0
+	type = missile
+	
+	prerequisites = { "tech_tiberium_missile_core_5" }
+	component_set = "liquid_tiberium_missile_5"
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery }
+	ai_weight = {
+		weight = 1
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t5_cost
+			sr_tiberium_liquid = 0.16
+		}		
+		upkeep = {
+			energy = @m_t5_upkeep_energy
+			alloys = @m_t5_upkeep_alloys
+			sr_tiberium_liquid = 0.16
+		}
+	}
+}
+
+#Kinetics
+##################################
+##		Tiberium Railgun 1		##
+##################################
+weapon_component_template = {
+	key = "SMALL_TIBERIUM_RAILGUN_1"
+	size = small
+	power = -6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t1_cost
+		}		
+		upkeep = {
+			energy = @s_t1_upkeep_energy
+			alloys = @s_t1_upkeep_alloys
+		}
+	}
+
+	entity = "small_kinetic_gun_entity"
+	damage = { min = 6 max = 19 }
+	windup = { min = 1.0 max = 18.0 }
+	total_fire_time = 25
+	range = 50.0
+	accuracy = 0.75
+	tracking = 0.5
+	shield_damage = 1.5
+	armor_damage = 0.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_improved_mass_driver_1"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_kinetics_1" }
+	upgrades_to = "SMALL_TIBERIUM_RAILGUN_2"
+	component_set = "tiberium_kinetics_1"
+	projectile_gfx = "mass_driver_s"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_TIBERIUM_RAILGUN_1"
+	size = medium
+	power = -12
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t1_cost
+		}		
+		upkeep = {
+			energy = @m_t1_upkeep_energy
+			alloys = @m_t1_upkeep_alloys
+		}
+	}
+	entity = "medium_kinetic_gun_entity"
+	damage = { min = 16 max = 48 }
+	windup = { min = 1.0 max = 18.0 }
+	total_fire_time = 25
+	range = 75.0
+	accuracy = 0.75
+	tracking = 0.3
+	shield_damage = 1.5
+	armor_damage = 0.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_improved_mass_driver_1"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_kinetics_1" }
+	upgrades_to = "MEDIUM_TIBERIUM_RAILGUN_2"
+	component_set = "tiberium_kinetics_1"
+	projectile_gfx = "mass_driver_m"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_TIBERIUM_RAILGUN_1"
+	size = large
+	power = -24
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t1_cost
+		}		
+		upkeep = {
+			energy = @l_t1_upkeep_energy
+			alloys = @l_t1_upkeep_alloys
+		}
+	}
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 36 max = 115 }
+	windup = { min = 1.0 max = 18.0 }
+	total_fire_time = 25
+	range = 100
+	accuracy = 0.75
+	tracking = 0.05
+	shield_damage = 1.5
+	armor_damage = 0.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_improved_mass_driver_1"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_kinetics_1" }
+	upgrades_to = "LARGE_TIBERIUM_RAILGUN_2"
+	component_set = "tiberium_kinetics_1"
+	projectile_gfx = "mass_driver_l"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+##################################
+##		Tiberium Railgun 2		##
+##################################
+weapon_component_template = {
+	key = "SMALL_TIBERIUM_RAILGUN_2"
+	size = small
+	power = -8
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t2_cost
+		}		
+		upkeep = {
+			energy = @s_t2_upkeep_energy
+			alloys = @s_t2_upkeep_alloys
+		}
+	}
+
+	entity = "small_kinetic_gun_entity"
+	damage = { min = 8 max = 25 }
+	windup = { min = 1.0 max = 18.0 }
+	total_fire_time = 25
+	range = 50.0
+	accuracy = 0.75
+	tracking = 0.5
+	shield_damage = 1.5
+	armor_damage = 0.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_improved_mass_driver_2"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_kinetics_2" }
+	upgrades_to = "SMALL_TIBERIUM_RAILGUN_3"
+	component_set = "tiberium_kinetics_2"
+	projectile_gfx = "coilgun_s"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_TIBERIUM_RAILGUN_2"
+	size = medium
+	power = -16
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t2_cost
+		}		
+		upkeep = {
+			energy = @m_t2_upkeep_energy
+			alloys = @m_t2_upkeep_alloys
+		}
+	}
+	entity = "medium_kinetic_gun_entity"
+	damage = { min = 22 max = 64 }
+	windup = { min = 1.0 max = 18.0 }
+	total_fire_time = 25
+	range = 75.0
+	accuracy = 0.75
+	tracking = 0.3
+	shield_damage = 1.5
+	armor_damage = 0.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_improved_mass_driver_2"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_kinetics_2" }
+	upgrades_to = "MEDIUM_TIBERIUM_RAILGUN_3"
+	component_set = "tiberium_kinetics_2"
+	projectile_gfx = "coilgun_m"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_TIBERIUM_RAILGUN_2"
+	size = large
+	power = -31
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t2_cost
+		}		
+		upkeep = {
+			energy = @l_t2_upkeep_energy
+			alloys = @l_t2_upkeep_alloys
+		}
+	}
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 50 max = 151 }
+	windup = { min = 1.0 max = 18.0 }
+	total_fire_time = 25
+	range = 100
+	accuracy = 0.75
+	tracking = 0.05
+	shield_damage = 1.5
+	armor_damage = 0.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_improved_mass_driver_2"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_kinetics_2" }
+	upgrades_to = "LARGE_TIBERIUM_RAILGUN_3"
+	component_set = "tiberium_kinetics_2"
+	projectile_gfx = "coilgun_l"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+##################################
+##		Tiberium Railgun 3		##
+##################################
+weapon_component_template = {
+	key = "SMALL_TIBERIUM_RAILGUN_3"
+	size = small
+	power = -12
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t3_cost
+		}		
+		upkeep = {
+			energy = @s_t3_upkeep_energy
+			alloys = @s_t3_upkeep_alloys
+		}
+	}
+
+	entity = "small_kinetic_gun_entity"
+	damage = { min = 10 max = 32 }
+	windup = { min = 1.0 max = 18.0 }
+	total_fire_time = 25
+	range = 50.0
+	accuracy = 0.75
+	tracking = 0.5
+	shield_damage = 1.5
+	armor_damage = 0.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_improved_mass_driver_3"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_kinetics_3" }
+	upgrades_to = "SMALL_TIBERIUM_RAILGUN_4"
+	component_set = "tiberium_kinetics_3"
+	projectile_gfx = "railgun_s"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_TIBERIUM_RAILGUN_3"
+	size = medium
+	power = -20
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t3_cost
+		}		
+		upkeep = {
+			energy = @m_t3_upkeep_energy
+			alloys = @m_t3_upkeep_alloys
+		}
+	}
+	entity = "medium_kinetic_gun_entity"
+	damage = { min = 24 max = 82 }
+	windup = { min = 1.0 max = 18.0 }
+	total_fire_time = 25
+	range = 75.0
+	accuracy = 0.75
+	tracking = 0.3
+	shield_damage = 1.5
+	armor_damage = 0.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_improved_mass_driver_3"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_kinetics_3" }
+	upgrades_to = "MEDIUM_TIBERIUM_RAILGUN_4"
+	component_set = "tiberium_kinetics_3"
+	projectile_gfx = "railgun_m"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_TIBERIUM_RAILGUN_3"
+	size = large
+	power = -41
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t3_cost
+		}		
+		upkeep = {
+			energy = @l_t3_upkeep_energy
+			alloys = @l_t3_upkeep_alloys
+		}
+	}
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 58 max = 194 }
+	windup = { min = 1.0 max = 18.0 }
+	total_fire_time = 25
+	range = 100
+	accuracy = 0.75
+	tracking = 0.05
+	shield_damage = 1.5
+	armor_damage = 0.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_improved_mass_driver_3"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_kinetics_3" }
+	upgrades_to = "LARGE_TIBERIUM_RAILGUN_4"
+	component_set = "tiberium_kinetics_3"
+	projectile_gfx = "railgun_l"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+##################################
+##		Tiberium Railgun 4		##
+##################################
+weapon_component_template = {
+	key = "SMALL_TIBERIUM_RAILGUN_4"
+	size = small
+	power = -16
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t4_cost
+		}		
+		upkeep = {
+			energy = @s_t4_upkeep_energy
+			alloys = @s_t4_upkeep_alloys
+		}
+	}
+
+	entity = "small_kinetic_gun_entity"
+	damage = { min = 13 max = 42 }
+	windup = { min = 1.0 max = 18.0 }
+	total_fire_time = 25
+	range = 50.0
+	accuracy = 0.75
+	tracking = 0.5
+	shield_damage = 1.5
+	armor_damage = 0.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_improved_mass_driver_4"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_kinetics_4" }
+	upgrades_to = "SMALL_TIBERIUM_RAILGUN_5"
+	component_set = "tiberium_kinetics_4"
+	projectile_gfx = "advanced_railgun_s"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_TIBERIUM_RAILGUN_4"
+	size = medium
+	power = -28
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t4_cost
+		}		
+		upkeep = {
+			energy = @m_t4_upkeep_energy
+			alloys = @m_t4_upkeep_alloys
+		}
+	}
+	entity = "medium_kinetic_gun_entity"
+	damage = { min = 34 max = 106 }
+	windup = { min = 1.0 max = 18.0 }
+	total_fire_time = 25
+	range = 75.0
+	accuracy = 0.75
+	tracking = 0.3
+	shield_damage = 1.5
+	armor_damage = 0.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_improved_mass_driver_4"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_kinetics_4" }
+	upgrades_to = "MEDIUM_TIBERIUM_RAILGUN_5"
+	component_set = "tiberium_kinetics_4"
+	projectile_gfx = "advanced_railgun_m"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_TIBERIUM_RAILGUN_4"
+	size = large
+	power = -54
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t4_cost
+		}		
+		upkeep = {
+			energy = @l_t4_upkeep_energy
+			alloys = @l_t4_upkeep_alloys
+		}
+	}
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 79 max = 252 }
+	windup = { min = 1.0 max = 18.0 }
+	total_fire_time = 25
+	range = 100
+	accuracy = 0.75
+	tracking = 0.05
+	shield_damage = 1.5
+	armor_damage = 0.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_improved_mass_driver_4"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_kinetics_4" }
+	upgrades_to = "LARGE_TIBERIUM_RAILGUN_5"
+	component_set = "tiberium_kinetics_4"
+	projectile_gfx = "advanced_railgun_l"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+##################################
+##		Tiberium Railgun 5		##
+##################################
+weapon_component_template = {
+	key = "SMALL_TIBERIUM_RAILGUN_5"
+	size = small
+	power = -20
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t5_cost
+		}		
+		upkeep = {
+			energy = @s_t5_upkeep_energy
+			alloys = @s_t5_upkeep_alloys
+		}
+	}
+
+	entity = "small_kinetic_gun_entity"
+	damage = { min = 17 max = 55 }
+	windup = { min = 1.0 max = 18.0 }
+	total_fire_time = 25
+	range = 50.0
+	accuracy = 0.75
+	tracking = 0.5
+	shield_damage = 1.5
+	armor_damage = 0.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_improved_mass_driver_5"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_kinetics_5" }
+	component_set = "tiberium_kinetics_5"
+	projectile_gfx = "gauss_cannon_s"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_TIBERIUM_RAILGUN_5"
+	size = medium
+	power = -36
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t5_cost
+		}		
+		upkeep = {
+			energy = @m_t5_upkeep_energy
+			alloys = @m_t5_upkeep_alloys
+		}
+	}
+	entity = "medium_kinetic_gun_entity"
+	damage = { min = 42 max = 138 }
+	windup = { min = 1.0 max = 18.0 }
+	total_fire_time = 25
+	range = 75.0
+	accuracy = 0.75
+	tracking = 0.3
+	shield_damage = 1.5
+	armor_damage = 0.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_improved_mass_driver_5"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_kinetics_5" }
+	component_set = "tiberium_kinetics_5"
+	projectile_gfx = "gauss_cannon_m"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_TIBERIUM_RAILGUN_5"
+	size = large
+	power = -71
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t5_cost
+		}		
+		upkeep = {
+			energy = @l_t5_upkeep_energy
+			alloys = @l_t5_upkeep_alloys
+		}
+	}
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 101 max = 331 }
+	windup = { min = 1.0 max = 18.0 }
+	total_fire_time = 25
+	range = 100
+	accuracy = 0.75
+	tracking = 0.05
+	shield_damage = 1.5
+	armor_damage = 0.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_improved_mass_driver_5"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_kinetics_5" }
+	component_set = "tiberium_kinetics_5"
+	projectile_gfx = "gauss_cannon_l"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+##################################
+##		Tiberium Artillery		##
+##################################
+
+## Tiberium Artillery 1
+weapon_component_template = {
+	key = "TIBERIUM_KINETIC_ARTILLERY_1"
+	size = large
+	power = -84
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t5_cost
+		}		
+		upkeep = {
+			energy = @l_t5_upkeep_energy
+			alloys = @l_t5_upkeep_alloys
+		}
+	}
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 180 max = 540 }
+	windup = { min = 3.0 max = 25.0 }
+	total_fire_time = 50
+	range = 120
+	accuracy = 0.75
+	tracking = 0.0
+	shield_damage = 1.5
+	armor_damage = 0.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_improved_kinetic_artillery_1"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_kinetic_artillery_1" }
+	upgrades_to = "TIBERIUM_KINETIC_ARTILLERY_2"
+	component_set = "tiberium_kinetic_artillery_1"
+	projectile_gfx = "kinetic_artillery"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+# ## Kinetic Artillery 2
+weapon_component_template = {
+	key = "TIBERIUM_KINETIC_ARTILLERY_2"
+	size = large
+	power = -108
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t6_cost
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 234 max = 702 }
+	windup = { min = 3.0 max = 25.0 }
+	total_fire_time = 50
+	range = 120
+	accuracy = 0.75
+	tracking = 0.0
+	shield_damage = 1.5
+	armor_damage = 0.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_improved_kinetic_artillery_2"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_kinetic_artillery_2" }
+	component_set = "tiberium_artillery_2"
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+#Energy
+
+##################################
+##		  Ion Cannon 1  		##
+##################################
+weapon_component_template = {
+	key = "SMALL_ION_BEAM_1"
+	size = small
+	power = -6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t1_cost
+		}		
+		upkeep = {
+			energy = @s_t1_upkeep_energy
+			alloys = @s_t1_upkeep_alloys
+		}
+	}
+	entity = "small_laser_gun_entity"
+	damage = { min = 7 max = 19 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 35
+	range = 40.0
+	accuracy = 0.90
+	tracking = 0.50
+	shield_damage = 0.5
+	armor_damage = 1.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_ion_beam_1"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_ionization_1" }
+	upgrades_to = "SMALL_ION_BEAM_2"
+	component_set = "tiberium_ion_beam_1"
+	projectile_gfx = "blue_laser_s"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_ION_BEAM_1"
+	size = medium
+	power = -12
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t1_cost
+		}		
+		upkeep = {
+			energy = @m_t1_upkeep_energy
+			alloys = @m_t1_upkeep_alloys
+		}
+	}
+	entity = "medium_laser_gun_entity"
+	damage = { min = 18 max = 48 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 35
+	range = 60.0
+	accuracy = 0.90
+	tracking = 0.30
+	shield_damage = 0.5
+	armor_damage = 1.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_ion_beam_1"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_ionization_1" }
+	upgrades_to = "MEDIUM_ION_BEAM_2"
+	component_set = "tiberium_ion_beam_1"
+	projectile_gfx = "blue_laser_m"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_ION_BEAM_1"
+	size = large
+	power = -24
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t1_cost
+		}		
+		upkeep = {
+			energy = @l_t1_upkeep_energy
+			alloys = @l_t1_upkeep_alloys
+		}
+	}	
+	entity = "large_laser_gun_entity"
+	damage = { min = 43 max = 115 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 35
+	range = 80
+	accuracy = 0.90
+	tracking = 0.05
+	shield_damage = 0.5
+	armor_damage = 1.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_ion_beam_1"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_ionization_1" }
+	upgrades_to = "LARGE_ION_BEAM_2"
+	component_set = "tiberium_ion_beam_1"
+	projectile_gfx = "blue_laser_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+##################################
+##		  Ion Cannon 2  		##
+##################################
+weapon_component_template = {
+	key = "SMALL_ION_BEAM_2"
+	size = small
+	power = -8
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t2_cost
+		}		
+		upkeep = {
+			energy = @s_t2_upkeep_energy
+			alloys = @s_t2_upkeep_alloys
+		}
+	}
+	entity = "small_laser_gun_entity"
+	damage = { min = 10 max = 25 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 35
+	range = 40.0
+	accuracy = 0.90
+	tracking = 0.50
+	shield_damage = 0.5
+	armor_damage = 1.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_ion_beam_2"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_ionization_2" }
+	upgrades_to = "SMALL_ION_BEAM_3"
+	component_set = "tiberium_ion_beam_2"
+	projectile_gfx = "blue_laser_s"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_ION_BEAM_2"
+	size = medium
+	power = -16
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t2_cost
+		}		
+		upkeep = {
+			energy = @m_t2_upkeep_energy
+			alloys = @m_t2_upkeep_alloys
+		}
+	}
+	entity = "medium_laser_gun_entity"
+	damage = { min = 24 max = 64 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 35
+	range = 60.0
+	accuracy = 0.90
+	tracking = 0.30
+	shield_damage = 0.5
+	armor_damage = 1.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_ion_beam_2"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_ionization_2" }
+	upgrades_to = "MEDIUM_ION_BEAM_3"
+	component_set = "tiberium_ion_beam_2"
+	projectile_gfx = "blue_laser_m"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_ION_BEAM_2"
+	size = large
+	power = -31
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t2_cost
+		}		
+		upkeep = {
+			energy = @l_t2_upkeep_energy
+			alloys = @l_t2_upkeep_alloys
+		}
+	}	
+	entity = "large_laser_gun_entity"
+	damage = { min = 58 max = 151 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 35
+	range = 80
+	accuracy = 0.90
+	tracking = 0.05
+	shield_damage = 0.5
+	armor_damage = 1.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_ion_beam_2"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_ionization_2" }
+	upgrades_to = "LARGE_ION_BEAM_3"
+	component_set = "tiberium_ion_beam_2"
+	projectile_gfx = "blue_laser_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+##################################
+##		  Ion Cannon 3  		##
+##################################
+weapon_component_template = {
+	key = "SMALL_ION_BEAM_3"
+	size = small
+	power = -12
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t3_cost
+		}		
+		upkeep = {
+			energy = @s_t3_upkeep_energy
+			alloys = @s_t3_upkeep_alloys
+		}
+	}
+	entity = "small_laser_gun_entity"
+	damage = { min = 12 max = 32 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 35
+	range = 40.0
+	accuracy = 0.90
+	tracking = 0.50
+	shield_damage = 0.5
+	armor_damage = 1.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_ion_beam_3"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_ionization_3" }
+	upgrades_to = "SMALL_ION_BEAM_4"
+	component_set = "tiberium_ion_beam_3"
+	projectile_gfx = "blue_laser_s"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_ION_BEAM_3"
+	size = medium
+	power = -20
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t3_cost
+		}		
+		upkeep = {
+			energy = @m_t3_upkeep_energy
+			alloys = @m_t3_upkeep_alloys
+		}
+	}
+	entity = "medium_laser_gun_entity"
+	damage = { min = 30 max = 82 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 35
+	range = 60.0
+	accuracy = 0.90
+	tracking = 0.30
+	shield_damage = 0.5
+	armor_damage = 1.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_ion_beam_3"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_ionization_3" }
+	upgrades_to = "MEDIUM_ION_BEAM_4"
+	component_set = "tiberium_ion_beam_3"
+	projectile_gfx = "blue_laser_m"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_ION_BEAM_3"
+	size = large
+	power = -41
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t3_cost
+		}		
+		upkeep = {
+			energy = @l_t3_upkeep_energy
+			alloys = @l_t3_upkeep_alloys
+		}
+	}	
+	entity = "large_laser_gun_entity"
+	damage = { min = 72 max = 194 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 35
+	range = 80
+	accuracy = 0.90
+	tracking = 0.05
+	shield_damage = 0.5
+	armor_damage = 1.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_ion_beam_3"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_ionization_3" }
+	upgrades_to = "LARGE_ION_BEAM_4"
+	component_set = "tiberium_ion_beam_3"
+	projectile_gfx = "blue_laser_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+##################################
+##		  Ion Cannon 4  		##
+##################################
+weapon_component_template = {
+	key = "SMALL_ION_BEAM_4"
+	size = small
+	power = -16
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t4_cost
+			rare_crystals = @s_t4_rare
+		}		
+		upkeep = {
+			energy = @s_t4_upkeep_energy
+			alloys = @s_t4_upkeep_alloys
+		}
+	}
+	entity = "small_laser_gun_entity"
+	damage = { min = 16 max = 42 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 35
+	range = 40.0
+	accuracy = 0.90
+	tracking = 0.50
+	shield_damage = 0.5
+	armor_damage = 1.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_ion_beam_4"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_ionization_4" }
+	upgrades_to = "SMALL_ION_BEAM_5"
+	component_set = "tiberium_ion_beam_4"
+	projectile_gfx = "gamma_laser_s"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_ION_BEAM_4"
+	size = medium
+	power = -28
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t4_cost
+			rare_crystals = @m_t4_rare
+		}		
+		upkeep = {
+			energy = @m_t4_upkeep_energy
+			alloys = @m_t4_upkeep_alloys
+		}
+	}
+	entity = "medium_laser_gun_entity"
+	damage = { min = 40 max = 106 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 35
+	range = 60.0
+	accuracy = 0.90
+	tracking = 0.30
+	shield_damage = 0.5
+	armor_damage = 1.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_ion_beam_4"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_ionization_4" }
+	upgrades_to = "MEDIUM_ION_BEAM_5"
+	component_set = "tiberium_ion_beam_4"
+	projectile_gfx = "gamma_laser_m"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_ION_BEAM_4"
+	size = large
+	power = -54
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t4_cost
+			rare_crystals = @l_t4_rare
+		}		
+		upkeep = {
+			energy = @l_t4_upkeep_energy
+			alloys = @l_t4_upkeep_alloys
+		}
+	}	
+	entity = "large_laser_gun_entity"
+	damage = { min = 94 max = 252}
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 35
+	range = 80
+	accuracy = 0.90
+	tracking = 0.05
+	shield_damage = 0.5
+	armor_damage = 1.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_ion_beam_4"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_ionization_4" }
+	upgrades_to = "LARGE_ION_BEAM_5"
+	component_set = "tiberium_ion_beam_4"
+	projectile_gfx = "gamma_laser_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+##################################
+##		  Ion Cannon 5  		##
+##################################
+weapon_component_template = {
+	key = "SMALL_ION_BEAM_5"
+	size = small
+	power = -20
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t5_cost
+			rare_crystals = @s_t5_rare
+		}		
+		upkeep = {
+			energy = @s_t5_upkeep_energy
+			alloys = @s_t5_upkeep_alloys
+		}
+	}
+	entity = "small_laser_gun_entity"
+	damage = { min = 20 max = 55 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 35
+	range = 40.0
+	accuracy = 0.90
+	tracking = 0.50
+	shield_damage = 0.5
+	armor_damage = 1.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_ion_beam_5"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_ionization_5" }
+	component_set = "tiberium_ion_beam_5"
+	projectile_gfx = "gamma_laser_s"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_ION_BEAM_5"
+	size = medium
+	power = -36
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t5_cost			
+			rare_crystals = @m_t5_rare
+		}		
+		upkeep = {
+			energy = @m_t5_upkeep_energy
+			alloys = @m_t5_upkeep_alloys
+		}
+	}
+	entity = "medium_laser_gun_entity"
+	damage = { min = 52 max = 138 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 35
+	range = 60.0
+	accuracy = 0.90
+	tracking = 0.30
+	shield_damage = 0.5
+	armor_damage = 1.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_ion_beam_5"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_ionization_5" }
+	component_set = "tiberium_ion_beam_5"
+	projectile_gfx = "gamma_laser_m"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_ION_BEAM_5"
+	size = large
+	power = -71
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t5_cost
+			rare_crystals = @l_t5_rare
+		}		
+		upkeep = {
+			energy = @l_t5_upkeep_energy
+			alloys = @l_t5_upkeep_alloys
+		}
+	}	
+	entity = "large_laser_gun_entity"
+	damage = { min = 122 max = 331}
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 35
+	range = 80
+	accuracy = 0.90
+	tracking = 0.05
+	shield_damage = 0.5
+	armor_damage = 1.5
+	hull_damage = 1
+	type = instant
+
+	icon = "GFX_ship_part_ion_beam_5"
+	icon_frame = 1
+	prerequisites = { "tech_tiberium_ionization_5" }
+	component_set = "tiberium_ion_beam_5"
+	projectile_gfx = "gamma_laser_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_weight = {
+		weight = 1
+	}
+}

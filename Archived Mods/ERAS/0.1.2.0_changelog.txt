@@ -1,0 +1,129 @@
+CHANGELOG
+---------
+
+[0.1.2.0] Current Version
+---------
+-Too many things fixed/changed to realistically list here. Definitely not savegame compatible.
+
+[0.1.1.8] Current Version
+---------
+-Made AI able to build at least basic districts/buildings again.
+-Reduced basic generator district alloy cost from 100 to 50 and habitat generator district alloy cost from 150 to 100.
+-Added meta-materials resource description to localisation.
+-Fixed hive unity jobs have absurd upkeep.
+
+[0.1.1.7]
+-Reworked topbar resource layout.
+-Reworked habitat tech unlock tooltip.
+-Reworked orbital arcology (renamed to Orbital Loop) [GE] tech unlock tooltip.
+-Reworked stellar particle accelerator, orbital artificial ecosystem and macro-engineering test site [GE] tech unlock tooltips.
+-Added quasi-matter resource description to localisation.
+-Changed "Oscillyons" to "Causalitons" and added their resource decription to localisation.
+-Added country_situations to economic_categories.
+-Updated strategic_resources code.
+--Doesn't crash the game anymore when on the newest version [3.4.3].
+---------
+
+[0.1.1.6]
+-Fleshed out mechanics related to exotic particle (old volatile motes) upkeep of automachine assembler jobs.
+-Automachine assemblers' quasi-matter/causalitons upkeep options have been replaced with femtomatter/condensics upkeep options.
+-T4 engineering output tech is now marked as dangerous due to its potentially negative effects on empire economies.
+-Updated femtomatter and condensics resource description text.
+---------
+
+[0.1.1.5]
+-Fixed missile point defense not having turret models.
+-Slightly altered T2 trade infrastructure icon and added T3-T5 icons.
+-Added T4+T5 default unity infrastructure (bureaucrat infrastructure) icons.
+-Added T1-T5 corporate unity infrastructure icons.
+-Altered T2+T3 spiritualist unity infrastructure icons and added T4+T5 icons.
+-Slightly altered T3 deaath cult unity infrastructure icon and added T4+T5 icons.
+-Added T4+T5 hive unity infrastructure icons.
+-Altered T1-T3 machine unity infrastructure icons and added T4+T5 icons.
+-Altered T1+T2 energy infrastructure icons and added T3-T5 icons.
+-Altered T1+T2 mining infrastructure icons and added T3-T5 icons.
+-Altered T1+T2 food infrastructure icons and added T3-T5 icons.
+-Altered T1 exotic fluids (old exotic gases) infrastructure icon and added T2-T4 icons.
+-Altered T1 superconductive crystals (old rare crystals) infrastructure icon and added T2-T4 icons.
+---------
+
+[0.1.1.4]
+-Fixed old culture worker buildings not being in the files.
+-Fixed T1 energy/kinetic point defense having no stats.
+---------
+
+[0.1.1.3]
+-Attempted to make early game AI somewhat more functional. (I did not succeed, they refuse to build districts properly.)
+-Fixed a display issue related to managers.
+-Fixed broken edicts.
+-Ecumenopoli are now unlocked by a technology.
+-Removed currently redundant infrastructure and district entries.
+-Buffed death priest society research output from 1 to 3.
+-Added -0.5% empire sprawl from pops reduction to bureaucrats, coordinators and synapse drones.
+-Added +5% spiritualist ethics attraction to priests and death priests.
+-Removed amenities production from priests and death priests.
+-Updated automation districts/infrastructure upkeep and added actual values to automation overdrive modifiers.
+-Added a new tooltip to certain technologies to indicate that they lead to automation-related technologies.
+---------
+
+[0.1.1.2]
+-First attempt to balance vanilla kilo/mega/gigastructure build time.
+-Adjusted (and hopefully made functional) build caps of various structures:
+--All kilostructures are now uncapped (excluding the sentry array).
+--All megastructures are now uncapped (excluding the science nexus).
+--Matter decompressors are now uncapped.
+-Matter decompressors' models should now be correctly positioned.
+-Art Installation kilostructure now only applies its effects to the planets in the system it is built in, not the entire empire.
+-Mega Shipyard kilostructure only applies its modifiers to itself (this was already implemented previously, putting it here for completion's sake).
+-Added Eperopoli (Dry, Cold, Wet, Gaia).
+-Fixed some errors with districts.
+---------
+
+[0.1.1.1]
+-Added upkeep to the vanilla megastructures I forgot to add upkeep to.
+---------
+
+[0.1.1.0]
+-Added updated costs/upkeep/output to vanilla megastructures.
+-Added costs/upkeep/output to Femtomatter Replicator and Macro-Compositor.
+-Femtomatter Replicator and Macro-Compositor models should now be functional. (Ported the required gigastructures assets.)
+-The Kilostructural Engineering tech has been moved from being the T2 habitat tech to being the Citadels tech.
+-The Megaengineering tech now only requires the Kilostructural Engineering (old Citadels tech) and Femtomatter Constructs technologies.
+-Fixed buildings not being upgradeable.
+-Anglers should function correctly now.
+-Added minor tooltips to indicate which techs are required to advance to the next technological era.
+-Megastructure Classification Changes:
+--All megastructures not unlocked by the Galactic Wonders AP have been converted into Kilostructures (except the science nexus).
+--All megastructures can now only be attained after taking the Galactic Wonders AP (including the science nexus).
+--The Matter Decompressor is now a Gigastructure (unlocked by the Master Builders AP).
+---------
+---------
+
+[0.1.0.5]
+-Increased habitat capital infrastructure amenities provision to make void dwellers playable until a more permanent solution is found.
+---------
+
+[0.1.0.4]
+-Removed capital infrastructure' obsolete Coordinator/Bureaucrat provision.
+---------
+
+[0.1.0.3]
+-Gestalts should now actually be able to produce consumer goods ("articles").
+-Gestalts now get at least 50 "articles" on game start. 
+-Artisan Drone output/upkeep reduced to be the same as normal Artisans (from 10 to 6).
+---------
+
+[0.1.0.2]
+-Fixed most critter components being generally broken.
+-Cleaned up diplomacy techs a bit.
+-Attempted to balance district/building build times.
+-Fixed some errors and made a few miscellaneous changes.
+---------
+
+[0.1.0.1]
+-Catalytic Processing civics should now be fully functional.
+-Fixed Planet Designation icons.
+---------
+
+[0.1.0.0] Initial Release
+---------

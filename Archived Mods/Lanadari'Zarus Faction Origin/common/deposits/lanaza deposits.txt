@@ -1,0 +1,718 @@
+@lanaza_energy_clear = 10000
+@lanaza_minerals_clear = 10000
+@lanaza_alloys_clear = 5000
+@lanaza_motes_clear = 500
+@lanaza_gas_clear = 500
+@lanaza_crystals_clear = 500
+@lanaza_dark_matter_clear = 100
+
+lanaza_food = {
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_rare
+
+	
+	resources = {
+		category = deposit_blockers
+		produces = {
+		}		
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_regular_empire = yes
+				NOT = { has_valid_civic = civic_anglers }
+			}
+		}
+		job_farmer_per_pop = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_regular_empire = yes
+				has_valid_civic = civic_anglers
+			}
+		}
+		job_angler_per_pop = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		job_agri_drone_per_pop = 0.1
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+lanaza_minerals = {
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_rare
+
+	
+	resources = {
+		category = deposit_blockers
+		produces = {
+		}		
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		job_miner_per_pop = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_gestalt = yes
+				is_catalytic_empire = no
+			}
+		}
+		job_mining_drone_per_pop = 0.1
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+lanaza_energy = {
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_rare
+
+	
+	resources = {
+		category = deposit_blockers
+		produces = {
+		}		
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		job_merchant_per_pop = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_gestalt = yes
+				is_catalytic_empire = no
+			}
+		}
+		job_technician_drone_per_pop = 0.1
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+lanaza_alloys = {
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_rare
+
+	
+	resources = {
+		category = deposit_blockers
+		produces = {
+		}		
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		job_foundry_per_pop = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		job_catalytic_technician_per_pop = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_gestalt = yes
+				is_catalytic_empire = no
+			}
+		}
+		job_alloy_drone_per_pop = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_gestalt = yes
+				is_catalytic_empire = yes
+			}
+		}
+		job_catalytic_drone_per_pop = 0.1
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+lanaza_crime = {
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_rare
+
+	
+	resources = {
+		category = deposit_blockers
+		produces = {
+		}		
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		job_enforcer_per_pop = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		job_patrol_drone_per_pop = 0.1
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+lanaza_growth = {
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_rare
+
+	
+	resources = {
+		category = deposit_blockers
+		produces = {
+		}		
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		job_healthcare_per_pop = 0.05
+		planet_pop_assembly_organic_add = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		job_spawning_drone_per_pop = 0.01
+		planet_pop_assembly_organic_add = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		job_replicator_per_pop = 0.02
+		planet_pop_assembly_add = 2
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+lanaza_research = {
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_rare
+
+	
+	resources = {
+		category = deposit_blockers
+		produces = {
+		}		
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		job_researcher_per_pop = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		job_brain_drone_per_pop = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		job_calculator_per_pop = 0.1
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+lanaza_unity = {
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_rare
+
+	
+	resources = {
+		category = deposit_blockers
+		produces = {
+		}		
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_regular_empire = yes
+				is_spiritualist = no
+			}
+		}
+		job_culture_worker_per_pop = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_regular_empire = yes
+				is_spiritualist = yes
+			}
+		}
+		job_priest_per_pop = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		job_synapse_drone_per_pop = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		job_evaluator_per_pop = 0.1
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+lanaza_housing = {
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_rare
+
+	
+	resources = {
+		category = deposit_blockers
+		produces = {
+		}		
+	}
+	
+	planet_modifier = {
+		pop_housing_usage_mult = -0.9
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		job_maintenance_drone_per_pop = 0.1
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+lanaza_district_slot = {
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_rare
+
+	
+	resources = {
+		category = deposit_blockers
+		produces = {
+		}		
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = 1
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+b_lanaza_food = {
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	time = 1800
+
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = @lanaza_energy_clear
+			minerals = @lanaza_minerals_clear
+			alloys = @lanaza_alloys_clear
+			volatile_motes = @lanaza_motes_clear
+			exotic_gases = @lanaza_gas_clear
+			rare_crystals = @lanaza_crystals_clear
+			sr_dark_matter = @lanaza_dark_matter_clear 
+		}
+	}
+	
+	on_cleared = {
+		add_deposit = lanaza_food
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+b_lanaza_minerals = {
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	time = 1800
+
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = @lanaza_energy_clear
+			minerals = @lanaza_minerals_clear
+			alloys = @lanaza_alloys_clear
+			volatile_motes = @lanaza_motes_clear
+			exotic_gases = @lanaza_gas_clear
+			rare_crystals = @lanaza_crystals_clear
+			sr_dark_matter = @lanaza_dark_matter_clear 
+		}
+	}
+	
+	on_cleared = {
+		add_deposit = lanaza_minerals
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+b_lanaza_energy = {
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	time = 1800
+
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = @lanaza_energy_clear
+			minerals = @lanaza_minerals_clear
+			alloys = @lanaza_alloys_clear
+			volatile_motes = @lanaza_motes_clear
+			exotic_gases = @lanaza_gas_clear
+			rare_crystals = @lanaza_crystals_clear
+			sr_dark_matter = @lanaza_dark_matter_clear 
+		}
+	}
+	
+	on_cleared = {
+		add_deposit = lanaza_energy
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+b_lanaza_alloys = {
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	time = 1800
+
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = @lanaza_energy_clear
+			minerals = @lanaza_minerals_clear
+			alloys = @lanaza_alloys_clear
+			volatile_motes = @lanaza_motes_clear
+			exotic_gases = @lanaza_gas_clear
+			rare_crystals = @lanaza_crystals_clear
+			sr_dark_matter = @lanaza_dark_matter_clear 
+		}
+	}
+	
+	on_cleared = {
+		add_deposit = lanaza_alloys
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+b_lanaza_crime = {
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	time = 1800
+
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = @lanaza_energy_clear
+			minerals = @lanaza_minerals_clear
+			alloys = @lanaza_alloys_clear
+			volatile_motes = @lanaza_motes_clear
+			exotic_gases = @lanaza_gas_clear
+			rare_crystals = @lanaza_crystals_clear
+			sr_dark_matter = @lanaza_dark_matter_clear 
+		}
+	}
+	
+	on_cleared = {
+		add_deposit = lanaza_crime
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+b_lanaza_growth = {
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	time = 1800
+
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = @lanaza_energy_clear
+			minerals = @lanaza_minerals_clear
+			alloys = @lanaza_alloys_clear
+			volatile_motes = @lanaza_motes_clear
+			exotic_gases = @lanaza_gas_clear
+			rare_crystals = @lanaza_crystals_clear
+			sr_dark_matter = @lanaza_dark_matter_clear 
+		}
+	}
+	
+	on_cleared = {
+		add_deposit = lanaza_growth
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+b_lanaza_research = {
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	time = 1800
+
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = @lanaza_energy_clear
+			minerals = @lanaza_minerals_clear
+			alloys = @lanaza_alloys_clear
+			volatile_motes = @lanaza_motes_clear
+			exotic_gases = @lanaza_gas_clear
+			rare_crystals = @lanaza_crystals_clear
+			sr_dark_matter = @lanaza_dark_matter_clear 
+		}
+	}
+	
+	on_cleared = {
+		add_deposit = lanaza_research
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+b_lanaza_unity = {
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	time = 1800
+
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = @lanaza_energy_clear
+			minerals = @lanaza_minerals_clear
+			alloys = @lanaza_alloys_clear
+			volatile_motes = @lanaza_motes_clear
+			exotic_gases = @lanaza_gas_clear
+			rare_crystals = @lanaza_crystals_clear
+			sr_dark_matter = @lanaza_dark_matter_clear 
+		}
+	}
+	
+	on_cleared = {
+		add_deposit = lanaza_unity
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+b_lanaza_housing = {
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	time = 1800
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = @lanaza_energy_clear
+			minerals = @lanaza_minerals_clear
+			alloys = @lanaza_alloys_clear
+			volatile_motes = @lanaza_motes_clear
+			exotic_gases = @lanaza_gas_clear
+			rare_crystals = @lanaza_crystals_clear
+			sr_dark_matter = @lanaza_dark_matter_clear 
+		}
+	}
+	
+	on_cleared = {
+		add_deposit = lanaza_housing
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}

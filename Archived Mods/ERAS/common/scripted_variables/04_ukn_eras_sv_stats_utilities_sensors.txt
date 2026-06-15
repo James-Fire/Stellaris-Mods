@@ -1,0 +1,75 @@
+###################################
+########## SENSOR RANGE ###########
+###################################
+
+@ukn_t0b_sensor_range = 1
+@ukn_t1_sensor_range = 1
+
+@ukn_t2_sensor_range = 2
+@ukn_t3_sensor_range = 3
+@ukn_t4_sensor_range = 4
+@ukn_t5_sensor_range = 5
+
+@ukn_t6_sensor_range = 6
+@ukn_t7_sensor_range = 7
+@ukn_t8_sensor_range = 8
+@ukn_t9_sensor_range = 10
+@ukn_t10_sensor_range = 11
+@ukn_t_p_sensor_range = 9
+
+######################################
+########## HYPERLANE RANGE ###########
+######################################
+
+@ukn_t0b_sensor_hyperlane_range = 2
+@ukn_t1_sensor_hyperlane_range = 2
+
+@ukn_t2_sensor_hyperlane_range = 4
+@ukn_t3_sensor_hyperlane_range = 6
+@ukn_t4_sensor_hyperlane_range = 8
+@ukn_t5_sensor_hyperlane_range = 10
+
+@ukn_t6_sensor_hyperlane_range = 12
+@ukn_t7_sensor_hyperlane_range = 14
+@ukn_t8_sensor_hyperlane_range = 16
+@ukn_t9_sensor_hyperlane_range = 20
+@ukn_t10_sensor_hyperlane_range = 22
+@ukn_t_p_sensor_hyperlane_range = 18
+
+###############################
+########## TRACKING ###########
+###############################
+
+@ukn_t0b_sensor_tracking = -1
+@ukn_t1_sensor_tracking = 0
+
+@ukn_t2_sensor_tracking = 5
+@ukn_t3_sensor_tracking = 10
+@ukn_t4_sensor_tracking = 15
+@ukn_t5_sensor_tracking = 20
+
+@ukn_t6_sensor_tracking = 25
+@ukn_t7_sensor_tracking = 30
+@ukn_t8_sensor_tracking = 35
+@ukn_t9_sensor_tracking = 45
+@ukn_t10_sensor_tracking = 50
+@ukn_t_p_sensor_tracking = 40
+
+############################
+########## POWER ###########
+############################
+
+@ukn_t0b_sensor_power = -4
+@ukn_t1_sensor_power = -5
+
+@ukn_t2_sensor_power = -7
+@ukn_t3_sensor_power = -8
+@ukn_t4_sensor_power = -11
+@ukn_t5_sensor_power = -15
+
+@ukn_t6_sensor_power = -21
+@ukn_t7_sensor_power = -30
+@ukn_t8_sensor_power = -65
+@ukn_t9_sensor_power = -101
+@ukn_t10_sensor_power = -101
+@ukn_t_p_sensor_power = -44

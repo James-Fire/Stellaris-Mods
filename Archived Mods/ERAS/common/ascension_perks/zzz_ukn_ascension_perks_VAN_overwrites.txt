@@ -1,0 +1,284 @@
+
+
+#################
+# UTOPIA ASCENSION PERKS
+#################
+
+ap_galactic_wonders_utopia = {
+	on_enabled = {
+		custom_tooltip = "add_research_options_galactic_wonders_utopia"
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_technology = tech_ring_world }
+				}
+				add_research_option = tech_ring_world
+			}
+			if = {
+				limit = {
+					NOT = { has_technology = tech_science_nexus }
+				}
+				add_research_option = tech_science_nexus
+			}
+			if = {
+				limit = {
+					NOT = { has_technology = tech_dyson_sphere }
+				}
+				add_research_option = tech_dyson_sphere
+			}
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_mega_engineering"
+			has_technology = tech_mega_engineering
+		}
+		custom_tooltip = {
+			fail_text = "ukn_requires_built_kilostructure_or_repaired_megastructure"
+			OR = {
+				has_country_flag = ukn_has_built_kilostructure
+				has_country_flag = ukn_has_repaired_megastructure
+			}
+		}
+	}
+
+	potential = {
+		host_has_dlc = "Utopia"
+		NOR = {
+			host_has_dlc = "Megacorp"
+			has_ascension_perk = ap_galactic_wonders_utopia
+		}
+	}
+
+	ai_weight = {
+		factor = 20
+		modifier = {
+			factor = 2
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+}
+
+ap_galactic_wonders_megacorp = {
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_mega_engineering"
+			has_technology = tech_mega_engineering
+		}
+		custom_tooltip = {
+			fail_text = "ukn_requires_built_kilostructure_or_repaired_megastructure"
+			OR = {
+				has_country_flag = ukn_has_built_kilostructure
+				has_country_flag = ukn_has_repaired_megastructure
+			}
+		}
+	}
+
+	potential = {
+		host_has_dlc = "Megacorp"
+		NOR = {
+			host_has_dlc = "Utopia"
+			has_ascension_perk = ap_galactic_wonders_megacorp
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+}
+
+ap_galactic_wonders_utopia_and_megacorp = {
+	on_enabled = {
+		custom_tooltip = "add_research_options_galactic_wonders_utopia_megacorp"
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_technology = tech_ring_world }
+				}
+				add_research_option = tech_ring_world
+			}
+			if = {
+				limit = {
+					NOT = { has_technology = tech_science_nexus }
+				}
+				add_research_option = tech_science_nexus
+			}
+			if = {
+				limit = {
+					NOT = { has_technology = tech_dyson_sphere }
+				}
+				add_research_option = tech_dyson_sphere
+			}
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_mega_engineering"
+			has_technology = tech_mega_engineering
+		}
+		custom_tooltip = {
+			fail_text = "ukn_requires_built_kilostructure_or_repaired_megastructure"
+			OR = {
+				has_country_flag = ukn_has_built_kilostructure
+				has_country_flag = ukn_has_repaired_megastructure
+			}
+		}
+
+	}
+
+	potential = {
+		host_has_dlc = "Utopia"
+		host_has_dlc = "Megacorp"
+		NOT = {
+			has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+}
+
+ap_master_builders = {
+	on_enabled = {
+		custom_tooltip = "ukn_add_research_options_ap_master_builders"
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_technology = tech_matter_decompressor }
+				}
+				add_research_option = tech_matter_decompressor
+			}
+		}
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+		custom_tooltip = {
+			fail_text = "ukn_requires_tech_ukn_reactor_boosters_5"
+			has_technology = tech_ukn_reactor_boosters_5
+		}
+		custom_tooltip = {
+			fail_text = "ukn_requires_tech_ukn_thrusters_5"
+			has_technology = tech_ukn_thrusters_5
+		}
+		custom_tooltip = {
+			fail_text = "ukn_requires_ap_galactic_wonders"
+			OR = {
+				has_ascension_perk = ap_galactic_wonders_utopia
+				has_ascension_perk = ap_galactic_wonders_megacorp
+				has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
+			}
+		}
+		custom_tooltip = {
+			fail_text = "ukn_requires_built_megastructure_or_repaired_gigastructure"
+			OR = {
+				has_country_flag = ukn_has_built_megastructure
+				has_country_flag = ukn_has_repaired_gigastructure
+			}
+		}
+	}
+	modifier = {
+		megastructure_build_speed_mult = 0.25
+		country_megastructure_build_cap_add = 1
+	}
+
+	potential = {
+		host_has_dlc = "Utopia"
+		NOT = {
+			has_ascension_perk = ap_master_builders
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+}
+
+ap_arcology_project = {
+	potential = {
+		host_has_dlc = "Megacorp"
+		OR = {
+			is_regular_empire = yes
+			has_valid_civic = civic_machine_servitor
+		}
+		NOT = { has_valid_civic = civic_agrarian_idyll }
+		NOT = {
+			has_ascension_perk = ap_arcology_project
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_technology_housing_2"
+			has_technology = tech_housing_2
+		}
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+	}
+
+	potential = {
+		always = no
+	 #temporarily disabled, will be readded later as buff for specialized ecus
+	}
+
+	on_enabled = {
+		custom_tooltip = "allow_arcology_project"
+		custom_tooltip = "decision_arcology_project_effects"
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_materialist
+		}
+	}
+}

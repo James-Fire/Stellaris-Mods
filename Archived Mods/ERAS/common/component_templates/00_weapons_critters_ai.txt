@@ -1,0 +1,64 @@
+
+
+# ####################
+#  Critter Weapons - Contingency Weapons
+# ####################
+
+@critter_cost_value = 35
+@regen = 1
+
+### Strike Craft
+
+# Standard Contingency Fighter
+strike_craft_component_template = {
+	key = "AI_STRIKE_CRAFT"
+	size = LARGE
+	entity = "ai_01_fighter_entity"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 60
+		}
+	}
+    power = @ukn_crisis_ai_strike_craft_1_power
+	
+	damage = { min = @ukn_crisis_ai_strike_craft_1_dmg_min max = @ukn_crisis_ai_strike_craft_1_dmg_max }
+	cooldown = @ukn_crisis_ai_strike_craft_1_cooldown
+    range = @ukn_crisis_ai_strike_craft_1_range
+    accuracy = @ukn_crisis_ai_strike_craft_1_accuracy
+	
+    hull_damage = @ukn_crisis_ai_strike_craft_1_hull_damage_mult
+    armor_penetration = @ukn_crisis_ai_strike_craft_1_armor_penetration_mult
+    armor_damage = @ukn_crisis_ai_strike_craft_1_armor_damage_mult
+    shield_penetration = @ukn_crisis_ai_strike_craft_1_shield_penetration_mult
+    shield_damage = @ukn_crisis_ai_strike_craft_1_shield_damage_mult
+    tracking = @ukn_crisis_ai_strike_craft_1_tracking
+	
+	engagement_range = @ukn_crisis_ai_strike_craft_1_engagement_range
+	count = @ukn_crisis_ai_strike_craft_1_count
+	regeneration_per_day = @ukn_crisis_ai_strike_craft_1_regen
+	launch_time = @ukn_crisis_ai_strike_craft_1_launch_time
+
+	health = @ukn_crisis_ai_strike_craft_1_health
+	armor = @ukn_crisis_ai_strike_craft_1_armor
+	shield = @ukn_crisis_ai_strike_craft_1_shield
+	
+	evasion = @ukn_crisis_ai_strike_craft_1_evasion
+	speed = @ukn_crisis_ai_strike_craft_1_speed
+	rotation_speed = @ukn_crisis_ai_strike_craft_1_rotation_speed
+	acceleration = @ukn_crisis_ai_strike_craft_1_acceleration
+
+	ship_behavior = "bombers_behavior"
+
+	weapon_type = instant
+	projectile_gfx = "scout_laser_1"
+
+	component_set = "AI_STRIKE_CRAFT_1"
+	icon = "GFX_ship_part_strike_craft_scout_1"
+	icon_frame = 1
+	tags = { weapon_type_strike_craft }
+	
+	ai_weight = {
+		weight = 0
+	}
+}

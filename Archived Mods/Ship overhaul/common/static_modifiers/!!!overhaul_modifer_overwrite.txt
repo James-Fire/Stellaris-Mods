@@ -1,0 +1,53 @@
+ship_excess_power = {
+	ship_evasion_mult = 0.25
+	ship_speed_mult = 0.25
+	ship_weapon_damage = 0.5
+	ship_shield_regen_add_perc = 0.5
+}
+# Applied when the ship is orbiting a planet where repairs are possible
+ship_orbit_repair = {
+	ship_hull_regen_add_perc = 0.02
+	ship_armor_regen_add_perc = 0.02
+	ship_hull_regen_add_static = 20
+	ship_armor_regen_add_static = 20
+}
+# Scaling 1% HP: 100% penalty -> 100% HP: 0% penalty
+# Only ship_fire_rate_mult and ship_speed_mult will have an effect here
+ship_max_damaged_effect = {
+	ship_fire_rate_mult = -0.5
+}
+# Self repair applied to stations when they are not on cooldown
+# Only ship_{hull,armor,shield}_regen_add_{perc,static} modifiers will have an effect here
+station_self_repair = {
+	ship_hull_regen_add_perc = 1
+	ship_armor_regen_add_perc = 1
+}
+
+# For each 100% size disparity between combatants
+fleet_force_disparity_effect = {
+	force_disparity_fire_rate_mult = 0.5
+}
+
+ship_rank_regular = {
+}
+
+ship_rank_experienced = {
+	ship_weapon_damage = 0.1
+	ship_tracking_add = 1
+}
+
+ship_rank_veteran = {
+	ship_weapon_damage = 0.2
+	ship_hull_mult = 0.05
+	ship_evasion_mult = 0.05
+	ship_weapon_range_mult = 0.05
+	ship_tracking_add = 3
+}
+
+ship_rank_elite = {
+	ship_weapon_damage = 0.4
+	ship_hull_mult = 0.10
+	ship_evasion_mult = 0.10
+	ship_weapon_range_mult = 0.10
+	ship_tracking_add = 5
+}

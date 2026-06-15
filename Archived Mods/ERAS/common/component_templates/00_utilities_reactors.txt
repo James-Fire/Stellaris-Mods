@@ -1,0 +1,267 @@
+####################
+# Engimatic Reactors
+####################
+
+utility_component_template = {
+	key = "CORVETTE_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @corvette_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @corvette_cost_6
+			sr_dark_matter = 1
+		}
+		upkeep = {
+			energy = 0.37
+			alloys = 0.037
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport crisis_corvette offspring_corvette }
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @destroyer_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @destroyer_cost_6
+			sr_dark_matter = 2
+		}
+		upkeep = {
+			energy = 0.74
+			alloys = 0.074
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	size_restriction = { destroyer crisis_destroyer offspring_destroyer }
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @cruiser_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruiser_cost_6
+			sr_dark_matter = 4
+		}
+		upkeep = {
+			energy = 1.48
+			alloys = 0.148
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	size_restriction = { cruiser crisis_cruiser offspring_cruiser }
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @battleship_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @battleship_cost_6
+			sr_dark_matter = 8
+		}
+		upkeep = {
+			energy = 2.98
+			alloys = 0.298
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	size_restriction = { battleship offspring_battleship }
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @titan_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titan_cost_6
+			sr_dark_matter = 16
+		}
+		upkeep = {
+			energy = 5.93
+			alloys = 0.593
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	size_restriction = { titan }
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @colossus_power
+	resources = {
+		category = ship_components
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	size_restriction = { colossus star_eater }
+
+	ai_weight = {
+		weight = 6
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_DARK_MATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @platform_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @platform_cost_6
+			sr_dark_matter = 4
+		}
+		upkeep = {
+			energy = 0.74
+			alloys = 0.074
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+		military_station_medium
+		military_station_large
+	}
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "ION_CANNON_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @cruiser_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruiser_cost_6
+			sr_dark_matter = 8
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	size_restriction = { ion_cannon }
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_DARK_MATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @starbase_power_6
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	class_restriction = { shipclass_starbase }
+	size_restriction = {
+		starbase_outpost
+		starbase_starport
+		starbase_starhold
+		starbase_starfortress
+		starbase_citadel
+		juggernaut
+		orbital_ring_tier_1
+		orbital_ring_tier_2
+		orbital_ring_tier_3
+	}
+
+	ai_weight = {
+		weight = 6
+	}
+}

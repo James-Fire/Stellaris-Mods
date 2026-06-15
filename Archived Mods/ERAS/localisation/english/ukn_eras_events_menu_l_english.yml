@@ -1,0 +1,44 @@
+﻿l_english:
+ 
+ uknscmodmenu.1.name:0 "Spiralis Components Mod Menu"
+ uknscmodmenu.1.desc:0 "This menu can be used to configure the mod §SSpiralis Components§!. §SNon-game-start§! options can be accessed (only by the host in a multiplayer game) via an edict any time during the game."
+ 
+ uknscmodmenu.11.name:0 "Game-Start Only Options"
+ uknscmodmenu.12.name:0 "Component Options"
+ uknscmodmenu.13.exit.name:0 "Exit Spiralis Components Mod Menu"
+ uknscmodmenu.14.return.name:0 "Return To Main Menu"
+ 
+ uknscmodmenu.11.name:0 "Game-Start Only Options"
+ uknscmodmenu.11.desc:0 "This menu displays mod-configuration options only available at §Sgame-start§!.\n\n§PDisabling§! §SAdvanced Resources§! will remove the £ukn_neutronium£ §Y$ukn_neutronium$§!, £ukn_electroweak_matter£ §Y$ukn_electroweak_matter$§!, £ukn_quasi_matter£ §Y$ukn_quasi_matter$§! and £ukn_causalitons£ §Y$ukn_causalitons$§! costs from components, remove their respective production buildings and remove any conversion buildings.\n\n§PDisabling§! §SAI Rare Resource Usage§! will remove £exotic_gases£ §YExotic Gases§!, £rare_crystals£ §YRare Crystals§! and £ukn_exotic_particles£ §YVolatile Motes§! costs from the AI's components. This can improve the AI's usage of higher tier components. Please note that this option does §Snot§! disable the advanced resources added in this mod, nor does it disable rare resource usage in components for players.\n\n§PDisabling§! §SFighter/Bomber Separation§! will remove the split between fighters and bombers added in this mod. There will be only one type of strikecraft, as in vanilla."
+ 
+ uknscmodmenu.12.name:0 "Component Options"
+ uknscmodmenu.12.desc:0 "These §Snon-game-start§! options can be accessed (only by the host in a multiplayer game) via an edict any time during the game.\n\nPlease note that disabling of these options after game-start will only prevent new technologies of that type from appearing, and will not remove components that were already researched."
+ 
+ uknscmodmenu.111.active.name:0 "§PDisable§! §SAdvanced Resources§! §ECurrently Enabled§!"
+ uknscmodmenu.111.inactive.name:0 "§GEnable§! §SAdvanced Resources§! §LCurrently Disabled§!"
+ uknscmodmenu.112.active.name:0 "§PDisable§! §SAI Rare Resource Usage§! §ECurrently Enabled§!"
+ uknscmodmenu.112.inactive.name:0 "§GEnable§! §SAI Rare Resource Usage§! §LCurrently Disabled§!"
+ uknscmodmenu.113.active.name:0 "§PDisable§! §SFighter/Bomber Separation§! §ECurrently Enabled§!"
+ uknscmodmenu.113.inactive.name:0 "§GEnable§! §SFighter/Bomber Separation§! §LCurrently Disabled§!"
+ 
+ uknscmodmenu.121.active.name:0 "§PDisable§! §SAuxilliary Components§! §ECurrently Enabled§!"
+ uknscmodmenu.121.inactive.name:0 "§GEnable§! §SAuxilliary Components§! §LCurrently Disabled§!"
+ uknscmodmenu.122.active.name:0 "§PDisable§! §SReactor Components§! §ECurrently Enabled§!"
+ uknscmodmenu.122.inactive.name:0 "§GEnable§! §SReactor Components§! §LCurrently Disabled§!"
+ uknscmodmenu.123.active.name:0 "§PDisable§! §SArmor Components§! §ECurrently Enabled§!"
+ uknscmodmenu.123.inactive.name:0 "§GEnable§! §SArmor Components§! §LCurrently Disabled§!"
+ uknscmodmenu.124.active.name:0 "§PDisable§! §SShield Components§! §ECurrently Enabled§!"
+ uknscmodmenu.124.inactive.name:0 "§GEnable§! §SShield Components§! §LCurrently Disabled§!"
+ uknscmodmenu.125.active.name:0 "§PDisable§! §SMainline Weapons§! §ECurrently Enabled§!"
+ uknscmodmenu.125.inactive.name:0 "§GEnable§! §SMainline Weapons§! §LCurrently Disabled§!"
+ uknscmodmenu.126.active.name:0 "§PDisable§! §SMissile PD§! §ECurrently Enabled§!"
+ uknscmodmenu.126.inactive.name:0 "§GEnable§! §SMissile PD§! §LCurrently Disabled§!"
+ uknscmodmenu.127.active.name:0 "§PDisable§! §SAdditional Combat Computer Types§! §ECurrently Enabled§!"
+ uknscmodmenu.127.inactive.name:0 "§GEnable§! §SAdditional Combat Computer Types§! §LCurrently Disabled§!"
+ 
+ uknscmodmenu.2.name:0 "Spiralis Components Mod Menu"
+ uknscmodmenu.2.desc:0 "This menu can be used to configure the mod §SSpiralis Components§!. §SNon-game-start§! options can be accessed (only by the host in a multiplayer game) via this edict any time during the game."
+ 
+ uknscmodmenu.21.name:0 "Component Options"
+ uknscmodmenu.21.desc:0 "Please note that disabling of these options after game-start will only prevent new technologies of that type from appearing, and will not remove components that were already researched."
+ 

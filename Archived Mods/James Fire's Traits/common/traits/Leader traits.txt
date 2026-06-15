@@ -1,0 +1,173 @@
+leader_trait_governor_genius_leader = {
+	allowed_archetypes = { BIOLOGICAL }
+	icon = "gfx/interface/icons/traits/trait_robot_logic_engines.dds"
+	
+	leader_trait = { governor }
+	leader_class = { governor }
+	randomized = no
+	initial = no
+	modifier = {
+		planet_jobs_produces_mult = 0.03
+	}
+}
+
+leader_trait_scientist_genius_leader = {
+	allowed_archetypes = { BIOLOGICAL }
+	icon = "gfx/interface/icons/traits/trait_robot_logic_engines.dds"
+	
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	randomized = no
+	initial = no
+	modifier = {
+		all_technology_research_speed = 0.10
+		science_ship_survey_speed = 0.25
+	}
+
+
+	ai_categories = {
+		survey
+		physics
+		society
+		engineering
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_admiral_genius_leader = {
+	allowed_archetypes = { BIOLOGICAL }
+	icon = "gfx/interface/icons/traits/trait_robot_logic_engines.dds"
+	
+	leader_trait = { admiral }
+	leader_class = { admiral }
+	randomized = no
+	initial = no
+	modifier = {
+		ship_fire_rate_mult = 0.05
+		ship_weapon_range_mult = 0.10
+	}
+}
+
+leader_trait_general_genius_leader = {
+	allowed_archetypes = { BIOLOGICAL }
+	icon = "gfx/interface/icons/traits/trait_robot_logic_engines.dds"
+	
+	leader_trait = { general }
+	leader_class = { general }
+	randomized = no
+	initial = no
+	modifier = {
+		army_damage_mult = 0.10
+	}
+}
+
+leader_trait_ruler_genius_leader = {
+
+	icon = "gfx/interface/icons/traits/trait_robot_logic_engines.dds"
+	leader_potential_add = {
+		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
+	}
+	modifier = {
+		country_influence_produces_add = 0.5
+		planet_jobs_produces_mult = 0.03		
+	}
+	
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	initial = no
+	randomized = no
+}
+
+leader_trait_governor_psi_amp = {
+	icon = "gfx/interface/icons/traits/trait_robot_logic_engines.dds"
+	
+	leader_trait = { governor }
+	leader_class = { governor }
+	requires_traits = { trait_psionic }
+	prerequisites = { "tech_psionic_amps" }
+	randomized = no
+	initial = no
+	modifier = {
+		planet_stability_add = 2.5	
+		planet_jobs_unity_produces_mult = 0.05
+	}
+}
+
+leader_trait_scientist_psi_amp = {
+	icon = "gfx/interface/icons/traits/trait_robot_logic_engines.dds"
+	
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	requires_traits = { trait_psionic }
+	prerequisites = { "tech_psionic_amps" }
+	randomized = no
+	initial = no
+	modifier = {
+		all_technology_research_speed = 0.05
+		science_ship_survey_speed = 0.125
+	}
+
+
+	ai_categories = {
+		survey
+		physics
+		society
+		engineering
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_admiral_psi_amp = {
+	icon = "gfx/interface/icons/traits/trait_robot_logic_engines.dds"
+	
+	leader_trait = { admiral }
+	leader_class = { admiral }
+	requires_traits = { trait_psionic }
+	prerequisites = { "tech_psionic_amps" }
+	randomized = no
+	initial = no
+	modifier = {
+		ship_weapon_damage = 0.05
+		ship_evasion_mult = 0.075
+	}
+}
+
+leader_trait_general_psi_amp = {
+	icon = "gfx/interface/icons/traits/trait_robot_logic_engines.dds"
+	
+	leader_trait = { general }
+	leader_class = { general }
+	requires_traits = { trait_psionic }
+	prerequisites = { "tech_psionic_amps" }
+	randomized = no
+	initial = no
+	modifier = {
+		army_morale = 0.075
+		army_morale_damage_mult = 0.075
+	}
+}
+
+leader_trait_ruler_psi_amp = {
+
+	icon = "gfx/interface/icons/traits/trait_robot_logic_engines.dds"
+	leader_potential_add = {
+		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
+	}
+	prerequisites = { "tech_psionic_amps" }
+	modifier = {
+		pop_government_ethic_attraction = 0.05
+		country_influence_produces_add = 0.25
+	}
+	
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	requires_traits = { trait_psionic }
+	initial = no
+	randomized = no
+}

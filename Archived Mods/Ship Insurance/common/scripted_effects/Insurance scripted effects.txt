@@ -1,0 +1,21 @@
+apply_insurance_modifier = {
+	if = {
+		limit = { has_ethic = ethic_fanatic_pacifist }
+		add_modifier = fanatic_pacifist_insurance
+	}	
+	else_if = {
+		limit = { has_ethic = ethic_pacifist }
+		add_modifier = pacifist_insurance
+	}		
+	else_if = {
+		limit = { has_ethic = ethic_militarist }
+		add_modifier = militarist_insurance
+	}	
+	else_if = {
+		limit = { has_ethic = ethic_fanatic_militarist }
+		add_modifier = fanatic_militarist_insurance
+	}	
+	else = {
+		add_modifier = normal_insurance
+	}
+}

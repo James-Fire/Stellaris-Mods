@@ -1,0 +1,209 @@
+﻿l_english:
+ 
+ 
+# SPACE STRUCTURES TECHS #---------------------------------------------------------
+ 
+# Habitats/Kilostructural Engineering
+ TECH_UNLOCK_UKN_HABITAT_1_TITLE:0 "§HUnlocks Macro-Construction:§! $pc_habitat$"
+ TECH_UNLOCK_UKN_HABITAT_1_DESC:0 "$pc_habitat_desc$"
+ 
+ 
+# CAPITAL OUTPUT TECHS / AUTOMATION #---------------------------------------------------------
+ 
+# Automation
+ TECH_UNLOCK_UKN_AUTOMATION_BUILDING_UNLOCK_2_TITLE:0 "Gain §EType-2§! £ukn_icon_automation_type_2£ §H$name_ukn_building$§! £physics_research£§R§!£society_research£§R§!£engineering_research£§R§!§YResearch Options§! "
+ TECH_UNLOCK_UKN_AUTOMATION_BUILDING_UNLOCK_2_DESC:0 "Researching this technology will grant the following §EType-2§! £ukn_icon_automation_type_2£ §H$name_ukn_building$§!-Related technologies as £physics_research£§R§!£society_research£§R§!£engineering_research£§R§!§WResearch Options§!:\n£physics_research£ §Y$tech_basic_science_lab_2$§!\n£physics_research£ §Y$tech_power_hub_1$§!\n£society_research£ §Y$tech_food_processing_1$§!\n£society_research£ §Y$tech_space_trading$§!\n£society_research£ §Y$tech_planetary_infrastructure_1$§! or £society_research£ §Y$tech_holographic_rituals$§! or £society_research£ §Y$tech_hive_cluster$§!\n£engineering_research£ §Y$tech_mineral_purification_1$§!\n£engineering_research£ §Y$tech_alloys_1$§!\n£engineering_research£ §Y$tech_luxuries_1$§! "
+ 
+ TECH_UNLOCK_UKN_AUTOMATION_BUILDING_UNLOCK_3_TITLE:0 "Unlocks §EType-3§! £ukn_icon_automation_type_3£ §H$name_ukn_building$ Upgrades§! "
+ TECH_UNLOCK_UKN_AUTOMATION_BUILDING_UNLOCK_3_DESC:0 "Researching this technology will allow us to construct the following §EType-3§! £ukn_icon_automation_type_3£ §H$name_ukn_building$ Upgrades§! on £ukn_icon_planet_blue£§EDefault Worlds§!:\n£building£ §Y$building_factory_2$§!\n£building£ §Y$building_foundry_2$§!\n£building£ §Y$building_ukn_automachine_assembly_grid_2$§!\n£building£ §Y$building_ukn_energy_grid_2$§!\n£building£ §Y$building_ukn_food_processing_facility_2$§!\n£building£ §Y$building_ukn_mineral_purification_plant_2$§!\n£building£ §Y$building_ukn_commercial_zone_2$§!\n£building£ §Y$building_ukn_research_lab_2$§!\n£building£ §EType-3§! §Y$unity$§!-Related £building£ §H$name_ukn_building$§!  "
+ 
+ TECH_UNLOCK_UKN_AUTOMATION_BUILDING_UNLOCK_4_TITLE:0 "Unlocks §EType-4§! £ukn_icon_automation_type_4£ §H$name_ukn_building$ Upgrades§! "
+ TECH_UNLOCK_UKN_AUTOMATION_BUILDING_UNLOCK_4_DESC:0 "Researching this technology will allow us to construct the following §EType-4§! £ukn_icon_automation_type_4£ §H$name_ukn_building$ Upgrades§! on £ukn_icon_planet_blue£§EDefault Worlds§! and £ukn_icon_planet_blue£§EArcology Worlds§!:\n£building£ §Y$building_factory_3$§!\n£building£ §Y$building_foundry_3$§!\n£building£ §Y$building_ukn_automachine_assembly_grid_3$§!\n£building£ §Y$building_ukn_refinery_2$§!\n£building£ §Y$building_ukn_crystal_plant_2$§!\n£building£ §Y$building_ukn_energy_grid_3$§!\n£building£ §Y$building_ukn_food_processing_facility_3$§!\n£building£ §Y$building_ukn_mineral_purification_plant_3$§!\n£building£ §Y$building_ukn_research_lab_3$§!\n£building£ §Y$building_ukn_commercial_zone_3$§!\n£building£ §EType-4§! §Y$unity$§!-Related £building£ §H$name_ukn_building$§! "
+ 
+ TECH_UNLOCK_UKN_AUTOMATION_BUILDING_UNLOCK_5_TITLE:0 "Unlocks §EType-5§! £ukn_icon_automation_type_5£ §H$name_ukn_building$ Upgrades§! "
+ TECH_UNLOCK_UKN_AUTOMATION_BUILDING_UNLOCK_5_DESC:0 "Researching this technology will allow us to construct the following §EType-5§! £ukn_icon_automation_type_5£ §H$name_ukn_building$ Upgrades§! on £ukn_icon_planet_blue£§EDefault Worlds§!, £ukn_icon_planet_blue£§EArcology Worlds§! and £ukn_icon_planet_blue£§ERingworlds§!:\n£building£ §Y$building_ukn_factory_4$§!\n£building£ §Y$building_ukn_foundry_4$§!\n£building£ §Y$building_ukn_automachine_assembly_grid_4$§!\n£building£ §Y$building_ukn_refinery_3$§!\n£building£ §Y$building_ukn_crystal_plant_3$§!\n£building£ §Y$building_ukn_particle_factory_grid_2$§!\n£building£ §Y$building_ukn_femtomatter_replication_grid_2$§!\n£building£ §Y$building_ukn_energy_grid_4$§!\n£building£ §Y$building_ukn_food_processing_facility_4$§!\n£building£ §Y$building_ukn_mineral_purification_plant_4$§!\n£building£ §Y$building_ukn_research_lab_4$§!\n£building£ §Y$building_ukn_commercial_zone_4$§!\n£building£ §EType-5§! §Y$unity$§!-Related £building£ §H$name_ukn_building$§! "
+ 
+ TECH_UNLOCK_UKN_AUTOMATION_BUILDING_UNLOCK_6_TITLE:0 "Unlocks §EType-6§! £ukn_icon_automation_type_6£ §H$name_ukn_building$ Upgrades§! "
+ TECH_UNLOCK_UKN_AUTOMATION_BUILDING_UNLOCK_6_DESC:0 "Researching this technology will allow us to upgrade \n£building£ §H$building_ukn_automation_grid_1_plural$§! into £building£ §H$building_ukn_automation_grid_2_plural$§!, which automatically manage £ukn_icon_automation_integrity£§HAutomation Integrity§! on our £ukn_icon_planet_blue£§EPlanets§!\n\nAdditionally, researching this technology will allow us to construct the following §EType-6§! £ukn_icon_automation_type_6£ §H$name_ukn_building$ Upgrades§! on £ukn_icon_planet_blue£§EDefault Worlds§!, £ukn_icon_planet_blue£§EArcology Worlds§!, £ukn_icon_planet_blue£§ERingworlds§!, £ukn_icon_planet_blue£§EAlderson Disks§! and £ukn_icon_planet_blue£§EBirch Worlds§!:\n£building£ §Y$building_ukn_factory_5$§!\n£building£ §Y$building_ukn_foundry_5$§!\n£building£ §Y$building_ukn_automachine_assembly_grid_5$§!\n£building£ §Y$building_ukn_refinery_4$§!\n£building£ §Y$building_ukn_crystal_plant_4$§!\n£building£ §Y$building_ukn_particle_factory_grid_3$§!\n£building£ §Y$building_ukn_femtomatter_replication_grid_3$§!\n£building£ §Y$building_ukn_condensics_compositation_grid_2$§!\n£building£ §Y$building_ukn_energy_grid_5$§!\n£building£ §Y$building_ukn_food_processing_facility_5$§!\n£building£ §Y$building_ukn_mineral_purification_plant_5$§!\n£building£ §Y$building_ukn_research_lab_5$§!\n£building£ §Y$building_ukn_commercial_zone_5$§!\n£building£ §EType-6§! §Y$unity$§!-Related £building£ §H$name_ukn_building$§! "
+ 
+ 
+# PHYSICS MILESTONE TECHS / SENSORS #---------------------------------------------------------
+ 
+# Sensors
+ TECH_UNLOCK_UKN_SENSORS_1_TITLE:0 "$TECH_UNLOCK_COMPONENT_LINE$ $UKN_SENSOR_1$"
+ TECH_UNLOCK_UKN_SENSORS_1_DESC:0 "§H$UKN_SENSOR_1$§!\n$UKN_SENSOR_1_DESC$"
+ 
+ TECH_UNLOCK_UKN_SENSORS_2_TITLE:0 "$TECH_UNLOCK_COMPONENT_LINE$ $UKN_SENSOR_2$"
+ TECH_UNLOCK_UKN_SENSORS_2_DESC:0 "§H$UKN_SENSOR_2$§!\n$UKN_SENSOR_2_DESC$"
+ 
+ TECH_UNLOCK_UKN_SENSORS_3_TITLE:0 "$TECH_UNLOCK_COMPONENT_LINE$ $UKN_SENSOR_3$"
+ TECH_UNLOCK_UKN_SENSORS_3_DESC:0 "§H$UKN_SENSOR_3$§!\n$UKN_SENSOR_3_DESC$"
+ 
+ TECH_UNLOCK_UKN_SENSORS_4_TITLE:0 "$TECH_UNLOCK_COMPONENT_LINE$ $UKN_SENSOR_4$"
+ TECH_UNLOCK_UKN_SENSORS_4_DESC:0 "§H$UKN_SENSOR_4$§!\n$UKN_SENSOR_4_DESC$"
+ 
+ TECH_UNLOCK_UKN_SENSORS_5_TITLE:0 "$TECH_UNLOCK_COMPONENT_LINE$ $UKN_SENSOR_5$"
+ TECH_UNLOCK_UKN_SENSORS_5_DESC:0 "§H$UKN_SENSOR_5$§!\n$UKN_SENSOR_5_DESC$"
+ 
+ TECH_UNLOCK_UKN_SENSORS_6_TITLE:0 "$TECH_UNLOCK_COMPONENT_LINE$ $UKN_SENSOR_6$"
+ TECH_UNLOCK_UKN_SENSORS_6_DESC:0 "§H$UKN_SENSOR_6$§!\n$UKN_SENSOR_6_DESC$"
+ 
+ TECH_UNLOCK_UKN_SENSORS_7_TITLE:0 "$TECH_UNLOCK_COMPONENT_LINE$ $UKN_SENSOR_7$"
+ TECH_UNLOCK_UKN_SENSORS_7_DESC:0 "§H$UKN_SENSOR_7$§!\n$UKN_SENSOR_7_DESC$"
+ 
+ TECH_UNLOCK_UKN_SENSORS_8_TITLE:0 "$TECH_UNLOCK_COMPONENT_LINE$ $UKN_SENSOR_8$"
+ TECH_UNLOCK_UKN_SENSORS_8_DESC:0 "§H$UKN_SENSOR_8$§!\n$UKN_SENSOR_8_DESC$"
+ 
+ TECH_UNLOCK_UKN_SENSORS_PLANCK_TITLE:0 "$TECH_UNLOCK_COMPONENT_LINE$ $UKN_SENSOR_PLANCK$"
+ TECH_UNLOCK_UKN_SENSORS_PLANCK_DESC:0 "§H$UKN_SENSOR_PLANCK$§!\n$UKN_SENSOR_PLANCK_DESC$"
+ 
+ TECH_UNLOCK_UKN_SENSORS_9_TITLE:0 "$TECH_UNLOCK_COMPONENT_LINE$ $UKN_SENSOR_9$"
+ TECH_UNLOCK_UKN_SENSORS_9_DESC:0 "§H$UKN_SENSOR_9$§!\n$UKN_SENSOR_9_DESC$"
+ 
+ TECH_UNLOCK_UKN_SENSORS_10_TITLE:0 "$TECH_UNLOCK_COMPONENT_LINE$ $UKN_SENSOR_10$"
+ TECH_UNLOCK_UKN_SENSORS_10_DESC:0 "§H$UKN_SENSOR_10$§!\n$UKN_SENSOR_10_DESC$"
+ 
+ 
+# PROGRAMMING TECHS #---------------------------------------------------------
+ 
+ TECH_UNLOCK_UKN_COMBAT_COMPUTERS_0_TITLE:0 "§HUnlocks Component Set:§! Default Combat Roles"
+ TECH_UNLOCK_UKN_COMBAT_COMPUTERS_0_DESC:0 "§HDefault Combat Roles§!\nRecent progress in AI behavioral theory allows us to equip our shipboard computers with limited combat roles."
+ 
+ 
+# PHYSICS OUTPUT TECHS #---------------------------------------------------------
+ 
+ TECH_UNLOCK_UKN_SHIELDS_1_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_shield£ $UKN_SET_SHIELD_1$"
+ TECH_UNLOCK_UKN_SHIELDS_1_DESC:0 "§H$UKN_SET_SHIELD_1$§!\n$UKN_SET_SHIELD_1_desc$"
+ 
+ TECH_UNLOCK_UKN_PHYSICS_OUTPUT_1_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_shield£ $UKN_SET_SHIELD_2$"
+ TECH_UNLOCK_UKN_PHYSICS_OUTPUT_1_DESC:0 "§H$UKN_SET_SHIELD_2$§!\n$UKN_SET_SHIELD_2_desc$"
+ 
+ TECH_UNLOCK_UKN_PHYSICS_OUTPUT_2_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_shield£ $UKN_SET_SHIELD_3$"
+ TECH_UNLOCK_UKN_PHYSICS_OUTPUT_2_DESC:0 "§H$UKN_SET_SHIELD_3$§!\n$UKN_SET_SHIELD_3_desc$"
+ 
+ TECH_UNLOCK_UKN_PHYSICS_OUTPUT_3_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_shield£ $UKN_SET_SHIELD_4$"
+ TECH_UNLOCK_UKN_PHYSICS_OUTPUT_3_DESC:0 "§H$UKN_SET_SHIELD_4$§!\n$UKN_SET_SHIELD_4_desc$"
+ 
+ TECH_UNLOCK_UKN_PHYSICS_OUTPUT_4_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_shield£ $UKN_SET_SHIELD_5$"
+ TECH_UNLOCK_UKN_PHYSICS_OUTPUT_4_DESC:0 "§H$UKN_SET_SHIELD_5$§!\n$UKN_SET_SHIELD_5_desc$"
+ 
+ TECH_UNLOCK_UKN_PHYSICS_OUTPUT_5_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_shield£ $UKN_SET_SHIELD_6$"
+ TECH_UNLOCK_UKN_PHYSICS_OUTPUT_5_DESC:0 "§H$UKN_SET_SHIELD_6$§!\n$UKN_SET_SHIELD_6_desc$"
+ 
+ TECH_UNLOCK_UKN_PHYSICS_OUTPUT_6_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_shield£ $UKN_SET_SHIELD_7$"
+ TECH_UNLOCK_UKN_PHYSICS_OUTPUT_6_DESC:0 "§H$UKN_SET_SHIELD_7$§!\n$UKN_SET_SHIELD_7_desc$"
+ 
+ TECH_UNLOCK_UKN_PHYSICS_OUTPUT_7_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_shield£ $UKN_SET_SHIELD_8$"
+ TECH_UNLOCK_UKN_PHYSICS_OUTPUT_7_DESC:0 "§H$UKN_SET_SHIELD_8$§!\n$UKN_SET_SHIELD_8_desc$"
+ 
+ TECH_UNLOCK_UKN_PHYSICS_OUTPUT_PLANCK_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_shield£ $UKN_SET_SHIELD_PLANCK$"
+ TECH_UNLOCK_UKN_PHYSICS_OUTPUT_PLANCK_DESC:0 "§H$UKN_SET_SHIELD_PLANCK$§!\n$UKN_SET_SHIELD_PLANCK_desc$"
+ 
+ TECH_UNLOCK_UKN_PHYSICS_OUTPUT_8_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_shield£ $UKN_SET_SHIELD_9$"
+ TECH_UNLOCK_UKN_PHYSICS_OUTPUT_8_DESC:0 "§H$UKN_SET_SHIELD_9$§!\n$UKN_SET_SHIELD_9_desc$"
+ 
+ TECH_UNLOCK_UKN_PHYSICS_OUTPUT_9_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_shield£ $UKN_SET_SHIELD_10$"
+ TECH_UNLOCK_UKN_PHYSICS_OUTPUT_9_DESC:0 "§H$UKN_SET_SHIELD_10$§!\n$UKN_SET_SHIELD_10_desc$"
+ 
+ 
+# ENERGY OUTPUT TECHS / REACTORS #---------------------------------------------------------
+ 
+# Reactors
+ TECH_UNLOCK_UKN_POWER_1_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_power£ $CORVETTE_UKN_REACTOR_1$"
+ TECH_UNLOCK_UKN_POWER_1_DESC:0 "§H$CORVETTE_UKN_REACTOR_1$§!\n$CORVETTE_UKN_REACTOR_1_DESC$"
+ 
+ TECH_UNLOCK_UKN_POWER_2_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_power£ $CORVETTE_UKN_REACTOR_2$"
+ TECH_UNLOCK_UKN_POWER_2_DESC:0 "§H$CORVETTE_UKN_REACTOR_2$§!\n$CORVETTE_UKN_REACTOR_2_DESC$"
+ 
+ TECH_UNLOCK_UKN_POWER_3_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_power£ $CORVETTE_UKN_REACTOR_3$"
+ TECH_UNLOCK_UKN_POWER_3_DESC:0 "§H$CORVETTE_UKN_REACTOR_3$§!\n$CORVETTE_UKN_REACTOR_3_DESC$"
+ 
+ TECH_UNLOCK_UKN_POWER_4_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_power£ $CORVETTE_UKN_REACTOR_4$"
+ TECH_UNLOCK_UKN_POWER_4_DESC:0 "§H$CORVETTE_UKN_REACTOR_4$§!\n$CORVETTE_UKN_REACTOR_4_DESC$"
+ 
+ TECH_UNLOCK_UKN_POWER_5_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_power£ $CORVETTE_UKN_REACTOR_5$"
+ TECH_UNLOCK_UKN_POWER_5_DESC:0 "§H$CORVETTE_UKN_REACTOR_5$§!\n$CORVETTE_UKN_REACTOR_5_DESC$"
+ 
+ TECH_UNLOCK_UKN_POWER_6_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_power£ $CORVETTE_UKN_REACTOR_6$"
+ TECH_UNLOCK_UKN_POWER_6_DESC:0 "§H$CORVETTE_UKN_REACTOR_6$§!\n$CORVETTE_UKN_REACTOR_6_DESC$"
+ 
+ TECH_UNLOCK_UKN_POWER_7_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_power£ $CORVETTE_UKN_REACTOR_7$"
+ TECH_UNLOCK_UKN_POWER_7_DESC:0 "§H$CORVETTE_UKN_REACTOR_7$§!\n$CORVETTE_UKN_REACTOR_7_DESC$"
+ 
+ TECH_UNLOCK_UKN_POWER_8_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_power£ $CORVETTE_UKN_REACTOR_8$"
+ TECH_UNLOCK_UKN_POWER_8_DESC:0 "§H$CORVETTE_UKN_REACTOR_8$§!\n$CORVETTE_UKN_REACTOR_8_DESC$"
+ 
+ TECH_UNLOCK_UKN_POWER_PLANCK_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_power£ $CORVETTE_UKN_REACTOR_PLANCK$"
+ TECH_UNLOCK_UKN_POWER_PLANCK_DESC:0 "§H$CORVETTE_UKN_REACTOR_PLANCK$§!\n$CORVETTE_UKN_REACTOR_PLANCK_DESC$"
+ 
+ TECH_UNLOCK_UKN_POWER_9_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_power£ $CORVETTE_UKN_REACTOR_9$"
+ TECH_UNLOCK_UKN_POWER_9_DESC:0 "§H$CORVETTE_UKN_REACTOR_9$§!\n$CORVETTE_UKN_REACTOR_9_DESC$"
+ 
+ TECH_UNLOCK_UKN_POWER_10_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_power£ $CORVETTE_UKN_REACTOR_10$"
+ TECH_UNLOCK_UKN_POWER_10_DESC:0 "§H$CORVETTE_UKN_REACTOR_10$§!\n$CORVETTE_UKN_REACTOR_10_DESC$"
+ 
+ 
+# MATERIALS TECH / HULL COMPOSITION #---------------------------------------------------------
+ 
+ TECH_UNLOCK_UKN_MATERIALS_1_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_armor£ $UKN_SET_ARMOR_1$"
+ TECH_UNLOCK_UKN_MATERIALS_1_DESC:0 "§H$UKN_SET_ARMOR_1$§!\n$UKN_SET_ARMOR_1_desc$"
+ 
+ TECH_UNLOCK_UKN_MATERIALS_2_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_armor£ $UKN_SET_ARMOR_2$"
+ TECH_UNLOCK_UKN_MATERIALS_2_DESC:0 "§H$UKN_SET_ARMOR_2$§!\n$UKN_SET_ARMOR_2_desc$"
+ 
+ TECH_UNLOCK_UKN_HULL_COMPOSITION_1_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_hit_points£ $UKN_SET_HULL_COMPOSITION_1$"
+ TECH_UNLOCK_UKN_HULL_COMPOSITION_1_DESC:0 "§H$UKN_SET_HULL_COMPOSITION_1$§!\n$UKN_SET_HULL_COMPOSITION_1_DESC$"
+ 
+ TECH_UNLOCK_UKN_HULL_COMPOSITION_2_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_hit_points£ $UKN_SET_HULL_COMPOSITION_2$"
+ TECH_UNLOCK_UKN_HULL_COMPOSITION_2_DESC:0 "§H$UKN_SET_HULL_COMPOSITION_2$§!\n$UKN_SET_HULL_COMPOSITION_2_DESC$"
+ 
+ TECH_UNLOCK_UKN_HULL_COMPOSITION_3_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_hit_points£ $UKN_SET_HULL_COMPOSITION_3$"
+ TECH_UNLOCK_UKN_HULL_COMPOSITION_3_DESC:0 "§H$UKN_SET_HULL_COMPOSITION_3$§!\n$UKN_SET_HULL_COMPOSITION_3_DESC$"
+ 
+ TECH_UNLOCK_UKN_HULL_COMPOSITION_4_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_hit_points£ $UKN_SET_HULL_COMPOSITION_4$"
+ TECH_UNLOCK_UKN_HULL_COMPOSITION_4_DESC:0 "§H$UKN_SET_HULL_COMPOSITION_4$§!\n$UKN_SET_HULL_COMPOSITION_4_DESC$"
+ 
+ TECH_UNLOCK_UKN_HULL_COMPOSITION_5_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_hit_points£ $UKN_SET_HULL_COMPOSITION_5$"
+ TECH_UNLOCK_UKN_HULL_COMPOSITION_5_DESC:0 "§H$UKN_SET_HULL_COMPOSITION_5$§!\n$UKN_SET_HULL_COMPOSITION_5_DESC$"
+ 
+ TECH_UNLOCK_UKN_HULL_COMPOSITION_6_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_hit_points£ $UKN_SET_HULL_COMPOSITION_6$"
+ TECH_UNLOCK_UKN_HULL_COMPOSITION_6_DESC:0 "§H$UKN_SET_HULL_COMPOSITION_6$§!\n$UKN_SET_HULL_COMPOSITION_6_DESC$"
+ 
+ TECH_UNLOCK_UKN_HULL_COMPOSITION_PLANCK_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_hit_points£ $UKN_SET_HULL_COMPOSITION_PLANCK$"
+ TECH_UNLOCK_UKN_HULL_COMPOSITION_PLANCK_DESC:0 "§H$UKN_SET_HULL_COMPOSITION_PLANCK$§!\n$UKN_SET_HULL_COMPOSITION_PLANCK_DESC$"
+ 
+ TECH_UNLOCK_UKN_HULL_COMPOSITION_7_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_hit_points£ $UKN_SET_HULL_COMPOSITION_7$"
+ TECH_UNLOCK_UKN_HULL_COMPOSITION_7_DESC:0 "§H$UKN_SET_HULL_COMPOSITION_7$§!\n$UKN_SET_HULL_COMPOSITION_7_DESC$"
+ 
+ TECH_UNLOCK_UKN_HULL_COMPOSITION_8_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_hit_points£ $UKN_SET_HULL_COMPOSITION_8$"
+ TECH_UNLOCK_UKN_HULL_COMPOSITION_8_DESC:0 "§H$UKN_SET_HULL_COMPOSITION_8$§!\n$UKN_SET_HULL_COMPOSITION_8_DESC$"
+ 
+ 
+# ENGINEERING OUTPUT TECHS / ARMOR #---------------------------------------------------------
+ 
+ TECH_UNLOCK_UKN_ENGINEERING_OUTPUT_2_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_armor£ $UKN_SET_ARMOR_3$"
+ TECH_UNLOCK_UKN_ENGINEERING_OUTPUT_2_DESC:0 "§H$UKN_SET_ARMOR_3$§!\n$UKN_SET_ARMOR_3_desc$"
+ 
+ TECH_UNLOCK_UKN_ENGINEERING_OUTPUT_3_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_armor£ $UKN_SET_ARMOR_4$"
+ TECH_UNLOCK_UKN_ENGINEERING_OUTPUT_3_DESC:0 "§H$UKN_SET_ARMOR_4$§!\n$UKN_SET_ARMOR_4_desc$"
+ 
+ TECH_UNLOCK_UKN_ENGINEERING_OUTPUT_4_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_armor£ $UKN_SET_ARMOR_5$"
+ TECH_UNLOCK_UKN_ENGINEERING_OUTPUT_4_DESC:0 "§H$UKN_SET_ARMOR_5$§!\n$UKN_SET_ARMOR_5_desc$"
+ 
+ TECH_UNLOCK_UKN_ENGINEERING_OUTPUT_5_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_armor£ $UKN_SET_ARMOR_6$"
+ TECH_UNLOCK_UKN_ENGINEERING_OUTPUT_5_DESC:0 "§H$UKN_SET_ARMOR_6$§!\n$UKN_SET_ARMOR_6_desc$"
+ 
+ TECH_UNLOCK_UKN_ENGINEERING_OUTPUT_6_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_armor£ $UKN_SET_ARMOR_7$"
+ TECH_UNLOCK_UKN_ENGINEERING_OUTPUT_6_DESC:0 "§H$UKN_SET_ARMOR_7$§!\n$UKN_SET_ARMOR_7_desc$"
+ 
+ TECH_UNLOCK_UKN_ENGINEERING_OUTPUT_7_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_armor£ $UKN_SET_ARMOR_8$"
+ TECH_UNLOCK_UKN_ENGINEERING_OUTPUT_7_DESC:0 "§H$UKN_SET_ARMOR_8$§!\n$UKN_SET_ARMOR_8_desc$"
+ 
+ TECH_UNLOCK_UKN_ENGINEERING_OUTPUT_PLANCK_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_armor£ $UKN_SET_ARMOR_PLANCK$"
+ TECH_UNLOCK_UKN_ENGINEERING_OUTPUT_PLANCK_DESC:0 "§H$UKN_SET_ARMOR_PLANCK$§!\n$UKN_SET_ARMOR_PLANCK_desc$"
+ 
+ TECH_UNLOCK_UKN_ENGINEERING_OUTPUT_8_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_armor£ $UKN_SET_ARMOR_9$"
+ TECH_UNLOCK_UKN_ENGINEERING_OUTPUT_8_DESC:0 "§H$UKN_SET_ARMOR_9$§!\n$UKN_SET_ARMOR_9_desc$"
+ 
+ TECH_UNLOCK_UKN_ENGINEERING_OUTPUT_9_TITLE:0 "§HUnlocks Component Set:§! £ukn_icon_armor£ $UKN_SET_ARMOR_10$"
+ TECH_UNLOCK_UKN_ENGINEERING_OUTPUT_9_DESC:0 "§H$UKN_SET_ARMOR_10$§!\n$UKN_SET_ARMOR_10_desc$"

@@ -1,0 +1,485 @@
+namespace = jftraits
+
+country_event = {
+	id = jftraits.4000
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {	
+		has_ascension_perk = ap_synthetic_age
+		NOT = {
+			has_country_flag = has_robo_engineering
+		}
+	}
+	
+	immediate = {		
+		if = {
+			limit = {
+				has_tech_option = tech_nano_robo_engineering
+			}
+			add_tech_progress = {
+				tech = tech_nano_robo_engineering
+				progress = 0.25
+			}
+		}
+		else = {
+			add_research_option = tech_nano_robo_engineering
+		}
+		set_country_flag = has_robo_engineering
+	}
+}
+
+country_event = {
+	id = jftraits.4001
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			species = { 
+				has_trait = trait_genius_leader
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_admiral_genius_leader
+				add_ruler_trait = leader_trait_ruler_genius_leader
+
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_general_genius_leader
+				add_ruler_trait = leader_trait_ruler_genius_leader
+
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_governor_genius_leader
+				add_ruler_trait = leader_trait_ruler_genius_leader
+
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_scientist_genius_leader
+				add_ruler_trait = leader_trait_ruler_genius_leader
+
+			}
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = leader_trait_ruler_genius_leader
+				add_ruler_trait = leader_trait_ruler_genius_leader
+
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jftraits.4003
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			species = { has_trait = trait_psi_amp }
+		}
+	}
+
+	immediate = {
+		every_owned_leader = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_admiral_psi_amp
+				add_ruler_trait = leader_trait_ruler_psi_amp
+
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_general_psi_amp
+				add_ruler_trait = leader_trait_ruler_psi_amp
+
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_governor_psi_amp
+				add_ruler_trait = leader_trait_ruler_psi_amp
+
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_scientist_psi_amp
+				add_ruler_trait = leader_trait_ruler_psi_amp
+
+			}
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = leader_trait_ruler_psi_amp
+				add_ruler_trait = leader_trait_ruler_psi_amp
+
+			}
+		}
+	}
+}
+
+
+event = {
+	id = jftraits.4002
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				species = { has_trait = trait_genius_leader }
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+			}
+			every_owned_leader = {
+				limit = {
+					is_same_species = root
+					NOR = {
+						has_trait =	leader_trait_admiral_genius_leader
+						has_trait =	leader_trait_general_genius_leader
+						has_trait =	leader_trait_governor_genius_leader
+						has_trait =	leader_trait_scientist_genius_leader
+						has_trait =	leader_trait_ruler_genius_leader
+					}
+				}
+				if = {
+					limit = { leader_class = admiral }
+					add_trait = leader_trait_admiral_genius_leader
+					add_ruler_trait = leader_trait_ruler_genius_leader
+				}
+				if = {
+					limit = { leader_class = general }
+					add_trait = leader_trait_general_genius_leader
+					add_ruler_trait = leader_trait_ruler_genius_leader
+				}
+				if = {
+					limit = { leader_class = governor }
+					add_trait = leader_trait_governor_genius_leader
+					add_ruler_trait = leader_trait_ruler_genius_leader
+				}
+				if = {
+					limit = { leader_class = scientist }
+					add_trait = leader_trait_scientist_genius_leader
+					add_ruler_trait = leader_trait_ruler_genius_leader
+				}
+				if = {
+					limit = { leader_class = ruler }
+					add_trait = leader_trait_ruler_genius_leader
+				}
+			}
+			every_pool_leader = {
+				limit = {
+					is_same_species = root
+					NOR = {
+						has_trait = leader_trait_admiral_genius_leader
+						has_trait = leader_trait_general_genius_leader
+						has_trait = leader_trait_governor_genius_leader
+						has_trait = leader_trait_scientist_genius_leader
+						has_trait = leader_trait_ruler_genius_leader
+					}
+				}
+				if = {
+					limit = { leader_class = admiral }
+					add_trait = leader_trait_admiral_genius_leader
+					add_ruler_trait = leader_trait_ruler_genius_leader
+				}
+				if = {
+					limit = { leader_class = general }
+					add_trait = leader_trait_general_genius_leader
+					add_ruler_trait = leader_trait_ruler_genius_leader
+				}
+				if = {
+					limit = { leader_class = governor }
+					add_trait = leader_trait_governor_genius_leader
+					add_ruler_trait = leader_trait_ruler_genius_leader
+				}
+				if = {
+					limit = { leader_class = scientist }
+					add_trait = leader_trait_scientist_genius_leader
+					add_ruler_trait = leader_trait_ruler_genius_leader
+				}
+				if = {
+					limit = { leader_class = ruler }
+					add_trait = leader_trait_ruler_genius_leader
+				}
+			}
+		}
+	}
+}
+
+event = {
+	id = jftraits.4004
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				species = { has_trait = trait_psi_amp }
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+			}
+			every_owned_leader = {
+				limit = {
+					is_same_species = root
+					NOR = {
+						has_trait =	leader_trait_admiral_psi_amp
+						has_trait =	leader_trait_general_psi_amp
+						has_trait =	leader_trait_governor_psi_amp
+						has_trait =	leader_trait_scientist_psi_amp
+						has_trait =	leader_trait_ruler_psi_amp
+					}
+				}
+				if = {
+					limit = { leader_class = admiral }
+					add_trait = leader_trait_admiral_psi_amp
+					add_ruler_trait = leader_trait_ruler_psi_amp
+				}
+				if = {
+					limit = { leader_class = general }
+					add_trait = leader_trait_general_psi_amp
+					add_ruler_trait = leader_trait_ruler_psi_amp
+				}
+				if = {
+					limit = { leader_class = governor }
+					add_trait = leader_trait_governor_psi_amp
+					add_ruler_trait = leader_trait_ruler_psi_amp
+				}
+				if = {
+					limit = { leader_class = scientist }
+					add_trait = leader_trait_scientist_psi_amp
+					add_ruler_trait = leader_trait_ruler_psi_amp
+				}
+				if = {
+					limit = { leader_class = ruler }
+					add_trait = leader_trait_ruler_psi_amp
+				}
+			}
+			every_pool_leader = {
+				limit = {
+					is_same_species = root
+					NOR = {
+						has_trait = leader_trait_admiral_psi_amp
+						has_trait = leader_trait_general_psi_amp
+						has_trait = leader_trait_governor_psi_amp
+						has_trait = leader_trait_scientist_psi_amp
+						has_trait = leader_trait_ruler_psi_amp
+					}
+				}
+				if = {
+					limit = { leader_class = admiral }
+					add_trait = leader_trait_admiral_psi_amp
+					add_ruler_trait = leader_trait_ruler_psi_amp
+				}
+				if = {
+					limit = { leader_class = general }
+					add_trait = leader_trait_general_psi_amp
+					add_ruler_trait = leader_trait_ruler_psi_amp
+				}
+				if = {
+					limit = { leader_class = governor }
+					add_trait = leader_trait_governor_psi_amp
+					add_ruler_trait = leader_trait_ruler_psi_amp
+				}
+				if = {
+					limit = { leader_class = scientist }
+					add_trait = leader_trait_scientist_psi_amp
+					add_ruler_trait = leader_trait_ruler_psi_amp
+				}
+				if = {
+					limit = { leader_class = ruler }
+					add_trait = leader_trait_ruler_psi_amp
+				}
+			}
+		}
+	}
+}
+
+#Erudite Events
+
+country_event = {
+	id = jftraits.10
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			species = { 
+				has_trait = trait_erudite 
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_admiral_erudite
+				add_ruler_trait = leader_trait_ruler_erudite
+
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_general_erudite
+				add_ruler_trait = leader_trait_ruler_erudite
+
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_governor_erudite
+				add_ruler_trait = leader_trait_ruler_erudite
+
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_scientist_erudite
+				add_ruler_trait = leader_trait_ruler_erudite
+
+			}
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = leader_trait_ruler_erudite
+				add_ruler_trait = leader_trait_ruler_erudite
+
+			}
+		}
+	}
+}
+
+event = {
+	id = jftraits.11
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				species = { has_trait = trait_erudite }
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+			}
+			every_owned_leader = {
+				limit = {
+					is_same_species = root
+					NOR = {
+						has_trait =	leader_trait_admiral_erudite
+						has_trait =	leader_trait_general_erudite
+						has_trait =	leader_trait_governor_erudite
+						has_trait =	leader_trait_scientist_erudite
+						has_trait =	leader_trait_ruler_erudite
+					}
+				}
+				if = {
+					limit = { leader_class = admiral }
+					add_trait = leader_trait_admiral_erudite
+					add_ruler_trait = leader_trait_ruler_erudite
+				}
+				if = {
+					limit = { leader_class = general }
+					add_trait = leader_trait_general_erudite
+					add_ruler_trait = leader_trait_ruler_erudite
+				}
+				if = {
+					limit = { leader_class = governor }
+					add_trait = leader_trait_governor_erudite
+					add_ruler_trait = leader_trait_ruler_erudite
+				}
+				if = {
+					limit = { leader_class = scientist }
+					add_trait = leader_trait_scientist_erudite
+					add_ruler_trait = leader_trait_ruler_erudite
+				}
+				if = {
+					limit = { leader_class = ruler }
+					add_trait = leader_trait_ruler_erudite
+				}
+			}
+			every_pool_leader = {
+				limit = {
+					is_same_species = root
+					NOR = {
+						has_trait = leader_trait_admiral_erudite
+						has_trait = leader_trait_general_erudite
+						has_trait = leader_trait_governor_erudite
+						has_trait = leader_trait_scientist_erudite
+						has_trait = leader_trait_ruler_erudite
+					}
+				}
+				if = {
+					limit = { leader_class = admiral }
+					add_trait = leader_trait_admiral_erudite
+					add_ruler_trait = leader_trait_ruler_erudite
+				}
+				if = {
+					limit = { leader_class = general }
+					add_trait = leader_trait_general_erudite
+					add_ruler_trait = leader_trait_ruler_erudite
+				}
+				if = {
+					limit = { leader_class = governor }
+					add_trait = leader_trait_governor_erudite
+					add_ruler_trait = leader_trait_ruler_erudite
+				}
+				if = {
+					limit = { leader_class = scientist }
+					add_trait = leader_trait_scientist_erudite
+					add_ruler_trait = leader_trait_ruler_erudite
+				}
+				if = {
+					limit = { leader_class = ruler }
+					add_trait = leader_trait_ruler_erudite
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jftraits.3400
+	title = "jftraits.3400.name"
+	desc = "jftraits.3400.desc"
+	picture = GFX_evt_psionics
+	show_sound = event_mystic_reveal
+	is_triggered_only = yes
+	
+	trigger = {
+		
+	}
+	
+	option = {
+		name = "ok"
+		shift_ethic = "ethic_fanatic_materialist"
+		shift_ethic = "ethic_xenophile"
+	}
+}

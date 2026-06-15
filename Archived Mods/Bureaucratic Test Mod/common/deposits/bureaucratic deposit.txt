@@ -1,0 +1,101 @@
+d_system_capital_modifiers = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = no
+	category = deposit_cat_rare
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+	
+	resources = {
+		category = planet_deposits
+	}
+	
+	country_modifier = {
+		empire_size_colonies_mult = 0.3
+		empire_size_pops_mult = 0.05
+	}
+}
+
+d_planetary_capital_modifiers = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = no
+	category = deposit_cat_rare
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+	
+	resources = {
+		category = planet_deposits
+	}
+	
+	country_modifier = {
+		empire_size_colonies_mult = 0.2
+		empire_size_pops_mult = 0.1
+	}
+}
+
+d_planetary_administration_modifiers = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = no
+	category = deposit_cat_rare
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+	
+	resources = {
+		category = planet_deposits
+	}
+	
+	country_modifier = {
+		empire_size_colonies_mult = 0.1
+		empire_size_pops_mult = 0.2
+	}
+}
+
+d_ship_shelter_modifiers = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = no
+	category = deposit_cat_rare
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+	
+	resources = {
+		category = planet_deposits
+	}
+	
+	country_modifier = {
+		empire_size_colonies_mult = 0.05
+		empire_size_pops_mult = 0.3
+	}
+}
+
+d_habitat_modifiers = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = no
+	category = deposit_cat_rare
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+	
+	resources = {
+		category = planet_deposits
+	}
+	
+	country_modifier = {
+		empire_size_colonies_mult = 0.1
+		empire_size_pops_mult = 0.1
+	}
+}
+
+d_major_habitat_modifiers = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = no
+	category = deposit_cat_rare
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+	
+	resources = {
+		category = planet_deposits
+	}
+	
+	country_modifier = {
+		empire_size_colonies_mult = 0.2
+		empire_size_pops_mult = 0.05
+	}
+}

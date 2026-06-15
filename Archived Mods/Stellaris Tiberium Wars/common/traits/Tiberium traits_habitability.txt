@@ -1,0 +1,47 @@
+@primary = 0.80
+@secondary = 0.60
+@tertiary = 0.20
+
+trait_pc_habitable_tiberium_preference = {
+
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+	sorting_priority = 30
+	modifier = {
+		pc_habitable_tiberium_habitability = @primary	
+		pc_arid_habitability = @secondary
+		pc_savannah_habitability = @secondary
+		pc_desert_habitability = @secondary
+		
+		pc_tropical_habitability = @tertiary
+		pc_continental_habitability = @tertiary
+		pc_tundra_habitability = @tertiary
+		pc_arctic_habitability = @tertiary
+		pc_ocean_habitability = @tertiary
+		pc_alpine_habitability = @tertiary
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+trait_pc_uninhabitable_tiberium_preference = {
+
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+	sorting_priority = 30
+	modifier = {
+		pc_uninhabitable_tiberium_habitability = @primary	
+		pc_arid_habitability = @secondary
+		pc_savannah_habitability = @secondary
+		pc_desert_habitability = @secondary
+		
+		pc_tropical_habitability = @tertiary
+		pc_continental_habitability = @tertiary
+		pc_tundra_habitability = @tertiary
+		pc_arctic_habitability = @tertiary
+		pc_ocean_habitability = @tertiary
+		pc_alpine_habitability = @tertiary
+	}
+	ai_weight = {
+		weight = 0
+	}
+}

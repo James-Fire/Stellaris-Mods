@@ -1,0 +1,150 @@
+#All files in gfx/projectiles are reloadable with the "reload projectiles" console command
+#Filewatcher is also enabled for all files
+
+###############
+### FLAK PD ###
+###############
+
+######----------------------------------
+# T1 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_flak_pd_1"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_flak_pd_1"
+	muzzle_flash_entity = "muzzle_entity_ukn_flak_pd_1"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_flak_pd_1"
+	speed = 100.0			#preferred speed of the projectile
+	max_duration = 2.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+######----------------------------------
+# T2 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_flak_pd_2"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_flak_pd_2"
+	muzzle_flash_entity = "muzzle_entity_ukn_flak_pd_2"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_flak_pd_2"
+	speed = 100.0			#preferred speed of the projectile
+	max_duration = 2.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+######----------------------------------
+# T3 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_flak_pd_3"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_flak_pd_3"
+	muzzle_flash_entity = "muzzle_entity_ukn_flak_pd_3"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_flak_pd_3"
+	speed = 100.0			#preferred speed of the projectile
+	max_duration = 2.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+######----------------------------------
+# T4 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_flak_pd_4"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_flak_pd_4"
+	muzzle_flash_entity = "muzzle_entity_ukn_flak_pd_4"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_flak_pd_4"
+	speed = 100.0			#preferred speed of the projectile
+	max_duration = 2.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+######----------------------------------
+# T5 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_flak_pd_5"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_flak_pd_5"
+	muzzle_flash_entity = "muzzle_entity_ukn_flak_pd_5"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_flak_pd_5"
+	speed = 100.0			#preferred speed of the projectile
+	max_duration = 2.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+######----------------------------------
+# T6 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_flak_pd_6"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_flak_pd_6"
+	muzzle_flash_entity = "muzzle_entity_ukn_flak_pd_6"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_flak_pd_6"
+	speed = 100.0			#preferred speed of the projectile
+	max_duration = 2.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+######----------------------------------
+# T7 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_flak_pd_7"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_flak_pd_7"
+	muzzle_flash_entity = "muzzle_entity_ukn_flak_pd_7"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_flak_pd_7"
+	speed = 100.0			#preferred speed of the projectile
+	max_duration = 2.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+######----------------------------------
+# T8 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_flak_pd_8"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_flak_pd_8"
+	muzzle_flash_entity = "muzzle_entity_ukn_flak_pd_8"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_flak_pd_8"
+	speed = 100.0			#preferred speed of the projectile
+	max_duration = 2.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+######----------------------------------
+# T9 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_flak_pd_9"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_flak_pd_9"
+	muzzle_flash_entity = "muzzle_entity_ukn_flak_pd_9"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_flak_pd_9"
+	speed = 100.0			#preferred speed of the projectile
+	max_duration = 2.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}

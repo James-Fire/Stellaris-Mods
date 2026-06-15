@@ -1,0 +1,2297 @@
+#	Example:
+#
+#	example_effect = {
+#		add_energy = -100
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+create_fe_home_citadel = {
+	create_starbase = {
+		size = "starbase_bastion"
+
+		module = "shipyard"
+		module = "shipyard"
+		module = "shipyard"
+		module = "hangar_bay"
+		module = "hangar_bay"
+		module = "hangar_bay"
+		module = "gun_battery"
+		module = "gun_battery"
+		module = "gun_battery"
+		module = "missile_battery"
+		module = "missile_battery"
+		module = "missile_battery"		
+
+		building = "crew_quarters"
+		building = "command_center"
+		building = "target_uplink_computer"
+		building = "defense_grid"
+		building = "colossus_yards"
+		building = "titan_yards"
+		building = "fleet_academy"
+		building = "resource_silo"
+		
+		effect = {
+			while = {
+				count = 12
+				create_fallen_empire_platform = yes
+			}	
+		}
+	}
+}
+
+create_fe_citadel = {
+	create_starbase = {
+		size = "starbase_bastion"
+
+		module = "shipyard"
+		module = "anchorage"
+		module = "anchorage"
+		module = "anchorage"
+		module = "anchorage"
+		module = "anchorage"
+		module = "hangar_bay"
+		module = "gun_battery"
+		module = "gun_battery"
+		module = "missile_battery"
+		module = "missile_battery"
+		module = "missile_battery"
+
+		building = "crew_quarters"
+		building = "command_center"
+		building = "target_uplink_computer"
+		building = "defense_grid"
+		building = "listening_post"
+		building = "fleet_academy"
+		building = "naval_logistics_office"
+		building = "resource_silo"
+		
+		effect = {
+			while = {
+				count = 4
+				create_fallen_empire_platform = yes
+			}	
+		}			
+	}
+}
+
+# starbase types, called from solar system
+create_shipyard = {
+	starbase = {
+		if = {
+			limit = {
+				has_starbase_size = starbase_starport
+				count_starbase_modules = { type = shipyard count < 1 }
+				ROOT = { resource_stockpile_compare = { resource = alloys value >= 200 } }
+			}
+			ROOT = { add_resource = { alloys = -200 } }
+			set_starbase_module = {
+				slot = 0
+				module = shipyard
+			}
+			if = {
+				limit = {
+					ROOT = { is_gestalt = no }
+				}
+				set_starbase_module = {
+					slot = 1
+					module = trading_hub
+				}
+			}
+			else = {
+				set_starbase_module = {
+					slot = 1
+					module = solar_panel_network
+				}
+			}
+			set_starbase_building = {
+				slot = 0
+				building = crew_quarters
+			}
+		}
+		else_if = {
+			limit = {
+				has_starbase_size = starbase_starhold
+				count_starbase_modules = { type = shipyard count < 2 }
+				ROOT = { resource_stockpile_compare = { resource = alloys value >= 200 } }
+			}
+			ROOT = { add_resource = { alloys = -200 } }
+			set_starbase_module = {
+				slot = 0
+				module = shipyard
+			}
+			set_starbase_module = {
+				slot = 1
+				module = shipyard
+			}
+			if = {
+				limit = {
+					ROOT = { is_gestalt = no }
+				}
+				set_starbase_module = {
+					slot = 2
+					module = trading_hub
+				}
+			}
+			else = {
+				set_starbase_module = {
+					slot = 2
+					module = solar_panel_network
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { is_gestalt = no }
+				}
+				set_starbase_module = {
+					slot = 3
+					module = trading_hub
+				}
+			}
+			else = {
+				set_starbase_module = {
+					slot = 3
+					module = solar_panel_network
+				}
+			}
+			set_starbase_building = {
+				slot = 0
+				building  = crew_quarters
+			}
+			set_starbase_building = {
+				slot = 1
+				building = fleet_academy
+			}
+		}
+		else_if = {
+			limit = {
+				has_starbase_size = starbase_starfortress
+				count_starbase_modules = { type = shipyard count < 4 }
+				ROOT = { resource_stockpile_compare = { resource = alloys value >= 300 } }
+			}
+			ROOT = { add_resource = { alloys = -300 } }
+			set_starbase_module = {
+				slot = 0
+				module = shipyard
+			}
+			set_starbase_module = {
+				slot = 1
+				module = shipyard
+			}
+			set_starbase_module = {
+				slot = 2
+				module = shipyard
+			}
+			set_starbase_module = {
+				slot = 3
+				module = shipyard
+			}
+			if = {
+				limit = {
+					ROOT = { is_gestalt = no }
+				}
+				set_starbase_module = {
+					slot = 4
+					module = trading_hub
+				}
+			}
+			else = {
+				set_starbase_module = {
+					slot = 4
+					module = solar_panel_network
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { is_gestalt = no }
+				}
+				set_starbase_module = {
+					slot = 5
+					module = trading_hub
+				}
+			}
+			else = {
+				set_starbase_module = {
+					slot = 5
+					module = solar_panel_network
+				}
+			}
+			set_starbase_building = {
+				slot = 0
+				building = crew_quarters
+			}
+			set_starbase_building = {
+				slot = 1
+				building = fleet_academy
+			}
+			if = {
+				limit = {
+					ROOT = { is_gestalt = no }
+				}
+				set_starbase_building = {
+					slot = 2
+					building = offworld_trading_company
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { has_technology = tech_space_mining_1 }
+					OR = {
+						star = { is_inside_nebula = yes }
+						solar_system = {
+							OR = {
+								# Nebula
+								is_star_class = sc_p_purple
+								is_star_class = sc_p_green
+								is_star_class = sc_p_red
+								is_star_class = sc_nova_1
+								is_star_class = sc_nova_2
+								is_star_class = sc_w_azure
+								is_star_class = sc_w_red
+								is_star_class = sc_w_green
+								is_star_class = sc_w_purple
+								is_star_class = sc_lbv_blue
+								is_star_class = sc_lbv_green
+								is_star_class = sc_lbv_red
+								# Protoplanetary Disks
+								is_star_class = sc_protostar
+								is_star_class = sc_tt_red
+								is_star_class = sc_tt_orange
+								is_star_class = sc_tt_white
+								is_star_class = sc_ae
+							}
+						}
+					}
+				}
+				set_starbase_building = {
+					slot = 3
+					building = nebula_refinery
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						star = { is_star_class = sc_black_hole }
+						star = { is_star_class = sc_microquasar_1 }
+						star = { is_star_class = sc_microquasar_2 }
+						solar_system = { any_system_planet = { is_planet_class = pc_black_hole } }
+						solar_system = { has_natural_wormhole = yes }
+					}
+					ROOT = { has_technology = tech_sensors_3 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = black_hole_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					star = {
+						OR = {
+							is_star_class = sc_pulsar
+							is_star_class = sc_magnetar
+						}
+					}
+					ROOT = { has_technology = tech_sensors_3 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = pulsar_hole_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					star = {
+						OR = {
+							is_star_class = sc_protostar
+							is_star_class = sc_tt_red
+							is_star_class = sc_tt_orange
+							is_star_class = sc_tt_white
+							is_star_class = sc_ae
+						}
+					}
+					ROOT = { has_technology = tech_sensors_2 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = protostar_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						has_technology = tech_terrestrial_sculpting
+						is_robot_empire = no
+					}
+					solar_system = {
+						any_system_planet = {
+							is_owned_by = ROOT
+						}
+					}
+				}
+				set_starbase_building = {
+					slot = 3
+					building = climate_control
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_starbase_size = starbase_starfortress
+				OR = {
+					count_starbase_modules = { type = shipyard count < 4 }
+					count_starbase_modules = { type = hangar_bay count < 2 }
+					AND = { 
+						NOT = { has_starbase_building = titan_yards }
+						ROOT = { has_technology = tech_titans }
+					}
+					AND = { 
+						ROOT = { has_technology = tech_colossus }
+						NOT = { has_starbase_building = colossus_yards }
+					}
+				}
+				ROOT = { resource_stockpile_compare = { resource = alloys value >= 400 } }
+			}
+			ROOT = { add_resource = { alloys = -400 } }
+			set_starbase_module = {
+				slot = 0
+				module = shipyard
+			}
+			set_starbase_module = {
+				slot = 1
+				module = shipyard
+			}
+			set_starbase_module = {
+				slot = 2
+				module = shipyard
+			}
+			set_starbase_module = {
+				slot = 3
+				module = shipyard
+			}
+			if = {
+				limit = {
+					ROOT = { is_gestalt = no }
+				}
+				set_starbase_module = {
+					slot = 4
+					module = trading_hub
+				}
+			}
+			else = {
+				set_starbase_module = {
+					slot = 4
+					module = solar_panel_network
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { is_gestalt = no }
+				}
+				set_starbase_module = {
+					slot = 5
+					module = trading_hub
+				}
+			}
+			else = {
+				set_starbase_module = {
+					slot = 5
+					module = solar_panel_network
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { is_gestalt = no }
+				}
+				set_starbase_module = {
+					slot = 6
+					module = trading_hub
+				}
+			}
+			else = {
+				set_starbase_module = {
+					slot = 6
+					module = solar_panel_network
+				}
+			}
+			set_starbase_module = {
+				slot = 7
+				module = hangar_bay
+			}
+			set_starbase_module = {
+				slot = 8
+				module = hangar_bay
+			}
+			set_starbase_building = {
+				slot = 0
+				building = crew_quarters
+			}
+			set_starbase_building = {
+				slot = 1
+				building = fleet_academy
+			}
+			if = {
+				limit = {
+					ROOT = { is_gestalt = no }
+				}
+				set_starbase_building = {
+					slot = 2
+					building = offworld_trading_company
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { has_technology = tech_space_mining_1 }
+					OR = {
+						star = { is_inside_nebula = yes }
+						solar_system = {
+							OR = {
+								# Nebula
+								is_star_class = sc_p_purple
+								is_star_class = sc_p_green
+								is_star_class = sc_p_red
+								is_star_class = sc_nova_1
+								is_star_class = sc_nova_2
+								is_star_class = sc_w_azure
+								is_star_class = sc_w_red
+								is_star_class = sc_w_green
+								is_star_class = sc_w_purple
+								is_star_class = sc_lbv_blue
+								is_star_class = sc_lbv_green
+								is_star_class = sc_lbv_red
+								# Protoplanetary Disks
+								is_star_class = sc_protostar
+								is_star_class = sc_tt_red
+								is_star_class = sc_tt_orange
+								is_star_class = sc_tt_white
+								is_star_class = sc_ae
+							}
+						}
+					}
+				}
+				set_starbase_building = {
+					slot = 3
+					building = nebula_refinery
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						star = { is_star_class = sc_black_hole }
+						star = { is_star_class = sc_microquasar_1 }
+						star = { is_star_class = sc_microquasar_2 }
+						solar_system = { any_system_planet = { is_planet_class = pc_black_hole } }
+						solar_system = { has_natural_wormhole = yes }
+					}
+					ROOT = { has_technology = tech_sensors_3 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = black_hole_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					star = {
+						OR = {
+							is_star_class = sc_pulsar
+							is_star_class = sc_magnetar
+						}
+					}
+					ROOT = { has_technology = tech_sensors_3 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = pulsar_hole_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					star = {
+						OR = {
+							is_star_class = sc_protostar
+							is_star_class = sc_tt_red
+							is_star_class = sc_tt_orange
+							is_star_class = sc_tt_white
+							is_star_class = sc_ae
+						}
+					}
+					ROOT = { has_technology = tech_sensors_2 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = protostar_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						has_technology = tech_terrestrial_sculpting
+						is_robot_empire = no
+					}
+					solar_system = {
+						any_system_planet = {
+							is_owned_by = ROOT
+						}
+					}
+				}
+				set_starbase_building = {
+					slot = 3
+					building = climate_control
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { has_technology = tech_titans }
+				}
+				set_starbase_building = {
+					slot = 4
+					building = titan_yards
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { has_technology = tech_colossus }
+				}
+				set_starbase_building = {
+					slot = 5
+					building = colossus_yards
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_starbase_size = starbase_starfortress
+				OR = {
+					count_starbase_modules = { type = shipyard count < 4 }
+					count_starbase_modules = { type = hangar_bay count < 4 }
+					AND = { 
+						NOT = { has_starbase_building = titan_yards }
+						ROOT = { has_technology = tech_titans }
+					}
+					AND = { 
+						ROOT = { has_technology = tech_colossus }
+						NOT = { has_starbase_building = colossus_yards }
+					}
+				}
+				ROOT = { resource_stockpile_compare = { resource = alloys value >= 400 } }
+			}
+			ROOT = { add_resource = { alloys = -400 } }
+			set_starbase_module = {
+				slot = 0
+				module = shipyard
+			}
+			set_starbase_module = {
+				slot = 1
+				module = shipyard
+			}
+			set_starbase_module = {
+				slot = 2
+				module = shipyard
+			}
+			set_starbase_module = {
+				slot = 3
+				module = shipyard
+			}
+			if = {
+				limit = {
+					ROOT = { is_gestalt = no }
+				}
+				set_starbase_module = {
+					slot = 4
+					module = trading_hub
+				}
+			}
+			else = {
+				set_starbase_module = {
+					slot = 4
+					module = solar_panel_network
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { is_gestalt = no }
+				}
+				set_starbase_module = {
+					slot = 5
+					module = trading_hub
+				}
+			}
+			else = {
+				set_starbase_module = {
+					slot = 5
+					module = solar_panel_network
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { is_gestalt = no }
+				}
+				set_starbase_module = {
+					slot = 6
+					module = trading_hub
+				}
+			}
+			else = {
+				set_starbase_module = {
+					slot = 6
+					module = solar_panel_network
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { is_gestalt = no }
+				}
+				set_starbase_module = {
+					slot = 7
+					module = trading_hub
+				}
+			}
+			else = {
+				set_starbase_module = {
+					slot = 7
+					module = solar_panel_network
+				}
+			}
+			set_starbase_module = {
+				slot = 8
+				module = hangar_bay
+			}
+			set_starbase_module = {
+				slot = 9
+				module = hangar_bay
+			}
+			set_starbase_module = {
+				slot = 10
+				module = hangar_bay
+			}
+			set_starbase_module = {
+				slot = 11
+				module = hangar_bay
+			}
+			set_starbase_building = {
+				slot = 0
+				building = crew_quarters
+			}
+			set_starbase_building = {
+				slot = 1
+				building = fleet_academy
+			}
+			if = {
+				limit = {
+					ROOT = { is_gestalt = no }
+				}
+				set_starbase_building = {
+					slot = 2
+					building = offworld_trading_company
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { has_technology = tech_space_mining_1 }
+					OR = {
+						star = { is_inside_nebula = yes }
+						solar_system = {
+							OR = {
+								# Nebula
+								is_star_class = sc_p_purple
+								is_star_class = sc_p_green
+								is_star_class = sc_p_red
+								is_star_class = sc_nova_1
+								is_star_class = sc_nova_2
+								is_star_class = sc_w_azure
+								is_star_class = sc_w_red
+								is_star_class = sc_w_green
+								is_star_class = sc_w_purple
+								is_star_class = sc_lbv_blue
+								is_star_class = sc_lbv_green
+								is_star_class = sc_lbv_red
+								# Protoplanetary Disks
+								is_star_class = sc_protostar
+								is_star_class = sc_tt_red
+								is_star_class = sc_tt_orange
+								is_star_class = sc_tt_white
+								is_star_class = sc_ae
+							}
+						}
+					}
+				}
+				set_starbase_building = {
+					slot = 3
+					building = nebula_refinery
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						star = { is_star_class = sc_black_hole }
+						star = { is_star_class = sc_microquasar_1 }
+						star = { is_star_class = sc_microquasar_2 }
+						solar_system = { any_system_planet = { is_planet_class = pc_black_hole } }
+						solar_system = { has_natural_wormhole = yes }
+					}
+					ROOT = { has_technology = tech_sensors_3 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = black_hole_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					star = {
+						OR = {
+							is_star_class = sc_pulsar
+							is_star_class = sc_magnetar
+						}
+					}
+					ROOT = { has_technology = tech_sensors_3 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = pulsar_hole_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					star = {
+						OR = {
+							is_star_class = sc_protostar
+							is_star_class = sc_tt_red
+							is_star_class = sc_tt_orange
+							is_star_class = sc_tt_white
+							is_star_class = sc_ae
+						}
+					}
+					ROOT = { has_technology = tech_sensors_2 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = protostar_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						has_technology = tech_terrestrial_sculpting
+						is_robot_empire = no
+					}
+					solar_system = {
+						any_system_planet = {
+							is_owned_by = ROOT
+						}
+					}
+				}
+				set_starbase_building = {
+					slot = 3
+					building = climate_control
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { has_technology = tech_titans }
+				}
+				set_starbase_building = {
+					slot = 4
+					building = titan_yards
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { has_technology = tech_colossus }
+				}
+				set_starbase_building = {
+					slot = 5
+					building = colossus_yards
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { is_gestalt = no }
+				}
+				set_starbase_building = {
+					slot = 6
+					building = deep_space_black_site
+				}
+			}
+			set_starbase_building = {
+				slot = 7
+				building = resource_silo
+			}
+		}
+	}
+}
+
+
+create_bastion = {
+	starbase = {
+		if = {
+			limit = {
+				has_starbase_size = starbase_starport
+				OR = {
+					count_starbase_modules = { type = gun_battery count < 1 }
+					count_starbase_modules = { type = missile_battery count < 1 }
+				}
+				ROOT = { resource_stockpile_compare = { resource = alloys value >= 200 } }
+			}
+			ROOT = { add_resource = { alloys = -200 } }
+			set_starbase_module = {
+				slot = 0
+				module = gun_battery
+			}
+			set_starbase_module = {
+				slot = 1
+				module = missile_battery
+			}
+			set_starbase_building = {
+				slot = 0
+				building = disruption_field
+			}
+		}
+		else_if = {
+			limit = {
+				has_starbase_size = starbase_starhold
+				OR = {
+					count_starbase_modules = { type = gun_battery count < 2 }
+					count_starbase_modules = { type = missile_battery count < 2 }
+				}
+				ROOT = { resource_stockpile_compare = { resource = alloys value >= 200 } }
+			}
+			ROOT = { add_resource = { alloys = -200 } }
+			set_starbase_module = {
+				slot = 0
+				module = gun_battery
+			}
+			set_starbase_module = {
+				slot = 1
+				module = missile_battery
+			}
+			set_starbase_module = {
+				slot = 2
+				module = gun_battery
+			}
+			set_starbase_module = {
+				slot = 3
+				module = missile_battery
+			}
+			set_starbase_building = {
+				slot = 0
+				building = disruption_field
+			}
+			set_starbase_building = {
+				slot = 1
+				building = starbase_minefield
+			}
+		}
+		else_if = {
+			limit = {
+				has_starbase_size = starbase_starfortress
+				OR = {
+					count_starbase_modules = { type = gun_battery count < 3 }
+					count_starbase_modules = { type = missile_battery count < 3 }
+				}
+				ROOT = { resource_stockpile_compare = { resource = alloys value >= 300 } }
+			}
+			ROOT = { add_resource = { alloys = -300 } }
+			set_starbase_module = {
+				slot = 0
+				module = gun_battery
+			}
+			set_starbase_module = {
+				slot = 1
+				module = missile_battery
+			}
+			set_starbase_module = {
+				slot = 2
+				module = gun_battery
+			}
+			set_starbase_module = {
+				slot = 3
+				module = missile_battery
+			}
+			set_starbase_module = {
+				slot = 4
+				module = gun_battery
+			}
+			set_starbase_module = {
+				slot = 5
+				module = missile_battery
+			}
+			set_starbase_building = {
+				slot = 0
+				building = disruption_field
+			}
+			set_starbase_building = {
+				slot = 1
+				building = starbase_minefield
+			}
+			set_starbase_building = {
+				slot = 2
+				building = communications_jammer
+			}
+			set_starbase_building = {
+				slot = 3
+				building = target_uplink_computer
+			}
+		}
+		else_if = {
+			limit = {
+				has_starbase_size = starbase_starfortress
+				OR = {
+					count_starbase_modules = { type = gun_battery count < 4 }
+					count_starbase_modules = { type = missile_battery count < 4 }
+				}
+				ROOT = { resource_stockpile_compare = { resource = alloys value >= 400 } }
+			}
+			ROOT = { add_resource = { alloys = -400 } }
+			set_starbase_module = {
+				slot = 0
+				module = gun_battery
+			}
+			set_starbase_module = {
+				slot = 1
+				module = missile_battery
+			}
+			set_starbase_module = {
+				slot = 2
+				module = gun_battery
+			}
+			set_starbase_module = {
+				slot = 3
+				module = missile_battery
+			}
+			set_starbase_module = {
+				slot = 4
+				module = gun_battery
+			}
+			set_starbase_module = {
+				slot = 5
+				module = missile_battery
+			}
+			set_starbase_module = {
+				slot = 6
+				module = gun_battery
+			}
+			set_starbase_module = {
+				slot = 7
+				module = missile_battery
+			}
+			set_starbase_module = {
+				slot = 8
+				module = hangar_bay
+			}
+			set_starbase_building = {
+				slot = 0
+				building = disruption_field
+			}
+			set_starbase_building = {
+				slot = 1
+				building = starbase_minefield
+			}
+			set_starbase_building = {
+				slot = 2
+				building = communications_jammer
+			}
+			set_starbase_building = {
+				slot = 3
+				building = target_uplink_computer
+			}
+			set_starbase_building = {
+				slot = 4
+				building = defense_grid
+			}
+			if = {
+				limit = {
+					SOLAR_SYSTEM = {
+						any_neighbor_system = {
+							exists = space_owner
+							space_owner = {
+								NOT = { is_same_value = from }
+								OR = {
+									has_commercial_pact = from
+									FROM = { is_overlord_to = PREV }
+									is_in_federation_with = FROM
+								}
+							}
+						}
+					}
+					ROOT = {
+						is_gestalt = no
+						is_criminal_syndicate = no
+						has_technology = tech_customs_office
+					}
+				}
+				set_starbase_building = {
+					slot = 5
+					building = customs_office
+				}
+			}
+			else_if = {
+				limit = {
+					SOLAR_SYSTEM = {
+						any_neighbor_system = {
+							exists = space_owner
+							space_owner = {
+								NOT = { is_same_value = from }
+								OR = {
+									has_commercial_pact = from
+									FROM = { is_overlord_to = PREV }
+									is_in_federation_with = FROM
+								}
+							}
+						}
+					}
+					ROOT = {
+						is_gestalt = no
+						is_criminal_syndicate = yes
+						has_technology = tech_customs_office
+					}
+				}
+				set_starbase_building = {
+					slot = 5
+					building = customs_office_criminal
+				}
+			}
+			else = {
+				set_starbase_building = {
+					slot = 5
+					building = listening_post
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_starbase_size = starbase_starfortress
+				OR = {
+					count_starbase_modules = { type = gun_battery count < 5 }
+					count_starbase_modules = { type = missile_battery count < 5 }
+				}
+				ROOT = { resource_stockpile_compare = { resource = alloys value >= 400 } }
+			}
+			ROOT = { add_resource = { alloys = -400 } }
+			set_starbase_module = {
+				slot = 0
+				module = gun_battery
+			}
+			set_starbase_module = {
+				slot = 1
+				module = missile_battery
+			}
+			set_starbase_module = {
+				slot = 2
+				module = gun_battery
+			}
+			set_starbase_module = {
+				slot = 3
+				module = missile_battery
+			}
+			set_starbase_module = {
+				slot = 4
+				module = gun_battery
+			}
+			set_starbase_module = {
+				slot = 5
+				module = missile_battery
+			}
+			set_starbase_module = {
+				slot = 6
+				module = gun_battery
+			}
+			set_starbase_module = {
+				slot = 7
+				module = missile_battery
+			}
+			set_starbase_module = {
+				slot = 8
+				module = hangar_bay
+			}
+			set_starbase_module = {
+				slot = 9
+				module = gun_battery
+			}
+			set_starbase_module = {
+				slot = 10
+				module = missile_battery
+			}
+			set_starbase_module = {
+				slot = 11
+				module = hangar_bay
+			}
+			set_starbase_building = {
+				slot = 0
+				building = disruption_field
+			}
+			set_starbase_building = {
+				slot = 1
+				building = starbase_minefield
+			}
+			set_starbase_building = {
+				slot = 2
+				building = communications_jammer
+			}
+			set_starbase_building = {
+				slot = 3
+				building = target_uplink_computer
+			}
+			set_starbase_building = {
+				slot = 4
+				building = defense_grid
+			}
+			if = {
+				limit = {
+					SOLAR_SYSTEM = {
+						any_neighbor_system = {
+							exists = space_owner
+							space_owner = {
+								NOT = { is_same_value = from }
+								OR = {
+									has_commercial_pact = from
+									FROM = { is_overlord_to = PREV }
+									is_in_federation_with = FROM
+								}
+							}
+						}
+					}
+					ROOT = {
+						is_gestalt = no
+						is_criminal_syndicate = no
+						has_technology = tech_customs_office
+					}
+				}
+				set_starbase_building = {
+					slot = 5
+					building = customs_office
+				}
+			}
+			else_if = {
+				limit = {
+					SOLAR_SYSTEM = {
+						any_neighbor_system = {
+							exists = space_owner
+							space_owner = {
+								NOT = { is_same_value = from }
+								OR = {
+									has_commercial_pact = from
+									FROM = { is_overlord_to = PREV }
+									is_in_federation_with = FROM
+								}
+							}
+						}
+					}
+					ROOT = {
+						is_gestalt = no
+						is_criminal_syndicate = yes
+						has_technology = tech_customs_office
+					}
+				}
+				set_starbase_building = {
+					slot = 5
+					building = customs_office_criminal
+				}
+			}
+			else = {
+				set_starbase_building = {
+					slot = 5
+					building = listening_post
+				}
+			}
+			set_starbase_building = {
+				slot = 6
+				building = starbase_fortifications
+			}
+			if = {
+				limit = {
+					ROOT = { has_technology = tech_space_mining_1 }
+					OR = {
+						star = { is_inside_nebula = yes }
+						solar_system = {
+							OR = {
+								# Nebula
+								is_star_class = sc_p_purple
+								is_star_class = sc_p_green
+								is_star_class = sc_p_red
+								is_star_class = sc_nova_1
+								is_star_class = sc_nova_2
+								is_star_class = sc_w_azure
+								is_star_class = sc_w_red
+								is_star_class = sc_w_green
+								is_star_class = sc_w_purple
+								is_star_class = sc_lbv_blue
+								is_star_class = sc_lbv_green
+								is_star_class = sc_lbv_red
+								# Protoplanetary Disks
+								is_star_class = sc_protostar
+								is_star_class = sc_tt_red
+								is_star_class = sc_tt_orange
+								is_star_class = sc_tt_white
+								is_star_class = sc_ae
+							}
+						}
+					}
+				}
+				set_starbase_building = {
+					slot = 7
+					building = nebula_refinery
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						star = { is_star_class = sc_black_hole }
+						star = { is_star_class = sc_microquasar_1 }
+						star = { is_star_class = sc_microquasar_2 }
+						solar_system = { any_system_planet = { is_planet_class = pc_black_hole } }
+						solar_system = { has_natural_wormhole = yes }
+					}
+					ROOT = { has_technology = tech_sensors_3 }
+				}
+				set_starbase_building = {
+					slot = 7
+					building = black_hole_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					star = {
+						OR = {
+							is_star_class = sc_pulsar
+							is_star_class = sc_magnetar
+						}
+					}
+					ROOT = { has_technology = tech_sensors_3 }
+				}
+				set_starbase_building = {
+					slot = 7
+					building = pulsar_hole_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					star = {
+						OR = {
+							is_star_class = sc_protostar
+							is_star_class = sc_tt_red
+							is_star_class = sc_tt_orange
+							is_star_class = sc_tt_white
+							is_star_class = sc_ae
+						}
+					}
+					ROOT = { has_technology = tech_sensors_2 }
+				}
+				set_starbase_building = {
+					slot = 7
+					building = protostar_observatory
+				}
+			}
+		}
+	}
+}
+
+create_anchorage = {
+	starbase = {
+		if = {
+			limit = {
+				has_starbase_size = starbase_starport
+				count_starbase_modules = { type = anchorage count < 2 }
+				ROOT = { resource_stockpile_compare = { resource = alloys value >= 200 } }
+			}
+			ROOT = { add_resource = { alloys = -200 } }
+			set_starbase_module = {
+				slot = 0
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 1
+				module = anchorage
+			}
+			set_starbase_building = {
+				slot = 0
+				building = naval_logistics_office
+			}
+		}
+		else_if = {
+			limit = {
+				has_starbase_size = starbase_starhold
+				count_starbase_modules = { type = anchorage count < 4 }
+				ROOT = { resource_stockpile_compare = { resource = alloys value >= 200 } }
+			}
+			ROOT = { add_resource = { alloys = -200 } }
+			set_starbase_module = {
+				slot = 0
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 1
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 2
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 3
+				module = anchorage
+			}
+			set_starbase_building = {
+				slot = 0
+				building = naval_logistics_office
+			}
+			set_starbase_building = {
+				slot = 1
+				building = resource_silo
+			}
+		}
+		else_if = {
+			limit = {
+				has_starbase_size = starbase_starfortress
+				count_starbase_modules = { type = anchorage count < 6 }
+				ROOT = { resource_stockpile_compare = { resource = alloys value >= 300 } }
+			}
+			ROOT = { add_resource = { alloys = -300 } }
+			set_starbase_module = {
+				slot = 0
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 1
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 2
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 3
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 4
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 5
+				module = anchorage
+			}
+			set_starbase_building = {
+				slot = 0
+				building = naval_logistics_office
+			}
+			set_starbase_building = {
+				slot = 1
+				building = resource_silo
+			}
+			set_starbase_building = {
+				slot = 2
+				building = listening_post
+			}
+			if = {
+				limit = {
+					ROOT = { has_technology = tech_space_mining_1 }
+					OR = {
+						star = { is_inside_nebula = yes }
+						solar_system = {
+							OR = {
+								# Nebula
+								is_star_class = sc_p_purple
+								is_star_class = sc_p_green
+								is_star_class = sc_p_red
+								is_star_class = sc_nova_1
+								is_star_class = sc_nova_2
+								is_star_class = sc_w_azure
+								is_star_class = sc_w_red
+								is_star_class = sc_w_green
+								is_star_class = sc_w_purple
+								is_star_class = sc_lbv_blue
+								is_star_class = sc_lbv_green
+								is_star_class = sc_lbv_red
+								# Protoplanetary Disks
+								is_star_class = sc_protostar
+								is_star_class = sc_tt_red
+								is_star_class = sc_tt_orange
+								is_star_class = sc_tt_white
+								is_star_class = sc_ae
+							}
+						}
+					}
+				}
+				set_starbase_building = {
+					slot = 3
+					building = nebula_refinery
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						star = { is_star_class = sc_black_hole }
+						star = { is_star_class = sc_microquasar_1 }
+						star = { is_star_class = sc_microquasar_2 }
+						solar_system = { any_system_planet = { is_planet_class = pc_black_hole } }
+						solar_system = { has_natural_wormhole = yes }
+					}
+					ROOT = { has_technology = tech_sensors_3 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = black_hole_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					star = {
+						OR = {
+							is_star_class = sc_pulsar
+							is_star_class = sc_magnetar
+						}
+					}
+					ROOT = { has_technology = tech_sensors_3 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = pulsar_hole_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					star = {
+						OR = {
+							is_star_class = sc_protostar
+							is_star_class = sc_tt_red
+							is_star_class = sc_tt_orange
+							is_star_class = sc_tt_white
+							is_star_class = sc_ae
+						}
+					}
+					ROOT = { has_technology = tech_sensors_2 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = protostar_observatory
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_starbase_size = starbase_starfortress
+				count_starbase_modules = { type = anchorage count < 9 }
+				ROOT = { resource_stockpile_compare = { resource = alloys value >= 400 } }
+			}
+			ROOT = { add_resource = { alloys = -400 } }
+			set_starbase_module = {
+				slot = 0
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 1
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 2
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 3
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 4
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 5
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 6
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 7
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 8
+				module = anchorage
+			}
+			set_starbase_building = {
+				slot = 0
+				building = naval_logistics_office
+			}
+			set_starbase_building = {
+				slot = 1
+				building = resource_silo
+			}
+			set_starbase_building = {
+				slot = 2
+				building = listening_post
+			}
+			if = {
+				limit = {
+					ROOT = { has_technology = tech_space_mining_1 }
+					OR = {
+						star = { is_inside_nebula = yes }
+						solar_system = {
+							OR = {
+								# Nebula
+								is_star_class = sc_p_purple
+								is_star_class = sc_p_green
+								is_star_class = sc_p_red
+								is_star_class = sc_nova_1
+								is_star_class = sc_nova_2
+								is_star_class = sc_w_azure
+								is_star_class = sc_w_red
+								is_star_class = sc_w_green
+								is_star_class = sc_w_purple
+								is_star_class = sc_lbv_blue
+								is_star_class = sc_lbv_green
+								is_star_class = sc_lbv_red
+								# Protoplanetary Disks
+								is_star_class = sc_protostar
+								is_star_class = sc_tt_red
+								is_star_class = sc_tt_orange
+								is_star_class = sc_tt_white
+								is_star_class = sc_ae
+							}
+						}
+					}
+				}
+				set_starbase_building = {
+					slot = 3
+					building = nebula_refinery
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						star = { is_star_class = sc_black_hole }
+						star = { is_star_class = sc_microquasar_1 }
+						star = { is_star_class = sc_microquasar_2 }
+						solar_system = { any_system_planet = { is_planet_class = pc_black_hole } }
+						solar_system = { has_natural_wormhole = yes }
+					}
+					ROOT = { has_technology = tech_sensors_3 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = black_hole_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					star = {
+						OR = {
+							is_star_class = sc_pulsar
+							is_star_class = sc_magnetar
+						}
+					}
+					ROOT = { has_technology = tech_sensors_3 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = pulsar_hole_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					star = {
+						OR = {
+							is_star_class = sc_protostar
+							is_star_class = sc_tt_red
+							is_star_class = sc_tt_orange
+							is_star_class = sc_tt_white
+							is_star_class = sc_ae
+						}
+					}
+					ROOT = { has_technology = tech_sensors_2 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = protostar_observatory
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { has_technology = tech_space_mining_5 }
+				}
+				set_starbase_building = {
+					slot = 4
+					building = space_production
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_starbase_size = starbase_starfortress
+				count_starbase_modules = { type = anchorage count < 12 }
+				ROOT = { resource_stockpile_compare = { resource = alloys value >= 400 } }
+			}
+			ROOT = { add_resource = { alloys = -400 } }
+			set_starbase_module = {
+				slot = 0
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 1
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 2
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 3
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 4
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 5
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 6
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 7
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 8
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 9
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 10
+				module = anchorage
+			}
+			set_starbase_module = {
+				slot = 11
+				module = anchorage
+			}
+			set_starbase_building = {
+				slot = 0
+				building = naval_logistics_office
+			}
+			set_starbase_building = {
+				slot = 1
+				building = resource_silo
+			}
+			set_starbase_building = {
+				slot = 2
+				building = listening_post
+			}
+			if = {
+				limit = {
+					ROOT = { has_technology = tech_space_mining_1 }
+					OR = {
+						star = { is_inside_nebula = yes }
+						solar_system = {
+							OR = {
+								# Nebula
+								is_star_class = sc_p_purple
+								is_star_class = sc_p_green
+								is_star_class = sc_p_red
+								is_star_class = sc_nova_1
+								is_star_class = sc_nova_2
+								is_star_class = sc_w_azure
+								is_star_class = sc_w_red
+								is_star_class = sc_w_green
+								is_star_class = sc_w_purple
+								is_star_class = sc_lbv_blue
+								is_star_class = sc_lbv_green
+								is_star_class = sc_lbv_red
+								# Protoplanetary Disks
+								is_star_class = sc_protostar
+								is_star_class = sc_tt_red
+								is_star_class = sc_tt_orange
+								is_star_class = sc_tt_white
+								is_star_class = sc_ae
+							}
+						}
+					}
+				}
+				set_starbase_building = {
+					slot = 3
+					building = nebula_refinery
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						star = { is_star_class = sc_black_hole }
+						star = { is_star_class = sc_microquasar_1 }
+						star = { is_star_class = sc_microquasar_2 }
+						solar_system = { any_system_planet = { is_planet_class = pc_black_hole } }
+						solar_system = { has_natural_wormhole = yes }
+					}
+					ROOT = { has_technology = tech_sensors_3 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = black_hole_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					star = {
+						OR = {
+							is_star_class = sc_pulsar
+							is_star_class = sc_magnetar
+						}
+					}
+					ROOT = { has_technology = tech_sensors_3 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = pulsar_hole_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					star = {
+						OR = {
+							is_star_class = sc_protostar
+							is_star_class = sc_tt_red
+							is_star_class = sc_tt_orange
+							is_star_class = sc_tt_white
+							is_star_class = sc_ae
+						}
+					}
+					ROOT = { has_technology = tech_sensors_2 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = protostar_observatory
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { has_technology = tech_space_mining_5 }
+				}
+				set_starbase_building = {
+					slot = 4
+					building = space_production
+				}
+			}
+		}
+	}
+}
+
+create_trading_hub = {
+	starbase = {
+		if = {
+			limit = {
+				has_starbase_size = starbase_starport
+				count_starbase_modules = { type = trading_hub count < 2 }
+				ROOT = { resource_stockpile_compare = { resource = alloys value >= 200 } }
+			}
+			ROOT = { add_resource = { alloys = -200 } }
+			set_starbase_module = {
+				slot = 0
+				module = trading_hub
+			}
+			set_starbase_module = {
+				slot = 1
+				module = trading_hub
+			}
+			set_starbase_building = {
+				slot = 0
+				building = offworld_trading_company
+			}
+		}
+		else_if = {
+			limit = {
+				has_starbase_size = starbase_starhold
+				OR = {
+					count_starbase_modules = { type = trading_hub count < 2 }
+					count_starbase_modules = { type = hangar_bay count < 2 }
+				}
+				ROOT = { resource_stockpile_compare = { resource = alloys value >= 200 } }
+			}
+			ROOT = { add_resource = { alloys = -200 } }
+			set_starbase_module = {
+				slot = 0
+				module = trading_hub
+			}
+			set_starbase_module = {
+				slot = 1
+				module = trading_hub
+			}
+			set_starbase_module = {
+				slot = 2
+				module = hangar_bay
+			}
+			set_starbase_module = {
+				slot = 3
+				module = hangar_bay
+			}
+			set_starbase_building = {
+				slot = 0
+				building = offworld_trading_company
+			}
+			set_starbase_building = {
+				slot = 1
+				building = resource_silo
+			}
+		}
+		else_if = {
+			limit = {
+				has_starbase_size = starbase_starfortress
+				OR = {
+					count_starbase_modules = { type = trading_hub count < 3 }
+					count_starbase_modules = { type = hangar_bay count < 3 }
+				}
+				ROOT = { resource_stockpile_compare = { resource = alloys value >= 300 } }
+			}
+			ROOT = { add_resource = { alloys = -300 } }
+			set_starbase_module = {
+				slot = 0
+				module = trading_hub
+			}
+			set_starbase_module = {
+				slot = 1
+				module = trading_hub
+			}
+			set_starbase_module = {
+				slot = 2
+				module = trading_hub
+			}
+			set_starbase_module = {
+				slot = 3
+				module = hangar_bay
+			}
+			set_starbase_module = {
+				slot = 4
+				module = hangar_bay
+			}
+			set_starbase_module = {
+				slot = 5
+				module = hangar_bay
+			}
+			set_starbase_building = {
+				slot = 0
+				building = offworld_trading_company
+			}
+			set_starbase_building = {
+				slot = 1
+				building = resource_silo
+			}
+			set_starbase_building = {
+				slot = 2
+				building = warp_fluctuator
+			}
+			if = {
+				limit = {
+					ROOT = { has_technology = tech_space_mining_1 }
+					OR = {
+						star = { is_inside_nebula = yes }
+						solar_system = {
+							OR = {
+								# Nebula
+								is_star_class = sc_p_purple
+								is_star_class = sc_p_green
+								is_star_class = sc_p_red
+								is_star_class = sc_nova_1
+								is_star_class = sc_nova_2
+								is_star_class = sc_w_azure
+								is_star_class = sc_w_red
+								is_star_class = sc_w_green
+								is_star_class = sc_w_purple
+								is_star_class = sc_lbv_blue
+								is_star_class = sc_lbv_green
+								is_star_class = sc_lbv_red
+								# Protoplanetary Disks
+								is_star_class = sc_protostar
+								is_star_class = sc_tt_red
+								is_star_class = sc_tt_orange
+								is_star_class = sc_tt_white
+								is_star_class = sc_ae
+							}
+						}
+					}
+				}
+				set_starbase_building = {
+					slot = 3
+					building = nebula_refinery
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						star = { is_star_class = sc_black_hole }
+						star = { is_star_class = sc_microquasar_1 }
+						star = { is_star_class = sc_microquasar_2 }
+						solar_system = { any_system_planet = { is_planet_class = pc_black_hole } }
+						solar_system = { has_natural_wormhole = yes }
+					}
+					ROOT = { has_technology = tech_sensors_3 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = black_hole_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					star = {
+						OR = {
+							is_star_class = sc_pulsar
+							is_star_class = sc_magnetar
+						}
+					}
+					ROOT = { has_technology = tech_sensors_3 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = pulsar_hole_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					star = {
+						OR = {
+							is_star_class = sc_protostar
+							is_star_class = sc_tt_red
+							is_star_class = sc_tt_orange
+							is_star_class = sc_tt_white
+							is_star_class = sc_ae
+						}
+					}
+					ROOT = { has_technology = tech_sensors_2 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = protostar_observatory
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_starbase_size = starbase_starfortress
+				OR = {
+					count_starbase_modules = { type = trading_hub count < 5 }
+					count_starbase_modules = { type = hangar_bay count < 4 }
+				}
+				ROOT = { resource_stockpile_compare = { resource = alloys value >= 400 } }
+			}
+			ROOT = { add_resource = { alloys = -400 } }
+			set_starbase_module = {
+				slot = 0
+				module = trading_hub
+			}
+			set_starbase_module = {
+				slot = 1
+				module = trading_hub
+			}
+			set_starbase_module = {
+				slot = 2
+				module = trading_hub
+			}
+			set_starbase_module = {
+				slot = 3
+				module = trading_hub
+			}
+			set_starbase_module = {
+				slot = 4
+				module = trading_hub
+			}
+			set_starbase_module = {
+				slot = 5
+				module = hangar_bay
+			}
+			set_starbase_module = {
+				slot = 6
+				module = hangar_bay
+			}
+			set_starbase_module = {
+				slot = 7
+				module = hangar_bay
+			}
+			set_starbase_module = {
+				slot = 8
+				module = hangar_bay
+			}
+			set_starbase_building = {
+				slot = 0
+				building = offworld_trading_company
+			}
+			set_starbase_building = {
+				slot = 1
+				building = resource_silo
+			}
+			set_starbase_building = {
+				slot = 2
+				building = warp_fluctuator
+			}
+			if = {
+				limit = {
+					ROOT = { has_technology = tech_space_mining_1 }
+					OR = {
+						star = { is_inside_nebula = yes }
+						solar_system = {
+							OR = {
+								# Nebula
+								is_star_class = sc_p_purple
+								is_star_class = sc_p_green
+								is_star_class = sc_p_red
+								is_star_class = sc_nova_1
+								is_star_class = sc_nova_2
+								is_star_class = sc_w_azure
+								is_star_class = sc_w_red
+								is_star_class = sc_w_green
+								is_star_class = sc_w_purple
+								is_star_class = sc_lbv_blue
+								is_star_class = sc_lbv_green
+								is_star_class = sc_lbv_red
+								# Protoplanetary Disks
+								is_star_class = sc_protostar
+								is_star_class = sc_tt_red
+								is_star_class = sc_tt_orange
+								is_star_class = sc_tt_white
+								is_star_class = sc_ae
+							}
+						}
+					}
+				}
+				set_starbase_building = {
+					slot = 3
+					building = nebula_refinery
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						star = { is_star_class = sc_black_hole }
+						star = { is_star_class = sc_microquasar_1 }
+						star = { is_star_class = sc_microquasar_2 }
+						solar_system = { any_system_planet = { is_planet_class = pc_black_hole } }
+						solar_system = { has_natural_wormhole = yes }
+					}
+					ROOT = { has_technology = tech_sensors_3 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = black_hole_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					star = {
+						OR = {
+							is_star_class = sc_pulsar
+							is_star_class = sc_magnetar
+						}
+					}
+					ROOT = { has_technology = tech_sensors_3 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = pulsar_hole_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					star = {
+						OR = {
+							is_star_class = sc_protostar
+							is_star_class = sc_tt_red
+							is_star_class = sc_tt_orange
+							is_star_class = sc_tt_white
+							is_star_class = sc_ae
+						}
+					}
+					ROOT = { has_technology = tech_sensors_2 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = protostar_observatory
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { has_technology = tech_space_mining_5 }
+				}
+				set_starbase_building = {
+					slot = 4
+					building = space_production
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_starbase_size = starbase_starfortress
+				OR = {
+					count_starbase_modules = { type = trading_hub count < 6 }
+					count_starbase_modules = { type = hangar_bay count < 6 }
+				}
+				ROOT = { resource_stockpile_compare = { resource = alloys value >= 400 } }
+			}
+			ROOT = { add_resource = { alloys = -400 } }
+			set_starbase_module = {
+				slot = 0
+				module = trading_hub
+			}
+			set_starbase_module = {
+				slot = 1
+				module = trading_hub
+			}
+			set_starbase_module = {
+				slot = 2
+				module = trading_hub
+			}
+			set_starbase_module = {
+				slot = 3
+				module = trading_hub
+			}
+			set_starbase_module = {
+				slot = 4
+				module = trading_hub
+			}
+			set_starbase_module = {
+				slot = 5
+				module = trading_hub
+			}
+			set_starbase_module = {
+				slot = 6
+				module = hangar_bay
+			}
+			set_starbase_module = {
+				slot = 7
+				module = hangar_bay
+			}
+			set_starbase_module = {
+				slot = 8
+				module = hangar_bay
+			}
+			set_starbase_module = {
+				slot = 9
+				module = hangar_bay
+			}
+			set_starbase_module = {
+				slot = 10
+				module = hangar_bay
+			}
+			set_starbase_module = {
+				slot = 11
+				module = hangar_bay
+			}
+			set_starbase_building = {
+				slot = 0
+				building = offworld_trading_company
+			}
+			set_starbase_building = {
+				slot = 1
+				building = resource_silo
+			}
+			set_starbase_building = {
+				slot = 2
+				building = warp_fluctuator
+			}
+			if = {
+				limit = {
+					ROOT = { has_technology = tech_space_mining_1 }
+					OR = {
+						star = { is_inside_nebula = yes }
+						solar_system = {
+							OR = {
+								# Nebula
+								is_star_class = sc_p_purple
+								is_star_class = sc_p_green
+								is_star_class = sc_p_red
+								is_star_class = sc_nova_1
+								is_star_class = sc_nova_2
+								is_star_class = sc_w_azure
+								is_star_class = sc_w_red
+								is_star_class = sc_w_green
+								is_star_class = sc_w_purple
+								is_star_class = sc_lbv_blue
+								is_star_class = sc_lbv_green
+								is_star_class = sc_lbv_red
+								# Protoplanetary Disks
+								is_star_class = sc_protostar
+								is_star_class = sc_tt_red
+								is_star_class = sc_tt_orange
+								is_star_class = sc_tt_white
+								is_star_class = sc_ae
+							}
+						}
+					}
+				}
+				set_starbase_building = {
+					slot = 3
+					building = nebula_refinery
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						star = { is_star_class = sc_black_hole }
+						star = { is_star_class = sc_microquasar_1 }
+						star = { is_star_class = sc_microquasar_2 }
+						solar_system = { any_system_planet = { is_planet_class = pc_black_hole } }
+						solar_system = { has_natural_wormhole = yes }
+					}
+					ROOT = { has_technology = tech_sensors_3 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = black_hole_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					star = {
+						OR = {
+							is_star_class = sc_pulsar
+							is_star_class = sc_magnetar
+						}
+					}
+					ROOT = { has_technology = tech_sensors_3 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = pulsar_hole_observatory
+				}
+			}
+			else_if = {
+				limit = {
+					star = {
+						OR = {
+							is_star_class = sc_protostar
+							is_star_class = sc_tt_red
+							is_star_class = sc_tt_orange
+							is_star_class = sc_tt_white
+							is_star_class = sc_ae
+						}
+					}
+					ROOT = { has_technology = tech_sensors_2 }
+				}
+				set_starbase_building = {
+					slot = 3
+					building = protostar_observatory
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { has_technology = tech_space_mining_5 }
+				}
+				set_starbase_building = {
+					slot = 4
+					building = space_production
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,409 @@
+# Enclave Station
+ship_section_template = {
+	key = "player_station_enclave_curator_01_key1"
+	ship_size = player_enclave_station
+
+	fits_on_slot = "north"
+	fits_on_slot = "west"
+	fits_on_slot = "east"
+	fits_on_slot = "south"
+
+	entity = "enclave_station_curator_hull_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	prerequisites = { "tech_all_none" }
+
+	ai_weight = {
+		weight = 1
+	}
+	
+	component_slot = {
+		name = "TITANIC_01"
+		template = "invisible_titanic_fixed"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "TORPEDO_01"
+		template = "medium_missile_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+
+	large_utility_slots = 7
+	aux_utility_slots = 2
+}
+
+ship_section_template = {
+	key = "player_station_enclave_curator_01_key2"
+	ship_size = player_enclave_station
+
+	fits_on_slot = "north"
+	fits_on_slot = "west"
+	fits_on_slot = "east"
+	fits_on_slot = "south"
+
+	entity = "enclave_station_curator_hull_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	prerequisites = { "tech_all_none" }
+
+	ai_weight = {
+		weight = 0
+	}
+
+	component_slot = {
+		name = "TITANIC_01"
+		template = "invisible_titanic_fixed"
+		locatorname = "root"
+	}
+
+	component_slot = {
+		name = "TITANIC_02"
+		template = "invisible_titanic_fixed"
+		locatorname = "root"
+	}
+
+	component_slot = {
+		name = "TITANIC_03"
+		template = "invisible_titanic_fixed"
+		locatorname = "root"
+	}
+
+	component_slot = {
+		name = "TITANIC_04"
+		template = "invisible_titanic_fixed"
+		locatorname = "root"
+	}
+
+	component_slot = {
+		name = "TITANIC_05"
+		template = "invisible_titanic_fixed"
+		locatorname = "root"
+	}
+
+	component_slot = {
+		name = "TITANIC_06"
+		template = "invisible_titanic_fixed"
+		locatorname = "root"
+	}
+
+	large_utility_slots = 13
+	aux_utility_slots = 2
+
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = -5000
+		}
+	}
+}
+
+ship_section_template = {
+	key = "player_station_enclave_curator_01_key3"
+	ship_size = player_enclave_station
+
+	fits_on_slot = "north"
+	fits_on_slot = "west"
+	fits_on_slot = "east"
+	fits_on_slot = "south"
+
+	entity = "enclave_station_curator_hull_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	prerequisites = { "tech_all_none" }
+
+	ai_weight = {
+		weight = 0
+	}
+
+	component_slot = {
+		name = "TITANIC_01"
+		template = "invisible_titanic_fixed"
+		locatorname = "root"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_05"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+
+	large_utility_slots = 13
+	aux_utility_slots = 2
+
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = -5000
+		}
+	}
+}
+
+# Automated Dreadnought Section
+ship_section_template = {
+	key = "player_automated_dreadnought_key1"
+	ship_size = player_npc_warship_01
+	fits_on_slot = bow
+	fits_on_slot = mid
+	fits_on_slot = stern
+	entity = "npf_01_npc_warship_01_hull_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	prerequisites = { "tech_all_none" }
+
+	ai_weight = {
+		weight = 1
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "large_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "small_gun_01"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "small_gun_02"
+	}
+
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "small_turret"
+		locatorname = "small_gun_03"
+	}
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "large_turret"
+		is_side_slot = yes
+		locatorname = "large_gun_07"
+	}
+
+	large_utility_slots = 7
+	aux_utility_slots = 2
+}
+
+ship_section_template = {
+	key = "player_automated_dreadnought_key2"
+	ship_size = player_npc_warship_01
+	fits_on_slot = bow
+	fits_on_slot = mid
+	fits_on_slot = stern
+	entity = "npf_01_npc_warship_01_hull_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	prerequisites = { "tech_all_none" }
+
+	ai_weight = {
+		weight = 0
+	}
+
+	component_slot = {
+		name = "TITANIC_01"
+		template = "invisible_titanic_fixed"
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "TITANIC_02"
+		template = "invisible_titanic_fixed"
+		locatorname = "large_gun_02"
+	}
+
+	component_slot = {
+		name = "TITANIC_03"
+		template = "invisible_titanic_fixed"
+		locatorname = "large_gun_03_l"
+	}
+
+	component_slot = {
+		name = "TITANIC_04"
+		template = "invisible_titanic_fixed"
+		locatorname = "large_gun_03_r"
+	}
+
+	component_slot = {
+		name = "TITANIC_05"
+		template = "invisible_titanic_fixed"
+		locatorname = "large_gun_04_l"
+	}
+
+	component_slot = {
+		name = "TITANIC_06"
+		template = "invisible_titanic_fixed"
+		locatorname = "large_gun_04_r"
+	}
+	component_slot = {
+		name = "TITANIC_07"
+		template = "invisible_titanic_fixed"
+		locatorname = "large_gun_05_l"
+	}
+
+	component_slot = {
+		name = "TITANIC_08"
+		template = "invisible_titanic_fixed"
+		locatorname = "large_gun_05_r"
+	}
+	component_slot = {
+		name = "TITANIC_09"
+		template = "invisible_titanic_fixed"
+		locatorname = "large_gun_07"
+	}
+
+	large_utility_slots = 13
+	aux_utility_slots = 2
+
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = -10000
+		}
+	}
+}
+
+ship_section_template = {
+	key = "player_automated_dreadnought_key3"
+	ship_size = player_npc_warship_01
+	fits_on_slot = bow
+	fits_on_slot = mid
+	fits_on_slot = stern
+	entity = "npf_01_npc_warship_01_hull_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	prerequisites = { "tech_all_none" }
+
+	ai_weight = {
+		weight = 0
+	}
+
+	component_slot = {
+		name = "TITANIC_01"
+		template = "invisible_titanic_fixed"
+		locatorname = "large_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "large_gun_02"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "large_gun_07"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		locatorname = "large_gun_03_l"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		locatorname = "large_gun_03_r"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_05"
+		template = "large_strike_craft"
+		locatorname = "large_gun_04_l"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_06"
+		template = "large_strike_craft"
+		locatorname = "large_gun_04_r"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_07"
+		template = "large_strike_craft"
+		locatorname = "large_gun_05_l"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_08"
+		template = "large_strike_craft"
+		locatorname = "large_gun_05_r"
+	}
+
+	large_utility_slots = 13
+	aux_utility_slots = 2
+
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = -10000
+		}
+	}
+}

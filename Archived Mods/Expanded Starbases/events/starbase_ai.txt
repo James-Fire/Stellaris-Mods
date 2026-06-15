@@ -1,0 +1,423 @@
+############################
+#
+# Expanded Game Start Events
+#
+############################
+
+namespace = starbaseai
+
+event = {
+	id = starbaseai.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_playable_country = {
+			limit = { is_ai = yes }
+			country_event = { id = starbaseai.2 days = 5 random = 15 }
+		}
+	}
+}
+country_event = {
+	id = starbaseai.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		# Shipyards
+		capital_scope = {
+			solar_system = {
+				starbase = {
+					if = {
+						limit = { has_starbase_size = starbase_outpost }
+						set_starbase_size = starbase_starport
+						set_starbase_module = {
+							slot = 0
+							module = shipyard
+						}
+						set_starbase_module = {
+							slot = 1
+							module = trading_hub
+						}
+						set_starbase_building = {
+							slot = 0
+							building = crew_quarters
+						}
+					}
+				}
+				set_star_flag = shipyard_system
+				set_star_flag = shipyard_capital_system
+				create_shipyard = yes
+			}
+		}
+		random_system_within_border = {
+			limit = {
+				has_star_flag = shipyard_system
+				NOT = { has_star_flag = shipyard_capital_system }
+			}
+			create_shipyard = yes
+		}
+		random_owned_planet = {
+			limit = {
+				num_pops >= 10
+				exists = sector
+				sector = { has_sector_type = normal_sector }
+				solar_system = {
+					starbase = {
+						has_starbase_size >= starbase_starport
+						NOR = {
+							has_starbase_module = anchorage
+							has_starbase_module = gun_battery
+							has_starbase_module = missile_battery
+						}
+					}
+					NOT = { has_star_flag = shipyard_system }
+					NOT = {
+						ROOT = {
+							any_system_within_border = {
+								has_star_flag = shipyard_system
+								distance = {
+									source = PREVPREV
+									use_bypasses = no
+									min_jumps = 1
+									max_jumps = 6
+								}
+							}
+						}
+					}
+				}
+			}
+			solar_system = { set_star_flag = shipyard_system }
+		}
+		
+		# Border Systems
+		random_system_within_border = {
+			limit = {
+				NOT = { has_star_flag = shipyard_system }
+				NOT = { has_star_flag = border_system }
+				OR = {
+					any_neighbor_system = {
+						exists = space_owner
+						space_owner = {
+							NOT = { is_same_value = ROOT }
+						}
+					}
+					has_natural_wormhole = yes
+				}
+				starbase = {
+					has_starbase_size >= starbase_starport
+					NOR = {
+						has_starbase_module = anchorage
+						has_starbase_module = shipyard
+						has_starbase_module = trading_hub
+						has_starbase_module = solar_panel_network
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_star_flag = border_system }
+				}
+				set_star_flag = border_system
+			}
+			create_bastion = yes
+		}
+		if = {
+			limit = {
+				is_at_war = no # no ai creating new stations in recently conquered territory
+				any_system_within_border = {
+					starbase = { has_starbase_size = starbase_outpost }
+					OR = {
+						any_neighbor_system = {
+							exists = space_owner
+							space_owner = {
+								NOT = { is_same_value = ROOT }
+							}
+						}
+						has_natural_wormhole = yes
+					}
+				}
+				resource_stockpile_compare = { resource = alloys value > 200 }
+				has_monthly_income = { resource = energy value > 20 }
+			}
+			add_resource = { alloys = -200 }
+			random_system_within_border = {
+				limit = {
+					starbase = { has_starbase_size = starbase_outpost }
+					OR = {
+						any_neighbor_system = {
+							exists = space_owner
+							space_owner = {
+								NOT = { is_same_value = ROOT }
+							}
+						}
+						has_natural_wormhole = yes
+					}
+				}
+				starbase = {
+					set_starbase_size = starbase_starport
+					set_starbase_module = {
+						slot = 0
+						module = "gun_battery"
+					}
+					set_starbase_module = {
+						slot = 1
+						module = "missile_battery"
+					}
+					set_starbase_building = {
+						slot = 0
+						building = "disruption_field"
+					}
+				}
+			}
+		}
+		
+		# Anchorages
+		random_system_within_border = {
+			limit = { has_star_flag = anchorage_system }
+			create_anchorage = yes
+		}
+		if = {
+			limit = { used_naval_capacity_percent >= 0.85 }
+			random_system_within_border = {
+				limit = {
+					NOR = {
+						has_star_flag = shipyard_system
+						has_star_flag = border_system
+					}
+					starbase = {
+						has_starbase_size >= starbase_starport
+						NOT = { has_starbase_module = trading_hub }
+						NOT = { has_starbase_module = solar_panel_network }
+					}
+				}
+				set_star_flag = anchorage_system
+				create_anchorage = yes
+			}
+		}
+		
+		# Trading Hubs
+		random_system_within_border = {
+			limit = { has_star_flag = trading_hub_system }
+			create_trading_hub = yes
+		}
+		if = {
+			limit = { is_gestalt = no }
+			random_system_within_border = {
+				limit = {
+					NOR = {
+						has_star_flag = shipyard_system
+						has_star_flag = border_system
+						has_star_flag = anchorage_system
+						has_star_flag = trading_hub_system
+						any_system_planet = { colonizeable_planet = yes }
+						ROOT = {
+							any_system_within_border = {
+								has_star_flag = trading_hub_system
+								distance = {
+									source = PREVPREV
+									use_bypasses = no
+									min_jumps = 1
+									max_jumps = 4
+								}
+							}
+						}
+					}
+					OR = {
+						any_neighbor_system = {
+							exists = space_owner
+							space_owner = { is_same_value = ROOT }
+							starbase = { has_starbase_size = starbase_outpost }
+							any_system_planet = {
+								OR = {
+									has_deposit = d_trade_value_1
+									has_deposit = d_trade_value_2
+									has_deposit = d_trade_value_3
+									has_deposit = d_trade_value_4
+									has_deposit = d_trade_value_5
+									has_deposit = d_trade_value_6
+									has_deposit = d_trade_value_7
+									has_deposit = d_trade_value_8
+									has_deposit = d_trade_value_9
+									has_deposit = d_trade_value_10
+								}
+							}
+						}
+						any_neighbor_system = {
+							exists = space_owner
+							space_owner = { is_same_value = ROOT }
+							any_neighbor_system = {
+								exists = space_owner
+								space_owner = { is_same_value = ROOT }
+								starbase = { has_starbase_size = starbase_outpost }
+								any_system_planet = {
+									OR = {
+										has_deposit = d_trade_value_1
+										has_deposit = d_trade_value_2
+										has_deposit = d_trade_value_3
+										has_deposit = d_trade_value_4
+										has_deposit = d_trade_value_5
+										has_deposit = d_trade_value_6
+										has_deposit = d_trade_value_7
+										has_deposit = d_trade_value_8
+										has_deposit = d_trade_value_9
+										has_deposit = d_trade_value_10
+									}
+								}
+							}
+						}
+					}
+					starbase = {
+						has_starbase_size >= starbase_starport
+					}
+				}
+				set_star_flag = trading_hub_system
+				create_trading_hub = yes
+			}
+		}
+		# Upgrade Starbases
+		if = {
+			limit = {
+				any_owned_starbase = {
+					OR = {
+						AND = {
+							has_starbase_size = starbase_starport
+							owner = { 
+								has_technology = tech_starbase_3
+								resource_stockpile_compare = { resource = alloys value > 500 }
+							}
+						}
+						AND = {
+							has_starbase_size = starbase_starhold
+							owner = { 
+								has_technology = tech_starbase_4
+								resource_stockpile_compare = { resource = alloys value > 1000 }
+							}
+						}
+						AND = {
+							has_starbase_size = starbase_starfortress
+							owner = { 
+								has_technology = tech_starbase_5
+								resource_stockpile_compare = { resource = alloys value > 3000 }
+							}
+						}
+						AND = {
+							has_starbase_size = starbase_citadel
+							owner = { 
+								has_technology = tech_starbase_6
+								resource_stockpile_compare = { resource = alloys value > 6000 }
+							}
+						}
+					}
+				}
+			}
+			random_list = {
+				1 = { country_event = { id = starbaseai.3 } }
+				2 = { }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = starbaseai.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_starbase =	{
+			limit = {
+				OR = {
+					AND = {
+						has_starbase_size = starbase_starport
+						owner = { 
+							has_technology = tech_starbase_3
+							resource_stockpile_compare = { resource = alloys value > 500 }
+						}
+					}
+					AND = {
+						has_starbase_size = starbase_starhold
+						owner = { 
+							has_technology = tech_starbase_4
+							resource_stockpile_compare = { resource = alloys value > 1000 }
+						}
+					}
+					AND = {
+						has_starbase_size = starbase_starfortress
+						owner = { 
+							has_technology = tech_starbase_5
+							resource_stockpile_compare = { resource = alloys value > 3000 }
+						}
+					}
+					AND = {
+						has_starbase_size = starbase_citadel
+						owner = { 
+							has_technology = tech_starbase_6
+							resource_stockpile_compare = { resource = alloys value > 6000 }
+						}
+					}
+				}
+			}
+			IF = {
+				limit = {
+					owner = { 
+						has_technology = tech_starbase_3 
+						resource_stockpile_compare = { resource = alloys value > 500 }
+					}
+					has_starbase_size = starbase_starport
+				}
+				set_starbase_size = starbase_starhold
+				OWNER = {
+					add_resource = {
+						alloys = -500
+					}
+				}
+			}
+			IF = {
+				limit = {
+					owner = { 
+						has_technology = tech_starbase_4
+						resource_stockpile_compare = { resource = alloys value > 1000 }
+					}
+					has_starbase_size = starbase_starhold
+				}
+				set_starbase_size = starbase_starfortress
+				OWNER = {
+					add_resource = {
+						alloys = -1000
+					}
+				}
+			}
+			IF = {
+				limit = {
+					owner = { 
+						has_technology = tech_starbase_5 
+						resource_stockpile_compare = { resource = alloys value > 3000 }
+					}
+					has_starbase_size = starbase_starfortress
+				}
+				set_starbase_size = starbase_citadel
+				OWNER = {
+					add_resource = {
+						alloys = -3000
+					}
+				}
+			}
+			IF = {
+				limit = {
+					owner = { 
+						has_technology = tech_starbase_6
+						resource_stockpile_compare = { resource = alloys value > 6000 }
+					}
+					has_starbase_size = starbase_citadel
+				}
+				set_starbase_size = starbase_bastion
+				OWNER = {
+					add_resource = {
+						alloys = -6000
+					}
+				}
+			}
+		}
+	}
+}

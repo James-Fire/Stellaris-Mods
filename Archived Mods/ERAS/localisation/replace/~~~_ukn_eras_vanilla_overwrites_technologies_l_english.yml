@@ -1,0 +1,1083 @@
+﻿l_english:
+
+
+####################################
+####### PHYSICS TECHNOLOGIES #######
+####################################
+
+####################################
+# (OLD) PLANETARY SHIELD GENERATOR # (UNUSED!)
+####################################
+
+# (OLD) PLANETARY SHIELD GENERATOR # (UNUSED!) #-----------------
+ tech_planetary_shield_generator:0 "Planetary Shields"
+ tech_planetary_shield_generator_desc:0 "Generating a strong energy shield within a planetary atmosphere is a greater challenge than in the vacuum of space, but it offers a potent defense against orbital bombardment."
+
+
+          ########################
+#---------## [INDUSTRY] PHYSICS ##---------#
+          ########################
+
+################################
+# COMPUTING / PROGRAMMING (AI) #
+################################
+
+# COMPUTING TECHS #-----------------
+ tech_administrative_ai:0 "$tech_ukn_computing_2$"
+ tech_administrative_ai_desc:0 "$tech_ukn_computing_2_desc$"
+
+ tech_self_aware_logic:0 "$tech_ukn_computing_3$"
+ tech_self_aware_logic_desc:0 "$tech_ukn_computing_3_desc$"
+
+ tech_sapient_ai:0 "$tech_ukn_computing_4$"
+ tech_sapient_ai_desc:0 "$tech_ukn_computing_4_desc$"
+
+ tech_positronic_implants:0 "$tech_ukn_computing_4$"
+ tech_positronic_implants_desc:0 "$tech_ukn_computing_4_desc$"
+ 
+
+# PROGRAMMING (AI) TECHS #-----------------
+ tech_combat_computers_1:0 "$tech_ukn_programming_2$"
+ tech_combat_computers_1_desc:0 "$tech_ukn_programming_2_desc$"
+
+ tech_combat_computers_2:0 "$tech_ukn_programming_3$"
+ tech_combat_computers_2_desc:0 "$tech_ukn_programming_3_desc$"
+
+ tech_combat_computers_3:0 "$tech_ukn_programming_4$"
+ tech_combat_computers_3_desc:0 "$tech_ukn_programming_4_desc$"
+
+ tech_combat_computers_autonomous:0 "$tech_ukn_programming_4$"
+ tech_combat_computers_autonomous_desc:0 "$tech_ukn_programming_4_desc$"
+
+
+
+####################
+# MILESTONE THEORY #
+####################
+
+# MILESTONE THEORY / SENSORS #-----------------
+ tech_sensors_1:0 "$tech_ukn_milestone_theory_1$"
+ tech_sensors_1_desc:0 "$tech_ukn_milestone_theory_1_desc$"
+ 
+ tech_sensors_2:0 "$tech_ukn_milestone_theory_2$"
+ tech_sensors_2_desc:0 "$tech_ukn_milestone_theory_2_desc$"
+ 
+ tech_sensors_3:0 "$tech_ukn_milestone_theory_3$"
+ tech_sensors_3_desc:0 "$tech_ukn_milestone_theory_3_desc$"
+ 
+ tech_sensors_4:0 "$tech_ukn_milestone_theory_4$"
+ tech_sensors_4_desc:0 "$tech_ukn_milestone_theory_4_desc$"
+ 
+
+
+#######################################
+# PHYSICS OUTPUT / FIELD MANIPULATION #
+#######################################
+
+# PHYSICS OUTPUT / FIELD MANIPULATION / SHIELDS TECHS #-----------------
+ tech_shields_1:0 "Applied Directed Electromagnetism"
+ tech_shields_1_desc:0 "DESC"
+ 
+ tech_physics_1:0 "$tech_ukn_physics_output_1$"
+ tech_physics_1_desc:0 "$tech_ukn_physics_output_1_desc$"
+ 
+ tech_physics_2:0 "$tech_ukn_physics_output_2$"
+ tech_physics_2_desc:0 "$tech_ukn_physics_output_2_desc$"
+ 
+ tech_physics_3:0 "$tech_ukn_physics_output_3$"
+ tech_physics_3_desc:0 "$tech_ukn_physics_output_3_desc$"
+ 
+
+
+##############################
+# EXOTIC PARTICLE PRODUCTION #
+##############################
+
+# EXOTIC PARTICLE PRODUCTION / BUFFING TECHS #-----------------
+ tech_mine_ukn_exotic_particles:0 "£ukn_icon_tech_milestone£ Exotic Particle Manufacturing"
+ tech_mine_ukn_exotic_particles_desc:0 "$UKN_TECH_ERA_3$DESC$UKN_TECH_MILESTONE_TOOLTIP_ERA_4$"
+ 
+ tech_ukn_exotic_particles:0 "Atypical Field Manipulation"
+ tech_ukn_exotic_particles_desc:0 "$UKN_TECH_ERA_3$DESC"
+ 
+
+
+####################
+# AXION PRODUCTION #
+####################
+
+# AXION PRODUCTION / BUFFING TECHS #-----------------
+ tech_mine_dark_matter:0 "£ukn_icon_tech_milestone£ Axion Accretion"
+ tech_mine_dark_matter_desc:0 "$UKN_TECH_ERA_5$DESC$UKN_TECH_MILESTONE_TOOLTIP_ERA_6$"
+ 
+
+
+####################################
+# ENERGY OUTPUT / POWER GENERATION #
+####################################
+
+# ENERGY OUTPUT / POWER GENERATION / REACTOR TECHS #-----------------
+ tech_fission_power:0 "$tech_ukn_power_1$"
+ tech_fission_power_desc:0 "$tech_ukn_power_1_desc$"
+ tech_fusion_power:0 "$tech_ukn_power_2$"
+ tech_fusion_power_desc:0 "$tech_ukn_power_2_desc$"
+ tech_cold_fusion_power:0 "$tech_ukn_power_3$"
+ tech_cold_fusion_power_desc:0 "$tech_ukn_power_3_desc$"
+ tech_antimatter_power:0 "$tech_ukn_power_4$"
+ tech_antimatter_power_desc:0 "$tech_ukn_power_4_desc$"
+ tech_zero_point_power:0 "$tech_ukn_power_5$"
+ tech_zero_point_power_desc:0 "$tech_ukn_power_5_desc$"
+ 
+ tech_dark_matter_power_core:0 "$tech_ukn_power_7$ (Fallen Empire)"
+ tech_dark_matter_power_core_desc:0 "$tech_ukn_power_7_desc$"
+
+
+
+##########################################
+# AUTOMATION / RESOURCE PRODUCTION BUFFS #
+##########################################
+
+# ENERGY (BUILDING+EDICT) #-----------------
+ tech_power_hub_1:0 "Global Energy Management"
+ tech_power_hub_1_desc:1 "$UKN_TECH_ERA_1$Load-balancing facilities can greatly improve the stability of local grids and feed excess power back into centralized capacitors."
+ 
+ tech_power_hub_2:0 "Planetary Power Grid"
+ tech_power_hub_2_desc:1 "$UKN_TECH_ERA_2$A re-engineered and unified grid further reduces energy losses over distance."
+
+
+
+# RESEARCH (BUILDING+EDICT) #-----------------
+ tech_basic_science_lab_1:0 "Scientific Method"
+ tech_basic_science_lab_1_desc:0 "$UKN_TECH_ERA_0$Testable predictions of observable phenomena."
+ 
+ tech_basic_science_lab_2:0 "Exotic Materials Labs"
+ tech_basic_science_lab_2_desc:1 "$UKN_TECH_ERA_1$As we explore the galaxy, we continually encounter new materials and substances that are unfamiliar to us. Cataloging and analyzing these discoveries will require new facilities."
+
+ tech_basic_science_lab_3:0 "Multi-Dimensional Studies"
+ tech_basic_science_lab_3_desc:1 "$UKN_TECH_ERA_2$To expand our knowledge base, we must consider all levels of existence. A new realm of science awaits us!"
+ 
+
+
+          #########################
+#---------## [AUXILIARY] PHYSICS ##---------#
+          #########################
+
+####################################
+# MACRO-CAPACITORS / ENERGY RELAYS #
+####################################
+
+# MACRO-CAPACITORS / ENERGY RELAY TECHS #-----------------
+ tech_power_plant_1:0 "$tech_ukn_reactor_boosters_1$"
+ tech_power_plant_1_desc:0 "$tech_ukn_reactor_boosters_1_desc$"
+ 
+ tech_power_plant_2:0 "$tech_ukn_reactor_boosters_2$"
+ tech_power_plant_2_desc:0 "$tech_ukn_reactor_boosters_2_desc$"
+ 
+ tech_power_plant_3:0 "$tech_ukn_reactor_boosters_3$"
+ tech_power_plant_3_desc:0 "$tech_ukn_reactor_boosters_3_desc$"
+ 
+ tech_power_plant_4:0 "$tech_ukn_reactor_boosters_4$"
+ tech_power_plant_4_desc:0 "$tech_ukn_reactor_boosters_4_desc$"
+ 
+
+
+#######################
+# SHIELD OVERCHARGERS #
+#######################
+
+# SHIELD OVERCHARGER TECHS #-----------------
+ tech_shield_rechargers_1:0 "$tech_ukn_shield_overchargers_1$"
+ tech_shield_rechargers_1_desc:0 "$tech_ukn_shield_overchargers_1_desc$"
+ 
+ tech_shields_2:0 "$tech_ukn_shield_overchargers_2$"
+ tech_shields_2_desc:0 "$tech_ukn_shield_overchargers_2_desc$"
+ 
+ tech_shields_3:0 "$tech_ukn_shield_overchargers_3$"
+ tech_shields_3_desc:0 "$tech_ukn_shield_overchargers_3_desc$"
+ 
+ tech_shields_4:0 "$tech_ukn_shield_overchargers_4$"
+ tech_shields_4_desc:0 "$tech_ukn_shield_overchargers_4_desc$"
+ 
+ tech_shields_5:0 "$tech_ukn_shield_overchargers_5$"
+ tech_shields_5_desc:0 "$tech_ukn_shield_overchargers_5_desc$"
+ 
+ tech_dark_matter_deflector:0 "$tech_ukn_physics_output_6$ (Fallen Empire)"
+ tech_dark_matter_deflector_desc:0 "$tech_ukn_physics_output_6_desc$"
+
+
+
+##########################
+# AUXILIARY FIRE CONTROL #
+##########################
+
+# AUXILIARY FIRE CONTROL TECHS #-----------------
+ #@tech_ukn_auxiliary_fire_control_1 = 1
+
+
+          #######################
+#---------## [UTILITY] PHYSICS ##---------#
+          #######################
+
+##############
+# FTL DRIVES #
+##############
+
+# HYPERDIVES #-----------------
+ tech_hyper_drive_1:0 "$tech_ukn_hyper_drive_1$"
+ tech_hyper_drive_1_desc:0 "$tech_ukn_hyper_drive_1_desc$"
+ 
+ tech_hyper_drive_2:0 "$tech_ukn_hyper_drive_2$"
+ tech_hyper_drive_2_desc:0 "$tech_ukn_hyper_drive_2_desc$"
+ 
+ tech_hyper_drive_3:0 "$tech_ukn_hyper_drive_3$"
+ tech_hyper_drive_3_desc:0 "$tech_ukn_hyper_drive_3_desc$"
+ 
+
+# JUMP DRIVES #-----------------
+ tech_jump_drive_1:0 "$tech_ukn_hyper_drive_4$"
+ tech_jump_drive_1_desc:0 "$tech_ukn_hyper_drive_4_desc$"
+ 
+
+# PSI-JUMP DRIVES #-----------------
+ tech_psi_jump_drive_1:0 "$tech_ukn_jump_drive_psi_1$"
+ tech_psi_jump_drive_1_desc:0 "$tech_ukn_jump_drive_psi_1_desc$"
+ 
+
+
+###############
+# PSI SHIELDS #
+###############
+
+# PSI SHIELDS #-----------------
+ tech_psionic_shield:0 "$tech_ukn_shields_psi_1$"
+ tech_psionic_shield_desc:0 "$tech_ukn_shields_psi_1_desc$"
+
+
+          ######################
+#---------## [WEAPON] PHYSICS ##---------#
+          ######################
+
+##############################
+# [NORMAL] BYPASSING WEAPONS #
+##############################
+
+# MACRO-DISRUPTORS #-----------------
+ tech_space_cloud_weapon_1:0 "$tech_ukn_macro_disruptor_0$"
+ tech_space_cloud_weapon_1_desc:0 "$tech_ukn_macro_disruptor_0_desc$"
+
+
+
+##########################
+# [XL] BYPASSING WEAPONS #
+##########################
+
+# ARCED SUPRA-DISRUPTORS #-----------------
+ tech_arc_emitter_1:0 "$tech_ukn_arc_emitter_1$"
+ tech_arc_emitter_1_desc:0 "$tech_ukn_arc_emitter_1_desc$"
+ 
+ tech_arc_emitter_2:0 "$tech_ukn_arc_emitter_2$"
+ tech_arc_emitter_2_desc:0 "$tech_ukn_arc_emitter_2_desc$"
+ 
+
+
+###########################
+# [NORMAL] ENERGY WEAPONS #
+###########################
+
+# LASERS #-----------------
+ tech_lasers_1:0 "$tech_ukn_laser_1$"
+ tech_lasers_1_desc:0 "$tech_ukn_laser_1_desc$"
+ 
+ tech_lasers_2:0 "$tech_ukn_laser_2$"
+ tech_lasers_2_desc:0 "$tech_ukn_laser_2_desc$"
+ 
+ tech_lasers_3:0 "$tech_ukn_laser_3$"
+ tech_lasers_3_desc:0 "$tech_ukn_laser_3_desc$"
+ 
+ tech_lasers_4:0 "$tech_ukn_laser_4$"
+ tech_lasers_4_desc:0 "$tech_ukn_laser_4_desc$"
+ 
+ tech_lasers_5:0 "$tech_ukn_laser_5$"
+ tech_lasers_5_desc:0 "$tech_ukn_laser_5_desc$"
+ 
+
+# ENERGY LAUNCHERS #-----------------
+ tech_energy_torpedoes_1:0 "$tech_ukn_energy_torpedo_1$"
+ tech_energy_torpedoes_1_desc:0 "$tech_ukn_energy_torpedo_1_desc$"
+ 
+ tech_energy_torpedoes_2:0 "$tech_ukn_energy_torpedo_2$"
+ tech_energy_torpedoes_2_desc:0 "$tech_ukn_energy_torpedo_2_desc$"
+ 
+
+# PLASMA ACCELERATORS #-----------------
+ tech_plasma_1:0 "$tech_ukn_plasma_1$"
+ tech_plasma_1_desc:0 "$tech_ukn_plasma_1_desc$"
+ 
+ tech_plasma_2:0 "$tech_ukn_plasma_2$"
+ tech_plasma_2_desc:0 "$tech_ukn_plasma_2_desc$"
+ 
+ tech_plasma_3:0 "$tech_ukn_plasma_3$"
+ tech_plasma_3_desc:0 "$tech_ukn_plasma_3_desc$"
+ 
+
+# PLASMA CANDLES #-----------------
+ tech_mining_drone_weapon_1:0 "$tech_ukn_plasma_candle_0$"
+ tech_mining_drone_weapon_1_desc:0 "$tech_ukn_plasma_candle_0_desc$"
+
+
+# POTENTIAL DISOLCATORS #-----------------
+ tech_disruptors_1:0 "$tech_ukn_potential_dislocator_1$"
+ tech_disruptors_1_desc:0 "$tech_ukn_potential_dislocator_1_desc$"
+ 
+ tech_disruptors_2:0 "$tech_ukn_potential_dislocator_2$"
+ tech_disruptors_2_desc:0 "$tech_ukn_potential_dislocator_2_desc$"
+ 
+ tech_disruptors_3:0 "$tech_ukn_potential_dislocator_3$"
+ tech_disruptors_3_desc:0 "$tech_ukn_potential_dislocator_3_desc$"
+ 
+
+
+#######################
+# [XL] ENERGY WEAPONS #
+#######################
+
+# SUPERBEAM PROJECTORS #-----------------
+ tech_energy_lance_1:0 "$tech_ukn_energy_lance_1$"
+ tech_energy_lance_1_desc:0 "$tech_ukn_energy_lance_1_desc$"
+ 
+ tech_energy_lance_2:0 "$tech_ukn_energy_lance_2$"
+ tech_energy_lance_2_desc:0 "$tech_ukn_energy_lance_2_desc$"
+ 
+
+
+#######################
+# [PD] ENERGY WEAPONS #
+#######################
+
+# LASER PD #-----------------
+ tech_pd_tracking_1:0 "$tech_ukn_laser_pd_1$"
+ tech_pd_tracking_1_desc:0 "$tech_ukn_laser_pd_1_desc$"
+ 
+ tech_pd_tracking_2:0 "$tech_ukn_laser_pd_2$"
+ tech_pd_tracking_2_desc:0 "$tech_ukn_laser_pd_2_desc$"
+ 
+ tech_pd_tracking_3:0 "$tech_ukn_laser_pd_3$"
+ tech_pd_tracking_3_desc:0 "$tech_ukn_laser_pd_3_desc$"
+ 
+
+
+
+####################################
+####### SOCIETY TECHNOLOGIES #######
+####################################
+
+          ########################
+#---------## [INDUSTRY] SOCIETY ##---------#
+          ########################
+
+################################
+# SOCIETY OUTPUT / PROBABILITY #
+################################
+
+# SOCIETY OUTPUT / PROBABILITY / RESEARCHER OUTPUT TECHS #-----------------
+ tech_society_1:0 "$tech_ukn_society_output_1$"
+ tech_society_1_desc:0 "$tech_ukn_society_output_1_desc$"
+ 
+ tech_society_2:0 "$tech_ukn_society_output_2$"
+ tech_society_2_desc:0 "$tech_ukn_society_output_2_desc$"
+ 
+ tech_society_3:0 "$tech_ukn_society_output_3$"
+ tech_society_3_desc:0 "$tech_ukn_society_output_3_desc$"
+
+
+
+##################
+# FARMING OUTPUT #
+##################
+
+# FARMING OUTPUT TECHS #-----------------
+ tech_hydroponics:0 "Hydroponics Farming"
+ tech_hydroponics_desc:0 "$UKN_TECH_ERA_0$Hydroponics Farming in a controlled environment allows for crops to be grown in climates where farming would normally be impossible."
+ 
+ tech_industrial_farming:0 "Industrial Agriculture"
+ tech_industrial_farming_desc:0 "$UKN_TECH_ERA_0$Large-scale industrial farms growing nutrient-rich produce allows a civilization to grow its population manifold."
+ 
+ tech_eco_simulation:1 "Eco Simulation"
+ tech_eco_simulation_desc:2 "$UKN_TECH_ERA_1$Farming techniques can be further refined through sophisticated computer simulations of different environments and weather patterns. This allows for more predictable crop yields."
+ 
+ tech_gene_crops:0 "Gene Crops"
+ tech_gene_crops_desc:1 "$UKN_TECH_ERA_1$Sophisticated genetic engineering of crops helps increase yield and further improves both taste and nutrient levels."
+ 
+ tech_nano_vitality_crops:0 "Nano-Vitality Crops"
+ tech_nano_vitality_crops_desc:1 "$UKN_TECH_ERA_2$Infusing crop strands with small amounts of nano-machines help create a type of produce that is ultra resilient, and the chemical composition of which can be tailored and altered during its entire lifetime."
+ 
+ tech_nutrient_replication:0 "Nutrient Replication"
+ tech_nutrient_replication_desc:1 "$UKN_TECH_ERA_3$The process of synthetically replicating crops requires a lot of collected waste to create a small amount of produce, but nevertheless provides a significant boost to agricultural output."
+
+
+
+############
+# GENETICS #
+############
+
+# MAINLINE GENETICS TECHS #-----------------
+ #E1
+ tech_genome_mapping:0 "$tech_ukn_genetics_1$"
+ tech_genome_mapping_desc:1 "$tech_ukn_genetics_1_desc$"
+ 
+ #E1+
+ tech_gene_tailoring:0 "$tech_ukn_genetics_2$"
+ tech_gene_tailoring_desc:1 "$tech_ukn_genetics_2_desc$"
+ tech_gene_tailoring_modifier_desc:0 "$species_trait_points_add$: $POINTS|0=+$"
+ 
+ #E2
+ tech_glandular_acclimation:0 "Glandular Acclimation"
+ tech_glandular_acclimation_desc:0 "$UKN_TECH_ERA_2$Through glandular biological tailoring we can change the environmental tolerance of a species to suit our needs."
+ tech_glandular_acclimation_modifier_desc:0 "$species_trait_points_add$: $POINTS|0=+$"
+ 
+ tech_gene_expressions:0 "$tech_ukn_genetics_3$"
+ tech_gene_expressions_desc:1 "$tech_ukn_genetics_3_desc$"
+ tech_gene_expressions_modifier_desc:0 "$mod_country_food_produces_mult$: §G+10%§!\n$species_trait_points_add$: $POINTS|0=+$"
+ 
+ #E3
+ tech_genetic_resequencing:0 "$tech_ukn_genetics_4$"
+ tech_genetic_resequencing_desc:0 "$tech_ukn_genetics_4_desc$"
+
+
+# SPECIALIZED GENETICS TECHS #-----------------
+ #E1
+ tech_vitality_boosters:0 "Vitality Boosters"
+ tech_vitality_boosters_desc:1 "$UKN_TECH_ERA_1$Where the body fails, science intervenes."
+
+ #E1+
+ tech_cloning:0 "Cloning"
+ tech_cloning_desc:1 "$UKN_TECH_ERA_1$Breakthroughs in enucleation and artificial womb technology allows for the mass-production of individuals based on a common genetic template."
+ 
+ #E2
+ tech_epigenetic_triggers:0 "Neural-Genetic Logistics"
+ tech_epigenetic_triggers_desc:1 "$UKN_TECH_ERA_2$Advanced DNA methylation techniques allow for functionally significant alterations to be made to arbitrary genomes."
+ 
+ tech_gene_banks:0 "Rest-Phase Alterations"
+ tech_gene_banks_desc:1 "$UKN_TECH_ERA_2$Gene Banks filter and curate available genomes for deployment in clones."
+ 
+ tech_gene_seed_purification:0 "Neural Restructuring"
+ tech_gene_seed_purification_desc:1 "$UKN_TECH_ERA_2$Nucleotide purification techniques allow for the isolation and refinement of particularly desirable genetic traits."
+ 
+ tech_morphogenetic_field_mastery:0 "Mutalistic Warping"
+ tech_morphogenetic_field_mastery_desc:1 "$UKN_TECH_ERA_2$From its cradle as a purely pharmaceutical venture, advancements in our understanding of the morphogenetic field allow for direct, subconscious interfaces with organic units."
+
+
+# MISCELLNEOUS GENETICS TECHS #-----------------
+ tech_selected_lineages:0 "Selected Lineages"
+ tech_selected_lineages_desc:1 "Careful reproductive planning should be incentivized, lest we waste valuable genetic legacies."
+ 
+ tech_capacity_boosters:0 "Capacity Boosters"
+ tech_capacity_boosters_desc:1 "We leave nothing to chance, no matter the cost. Through exacting curation of DNA banks do we build the leaders of tomorrow."
+ 
+ tech_regenerative_hull_tissue:0 "Regenerative Hull Tissue"
+ tech_regenerative_hull_tissue_desc:0 "A genetically altered version of silicon-based bacteria could potentially be manipulated to regenerate non-organic materials."
+ 
+
+
+##############
+# STATECRAFT #
+##############
+
+# MAINLINE STATECRAFT TECHS #-----------------
+ #E1
+ tech_genome_mapping:0 "$tech_ukn_genetics_1$"
+ tech_genome_mapping_desc:1 "$tech_ukn_genetics_1_desc$"
+ 
+ #E1+
+ tech_gene_tailoring:0 "$tech_ukn_genetics_2$"
+ tech_gene_tailoring_desc:1 "$tech_ukn_genetics_2_desc$"
+ tech_gene_tailoring_modifier_desc:0 "$species_trait_points_add$: $POINTS|0=+$"
+ 
+ #E2
+ tech_glandular_acclimation:0 "Glandular Acclimation"
+ tech_glandular_acclimation_desc:0 "$UKN_TECH_ERA_2$Through glandular biological tailoring we can change the environmental tolerance of a species to suit our needs."
+ tech_glandular_acclimation_modifier_desc:0 "$species_trait_points_add$: $POINTS|0=+$"
+ 
+ tech_gene_expressions:0 "$tech_ukn_genetics_3$"
+ tech_gene_expressions_desc:1 "$tech_ukn_genetics_3_desc$"
+ tech_gene_expressions_modifier_desc:0 "$mod_country_food_produces_mult$: §G+10%§!\n$species_trait_points_add$: $POINTS|0=+$"
+ 
+ #E3
+ tech_genetic_resequencing:0 "$tech_ukn_genetics_4$"
+ tech_genetic_resequencing_desc:0 "$tech_ukn_genetics_4_desc$"
+
+
+
+##########################################
+# AUTOMATION / RESOURCE PRODUCTION BUFFS #
+##########################################
+
+# AMENITIES (BUILDING+EDICT) #-----------------
+ tech_holo_entertainment:0 "Holo-Entertainment"
+ tech_holo_entertainment_desc:0 "$UKN_TECH_ERA_0$Pioneering use of holographic technology allows for the creation of artificial environments that seem as authentic as the real world. It is the next step of immersive entertainment."
+ 
+ tech_hyper_entertainment_forum:0 "Hyper-Entertainment Forum"
+ tech_hyper_entertainment_forum_desc:1 "$UKN_TECH_ERA_1$$building_hyper_entertainment_forum_desc$"
+ 
+ tech_paradise_dome:1 "Idyllic Architecture"
+ tech_paradise_dome_desc:1 "$UKN_TECH_ERA_2$With the latest advances in architecture, landscaping and holographic technology, we shall build the homes of the future."
+
+
+# TRADE (BUILDING+EDICT) #-----------------
+ tech_interplanetary_commerce:0 "Interplanetary Commerce"
+ tech_interplanetary_commerce_desc:0 "$UKN_TECH_ERA_0$With new planetary markets comes new opportunities for commerce. Business will be booming."
+ 
+ tech_space_trading:1 "Offworld Trade Companies"
+ tech_space_trading_desc:1 "$UKN_TECH_ERA_1$Trade across interstellar distances presents a new set of challenges to overcome. It is critical to achieve the transfer of goods from one system to another in a timely and above all cost efficient manner."
+
+ tech_interstellar_economics:0 "Interstellar Economics"
+ tech_interstellar_economics_desc:0 "$UKN_TECH_ERA_1$As we journeyed into the cosmos and ventured beyond our home system, we also entered a new era of economics. New markets are appearing a startling rate, and economic theorists are struggling to keep up."
+ 
+ tech_galactic_markets:0 "Galactic Markets"
+ tech_galactic_markets_desc:1 "$UKN_TECH_ERA_2$$building_galactic_stock_exchange_desc$"
+ 
+ tech_prescient_data_modeling:1 "Numistic Data Modeling"
+ tech_prescient_data_modeling_desc:1 "Are the precognitive powers of Numa at work or is it a matter of skilled craftsmanship? Either way this galactic stock market prediction model will forecast fluctuations in the economy with divine accuracy."
+ 
+
+# UNITY (BUILDING+EDICT) #-----------------
+ tech_planetary_infrastructure_1:0 "$tech_ukn_default_unity_output_1$"
+ tech_planetary_infrastructure_1_desc:1 "$tech_ukn_default_unity_output_1_desc$"
+ 
+ tech_holographic_rituals:0 "$tech_ukn_spiritualist_unity_output_1$"
+ tech_holographic_rituals_desc:0 "$tech_ukn_spiritualist_unity_output_1_desc$"
+ 
+ tech_consecration_fields:0 "$tech_ukn_spiritualist_unity_output_2$"
+ tech_consecration_fields_desc:0 "$tech_ukn_spiritualist_unity_output_2_desc$"
+ 
+ tech_transcendent_faith:0 "$tech_ukn_spiritualist_unity_output_3$"
+ tech_transcendent_faith_desc:0 "$tech_ukn_spiritualist_unity_output_3_desc$"
+ 
+ tech_hive_cluster:0 "$tech_ukn_hive_unity_output_1$"
+ tech_hive_cluster_desc:1 "$tech_ukn_hive_unity_output_1_desc$"
+ 
+ tech_hive_confluence:0 "$tech_ukn_hive_unity_output_2$"
+ tech_hive_confluence_desc:1 "$tech_ukn_hive_unity_output_2_desc$"
+ 
+
+# FOOD (BUILDING+EDICT) #-----------------
+ tech_food_processing_1:0 "Food Processing"
+ tech_food_processing_1_desc:1 "$UKN_TECH_ERA_1$Improved food processing techniques will lead to better preservation methods and less spoilage."
+ 
+ tech_food_processing_2:0 "Advanced Food Processing"
+ tech_food_processing_2_desc:1 "$UKN_TECH_ERA_2$New cryopreservation and protein resequencing methods will make food processing much more efficient."
+
+
+
+###########################################
+# SPACE RESEARCH / ANOMOLY RESEARCH SPEED #
+###########################################
+
+# SPACE RESEARCH (RESEARCH STATIONS) / ANOMOLY RESEARCH SPEED TECHS #-----------------
+ tech_space_science_1:0 "Zero-G Laboratories"
+ tech_space_science_1_desc:0 "$UKN_TECH_ERA_1$A lot of critical research can only be done in a zero gravity environment, which these specialized laboratories are eminently designed for."
+ 
+ tech_space_science_2:0 "Miniature Containment Fields"
+ tech_space_science_2_desc:0 "$UKN_TECH_ERA_1$Containment force fields are excellent for isolating and holding various substances or specimens so they can be analyzed in detail."
+ 
+ tech_space_science_3:0 "Quantum Probes"
+ tech_space_science_3_desc:0 "$UKN_TECH_ERA_2$Advanced probes that can thoroughly analyze subjects on a sub-atomic level, generating a wealth of valuable research data."
+ 
+ tech_space_science_4:0 "Autonomous Station Protocols"
+ tech_space_science_4_desc:0 "$UKN_TECH_ERA_3$Increased automation of station functions will free up more staff for research duties."
+ 
+ tech_space_science_5:0 "Multi-Dimensional Analysis"
+ tech_space_science_5_desc:0 "$UKN_TECH_ERA_4$Studying something from the limited perspective of a single dimensional reality does not paint the whole picture. Every angle must be considered."
+
+
+###################
+# MARKET ANALYSIS #
+###################
+
+# MARKET ANALYSIS / POP CONSUMER GOODS UPKEEP #-----------------
+ tech_consumer_good_refinement_1:0 "Market Analysis Algorithms"
+ tech_consumer_good_refinement_1_desc:0 "$UKN_TECH_ERA_1$Basic administrative AIs can be used to streamline supply and demand lines, reducing waste."
+ 
+ tech_consumer_good_refinement_2:0 "Predictive Consumerism"
+ tech_consumer_good_refinement_2_desc:0 "$UKN_TECH_ERA_2$Using advanced AIs, we can reliably predict consumer demand before it exists."
+ 
+
+
+########################################
+####### ENGINEERING TECHNOLOGIES #######
+########################################
+
+          ############################
+#---------## [INDUSTRY] ENGINEERING ##---------#
+          ############################
+
+####################
+# SPACE STRUCTURES #
+####################
+
+# HABITATS / SUB-KILOSTRUCTURES #-----------------
+ tech_habitat_1:0 "Superscale Orbital Habitation"
+ tech_habitat_1_desc:0 "$UKN_TECH_ERA_2$Allows the construction of largely self-sustaining §YOrbital Habitats§!"
+ 
+ tech_habitat_2:1 "Habitat Expansion"
+ tech_habitat_2_desc:0 "Our early habitats were primitive things compared to the efficient designs we can now develop."
+ tech_habitat_2_effect:1 "$UKN_TECH_ERA_2$Our §YOrbital Habitats§! can be upgraded into §YAdvanced Habitats§! using a planetary decision."
+ 
+ tech_habitat_3:0 "Advanced Space Habitation"
+ tech_habitat_3_desc:0 "Years of improvements to our §YOrbital Habitats§! have led us to create newer more effective designs."
+ tech_habitat_3_effect:0 "$UKN_TECH_ERA_3$Our §YAdvanced Habitats§! can be further upgraded using a planetary decision."
+ 
+ 
+# STARBASES / KILOENGINEERING / KILOSTRUCTURES #-----------------
+ tech_starbase_1:0 "Starbase Construction"
+ tech_starbase_1_desc:0 "$UKN_TECH_ERA_0$A centralized space installation built in close orbit around the system primary is necessary to make full use of the resources in a star system."
+ 
+ tech_starbase_2:0 "Starport"
+ tech_starbase_2_desc:0 "$UKN_TECH_ERA_0$The earliest starbases were little more than makeshift outposts. Permanent starports will enable us to maintain a firmer grip on star systems."
+ 
+ tech_starbase_3:0 "Starhold"
+ tech_starbase_3_desc:0 "$UKN_TECH_ERA_1$As space traffic increases, larger and more defensible starbases are needed to maintain control over system spacelanes."
+ 
+ tech_starbase_4:0 "Star Fortress"
+ tech_starbase_4_desc:0 "$UKN_TECH_ERA_1$These mighty space forts will provide a focal point for all military activity in a star system, and their presence is sure to deter all but the most stubborn attackers."
+ 
+ tech_starbase_5:0 "$tech_ukn_kilostructural_engineering$"
+ tech_starbase_5_desc:0 "$tech_ukn_kilostructural_engineering_desc$\n\nAdditionally, plans for an immense battlestation capable of holding its own against several strike fleets are now being drawn up. If realized, these citadels will become monuments to greatness as much as system hubs."
+ 
+ 
+# MEGAENGINEERING / MEGASTRUCTURES #-----------------
+ tech_ring_world:0 "Ringworld"
+ tech_ring_world_desc:0 "$ring_world_1_MEGASTRUCTURE_DETAILS$"
+ RING_WORLD_SHOW_NAME:0 "$pc_ringworld_habitable$"
+
+
+
+###################################################
+# AUTOMATION / ROBOTS / RESOURCE PRODUCTION BUFFS #
+###################################################
+
+# AUTOMATION #-----------------
+ tech_capital_productivity_1:0 "$tech_ukn_automation_1$"
+ tech_capital_productivity_1_desc:0 "$tech_ukn_automation_1_desc$"
+
+ tech_capital_productivity_2:0 "$tech_ukn_automation_2$"
+ tech_capital_productivity_2_desc:0 "$tech_ukn_automation_2_desc$"
+
+ tech_capital_productivity_3:0 "$tech_ukn_automation_3$"
+ tech_capital_productivity_3_desc:0 "$tech_ukn_automation_3_desc$"
+
+
+# POLYMERICS (BUILDING+EDICT) #-----------------
+ tech_alloys_1:0 "Holographic Casts"
+ tech_alloys_1_desc:0 "$UKN_TECH_ERA_1$Solid holographic casts can alter their shapes at a moment's notice, speeding up alloy production."
+ 
+ tech_alloys_2:0 "Nano-Separators"
+ tech_alloys_2_desc:0 "$UKN_TECH_ERA_2$Nano-separators are a revolutionary new step in the creation of alloys, simplifying the casting process while improving overall production quality."
+
+# ARTICLES (BUILDING+EDICT) #-----------------
+ tech_luxuries_1:0 "Nano-Circuit Assembly"
+ tech_luxuries_1_desc:0 "$UKN_TECH_ERA_1$With pre-programmed nano-circuits, many consumer products can be rapidly assembled in fabricators."
+ 
+ tech_luxuries_2:0 "Replicator Kiosks"
+ tech_luxuries_2_desc:0 "$UKN_TECH_ERA_2$These kiosks can replicate any pre-approved object if its pattern has been stored within their memory banks."
+
+# MINERALS (BUILDING+EDICT) #-----------------
+ tech_mineral_purification_1:0 "Mineral Purification"
+ tech_mineral_purification_1_desc:0 "$UKN_TECH_ERA_2$Optimal processing of mined materials have allowed us to reach new levels of efficiency."
+ 
+ tech_mineral_purification_2:0 "Advanced Mineral Purification"
+ tech_mineral_purification_2_desc:0 "$UKN_TECH_ERA_2$Second-stage processing of pseudo-refined minerals allow for more efficient storage and transportation."
+
+# ROBOTS #-----------------
+ tech_powered_exoskeletons:0 "Powered Exoskeletons"
+ tech_powered_exoskeletons_desc:0 "$UKN_TECH_ERA_1$Wearing a powered exoskeleton suit augments the user's strength and speed. The military applications are obvious, but it will also increase labor efficiency."
+ 
+ tech_powered_exoskeletons_machine_intelligence:0 "Improved Servomotors"
+ tech_powered_exoskeletons_desc_machine_intelligence:0 "$UKN_TECH_ERA_1$More powerful servomotors will increase the weight our robotic units can carry. Mining units can haul more minerals off to be processed, and war machines can be fitted with heavier armaments."
+ 
+ tech_robotic_workers:0 "Robotic Workers"
+ tech_robotic_workers_desc:0 "$UKN_TECH_ERA_1$These robotic work units are perfect for menial labor tasks. They are hard-working and capable of following simple vocal instructions, but should not be expected to climb stairs."
+ 
+ tech_droid_workers:0 "Droids"
+ tech_droid_workers_desc:0 "$UKN_TECH_ERA_2$Upgraded robotic workers, these units have an expanded movement range equal to that of most organics. Their neural processors have also been greatly improved."
+ 
+ tech_synthetic_workers:0 "Synthetics"
+ tech_synthetic_workers_desc:0 "$UKN_TECH_ERA_3$Highly advanced robots that are stronger, faster and more durable than the vast majority of organics. With their upgraded neural processors they are fully capable of independent operations."
+ 
+ tech_synthetic_leaders:0 "Synthetic Personality Matrix"
+ tech_synthetic_leaders_desc:0 "$UKN_TECH_ERA_3$Equipped with a personality, synthetics will finally be able to interact socially on equal terms with the rest of our citizens. Some units may even assume leadership roles."
+ 
+
+# ROBO-MODDING #-----------------
+ tech_robomodding:0 "Machine Template System"
+ tech_robomodding_desc:0 "$UKN_TECH_ERA_1$Rewritable assembly templates allow for the creation of bespoke synthetic worker designs."
+ 
+ tech_robomodding_points_1:0 "Cross-Model Standardization"
+ tech_robomodding_points_1_desc:0 "$UKN_TECH_ERA_2$Improved production practices allow for greater alterations to synthetic workers without compromising core functionality."
+
+ tech_robomodding_points_2:0 "Fungible Circuitry"
+ tech_robomodding_points_2_desc:0 "$UKN_TECH_ERA_3$Improved production practices allow for fundamental changes to synthetic workers without compromising core functionality."
+ 
+ tech_robomodding_m:0 "Machine Template System"
+ tech_robomodding_m_desc:0 "$UKN_TECH_ERA_1$Standardization of assembly templates allow for improved specialization of the drone population."
+ 
+ tech_binary_motivators:0 "Binary Motivators"
+ tech_binary_motivators_desc:0 "$UKN_TECH_ERA_2$These advanced motivators are both smaller and lighter than previous versions, allowing robotic units to allocate additional space for subsystems."
+ 
+ tech_nanite_assemblers:0 "Nanite Assemblers"
+ tech_nanite_assemblers_desc:0 "$UKN_TECH_ERA_3$Using programmable nanites to assist in the construction of new robotic units will allow for more advanced models that are equipped with an even greater array of subsystems."
+ 
+
+# MACHINE ASSEMBLY #-----------------
+ tech_mega_assembly:0 "Mega-Assembly Systems"
+ tech_mega_assembly_desc:0 "$UKN_TECH_ERA_3$Advanced templates allow us to drastically increase the assembly of new units."
+
+
+
+###################
+# PLANET UPGRADES #
+###################
+
+# PLANET HOUSING TECHS #-----------------
+ tech_housing_1:1 "Active Support Systems"
+ tech_housing_1_desc:1 "$UKN_TECH_ERA_1$The ability to alter a planet's weather patterns to suppress destructive weather phenomena will make residential buildings easier to maintain and open up new areas for habitation."
+ 
+ tech_housing_2:1 "Electromagnetic Support Systems"
+ tech_housing_2_desc:1 "$UKN_TECH_ERA_2$With directional gravity technology, buildings on the surface of planets can reach higher than ever before without risking structural collapse. The sky is the limit!"
+ 
+ tech_housing_agrarian_idyll:0 "Electromagnetic Agrarian Utopias"
+ tech_housing_agrarian_idyll_desc:0 "$UKN_TECH_ERA_2$Through the establishment of weather-controlled rural communes, we can support a larger population without disrupting our agrarian way of life."
+ 
+
+# PLANET BUILD SPEED TECHS #-----------------
+ tech_assembly_pattern:0 "Assembly Patterns"
+ tech_assembly_pattern_desc:1 "$UKN_TECH_ERA_1$Rapid iteration in construction simulations determines the optimal component assembly patterns for each building project ahead of time."
+ 
+ tech_construction_templates:0 "Construction Templates"
+ tech_construction_templates_desc:1 "$UKN_TECH_ERA_2$Standardized pre-fab templates massively reduce on-site facility construction times."
+
+
+# PLANET BUILD COST TECHS #-----------------
+ tech_advanced_metallurgy_1:0 "Ceramo-Metal Alloys"
+ tech_advanced_metallurgy_1_desc:0 "$UKN_TECH_ERA_3$The widespread use of advanced ceramics in industry can improve metallurgical yields."
+ 
+ tech_advanced_metallurgy_2:0 "Durasteel-Laced Alloys"
+ tech_advanced_metallurgy_2_desc:0 "$UKN_TECH_ERA_4$By replacing antiquated ceramo-metal equipment with cutting edge technology, we can run our forges hotter and longer, increasing production."
+
+
+
+####################
+# MATERIALS / HULL #
+####################
+
+# MATERIALS / HULL TECHS #-----------------
+ tech_ship_armor_1:0 "$tech_ukn_materials_1$"
+ tech_ship_armor_1_desc:0 "$tech_ukn_materials_1_desc$"
+ 
+ tech_ship_armor_2:0 "$tech_ukn_materials_2$"
+ tech_ship_armor_2_desc:0 "$tech_ukn_materials_2_desc$"
+ 
+ tech_ship_armor_3:0 "$tech_ukn_materials_3$"
+ tech_ship_armor_3_desc:0 "$tech_ukn_materials_3_desc$"
+ 
+ tech_ship_armor_4:0 "$tech_ukn_materials_4$"
+ tech_ship_armor_4_desc:0 "$tech_ukn_materials_4_desc$"
+ 
+ tech_ship_armor_5:0 "$tech_ukn_materials_5$"
+ tech_ship_armor_5_desc:0 "$tech_ukn_materials_5_desc$"
+ 
+
+
+#####################################
+# ENGINEERING OUTPUT / AUTOMACHINES #
+#####################################
+
+# ENGINEERING OUTPUT / AUTOMACHINES / ARMOR TECHS #-----------------
+ tech_engineering_1:0 "$tech_ukn_engineering_output_1$"
+ tech_engineering_1_desc:0 "$tech_ukn_engineering_output_1_desc$"
+ 
+ tech_engineering_2:0 "$tech_ukn_engineering_output_2$"
+ tech_engineering_2_desc:0 "$tech_ukn_engineering_output_2_desc$"
+ 
+ tech_engineering_3:0 "$tech_ukn_engineering_output_3$"
+ tech_engineering_3_desc:0 "$tech_ukn_engineering_output_3_desc$"
+ 
+
+
+#######################################################
+# SUPERCONDUCTIVE CRYSTALS + EXOTIC FUILDS PRODUCTION #
+#######################################################
+
+# SUPERCONDUCTIVE CRYSTALS PRODUCTION / BUFFING TECHS #-----------------
+ tech_mine_rare_crystals:0 "Rare Crystal Mining"
+ tech_mine_rare_crystals_desc:1 "$UKN_TECH_ERA_1$Mining these crystals without damaging or even destroying them is an extremely delicate process. It requires advanced equipment capable of pinpoint precision."
+
+ tech_rare_crystals:0 "Rare Crystal Manufacturing"
+ tech_rare_crystals_desc:1 "$UKN_TECH_ERA_2$The crystallization process is complicated and difficult, but synthetic crystals can be manufactured by using specialized industrial plants."
+
+ 
+# EXOTIC FUILDS PRODUCTION / BUFFING TECHS #-----------------
+ tech_mine_exotic_gases:0 "Exotic Gas Extraction"
+ tech_mine_exotic_gases_desc:0 "$UKN_TECH_ERA_1$Pockets of Exotic Gas are rare and often inaccessible by conventional means. Such deposits can only be reached by using special extractor technology."
+ 
+ tech_exotic_gases:0 "Exotic Gas Refining"
+ tech_exotic_gases_desc:0 "$UKN_TECH_ERA_2$Exotic Gas can be produced artificially, but it is a difficult process that requires advanced refinery equipment."
+ 
+
+
+###############################################
+# MINERAL EXTRACTION / SPACE EXTRACTION TECHS #
+###############################################
+
+# PLANET MINING #-----------------
+ tech_mining_1:0 "$tech_ukn_mining_1$"
+ tech_mining_1_desc:0 "$tech_ukn_mining_1_desc$"
+ 
+ tech_mining_2:0 "$tech_ukn_mining_2$"
+ tech_mining_2_desc:0 "$tech_ukn_mining_2_desc$"
+ 
+ tech_mining_3:0 "$tech_ukn_mining_3$"
+ tech_mining_3_desc:0 "$tech_ukn_mining_3_desc$"
+ 
+
+# SPACE EXTRACTION (MINING STATIONS) #-----------------
+ tech_space_mining_1:0 "Zero-G Refineries"
+ tech_space_mining_1_desc:0 "$UKN_TECH_ERA_1$The addition of internal refineries on mining stations will substantially increase mineral production."
+ 
+ tech_space_mining_2:0 "Long-Range Mineral Scanners"
+ tech_space_mining_2_desc:0 "$UKN_TECH_ERA_1$Increased scanner range will allow us to more quickly identify mineral concentrations, and focus our mining efforts there."
+ 
+ tech_space_mining_3:0 "Mineral Cutting Beams"
+ tech_space_mining_3_desc:0 "$UKN_TECH_ERA_2$These powerful short-range lasers can easily slice through rock, making the extraction of minerals a more efficient affair."
+ 
+ tech_space_mining_4:0 "Autonomous Mining Drones"
+ tech_space_mining_4_desc:0 "$UKN_TECH_ERA_3$Fleets of autonomous drones equipped with mining beams are deployed to quickly and efficiently gather nearby minerals."
+ 
+ tech_space_mining_5:0 "Nanite Mineral Probes"
+ tech_space_mining_5_desc:0 "$UKN_TECH_ERA_4$These special probes are equipped with swarms of nanites that identify previously unknown mineral concentrations and mark them for later extraction."
+ 
+ 
+
+          #############################
+#---------## [AUXILIARY] ENGINEERING ##---------#
+          #############################
+
+##########################
+# PROPULSION OVERDRIVERS #
+##########################
+
+# PROPULSION OVERDRIVERS #-----------------
+ tech_afterburners_1:0 "$tech_ukn_propulsion_overdrivers_1$"
+ tech_afterburners_1_desc:0 "$tech_ukn_propulsion_overdrivers_1_desc$"
+ 
+ tech_afterburners_2:0 "$tech_ukn_propulsion_overdrivers_2$"
+ tech_afterburners_2_desc:0 "$tech_ukn_propulsion_overdrivers_2_desc$"
+ 
+
+
+##################
+# REPAIR SYSTEMS #
+##################
+
+# REPAIR SYSTEMS #-----------------
+ #@tech_ukn_repair_system_sentient_metal_7 = 5
+ #@tech_ukn_repair_system_sentient_metal_8 = 5
+ #@tech_ukn_repair_system_sentient_metal_p = 5
+
+ #@tech_ukn_repair_system_living_metal_9 = 5
+ #@tech_ukn_repair_system_living_metal_10 = 5
+
+
+
+##########################
+# CRYSTALLINE ENTITY AUX #
+##########################
+
+# CRYSTALLINE ENTITY AUX #-----------------
+ tech_crystal_armor_1:0 "Prototype Crystalline Hull Plating"
+ tech_crystal_armor_1_desc:0 "DESC"
+ 
+ tech_crystal_armor_2:0 "Statichronic Crystalline Hull Plating"
+ tech_crystal_armor_2_desc:0 "DESC"
+
+
+          ###########################
+#---------## [UTILITY] ENGINEERING ##---------#
+          ###########################
+
+#############
+# THRUSTERS #
+#############
+
+# THRUSTERS #-----------------
+ tech_thrusters_1:0 "$tech_ukn_thrusters_1$"
+ tech_thrusters_1_desc:0 "$tech_ukn_thrusters_1_desc$"
+ tech_thrusters_2:0 "$tech_ukn_thrusters_2$"
+ tech_thrusters_2_desc:0 "$tech_ukn_thrusters_2_desc$"
+ tech_thrusters_3:0 "$tech_ukn_thrusters_3$"
+ tech_thrusters_3_desc:0 "$tech_ukn_thrusters_3_desc$"
+ tech_thrusters_4:0 "$tech_ukn_thrusters_4$"
+ tech_thrusters_4_desc:0 "$tech_ukn_thrusters_4_desc$"
+ 
+ tech_dark_matter_propulsion:0 "$tech_ukn_thrusters_7$ (Fallen Empire)"
+ tech_dark_matter_propulsion_desc:0 "$tech_ukn_thrusters_7_desc$"
+ 
+
+
+###################
+# REGENNING ARMOR #
+###################
+
+# REGENNING ARMOR #-----------------
+ #@tech_ukn_armor_sentient_metal_7 = 5
+ #@tech_ukn_armor_sentient_metal_8 = 5
+ #@tech_ukn_armor_sentient_metal_p = 5
+
+ #@tech_ukn_armor_living_metal_9 = 5
+ #@tech_ukn_armor_living_metal_10 = 5
+
+
+
+###################
+# RESILIENT ARMOR #
+###################
+
+# RESILIENT ARMOR #-----------------
+ #@tech_ukn_armor_resilient_4 = 4
+ #@tech_ukn_armor_resilient_5 = 5
+ #@tech_ukn_armor_resilient_6 = 5
+ #@tech_ukn_armor_resilient_7 = 5
+ #@tech_ukn_armor_resilient_8 = 5
+ #@tech_ukn_armor_resilient_p = 5
+ #@tech_ukn_armor_resilient_9 = 5
+ #@tech_ukn_armor_resilient_10 = 5
+
+
+          ##########################
+#---------## [WEAPON] ENGINEERING ##---------#
+          ##########################
+
+##############################
+# [NORMAL] EXPLOSIVE WEAPONS #
+##############################
+
+# MISSILES #-----------------
+ tech_missiles_1:0 "$tech_ukn_missile_1$"
+ tech_missiles_1_desc:0 "$tech_ukn_missile_1_desc$"
+ 
+ tech_missiles_2:0 "$tech_ukn_missile_2$"
+ tech_missiles_2_desc:0 "$tech_ukn_missile_2_desc$"
+ 
+ tech_missiles_3:0 "$tech_ukn_missile_3$"
+ tech_missiles_3_desc:0 "$tech_ukn_missile_3_desc$"
+ 
+ tech_missiles_4:0 "$tech_ukn_missile_4$"
+ tech_missiles_4_desc:0 "$tech_ukn_missile_4_desc$"
+ 
+ tech_missiles_5:0 "$tech_ukn_missile_5$"
+ tech_missiles_5_desc:0 "$tech_ukn_missile_5_desc$"
+ 
+
+# SWARMER MISSILES #-----------------
+ tech_swarmer_missiles_1:0 "$tech_ukn_swarmer_missile_1$"
+ tech_swarmer_missiles_1_desc:0 "$tech_ukn_swarmer_missile_1_desc$"
+ 
+ tech_swarmer_missiles_2:0 "$tech_ukn_swarmer_missile_2$"
+ tech_swarmer_missiles_2_desc:0 "$tech_ukn_swarmer_missile_2_desc$"
+ 
+
+# TORPEDOES #-----------------
+ tech_torpedoes_1:0 "$tech_ukn_torpedo_1$"
+ tech_torpedoes_1_desc:0 "$tech_ukn_torpedo_1_desc$"
+ 
+ tech_torpedoes_2:0 "$tech_ukn_torpedo_2$"
+ tech_torpedoes_2_desc:0 "$tech_ukn_torpedo_2_desc$"
+ 
+ tech_torpedoes_3:0 "$tech_ukn_torpedo_3$"
+ tech_torpedoes_3_desc:0 "$tech_ukn_torpedo_3_desc$"
+ 
+
+
+############################
+# [NORMAL] KINETIC WEAPONS #
+############################
+
+# MASS DRIVERS #-----------------
+ tech_mass_drivers_1:0 "$tech_ukn_mass_driver_1$"
+ tech_mass_drivers_1_desc:0 "$tech_ukn_mass_driver_1_desc$"
+ 
+ tech_mass_drivers_2:0 "$tech_ukn_mass_driver_2$"
+ tech_mass_drivers_2_desc:0 "$tech_ukn_mass_driver_2_desc$"
+ 
+ tech_mass_drivers_3:0 "$tech_ukn_mass_driver_3$"
+ tech_mass_drivers_3_desc:0 "$tech_ukn_mass_driver_3_desc$"
+ 
+ tech_mass_drivers_4:0 "$tech_ukn_mass_driver_4$"
+ tech_mass_drivers_4_desc:0 "$tech_ukn_mass_driver_4_desc$"
+ 
+ tech_mass_drivers_5:0 "$tech_ukn_mass_driver_5$"
+ tech_mass_drivers_5_desc:0 "$tech_ukn_mass_driver_5_desc$"
+ 
+
+# AUTOCANNONS #-----------------
+ tech_autocannons_1:0 "$tech_ukn_autocannon_1$"
+ tech_autocannons_1_desc:0 "$tech_ukn_autocannon_1_desc$"
+ 
+ tech_autocannons_2:0 "$tech_ukn_autocannon_2$"
+ tech_autocannons_2_desc:0 "$tech_ukn_autocannon_2_desc$"
+ 
+ tech_autocannons_3:0 "$tech_ukn_autocannon_3$"
+ tech_autocannons_3_desc:0 "$tech_ukn_autocannon_3_desc$"
+ 
+
+# KINETIC ARTILLERY / KINETIC MISSILES #-----------------
+ tech_kinetic_artillery_1:0 "$tech_ukn_kinetic_artillery_1$"
+ tech_kinetic_artillery_1_desc:0 "$tech_ukn_kinetic_artillery_1_desc$"
+ 
+ tech_kinetic_artillery_2:0 "$tech_ukn_kinetic_artillery_2$"
+ tech_kinetic_artillery_2_desc:0 "$tech_ukn_kinetic_artillery_2_desc$"
+ 
+ 
+ 
+########################
+# [XL] KINETIC WEAPONS #
+########################
+
+# KINETIC SUPERARTILLERY / KINETIC SUPERMISSILES #-----------------
+ tech_mass_accelerator_1:0 "$tech_ukn_mass_accelerator_1$"
+ tech_mass_accelerator_1_desc:0 "$tech_ukn_mass_accelerator_1_desc$"
+ 
+ tech_mass_accelerator_2:0 "$tech_ukn_mass_accelerator_2$"
+ tech_mass_accelerator_2_desc:0 "$tech_ukn_mass_accelerator_2_desc$"
+ 
+
+
+########################
+# [PD] KINETIC WEAPONS #
+########################
+
+# FLAK PD #-----------------
+ tech_flak_batteries_1:0 "$tech_ukn_flak_pd_1$"
+ tech_flak_batteries_1_desc:0 "$tech_ukn_flak_pd_1_desc$"
+ 
+ tech_flak_batteries_2:0 "$tech_ukn_flak_pd_2$"
+ tech_flak_batteries_2_desc:0 "$tech_ukn_flak_pd_2_desc$"
+ 
+ tech_flak_batteries_3:0 "$tech_ukn_flak_pd_3$"
+ tech_flak_batteries_3_desc:0 "$tech_ukn_flak_pd_3_desc$"
+ 
+ 
+ 
+########################
+# [NORMAL] STRIKECRAFT #
+########################
+
+# STRIKECRAFT #-----------------
+ tech_strike_craft_1:0 "$tech_ukn_strike_craft_1$"
+ tech_strike_craft_1_desc:0 "$tech_ukn_strike_craft_1_desc$"
+ 
+ tech_strike_craft_2:0 "$tech_ukn_strike_craft_2$"
+ tech_strike_craft_2_desc:0 "$tech_ukn_strike_craft_2_desc$"
+ 
+ tech_strike_craft_3:0 "$tech_ukn_strike_craft_3$"
+ tech_strike_craft_3_desc:0 "$tech_ukn_strike_craft_3_desc$"

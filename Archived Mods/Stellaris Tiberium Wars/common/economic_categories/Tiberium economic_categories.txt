@@ -1,0 +1,170 @@
+planet_tiberium_harvesters = {
+	parent = planet_jobs
+
+	generate_mult_modifiers = {
+		produces
+		upkeep
+		
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_green_tiberium_harvesters = {
+	parent = planet_tiberium_harvesters
+
+	generate_mult_modifiers = {
+		produces
+		upkeep
+		
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+planet_blue_tiberium_harvesters = {
+	parent = planet_tiberium_harvesters
+
+	generate_mult_modifiers = {
+		produces
+		upkeep
+		
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+planet_tiberium_refiners = {
+	parent = planet_jobs
+	
+	generate_mult_modifiers = {
+		produces
+		upkeep
+		
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+planet_green_tiberium_refiners = {
+	parent = planet_tiberium_refiners
+	
+	generate_mult_modifiers = {
+		produces
+		upkeep
+		
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+planet_blue_tiberium_refiners = {
+	parent = planet_tiberium_refiners
+	
+	generate_mult_modifiers = {
+		produces
+		upkeep
+		
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_tiberium_mining_districts = {
+	parent = planet_districts
+	
+	generate_mult_modifiers = {
+		cost
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		cost
+		produces
+		upkeep
+	}
+}
+
+planet_tiberium_zones = {
+	parent = planet_districts
+	
+	generate_mult_modifiers = {
+		cost
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		cost
+		produces
+		upkeep
+	}
+}
+
+planet_tiberium_refining = {
+	parent = planet_districts
+	
+	generate_mult_modifiers = {
+		cost
+		produces
+		upkeep
+		
+	}
+	generate_add_modifiers = {
+		cost
+		produces
+		upkeep
+	}
+}
+planet_green_tiberium_refining = {
+	parent = planet_tiberium_refining
+	
+	generate_mult_modifiers = {
+		cost
+		produces
+		upkeep
+		
+	}
+	generate_add_modifiers = {
+		cost
+		produces
+		upkeep
+	}
+}
+planet_blue_tiberium_refining = {
+	parent = planet_tiberium_refining
+	
+	generate_mult_modifiers = {
+		cost
+		produces
+		upkeep
+		
+	}
+	generate_add_modifiers = {
+		cost
+		produces
+		upkeep
+	}
+}
+tiberium_reactors = {
+	parent = planet_buildings
+	
+	generate_mult_modifiers = {
+		cost
+		produces
+		upkeep
+		
+	}
+	generate_add_modifiers = {
+		cost
+		produces
+		upkeep
+	}
+}

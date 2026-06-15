@@ -1,0 +1,2253 @@
+district_hab_housing = {
+	base_buildtime = @district_ukn_hab_housing_2_build_time
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	show_on_uncolonized = {
+		UKN_USES_HABITAT_DISTRICTS = yes
+	}
+
+	potential = {
+		UKN_USES_HABITAT_DISTRICTS = yes
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = UKN_DISTRICT_AUTOMATION_DEFICIENCY
+	}
+
+	resources = {
+		category = planet_districts_hab_housing
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @district_ukn_hab_housing_2_cost_basic_consumer_goods
+		}
+#[ENTERTAINMENT-GRIDS] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+				OR = {
+					has_building = building_holo_theatres
+					has_building = building_hyper_entertainment_forum
+				}
+			}
+			consumer_goods = @district_ukn_hab_housing_2_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @district_ukn_hab_housing_2_cost_basic_minerals
+		}
+#[BASIC] POLYMERICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			alloys = @district_ukn_hab_housing_2_cost_basic_alloys
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @district_ukn_hab_housing_2_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @district_ukn_hab_housing_2_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @district_ukn_hab_housing_2_r_cost_basic_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @district_ukn_hab_housing_2_upkeep_energy
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_clerk_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_maintenance_drone_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_technology = tech_housing_2 
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_maintenance_drone_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				NOT = { has_valid_civic = civic_warrior_culture }
+			}
+			OR = {
+				has_building = building_holo_theatres
+				has_building = building_hyper_entertainment_forum
+			}
+		}
+		modifier = {
+			job_entertainer_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				has_valid_civic = civic_warrior_culture
+			}
+			OR = {
+				has_building = building_holo_theatres
+				has_building = building_hyper_entertainment_forum
+			}
+		}
+		modifier = {
+			job_duelist_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+			OR = {
+				has_building = building_precinct_house
+				has_building = building_hall_judgment
+			}
+		}
+		modifier = {
+			job_enforcer_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			has_building = building_sentinel_posts
+		}
+		modifier = {
+			job_patrol_drone_add = 1
+		}
+	}
+
+	#Bug Branch
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_bugged_rooftop_farmers }
+		}
+		modifier = {
+			job_farmer_add = 1
+		}
+	}
+	#Bug Branch
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_clerk_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_maintenance_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				NOT = { has_valid_civic = civic_warrior_culture }
+			}
+			OR = {
+				has_building = building_holo_theatres
+				has_building = building_hyper_entertainment_forum
+			}
+		}
+		text = job_entertainer_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				has_valid_civic = civic_warrior_culture
+			}
+			OR = {
+				has_building = building_holo_theatres
+				has_building = building_hyper_entertainment_forum
+			}
+		}
+		text = job_duelist_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+			OR = {
+				has_building = building_precinct_house
+				has_building = building_hall_judgment
+			}
+		}
+		text = job_enforcer_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			has_building = building_sentinel_posts
+		}
+		text = job_patrol_drone_desc
+	}
+
+	#Bug Branch
+	triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { has_valid_civic = civic_bugged_rooftop_farmers }
+	}
+	text = job_farmer_effect_desc
+	}
+	#Bug Branch
+}
+
+
+
+
+
+
+
+
+
+
+district_ukn_hab_automation = {
+	base_buildtime = @district_ukn_hab_automation_maintenance_2_build_time
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	abort_trigger = {
+		NOR = {
+			has_building = building_ukn_automation_grid_1
+			has_building = building_ukn_automation_grid_2
+		}
+	}
+
+	show_on_uncolonized = {
+		exists = from
+		UKN_USES_HABITAT_DISTRICTS = yes
+		OR = {
+			has_building = building_ukn_automation_grid_1
+			has_building = building_ukn_automation_grid_2
+			has_district = district_ukn_hab_automation
+		}
+	}
+
+	potential = {
+		exists = owner
+		UKN_USES_HABITAT_DISTRICTS = yes
+	}
+
+	allow = {
+		owner = { is_ai = no }
+		OR = {
+			has_building = building_ukn_automation_grid_1
+			has_building = building_ukn_automation_grid_2
+		}
+	}
+
+	conversion_ratio = 0.5
+	convert_to = {
+		district_ukn_arcology_automation
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = UKN_DISTRICT_AUTOMATION_DEFICIENCY
+	}
+
+	resources = {
+		category = planet_districts_ukn_hab_automation
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @district_ukn_hab_automation_maintenance_2_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @district_ukn_hab_automation_maintenance_2_cost_basic_minerals
+		}
+#[BASIC] POLYMERICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			alloys = @district_ukn_hab_automation_maintenance_2_cost_basic_alloys
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @district_ukn_hab_automation_maintenance_2_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @district_ukn_hab_automation_maintenance_2_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @district_ukn_hab_automation_maintenance_2_r_cost_basic_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @district_ukn_hab_automation_maintenance_2_upkeep_energy
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4
+	}
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			NOT = { has_building = building_ukn_automation_grid_2 }
+		}
+		modifier = {
+			planet_max_buildings_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			has_building = building_ukn_automation_grid_2
+		}
+		modifier = {
+			planet_max_buildings_add = 2
+		}
+	}
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+			NOT = { has_building = building_ukn_automation_grid_2 }
+		}
+		modifier = {
+			job_ukn_automation_technician_normal_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = yes
+			}
+			NOT = { has_building = building_ukn_automation_grid_2 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_normal_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+			NOT = { has_building = building_ukn_automation_grid_2 }
+			has_modifier = mod_ukn_automation_overdrive_normal_1
+		}
+		modifier = {
+			job_ukn_automation_technician_normal_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = yes
+			}
+			NOT = { has_building = building_ukn_automation_grid_2 }
+			has_modifier = mod_ukn_automation_overdrive_normal_1
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_normal_add = 1
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+			NOT = { has_building = building_ukn_automation_grid_2 }
+		}
+		text = job_ukn_automation_technician_normal_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			NOT = { has_building = building_ukn_automation_grid_2 }
+		}
+		text = job_ukn_automation_technician_drone_normal_effect_desc
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+#		ukn_icon_automation_integrity = 10000
+#		energy = 1000000
+#		minerals = 1000000
+#		food = 1000000
+#		alloys = 1000000
+#		physics_research = 1000000
+#		society_research = 1000000
+		engineering_research = 1000000
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+district_hab_industrial = {
+	base_buildtime = @district_ukn_hab_industrial_2_build_time
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	show_on_uncolonized = {
+		UKN_USES_HABITAT_DISTRICTS = yes
+	}
+
+	potential = {
+		UKN_USES_HABITAT_DISTRICTS = yes
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = UKN_DISTRICT_AUTOMATION_DEFICIENCY
+	}
+
+	resources = {
+		category = planet_districts_hab_industrial
+#########
+# COSTS #
+#########
+#[BASIC] AUTOMACHINES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			nanites = @district_ukn_hab_industrial_2_cost_basic_nanites
+		}
+		
+		
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @district_ukn_hab_industrial_2_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @district_ukn_hab_industrial_2_cost_basic_minerals
+		}
+#[BASIC] POLYMERICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			alloys = @district_ukn_hab_industrial_2_cost_basic_alloys
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @district_ukn_hab_industrial_2_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @district_ukn_hab_industrial_2_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @district_ukn_hab_industrial_2_r_cost_basic_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @district_ukn_hab_industrial_2_upkeep_energy
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_edict = industrial_maintenance
+				}
+			}
+			energy = @district_ukn_hab_industrial_2_upkeep_energy
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4
+	}
+#----------------------------------------------------
+
+
+#[BASIC] (All) Fabricators
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_catalytic_empire = no
+		}
+	}
+	modifier = {
+		job_foundry_add = 3
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			is_catalytic_empire = no
+		}
+	}
+	modifier = {
+		job_fabricator_add = 3
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+			is_catalytic_empire = no
+		}
+	}
+	modifier = {
+		job_alloy_drone_add = 3
+	}
+}
+
+#[CATALYTIC] (All) Fabricators
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_catalytic_empire = yes
+		}
+	}
+	modifier = {
+		job_catalytic_technician_add = 3
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+			is_catalytic_empire = yes
+		}
+	}
+	modifier = {
+		job_catalytic_drone_add = 3
+	}
+}
+#----------------------------------------------------
+
+#[BASIC-BASIC] (All) Artisans Replace
+triggered_planet_modifier = {
+	potential = {
+#			NOT = { has_designation = col_habitat_foundry }
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = no
+			is_crafter_empire = no
+		}
+	}
+	modifier = {
+		job_artisan_add = 1
+		job_foundry_add = -1
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+#			NOT = { has_designation = col_habitat_foundry }
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = no
+		}
+	}
+	modifier = {
+		job_artisan_drone_add = 1
+		job_fabricator_add = -1
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+#			NOT = { has_designation = col_habitat_foundry }
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = no
+		}
+	}
+	modifier = {
+		job_artisan_drone_add = 1
+		job_alloy_drone_add = -1
+	}
+}
+
+#[CATALYTIC-BASIC] (All) Artisans Replace
+triggered_planet_modifier = {
+	potential = {
+#			NOT = { has_designation = col_habitat_foundry }
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = yes
+			is_crafter_empire = no
+		}
+	}
+	modifier = {
+		job_artisan_add = 1
+		job_catalytic_technician_add = -1
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+#			NOT = { has_designation = col_habitat_foundry }
+		exists = owner
+		owner = {
+			is_gestalt = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = yes
+		}
+	}
+	modifier = {
+		job_artisan_drone_add = 1
+		job_catalytic_drone_add = -1
+	}
+}
+
+#[BASIC-ARTIFICER] (All) Artisans Replace
+triggered_planet_modifier = {
+	potential = {
+#			NOT = { has_designation = col_habitat_foundry }
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = no
+			is_crafter_empire = yes
+		}
+	}
+	modifier = {
+		job_artificer_add = 1
+		job_foundry_add = -1
+	}
+}
+
+#[CATALYTIC-ARTIFICER] (All) Artisans Replace
+triggered_planet_modifier = {
+	potential = {
+#			NOT = { has_designation = col_habitat_foundry }
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = yes
+			is_crafter_empire = yes
+		}
+	}
+	modifier = {
+		job_artificer_add = 1
+		job_catalytic_technician_add = -1
+	}
+}
+#----------------------------------------------------
+
+# Designation Job Changes
+#[BASIC-BASIC] (All) Switch To Fabricators
+triggered_planet_modifier = {
+	potential = {
+		has_designation = col_habitat_foundry
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = no
+			is_crafter_empire = no
+		}
+	}
+	modifier = {
+		job_artisan_add = -1
+		job_foundry_add = 1
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		has_designation = col_habitat_foundry
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = no
+		}
+	}
+	modifier = {
+		job_artisan_drone_add = -1
+		job_fabricator_add = 1
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		has_designation = col_habitat_foundry
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = no
+		}
+	}
+	modifier = {
+		job_artisan_drone_add = -1
+		job_alloy_drone_add = 1
+	}
+}
+
+# Designation Job Changes
+#[CATALYTIC-BASIC] (All) Switch To Fabricators
+triggered_planet_modifier = {
+	potential = {
+		has_designation = col_habitat_foundry
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = yes
+			is_crafter_empire = no
+		}
+	}
+	modifier = {
+		job_artisan_add = -1
+		job_catalytic_technician_add = 1
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		has_designation = col_habitat_foundry
+		exists = owner
+		owner = {
+			is_gestalt = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = yes
+		}
+	}
+	modifier = {
+		job_artisan_drone_add = -1
+		job_catalytic_drone_add = 1
+	}
+}
+
+# Designation Job Changes
+#[BASIC-ARTIFICER] (All) Switch To Fabricators
+triggered_planet_modifier = {
+	potential = {
+		has_designation = col_habitat_foundry
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = no
+			is_crafter_empire = yes
+		}
+	}
+	modifier = {
+		job_artificer_add = -1
+		job_foundry_add = 1
+	}
+}
+
+# Designation Job Changes
+#[CATALYTIC-ARTIFICER] (All) Switch To Fabricators
+triggered_planet_modifier = {
+	potential = {
+		has_designation = col_habitat_foundry
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = yes
+			is_crafter_empire = yes
+		}
+	}
+	modifier = {
+		job_artificer_add = -1
+		job_catalytic_technician_add = 1
+	}
+}
+#----------------------------------------------------
+
+# Designation Job Changes
+#[BASIC-BASIC] (All) Switch To Artisans
+triggered_planet_modifier = {
+	potential = {
+		has_designation = col_habitat_factory
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = no
+			is_crafter_empire = no
+		}
+	}
+	modifier = {
+		job_artisan_add = 2
+		job_foundry_add = -2
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		has_designation = col_habitat_factory
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = no
+		}
+	}
+	modifier = {
+		job_artisan_drone_add = 2
+		job_fabricator_add = -2
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		has_designation = col_habitat_factory
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = no
+		}
+	}
+	modifier = {
+		job_artisan_drone_add = 2
+		job_alloy_drone_add = -2
+	}
+}
+
+# Designation Job Changes
+#[CATALYTIC-BASIC] (All) Switch To Artisans
+triggered_planet_modifier = {
+	potential = {
+		has_designation = col_habitat_factory
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = yes
+			is_crafter_empire = no
+		}
+	}
+	modifier = {
+		job_artisan_add = 2
+		job_catalytic_technician_add = -2
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		has_designation = col_habitat_factory
+		exists = owner
+		owner = {
+			is_gestalt = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = yes
+		}
+	}
+	modifier = {
+		job_artisan_drone_add = 2
+		job_catalytic_drone_add = -2
+	}
+}
+
+# Designation Job Changes
+#[BASIC-ARTIFICER] (All) Switch To Artisans
+triggered_planet_modifier = {
+	potential = {
+		has_designation = col_habitat_factory
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = no
+			is_crafter_empire = yes
+		}
+	}
+	modifier = {
+		job_artificer_add = 2
+		job_foundry_add = -2
+	}
+}
+
+# Designation Job Changes
+#[CATALYTIC-ARTIFICER] (All) Switch To Artisans
+triggered_planet_modifier = {
+	potential = {
+		has_designation = col_habitat_factory
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			country_uses_consumer_goods = yes
+			is_catalytic_empire = yes
+			is_crafter_empire = yes
+		}
+	}
+	modifier = {
+		job_artificer_add = 2
+		job_catalytic_technician_add = -2
+	}
+}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				country_uses_consumer_goods = yes
+				is_crafter_empire = no
+			}
+			NOT = { has_designation = col_habitat_foundry }
+		}
+		text = job_artisan_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				country_uses_consumer_goods = yes
+			}
+			NOT = { has_designation = col_habitat_foundry }
+		}
+		text = job_artisan_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				country_uses_consumer_goods = yes
+				is_crafter_empire = yes
+			}
+			NOT = { has_designation = col_habitat_foundry }
+		}
+		text = job_artificer_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = no
+			}
+			NOT = { has_designation = col_habitat_factory }
+		}
+		text = job_foundry_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = no
+			}
+			has_designation = col_habitat_factory
+		}
+		text = job_fabricator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = no
+			}
+			NOT = { has_designation = col_habitat_factory }
+		}
+		text = job_alloy_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+			NOT = { has_designation = col_habitat_factory }
+		}
+		text = job_catalytic_technician_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_catalytic_empire = yes
+			}
+			NOT = { has_designation = col_habitat_factory }
+		}
+		text = job_catalytic_drone_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				has_edict = industrial_maintenance
+			}
+		}
+		modifier = {
+			job_maintenance_drone_add = 1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				has_edict = industrial_maintenance
+			}
+		}
+		text = job_maintenance_drone_effect_desc
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		alloys = 3
+		consumer_goods = 6
+		trigger = {
+			owner = {
+				country_uses_consumer_goods = yes
+			}
+			NOR = {
+				has_designation = col_foundry
+				has_designation = col_factory
+				has_designation = col_mac_factory
+			}
+		}
+	}
+	ai_resource_production = {
+		alloys = 6
+		trigger = {
+			owner = {
+				country_uses_consumer_goods = yes
+			}
+			has_designation = col_foundry
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 12
+		trigger = {
+			owner = {
+				country_uses_consumer_goods = yes
+			}
+			OR = {
+				has_designation = col_factory
+				has_designation = col_mac_factory
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+district_hab_science = {
+	base_buildtime = @district_ukn_hab_science_2_build_time
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	abort_trigger = {
+		NOR = { 
+			has_building = building_research_lab_1
+			has_building = building_research_lab_2
+			has_building = building_research_lab_3
+			has_building = building_ukn_research_lab_4
+			has_building = building_ukn_research_lab_5
+		}
+	}
+
+	show_on_uncolonized = {
+		exists = from
+		UKN_USES_HABITAT_DISTRICTS = yes
+		OR = {
+			has_building = building_research_lab_1
+			has_building = building_research_lab_2
+			has_building = building_research_lab_3
+			has_building = building_ukn_research_lab_4
+			has_building = building_ukn_research_lab_5
+			has_district = district_hab_science
+		}
+	}
+
+	potential = {
+		exists = owner
+		UKN_USES_HABITAT_DISTRICTS = yes
+		OR = {
+			has_building = building_research_lab_1
+			has_building = building_research_lab_2
+			has_building = building_research_lab_3
+			has_building = building_ukn_research_lab_4
+			has_building = building_ukn_research_lab_5
+			has_district = district_hab_science
+		}
+	}
+
+	allow = {
+		OR = {
+			has_building = building_research_lab_1
+			has_building = building_research_lab_2
+			has_building = building_research_lab_3
+			has_building = building_ukn_research_lab_4
+			has_building = building_ukn_research_lab_5
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = UKN_DISTRICT_AUTOMATION_DEFICIENCY
+	}
+
+	resources = {
+		category = planet_districts_hab_research
+#########
+# COSTS #
+#########
+#[BASIC] AUTOMACHINES
+		cost = {
+			nanites = @district_ukn_hab_science_2_cost_basic_nanites
+		}
+		
+		
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @district_ukn_hab_science_2_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @district_ukn_hab_science_2_cost_basic_minerals
+		}
+#[BASIC] POLYMERICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			alloys = @district_ukn_hab_science_2_cost_basic_alloys
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @district_ukn_hab_science_2_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @district_ukn_hab_science_2_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @district_ukn_hab_science_2_r_cost_basic_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @district_ukn_hab_science_2_upkeep_energy
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_researcher_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 3
+		}
+	}
+#----------------------------------------------------
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				UKN_USES_ORGANIC_PRODUCTION = no
+			}
+		}
+		text = job_researcher_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { 
+				is_machine_empire = yes
+				UKN_USES_ORGANIC_PRODUCTION = no
+			}
+		}
+		text = job_calculator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				UKN_USES_ORGANIC_PRODUCTION = no
+			}
+		}
+		text = job_brain_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				UKN_USES_ORGANIC_PRODUCTION = yes
+			}
+		}
+		text = job_ukn_researcher_organic_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				UKN_USES_ORGANIC_PRODUCTION = yes
+			}
+		}
+		text = job_ukn_calculator_organic_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				UKN_USES_ORGANIC_PRODUCTION = yes
+			}
+		}
+		text = job_ukn_brain_drone_organic_effect_desc
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		physics_research = 8
+		society_research = 8
+		engineering_research = 8
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+district_hab_energy = {
+	base_buildtime = @district_ukn_hab_energy_2_build_time
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	show_on_uncolonized = {
+		UKN_USES_HABITAT_DISTRICTS = yes
+#		OR = {
+#			has_planet_flag = energy_habitat
+#			AND = {
+#				exists = from
+#				from = { is_gestalt = yes }
+#			}
+#		}
+	}
+
+	potential = {
+		UKN_USES_HABITAT_DISTRICTS = yes
+#		OR = {
+#			has_planet_flag = energy_habitat
+#			AND = {
+#				exists = from
+#				from = { is_gestalt = yes }
+#			}
+#		}
+	}
+
+	conversion_ratio = 0.5
+	convert_to = {
+		district_hab_commercial
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = UKN_DISTRICT_AUTOMATION_DEFICIENCY
+	}
+
+	resources = {
+		category = planet_districts_hab_energy
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @district_ukn_hab_energy_2_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @district_ukn_hab_energy_2_cost_basic_minerals
+		}
+#[BASIC] POLYMERICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			alloys = @district_ukn_hab_energy_2_cost_basic_alloys
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @district_ukn_hab_energy_2_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @district_ukn_hab_energy_2_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @district_ukn_hab_energy_2_r_cost_basic_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @district_ukn_hab_energy_2_upkeep_energy
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		modifier = {
+			job_technician_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		modifier = {
+			job_fe_acolyte_generator_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		job_technician_drone_add = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		job_technician_drone_add = 3
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_technician_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		text = job_technician_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		text = job_fe_acolyte_generator_effect_desc
+	}
+
+	ai_resource_production = {
+		energy = 1
+		trigger = {
+			always = yes
+		}
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		energy = 12
+		trigger = {
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist =  no
+			}
+		}
+	}
+	ai_resource_production = {
+		energy = 16
+		trigger = {
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+	}
+	ai_resource_production = {
+		energy = 18
+		trigger = {
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+	}
+	
+	ai_resource_production = {
+		energy = 12
+		trigger = {
+			owner = {
+				is_fallen_empire_spiritualist = yes
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+district_hab_mining = {
+	base_buildtime = @district_ukn_hab_mining_2_build_time
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	show_on_uncolonized = {
+		UKN_USES_HABITAT_DISTRICTS = yes
+		has_planet_flag = mining_habitat
+	}
+
+	potential = {
+		UKN_USES_HABITAT_DISTRICTS = yes
+		has_planet_flag = mining_habitat
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = UKN_DISTRICT_AUTOMATION_DEFICIENCY
+	}
+
+	resources = {
+		category = planet_districts_hab_mining
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @district_ukn_hab_mining_2_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @district_ukn_hab_mining_2_cost_basic_minerals
+		}
+#[BASIC] POLYMERICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			alloys = @district_ukn_hab_mining_2_cost_basic_alloys
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @district_ukn_hab_mining_2_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @district_ukn_hab_mining_2_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @district_ukn_hab_mining_2_r_cost_basic_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @district_ukn_hab_mining_2_upkeep_energy
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_mining_drone_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_mining_drone_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		modifier = {
+			job_miner_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		modifier = {
+			job_fe_acolyte_mine_add = 3
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_mining_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		text = job_miner_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		text = job_fe_acolyte_mine_effect_desc
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		minerals = 8
+		trigger = {
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+	}
+	ai_resource_production = {
+		minerals = 8
+		trigger = {
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+	}
+	ai_resource_production = {
+		minerals = 8
+		trigger = {
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+	}
+	
+	ai_resource_production = {
+		minerals = 8
+		trigger = {
+			owner = {
+				is_fallen_empire_spiritualist = yes
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+district_ukn_hab_farming = {
+	base_buildtime = @district_ukn_hab_farming_2_build_time
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	show_on_uncolonized = {
+		UKN_USES_HABITAT_DISTRICTS = yes
+	}
+
+	potential = {
+		UKN_USES_HABITAT_DISTRICTS = yes
+	}
+
+	planet_modifier = {
+		planet_housing_add = 4
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = UKN_DISTRICT_AUTOMATION_DEFICIENCY
+	}
+
+	resources = {
+		category = planet_districts_ukn_hab_farming
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @district_ukn_hab_farming_2_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @district_ukn_hab_farming_2_cost_basic_minerals
+		}
+#[BASIC] POLYMERICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			alloys = @district_ukn_hab_farming_2_cost_basic_alloys
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @district_ukn_hab_farming_2_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @district_ukn_hab_farming_2_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @district_ukn_hab_farming_2_r_cost_basic_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @district_ukn_hab_farming_2_upkeep_energy
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_agri_drone_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_agri_drone_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		modifier = {
+			job_farmer_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		modifier = {
+			job_fe_acolyte_farm_add = 3
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_agri_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		text = job_farmer_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		text = job_fe_acolyte_farm_effect_desc
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		minerals = 8
+		trigger = {
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+	}
+	ai_resource_production = {
+		minerals = 8
+		trigger = {
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+	}
+	ai_resource_production = {
+		minerals = 8
+		trigger = {
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+	}
+	
+	ai_resource_production = {
+		minerals = 8
+		trigger = {
+			owner = {
+				is_fallen_empire_spiritualist = yes
+			}
+		}
+	}
+}

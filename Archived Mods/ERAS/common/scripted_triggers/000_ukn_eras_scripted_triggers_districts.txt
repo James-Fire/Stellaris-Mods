@@ -1,0 +1,256 @@
+UKN_USES_NORMAL_DISTRICTS = {
+	NOR = {
+# GAIA ARCOLOGIES
+		uses_district_set = ukn_city_world_gaia
+# EXTRACTION ARCOLOGIES
+		uses_district_set = ukn_city_world_extraction
+# PRODUCTION ARCOLOGIES
+		uses_district_set = city_world
+		uses_district_set = machine_world
+		uses_district_set = hive_world
+# HABITAT ARCOLOGIES
+		uses_district_set = ukn_city_world_habitat
+# SCIENCE ARCOLOGIES
+		uses_district_set = ukn_city_world_science
+# MILITARY ARCOLOGIES
+		uses_district_set = ukn_city_world_military
+# ADVANCED GAIA ARCOLOGIES
+		uses_district_set = ukn_ring_world_gaia
+# ADVANCED EXTRACTION ARCOLOGIES
+		uses_district_set = ukn_ring_world_extraction
+# ADVANCED PRODUCTION ARCOLOGIES
+		uses_district_set = ring_world
+# ADVANCED SCIENCE ARCOLOGIES
+		uses_district_set = ukn_ringworld_science
+# ADVANCED MILITARY ARCOLOGIES
+		uses_district_set = ukn_ringworld_military
+# ULTRA-ADVANCED GAIA ARCOLOGIES
+		uses_district_set = ukn_alderson_disk_gaia
+		uses_district_set = ukn_birch_world_gaia
+# ULTRA-ADVANCED PRODUCTION ARCOLOGIES
+		uses_district_set = alderson_disk
+		uses_district_set = birch_world
+# ULTRA-ADVANCED SCIENCE ARCOLOGIES
+		uses_district_set = ukn_alderson_disk_science
+# ULTRA-ADVANCED MILITARY ARCOLOGIES
+		uses_district_set = ukn_alderson_disk_military
+	}
+}
+
+UKN_USES_BASIC_DISTRICTS = {
+	NOR = {
+# HABITAT DISTRICTS
+		uses_district_set = habitat
+# GAIA ARCOLOGIES
+		uses_district_set = ukn_city_world_gaia
+# EXTRACTION ARCOLOGIES
+		uses_district_set = ukn_city_world_extraction
+# PRODUCTION ARCOLOGIES
+		uses_district_set = city_world
+		uses_district_set = machine_world
+		uses_district_set = hive_world
+# HABITAT ARCOLOGIES
+		uses_district_set = ukn_city_world_habitat
+# SCIENCE ARCOLOGIES
+		uses_district_set = ukn_city_world_science
+# MILITARY ARCOLOGIES
+		uses_district_set = ukn_city_world_military
+# ADVANCED GAIA ARCOLOGIES
+		uses_district_set = ukn_ring_world_gaia
+# ADVANCED EXTRACTION ARCOLOGIES
+		uses_district_set = ukn_ring_world_extraction
+# ADVANCED PRODUCTION ARCOLOGIES
+		uses_district_set = ring_world
+# ADVANCED SCIENCE ARCOLOGIES
+		uses_district_set = ukn_ringworld_science
+# ADVANCED MILITARY ARCOLOGIES
+		uses_district_set = ukn_ringworld_military
+# ULTRA-ADVANCED GAIA ARCOLOGIES
+		uses_district_set = ukn_alderson_disk_gaia
+		uses_district_set = ukn_birch_world_gaia
+# ULTRA-ADVANCED PRODUCTION ARCOLOGIES
+		uses_district_set = alderson_disk
+		uses_district_set = birch_world
+# ULTRA-ADVANCED SCIENCE ARCOLOGIES
+		uses_district_set = ukn_alderson_disk_science
+# ULTRA-ADVANCED MILITARY ARCOLOGIES
+		uses_district_set = ukn_alderson_disk_military
+	}
+}
+
+UKN_USES_HABITAT_DISTRICTS = {
+	OR = {
+# HABITAT DISTRICTS
+		uses_district_set = habitat
+	}
+}
+
+UKN_USES_STANDARD_DISTRICTS = {
+	OR = {
+# STANDARD DISTRICTS
+		uses_district_set = standard
+	}
+}
+#---
+
+UKN_USES_GAIA_ARCOLOGY_DISTRICTS = {
+	OR = {
+# GAIA ARCOLOGIES
+		uses_district_set = ukn_city_world_gaia
+	}
+}
+
+UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = {
+	OR = {
+# EXTRACTION ARCOLOGIES
+		uses_district_set = ukn_city_world_extraction
+	}
+}
+
+UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = {
+	OR = {
+# PRODUCTION ARCOLOGIES
+		uses_district_set = city_world
+		uses_district_set = machine_world
+		uses_district_set = hive_world
+	}
+}
+
+UKN_USES_HABITAT_ARCOLOGY_DISTRICTS = {
+	OR = {
+# HABITAT ARCOLOGIES
+		uses_district_set = ukn_city_world_habitat
+	}
+}
+
+UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = {
+	OR = {
+# SCIENCE ARCOLOGIES
+		uses_district_set = ukn_city_world_science
+	}
+}
+
+UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = {
+	OR = {
+# MILITARY ARCOLOGIES
+		uses_district_set = ukn_city_world_military
+	}
+}
+#---
+
+UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = {
+	OR = {
+# ADVANCED GAIA ARCOLOGIES
+		uses_district_set = ukn_ring_world_gaia
+	}
+}
+
+UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = {
+	OR = {
+# ADVANCED EXTRACTION ARCOLOGIES
+		uses_district_set = ukn_ring_world_extraction
+	}
+}
+
+UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = {
+	OR = {
+# ADVANCED PRODUCTION ARCOLOGIES
+		uses_district_set = ring_world
+	}
+}
+
+UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = {
+	OR = {
+# ADVANCED SCIENCE ARCOLOGIES
+		uses_district_set = ukn_ringworld_science
+	}
+}
+
+UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = {
+	OR = {
+# ADVANCED MILITARY ARCOLOGIES
+		uses_district_set = ukn_ringworld_military
+	}
+}
+#---
+
+UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = {
+	OR = {
+# ULTRA-ADVANCED GAIA ARCOLOGIES
+		uses_district_set = ukn_alderson_disk_gaia
+		uses_district_set = ukn_birch_world_gaia
+	}
+}
+
+UKN_USES_ALDERSON_EXTRACTION_ARCOLOGY_DISTRICTS = {
+	OR = {
+# ULTRA-ADVANCED GAIA ARCOLOGIES
+		uses_district_set = ukn_alderson_disk_extraction
+		uses_district_set = ukn_birch_world_extraction
+	}
+}
+
+UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = {
+	OR = {
+# ULTRA-ADVANCED PRODUCTION ARCOLOGIES
+		uses_district_set = alderson_disk
+		uses_district_set = birch_world
+	}
+}
+
+UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = {
+	OR = {
+# ULTRA-ADVANCED SCIENCE ARCOLOGIES
+		uses_district_set = ukn_alderson_disk_science
+	}
+}
+
+UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = {
+	OR = {
+# ULTRA-ADVANCED MILITARY ARCOLOGIES
+		uses_district_set = ukn_alderson_disk_military
+	}
+}
+#---
+
+UKN_USES_SUB_RW_ARCOLOGY_DISTRICTS = {
+	NOR = {
+# ADVANCED GAIA ARCOLOGIES
+		uses_district_set = ukn_ring_world_gaia
+# ADVANCED EXTRACTION ARCOLOGIES
+		uses_district_set = ukn_ring_world_extraction
+# ADVANCED PRODUCTION ARCOLOGIES
+		uses_district_set = ring_world
+# ADVANCED SCIENCE ARCOLOGIES
+		uses_district_set = ukn_ringworld_science
+# ADVANCED MILITARY ARCOLOGIES
+		uses_district_set = ukn_ringworld_military
+# ULTRA-ADVANCED GAIA ARCOLOGIES
+		uses_district_set = ukn_alderson_disk_gaia
+		uses_district_set = ukn_birch_world_gaia
+# ULTRA-ADVANCED PRODUCTION ARCOLOGIES
+		uses_district_set = alderson_disk
+		uses_district_set = birch_world
+# ULTRA-ADVANCED SCIENCE ARCOLOGIES
+		uses_district_set = ukn_alderson_disk_science
+# ULTRA-ADVANCED MILITARY ARCOLOGIES
+		uses_district_set = ukn_alderson_disk_military
+	}
+}
+#---
+
+UKN_USES_SUB_ALDERSON_ARCOLOGY_DISTRICTS = {
+	NOR = {
+# ULTRA-ADVANCED GAIA ARCOLOGIES
+		uses_district_set = ukn_alderson_disk_gaia
+		uses_district_set = ukn_birch_world_gaia
+# ULTRA-ADVANCED PRODUCTION ARCOLOGIES
+		uses_district_set = alderson_disk
+		uses_district_set = birch_world
+# ULTRA-ADVANCED SCIENCE ARCOLOGIES
+		uses_district_set = ukn_alderson_disk_science
+# ULTRA-ADVANCED MILITARY ARCOLOGIES
+		uses_district_set = ukn_alderson_disk_military
+	}
+}
+#---

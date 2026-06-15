@@ -1,0 +1,271 @@
+# Hornet
+ship_design = {
+	name = "NAME_Compound_Hornet"
+	ship_size = hornet
+	is_event_design = yes
+
+	section = {
+		template = "HORNET_COMPOUND_CORE_SECTION" 
+		slot = "mid"
+		component = { slot = "COMPOUND_SMALL_1"		template = "UKN_SMALL_POTENTIAL_DISLOCATOR_DARK_MATTER" }
+		component = { slot = "COMPOUND_SMALL_2" 	template = "UKN_SMALL_POTENTIAL_DISLOCATOR_DARK_MATTER" }
+		component = { slot = "COMPOUND_SMALL_3"		template = "UKN_SMALL_PLASMA_DARK_MATTER" }
+		component = { slot = "COMPOUND_MEDIUM_1"	template = "UKN_SMALL_PLASMA_DARK_MATTER" }
+
+		component = { slot = "SMALL_UTILITY_1"		template = "UKN_SMALL_ARMOR_DARK_MATTER" }
+		component = { slot = "SMALL_UTILITY_2"		template = "UKN_SMALL_ARMOR_DARK_MATTER" }
+		component = { slot = "SMALL_UTILITY_3"		template = "UKN_SMALL_SHIELD_DARK_MATTER" }
+		component = { slot = "SMALL_UTILITY_4"		template = "UKN_SMALL_SHIELD_DARK_MATTER" }
+	}
+	required_component = "UKN_JUMP_DRIVE_DARK_MATTER"
+	required_component = "UKN_SENSOR_DARK_MATTER"
+	required_component = "UKN_CORVETTE_REACTOR_DARK_MATTER"
+	required_component = "UKN_COMBAT_COMPUTER_SWARM_COMPOUND"
+	required_component = "UKN_CORVETTE_THRUSTER_DARK_MATTER"
+}
+
+# Stalker
+ship_design = {
+	name = "NAME_Compound_Stalker"
+	ship_size = stalker
+	is_event_design = yes
+
+	section = {
+		template = "STALKER_COMPOUND_BOW_SECTION" 
+		slot = "bow"
+		component = { slot = "COMPOUND_LARGE_1"		template = "UKN_DESTABILIZER_DARK_MATTER" }
+
+		component = { slot = "SMALL_UTILITY_1"		template = "UKN_SMALL_ARMOR_DARK_MATTER" }
+		component = { slot = "SMALL_UTILITY_2"		template = "UKN_SMALL_ARMOR_DARK_MATTER" }
+		component = { slot = "SMALL_UTILITY_3"		template = "UKN_SMALL_SHIELD_DARK_MATTER" }
+		component = { slot = "SMALL_UTILITY_4"		template = "UKN_SMALL_SHIELD_DARK_MATTER" }
+	}
+
+	section = {
+		template = "STALKER_COMPOUND_STERN_SECTION" 
+		slot = "stern"
+		component = { slot = "COMPOUND_SMALL_1"		template = "UKN_SMALL_MASS_DRIVER_DARK_MATTER" }
+		component = { slot = "COMPOUND_SMALL_2"		template = "UKN_SMALL_MASS_DRIVER_DARK_MATTER" }
+		component = { slot = "COMPOUND_SMALL_3"		template = "UKN_SMALL_MASS_DRIVER_DARK_MATTER" }
+
+		component = { slot = "SMALL_UTILITY_1"		template = "UKN_SMALL_ARMOR_DARK_MATTER" }
+		component = { slot = "SMALL_UTILITY_2"		template = "UKN_SMALL_ARMOR_DARK_MATTER" }
+		component = { slot = "SMALL_UTILITY_3"		template = "UKN_SMALL_SHIELD_DARK_MATTER" }
+	}
+
+	required_component = "UKN_JUMP_DRIVE_DARK_MATTER"
+	required_component = "UKN_SENSOR_DARK_MATTER"
+	required_component = "UKN_DESTROYER_REACTOR_DARK_MATTER"
+	required_component = "UKN_COMBAT_COMPUTER_PICKET_COMPOUND"
+	required_component = "UKN_DESTROYER_THRUSTER_DARK_MATTER"
+}
+
+# Humiliator
+ship_design = {
+	name = "NAME_Compound_Humiliator"
+	ship_size = humiliator
+	is_event_design = yes
+
+	section = {
+		template = "HUMILIATOR_COMPOUND_BOW_SECTION" 
+		slot = "bow"
+		component = { slot = "COMPOUND_LARGE_1"		template = "UKN_DESTABILIZER_DARK_MATTER" }
+
+		component = { slot = "MEDIUM_UTILITY_1"		template = "UKN_MEDIUM_ARMOR_DARK_MATTER" }
+		component = { slot = "MEDIUM_UTILITY_2"		template = "UKN_MEDIUM_ARMOR_DARK_MATTER" }
+		component = { slot = "MEDIUM_UTILITY_3"		template = "UKN_MEDIUM_SHIELD_DARK_MATTER" }
+		component = { slot = "MEDIUM_UTILITY_4"		template = "UKN_MEDIUM_SHIELD_DARK_MATTER" }
+	}
+
+	section = {
+		template = "HUMILIATOR_COMPOUND_MID_SECTION" 
+		slot = "mid"
+		component = { slot = "COMPOUND_MEDIUM_1"	template = "UKN_MEDIUM_MASS_DRIVER_DARK_MATTER" }
+		component = { slot = "COMPOUND_MEDIUM_2"	template = "UKN_MEDIUM_POTENTIAL_DISLOCATOR_DARK_MATTER" }
+		component = { slot = "COMPOUND_MEDIUM_3"	template = "UKN_MEDIUM_PLASMA_DARK_MATTER" }
+
+		component = { slot = "MEDIUM_UTILITY_1"		template = "UKN_MEDIUM_ARMOR_DARK_MATTER" }
+		component = { slot = "MEDIUM_UTILITY_2"		template = "UKN_MEDIUM_ARMOR_DARK_MATTER" }
+		component = { slot = "MEDIUM_UTILITY_3"		template = "UKN_MEDIUM_SHIELD_DARK_MATTER" }
+		component = { slot = "MEDIUM_UTILITY_4"		template = "UKN_MEDIUM_SHIELD_DARK_MATTER" }
+	}
+
+	section = {
+		template = "HUMILIATOR_COMPOUND_STERN_SECTION" 
+		slot = "stern"
+		component = { slot = "COMPOUND_SMALL_1"		template = "UKN_SMALL_MASS_DRIVER_DARK_MATTER" }
+		component = { slot = "COMPOUND_SMALL_2" 	template = "UKN_SMALL_POTENTIAL_DISLOCATOR_DARK_MATTER" }
+		component = { slot = "COMPOUND_SMALL_3"		template = "UKN_SMALL_PLASMA_DARK_MATTER" }
+
+		component = { slot = "MEDIUM_UTILITY_1"		template = "UKN_MEDIUM_ARMOR_DARK_MATTER" }
+		component = { slot = "MEDIUM_UTILITY_2"		template = "UKN_MEDIUM_SHIELD_DARK_MATTER" }
+	}
+
+	required_component = "UKN_JUMP_DRIVE_DARK_MATTER"
+	required_component = "UKN_SENSOR_DARK_MATTER"
+	required_component = "UKN_CRUISER_REACTOR_DARK_MATTER"
+	required_component = "UKN_COMBAT_COMPUTER_LINE_COMPOUND"
+	required_component = "UKN_CRUISER_THRUSTER_DARK_MATTER"
+}
+
+# Apex
+ship_design = {
+	name = "NAME_Compound_Apex"
+	ship_size = apex
+	is_event_design = yes
+
+	section = {
+		template = "APEX_COMPOUND_BOW_SECTION" 
+		slot = "bow"
+		component = { slot = "COMPOUND_XL_1"		template = "UKN_ARC_EMITTER_DARK_MATTER" }
+
+		component = { slot = "LARGE_UTILITY_1"		template = "UKN_LARGE_ARMOR_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_2"		template = "UKN_LARGE_SHIELD_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_3"		template = "UKN_LARGE_SHIELD_DARK_MATTER" }
+	}
+
+	section = {
+		template = "APEX_COMPOUND_MID_SECTION" 
+		slot = "mid"
+		component = { slot = "COMPOUND_LARGE_1"		template = "UKN_DESTABILIZER_DARK_MATTER" }
+		component = { slot = "COMPOUND_LARGE_2"		template = "UKN_DESTABILIZER_DARK_MATTER" }
+		component = { slot = "COMPOUND_LARGE_3"		template = "UKN_DESTABILIZER_DARK_MATTER" }
+
+		component = { slot = "LARGE_UTILITY_1"		template = "UKN_LARGE_ARMOR_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_2"		template = "UKN_LARGE_ARMOR_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_3"		template = "UKN_LARGE_SHIELD_DARK_MATTER" }
+	}
+
+	section = {
+		template = "APEX_COMPOUND_STERN_SECTION" 
+		slot = "stern"
+		component = { slot = "COMPOUND_MEDIUM_1"	template = "UKN_MEDIUM_MASS_DRIVER_DARK_MATTER" }
+		component = { slot = "COMPOUND_MEDIUM_2"	template = "UKN_MEDIUM_POTENTIAL_DISLOCATOR_DARK_MATTER" }
+		component = { slot = "COMPOUND_MEDIUM_3"	template = "UKN_MEDIUM_PLASMA_DARK_MATTER" }
+
+		component = { slot = "LARGE_UTILITY_1"		template = "UKN_LARGE_ARMOR_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_2"		template = "UKN_LARGE_SHIELD_DARK_MATTER" }
+	}
+
+	required_component = "UKN_JUMP_DRIVE_DARK_MATTER"
+	required_component = "UKN_SENSOR_DARK_MATTER"
+	required_component = "UKN_BATTLESHIP_REACTOR_DARK_MATTER"
+	required_component = "UKN_COMBAT_COMPUTER_ARTILLERY_COMPOUND"
+	required_component = "UKN_BATTLESHIP_THRUSTER_DARK_MATTER"
+}
+
+# Sovereign
+ship_design = {
+	name = "NAME_Compound_Sovereign"
+	ship_size = sovereign
+	is_event_design = yes
+
+	section = {
+		template = "SOVEREIGN_COMPOUND_BOW_SECTION"
+		slot = "bow"
+		component = { slot = "COMPOUND_TITANIC_1"	template = "UKN_TITAN_LASER_DARK_MATTER" }
+
+		component = { slot = "LARGE_UTILITY_1"		template = "UKN_LARGE_ARMOR_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_2"		template = "UKN_LARGE_ARMOR_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_3"		template = "UKN_LARGE_ARMOR_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_4"		template = "UKN_LARGE_SHIELD_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_5"		template = "UKN_LARGE_SHIELD_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_6"		template = "UKN_LARGE_SHIELD_DARK_MATTER" }
+	}
+
+	section = {
+		template = "SOVEREIGN_COMPOUND_MID_SECTION"
+		slot = "mid"
+		component = { slot = "COMPOUND_LARGE_1"		template = "UKN_DESTABILIZER_DARK_MATTER" }
+		component = { slot = "COMPOUND_LARGE_2"		template = "UKN_DESTABILIZER_DARK_MATTER" }
+		component = { slot = "COMPOUND_LARGE_3"		template = "UKN_DESTABILIZER_DARK_MATTER" }
+		component = { slot = "COMPOUND_LARGE_4"		template = "UKN_DESTABILIZER_DARK_MATTER" }
+
+		component = { slot = "LARGE_UTILITY_1"		template = "UKN_LARGE_ARMOR_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_2"		template = "UKN_LARGE_ARMOR_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_3"		template = "UKN_LARGE_ARMOR_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_4"		template = "UKN_LARGE_SHIELD_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_5"		template = "UKN_LARGE_SHIELD_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_6"		template = "UKN_LARGE_SHIELD_DARK_MATTER" }
+	}
+
+	section = {
+		template = "SOVEREIGN_COMPOUND_STERN_SECTION"
+		slot = "stern"
+		component = { slot = "COMPOUND_LARGE_1"		template = "UKN_DESTABILIZER_DARK_MATTER" }
+		component = { slot = "COMPOUND_LARGE_2"		template = "UKN_DESTABILIZER_DARK_MATTER" }
+		component = { slot = "COMPOUND_LARGE_3"		template = "UKN_DESTABILIZER_DARK_MATTER" }
+
+		component = { slot = "LARGE_UTILITY_1"		template = "UKN_LARGE_ARMOR_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_2"		template = "UKN_LARGE_ARMOR_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_3"		template = "UKN_LARGE_SHIELD_DARK_MATTER" }
+	}
+	required_component = "UKN_JUMP_DRIVE_DARK_MATTER"
+	required_component = "UKN_SENSOR_DARK_MATTER"
+	required_component = "UKN_TITAN_REACTOR_DARK_MATTER"
+	required_component = "UKN_COMBAT_COMPUTER_ARTILLERY_COMPOUND"
+	required_component = "UKN_TITAN_THRUSTER_DARK_MATTER"
+	required_component = "COMPOUND_AURA_SNARE"
+}
+
+# Reshaper
+ship_design = {
+	name = "NAME_Compound_Reshaper"
+	ship_size = reshaper
+	is_event_design = yes
+
+	section = {
+		template = "RESHAPER_COMPOUND_SECTION"
+		slot = "ship"
+		component = { slot = "PLANET_KILLER_GUN_01"	template = "COMPOUND_HM_RESHAPER" }
+
+		component = { slot = "LARGE_UTILITY_1"		template = "UKN_LARGE_ARMOR_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_2"		template = "UKN_LARGE_ARMOR_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_3"		template = "UKN_LARGE_ARMOR_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_4"		template = "UKN_LARGE_SHIELD_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_5"		template = "UKN_LARGE_SHIELD_DARK_MATTER" }
+		component = { slot = "LARGE_UTILITY_6"		template = "UKN_LARGE_SHIELD_DARK_MATTER" }
+	}
+
+	required_component = "UKN_JUMP_DRIVE_DARK_MATTER"
+	required_component = "UKN_SENSOR_DARK_MATTER"
+	required_component = "UKN_COLOSSUS_REACTOR_DARK_MATTER"
+	required_component = "UKN_COMBAT_COMPUTER_COLOSSUS_COMPOUND"
+	required_component = "UKN_COLOSSUS_THRUSTER_DARK_MATTER"
+}
+
+# Architect
+ship_design = {
+	name = "NAME_Architect"
+	ship_size = architect
+
+	section = {
+		template = "ARCHITECT_COMPOUND_SECTION"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1"		template = "COMPOUND_ARMOR_SMALL" }
+		component = { slot = "SMALL_UTILITY_2"		template = "COMPOUND_ARMOR_SMALL" }
+		component = { slot = "SMALL_UTILITY_3"		template = "UKN_SMALL_SHIELD_DARK_MATTER" }
+	}
+
+	required_component = "UKN_JUMP_DRIVE_DARK_MATTER"
+	required_component = "UKN_SENSOR_DARK_MATTER"
+	required_component = "UKN_CORVETTE_THRUSTER_DARK_MATTER"
+}
+
+# Propagator
+ship_design = {
+	name = "NAME_Propagator"
+	ship_size = propagator
+
+	section = {
+		template = "PROPAGATOR_COMPOUND_SECTION"
+		slot = "mid"
+		component = { slot = "SMALL_UTILITY_1"		template = "COMPOUND_ARMOR_SMALL" }
+		component = { slot = "SMALL_UTILITY_2"		template = "COMPOUND_ARMOR_SMALL" }
+		component = { slot = "SMALL_UTILITY_3"		template = "UKN_SMALL_SHIELD_DARK_MATTER" }
+	}
+
+	required_component = "UKN_JUMP_DRIVE_DARK_MATTER"
+	required_component = "UKN_SENSOR_DARK_MATTER"
+	required_component = "UKN_CORVETTE_THRUSTER_DARK_MATTER"
+}

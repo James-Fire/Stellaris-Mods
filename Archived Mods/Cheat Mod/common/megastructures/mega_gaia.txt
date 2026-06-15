@@ -1,0 +1,841 @@
+artificial_paradise_gaia = {
+  entity = ""
+  construction_entity = "construction_platform_entity"
+  portrait = "GFX_megastructure_construction_background"
+  place_entity_on_planet_plane = yes
+  entity_offset = { x = -7 y = -7 }
+  build_time = 200
+  resources = {
+		category = megastructures
+		cost = {
+			alloys = 200
+			influence = 2
+		}
+	}
+  construction_blocks_others = no
+
+  potential = {
+    is_ai=no
+    has_country_flag = use_a_mega
+  }
+
+  possible = {}
+
+  placement_rules = {
+    planet_possible = {
+      custom_tooltip = {
+        fail_text = "requires_no_anomaly"
+        NOT = { has_anomaly = yes }
+      }
+    }
+  }
+
+  ai_weight = {
+    modifier = {
+      weight = 0
+    }
+  }
+
+  on_build_start = {}
+  on_build_cancel = {}
+
+  on_build_complete = {
+    remove_megastructure = fromfrom
+    fromfrom.planet = {
+      set_planet_flag = is_choosing_psize
+    }
+    from = {
+      country_event = { id = change_paradise_type.112 }
+      country_event = { id = change_paradise_type.100 }
+    }
+  }
+}
+
+  create_planet_gaia = {
+  entity = ""
+  construction_entity = "construction_platform_entity"
+  portrait = "GFX_megastructure_construction_background"
+  place_entity_on_planet_plane = yes
+  entity_offset = { x = -7 y = -7 }
+  build_time = 300
+  resources = {
+		category = megastructures
+		cost = {
+			alloys = 500
+			influence = 5
+		}
+	}
+  construction_blocks_others = no
+
+  potential = {
+    is_ai=no
+    has_country_flag = use_a_mega
+  }
+
+  possible = {}
+
+  placement_rules = {
+    planet_possible = {
+      custom_tooltip = {
+        fail_text = "requires_no_anomaly"
+        NOT = { has_anomaly = yes }
+      }
+    }
+  }
+
+  ai_weight = {
+    modifier = {
+      weight = 0
+      NOT = {
+        has_ethic = ethic_militarist
+      }
+    }
+  }
+
+  on_build_start = {}
+  on_build_cancel = {}
+
+  on_build_complete = {
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 45
+      orbit_distance_offset = 45
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = is_choosing_psize
+      }
+    }
+    #fromfrom.planet = {
+    #  set_planet_flag = has_megastructure
+    #}
+    remove_megastructure = fromfrom
+    from = {
+      country_event = { id = change_paradise_type.112 }
+      country_event = { id = change_paradise_type.100 }
+    }
+  }
+}
+
+  create_many_planets_gaia = {
+  entity = ""
+  construction_entity = "construction_platform_entity"
+  portrait = "GFX_megastructure_construction_background"
+  place_entity_on_planet_plane = yes
+  entity_offset = { x = -7 y = -7 }
+  build_time = 1000
+  resources = {
+		category = megastructures
+		cost = {
+			alloys = 5000
+			influence = 50
+		}
+	}
+  construction_blocks_others = no
+
+  potential = {
+    is_ai=no
+    has_country_flag = use_a_mega
+  }
+
+  possible = {
+    #custom_tooltip = {
+    #  fail_text = "requires_not_colonized_system"
+    #  NOT = {
+    #    any_planet = {
+    #      has_owner = yes
+    #    }
+    #  }
+    #}
+  }
+
+  placement_rules = {
+    planet_possible = {
+      custom_tooltip = {
+        fail_text = "must_build_around_star"
+        is_star = yes
+      }
+      custom_tooltip = {
+        fail_text = "requires_no_anomaly"
+        NOT = { has_anomaly = yes }
+      }
+    }
+  }
+
+  ai_weight = {
+    modifier = {
+      weight = 0
+    }
+  }
+
+  on_build_start = {}
+  on_build_cancel = {}
+
+  on_build_complete = {
+    every_system_planet = {
+      limit = { is_star = no }
+      clean_the_planet = yes
+      remove_planet = yes
+    }
+    set_asteroid_belt = {
+      radius = 0
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 0
+      orbit_distance_offset = 40
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_1
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 90
+      orbit_distance_offset = 40
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_1
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 180
+      orbit_distance_offset = 40
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_1
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 270
+      orbit_distance_offset = 40
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_1
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 30
+      orbit_distance_offset = 50
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_2
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 120
+      orbit_distance_offset = 50
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_2
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 210
+      orbit_distance_offset = 50
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_2
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 300
+      orbit_distance_offset = 50
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_2
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 60
+      orbit_distance_offset = 60
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_3
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 150
+      orbit_distance_offset = 60
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_3
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 240
+      orbit_distance_offset = 60
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_3
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 330
+      orbit_distance_offset = 60
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_3
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 90
+      orbit_distance_offset = 70
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_4
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 180
+      orbit_distance_offset = 70
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_4
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 270
+      orbit_distance_offset = 70
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_4
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 0
+      orbit_distance_offset = 70
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_4
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 120
+      orbit_distance_offset = 80
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_5
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 210
+      orbit_distance_offset = 80
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_5
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 300
+      orbit_distance_offset = 80
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_5
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 30
+      orbit_distance_offset = 80
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_5
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 150
+      orbit_distance_offset = 90
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_6
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 240
+      orbit_distance_offset = 90
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_6
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 330
+      orbit_distance_offset = 90
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_6
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 60
+      orbit_distance_offset = 90
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_6
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 180
+      orbit_distance_offset = 100
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_7
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 270
+      orbit_distance_offset = 100
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_7
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 0
+      orbit_distance_offset = 100
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_7
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 90
+      orbit_distance_offset = 100
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_7
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 210
+      orbit_distance_offset = 110
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_8
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 300
+      orbit_distance_offset = 110
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_8
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 30
+      orbit_distance_offset = 110
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_8
+      }
+    }
+    spawn_planet = {
+      class = "pc_gaia"
+      location = fromfrom.planet
+      orbit_location = yes
+      orbit_angle_offset = 120
+      orbit_distance_offset = 110
+      size = 1
+      has_ring = no
+
+      init_effect = {
+        surveyed = {
+          set_surveyed = yes
+          surveyor = FROM
+        }
+        kill_all_blockers = yes 
+        set_owner = FROM
+        #set_planet_flag = megastructure
+        set_planet_flag = sys_orb_8
+      }
+    }
+    #fromfrom.planet = {
+    #  set_planet_flag = has_megastructure
+    #}
+    remove_megastructure = fromfrom
+    from = {
+      country_event = { id = change_paradise_type.112 }
+      country_event = { id = change_paradise_type.101 }
+    }
+  }
+}

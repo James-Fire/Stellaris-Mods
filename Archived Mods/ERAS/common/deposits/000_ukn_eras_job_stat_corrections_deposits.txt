@@ -1,0 +1,453 @@
+d_ukn_job_stat_corrections = {
+	is_for_colonizable = yes
+	category = deposit_cat_energy
+
+#[NORMAL] Default Empire - Researcher Corrections
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_consumer_goods_upkeep_add = -1		#[CG|BASE:    1]
+			planet_researchers_energy_upkeep_add = 1				#[ E|BASE:    1]
+			planet_researchers_minerals_upkeep_add = 1				#[ M|BASE:    1]
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_minerals_upkeep_add = -1				#[ M|BASE:    0]
+			planet_researchers_food_upkeep_add = 1.5				#[ F|BASE:  1.5]
+		}
+	}
+
+#[NORMAL] Machine Empire - Researcher Corrections
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_consumer_goods_upkeep_add = 0.5		#[CG|BASE:  0.5]
+			planet_researchers_energy_upkeep_add = -1				#[ E|BASE:    3]
+			planet_researchers_minerals_upkeep_add = 1				#[ M|BASE:    1]
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_minerals_upkeep_add = -1				#[ M|BASE:    0]
+			planet_researchers_food_upkeep_add = 1.5				#[ F|BASE:  1.5]
+		}
+	}
+
+#[NORMAL] Hive Empire - Researcher Corrections
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_consumer_goods_upkeep_add = 0.5		#[CG|BASE:  0.5]
+			planet_researchers_energy_upkeep_add = 1				#[ E|BASE:    1]
+			planet_researchers_minerals_upkeep_add = -3				#[ M|BASE:    3]
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_minerals_upkeep_add = -3				#[ M|BASE:    0]
+			planet_researchers_food_upkeep_add = 4.5				#[ F|BASE:  4.5]
+		}
+	}
+#----------------------------------------------------
+
+#[ARCOLOGY] Default Empire - Researcher Corrections
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_physics_research_produces_add = 8
+			planet_researchers_society_research_produces_add = 8
+			planet_researchers_engineering_research_produces_add = 8
+			planet_researchers_consumer_goods_upkeep_add = 1		#[CG|BASE:    3]
+			planet_researchers_energy_upkeep_add = 3				#[ E|BASE:    3]
+			planet_researchers_minerals_upkeep_add = 3				#[ M|BASE:    3]
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_minerals_upkeep_add = -3				#[ M|BASE:    0]
+			planet_researchers_food_upkeep_add = 4.5				#[ F|BASE:  4.5]
+		}
+	}
+
+#[ARCOLOGY] Machine Empire - Researcher Corrections
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_physics_research_produces_add = 8
+			planet_researchers_society_research_produces_add = 8
+			planet_researchers_engineering_research_produces_add = 8
+			planet_researchers_consumer_goods_upkeep_add = 1.5		#[CG|BASE:  1.5]
+			planet_researchers_energy_upkeep_add = 2				#[ E|BASE:    6]
+			planet_researchers_minerals_upkeep_add = 2				#[ M|BASE:    2]
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_minerals_upkeep_add = -2				#[ M|BASE:    0]
+			planet_researchers_food_upkeep_add = 3					#[ F|BASE:    3]
+		}
+	}
+
+#[ARCOLOGY] Hive Empire - Researcher Corrections
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_physics_research_produces_add = 8
+			planet_researchers_society_research_produces_add = 8
+			planet_researchers_engineering_research_produces_add = 8
+			planet_researchers_consumer_goods_upkeep_add = 1.5		#[CG|BASE:  1.5]
+			planet_researchers_energy_upkeep_add = 2				#[ E|BASE:    2]
+			planet_researchers_minerals_upkeep_add = 0				#[ M|BASE:    6]
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_minerals_upkeep_add = -6				#[ M|BASE:    0]
+			planet_researchers_food_upkeep_add = 9					#[ F|BASE:    9]
+		}
+	}
+#----------------------------------------------------
+
+#[RINGWORLD] Default Empire - Researcher Corrections
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_physics_research_produces_add = 56
+			planet_researchers_society_research_produces_add = 56
+			planet_researchers_engineering_research_produces_add = 56
+			planet_researchers_consumer_goods_upkeep_add = 13		#[CG|BASE:   15]
+			planet_researchers_energy_upkeep_add = 15				#[ E|BASE:   15]
+			planet_researchers_minerals_upkeep_add = 15				#[ M|BASE:   15]
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_minerals_upkeep_add = -15			#[ M|BASE:    0]
+			planet_researchers_food_upkeep_add = 22.5				#[ F|BASE: 22.5]
+		}
+	}
+
+#[RINGWORLD] Machine Empire - Researcher Corrections
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_physics_research_produces_add = 56
+			planet_researchers_society_research_produces_add = 56
+			planet_researchers_engineering_research_produces_add = 56
+			planet_researchers_consumer_goods_upkeep_add = 7.5		#[CG|BASE:  7.5]
+			planet_researchers_energy_upkeep_add = 18.5				#[ E|BASE: 22.5]
+			planet_researchers_minerals_upkeep_add = 15				#[ M|BASE:   15]
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_minerals_upkeep_add = -15			#[ M|BASE:    0]
+			planet_researchers_food_upkeep_add = 22.5				#[ F|BASE: 22.5]
+		}
+	}
+
+#[RINGWORLD] Hive Empire - Researcher Corrections
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_physics_research_produces_add = 56
+			planet_researchers_society_research_produces_add = 56
+			planet_researchers_engineering_research_produces_add = 56
+			planet_researchers_consumer_goods_upkeep_add = 7.5		#[CG|BASE:  7.5]
+			planet_researchers_energy_upkeep_add = 15				#[ E|BASE:   15]
+			planet_researchers_minerals_upkeep_add = 16.5			#[ M|BASE: 22.5]
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_minerals_upkeep_add = -22.5				#[ M|BASE:     0]
+			planet_researchers_food_upkeep_add = 33.75					#[ F|BASE: 33.75]
+		}
+	}
+#----------------------------------------------------
+
+#[ALDERSON] Default Empire - Researcher Corrections
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_physics_research_produces_add = 396
+			planet_researchers_society_research_produces_add = 396
+			planet_researchers_engineering_research_produces_add = 396
+			planet_researchers_consumer_goods_upkeep_add = 98		#[CG|BASE:  100]
+			planet_researchers_energy_upkeep_add = 100				#[ E|BASE:  100]
+			planet_researchers_minerals_upkeep_add = 100			#[ M|BASE:  100]
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_minerals_upkeep_add = -100			#[ M|BASE:    0]
+			planet_researchers_food_upkeep_add = 150				#[ F|BASE:  150]
+		}
+	}
+
+#[ALDERSON] Machine Empire - Researcher Corrections
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_physics_research_produces_add = 396
+			planet_researchers_society_research_produces_add = 396
+			planet_researchers_engineering_research_produces_add = 396
+			planet_researchers_consumer_goods_upkeep_add = 50		#[CG|BASE:   50]
+			planet_researchers_energy_upkeep_add = 146				#[ E|BASE:  150]
+			planet_researchers_minerals_upkeep_add = 100			#[ M|BASE:  100]
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_minerals_upkeep_add = -100			#[ M|BASE:    0]
+			planet_researchers_food_upkeep_add = 150				#[ F|BASE:  150]
+		}
+	}
+
+#[ALDERSON] Hive Empire - Researcher Corrections
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_physics_research_produces_add = 396
+			planet_researchers_society_research_produces_add = 396
+			planet_researchers_engineering_research_produces_add = 396
+			planet_researchers_consumer_goods_upkeep_add = 50		#[CG|BASE:   50]
+			planet_researchers_energy_upkeep_add = 100				#[ E|BASE:  100]
+			planet_researchers_minerals_upkeep_add = 144			#[ M|BASE:  150]
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			planet_researchers_minerals_upkeep_add = -150				#[ M|BASE:    0]
+			planet_researchers_food_upkeep_add = 225					#[ F|BASE:  225]
+		}
+	}
+#----------------------------------------------------
+
+	drop_weight = {
+		weight = 0
+	}
+}

@@ -1,0 +1,109 @@
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes.
+
+#############
+# UTILITIES #
+#############
+
+@armor_aai_S = 200000
+@armor_aai_M = 400000
+@armor_aai_L = 800000
+
+@shield_aai_S = 400000
+@shield_aai_M = 800000
+@shield_aai_L = 1600000
+
+@regen_aai_S = 40000
+@regen_aai_M = 80000
+@regen_aai_L = 160000
+
+
+####################
+# Psionic Shields
+####################
+
+utility_component_template = {
+	key = "SMALL_PLAYER_SUPER_SHIELD_1"
+	size = small
+	icon = "GFX_ship_part_player_super_shield_1"
+	icon_frame = 1
+	power = -60
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 600
+			energy = 1200
+		}
+	}
+	modifier = {
+		ship_hull_add = @shield_aai_S
+		ship_armor_add = @armor_aai_S
+		ship_shield_add = @shield_aai_S
+		ship_shield_regen_add_static = @regen_aai_S  #Regeneration per day
+		ship_armor_regen_add_static = @regen_aai_S
+		ship_hull_regen_add_static = @regen_aai_S
+		ship_evasion_add = 10
+		ship_evasion_mult = 0.10
+		ship_weapon_damage = 0.01
+		ship_fire_rate_mult = 0.02
+	}
+	prerequisites = { "tech_all_ascension" }
+	component_set = "PLAYER_SUPER_SHIELD_1"
+}
+
+utility_component_template = {
+	key = "MEDIUM_PLAYER_SUPER_SHIELD_1"
+	size = medium
+	icon = "GFX_ship_part_player_super_shield_1"
+	icon_frame = 1
+	power = -120
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1200
+			energy = 2400
+		}
+	}
+	modifier = {
+		ship_hull_add = @shield_aai_M
+		ship_armor_add = @armor_aai_M
+		ship_shield_add = @shield_aai_M
+		ship_shield_regen_add_static = @regen_aai_M  #Regeneration per day
+		ship_armor_regen_add_static = @regen_aai_M
+		ship_hull_regen_add_static = @regen_aai_M
+		ship_evasion_add = 10
+		ship_evasion_mult = 0.10
+		ship_weapon_damage = 0.01
+		ship_fire_rate_mult = 0.02
+	}
+	prerequisites = { "tech_all_ascension" }
+	component_set = "PLAYER_SUPER_SHIELD_1"
+}
+
+utility_component_template = {
+	key = "LARGE_PLAYER_SUPER_SHIELD_1"
+	size = large
+	icon = "GFX_ship_part_player_super_shield_1"
+	icon_frame = 1
+	power = -240
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 2400
+			energy = 4800
+		}
+	}
+	modifier = {
+		ship_hull_add = @shield_aai_L
+		ship_armor_add = @armor_aai_L
+		ship_shield_add = @shield_aai_L
+		ship_shield_regen_add_static = @regen_aai_L  #Regeneration per day
+		ship_armor_regen_add_static = @regen_aai_L
+		ship_hull_regen_add_static = @regen_aai_L
+		ship_evasion_add = 10
+		ship_evasion_mult = 0.10
+		ship_weapon_damage = 0.01
+		ship_fire_rate_mult = 0.02
+	}
+	prerequisites = { "tech_all_ascension" }
+	component_set = "PLAYER_SUPER_SHIELD_1"
+}

@@ -1,0 +1,318 @@
+#All files in gfx/projectiles are reloadable with the "reload projectiles" console command
+#Filewatcher is also enabled for all files
+
+#############################
+### ARCED MACRODISRUPTORS ###
+#############################
+
+######----------------------------------
+# T1 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_arc_emitter_1"
+	color = { 0.4 		1.0		0.71 	5.0 }
+	hit_entity = "hit_entity_ukn_arc_emitter_1"
+	shield_hit_entity = "shield_hit_entity_ukn_arc_emitter_1"
+	muzzle_flash_entity = "muzzle_entity_ukn_arc_emitter_1"
+	windup_entity = {
+		invisible_extra_large_fixed = "windup_entity_ukn_arc_emitter_1"
+		extra_large_turret = "turret_windup_entity_ukn_arc_emitter_1"
+	}
+	
+	#beam specific data
+	width = 15
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3	
+	hit = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.4
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.4
+
+	}
+	texture = "gfx/models/combat_items/ukn_arc_emitter_1_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+######----------------------------------
+# T2 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_arc_emitter_2"
+	color = { 1.0 		0.8		0.4 	5.0 }
+	hit_entity = "hit_entity_ukn_arc_emitter_2"
+	shield_hit_entity = "shield_hit_entity_ukn_arc_emitter_2"
+	muzzle_flash_entity = "muzzle_entity_ukn_arc_emitter_2"
+	windup_entity = {
+		invisible_extra_large_fixed = "windup_entity_ukn_arc_emitter_2"
+		extra_large_turret = "turret_windup_entity_ukn_arc_emitter_2"
+	}
+	
+	#beam specific data
+	width = 15
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3	
+	hit = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.4
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.4
+
+	}
+	texture = "gfx/models/combat_items/ukn_arc_emitter_2_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+######----------------------------------
+# T3 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_arc_emitter_3"
+	color = { 0.89 		0.67		0.78 	5.0 }
+	hit_entity = "hit_entity_ukn_arc_emitter_3"
+	shield_hit_entity = "shield_hit_entity_ukn_arc_emitter_3"
+	muzzle_flash_entity = "muzzle_entity_ukn_arc_emitter_3"
+	windup_entity = {
+		invisible_extra_large_fixed = "windup_entity_ukn_arc_emitter_3"
+		extra_large_turret = "turret_windup_entity_ukn_arc_emitter_3"
+	}
+	
+	#beam specific data
+	width = 15
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3	
+	hit = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.4
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.4
+
+	}
+	texture = "gfx/models/combat_items/ukn_arc_emitter_3_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+######----------------------------------
+# T4 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_arc_emitter_4"
+	color = { 0.57 		0.89		0.96 	5.0 }
+	hit_entity = "hit_entity_ukn_arc_emitter_4"
+	shield_hit_entity = "shield_hit_entity_ukn_arc_emitter_4"
+	muzzle_flash_entity = "muzzle_entity_ukn_arc_emitter_4"
+	windup_entity = {
+		invisible_extra_large_fixed = "windup_entity_ukn_arc_emitter_4"
+		extra_large_turret = "turret_windup_entity_ukn_arc_emitter_4"
+	}
+	
+	#beam specific data
+	width = 15
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3	
+	hit = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.4
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.4
+
+	}
+	texture = "gfx/models/combat_items/ukn_arc_emitter_4_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+######----------------------------------
+# T5 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_arc_emitter_5"
+	color = { 0.97 		0.62		0.73 	5.0 }
+	hit_entity = "hit_entity_ukn_arc_emitter_5"
+	shield_hit_entity = "shield_hit_entity_ukn_arc_emitter_5"
+	muzzle_flash_entity = "muzzle_entity_ukn_arc_emitter_5"
+	windup_entity = {
+		invisible_extra_large_fixed = "windup_entity_ukn_arc_emitter_5"
+		extra_large_turret = "turret_windup_entity_ukn_arc_emitter_5"
+	}
+	
+	#beam specific data
+	width = 15
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3	
+	hit = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.4
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.4
+
+	}
+	texture = "gfx/models/combat_items/ukn_arc_emitter_5_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+######----------------------------------
+# T6 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_arc_emitter_6"
+	color = { 0.62 		0.95		0.95 	5.0 }
+	hit_entity = "hit_entity_ukn_arc_emitter_6"
+	shield_hit_entity = "shield_hit_entity_ukn_arc_emitter_6"
+	muzzle_flash_entity = "muzzle_entity_ukn_arc_emitter_6"
+	windup_entity = {
+		invisible_extra_large_fixed = "windup_entity_ukn_arc_emitter_6"
+		extra_large_turret = "turret_windup_entity_ukn_arc_emitter_6"
+	}
+	
+	#beam specific data
+	width = 15
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3	
+	hit = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.4
+
+	}
+	miss = {
+		alpha_curve = { 
+			0.0  0.0
+			0.1 50.0
+			0.25	 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0  0.0
+		}
+		duration = 0.4
+
+	}
+	texture = "gfx/models/combat_items/ukn_arc_emitter_6_diffuse.dds"
+	
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}

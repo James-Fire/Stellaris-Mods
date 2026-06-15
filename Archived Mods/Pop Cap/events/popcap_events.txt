@@ -1,0 +1,20 @@
+namespace = pop_cap
+
+country_event = {
+	id = gaiaform.1
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				num_pops > 1000
+			}
+			add_modifier = {
+				modifier = popcap_modifier
+				days/months/years = 360
+				multiplier = 200
+			}
+		}
+	}
+}

@@ -1,0 +1,2117 @@
+district_rw_commercial = {
+	base_buildtime = @district_ukn_rw_commercial_5_build_time
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	prerequisites = {
+		"tech_interplanetary_commerce"
+	}
+
+	abort_trigger = {
+		NOR = {
+			has_building = building_commercial_zone
+			has_building = building_commercial_megaplex
+			has_building = building_ukn_commercial_zone_3
+			has_building = building_ukn_commercial_zone_4
+			has_building = building_ukn_commercial_zone_5
+		}
+	}
+
+	show_on_uncolonized = {
+		exists = from
+		OR = {
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		OR = {
+			has_building = building_commercial_zone
+			has_building = building_commercial_megaplex
+			has_building = building_ukn_commercial_zone_3
+			has_building = building_ukn_commercial_zone_4
+			has_building = building_ukn_commercial_zone_5
+			has_district = district_rw_commercial
+		}
+	}
+
+	potential = {
+		exists = owner
+		OR = {
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		OR = {
+			has_building = building_commercial_zone
+			has_building = building_commercial_megaplex
+			has_building = building_ukn_commercial_zone_3
+			has_building = building_ukn_commercial_zone_4
+			has_building = building_ukn_commercial_zone_5
+			has_district = district_rw_commercial
+		}
+	}
+
+	allow = {
+		OR = {
+			has_building = building_commercial_zone
+			has_building = building_commercial_megaplex
+			has_building = building_ukn_commercial_zone_3
+			has_building = building_ukn_commercial_zone_4
+			has_building = building_ukn_commercial_zone_5
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_rw_generator
+	}
+
+	show_tech_unlock_if = {
+		always = no
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = UKN_DISTRICT_AUTOMATION_DEFICIENCY
+	}
+
+	resources = {
+		category = planet_districts_rw_commercial
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @district_ukn_rw_commercial_5_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @district_ukn_rw_commercial_5_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			ukn_meta_materials = @district_ukn_rw_commercial_5_cost_basic_ukn_meta_materials
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @district_ukn_rw_commercial_5_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @district_ukn_rw_commercial_5_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @district_ukn_rw_commercial_5_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+#			exotic_gases = @district_ukn_rw_commercial_5_cost_advanced_exotic_gases
+			rare_crystals = @district_ukn_rw_commercial_5_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @district_ukn_rw_commercial_5_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @district_ukn_rw_commercial_5_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @district_ukn_rw_commercial_5_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @district_ukn_rw_commercial_5_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @district_ukn_rw_commercial_5_upkeep_energy
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 6
+	}
+
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+                UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+            }
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_bugged_trader_add = 5
+            job_merchant_add = 1
+        }
+    }
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_mercantile_commercial_enterprise
+			}
+		}
+		modifier = {
+			job_merchant_add = 1
+		}
+	}
+
+#	triggered_desc = {
+#		trigger = {
+#			exists = owner
+#			owner = {
+#				is_regular_empire = yes
+#			}
+#		}
+#		text = job_clerk_effect_desc
+#	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_bugged_trader_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_merchant_effect_desc
+	}
+}
+
+
+
+
+
+
+
+
+
+district_ukn_rw_bureaucratic = {
+	base_buildtime = @district_arcology_bureaucratic_5_build_time
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	prerequisites = {
+		"tech_planetary_government"
+	}
+
+	abort_trigger = {
+		NOR = {
+#[BASIC] UNITY BUILDINGS
+			has_building = building_bureaucratic_1
+			has_building = building_bureaucratic_2
+			has_building = building_bureaucratic_2
+			has_building = building_ukn_bureaucratic_4
+			has_building = building_ukn_bureaucratic_5
+		}
+	}
+
+	show_on_uncolonized = {
+		exists = from
+		OR = {
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		OR = {
+#[BASIC] UNITY BUILDINGS
+			has_building = building_bureaucratic_1
+			has_building = building_bureaucratic_2
+			has_building = building_bureaucratic_2
+			has_building = building_ukn_bureaucratic_4
+			has_building = building_ukn_bureaucratic_5
+			has_district = district_ukn_rw_bureaucratic
+		}
+	}
+
+	potential = {
+		exists = owner
+		OR = {
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		OR = {
+#[BASIC] UNITY BUILDINGS
+			has_building = building_bureaucratic_1
+			has_building = building_bureaucratic_2
+			has_building = building_bureaucratic_2
+			has_building = building_ukn_bureaucratic_4
+			has_building = building_ukn_bureaucratic_5
+			has_district = district_ukn_rw_bureaucratic
+		}
+		NOR = {
+#[MEGACORP] UNITY BUILDINGS
+			has_building = building_ukn_corporate_bureaucratic_1
+			has_building = building_ukn_corporate_bureaucratic_2
+			has_building = building_ukn_corporate_bureaucratic_3
+			has_building = building_ukn_corporate_monument_4
+			has_building = building_ukn_corporate_monument_5
+#[SPIRITUALISTS] UNITY BUILDINGS
+			has_building = building_temple
+			has_building = building_holotemple
+			has_building = building_sacred_nexus
+			has_building = building_ukn_temple_4
+			has_building = building_ukn_temple_5
+#[DEATH-CULT] UNITY BUILDINGS
+			has_building = building_sacrificial_temple_1
+			has_building = building_sacrificial_temple_2
+			has_building = building_sacrificial_temple_3
+			has_building = building_ukn_sacrificial_temple_4
+			has_building = building_ukn_sacrificial_temple_5
+#[HIVE] UNITY BUILDINGS
+			has_building = building_hive_node
+			has_building = building_hive_cluster
+			has_building = building_hive_confluence
+			has_building = building_ukn_hive_node_4
+			has_building = building_ukn_hive_node_5
+#[MACHINE] UNITY BUILDINGS
+			has_building = building_uplink_node
+			has_building = building_network_junction
+			has_building = building_system_conflux
+			has_building = building_ukn_uplink_4
+			has_building = building_ukn_uplink_5
+		}
+	}
+
+	allow = {
+		OR = {
+#[BASIC] UNITY BUILDINGS
+			has_building = building_bureaucratic_1
+			has_building = building_bureaucratic_2
+			has_building = building_bureaucratic_2
+			has_building = building_ukn_bureaucratic_4
+			has_building = building_ukn_bureaucratic_5
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+#[RINGWORLD] UNITY DISTRICTS
+#		district_ukn_rw_bureaucratic
+		district_ukn_rw_corporate_bureaucratic
+		district_ukn_rw_temple
+		district_ukn_rw_hive_node
+		district_ukn_rw_uplink
+	}
+
+	show_tech_unlock_if = {
+		always = no
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = UKN_DISTRICT_AUTOMATION_DEFICIENCY
+	}
+
+	resources = {
+		category = planet_districts_ukn_rw_bureaucratic
+#########
+# COSTS #
+#########
+#[BASIC] AUTOMACHINES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			nanites = @district_ukn_rw_bureaucratic_5_cost_basic_nanites
+		}
+		
+		
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @district_ukn_rw_bureaucratic_5_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @district_ukn_rw_bureaucratic_5_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			ukn_meta_materials = @district_ukn_rw_bureaucratic_5_cost_basic_ukn_meta_materials
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @district_ukn_rw_bureaucratic_5_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @district_ukn_rw_bureaucratic_5_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @district_ukn_rw_bureaucratic_5_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+#			exotic_gases = @district_ukn_rw_bureaucratic_5_cost_advanced_exotic_gases
+			rare_crystals = @district_ukn_rw_bureaucratic_5_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @district_ukn_rw_bureaucratic_5_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @district_ukn_rw_bureaucratic_5_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @district_ukn_rw_bureaucratic_5_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @district_ukn_rw_bureaucratic_5_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @district_ukn_rw_bureaucratic_5_upkeep_energy
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				NOT = { has_valid_civic = civic_warrior_culture }
+			}
+		}
+		modifier = {
+			job_bureaucrat_add = 3
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_bureaucrat_effect_desc
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		unity = 180
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+district_ukn_rw_corporate_bureaucratic = {
+	base_buildtime = @district_ukn_rw_corporate_bureaucratic_5_build_time
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	prerequisites = {
+		"tech_planetary_government"
+	}
+
+	abort_trigger = {
+		NOR = {
+#[MEGACORP] UNITY BUILDINGS
+			has_building = building_ukn_corporate_bureaucratic_1
+			has_building = building_ukn_corporate_bureaucratic_2
+			has_building = building_ukn_corporate_bureaucratic_3
+			has_building = building_ukn_corporate_monument_4
+			has_building = building_ukn_corporate_monument_5
+		}
+	}
+
+	show_on_uncolonized = {
+		exists = from
+		OR = {
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		OR = {
+#[MEGACORP] UNITY BUILDINGS
+			has_building = building_ukn_corporate_bureaucratic_1
+			has_building = building_ukn_corporate_bureaucratic_2
+			has_building = building_ukn_corporate_bureaucratic_3
+			has_building = building_ukn_corporate_monument_4
+			has_building = building_ukn_corporate_monument_5
+			has_district = district_ukn_rw_corporate_bureaucratic
+		}
+	}
+
+	potential = {
+		exists = owner
+		OR = {
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		OR = {
+#[MEGACORP] UNITY BUILDINGS
+			has_building = building_ukn_corporate_bureaucratic_1
+			has_building = building_ukn_corporate_bureaucratic_2
+			has_building = building_ukn_corporate_bureaucratic_3
+			has_building = building_ukn_corporate_monument_4
+			has_building = building_ukn_corporate_monument_5
+			has_district = district_ukn_rw_corporate_bureaucratic
+		}
+		NOR = {
+#[BASIC] UNITY BUILDINGS
+			has_building = building_bureaucratic_1
+			has_building = building_bureaucratic_2
+			has_building = building_bureaucratic_2
+			has_building = building_ukn_bureaucratic_4
+			has_building = building_ukn_bureaucratic_5
+#[SPIRITUALISTS] UNITY BUILDINGS
+			has_building = building_temple
+			has_building = building_holotemple
+			has_building = building_sacred_nexus
+			has_building = building_ukn_temple_4
+			has_building = building_ukn_temple_5
+#[DEATH-CULT] UNITY BUILDINGS
+			has_building = building_sacrificial_temple_1
+			has_building = building_sacrificial_temple_2
+			has_building = building_sacrificial_temple_3
+			has_building = building_ukn_sacrificial_temple_4
+			has_building = building_ukn_sacrificial_temple_5
+#[HIVE] UNITY BUILDINGS
+			has_building = building_hive_node
+			has_building = building_hive_cluster
+			has_building = building_hive_confluence
+			has_building = building_ukn_hive_node_4
+			has_building = building_ukn_hive_node_5
+#[MACHINE] UNITY BUILDINGS
+			has_building = building_uplink_node
+			has_building = building_network_junction
+			has_building = building_system_conflux
+			has_building = building_ukn_uplink_4
+			has_building = building_ukn_uplink_5
+		}
+	}
+
+	allow = {
+		OR = {
+#[MEGACORP] UNITY BUILDINGS
+			has_building = building_ukn_corporate_bureaucratic_1
+			has_building = building_ukn_corporate_bureaucratic_2
+			has_building = building_ukn_corporate_bureaucratic_3
+			has_building = building_ukn_corporate_monument_4
+			has_building = building_ukn_corporate_monument_5
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+#[RINGWORLD] UNITY DISTRICTS
+		district_ukn_rw_bureaucratic
+#		district_ukn_rw_corporate_bureaucratic
+		district_ukn_rw_temple
+		district_ukn_rw_hive_node
+		district_ukn_rw_uplink
+	}
+
+	show_tech_unlock_if = {
+		always = no
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = UKN_DISTRICT_AUTOMATION_DEFICIENCY
+	}
+
+	resources = {
+		category = planet_districts_ukn_rw_corporate_bureaucratic
+#########
+# COSTS #
+#########
+#[BASIC] AUTOMACHINES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			nanites = @district_ukn_rw_corporate_bureaucratic_5_cost_basic_nanites
+		}
+		
+		
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @district_ukn_rw_corporate_bureaucratic_5_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @district_ukn_rw_corporate_bureaucratic_5_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			ukn_meta_materials = @district_ukn_rw_corporate_bureaucratic_5_cost_basic_ukn_meta_materials
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @district_ukn_rw_corporate_bureaucratic_5_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @district_ukn_rw_corporate_bureaucratic_5_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @district_ukn_rw_corporate_bureaucratic_5_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+#			exotic_gases = @district_ukn_rw_corporate_bureaucratic_5_cost_advanced_exotic_gases
+			rare_crystals = @district_ukn_rw_corporate_bureaucratic_5_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @district_ukn_rw_corporate_bureaucratic_5_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @district_ukn_rw_corporate_bureaucratic_5_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @district_ukn_rw_corporate_bureaucratic_5_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @district_ukn_rw_corporate_bureaucratic_5_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @district_ukn_rw_corporate_bureaucratic_5_upkeep_energy
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_manager_add = 3
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_manager_effect_desc
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		unity = 180
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+district_ukn_rw_temple = {
+	base_buildtime = @district_ukn_rw_temple_5_build_time
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	prerequisites = {
+		"tech_cultural_heritage"
+	}
+
+	abort_trigger = {
+		NOR = {
+#[SPIRITUALISTS] UNITY BUILDINGS
+			has_building = building_temple
+			has_building = building_holotemple
+			has_building = building_sacred_nexus
+			has_building = building_ukn_temple_4
+			has_building = building_ukn_temple_5
+#[DEATH-CULT] UNITY BUILDINGS
+			has_building = building_sacrificial_temple_1
+			has_building = building_sacrificial_temple_2
+			has_building = building_sacrificial_temple_3
+			has_building = building_ukn_sacrificial_temple_4
+			has_building = building_ukn_sacrificial_temple_5
+		}
+	}
+
+	show_on_uncolonized = {
+		exists = from
+		OR = {
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		OR = {
+#[SPIRITUALISTS] UNITY BUILDINGS
+			has_building = building_temple
+			has_building = building_holotemple
+			has_building = building_sacred_nexus
+			has_building = building_ukn_temple_4
+			has_building = building_ukn_temple_5
+#[DEATH-CULT] UNITY BUILDINGS
+			has_building = building_sacrificial_temple_1
+			has_building = building_sacrificial_temple_2
+			has_building = building_sacrificial_temple_3
+			has_building = building_ukn_sacrificial_temple_4
+			has_building = building_ukn_sacrificial_temple_5
+			has_district = district_ukn_rw_temple
+		}
+	}
+
+	potential = {
+		exists = owner
+		OR = {
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		OR = {
+#[SPIRITUALISTS] UNITY BUILDINGS
+			has_building = building_temple
+			has_building = building_holotemple
+			has_building = building_sacred_nexus
+			has_building = building_ukn_temple_4
+			has_building = building_ukn_temple_5
+#[DEATH-CULT] UNITY BUILDINGS
+			has_building = building_sacrificial_temple_1
+			has_building = building_sacrificial_temple_2
+			has_building = building_sacrificial_temple_3
+			has_building = building_ukn_sacrificial_temple_4
+			has_building = building_ukn_sacrificial_temple_5
+			has_district = district_ukn_rw_temple
+		}
+		NOR = {
+#[BASIC] UNITY BUILDINGS
+			has_building = building_bureaucratic_1
+			has_building = building_bureaucratic_2
+			has_building = building_bureaucratic_2
+			has_building = building_ukn_bureaucratic_4
+			has_building = building_ukn_bureaucratic_5
+#[MEGACORP] UNITY BUILDINGS
+			has_building = building_ukn_corporate_bureaucratic_1
+			has_building = building_ukn_corporate_bureaucratic_2
+			has_building = building_ukn_corporate_bureaucratic_3
+			has_building = building_ukn_corporate_monument_4
+			has_building = building_ukn_corporate_monument_5
+#[MEMORIALISTS] UNITY BUILDINGS
+			has_building = building_galactic_memorial_1
+			has_building = building_galactic_memorial_2
+			has_building = building_galactic_memorial_3
+			has_building = building_ukn_galactic_memorial_4
+			has_building = building_ukn_galactic_memorial_5
+#[HIVE] UNITY BUILDINGS
+			has_building = building_hive_node
+			has_building = building_hive_cluster
+			has_building = building_hive_confluence
+			has_building = building_ukn_hive_node_4
+			has_building = building_ukn_hive_node_5
+#[MACHINE] UNITY BUILDINGS
+			has_building = building_uplink_node
+			has_building = building_network_junction
+			has_building = building_system_conflux
+			has_building = building_ukn_uplink_4
+			has_building = building_ukn_uplink_5
+		}
+	}
+
+	allow = {
+		OR = {
+#[SPIRITUALISTS] UNITY BUILDINGS
+			has_building = building_temple
+			has_building = building_holotemple
+			has_building = building_sacred_nexus
+			has_building = building_ukn_temple_4
+			has_building = building_ukn_temple_5
+#[DEATH-CULT] UNITY BUILDINGS
+			has_building = building_sacrificial_temple_1
+			has_building = building_sacrificial_temple_2
+			has_building = building_sacrificial_temple_3
+			has_building = building_ukn_sacrificial_temple_4
+			has_building = building_ukn_sacrificial_temple_5
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+#[RINGWORLD] UNITY DISTRICTS
+		district_ukn_rw_bureaucratic
+		district_ukn_rw_corporate_bureaucratic
+#		district_ukn_rw_temple
+		district_ukn_rw_hive_node
+		district_ukn_rw_uplink
+	}
+
+	show_tech_unlock_if = {
+		always = no
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = UKN_DISTRICT_AUTOMATION_DEFICIENCY
+	}
+
+	resources = {
+		category = planet_districts_ukn_rw_temple
+#########
+# COSTS #
+#########
+#[BASIC] AUTOMACHINES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			nanites = @district_ukn_rw_temple_5_cost_basic_nanites
+		}
+		
+		
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @district_ukn_rw_temple_5_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @district_ukn_rw_temple_5_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			ukn_meta_materials = @district_ukn_rw_temple_5_cost_basic_ukn_meta_materials
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @district_ukn_rw_temple_5_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @district_ukn_rw_temple_5_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @district_ukn_rw_temple_5_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+#			exotic_gases = @district_ukn_rw_temple_5_cost_advanced_exotic_gases
+			rare_crystals = @district_ukn_rw_temple_5_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @district_ukn_rw_temple_5_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @district_ukn_rw_temple_5_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @district_ukn_rw_temple_5_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @district_ukn_rw_temple_5_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @district_ukn_rw_temple_5_upkeep_energy
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1
+		job_priest_add = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_bugged_militant_zealots = yes }
+		}
+		modifier = {
+			job_bugged_templar_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+		OR = {
+			UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				is_bugged_luminosity_cult = yes
+			}
+		}
+		modifier = {
+			job_priest_add = -3
+			job_bugged_luminosity_priest_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+		OR = {
+			UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				is_bugged_death_cult = yes
+			}
+		}
+		modifier = {
+			job_priest_add = -2
+			job_death_priest_add = 3
+			job_mortal_initiate_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+		OR = {
+			UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				is_bugged_war_cult = yes
+			}
+		}
+		modifier = {
+			job_priest_add = -3
+			job_bugged_warrior_priest_add = 1.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+		OR = {
+			UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				is_bugged_gravity_cult = yes
+			}
+		}
+		modifier = {
+			job_priest_add = -3
+			job_bugged_gravity_priest_add = 4.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+		OR = {
+			UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				is_bugged_life_cult = yes
+			}
+		}
+		modifier = {
+			job_priest_add = -2
+			job_bugged_lifescribe_add = 4.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+		OR = {
+			UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				is_bugged_machine_cult = yes
+			}
+		}
+		modifier = {
+			job_priest_add = -2
+			job_bugged_techno_priest_add = 4.5
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				is_bugged_cult = no
+			}
+		}
+		text = job_priest_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_bugged_militant_zealots = yes
+			}
+		}
+		text = job_bugged_templar_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_bugged_militant_zealots = yes
+			}
+		}
+		text = job_bugged_templar_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				is_bugged_death_cult = yes
+			}
+		}
+		text = job_death_priest_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				is_bugged_death_cult = yes
+			}
+		}
+		text = job_mortal_initiate_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				is_bugged_war_cult = yes
+			}
+		}
+		text = job_bugged_templar_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				is_bugged_gravity_cult = yes
+			}
+		}
+		text = job_bugged_gravity_priest_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				is_bugged_life_cult = yes
+			}
+		}
+		text = job_bugged_lifescribe_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				is_bugged_machine_cult = yes
+			}
+		}
+		text = job_bugged_techno_priest_effect_desc
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		unity = 180
+		trigger = {
+			owner = {
+				is_spiritualist = yes
+				NOR = {
+					has_valid_civic = civic_death_cult
+					has_valid_civic = civic_death_cult_corporate
+				}
+			}
+		}
+	}
+	
+	ai_resource_production = {
+		unity = 137
+		society_research = 136
+		trigger = {
+			owner = {
+				is_spiritualist = yes
+				OR = {
+					has_valid_civic = civic_death_cult
+					has_valid_civic = civic_death_cult_corporate
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+district_ukn_rw_hive_node = {
+	base_buildtime = @district_ukn_rw_hive_node_5_build_time
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	prerequisites = {
+		"tech_hive_node"
+	}
+
+	abort_trigger = {
+		NOR = {
+#[HIVE] UNITY BUILDINGS
+			has_building = building_hive_node
+			has_building = building_hive_cluster
+			has_building = building_hive_confluence
+			has_building = building_ukn_hive_node_4
+			has_building = building_ukn_hive_node_5
+		}
+	}
+
+	show_on_uncolonized = {
+		exists = from
+		OR = {
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		OR = {
+#[HIVE] UNITY BUILDINGS
+			has_building = building_hive_node
+			has_building = building_hive_cluster
+			has_building = building_hive_confluence
+			has_building = building_ukn_hive_node_4
+			has_building = building_ukn_hive_node_5
+			has_district = district_ukn_rw_hive_node
+		}
+	}
+
+	potential = {
+		exists = owner
+		OR = {
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		OR = {
+#[HIVE] UNITY BUILDINGS
+			has_building = building_hive_node
+			has_building = building_hive_cluster
+			has_building = building_hive_confluence
+			has_building = building_ukn_hive_node_4
+			has_building = building_ukn_hive_node_5
+			has_district = district_ukn_rw_hive_node
+		}
+		NOR = {
+#[BASIC] UNITY BUILDINGS
+			has_building = building_bureaucratic_1
+			has_building = building_bureaucratic_2
+			has_building = building_bureaucratic_2
+			has_building = building_ukn_bureaucratic_4
+			has_building = building_ukn_bureaucratic_5
+#[MEGACORP] UNITY BUILDINGS
+			has_building = building_ukn_corporate_bureaucratic_1
+			has_building = building_ukn_corporate_bureaucratic_2
+			has_building = building_ukn_corporate_bureaucratic_3
+			has_building = building_ukn_corporate_monument_4
+			has_building = building_ukn_corporate_monument_5
+#[SPIRITUALISTS] UNITY BUILDINGS
+			has_building = building_temple
+			has_building = building_holotemple
+			has_building = building_sacred_nexus
+			has_building = building_ukn_temple_4
+			has_building = building_ukn_temple_5
+#[DEATH-CULT] UNITY BUILDINGS
+			has_building = building_sacrificial_temple_1
+			has_building = building_sacrificial_temple_2
+			has_building = building_sacrificial_temple_3
+			has_building = building_ukn_sacrificial_temple_4
+			has_building = building_ukn_sacrificial_temple_5
+#[MACHINE] UNITY BUILDINGS
+			has_building = building_uplink_node
+			has_building = building_network_junction
+			has_building = building_system_conflux
+			has_building = building_ukn_uplink_4
+			has_building = building_ukn_uplink_5
+		}
+	}
+
+	allow = {
+		OR = {
+#[HIVE] UNITY BUILDINGS
+			has_building = building_hive_node
+			has_building = building_hive_cluster
+			has_building = building_hive_confluence
+			has_building = building_ukn_hive_node_4
+			has_building = building_ukn_hive_node_5
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+#[RINGWORLD] UNITY DISTRICTS
+		district_ukn_rw_bureaucratic
+		district_ukn_rw_corporate_bureaucratic
+		district_ukn_rw_temple
+#		district_ukn_rw_hive_node
+		district_ukn_rw_uplink
+	}
+
+	show_tech_unlock_if = {
+		always = no
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = UKN_DISTRICT_AUTOMATION_DEFICIENCY
+	}
+
+	resources = {
+		category = planet_districts_ukn_rw_hive_node
+#########
+# COSTS #
+#########
+#[BASIC] AUTOMACHINES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			nanites = @district_ukn_rw_hive_node_5_cost_basic_nanites
+		}
+		
+		
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @district_ukn_rw_hive_node_5_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @district_ukn_rw_hive_node_5_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			ukn_meta_materials = @district_ukn_rw_hive_node_5_cost_basic_ukn_meta_materials
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @district_ukn_rw_hive_node_5_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @district_ukn_rw_hive_node_5_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @district_ukn_rw_hive_node_5_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+#			exotic_gases = @district_ukn_rw_hive_node_5_cost_advanced_exotic_gases
+			rare_crystals = @district_ukn_rw_hive_node_5_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @district_ukn_rw_hive_node_5_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @district_ukn_rw_hive_node_5_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @district_ukn_rw_hive_node_5_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @district_ukn_rw_hive_node_5_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @district_ukn_rw_hive_node_5_upkeep_energy
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		modifier = {
+			job_synapse_drone_add = 3
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		text = job_synapse_drone_effect_desc
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		unity = 180
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+district_ukn_rw_uplink = {
+	base_buildtime = @district_ukn_rw_uplink_5_build_time
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	prerequisites = {
+		"tech_planetary_government"
+	}
+
+	abort_trigger = {
+		NOR = {
+#[MACHINE] UNITY BUILDINGS
+			has_building = building_uplink_node
+			has_building = building_network_junction
+			has_building = building_system_conflux
+			has_building = building_ukn_uplink_4
+			has_building = building_ukn_uplink_5
+		}
+	}
+
+	show_on_uncolonized = {
+		exists = from
+		OR = {
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		OR = {
+#[MACHINE] UNITY BUILDINGS
+			has_building = building_uplink_node
+			has_building = building_network_junction
+			has_building = building_system_conflux
+			has_building = building_ukn_uplink_4
+			has_building = building_ukn_uplink_5
+			has_district = district_ukn_rw_uplink
+		}
+	}
+
+	potential = {
+		exists = owner
+		OR = {
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		OR = {
+#[MACHINE] UNITY BUILDINGS
+			has_building = building_uplink_node
+			has_building = building_network_junction
+			has_building = building_system_conflux
+			has_building = building_ukn_uplink_4
+			has_building = building_ukn_uplink_5
+			has_district = district_ukn_rw_uplink
+		}
+		NOR = {
+#[BASIC] UNITY BUILDINGS
+			has_building = building_bureaucratic_1
+			has_building = building_bureaucratic_2
+			has_building = building_bureaucratic_2
+			has_building = building_ukn_bureaucratic_4
+			has_building = building_ukn_bureaucratic_5
+#[MEGACORP] UNITY BUILDINGS
+			has_building = building_ukn_corporate_bureaucratic_1
+			has_building = building_ukn_corporate_bureaucratic_2
+			has_building = building_ukn_corporate_bureaucratic_3
+			has_building = building_ukn_corporate_monument_4
+			has_building = building_ukn_corporate_monument_5
+#[SPIRITUALISTS] UNITY BUILDINGS
+			has_building = building_temple
+			has_building = building_holotemple
+			has_building = building_sacred_nexus
+			has_building = building_ukn_temple_4
+			has_building = building_ukn_temple_5
+#[DEATH-CULT] UNITY BUILDINGS
+			has_building = building_sacrificial_temple_1
+			has_building = building_sacrificial_temple_2
+			has_building = building_sacrificial_temple_3
+			has_building = building_ukn_sacrificial_temple_4
+			has_building = building_ukn_sacrificial_temple_5
+#[HIVE] UNITY BUILDINGS
+			has_building = building_hive_node
+			has_building = building_hive_cluster
+			has_building = building_hive_confluence
+			has_building = building_ukn_hive_node_4
+			has_building = building_ukn_hive_node_5
+		}
+	}
+
+	allow = {
+		OR = {
+#[MACHINE] UNITY BUILDINGS
+			has_building = building_uplink_node
+			has_building = building_network_junction
+			has_building = building_system_conflux
+			has_building = building_ukn_uplink_4
+			has_building = building_ukn_uplink_5
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+#[RINGWORLD] UNITY DISTRICTS
+		district_ukn_rw_bureaucratic
+		district_ukn_rw_corporate_bureaucratic
+		district_ukn_rw_temple
+		district_ukn_rw_hive_node
+#		district_ukn_rw_uplink
+	}
+
+	show_tech_unlock_if = {
+		always = no
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+		}
+		text = UKN_DISTRICT_AUTOMATION_DEFICIENCY
+	}
+
+	resources = {
+		category = planet_districts_ukn_rw_uplink
+#########
+# COSTS #
+#########
+#[BASIC] AUTOMACHINES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			nanites = @district_ukn_rw_uplink_5_cost_basic_nanites
+		}
+		
+		
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @district_ukn_rw_uplink_5_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @district_ukn_rw_uplink_5_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			ukn_meta_materials = @district_ukn_rw_uplink_5_cost_basic_ukn_meta_materials
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @district_ukn_rw_uplink_5_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @district_ukn_rw_uplink_5_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @district_ukn_rw_uplink_5_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+#			exotic_gases = @district_ukn_rw_uplink_5_cost_advanced_exotic_gases
+			rare_crystals = @district_ukn_rw_uplink_5_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @district_ukn_rw_uplink_5_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @district_ukn_rw_uplink_5_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @district_ukn_rw_uplink_5_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @district_ukn_rw_uplink_5_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @district_ukn_rw_uplink_5_upkeep_energy
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		modifier = {
+			job_coordinator_add = 3
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		text = job_coordinator_effect_desc
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		unity = 180
+		trigger = {
+			always = yes
+		}
+	}
+}

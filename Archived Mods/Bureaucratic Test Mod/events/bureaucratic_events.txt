@@ -1,0 +1,189 @@
+namespace = bureaucratic
+
+event = {
+	id = bureaucratic.0
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		every_country = {
+				country_event = { id = bureaucratic.1 days = 12 }
+				country_event = { id = bureaucratic.1 days = 102 }
+				country_event = { id = bureaucratic.1 days = 192 }
+				country_event = { id = bureaucratic.1 days = 282 }
+			random_list = {
+				1 = { country_event = { id = bureaucratic.2 days = 8 } }
+				1 = { country_event = { id = bureaucratic.2 days = 98 } }
+				1 = { country_event = { id = bureaucratic.2 days = 188 } }
+				1 = { country_event = { id = bureaucratic.2 days = 288 } }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = bureaucratic.1
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		if = {
+			limit = {
+				empire_sprawl_cap_fraction >= 1
+			}
+		}
+		else_if = {
+			limit = {
+				empire_sprawl_cap_fraction >= 0.90
+			}
+			add_modifier = { modifier = bureaucratic_mod_9 days = 90 }
+			set_variable = { which = admin_cap_fraction value = 9 }
+		}
+		else_if = {
+			limit = {
+				empire_sprawl_cap_fraction >= 0.80
+			}
+			add_modifier = { modifier = bureaucratic_mod_8 days = 90 }
+			set_variable = { which = admin_cap_fraction value = 8 }
+		}
+		else_if = {
+			limit = {
+				empire_sprawl_cap_fraction >= 0.70
+			}
+			add_modifier = { modifier = bureaucratic_mod_7 days = 90 }
+			set_variable = { which = admin_cap_fraction value = 7 }
+		}
+		else_if = {
+			limit = {
+				empire_sprawl_cap_fraction >= 0.60
+			}
+			add_modifier = { modifier = bureaucratic_mod_6 days = 90 }
+			set_variable = { which = admin_cap_fraction value = 6 }
+		}
+		else_if = {
+			limit = {
+				empire_sprawl_cap_fraction >= 0.50
+			}
+			add_modifier = { modifier = bureaucratic_mod_5 days = 90 }
+			set_variable = { which = admin_cap_fraction value = 5 }
+		}
+		else_if = {
+			limit = {
+				empire_sprawl_cap_fraction >= 0.40
+			}
+			add_modifier = { modifier = bureaucratic_mod_4 days = 90 }
+			set_variable = { which = admin_cap_fraction value = 4 }
+		}
+		else_if = {
+			limit = {
+				empire_sprawl_cap_fraction >= 0.90
+			}
+			add_modifier = { modifier = bureaucratic_mod_3 days = 90 }
+			set_variable = { which = admin_cap_fraction value = 3 }
+		}
+		else_if = {
+			limit = {
+				empire_sprawl_cap_fraction >= 0.20
+			}
+			add_modifier = { modifier = bureaucratic_mod_2 days = 90 }
+			set_variable = { which = admin_cap_fraction value = 2 }
+		}
+		else_if = {
+			limit = {
+				empire_sprawl_cap_fraction >= 0.1
+			}
+			add_modifier = { modifier = bureaucratic_mod_1 days = 90 }
+			set_variable = { which = admin_cap_fraction value = 1 }
+		}
+		else = {
+			add_modifier = { modifier = bureaucratic_mod days = 90 }
+		}
+	}
+}
+
+country_event = {
+	id = bureaucratic.2
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		every_owned_planet = {
+			random_list = {
+				1 = { planet_event = { id = bureaucratic.3 days = 8 } }
+				1 = { planet_event = { id = bureaucratic.3 days = 23 } }
+				1 = { planet_event = { id = bureaucratic.3 days = 38 } }
+				1 = { planet_event = { id = bureaucratic.3 days = 53 } }
+				1 = { planet_event = { id = bureaucratic.3 days = 68 } }
+				1 = { planet_event = { id = bureaucratic.3 days = 83 } }
+			}
+		}	
+	}
+}
+
+planet_event = {
+	id = bureaucratic.3
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		every_deposit = {
+			if = {
+				limit = {
+					OR = {
+						is_deposit_type = d_ship_shelter_modifiers
+						is_deposit_type = d_planetary_administration_modifiers
+						is_deposit_type = d_planetary_capital_modifiers
+						is_deposit_type = d_system_capital_modifiers
+						is_deposit_type = d_habitat_modifiers
+						is_deposit_type = d_major_habitat_modifiers
+					}
+				}
+				remove_deposit = yes
+			}
+		}
+		if = {
+			limit = {
+				has_level_1_capital = yes
+				is_under_colonization = no
+			}
+			add_deposit = d_ship_shelter_modifiers
+		}
+		if = {
+			limit = {
+				has_level_2_capital = yes
+				is_under_colonization = no
+			}
+			add_deposit = d_planetary_administration_modifiers
+		}
+		if = {
+			limit = {
+				has_level_3_capital = yes
+				is_under_colonization = no
+			}
+			add_deposit = d_planetary_capital_modifiers
+		}
+		if = {
+			limit = {
+				has_level_4_capital = yes
+				is_under_colonization = no
+			}
+			add_deposit = d_system_capital_modifiers
+		}
+		if = {
+			limit = {
+				has_hab_1_capital = yes
+				is_under_colonization = no
+			}
+			add_deposit = d_habitat_modifiers
+		}
+		if = {
+			limit = {
+				has_hab_2_capital = yes
+				is_under_colonization = no
+			}
+			add_deposit = d_major_habitat_modifiers
+		}
+	}
+}
+
+

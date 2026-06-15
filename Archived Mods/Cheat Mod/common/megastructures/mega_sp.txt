@@ -1,0 +1,485 @@
+habitat_super_asgard = {
+	entity = ""
+	construction_entity = "orbital_habitat_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = -7 y = -7 }
+	build_time = 500
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 1000
+			influence = 10
+		}
+	}
+	construction_blocks_others = no
+
+	potential = {
+		is_ai=no
+		has_country_flag = use_a_mega
+	}
+
+	possible = {}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_surveyed_planet"
+				is_surveyed = {			# prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+			}
+			#custom_tooltip = {
+			#	fail_text = "requires_no_existing_megastructure"
+			#	NOR = {
+			#		has_planet_flag = has_megastructure
+			#		is_planet_class = pc_habitat
+			#	}
+			#}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_orbital_station"
+				has_orbital_station = no
+			}
+		}
+	}
+
+	# root = system
+	# from = country
+	ai_weight = {
+		factor = 0
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+
+	on_build_complete = {
+		spawn_planet = {
+			class = "pc_habitat"
+			location = fromfrom.planet
+			orbit_location = yes
+			orbit_angle_offset = 45
+			orbit_distance_offset = 12
+			size = 25
+			has_ring = no
+
+			init_effect = {
+				set_name = "ASGARD_PLANET_NAME_A"
+				set_planet_entity = {
+					entity = "orbital_habitat_entity"
+					graphical_culture = fromfrom
+				}
+				surveyed = {
+					set_surveyed = yes
+					surveyor = FROM
+				}
+				set_all_comms_surveyed = yes
+				kill_all_blockers = yes
+				if = {
+					limit = {
+						from = { has_ascension_perk = ap_master_builders }
+						NOT = { has_modifier = master_builders_habitats }
+					}
+					add_modifier = {
+						modifier = master_builders_habitats
+						days = -1
+					}
+				}
+				add_modifier = {
+					modifier = "super_asgard"
+					days = -1
+				}
+				#set_planet_flag = megastructure
+				set_planet_flag = habitat
+				set_planet_flag = graphical_style_changing
+			}
+		}
+		spawn_planet = {
+			class = "pc_habitat"
+			location = fromfrom.planet
+			orbit_location = yes
+			orbit_angle_offset = 135
+			orbit_distance_offset = 12
+			size = 25
+			has_ring = no
+
+			init_effect = {
+				set_name = "ASGARD_PLANET_NAME_B"
+				set_planet_entity = {
+					entity = "orbital_habitat_entity"
+					graphical_culture = fromfrom
+				}
+				surveyed = {
+					set_surveyed = yes
+					surveyor = FROM
+				}
+				set_all_comms_surveyed = yes
+				kill_all_blockers = yes
+				if = {
+					limit = {
+						from = { has_ascension_perk = ap_master_builders }
+						NOT = { has_modifier = master_builders_habitats }
+					}
+					add_modifier = {
+						modifier = master_builders_habitats
+						days = -1
+					}
+				}
+				add_modifier = {
+					modifier = "super_asgard"
+					days = -1
+				}
+				#set_planet_flag = megastructure
+				set_planet_flag = habitat
+				set_planet_flag = graphical_style_changing
+			}
+		}
+		spawn_planet = {
+			class = "pc_habitat"
+			location = fromfrom.planet
+			orbit_location = yes
+			orbit_angle_offset = 225
+			orbit_distance_offset = 12
+			size = 25
+			has_ring = no
+
+			init_effect = {
+				set_name = "ASGARD_PLANET_NAME_C"
+				set_planet_entity = {
+					entity = "orbital_habitat_entity"
+					graphical_culture = fromfrom
+				}
+				surveyed = {
+					set_surveyed = yes
+					surveyor = FROM
+				}
+				set_all_comms_surveyed = yes
+				kill_all_blockers = yes
+				if = {
+					limit = {
+						from = { has_ascension_perk = ap_master_builders }
+						NOT = { has_modifier = master_builders_habitats }
+					}
+					add_modifier = {
+						modifier = master_builders_habitats
+						days = -1
+					}
+				}
+				add_modifier = {
+					modifier = "super_asgard"
+					days = -1
+				}
+				#set_planet_flag = megastructure
+				set_planet_flag = habitat
+				set_planet_flag = graphical_style_changing
+			}
+		}
+		spawn_planet = {
+			class = "pc_habitat"
+			location = fromfrom.planet
+			orbit_location = yes
+			orbit_angle_offset = 315
+			orbit_distance_offset = 12
+			size = 25
+			has_ring = no
+
+			init_effect = {
+				set_name = "ASGARD_PLANET_NAME_D"
+				set_planet_entity = {
+					entity = "orbital_habitat_entity"
+					graphical_culture = fromfrom
+				}
+				surveyed = {
+					set_surveyed = yes
+					surveyor = FROM
+				}
+				set_all_comms_surveyed = yes
+				kill_all_blockers = yes
+				if = {
+					limit = {
+						from = { has_ascension_perk = ap_master_builders }
+						NOT = { has_modifier = master_builders_habitats }
+					}
+					add_modifier = {
+						modifier = master_builders_habitats
+						days = -1
+					}
+				}
+				add_modifier = {
+					modifier = "super_asgard"
+					days = -1
+				}
+				#set_planet_flag = megastructure
+				set_planet_flag = habitat
+				set_planet_flag = graphical_style_changing
+			}
+		}
+		fromfrom.planet = {
+			#set_planet_flag = has_megastructure
+			set_ring = no
+		}
+		remove_megastructure = fromfrom
+		from = {
+			country_event = { id = change_paradise_type.112 }
+			country_event = { id = utopia.61 }
+			country_event = { id = change_paradise_type.103 }
+		}
+	}
+}
+
+add_env_buff = {
+	entity = "invisible_turret_entity"
+	construction_entity = "orbital_habitat_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = yes
+	entity_offset = { x = -7 y = -7 }
+	build_time = 100
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 100
+			influence = 1
+		}
+	}
+	construction_blocks_others = no
+
+	potential = {
+		is_ai=no
+		has_country_flag = use_a_mega
+	}
+
+	possible = {}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_surveyed_planet"
+				is_surveyed = {			# prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = {
+					has_anomaly = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "is_not_a_habitable_planet_or_megastructure"
+				NOR = {
+					has_modifier = env_super_buff
+					vanilla_habitable_place = no
+				}
+			}
+		}
+	}
+
+	# root = system
+	# from = country
+	ai_weight = {
+		factor = 0
+	}
+
+	on_build_start = {}
+	on_build_cancel = {}
+
+	on_build_complete = {
+		fromfrom.planet = {
+			add_modifier = {
+				modifier = env_super_buff
+				days = -1
+			}
+		}
+		remove_megastructure = fromfrom
+	}
+}
+
+#new gateway
+
+player_gateway_alpha = {
+	entity = "gateway_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	build_outside_gravity_well = yes 						
+	show_galactic_map_icon = no
+	potential = {
+		is_ai=no
+		has_country_flag = use_a_mega
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_no_existing_gateway"
+			NOR = {
+				has_megastructure = gateway_0
+				has_megastructure = gateway_ruined
+				has_megastructure = gateway_restored
+				has_megastructure = gateway_final
+				has_megastructure = player_gateway_alpha
+			}
+		}
+	}
+	placement_rules = {}
+	build_time = 100
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 150
+			influence = 100
+		}
+	}
+	construction_blocks_others = no
+	bypass_type = gateway
+
+	ai_weight = {
+		factor = 0
+	}
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		from = {
+			if = {
+				limit = { NOT = { has_technology = tech_gateway_activation } }
+				give_technology = { message = no tech = tech_gateway_activation }
+			}
+			country_event = { id = apoc.14 }
+		}
+		activate_gateway = fromfrom
+		if = {
+			limit = { num_active_gateways = 1 }
+			random_megastructure = {
+				limit = { is_megastructure_type = gateway_ruined }
+				upgrade_megastructure_to = gateway_restored
+				finish_upgrade = yes
+			}
+		}
+		from = {
+			country_event = { id = apoc.13 }
+			country_event = { id = apoc.11 }
+		}
+	}
+}
+
+  hyperlane_control_node = {
+  entity = "invisible_turret_entity"
+  construction_entity = "construction_platform_entity"
+  portrait = "GFX_megastructure_construction_background"
+  place_entity_on_planet_plane = no
+    
+  potential = {
+    is_ai=no
+    has_country_flag = use_a_mega
+  }
+  possible = {
+    custom_tooltip = {
+      fail_text = "requires_no_existing_megastructure"
+      NOR = {
+        has_megastructure = hyperlane_add_node
+        has_megastructure = hyperlane_remove_node
+        has_megastructure = hyperlane_control_node
+      }
+    }
+  }
+  placement_rules = {
+    planet_possible = {
+      custom_tooltip = {
+        fail_text = "must_build_around_star"
+        is_star = yes
+      }
+    }
+  }
+  build_time = 100
+  resources = {
+		category = megastructures
+		cost = {
+			alloys = 100
+			influence = 1
+		}
+	}
+  construction_blocks_others = no
+
+  ai_weight = {
+    factor = 0
+  }
+  on_build_start = {}
+  on_build_cancel = {}
+  on_build_complete = {
+    spawn_megastructure = {
+      type = "hyperlane_add_node"
+      orbit_angle = 270
+      orbit_distance = 30
+      owner = from
+      location = solar_system
+    }
+    remove_megastructure = fromfrom
+  }
+}
+
+  hyperlane_add_node = {
+  entity = "extra_dimensional_02_starbase_exd_entity"
+  construction_entity = "extra_dimensional_03_starbase_exd_entity"
+  portrait = "GFX_evt_drifting_gateway"
+  place_entity_on_planet_plane = no
+
+  upgrade_from = {
+    hyperlane_remove_node    
+  }
+  potential = {
+    is_ai=no
+    has_country_flag = use_a_mega
+  }
+  build_time = 0
+
+  ai_weight = {
+    factor = 0
+  }
+  on_build_complete = {
+    every_neighbor_system = {
+      ignore_hyperlanes = yes
+      limit = {
+        NOT = { has_hyperlane_to = prev }
+      }
+      add_hyperlane = {
+        from = this
+        to = prev
+      }
+    } 
+  }
+}
+
+hyperlane_remove_node = {
+  entity = "extra_dimensional_03_starbase_exd_entity"
+  construction_entity = "extra_dimensional_02_starbase_exd_entity"
+  portrait = "GFX_evt_drifting_gateway"
+  place_entity_on_planet_plane = no
+
+   upgrade_from = {
+    hyperlane_add_node
+  } 
+  potential = {
+    is_ai=no
+    has_country_flag = use_a_mega
+  }
+  build_time = 0
+
+  ai_weight = {
+    factor = 0
+  }
+  on_build_complete = {
+    every_neighbor_system = {
+      ignore_hyperlanes = yes
+      limit = {
+        has_hyperlane_to = prev
+      }
+      remove_hyperlane = {
+        from = this
+        to = prev
+      }
+    }
+  }
+}

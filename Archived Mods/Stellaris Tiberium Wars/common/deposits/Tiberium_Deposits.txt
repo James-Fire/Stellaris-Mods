@@ -1,0 +1,410 @@
+d_blue_zone = {
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	planet_modifier = { 
+		district_blue_zone_max = 1
+	}
+	
+	potential = {
+		is_planet_class = pc_habitable_tiberium
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+b_blue_zone = {
+	use_for_min_max_adjustments = yes
+	time = 90
+	category = deposit_cat_blockers
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+		district_blue_zone_max = -1
+	}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 200
+			alloys = 20
+		}
+	}
+	
+	potential = {
+		is_planet_class = pc_habitable_tiberium
+	}
+	on_cleared = {
+		add_deposit = d_blue_zone
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+t_blue_zone = {
+	use_for_min_max_adjustments = yes
+	time = 90
+	category = deposit_cat_blockers
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+	}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 100
+			alloys = 20
+		}
+	}
+	
+	potential = {
+	}
+	on_cleared = {
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_yellow_zone = {
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	planet_modifier = {
+		district_yellow_zone_max = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { NOT = { has_technology = tech_tiberium_protection } }
+		}
+		modifier = {
+			pop_environment_tolerance = -0.01
+		}
+	}
+	
+	potential = {
+		is_planet_class = pc_habitable_tiberium
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+b_yellow_zone = {
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_blockers
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+		district_yellow_zone_max = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { NOT = { has_technology = tech_tiberium_protection } }
+		}
+		modifier = {
+			pop_environment_tolerance = -0.01
+		}
+	}
+	
+	potential = {
+		is_planet_class = pc_habitable_tiberium
+	}
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 200
+			alloys = 20
+		}
+	}
+	
+	on_cleared = {
+#		add_deposit = d_yellow_zone
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+t_yellow_zone = {
+	use_for_min_max_adjustments = yes
+	time = 150
+	category = deposit_cat_blockers
+	
+	planet_modifier = {
+		district_green_harvester_as_max = 1
+		district_farming_max = -1
+		district_mining_max = -1
+		district_generator_max = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { NOT = { has_technology = tech_tiberium_protection } }
+		}
+		modifier = {
+			pop_environment_tolerance = -0.01
+		}
+	}
+	
+	potential = {
+
+	}
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 100
+			alloys = 20
+		}
+	}
+	
+	on_cleared = {
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_red_zone = {
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	planet_modifier = { 
+		district_red_zone_max = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { NOT = { has_technology = tech_tiberium_protection } }
+		}
+		modifier = {
+			pop_environment_tolerance = -0.05
+		}
+	}
+	
+	potential = {
+		is_planet_class = pc_habitable_tiberium
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+b_red_zone = {
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_blockers
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+		district_red_zone_max = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { NOT = { has_technology = tech_tiberium_protection } }
+		}
+		modifier = {
+			pop_environment_tolerance = -0.05
+		}
+	}
+	
+	potential = {
+		is_planet_class = pc_habitable_tiberium
+	}
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 200
+			alloys = 20
+		}
+	}
+	
+	on_cleared = {
+#		add_deposit = d_red_zone
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+t_red_zone = {
+	use_for_min_max_adjustments = yes
+	time = 330
+	category = deposit_cat_blockers
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+		district_green_harvester_as_max = 1
+		district_blue_harvester_as_max = 1
+		district_farming_max = -1
+		district_mining_max = -1
+		district_generator_max = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { NOT = { has_technology = tech_tiberium_protection } }
+		}
+		modifier = {
+			pop_environment_tolerance = -0.05
+		}
+	}
+	
+	potential = {
+	}
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 100
+			alloys = 20
+		}
+	}
+	
+	on_cleared = {
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_green_tiberium_field = {
+	use_for_min_max_adjustments = yes
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			sr_tiberium_green = 3
+		}
+	}
+	
+	station = shipclass_mining_station
+	is_for_colonizable = no
+	
+	potential = {
+		is_planet_class = pc_uninhabitable_tiberium
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_blue_tiberium_field = {
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			sr_tiberium_blue = 3
+		}
+	}
+	
+	station = shipclass_mining_station
+	potential = {
+		is_planet_class = pc_uninhabitable_tiberium
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_green_tiberium_glacier = {
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			sr_tiberium_green = 9
+		}
+	}
+	station = shipclass_mining_station
+	
+	potential = {
+		is_planet_class = pc_uninhabitable_tiberium
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_blue_tiberium_glacier = {
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			sr_tiberium_blue = 9
+		}
+	}
+	
+	station = shipclass_mining_station
+	potential = {
+		is_planet_class = pc_uninhabitable_tiberium
+	}
+	
+	drop_weight = {
+		weight = 0
+
+	}
+}
+
+d_liquid_tiberium_pool = {
+	planet_modifier = { 
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_tiberium_asteroid = {
+	
+	category = deposit_cat_blockers
+	
+	planet_modifier = { 
+		building_initial_tiberium_research_lab_max = 2
+	}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 5000
+			alloys = 500
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}

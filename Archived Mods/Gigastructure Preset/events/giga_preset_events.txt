@@ -1,0 +1,300 @@
+namespace = giga_preset
+
+##This file has a sorting system. You can use ctrl-f to search for specific Megastructures, or one of these categories:
+##Vanilla Megastructures, Mod Ringworld, Gigastructures, Ships, Mod Megastructures, Terraforming Megastructures, Other settings, Habitats
+
+country_event = {
+	id = giga_preset.1
+	title = "giga_preset.1.name"
+	desc = "giga_preset.1.desc"
+	is_triggered_only = yes
+	
+	immediate = {
+	remove_flags_galactic_core = yes
+	remove_flags_galactic_fed = yes
+	###Do not touch anything in here if you want to choose which ones are active. Go to the next section that starts with 3 #.
+	###Uncomment the first line of each mega (Remove the first Number Symbol only) if you don't want them in your game. Do not touch anything above this (Unless you *really* know what you're doing).
+	###If you do want them in your game, uncomment the second line for the ones you do want, and append one of: 1 (Limit of 1), 2 (Limit of 2), 3 (Limit of 3), u (Unlimited), r (Repeatable)
+		##Vanilla Megastructures
+			#set_global_flag = vanilla_dyson_disabled          #Dyson Sphere
+			#set_global_flag = vanilla_dyson_capped_
+			#set_global_flag = vanilla_interstellar_disabled   #Interstellar Assembly
+			#set_global_flag = vanilla_interstellar_capped_
+			#set_global_flag = vanilla_matter_disabled         #Matter Decompressor
+			#set_global_flag = vanilla_matter_capped_
+			#set_global_flag = vanilla_art_disabled            #Mega Art Installation
+			#set_global_flag = vanilla_art_capped_ 
+			#set_global_flag = vanilla_shipyard_disabled       #MegaShipyard
+			#set_global_flag = vanilla_shipyard_capped_ 
+			#set_global_flag = vanilla_ringworld_disabled      #Ringworld
+			#set_global_flag = vanilla_ringworld_capped_ 
+			#set_global_flag = vanilla_nexus_disabled          #Science Nexus
+			#set_global_flag = vanilla_nexus_capped_ 
+			#set_global_flag = vanilla_array_disabled          #Sentry Array
+			#set_global_flag = vanilla_array_capped_ 
+			#set_global_flag = vanilla_strategic_disabled      #Strategic Coordination Center
+			#set_global_flag = vanilla_strategic_capped_ 
+			
+		##Mod Ringworld Stuff
+			#set_global_flag = cityring_disabled               #Ecumenopolis Ringworld Upgrade
+			#set_global_flag = cityring_capped_
+			#set_global_flag = hivering_disabled               #Hive World Upgrade
+			#set_global_flag = hivering_capped_
+			#set_global_flag = machinering_disabled            #Machine World Upgrade
+			#set_global_flag = machinering_capped_
+			#set_global_flag = upgrade_disabled                #Support Section Upgrade
+			#set_global_flag = upgrade_capped_
+			
+			#Ringworld Sizes- Using none of these means you can build all 4
+				#set_global_flag = giga_rings_van                  #Can only build the Vanilla Ringworld
+				#set_global_flag = giga_rings_tit                  #Can build up to Titanic Ringworlds
+				#set_global_flag = giga_rings_beh	               #Can build up to Behemoth Ringworlds
+				#set_global_flag = giga_rings_gar                  #Can build up to Gargantuan Ringworlds
+				
+		##Gigastructures
+			#set_global_flag = hraemc_disabled                 #HRAE-MC
+			#set_global_flag = hraemc_capped_
+			#set_global_flag = alderson_disabled               #Alderson Disk
+			#set_global_flag = alderson_capped_
+			#set_global_flag = hyperstructural_ass_disabled    #Hyperstructural Shipyard
+			#set_global_flag = hyperstructural_ass_capped_
+			#set_global_flag = stellarhabitat_disabled         #Interstellar Habitat
+			#set_global_flag = stellarhabitat_capped_
+			#set_global_flag = matrioshka_brain_disabled       #Matrioshka Brain
+			#set_global_flag = matrioshka_brain_capped_
+			#set_global_flag = nidavellir_disabled             #Nidavekkur Hyperforge
+			#set_global_flag = nidavellir_capped_
+			#set_global_flag = penrose_sphere_disabled         #Penrose Sphere
+			#set_global_flag = penrose_sphere_capped_
+			
+		##Ships
+			#set_global_flag = warmoon_disabled                #Attack Moon
+			#set_global_flag = warplanet_disabled              #Behemoth Planetcraft
+			#set_global_flag = systemcraft_disabled            #Systemcraft
+		
+		##Mod Kilostructures - Do Not require Mega-Engineering
+			#set_global_flag = asteroid_manufactory_disabled   #Asteroid Manufactory
+			#set_global_flag = asteroid_manufactory_capped_ 
+			#set_global_flag = orbital_artificial_eco_disabled #Orbital Artificial Ecosystem
+			#set_global_flag = orbital_artificial_eco_capped_
+			#set_global_flag = accelerator_disabled            #Stellar Particle Accelerator
+			#set_global_flag = accelerator_capped_
+			#set_global_flag = megabase_disabled               #Macroengineering Test Site
+			#set_global_flag = megabase_capped_
+		
+		##Mod Megastructures - Do require Mega-Engineering
+			#set_global_flag = drill_disabled                  #Stripmine
+			#set_global_flag = drill_capped_
+			#set_global_flag = crystal_disabled	               #Crystal Megabore
+			#set_global_flag = crystal_capped_
+			#set_global_flag = suppressor_disabled             #Fusion Suppressor
+			#set_global_flag = suppressor_capped_
+			#set_global_flag = kugel_disabled                  #Kugelblitz
+			#set_global_flag = kugel_capped_
+			#set_global_flag = disco_moon_disabled             #Disco Moon
+			#set_global_flag = disco_moon_capped_
+			#set_global_flag = gigaforge_disabled              #Neutronium Gigaforge
+			#set_global_flag = gigaforge_capped_
+			#set_global_flag = orbital_arcologies_disabled     #Orbital Arcology
+			#set_global_flag = orbital_arcologies_capped_
+			#set_global_flag = academy_disabled                #Orbital Bastion
+			#set_global_flag = academy_capped_
+			#set_global_flag = planetary_computer_disabled     #Planetary Computing Complex
+			#set_global_flag = planetary_computer_capped_
+			#set_global_flag = lifters_disabled                #Star Lifter
+			#set_global_flag = lifters_capped_
+			#set_global_flag = shipyard_disabled               #Equatorial Shipyard
+			#set_global_flag = shipyard_capped_
+			#set_global_flag = compressor_disabled             #Substellar Compressor
+			#set_global_flag = compressor_capped_
+			#set_global_flag = succ_disabled                   #SUCC
+			#set_global_flag = succ_capped_
+			#set_global_flag = orchid_disabled                 #Yggdrassil Gas Giant Orchid
+			#set_global_flag = orchid_capped_
+			
+		##Limit 1, Only uncomment, do not append any numbers.
+			set_global_flag = ndb_disabled                    #Nicoll-Dyson Beam
+			#set_global_flag = ndb_capped_1
+			#set_global_flag = psychic_beacon_disabled         #Psionic Beacon
+			#set_global_flag = psychic_beacon_capped_ 
+			#set_global_flag = siphon_disabled                 #Psionic Hypersiphon
+			#set_global_flag = siphon_capped_
+		
+		##Terraforming Megastructures
+			#set_global_flag = terraform_toxic_disabled        #Atmospheric Purifier
+			#set_global_flag = terraform_toxic_capped_
+			#set_global_flag = terraform_barren_disabled       #Dynamic Core Ignitor
+			#set_global_flag = terraform_barren_capped_
+			#set_global_flag = terraform_gasgiant_disabled     #Macroatmospheric Stabilizer
+			#set_global_flag = terraform_gasgiant_capped_
+			#set_global_flag = geothermal_disabled             #Geothermal Stabilizer
+			#set_global_flag = geothermal_capped_
+			#set_global_flag = glue_disabled           		   #GLUE
+			
+	###Uncomment these (Remove the first Number Symbol only) if you want them in your game, along with the Remove All line.
+	###The second Column determines the limit. Append one of: 1 (Limit of 1), 2 (Limit of 2), 3 (Limit of 3), u (Unlimited), r (Repeatable)
+
+			#remove_all_menu_flags = yes   #Uncomment this line to use anything below
+			#giga_disable_all_megas = yes  #Uncomment this line to use anything below.
+			
+		##Vanilla Megastructures
+			#remove_global_flag = vanilla_dyson_disabled          set_global_flag = vanilla_dyson_capped_          #Dyson Sphere
+			#remove_global_flag = vanilla_interstellar_disabled   set_global_flag = vanilla_interstellar_capped_   #nterstellar Assembly
+			#remove_global_flag = vanilla_matter_disabled         set_global_flag = vanilla_matter_capped_         #Matter Decompressor
+			#remove_global_flag = vanilla_art_disabled            set_global_flag = vanilla_art_capped_            #Mega Art Installation
+			#remove_global_flag = vanilla_shipyard_disabled       set_global_flag = vanilla_shipyard_capped_       #MegaShipyard
+			#remove_global_flag = vanilla_ringworld_disabled      set_global_flag = vanilla_ringworld_capped_      #Ringworld
+			#remove_global_flag = vanilla_nexus_disabled          set_global_flag = vanilla_nexus_capped_          #Science Nexus
+			#remove_global_flag = vanilla_array_disabled          set_global_flag = vanilla_array_capped_          #Sentry Array
+			#remove_global_flag = vanilla_strategic_disabled      set_global_flag = vanilla_strategic_capped_      #Strategic Coordination Center
+			
+		##Mod Ringworld Stuff
+			#remove_global_flag = cityring_disabled               set_global_flag = cityring_capped_               #Ecumenopolis Ringworld Upgrade
+			#remove_global_flag = hivering_disabled               set_global_flag = hivering_capped_               #Hive World Upgrade
+			#remove_global_flag = machinering_disabled            set_global_flag = machinering_capped_            #Machine World Upgrade
+			#remove_global_flag = upgrade_disabled                set_global_flag = upgrade_capped_                #Support Section Upgrade
+			
+			#Ringworld Sizes- Using none of these means you can build all 4. These options do not have a Limit associated with them
+				#remove_global_flag = giga_rings_van                  #Can only build the Vanilla Ringworld
+				#remove_global_flag = giga_rings_tit                  #Can build up to Titanic Ringworlds
+				#remove_global_flag = giga_rings_beh	              #Can build up to Behemoth Ringworlds
+				#remove_global_flag = giga_rings_gar                  #Can build up to Gargantuan Ringworlds
+				
+		##Gigastructures
+			#remove_global_flag = hraemc_disabled                 set_global_flag = hraemc_capped_                 #HRAE-MC
+			#remove_global_flag = alderson_disabled               set_global_flag = alderson_capped_               #Alderson Disk
+			#remove_global_flag = hyperstructural_ass_disabled    set_global_flag = hyperstructural_ass_capped_    #Hyperstructural Shipyard
+			#remove_global_flag = stellarhabitat_disabled         set_global_flag = stellarhabitat_capped_         #Interstellar Habitat
+			#remove_global_flag = matrioshka_brain_disabled       set_global_flag = matrioshka_brain_capped_       #Matrioshka Brain
+			#remove_global_flag = nidavellir_disabled             set_global_flag = nidavellir_capped_             #Nidavellir Hyperforge
+			#remove_global_flag = penrose_sphere_disabled         set_global_flag = penrose_sphere_capped_         #Penrose Sphere
+			
+		##Ships
+			#remove_global_flag = warmoon_disabled                set_global_flag = warmoon_capped_                #Attack Moon
+			#remove_global_flag = warplanet_disabled              set_global_flag = warplanet_capped_              #Behemoth Planetcraft
+			#remove_global_flag = systemcraft_disabled            set_global_flag = systemcraft_capped_            #Systemcraft
+			
+		##Mod Kilostructures - Do Not require Mega-Engineering
+			#remove_global_flag = asteroid_manufactory_disabled   set_global_flag = asteroid_manufactory_capped_   #Asteroid Manufactory
+			#remove_global_flag = orbital_artificial_eco_disabled set_global_flag = orbital_artificial_eco_capped_ #Orbital Artificial Ecosystem
+			#remove_global_flag = accelerator_disabled            set_global_flag = accelerator_capped_            #Stellar Particle Accelerator
+			#remove_global_flag = megabase_disabled               set_global_flag = megabase_capped_               #Macroengineering Test Site
+		
+		##Mod Megastructures - Do require Mega-Engineering
+			#remove_global_flag = drill_disabled                  set_global_flag = drill_capped_                  #Stripmine
+			#remove_global_flag = crystal_disabled	              set_global_flag = crystal_capped_                #Crystal Megabore
+			#remove_global_flag = suppressor_disabled             set_global_flag = suppressor_capped_             #Fusion Suppressor
+			#remove_global_flag = kugel_disabled                  set_global_flag = kugel_capped_                  #Kugelblitz
+			#remove_global_flag = disco_moon_disabled             set_global_flag = disco_moon_capped_             #Disco Moon
+			#remove_global_flag = gigaforge_disabled              set_global_flag = gigaforge_capped_              #Neutronium Gigaforge
+			#remove_global_flag = orbital_arcologies_disabled     set_global_flag = orbital_arcologies_capped_     #Orbital Arcology
+			#remove_global_flag = academy_disabled                set_global_flag = academy_capped_                #Orbital Bastion
+			#remove_global_flag = planetary_computer_disabled     set_global_flag = planetary_computer_capped_     #Planetary Computing Complex
+			#remove_global_flag = lifters_disabled                set_global_flag = lifters_capped_                #Star Lifter
+			#remove_global_flag = shipyard_disabled               set_global_flag = shipyard_capped_               #Equatorial Shipyard
+			#remove_global_flag = compressor_disabled             set_global_flag = compressor_capped_             #Substellar Compressor
+			#remove_global_flag = succ_disabled                   set_global_flag = succ_capped_                   #Super Umbegaseous Collecto Condensor SUCC
+			#remove_global_flag = orchid_disabled                 set_global_flag = orchid_capped_                 #Yggdrasil Orchid Complex
+			
+		##Limit 1, Only uncomment, do not append any numbers.
+			#remove_global_flag = psychic_beacon_disabled         set_global_flag = psychic_beacon_capped_1         #Psionic Beacon
+			#remove_global_flag = siphon_disabled                 set_global_flag = siphon_capped_1                 #Psionic Hypersiphon
+			#remove_global_flag = ndb_disabled                    set_global_flag = ndb_capped_1                   #Nicoll-Dyson Beam
+			
+		##Terraforming Megastructures
+			#remove_global_flag = terraform_toxic_disabled        set_global_flag = terraform_toxic_capped_        #Atmospheric Purifier
+			#remove_global_flag = terraform_barren_disabled       set_global_flag = terraform_barren_capped_       #Dynamic Core Ignitor
+			#remove_global_flag = terraform_gasgiant_disabled     set_global_flag = terraform_gasgiant_capped_     #Macroatmospheric Stabilizer
+			#remove_global_flag = geothermal_disabled             set_global_flag = geothermal_capped_             #Geothermal Stabilizer
+			#remove_global_flag = glue_disabled        			  set_global_flag = glue_capped_                   #Geothermal Stabilizer
+			
+			
+	###Other settings, separate from the other two sections.
+		##Fallen Empire Options	
+			#set_global_flag = fe_planetcrafts_disabled         #Disables Fallen Empire Planetcrafts
+			
+		##Galactic Core
+			#remove_flags_galactic_core = yes                   #Must Uncomment to use Core settings
+		
+			#set_global_flag = giga_core_disabled               #No Galactic Core
+			#set_global_flag = giga_core_inactive               #The Galactic Core is inactive, and may have either Aeternum or nothing
+			#set_global_flag = giga_core_active                 #The Galactic Core is active
+			#set_global_flag = giga_core_shuffle                #The Galactic Core is randomized
+			#set_global_flag = giga_core_inactive_aeternum      #Aeternum in an inactive Galactic Core is guaranteed
+			#set_global_flag = giga_core_inactive_empty         #An empty inactive Galactic Core is guaranteed
+			
+			##Aeternum Difficulty
+				#remove_flags_aeternum_difficulty = yes         #Must Uncomment to use Difficulty settings
+				
+				#set_global_flag = giga_core_aeternum_1
+				#set_global_flag = giga_core_aeternum_2
+				#set_global_flag = giga_core_aeternum_3
+		
+		##Galactic Federation (From the QSO)- Uncomment 1 of these, Must Choose
+			#set_global_flag = giga_galactic_fed_disabled
+			#set_global_flag = giga_galactic_fed_always
+			#set_global_flag = giga_galactic_fed_shuffle
+		
+		##Megastructure Build Cap- Uncomment 1 of these, Must Choose
+			#set_global_flag = giga_buildcap_1   #Enables buildng 1 megastructure at the same time
+			#set_global_flag = giga_buildcap_2   #Enables buildng 2 megastructures at the same time
+			#set_global_flag = giga_buildcap_3   #Enables buildng 3 megastructures at the same time
+			#set_global_flag = giga_buildcap_u   #Enables buildng infinite (+1000) megastructures at the same time
+		
+		##Megastructure Scaling Options
+			#set_global_flag = giga_dyson_scaling          #Enables Dyson Sphere Scaling
+			#set_global_flag = giga_matroishka_scaling     #Enables Matrioshka Brain Scaling
+			#set_global_flag = giga_lifter_scaling         #Enables Star Lifter Scaling
+			#set_global_flag = giga_o_stars_disabled       #Disables O Stars
+		
+		##Megastructure Influence Upkeep
+			#set_global_flag = giga_disable_influence_upkeep #Disables Influence upkeep on megas.
+		
+		##Paluushia
+			#set_global_flag = giga_paluushia              #Enables Paluushia
+			
+		##Achievements
+			#set_global_flag = giga_achievements_disabled  #Disables Gigastructures achievements.
+			
+		##Katzenartig Imperium
+			#set_global_flag = katzenartig_disabled        #Disables the Katzenartig Imperium.
+
+			#set_global_flag = katzenartig_always          #Sets the Katzenartig Imperium to always spawn
+			#set_global_flag = katzenartig_deathwish       #Sets the Katzenartig Imperium to always spawn, with buffs
+			#set_global_flag = katzenartig_stellarite      #Sets the Katzenartig Imperium to always spawn, with Stellarite buffs
+			#set_global_flag = katzenartig_improbable      #Sets the Katzenartig Imperium to always spawn, with Improbability buffs
+			
+		
+		##Event Horizon Offset Facility
+			#set_global_flag = ehof_disabled               #Disable EHOF entirely.
+			#remove_global_flag = ehof_ai_disabled         #Disables EHOF for the AI. Leave commented to use the other EHOF settings.
+			
+			#Append one of: 1, 2, 3, s, to have the limit on how many AI can build the EHOF set to 1, 2, 3, or random between 1 and 10.
+			#set_global_flag = ehof_ai_capped_
+			
+			#remove_global_flag = compound_disabled        #Compound is disabled by default. Uncomment to enable.
+			
+			#set_global_flag = compound_capped_1           #Sets the Compound to spawn after the Vanilla Crisis is dead.
+			#set_global_flag = compound_capped_2           #Sets the Compound to spawn alongside the Vanilla Crisis.
+			#set_global_flag = compound_capped_3           #Sets the Compound to spawn alongside the Vanilla Crisis, with an additional crisis.
+			#set_global_flag = compound_capped_4           #Sets the Compound to spawn alongside the Vanilla Crisis, with an additional 2 crises.
+			#set_global_flag = compound_capped_s           #Sets the Compound to spawn alongside the Vanilla Crisis, with an additional 1-2 crises.
+			
+		##Habitats and Elysiums
+			#set_global_flag = giga_habitats_disabled      #Habitats are default on. Uncomment to disable.
+			#remove_global_flag = elysium_capped_u         #Habitats are default uncapped. If you want to use a different setting, uncomment.
+			
+			#Limiters, Pick 1. If you pick system, append on of 3, 10, 25 to second column. If you pick pop, append one of 25, 50, 100.
+			#set_global_flag = giga_habitats_pop				 set_global_flag = giga_habitats_system_
+			#set_global_flag = giga_habitats_system				 set_global_flag = giga_habitats_pop_
+			#set_global_flag = elysium_capped_r
+		
+		
+		
+	###Do not touch anything below this (Unless you *really* know what you're doing).
+	}
+	
+	option = {
+		name = Okay
+	}
+}

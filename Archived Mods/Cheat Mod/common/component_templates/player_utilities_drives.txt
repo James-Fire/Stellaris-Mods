@@ -1,0 +1,46 @@
+# Icons set here are the ones show in the actual slot.
+
+@ftl4 = 1200
+
+@power4 = -10
+
+#############
+# UTILITIES #
+#############
+
+### Jump drives
+utility_component_template = {
+	key = "PLAYER_SUPER_JUMP_DRIVE_1"
+	size = small
+	icon = "GFX_ship_part_player_super_jump_drive_1"
+	icon_frame = 1
+	power = @power4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ftl4
+			energy = 12000
+		}
+	}
+	ftl = yes
+	jumpdrive = yes
+
+	ai_weight = {
+		weight = 2000
+	}
+
+	ship_modifier = {
+		ship_winddown_mult = -1.0
+		ship_windup_mult = -1.0
+		ship_ftl_jumpdrive_range_mult = 50.0
+		ship_jumpdrive_cooldown_mult = -1.0
+		ship_disengage_opportunities_add = 3000
+		ship_hull_add = 2500
+		ship_shield_add = 2500
+		ship_armor_add = 2500
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special }
+	prerequisites = { "tech_all_ascension" }
+	component_set = "ftl_components"
+}

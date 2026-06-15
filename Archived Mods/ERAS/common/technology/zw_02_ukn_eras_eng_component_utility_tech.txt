@@ -1,0 +1,1062 @@
+          #########################
+#---------## [UTILITY] ADDITIONS ##---------#
+          #########################
+		  
+###################
+# REGENNING ARMOR #
+###################
+
+### Quantum Rails (T7) ###----------------------
+tech_ukn_armor_sentient_metal_0 = {
+	area = engineering
+	cost = @tech_ukn_armor_sentient_metal_7_cost
+	tier = @tech_ukn_armor_sentient_metal_7_tier
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_ukn_materials_6" }
+	weight = @tech_ukn_armor_sentient_metal_7_weight
+
+#	gateway = power_generation
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_ARMOR_SENTIENT_METAL_0_TITLE"
+			desc = "TECH_UNLOCK_UKN_ARMOR_SENTIENT_METAL_0_DESC"
+		}
+	}
+	
+#P]	potential = {
+#P]		always = no
+#P]	}
+
+	weight_modifier = {
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+### Quantum Rails (T7) ###----------------------
+tech_ukn_armor_sentient_metal_1 = {
+	area = engineering
+	cost = @tech_ukn_armor_sentient_metal_8_cost
+	tier = @tech_ukn_armor_sentient_metal_8_tier
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_ukn_armor_sentient_metal_0" }
+	weight = @tech_ukn_armor_sentient_metal_8_weight
+
+#	gateway = power_generation
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_ARMOR_SENTIENT_METAL_1_TITLE"
+			desc = "TECH_UNLOCK_UKN_ARMOR_SENTIENT_METAL_1_DESC"
+		}
+	}
+	
+#P]	potential = {
+#P]		always = no
+#P]	}
+
+	weight_modifier = {
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+### Quantum Rails (T7) ###----------------------
+tech_ukn_armor_sentient_metal_planck = {
+	area = engineering
+	cost = @tech_ukn_armor_sentient_metal_p_cost
+	tier = @tech_ukn_armor_sentient_metal_p_tier
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_ukn_armor_sentient_metal_1" }
+	weight = @tech_ukn_armor_sentient_metal_p_weight
+
+#	gateway = power_generation
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_ARMOR_SENTIENT_METAL_PLANCK_TITLE"
+			desc = "TECH_UNLOCK_UKN_ARMOR_SENTIENT_METAL_PLANCK_DESC"
+		}
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_ukn_armor_sentient_metal_1
+#P]		has_technology = tech_ukn_materials_planck
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E-P) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ukn_materials_planck }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+### Quantum Rails (T7) ###----------------------
+tech_ukn_armor_living_metal_1 = {
+	area = engineering
+	cost = @tech_ukn_armor_living_metal_9_cost
+	tier = @tech_ukn_armor_living_metal_9_tier
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_ukn_materials_8" }
+	weight = @tech_ukn_armor_living_metal_9_weight
+
+#	gateway = power_generation
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_ARMOR_LIVING_METAL_1_TITLE"
+			desc = "TECH_UNLOCK_UKN_ARMOR_LIVING_METAL_1_DESC"
+		}
+	}
+	
+#P]	potential = {
+#P]		always = no
+#P]	}
+
+	weight_modifier = {
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+### Quantum Rails (T7) ###----------------------
+tech_ukn_armor_living_metal_2 = {
+	area = engineering
+	cost = @tech_ukn_armor_living_metal_10_cost
+	tier = @tech_ukn_armor_living_metal_10_tier
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_ukn_armor_living_metal_1" }
+	weight = @tech_ukn_armor_living_metal_10_weight
+
+#	gateway = power_generation
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_ARMOR_LIVING_METAL_2_TITLE"
+			desc = "TECH_UNLOCK_UKN_ARMOR_LIVING_METAL_2_DESC"
+		}
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_ukn_armor_living_metal_1
+#P]		has_technology = tech_ukn_materials_9
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E9) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ukn_materials_9 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 2.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+
+###################
+# RESILIENT ARMOR #
+###################
+
+### Neutronium Armor (T4) ###----------------------
+tech_ukn_armor_resilient_1 = {
+	area = engineering
+	cost = @tech_ukn_armor_resilient_4_cost
+	tier = @tech_ukn_armor_resilient_4_tier
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_ship_armor_3" }
+	weight = @tech_ukn_armor_resilient_4_weight
+
+#	gateway = power_generation
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_ARMOR_RESILIENT_1_TITLE"
+			desc = "TECH_UNLOCK_UKN_ARMOR_RESILIENT_1_DESC"
+		}
+	}
+	
+#P]	potential = {
+#P]		always = no
+#P]	}
+
+	weight_modifier = {
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+### Neutronium Armor (T4) ###----------------------
+tech_ukn_armor_resilient_2 = {
+	area = engineering
+	cost = @tech_ukn_armor_resilient_5_cost
+	tier = @tech_ukn_armor_resilient_5_tier
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_ship_armor_4" }
+	weight = @tech_ukn_armor_resilient_5_weight
+
+#	gateway = power_generation
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_ARMOR_RESILIENT_2_TITLE"
+			desc = "TECH_UNLOCK_UKN_ARMOR_RESILIENT_2_DESC"
+		}
+	}
+	
+#P]	potential = {
+#P]		always = no
+#P]	}
+
+	weight_modifier = {
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+### Electroweak Armor (T5) ###----------------------
+tech_ukn_armor_resilient_3 = {
+	area = engineering
+	cost = @tech_ukn_armor_resilient_6_cost
+	tier = @tech_ukn_armor_resilient_6_tier
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_ship_armor_5" }
+	weight = @tech_ukn_armor_resilient_6_weight
+
+#	gateway = power_generation
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_ARMOR_RESILIENT_3_TITLE"
+			desc = "TECH_UNLOCK_UKN_ARMOR_RESILIENT_3_DESC"
+		}
+	}
+	
+#P]	potential = {
+#P]		always = no
+#P]	}
+
+	weight_modifier = {
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+### Quasi-Material Armor (T6) ###----------------------
+tech_ukn_armor_resilient_4 = {
+	area = engineering
+	cost = @tech_ukn_armor_resilient_7_cost
+	tier = @tech_ukn_armor_resilient_7_tier
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_ukn_materials_6" }
+	weight = @tech_ukn_armor_resilient_7_weight
+
+#	gateway = power_generation
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_ARMOR_RESILIENT_4_TITLE"
+			desc = "TECH_UNLOCK_UKN_ARMOR_RESILIENT_4_DESC"
+		}
+	}
+	
+#P]	potential = {
+#P]		always = no
+#P]	}
+
+	weight_modifier = {
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+### Supersolid Armor (T7) ###----------------------
+tech_ukn_armor_resilient_5 = {
+	area = engineering
+	cost = @tech_ukn_armor_resilient_8_cost
+	tier = @tech_ukn_armor_resilient_8_tier
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_ukn_materials_7" }
+	weight = @tech_ukn_armor_resilient_8_weight
+
+#	gateway = power_generation
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_ARMOR_RESILIENT_5_TITLE"
+			desc = "TECH_UNLOCK_UKN_ARMOR_RESILIENT_5_DESC"
+		}
+	}
+	
+#P]	potential = {
+#P]		always = no
+#P]	}
+
+	weight_modifier = {
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+### Supersolid Armor (T7) ###----------------------
+tech_ukn_armor_resilient_planck = {
+	area = engineering
+	cost = @tech_ukn_armor_resilient_p_cost
+	tier = @tech_ukn_armor_resilient_p_tier
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_ukn_armor_resilient_5" }
+	weight = @tech_ukn_armor_resilient_p_weight
+
+#	gateway = power_generation
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_ARMOR_RESILIENT_PLANCK_TITLE"
+			desc = "TECH_UNLOCK_UKN_ARMOR_RESILIENT_PLANCK_DESC"
+		}
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_ukn_armor_resilient_5
+#P]		has_technology = tech_ukn_materials_planck
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E-P) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ukn_materials_planck }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+### Oscillative Armor (T8) ###----------------------
+tech_ukn_armor_resilient_6 = {
+	area = engineering
+	cost = @tech_ukn_armor_resilient_9_cost
+	tier = @tech_ukn_armor_resilient_9_tier
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_ukn_materials_8" }
+	weight = @tech_ukn_armor_resilient_9_weight
+
+#	gateway = power_generation
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_ARMOR_RESILIENT_6_TITLE"
+			desc = "TECH_UNLOCK_UKN_ARMOR_RESILIENT_6_DESC"
+		}
+	}
+	
+#P]	potential = {
+#P]		always = no
+#P]	}
+
+	weight_modifier = {
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+### Synchronic Armor (T9) ###----------------------
+tech_ukn_armor_resilient_7 = {
+	area = engineering
+	cost = @tech_ukn_armor_resilient_10_cost
+	tier = @tech_ukn_armor_resilient_10_tier
+	category = { materials }
+	ai_update_type = all
+	prerequisites = { "tech_ukn_armor_resilient_6" }
+	weight = @tech_ukn_armor_resilient_10_weight
+
+#	gateway = power_generation
+
+	modifier = {
+#		planet_technician_energy_produces_mult = 0.15
+	}
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_ARMOR_RESILIENT_7_TITLE"
+			desc = "TECH_UNLOCK_UKN_ARMOR_RESILIENT_7_DESC"
+		}
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_ukn_armor_resilient_6
+#P]		has_technology = tech_ukn_materials_9
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E9) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ukn_materials_9 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+
+#############
+# THRUSTERS #
+#############
+
+### Cyclonic Thrusters (T4) ###----------------------
+tech_ukn_thrusters_5 = {
+	area = engineering
+	cost = @tech_ukn_thrusters_5_cost
+	tier = @tech_ukn_thrusters_5_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_thrusters_4" }
+	weight = @tech_ukn_thrusters_5_weight
+
+	gateway = tech_ukn_thrusters_5_gateway
+
+	modifier = {
+		planet_resettlement_unemployed_mult = 0.10
+	}
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_THRUSTER_5_TITLE"
+			desc = "TECH_UNLOCK_UKN_THRUSTER_5_DESC"
+		}
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_thrusters_4
+#P]		has_technology = tech_zero_point_power
+#P]	}
+
+	weight_modifier = {
+		factor = 1.25
+#[ALL] (E4) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_zero_point_power }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+### Singularity Engines (T5) ###----------------------
+tech_ukn_thrusters_6 = {
+	area = engineering
+	cost = @tech_ukn_thrusters_6_cost
+	tier = @tech_ukn_thrusters_6_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_ukn_thrusters_5" }
+	weight = @tech_ukn_thrusters_6_weight
+
+	gateway = tech_ukn_thrusters_6_gateway
+
+	modifier = {
+		planet_resettlement_unemployed_mult = 0.10
+	}
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_THRUSTER_6_TITLE"
+			desc = "TECH_UNLOCK_UKN_THRUSTER_6_DESC"
+		}
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_ukn_thrusters_5
+#P]		has_technology = tech_ukn_power_6
+#P]	}
+
+	weight_modifier = {
+		factor = 1.25
+#[ALL] (E5) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ukn_power_6 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+### Spatial Engines (T6) ###----------------------
+tech_ukn_thrusters_7 = {
+	area = engineering
+	cost = @tech_ukn_thrusters_7_cost
+	tier = @tech_ukn_thrusters_7_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_ukn_thrusters_6" }
+	weight = @tech_ukn_thrusters_7_weight
+
+	gateway = tech_ukn_thrusters_7_gateway
+
+	modifier = {
+		planet_resettlement_unemployed_mult = 0.10
+	}
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_THRUSTER_7_TITLE"
+			desc = "TECH_UNLOCK_UKN_THRUSTER_7_DESC"
+		}
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_ukn_thrusters_6
+#P]		has_technology = tech_ukn_power_7
+#P]	}
+
+	weight_modifier = {
+		factor = 1.25
+#[ALL] (E6) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ukn_power_7 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+### Quantum Rails (T7) ###----------------------
+tech_ukn_thrusters_8 = {
+	area = engineering
+	cost = @tech_ukn_thrusters_8_cost
+	tier = @tech_ukn_thrusters_8_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_ukn_thrusters_7" }
+	weight = @tech_ukn_thrusters_8_weight
+
+	gateway = tech_ukn_thrusters_8_gateway
+
+	modifier = {
+		planet_resettlement_unemployed_mult = 0.10
+	}
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_THRUSTER_8_TITLE"
+			desc = "TECH_UNLOCK_UKN_THRUSTER_8_DESC"
+		}
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_ukn_thrusters_7
+#P]		has_technology = tech_ukn_power_8
+#P]	}
+
+	weight_modifier = {
+		factor = 1.25
+#[ALL] (E7) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ukn_power_8 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+### Quantum Rails (T7) ###----------------------
+tech_ukn_thrusters_planck = {
+	area = engineering
+	cost = @tech_ukn_thrusters_p_cost
+	tier = @tech_ukn_thrusters_p_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_ukn_thrusters_8" }
+	weight = @tech_ukn_thrusters_p_weight
+
+	gateway = tech_ukn_thrusters_planck_gateway
+
+	modifier = {
+		planet_resettlement_unemployed_mult = 0.10
+	}
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_THRUSTER_PLANCK_TITLE"
+			desc = "TECH_UNLOCK_UKN_THRUSTER_PLANCK_DESC"
+		}
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_ukn_thrusters_8
+#P]		has_technology = tech_ukn_power_planck
+#P]	}
+
+	weight_modifier = {
+		factor = 1.25
+#[ALL] (E-P) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ukn_power_planck }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+### Sub-Planck Rails (T8) ###----------------------
+tech_ukn_thrusters_9 = {
+	area = engineering
+	cost = @tech_ukn_thrusters_9_cost
+	tier = @tech_ukn_thrusters_9_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_ukn_thrusters_8" }
+	weight = @tech_ukn_thrusters_9_weight
+
+	gateway = tech_ukn_thrusters_9_gateway
+
+	modifier = {
+		planet_resettlement_unemployed_mult = 0.10
+	}
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_THRUSTER_9_TITLE"
+			desc = "TECH_UNLOCK_UKN_THRUSTER_9_DESC"
+		}
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_ukn_thrusters_8
+#P]		has_technology = tech_ukn_power_9
+#P]	}
+
+	weight_modifier = {
+		factor = 1.25
+#[ALL] (E8) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ukn_power_9 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+### Synchronic Engines (T9) ###----------------------
+tech_ukn_thrusters_10 = {
+	area = engineering
+	cost = @tech_ukn_thrusters_10_cost
+	tier = @tech_ukn_thrusters_10_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_ukn_thrusters_9" }
+	weight = @tech_ukn_thrusters_10_weight
+
+	gateway = tech_ukn_thrusters_10_gateway
+
+	modifier = {
+		planet_resettlement_unemployed_mult = 0.10
+	}
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_THRUSTER_10_TITLE"
+			desc = "TECH_UNLOCK_UKN_THRUSTER_10_DESC"
+		}
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_ukn_thrusters_9
+#P]		has_technology = tech_ukn_power_10
+#P]	}
+
+	weight_modifier = {
+		factor = 1.25
+#[ALL] (E9) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ukn_power_10 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+objectTypes = {
+	pdxmesh = {
+		name = "terran_torus_mesh"
+		file = "gfx/unit/terran_torus.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "Torun_ringShape"
+			index = 0
+			texture_diffuse = "terran_torus_diffuse.dds"
+			texture_normal = "terran_torus_normal.dds"
+			texture_specular = "terran_torus_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}

@@ -1,0 +1,12 @@
+trait_lanaza_habitability = {
+	cost = 0
+	initial = no
+	modification = no
+
+	randomized = no
+	allowed_archetypes = { BIOLOGICAL MACHINE ROBOT LITHOID }
+	modifier = {
+		pop_environment_tolerance = -5
+		pc_birch_habitability = 5
+	}
+}

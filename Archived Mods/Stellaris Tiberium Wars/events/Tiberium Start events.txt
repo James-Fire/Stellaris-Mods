@@ -1,0 +1,359 @@
+namespace = tiberium_start
+
+event = {
+	id = tiberium_start.1
+	hide_window = yes
+    is_triggered_only = yes	
+    immediate = {
+		every_country = {
+			if = {
+				limit = {
+					has_origin = origin_nuetral_tiberium
+					NOT = {
+						has_ethic = ethic_gestalt_consciousness
+					}
+				}
+				give_technology = { message = no tech = tech_tiberium_green }
+				give_technology = { message = no tech = tech_tiberium_blue }
+				give_technology = { message = no tech = tech_tiberium_liquid }
+				give_technology = { message = no tech = tech_tiberium_protection }
+				give_technology = { message = no tech = tech_tiberium_sonics }
+				set_country_flag = tib_research_finished
+				every_owned_planet = {
+					limit = {
+						is_homeworld = yes
+					}
+					set_planet_flag = tiberium_asteroid_collision
+					set_planet_flag = tiberium_sonic_protection
+					if = {
+						limit = {
+							NOT = { has_planet_flag = tiberium_variable_setup_done }
+						}
+						set_tiberium_variables = yes
+					}
+					remove_all_buildings = yes
+					while = {
+						count = 2
+						random_list = {
+							5 = { }
+							5 = {
+								add_deposit = t_yellow_zone
+								change_variable = { which = tiberium_total_count value = 1 }
+							}
+						}
+					}
+					add_deposit = t_yellow_zone
+					change_variable = { which = tiberium_total_count value = 1 }
+					add_deposit = t_red_zone
+					change_variable = { which = tiberium_total_count value = 2 }
+					add_deposit = d_tempestous_mountain
+
+					# 3 jobs
+					add_building = building_capital
+
+					# 2 jobs
+					add_building = building_research_lab_1
+					add_building = building_commercial_zone
+					
+					add_district = district_generator
+					
+					remove_district = district_city
+					
+					remove_district = district_mining
+					remove_district = district_mining
+					
+					add_district = district_blue_harvester_as
+					add_building = tiberium_blue_refinery
+					add_district = district_green_harvester_as
+					add_building = tiberium_green_refinery
+					
+					
+				}
+			}
+			else_if = {
+				limit = {
+					has_origin = origin_nuetral_tiberium
+					has_authority = auth_machine_intelligence
+				}
+				give_technology = { message = no tech = tech_tiberium_green }
+				give_technology = { message = no tech = tech_tiberium_blue }
+				give_technology = { message = no tech = tech_tiberium_liquid }
+				give_technology = { message = no tech = tech_tiberium_protection }
+				give_technology = { message = no tech = tech_tiberium_sonics }
+				set_country_flag = tib_research_finished
+				every_owned_planet = {
+					limit = {
+						is_homeworld = yes
+					}
+					set_planet_flag = tiberium_asteroid_collision
+					set_planet_flag = tiberium_sonic_protection
+					while = {
+						count = 3
+						random_list = {
+							5 = { }
+							5 = {
+								add_deposit = t_yellow_zone
+								ROOT = { change_variable = { which = tiberium_total_count value = 1 } }
+							}
+						}
+					}
+					add_deposit = t_red_zone
+					add_deposit = d_tempestous_mountain
+					remove_district = district_mining
+					remove_district = district_mining
+					remove_district = district_farming
+					if = {
+						limit = {
+							NOT = { has_planet_flag = tiberium_variable_setup_done }
+						}
+						set_tiberium_variables = yes
+					}
+					remove_all_buildings = yes
+					add_building = building_machine_capital
+					add_district = district_nexus
+					
+					add_district = district_blue_harvester_as
+					add_building = tiberium_blue_refinery
+					add_district = district_green_harvester_as
+					add_building = tiberium_green_refinery
+					change_variable = { which = tiberium_total_count value = 2 }
+					
+				}
+			}
+			else_if = {
+				limit = {
+					has_origin = origin_nuetral_tiberium
+					has_authority = auth_hive_mind
+				}
+				give_technology = { message = no tech = tech_tiberium_green }
+				give_technology = { message = no tech = tech_tiberium_blue }
+				give_technology = { message = no tech = tech_tiberium_liquid }
+				give_technology = { message = no tech = tech_tiberium_protection }
+				give_technology = { message = no tech = tech_tiberium_sonics }
+				set_country_flag = tib_research_finished
+				every_owned_planet = {
+					limit = {
+						is_homeworld = yes
+					}
+					set_planet_flag = tiberium_asteroid_collision
+					set_planet_flag = tiberium_sonic_protection
+					while = {
+						count = 3
+						random_list = {
+							5 = { }
+							5 = {
+								add_deposit = t_yellow_zone
+								change_variable = { which = tiberium_total_count value = 1 }
+							}
+						}
+					}
+					add_deposit = t_red_zone
+					add_deposit = d_tempestous_mountain
+					remove_district = district_mining
+					remove_district = district_mining
+					add_district = district_generator
+					if = {
+						limit = {
+							NOT = { has_planet_flag = tiberium_variable_setup_done }
+						}
+						set_tiberium_variables = yes
+					}
+					remove_all_buildings = yes
+					add_building = building_hive_capital
+					#remove_district = district_hive
+					
+					add_district = district_blue_harvester_as
+					add_building = tiberium_blue_refinery
+					add_district = district_green_harvester_as
+					add_building = tiberium_green_refinery
+					change_variable = { which = tiberium_total_count value = 2 }
+				}
+			}
+		}
+	}
+}
+
+event = {
+	id = tiberium_start.2
+	hide_window = yes
+    is_triggered_only = yes	
+    immediate = {
+		every_country = {
+			limit = { 
+				has_origin = origin_nuetral_tiberium
+			}
+			give_technology = { message = no tech = tech_tiberium_green }
+			give_technology = { message = no tech = tech_tiberium_blue }
+			give_technology = { message = no tech = tech_tiberium_liquid }
+			give_technology = { message = no tech = tech_tiberium_protection }
+		}
+	}
+}
+
+planet_event = {
+	id = tiberium_start.3
+	hide_window = yes
+    is_triggered_only = yes	
+    immediate = {
+		while = {
+			count = 3
+			random_owned_pop = {
+				limit = {
+					is_robot_pop = yes
+					has_trait = trait_mechanical
+				}
+				kill_pop = yes
+			}
+		}
+		while = {
+			limit = { num_pops < 27 }
+			create_pop = {
+				species = owner_main_species
+				ethos = random
+			}
+		}
+		while = {
+			count = 1
+			random_owned_pop = {
+				limit = {
+					is_robot_pop = yes
+					has_trait = trait_mechanical
+				}
+				kill_pop = yes
+			}
+		}
+		while = {
+			limit = { num_pops < 27 }
+			create_pop = {
+				species = owner_main_species
+				ethos = random
+			}
+		}
+	}
+}
+
+event = {
+	id = tiberium_start.4
+	hide_window = yes
+    is_triggered_only = yes	
+    immediate = {
+		every_galaxy_planet = {
+			limit = {
+				has_deposit = d_tiberium_asteroid
+			}
+			if = {
+				limit = {
+					NOT = { has_planet_flag = tiberium_variable_setup_done }
+				}
+				set_tiberium_variables = yes
+			}
+			while = {
+				count = 2
+				random_list = {
+					5 = { }
+					5 = {
+						add_deposit = t_red_zone
+					}
+				}
+			}
+			while = {
+				count = 3
+				random_list = {
+					5 = { }
+					5 = {
+						add_deposit = t_yellow_zone
+					}
+				}
+			}
+		}
+	}
+}
+
+event = {
+	id = tiberium_start.10
+	hide_window = yes
+    is_triggered_only = yes	
+    immediate = {
+		every_galaxy_planet = {
+			limit = {
+				OR = {
+					is_planet_class = pc_habitable_tiberium
+					is_planet_class = pc_uninhabitable_tiberium
+				}
+			}
+			if = {
+				limit = {
+					is_planet_class = pc_habitable_tiberium
+				}
+				add_deposit = d_tiberium_asteroid
+				set_planet_flag = tiberium_asteroid_collision
+				set_tiberium_variables = yes
+				while = {
+					count = 2
+					random_list = {
+						5 = { }
+						5 = {
+							add_deposit = d_red_zone
+						}
+					}
+				}
+				while = {
+					count = 7
+					random_list = {
+						5 = { }
+						5 = {
+							add_deposit = d_yellow_zone
+						}
+					}
+				}
+				while = {
+					limit = {
+						free_district_slots > 1
+						num_free_districts = { type = district_tiberium_refinery value > 0 }
+					}
+					add_district = district_tiberium_refinery
+					while = {
+						limit = {
+							has_district = district_tiberium_refinery
+						}
+						remove_district = district_tiberium_refinery
+						add_deposit = b_blue_zone
+					}
+				}
+				
+				every_deposit = {
+					limit = { is_deposit_type = b_blue_zone }
+					remove_deposit = yes
+					prev = { add_deposit = d_blue_zone }
+				}
+			}
+			else_if = {
+				limit = {
+					is_planet_class = pc_uninhabitable_tiberium
+				}
+				add_deposit = d_tiberium_asteroid
+				set_planet_flag = tiberium_asteroid_collision
+				set_tiberium_variables = yes
+				while = {
+					count = 2
+					random_list = {
+						5 = { }
+						5 = {
+							add_deposit = d_green_tiberium_glacier
+						}
+					}
+				}
+				while = {
+					count = 7
+					random_list = {
+						5 = { }
+						5 = {
+							add_deposit = d_green_tiberium_field
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

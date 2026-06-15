@@ -1,0 +1,79 @@
+##########################################################################
+# Robo Modifiers
+##########################################################################
+
+geth_1 = {		# 1-5 - animal level / no cognition, cannot perform even basic tasks
+	planet_jobs_physics_research_produces_mult = -2
+	planet_jobs_physics_research_produces_mult = -2
+	planet_jobs_society_research_produces_mult = -2
+	planet_jobs_minerals_produces_mult = -0.75
+	planet_jobs_energy_produces_mult = -2
+	planet_jobs_food_produces_mult = -1
+	planet_jobs_unity_produces_mult = -2
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_robots.dds"
+	icon_frame = 3
+}
+geth_2 = {		# from 5-12
+	planet_jobs_physics_research_produces_mult = -1
+	planet_jobs_physics_research_produces_mult = -1
+	planet_jobs_society_research_produces_mult = -1
+	planet_jobs_unity_produces_mult = -0.5
+	planet_jobs_energy_produces_mult = -0.75
+	planet_jobs_minerals_produces_mult = -0.25
+	planet_jobs_food_produces_mult = -0.5
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_robots.dds"
+	icon_frame = 2
+}
+geth_3 = {		# from 12-19
+	planet_jobs_physics_research_produces_mult = -0.25
+	planet_jobs_physics_research_produces_mult = -0.25
+	planet_jobs_society_research_produces_mult = -0.25
+	planet_jobs_unity_produces_mult = -0.2
+	planet_jobs_energy_produces_mult = -0.25
+	planet_jobs_minerals_produces_mult = 0.25
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_robots.dds"
+	icon_frame = 2
+}
+geth_4 = {		# 20-29
+	planet_jobs_physics_research_produces_mult = 0.5
+	planet_jobs_physics_research_produces_mult = 0.5
+	planet_jobs_society_research_produces_mult = 0.5
+	planet_jobs_unity_produces_mult = 0.25
+	planet_jobs_energy_produces_mult = 0.5
+	planet_jobs_minerals_produces_mult = 0.5
+	planet_jobs_food_produces_mult = 0.5
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_robots.dds"
+	icon_frame = 1
+}
+geth_5 = {		# >30
+	planet_jobs_physics_research_produces_mult = 0.75
+	planet_jobs_physics_research_produces_mult = 0.75
+	planet_jobs_society_research_produces_mult = 0.75
+	planet_jobs_unity_produces_mult = 0.5
+	planet_jobs_energy_produces_mult = 0.75
+	planet_jobs_minerals_produces_mult = 0.75
+	planet_jobs_food_produces_mult = 0.75
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_robots.dds"
+	icon_frame = 1
+}
+
+trait_robodesign_nanoswarm = {
+	shipclass_colonizer_build_cost_mult = -1
+	shipsize_colonizer_build_speed_mult = 9
+	planet_colony_development_speed_mult = 1
+	
+	planet_building_build_speed_mult = 1
+	megastructure_build_speed_mult = 1				# much faster building
+	building_time_mult = -0.75				
+	starbase_shipyard_build_speed_mult = 4			# incredibly fast ship building
+	planet_army_build_speed_mult = 9				# instant nano clouds that destroy everything
+	#planet_army_build_cost_mult = -0.25
+	ship_hull_regen_add_perc = 1					# big hull and armour regeneration
+	ship_armor_regen_add_perc = 1
+	planet_clear_blocker_time_mult = -1
+}

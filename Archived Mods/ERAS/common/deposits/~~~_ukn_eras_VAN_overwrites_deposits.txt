@@ -1,0 +1,18 @@
+# Void Dweller Origin
+
+d_arcane_replicator = {
+	is_for_colonizable = yes
+	icon = "d_station_reactor"
+	category = deposit_cat_rare
+
+	potential = { always = no }
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			alloys = 12
+			consumer_goods = 16
+			minerals = -10
+		}
+	}
+}

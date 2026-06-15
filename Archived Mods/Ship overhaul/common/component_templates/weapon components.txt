@@ -1,0 +1,76 @@
+
+utility_component_template = {
+	key = "SMALL_WEAPON_CAPACITOR_1"
+	size = small
+	icon = "GFX_ship_part_weapon_capacitor"
+	icon_frame = 1
+	power = -100
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+		}
+	}
+	
+	prerequisites = { "tech_fission_power" }
+	component_set = "WEAPON_CAPACITOR_1"
+	
+	modifier = {
+		ship_armor_add = 1
+		ship_fire_rate_mult = 0.075
+		ship_weapon_damage = 0.025
+	}
+	ai_weight = {
+		weight = 1
+	}
+}
+utility_component_template = {
+	key = "MEDIUM_WEAPON_CAPACITOR_1"
+	size = medium
+	icon = "GFX_ship_part_weapon_capacitor"
+	icon_frame = 1
+	power = -130
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 20
+		}
+	}
+	
+	prerequisites = { "tech_fission_power" }
+	component_set = "WEAPON_CAPACITOR_1"
+	
+	modifier = {
+		ship_armor_add = 1
+		ship_fire_rate_mult = 0.15
+		ship_weapon_damage = 0.05
+	}
+	ai_weight = {
+		weight = 1
+	}
+}
+utility_component_template = {
+	key = "LARGE_WEAPON_CAPACITOR_1"
+	size = large
+	icon = "GFX_ship_part_weapon_capacitor"
+	icon_frame = 1
+	power = -200
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 40
+		}
+	}
+	
+	prerequisites = { "tech_fission_power" }
+	component_set = "WEAPON_CAPACITOR_1"
+	
+	modifier = {
+		ship_armor_add = 1
+		ship_fire_rate_mult = 0.30
+		ship_weapon_damage = 0.10
+	}
+	ai_weight = {
+		weight = 1
+	}
+}

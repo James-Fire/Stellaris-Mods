@@ -1,0 +1,776 @@
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+
+#Updated Range on these
+
+# DEFAULT VALUES:
+# is_missile = no
+# is_beam = no
+# is_point_defence = no
+
+###################
+### AUTOCANNONS ###
+###################
+
+### Railed Autocannons (T2)
+weapon_component_template = {
+	key = "AUTOCANNON_1"
+	type = instant
+	size = small
+	#entity = "small_kinetic_gun_entity"
+	icon = "GFX_ship_part_ukn_autocannon_1"
+	icon_frame = 1
+    power = @ukn_autocannon_3_power
+	
+	damage = { min = @ukn_autocannon_3_dmg_min max = @ukn_autocannon_3_dmg_max }
+    windup = { min = @ukn_autocannon_3_windup_min max = @ukn_autocannon_3_windup_max }
+    total_fire_time = @ukn_autocannon_3_total_fire_time
+    range = @ukn_autocannon_3_range
+    accuracy = @ukn_autocannon_3_accuracy
+	
+    hull_damage = @ukn_autocannon_3_hull_damage_mult
+    armor_penetration = @ukn_autocannon_3_armor_penetration_mult
+    armor_damage = @ukn_autocannon_3_armor_damage_mult
+    shield_penetration = @ukn_autocannon_3_shield_penetration_mult
+    shield_damage = @ukn_autocannon_3_shield_damage_mult
+    tracking = @ukn_autocannon_3_tracking
+	
+	prerequisites = { "tech_autocannons_1" } #
+	component_set = "UKN_SET_AUTOCANNON_1"
+	projectile_gfx = "projectile_ukn_autocannon_1"
+	tags = { weapon_type_kinetic ukn_weapon_type_autocannon }
+	upgrades_to = "AUTOCANNON_2"
+	
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_small_t3_component_cost_minerals
+			alloys = @ukn_small_t3_component_cost_alloys
+#			ukn_meta_materials = @ukn_small_t3_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t3_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t3_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t3_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t3_component_cost_ukn_causalitons
+			exotic_gases = @ukn_small_t3_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t3_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_small_t3_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t3_armor_cost_ukn_meta_materials
+#			nanites = @ukn_small_t3_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_small_t3_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t3_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t3_component_upkeep_energy
+#			minerals = @ukn_small_t3_component_upkeep_minerals
+#			alloys = @ukn_small_t3_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t3_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t3_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t3_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t3_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t3_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t3_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t3_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_small_t3_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t3_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_small_t3_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_small_t3_component_upkeep_nanites
+#---
+			minerals = @ukn_small_t3_kinetics_upkeep_minerals
+			alloys = @ukn_small_t3_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t3_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_autocannon_t3
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------
+
+#~~~~~~~~~~Vanilla T1-T3 Autocannons Overwritten~~~~~~~~~~ (Vanilla File Nullified)
+
+### Hybrid Autocannons (T3)
+weapon_component_template = {
+	type = instant
+    power = @ukn_autocannon_4_power
+	
+	key = "AUTOCANNON_2"
+	size = small
+	#entity = "small_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_autocannon_2"
+	icon_frame = 1
+	
+	damage = { min = @ukn_autocannon_4_dmg_min max = @ukn_autocannon_4_dmg_max }
+    windup = { min = @ukn_autocannon_4_windup_min max = @ukn_autocannon_4_windup_max }
+    total_fire_time = @ukn_autocannon_4_total_fire_time
+    range = @ukn_autocannon_4_range
+    accuracy = @ukn_autocannon_4_accuracy
+	
+    hull_damage = @ukn_autocannon_4_hull_damage_mult
+    armor_penetration = @ukn_autocannon_4_armor_penetration_mult
+    armor_damage = @ukn_autocannon_4_armor_damage_mult
+    shield_penetration = @ukn_autocannon_4_shield_penetration_mult
+    shield_damage = @ukn_autocannon_4_shield_damage_mult
+    tracking = @ukn_autocannon_4_tracking
+	
+	prerequisites = { "tech_autocannons_2" }
+	component_set = "UKN_SET_AUTOCANNON_2"
+	projectile_gfx = "projectile_ukn_autocannon_2"
+	tags = { weapon_type_kinetic ukn_weapon_type_autocannon }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = "AUTOCANNON_3"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_small_t4_component_cost_minerals
+			alloys = @ukn_small_t4_component_cost_alloys
+			ukn_meta_materials = @ukn_small_t4_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t4_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t4_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t4_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t4_component_cost_ukn_causalitons
+			exotic_gases = @ukn_small_t4_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t4_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_small_t4_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t4_armor_cost_ukn_meta_materials
+#			nanites = @ukn_small_t4_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_small_t4_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t4_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t4_component_upkeep_energy
+#			minerals = @ukn_small_t4_component_upkeep_minerals
+#			alloys = @ukn_small_t4_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t4_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t4_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t4_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t4_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t4_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t4_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t4_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_small_t4_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t4_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_small_t4_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_small_t4_component_upkeep_nanites
+#---
+			minerals = @ukn_small_t4_kinetics_upkeep_minerals
+			alloys = @ukn_small_t4_kinetics_upkeep_alloys
+			ukn_meta_materials = @ukn_small_t4_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_autocannon_t4
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Phased Autocannons (T4)
+weapon_component_template = {
+	type = instant
+    power = @ukn_autocannon_5_power
+	
+	key = "AUTOCANNON_3"
+	size = small
+	#entity = "small_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_autocannon_3"
+	icon_frame = 1
+	
+	damage = { min = @ukn_autocannon_5_dmg_min max = @ukn_autocannon_5_dmg_max }
+    windup = { min = @ukn_autocannon_5_windup_min max = @ukn_autocannon_5_windup_max }
+    total_fire_time = @ukn_autocannon_5_total_fire_time
+    range = @ukn_autocannon_5_range
+    accuracy = @ukn_autocannon_5_accuracy
+	
+    hull_damage = @ukn_autocannon_5_hull_damage_mult
+    armor_penetration = @ukn_autocannon_5_armor_penetration_mult
+    armor_damage = @ukn_autocannon_5_armor_damage_mult
+    shield_penetration = @ukn_autocannon_5_shield_penetration_mult
+    shield_damage = @ukn_autocannon_5_shield_damage_mult
+    tracking = @ukn_autocannon_5_tracking
+	
+	prerequisites = { "tech_autocannons_3" }
+	component_set = "UKN_SET_AUTOCANNON_3"
+	projectile_gfx = "projectile_ukn_autocannon_3"
+	tags = { weapon_type_kinetic ukn_weapon_type_semi_guided_autocannon }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = "UKN_AUTOCANNON_4"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_small_t5_component_cost_minerals
+#			alloys = @ukn_small_t5_component_cost_alloys
+			ukn_meta_materials = @ukn_small_t5_component_cost_ukn_meta_materials
+			ukn_femtomatter = @ukn_small_t5_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t5_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t5_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t5_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_small_t5_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t5_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_small_t5_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t5_armor_cost_ukn_meta_materials
+#			nanites = @ukn_small_t5_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_small_t5_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t5_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t5_component_upkeep_energy
+#			minerals = @ukn_small_t5_component_upkeep_minerals
+#			alloys = @ukn_small_t5_component_upkeep_alloys
+			ukn_meta_materials = @ukn_small_t5_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t5_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t5_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t5_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t5_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t5_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t5_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_small_t5_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t5_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_small_t5_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_small_t5_component_upkeep_nanites
+#---
+#			minerals = @ukn_small_t5_kinetics_upkeep_minerals
+#			alloys = @ukn_small_t5_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t5_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+
+	ai_weight = {
+		weight = @ukn_component_weight_autocannon_t5
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_femtomatter value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Guided Autocannons [Ultra-Relativistic, Guided] (T5)
+weapon_component_template = {
+	type = instant
+    power = @ukn_autocannon_6_power
+	
+	key = "UKN_AUTOCANNON_4"
+	size = small
+	#entity = "small_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_autocannon_4"
+	icon_frame = 1
+	
+	damage = { min = @ukn_autocannon_6_dmg_min max = @ukn_autocannon_6_dmg_max }
+    windup = { min = @ukn_autocannon_6_windup_min max = @ukn_autocannon_6_windup_max }
+    total_fire_time = @ukn_autocannon_6_total_fire_time
+    range = @ukn_autocannon_6_range
+    accuracy = @ukn_autocannon_6_accuracy
+	
+    hull_damage = @ukn_autocannon_6_hull_damage_mult
+    armor_penetration = @ukn_autocannon_6_armor_penetration_mult
+    armor_damage = @ukn_autocannon_6_armor_damage_mult
+    shield_penetration = @ukn_autocannon_6_shield_penetration_mult
+    shield_damage = @ukn_autocannon_6_shield_damage_mult
+    tracking = @ukn_autocannon_6_tracking
+	
+	prerequisites = { "tech_ukn_autocannon_4" }
+	component_set = "UKN_SET_AUTOCANNON_4"
+	projectile_gfx = "projectile_ukn_autocannon_4"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_autocannon }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = "UKN_AUTOCANNON_5"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_small_t6_component_cost_minerals
+#			alloys = @ukn_small_t6_component_cost_alloys
+			ukn_meta_materials = @ukn_small_t6_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t6_component_cost_ukn_femtomatter
+			ukn_condensics = @ukn_small_t6_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t6_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t6_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_small_t6_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t6_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_small_t6_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t6_armor_cost_ukn_meta_materials
+#			nanites = @ukn_small_t6_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_small_t6_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t6_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t6_component_upkeep_energy
+#			minerals = @ukn_small_t6_component_upkeep_minerals
+#			alloys = @ukn_small_t6_component_upkeep_alloys
+			ukn_meta_materials = @ukn_small_t6_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t6_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t6_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t6_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t6_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t6_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t6_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_small_t6_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t6_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_small_t6_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_small_t6_component_upkeep_nanites
+#---
+#			minerals = @ukn_small_t6_kinetics_upkeep_minerals
+#			alloys = @ukn_small_t6_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t6_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+
+	ai_weight = {
+		weight = @ukn_component_weight_autocannon_t6
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_condensics value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+#~~~~~~~~~~Vanilla Overwrite End (Plasma T1-T3)~~~~~~~~~~
+
+### Superluminal Autocannons [Superluminal, Guided] (T6)
+weapon_component_template = {
+	key = "UKN_AUTOCANNON_5"
+	size = small
+	#entity = "small_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_autocannon_5"
+	icon_frame = 1
+    power = @ukn_autocannon_7_power
+	
+	damage = { min = @ukn_autocannon_7_dmg_min max = @ukn_autocannon_7_dmg_max }
+    windup = { min = @ukn_autocannon_7_windup_min max = @ukn_autocannon_7_windup_max }
+    total_fire_time = @ukn_autocannon_7_total_fire_time
+    range = @ukn_autocannon_7_range
+    accuracy = @ukn_autocannon_7_accuracy
+	
+    hull_damage = @ukn_autocannon_7_hull_damage_mult
+    armor_penetration = @ukn_autocannon_7_armor_penetration_mult
+    armor_damage = @ukn_autocannon_7_armor_damage_mult
+    shield_penetration = @ukn_autocannon_7_shield_penetration_mult
+    shield_damage = @ukn_autocannon_7_shield_damage_mult
+    tracking = @ukn_autocannon_7_tracking
+	
+	prerequisites = { "tech_ukn_autocannon_5" } #
+	component_set = "UKN_SET_AUTOCANNON_5"
+	projectile_gfx = "projectile_ukn_autocannon_5"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_autocannon }
+	upgrades_to = "UKN_AUTOCANNON_6"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_small_t7_component_cost_minerals
+#			alloys = @ukn_small_t7_component_cost_alloys
+			ukn_meta_materials = @ukn_small_t7_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t7_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t7_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_small_t7_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t7_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_small_t7_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t7_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_small_t7_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t7_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_small_t7_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_small_t7_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t7_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t7_component_upkeep_energy
+#			minerals = @ukn_small_t7_component_upkeep_minerals
+#			alloys = @ukn_small_t7_component_upkeep_alloys
+			ukn_meta_materials = @ukn_small_t7_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t7_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t7_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t7_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t7_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t7_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t7_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_small_t7_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t7_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_small_t7_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_small_t7_kinetics_upkeep_minerals
+#			alloys = @ukn_small_t7_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t7_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_autocannon_t7
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------
+
+### Supersolid Autocannons [Supersolid, Guided] (T7)
+weapon_component_template = {
+	key = "UKN_AUTOCANNON_6"
+	size = small
+	#entity = "small_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_autocannon_6"
+	icon_frame = 1
+    power = @ukn_autocannon_8_power
+	
+	damage = { min = @ukn_autocannon_8_dmg_min max = @ukn_autocannon_8_dmg_max }
+    windup = { min = @ukn_autocannon_8_windup_min max = @ukn_autocannon_8_windup_max }
+    total_fire_time = @ukn_autocannon_8_total_fire_time
+    range = @ukn_autocannon_8_range
+    accuracy = @ukn_autocannon_8_accuracy
+	
+    hull_damage = @ukn_autocannon_8_hull_damage_mult
+    armor_penetration = @ukn_autocannon_8_armor_penetration_mult
+    armor_damage = @ukn_autocannon_8_armor_damage_mult
+    shield_penetration = @ukn_autocannon_8_shield_penetration_mult
+    shield_damage = @ukn_autocannon_8_shield_damage_mult
+    tracking = @ukn_autocannon_8_tracking
+	
+	prerequisites = { "tech_ukn_autocannon_6" } #
+	component_set = "UKN_SET_AUTOCANNON_6"
+	projectile_gfx = "projectile_ukn_autocannon_6"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_autocannon }
+	upgrades_to = "UKN_AUTOCANNON_7"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_small_t8_component_cost_minerals
+#			alloys = @ukn_small_t8_component_cost_alloys
+			ukn_meta_materials = @ukn_small_t8_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t8_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t8_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_small_t8_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t8_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_small_t8_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t8_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_small_t8_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t8_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_small_t8_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_small_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t8_component_upkeep_energy
+#			minerals = @ukn_small_t8_component_upkeep_minerals
+#			alloys = @ukn_small_t8_component_upkeep_alloys
+			ukn_meta_materials = @ukn_small_t8_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t8_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t8_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t8_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t8_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t8_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t8_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_small_t8_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t8_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_small_t8_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_small_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_small_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t8_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_autocannon_t8
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------
+
+### Supersolid Autocannons [Supersolid, Guided] (T7)
+weapon_component_template = {
+	key = "UKN_AUTOCANNON_PLANCK"
+	size = small
+	#entity = "small_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_autocannon_planck"
+	icon_frame = 1
+    power = @ukn_autocannon_planck_power
+	
+	damage = { min = @ukn_autocannon_planck_dmg_min max = @ukn_autocannon_planck_dmg_max }
+    windup = { min = @ukn_autocannon_planck_windup_min max = @ukn_autocannon_planck_windup_max }
+    total_fire_time = @ukn_autocannon_planck_total_fire_time
+    range = @ukn_autocannon_planck_range
+    accuracy = @ukn_autocannon_planck_accuracy
+	
+    hull_damage = @ukn_autocannon_planck_hull_damage_mult
+    armor_penetration = @ukn_autocannon_planck_armor_penetration_mult
+    armor_damage = @ukn_autocannon_planck_armor_damage_mult
+    shield_penetration = @ukn_autocannon_planck_shield_penetration_mult
+    shield_damage = @ukn_autocannon_planck_shield_damage_mult
+    tracking = @ukn_autocannon_planck_tracking
+	
+	prerequisites = { "tech_ukn_autocannon_planck" } #
+	component_set = "UKN_SET_AUTOCANNON_PLANCK"
+	projectile_gfx = "projectile_ukn_autocannon_planck"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_autocannon }
+	upgrades_to = "UKN_AUTOCANNON_7"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_small_t_p_component_cost_minerals
+#			alloys = @ukn_small_t_p_component_cost_alloys
+			ukn_meta_materials = @ukn_small_t_p_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t_p_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t_p_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_small_t_p_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t_p_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_small_t_p_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t_p_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_small_t_p_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t_p_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_small_t_p_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_small_t_p_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t_p_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t_p_component_upkeep_energy
+#			minerals = @ukn_small_t_p_component_upkeep_minerals
+#			alloys = @ukn_small_t_p_component_upkeep_alloys
+			ukn_meta_materials = @ukn_small_t_p_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t_p_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t_p_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t_p_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t_p_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t_p_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t_p_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_small_t_p_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t_p_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_small_t_p_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_small_t_p_kinetics_upkeep_minerals
+#			alloys = @ukn_small_t_p_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t_p_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_autocannon_t_d
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = sr_dark_matter value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------
+
+### Oscillative Autocannons [Sub-Planck, Guided] (T8)
+weapon_component_template = {
+	key = "UKN_AUTOCANNON_7"
+	size = small
+	#entity = "small_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_autocannon_7"
+	icon_frame = 1
+    power = @ukn_autocannon_9_power
+	
+	damage = { min = @ukn_autocannon_9_dmg_min max = @ukn_autocannon_9_dmg_max }
+    windup = { min = @ukn_autocannon_9_windup_min max = @ukn_autocannon_9_windup_max }
+    total_fire_time = @ukn_autocannon_9_total_fire_time
+    range = @ukn_autocannon_9_range
+    accuracy = @ukn_autocannon_9_accuracy
+	
+    hull_damage = @ukn_autocannon_9_hull_damage_mult
+    armor_penetration = @ukn_autocannon_9_armor_penetration_mult
+    armor_damage = @ukn_autocannon_9_armor_damage_mult
+    shield_penetration = @ukn_autocannon_9_shield_penetration_mult
+    shield_damage = @ukn_autocannon_9_shield_damage_mult
+    tracking = @ukn_autocannon_9_tracking
+	
+	prerequisites = { "tech_ukn_autocannon_7" } #
+	component_set = "UKN_SET_AUTOCANNON_7"
+	projectile_gfx = "projectile_ukn_autocannon_7"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_autocannon }
+	upgrades_to = "UKN_AUTOCANNON_8"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_small_t9_component_cost_minerals
+#			alloys = @ukn_small_t9_component_cost_alloys
+#			ukn_meta_materials = @ukn_small_t9_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t9_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t9_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t9_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_small_t9_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_small_t9_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t9_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_small_t9_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t9_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_small_t9_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_small_t9_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t9_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t9_component_upkeep_energy
+#			minerals = @ukn_small_t9_component_upkeep_minerals
+#			alloys = @ukn_small_t9_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t9_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t9_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t9_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t9_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t9_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t9_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t9_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_small_t9_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t9_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_small_t9_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_small_t9_kinetics_upkeep_minerals
+#			alloys = @ukn_small_t9_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t9_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_autocannon_t9
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------
+
+### Stream Autocannons [Flux, Guided] (T9)
+weapon_component_template = {
+	key = "UKN_AUTOCANNON_8"
+	size = small
+	#entity = "small_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_autocannon_8"
+	icon_frame = 1
+    power = @ukn_autocannon_10_power
+	
+	damage = { min = @ukn_autocannon_10_dmg_min max = @ukn_autocannon_10_dmg_max }
+    windup = { min = @ukn_autocannon_10_windup_min max = @ukn_autocannon_10_windup_max }
+    total_fire_time = @ukn_autocannon_10_total_fire_time
+    range = @ukn_autocannon_10_range
+    accuracy = @ukn_autocannon_10_accuracy
+	
+    hull_damage = @ukn_autocannon_10_hull_damage_mult
+    armor_penetration = @ukn_autocannon_10_armor_penetration_mult
+    armor_damage = @ukn_autocannon_10_armor_damage_mult
+    shield_penetration = @ukn_autocannon_10_shield_penetration_mult
+    shield_damage = @ukn_autocannon_10_shield_damage_mult
+    tracking = @ukn_autocannon_10_tracking
+	
+	prerequisites = { "tech_ukn_autocannon_8" } #
+	component_set = "UKN_SET_AUTOCANNON_8"
+	projectile_gfx = "projectile_ukn_autocannon_8"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_autocannon }
+#	upgrades_to = "UKN_AUTOCANNON_9"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_small_t10_component_cost_minerals
+#			alloys = @ukn_small_t10_component_cost_alloys
+#			ukn_meta_materials = @ukn_small_t10_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t10_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t10_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t10_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_small_t10_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_small_t10_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t10_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_small_t10_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t10_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_small_t10_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_small_t10_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t10_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t10_component_upkeep_energy
+#			minerals = @ukn_small_t10_component_upkeep_minerals
+#			alloys = @ukn_small_t10_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t10_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t10_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t10_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t10_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t10_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t10_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t10_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_small_t10_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t10_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_small_t10_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_small_t10_kinetics_upkeep_minerals
+#			alloys = @ukn_small_t10_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t10_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_autocannon_t10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------

@@ -1,0 +1,21 @@
+# Triggers when the game starts
+on_game_start = {
+	events = {
+		tiberium_start.1
+		tiberium_start.2
+		tiberium_start.4
+		tiberium_start.10
+	}
+}
+
+# No scope, like on_game_start
+on_monthly_pulse = {
+	events = {
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		tiberium.1000
+	}
+}

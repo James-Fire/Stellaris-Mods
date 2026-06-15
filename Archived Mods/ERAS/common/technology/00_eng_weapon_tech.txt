@@ -1,0 +1,1405 @@
+          #########################
+#---------## [WEAPON] OVERWRITES ##---------#
+          #########################
+
+############
+# MISSILES #
+############
+
+### Muonic Fusion Missiles (T1) ###----------------------
+tech_missiles_1 = {
+	area = engineering
+	cost = 0
+	tier = 0
+	start_tech = yes
+	category = { propulsion }
+	ai_update_type = all
+}
+
+### Collapsic Missiles (T2) ###----------------------
+tech_missiles_2 = {
+	area = engineering
+	cost = @tech_ukn_missile_1_cost
+	tier = @tech_ukn_missile_1_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_missiles_1" }
+	weight = @tech_ukn_missile_1_weight
+
+	gateway = tech_ukn_missile_2_gateway
+
+	modifier = {
+		planet_clear_blocker_time_mult = -0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_missiles_1
+#P]		has_technology = tech_thrusters_2
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E1) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_thrusters_2 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+### Collapsic Missiles (T2) ###----------------------
+tech_missiles_3 = {
+	area = engineering
+	cost = @tech_ukn_missile_3_cost
+	tier = @tech_ukn_missile_3_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_missiles_2" }
+	weight = @tech_ukn_missile_3_weight
+
+	gateway = tech_ukn_missile_3_gateway
+
+	modifier = {
+		planet_clear_blocker_time_mult = -0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_missiles_2
+#P]		has_technology = tech_thrusters_3
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E2) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_thrusters_3 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+### Antimatter Missiles (T3) ###----------------------
+tech_missiles_4 = {
+	area = engineering
+	cost = @tech_ukn_missile_4_cost
+	tier = @tech_ukn_missile_4_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_missiles_3" }
+	weight = @tech_ukn_missile_4_weight
+
+	gateway = tech_ukn_missile_4_gateway
+
+	modifier = {
+		planet_clear_blocker_time_mult = -0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_missiles_3
+#P]		has_technology = tech_thrusters_4
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E3) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_thrusters_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+### Cyclonic Subspace Missiles (T4) ###----------------------
+tech_missiles_5 = {
+	area = engineering
+	cost = @tech_ukn_missile_5_cost
+	tier = @tech_ukn_missile_5_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_missiles_4" }
+	weight = @tech_ukn_missile_5_weight
+
+	gateway = tech_ukn_missile_5_gateway
+
+	modifier = {
+		planet_clear_blocker_time_mult = -0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_missiles_4
+#P]		has_technology = tech_ukn_thrusters_5
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E4) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ukn_thrusters_5 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+
+####################
+# SWARMER MISSILES #
+####################
+
+### Swarmer Missile Launchers (T2) ###----------------------
+tech_swarmer_missiles_1 = {
+	area = engineering
+	cost = @tech_ukn_swarmer_missile_3_cost
+	tier = @tech_ukn_swarmer_missile_3_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_missiles_3" }
+	weight = @tech_ukn_swarmer_missile_3_weight
+
+	gateway = tech_ukn_swarmer_missile_1_gateway
+
+	modifier = {
+		weapon_type_explosive_weapon_damage_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_missiles_3
+#P]	}
+
+	weight_modifier = {
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+### Whirlwind Missile Launchers (T3) ###----------------------
+tech_swarmer_missiles_2 = {
+	area = engineering
+	cost = @tech_ukn_swarmer_missile_4_cost
+	tier = @tech_ukn_swarmer_missile_4_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_swarmer_missiles_1" }
+	weight = @tech_ukn_swarmer_missile_4_weight
+
+	gateway = tech_ukn_swarmer_missile_2_gateway
+
+	modifier = {
+		weapon_type_explosive_weapon_damage_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_swarmer_missiles_1
+#P]		has_technology = tech_missiles_4
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E3) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_missiles_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+
+#############
+# TORPEDOES #
+#############
+
+### Space Torpedoes (T2) ###----------------------
+tech_torpedoes_1 = {
+	area = engineering
+	cost = @tech_ukn_torpedo_3_cost
+	tier = @tech_ukn_torpedo_3_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_missiles_3" }
+	weight = @tech_ukn_torpedo_3_weight
+
+	gateway = tech_ukn_torpedo_1_gateway
+
+	modifier = {
+		ship_armor_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_missiles_3
+#P]		has_technology = tech_engineering_2
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E2) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_engineering_2 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+### Antimatter Torpedoes (T3) ###----------------------
+tech_torpedoes_2 = {
+	area = engineering
+	cost = @tech_ukn_torpedo_4_cost
+	tier = @tech_ukn_torpedo_4_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_torpedoes_1" }
+	weight = @tech_ukn_torpedo_4_weight
+
+	gateway = tech_ukn_torpedo_2_gateway
+
+	modifier = {
+		ship_armor_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_torpedoes_1
+#P]		has_technology = tech_missiles_4
+#P]		has_technology = tech_engineering_3
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E3) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_missiles_4 }
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_engineering_3 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+### Cyclonic Subspace Torpedoes (T4) ###----------------------
+tech_torpedoes_3 = {
+	area = engineering
+	cost = @tech_ukn_torpedo_5_cost
+	tier = @tech_ukn_torpedo_5_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_torpedoes_2" }
+	weight = @tech_ukn_torpedo_5_weight
+
+	gateway = tech_ukn_torpedo_3_gateway
+
+	modifier = {
+		ship_armor_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_torpedoes_2
+#P]		has_technology = tech_missiles_5
+#P]		has_technology = tech_ukn_engineering_output_4
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E4) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_missiles_5 }
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ukn_engineering_output_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+
+################
+# MASS DRIVERS #
+################
+
+### Coilguns (T1) ###----------------------
+tech_mass_drivers_1 = {
+	area = engineering
+	cost = 0
+	tier = 0
+	start_tech = yes
+	category = { propulsion }
+	ai_update_type = all
+}
+
+### Railguns (T2) ###----------------------
+tech_mass_drivers_2 = {
+	area = engineering
+	cost = @tech_ukn_mass_driver_1_cost
+	tier = @tech_ukn_mass_driver_1_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_mass_drivers_1" }
+	weight = @tech_ukn_mass_driver_1_weight
+
+	gateway = tech_ukn_mass_driver_2_gateway
+
+	modifier = {
+		ship_speed_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_mass_drivers_1
+#P]		has_technology = tech_thrusters_2
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E1) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_thrusters_2 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+### Railguns (T2) ###----------------------
+tech_mass_drivers_3 = {
+	area = engineering
+	cost = @tech_ukn_mass_driver_3_cost
+	tier = @tech_ukn_mass_driver_3_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_mass_drivers_2" }
+	weight = @tech_ukn_mass_driver_3_weight
+
+	gateway = tech_ukn_mass_driver_3_gateway
+
+	modifier = {
+		ship_speed_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_mass_drivers_2
+#P]		has_technology = tech_thrusters_3
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E2) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_thrusters_3 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+### Hybrid Accelerators (T3) ###----------------------
+tech_mass_drivers_4 = {
+	area = engineering
+	cost = @tech_ukn_mass_driver_4_cost
+	tier = @tech_ukn_mass_driver_4_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_mass_drivers_3" }
+	weight = @tech_ukn_mass_driver_4_weight
+
+	gateway = tech_ukn_mass_driver_4_gateway
+
+	modifier = {
+		ship_speed_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_mass_drivers_3
+#P]		has_technology = tech_thrusters_4
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E3) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_thrusters_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+### Phased Accelerators (T4) ###----------------------
+tech_mass_drivers_5 = {
+	area = engineering
+	cost = @tech_ukn_mass_driver_5_cost
+	tier = @tech_ukn_mass_driver_5_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_mass_drivers_4" }
+	weight = @tech_ukn_mass_driver_5_weight
+
+	gateway = tech_ukn_mass_driver_5_gateway
+
+	modifier = {
+		ship_speed_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_mass_drivers_4
+#P]		has_technology = tech_ukn_thrusters_5
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E4) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ukn_thrusters_5 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+
+###############
+# AUTOCANNONS #
+###############
+
+### Railed Autocannons (T2) ###----------------------
+tech_autocannons_1 = {
+	area = engineering
+	cost = @tech_ukn_autocannon_3_cost
+	tier = @tech_ukn_autocannon_3_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_mass_drivers_3" }
+	weight = @tech_ukn_autocannon_3_weight
+
+	gateway = tech_ukn_autocannon_1_gateway
+
+	modifier = {
+		weapon_type_point_defense_weapon_fire_rate_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_mass_drivers_3
+#P]	}
+
+	weight_modifier = {
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+### Hybrid Autocannons (T3) ###----------------------
+tech_autocannons_2 = {
+	area = engineering
+	cost = @tech_ukn_autocannon_4_cost
+	tier = @tech_ukn_autocannon_4_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_autocannons_1" }
+	weight = @tech_ukn_autocannon_4_weight
+
+	gateway = tech_ukn_autocannon_2_gateway
+
+	modifier = {
+		weapon_type_point_defense_weapon_fire_rate_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_autocannons_1
+#P]		has_technology = tech_mass_drivers_4
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E3) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_mass_drivers_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+### Phased Autocannons (T4) ###----------------------
+tech_autocannons_3 = {
+	area = engineering
+	cost = @tech_ukn_autocannon_5_cost
+	tier = @tech_ukn_autocannon_5_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_autocannons_2" }
+	weight = @tech_ukn_autocannon_5_weight
+
+	gateway = tech_ukn_autocannon_3_gateway
+
+	modifier = {
+		weapon_type_point_defense_weapon_fire_rate_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_autocannons_2
+#P]		has_technology = tech_mass_drivers_5
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E4) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_mass_drivers_5 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+
+#####################
+# KINETIC ARTILLERY #
+#####################
+
+### Hybrid Autocannons (T3) ###----------------------
+tech_kinetic_artillery_1 = {
+	area = engineering
+	cost = @tech_ukn_kinetic_artillery_4_cost
+	tier = @tech_ukn_kinetic_artillery_4_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_mass_drivers_4" }
+	weight = @tech_ukn_kinetic_artillery_4_weight
+
+	gateway = tech_ukn_kinetic_artillery_1_gateway
+
+	modifier = {
+		weapon_type_kinetic_weapon_damage_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_mass_drivers_4
+#P]	}
+
+	weight_modifier = {
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+### Phased Autocannons (T4) ###----------------------
+tech_kinetic_artillery_2 = {
+	area = engineering
+	cost = @tech_ukn_kinetic_artillery_5_cost
+	tier = @tech_ukn_kinetic_artillery_5_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_kinetic_artillery_1" }
+	weight = @tech_ukn_kinetic_artillery_5_weight
+
+	gateway = tech_ukn_kinetic_artillery_2_gateway
+
+	modifier = {
+		weapon_type_kinetic_weapon_damage_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_kinetic_artillery_1
+#P]		has_technology = tech_mass_drivers_5
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E4) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_mass_drivers_5 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+
+###########
+# FLAK PD #
+###########
+
+### Flak Point Defense (T2) ###----------------------
+tech_flak_batteries_1 = {
+	area = engineering
+	cost = 0
+	tier = 0
+	start_tech = yes
+	category = { propulsion }
+	ai_update_type = all
+}
+
+### Flak Point Defense (T2) ###----------------------
+tech_flak_batteries_2 = {
+	area = engineering
+	cost = @tech_ukn_flak_pd_3_cost
+	tier = @tech_ukn_flak_pd_3_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_flak_batteries_1" }
+	weight = @tech_ukn_flak_pd_3_weight
+
+	gateway = tech_ukn_flak_pd_2_gateway
+
+	modifier = {
+#		planet_technician_energy_produces_mult = 0.15
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_flak_batteries_1
+#P]		has_technology = tech_mass_drivers_3
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E2) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_mass_drivers_3 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+### Scattershot Point Defense (T3) ###----------------------
+tech_flak_batteries_3 = {
+	area = engineering
+	cost = @tech_ukn_flak_pd_4_cost
+	tier = @tech_ukn_flak_pd_4_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_flak_batteries_2" }
+	weight = @tech_ukn_flak_pd_4_weight
+
+	gateway = tech_ukn_flak_pd_3_gateway
+
+	modifier = {
+#		planet_technician_energy_produces_mult = 0.15
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_flak_batteries_2
+#P]		has_technology = tech_mass_drivers_4
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E3) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_mass_drivers_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+
+##########################
+# KINETIC SUPERARTILLERY #
+##########################
+
+### Arced Subspace Macro-Disruptors (T4) ###----------------------
+tech_mass_accelerator_1 = {
+	area = engineering
+	cost = @tech_ukn_mass_accelerator_5_cost
+	tier = @tech_ukn_mass_accelerator_5_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_kinetic_artillery_2" "tech_battleships" }
+	weight = @tech_ukn_mass_accelerator_5_weight
+
+	gateway = tech_ukn_mass_accelerator_1_gateway
+	
+#P]	potential = {
+#P]		has_technology = tech_kinetic_artillery_2
+#P]		has_technology = tech_battleships
+#P]	}
+
+	weight_modifier = {
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+### Arced Higgs Macro-Disruptors (T5) ###----------------------
+tech_mass_accelerator_2 = {
+	area = engineering
+	cost = @tech_ukn_mass_accelerator_6_cost
+	tier = @tech_ukn_mass_accelerator_6_tier
+	category = { propulsion }
+	ai_update_type = all
+	prerequisites = { "tech_mass_accelerator_1" }
+	weight = @tech_ukn_mass_accelerator_6_weight
+
+	gateway = tech_ukn_mass_accelerator_2_gateway
+	
+#P]	potential = {
+#P]		has_technology = tech_mass_accelerator_1
+#P]		has_technology = tech_ukn_kinetic_artillery_3
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E5) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ukn_kinetic_artillery_3 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+#P]	potential = {
+#P]		has_technology = tech_ukn_X
+#P]		has_technology = tech_ukn_Y
+#P]	}
+
+#	weight_modifier = {
+#[ALL] (E1) Required Techs
+#[PHY] (E1) Boosting Techs
+#[SOC] (E1) Boosting Techs
+#[ENG] (E1) Boosting Techs
+#[ALL] (Other) Boosting/Debuffing
+
+          ###############################
+#---------## [ALL] NON-ALTERED VANILLA ##---------#
+          ###############################
+		  
+# ## Engineering - Weapon Technologies

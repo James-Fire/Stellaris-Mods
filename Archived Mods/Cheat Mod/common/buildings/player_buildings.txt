@@ -1,0 +1,1959 @@
+@player_production_1 = 20000
+@player_production_2 = 40000
+@player_production_3 = 60000
+
+      @player_rare_1 = 200
+      @player_rare_2 = 400
+      @player_rare_3 = 600
+
+    @player_energy_1 = 40000
+    @player_energy_2 = 80000
+    @player_energy_3 = 120000
+
+   @player_science_1 = 30000
+   @player_science_2 = 60000
+   @player_science_3 = 90000
+   
+   @player_job_num_1 = 10
+   @player_job_num_2 = 15
+   @player_job_num_3 = 20
+
+   @player_job_sp_num_1 = 2
+   @player_job_sp_num_2 = 3
+   @player_job_sp_num_3 = 4
+	
+     @player_unity_1 = 100
+     @player_unity_2 = 360
+     @player_unity_3 = 1440
+
+ @player_influence_1 = 1
+ @player_influence_2 = 2
+ @player_influence_3 = 3
+
+ @player_happiness_1 = 1.0
+ @player_happiness_2 = 1.5
+ @player_happiness_3 = 2.0
+ 
+ @player_stability_1 = 100
+ @player_stability_2 = 150
+ @player_stability_3 = 200
+ 
+@player_pop_growth_1 = 0.6
+@player_pop_growth_2 = 0.8
+@player_pop_growth_3 = 1.0
+
+  @player_fort_str_1 = -0.3
+  @player_fort_str_2 = -0.6
+  @player_fort_str_3 = -0.9
+
+ @player_navy_size_1 = 10000
+ @player_navy_size_2 = 20000
+ @player_navy_size_3 = 30000
+
+      @player_upkeep = 20
+        @player_time = 400
+        @player_cost = 200
+
+@player_build_speed_1 = 50.00
+@player_build_speed_2 = 75.00
+@player_build_speed_3 = 100.0
+
+ @player_fire_rate_1 = 0.50
+ @player_fire_rate_2 = 1.0
+ @player_fire_rate_3 = 1.5
+
+@player_damage_3 = 0.25
+
+@player_aiming_3 = 2000
+
+@player_army_damage_1 = 1.20
+@player_army_damage_2 = 2.40
+@player_army_damage_3 = 3.60
+
+@player_army_build_speed_1 = 5.0
+@player_army_build_speed_2 = 10.0
+@player_army_build_speed_3 = 20.0
+
+@player_ship_cost_1 = -0.20
+@player_ship_cost_2 = -0.35
+@player_ship_cost_3 = -0.50
+
+@player_ship_upgrade_1 = -0.20
+@player_ship_upgrade_2 = -0.50
+@player_ship_upgrade_3 = -0.80
+
+@player_ship_upkeep_1 = -0.20
+@player_ship_upkeep_2 = -0.60
+@player_ship_upkeep_3 = -1.0
+
+@player_ship_build_time_1 = 3.3
+@player_ship_build_time_2 = 6.6
+@player_ship_build_time_3 = 33.3
+
+@player_war_exhaustion_1 = -0.5
+@player_war_exhaustion_2 = -0.75
+@player_war_exhaustion_3 = -1.0
+
+@player_garrison_1 = 5
+@player_garrison_2 = 10
+@player_garrison_3 = 15
+
+@player_districts_1 = 6
+@player_districts_2 = 12
+@player_districts_3 = 18
+
+@player_megastructure_build_speed_mult_low_1 = 2
+@player_megastructure_build_speed_mult_low_2 = 4
+@player_megastructure_build_speed_mult_low_3 = 6
+
+@player_megastructure_build_speed_mult_1 = 6  
+@player_megastructure_build_speed_mult_2 = 12
+@player_megastructure_build_speed_mult_3 = 18
+
+@player_megastructure_build_speed_mult_adv_1 = 18
+@player_megastructure_build_speed_mult_adv_2 = 36
+@player_megastructure_build_speed_mult_adv_3 = 72
+
+@player_country_produces_mult_low_1 = 0.03
+@player_country_produces_mult_low_2 = 0.06
+@player_country_produces_mult_low_3 = 0.09
+
+@player_country_produces_mult_1 = 0.09
+@player_country_produces_mult_2 = 0.18
+@player_country_produces_mult_3 = 0.27
+
+@player_country_produces_mult_adv_1 = 0.3
+@player_country_produces_mult_adv_2 = 0.6
+@player_country_produces_mult_adv_3 = 1.2
+
+@Store1 = 20000000
+@Store2 = 35000000
+@Store3 = 50000000
+#ancient_archives
+
+    building_ancient_archives_player_1 = {
+  base_buildtime = @player_time
+  can_be_ruined = no
+
+  category = planet_buildings
+
+#  allow = {
+#	is_player_empire = yes
+#  }
+#  
+  potential = {
+#    exists = owner
+#    owner = { is_ai = no }
+  }
+
+  triggered_planet_modifier = {
+    potential = {
+      exists = owner
+      owner = {
+		is_ai = no
+		is_fallen_empire = yes
+	  }
+    }
+    job_fe_archivist_add = @player_job_num_1
+  }
+  
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_regular_empire = yes
+				is_fallen_empire = no
+				NOT = { has_authority = auth_united_fleet }
+			}
+		}
+		modifier = {
+			job_researcher_add = @player_job_num_1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_hive_empire = yes
+				is_fallen_empire = no
+			}
+		}
+		modifier = {
+			job_brain_drone_add = @player_job_num_1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_machine_empire = yes
+				is_fallen_empire = no
+			}
+		}
+		modifier = {
+			job_calculator_add = @player_job_num_1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				has_authority = auth_united_fleet
+				is_fallen_empire = no
+			}
+		}
+		modifier = {
+			job_uf_researcher_add = @player_job_num_1
+		}
+	}
+
+  resources = {
+	category = planet_buildings
+	cost = {
+		minerals = @player_cost
+    	}
+	produces = {
+		physics_research = @player_science_1
+		society_research = @player_science_1
+		engineering_research = @player_science_1
+		}
+    upkeep = {
+      energy = @player_upkeep
+    }
+  }
+	country_modifier = {
+		megastructure_build_speed_mult = @player_megastructure_build_speed_mult_low_1
+		country_produces_mult = @player_country_produces_mult_low_1
+		num_tech_alternatives_add = 1
+	}
+  upgrades = {
+    building_ancient_archives_player_2
+  }
+
+  prerequisites = { tech_ai_player }
+
+  ai_weight = {
+    weight = 0
+    modifier = {
+      weight = 10
+      from = {
+        owner = {
+          has_technology = tech_ai_player
+          has_country_flag = smart_governor
+        }
+      }
+    }
+  }
+}
+
+  building_ancient_archives_player_2 = {
+  base_buildtime = @player_time
+  can_be_ruined = no
+  can_build = no
+
+  category = planet_buildings
+
+#  allow = {
+#	is_player_empire = yes
+#  }
+#  
+  potential = {
+#    exists = owner
+#    owner = { is_ai = no }
+  }
+
+  triggered_planet_modifier = {
+    potential = {
+      exists = owner
+      owner = {
+		is_ai = no
+		is_fallen_empire = yes
+	  }
+    }
+    job_fe_archivist_add = @player_job_num_2
+  }
+  
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_regular_empire = yes
+				is_fallen_empire = no
+				NOT = { has_authority = auth_united_fleet }
+			}
+		}
+		modifier = {
+			job_researcher_add = @player_job_num_2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_hive_empire = yes
+				is_fallen_empire = no
+			}
+		}
+		modifier = {
+			job_brain_drone_add = @player_job_num_2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_machine_empire = yes
+				is_fallen_empire = no
+			}
+		}
+		modifier = {
+			job_calculator_add = @player_job_num_2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				has_authority = auth_united_fleet
+				is_fallen_empire = no
+			}
+		}
+		modifier = {
+			job_uf_researcher_add = @player_job_num_2
+		}
+	}
+
+  resources = {
+	category = planet_buildings
+    cost = {
+      minerals = @player_cost
+    }
+    produces = {
+      physics_research = @player_science_2
+      society_research = @player_science_2
+      engineering_research = @player_science_2
+    }
+    upkeep = {
+      energy = @player_upkeep
+    }
+  }
+
+	country_modifier = {
+		megastructure_build_speed_mult = @player_megastructure_build_speed_mult_low_2
+		country_produces_mult = @player_country_produces_mult_low_2
+		num_tech_alternatives_add = 2
+	}
+
+  upgrades = {
+    building_ancient_archives_player_3
+  }
+
+  prerequisites = { tech_ai_player }
+}
+
+  building_ancient_archives_player_3 = {
+  base_buildtime = @player_time
+  can_be_ruined = no
+  can_build = no
+
+  category = planet_buildings
+
+#  allow = {
+#	is_player_empire = yes
+#  }
+#  
+  potential = {
+#    exists = owner
+#    owner = { is_ai = no }
+  }
+
+  triggered_planet_modifier = {
+    potential = {
+      exists = owner
+      owner = {
+		is_ai = no
+		is_fallen_empire = yes
+	  }
+    }
+    job_fe_archivist_add = @player_job_num_3
+  }
+  
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_regular_empire = yes
+				is_fallen_empire = no
+			}
+		}
+		modifier = {
+			job_researcher_add = @player_job_num_3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_hive_empire = yes
+				is_fallen_empire = no
+				NOT = { has_authority = auth_united_fleet }
+			}
+		}
+		modifier = {
+			job_brain_drone_add = @player_job_num_3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_machine_empire = yes
+				is_fallen_empire = no
+			}
+		}
+		modifier = {
+			job_calculator_add = @player_job_num_3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				has_authority = auth_united_fleet
+				is_fallen_empire = no
+			}
+		}
+		modifier = {
+			job_uf_researcher_add = @player_job_num_2
+		}
+	}
+
+  resources = {
+	category = planet_buildings
+    cost = {
+      minerals = @player_cost
+    }
+    produces = {
+      physics_research = @player_science_3
+      society_research = @player_science_3
+      engineering_research = @player_science_3
+    }
+    upkeep = {
+      energy = @player_upkeep
+    }
+  }
+	country_modifier = {
+		megastructure_build_speed_mult = @player_megastructure_build_speed_mult_low_3
+		country_produces_mult = @player_country_produces_mult_low_3
+		num_tech_alternatives_add = 3
+	}
+  upgrades = {
+  }
+
+  prerequisites = { tech_ai_player }
+}
+
+#ancient_factory
+
+  building_ancient_factory_player_1 = {
+  base_buildtime = @player_time
+  can_be_ruined = no
+
+  category = planet_buildings
+
+#  allow = {
+#	is_player_empire = yes
+#  }
+#  
+  potential = {
+#    exists = owner
+#    owner = { is_ai = no }
+  }
+
+  	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_regular_empire = yes
+				NOT = { has_authority = auth_united_fleet }
+			}
+		}
+		modifier = {
+			job_miner_add = @player_job_num_1
+			job_foundry_add = @player_job_num_1
+			job_translucer_add = @player_job_sp_num_1
+			job_chemist_add = @player_job_sp_num_1
+			job_gas_refiner_add = @player_job_sp_num_1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_mining_drone_add = @player_job_num_1
+			job_alloy_drone_add = @player_job_num_1
+			job_translucer_drone_add = @player_job_sp_num_1
+			job_chemist_drone_add = @player_job_sp_num_1
+			job_gas_refiner_drone_add = @player_job_sp_num_1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				has_authority = auth_united_fleet
+				is_fallen_empire = no
+			}
+		}
+		modifier = {
+			job_uf_hm_alloys_add = @player_job_sp_num_1
+			job_soul_bore_engineer_add = @player_job_sp_num_1
+			job_uf_rare_resource_add = @player_job_sp_num_1
+		}
+	}
+
+
+  resources = {
+	category = planet_buildings
+    cost = {
+      minerals = @player_cost
+    }
+    produces = {
+	minerals = @player_production_1
+	alloys = @player_production_1
+	consumer_goods = @player_production_1
+	volatile_motes = @player_production_1
+	exotic_gases = @player_production_1
+	rare_crystals = @player_production_1
+	sr_living_metal = @player_production_1
+	sr_zro = @player_production_1
+	sr_dark_matter = @player_production_1
+	nanites = @player_production_1
+	sr_crystal_adf = @player_production_1
+	sr_parts_adf = @player_production_1
+	sr_iodizium = @player_production_1
+	sr_solar_energy = @player_production_1
+	sr_magical_neutronium = @player_production_1
+	sr_psionic_sublimate = @player_production_1
+	acot_sr_dark_energy = @player_production_1
+	acot_sr_stellarite = @player_production_1
+	giga_sr_amb_megaconstruction = @player_production_1
+	ehof_sr_negative_mass = @player_production_1
+	ehof_sr_sentient_metal = @player_production_1
+	sr_stellar_plasma = @player_production_1
+	aot_sr_runic_power = @player_production_1
+	sm_sr_perfect_runic_energy = @player_production_1
+	acot_sr_light_matter = @player_production_1
+    }
+    upkeep = {
+      energy = @player_upkeep
+    }
+  }
+	country_modifier = {
+	megastructure_build_speed_mult = @player_megastructure_build_speed_mult_low_1
+	country_produces_mult = @player_country_produces_mult_low_1
+	}
+  upgrades = {
+    building_ancient_factory_player_2
+  }
+
+  prerequisites = { tech_ai_player }
+
+  ai_weight = {
+    weight = 0
+    modifier = {
+      weight = 10
+      from = {
+        owner = {
+          has_technology = tech_ai_player
+          has_country_flag = smart_governor
+        }
+      }
+    }
+  }
+}
+
+  building_ancient_factory_player_2 = {
+  base_buildtime = @player_time
+  can_be_ruined = no
+  can_build = no
+
+  category = planet_buildings
+
+#  allow = {
+#	is_player_empire = yes
+#  }
+#  
+  potential = {
+#    exists = owner
+#    owner = { is_ai = no }
+  }
+
+  	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_regular_empire = yes
+				NOT = { has_authority = auth_united_fleet }
+			}
+		}
+		modifier = {
+			job_miner_add = @player_job_num_2
+			job_foundry_add = @player_job_num_2
+			job_translucer_add = @player_job_sp_num_2
+			job_chemist_add = @player_job_sp_num_2
+			job_gas_refiner_add = @player_job_sp_num_2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_mining_drone_add = @player_job_num_2
+			job_alloy_drone_add = @player_job_num_2
+			job_translucer_drone_add = @player_job_sp_num_2
+			job_chemist_drone_add = @player_job_sp_num_2
+			job_gas_refiner_drone_add = @player_job_sp_num_2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				has_authority = auth_united_fleet
+				is_fallen_empire = no
+			}
+		}
+		modifier = {
+			job_uf_hm_alloys_add = @player_job_sp_num_2
+			job_soul_bore_engineer_add = @player_job_sp_num_2
+			job_uf_rare_resource_add = @player_job_sp_num_2
+		}
+	}
+
+  resources = {
+	category = planet_buildings
+    cost = {
+      minerals = @player_cost
+    }
+    produces = {
+	minerals = @player_production_2
+	alloys = @player_production_2
+	consumer_goods = @player_production_2
+	volatile_motes = @player_production_2
+	exotic_gases = @player_production_2
+	rare_crystals = @player_production_2
+	sr_living_metal = @player_production_2
+	sr_zro = @player_production_2
+	sr_dark_matter = @player_production_2
+	nanites = @player_production_2
+	sr_crystal_adf = @player_production_2
+	sr_parts_adf = @player_production_2
+	sr_iodizium = @player_production_2
+	sr_solar_energy = @player_production_2
+	sr_magical_neutronium = @player_production_2
+	sr_psionic_sublimate = @player_production_2
+	acot_sr_dark_energy = @player_production_2
+	acot_sr_stellarite = @player_production_2
+	giga_sr_amb_megaconstruction = @player_production_2
+	ehof_sr_negative_mass = @player_production_2
+	ehof_sr_sentient_metal = @player_production_2
+	sr_stellar_plasma = @player_production_2
+	aot_sr_runic_power = @player_production_2
+	sm_sr_perfect_runic_energy = @player_production_2
+	acot_sr_light_matter = @player_production_2
+    }
+    upkeep = {
+      energy = @player_upkeep
+    }
+  }
+	country_modifier = {
+	megastructure_build_speed_mult = @player_megastructure_build_speed_mult_low_2
+	country_produces_mult = @player_country_produces_mult_low_2
+	}
+  upgrades = {
+    building_ancient_factory_player_3
+  }
+
+  prerequisites = { tech_ai_player }
+}
+
+  building_ancient_factory_player_3 = {
+  base_buildtime = @player_time
+  can_be_ruined = no
+  can_build = no
+
+  category = planet_buildings
+
+#  allow = {
+#	is_player_empire = yes
+#  }
+#  
+  potential = {
+#    exists = owner
+#    owner = { is_ai = no }
+  }
+
+  	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_regular_empire = yes
+				NOT = { has_authority = auth_united_fleet }
+			}
+		}
+		modifier = {
+			job_miner_add = @player_job_num_3
+			job_foundry_add = @player_job_num_3
+			job_translucer_add = @player_job_sp_num_3
+			job_chemist_add = @player_job_sp_num_3
+			job_gas_refiner_add = @player_job_sp_num_3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_mining_drone_add = @player_job_num_3
+			job_alloy_drone_add = @player_job_num_3
+			job_translucer_drone_add = @player_job_sp_num_3
+			job_chemist_drone_add = @player_job_sp_num_3
+			job_gas_refiner_drone_add = @player_job_sp_num_3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				has_authority = auth_united_fleet
+				is_fallen_empire = no
+			}
+		}
+		modifier = {
+			job_uf_hm_alloys_add = @player_job_sp_num_3
+			job_soul_bore_engineer_add = @player_job_sp_num_3
+			job_uf_rare_resource_add = @player_job_sp_num_3
+		}
+	}
+
+  resources = {
+	category = planet_buildings
+    cost = {
+      minerals = @player_cost
+    }
+    produces = {
+	minerals = @player_production_3
+	alloys = @player_production_3
+	consumer_goods = @player_production_3
+	volatile_motes = @player_production_3
+	exotic_gases = @player_production_3
+	rare_crystals = @player_production_3
+	sr_living_metal = @player_production_3
+	sr_zro = @player_production_3
+	sr_dark_matter = @player_production_3
+	nanites = @player_production_3
+	sr_crystal_adf = @player_production_3
+	sr_parts_adf = @player_production_3
+	sr_iodizium = @player_production_3
+	sr_solar_energy = @player_production_3
+	sr_magical_neutronium = @player_production_3
+	sr_psionic_sublimate = @player_production_3
+	acot_sr_dark_energy = @player_production_3
+	acot_sr_stellarite = @player_production_3
+	giga_sr_amb_megaconstruction = @player_production_3
+	ehof_sr_negative_mass = @player_production_3
+	ehof_sr_sentient_metal = @player_production_3
+	sr_stellar_plasma = @player_production_3
+	aot_sr_runic_power = @player_production_3
+	sm_sr_perfect_runic_energy = @player_production_3
+	acot_sr_light_matter = @player_production_3
+    }
+
+    upkeep = {
+      energy = @player_upkeep
+    }
+  }
+	country_modifier = {
+	megastructure_build_speed_mult = @player_megastructure_build_speed_mult_low_3
+	country_produces_mult = @player_country_produces_mult_low_3
+	}
+  upgrades = {
+  }
+
+  prerequisites = { tech_ai_player }
+}
+
+#dark_matter_power_plant
+
+  building_dark_matter_power_plant_player_1 = {
+  base_buildtime = @player_time
+  can_be_ruined = no
+
+  category = planet_buildings
+
+#  allow = {
+#	is_player_empire = yes
+#  }
+#  
+  potential = {
+#    exists = owner
+#    owner = { is_ai = no }
+  }
+  
+  triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_regular_empire = yes
+				is_fallen_empire_spiritualist = no
+				NOT = { has_authority = auth_united_fleet }
+			}
+		}
+		modifier = {
+			job_technician_add = @player_job_num_1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_gestalt = yes
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		modifier = {
+			job_technician_drone_add = @player_job_num_1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_fallen_empire_spiritualist = yes
+			}
+		}
+		modifier = {
+			job_fe_acolyte_generator_add = @player_job_num_1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				has_authority = auth_united_fleet
+				is_fallen_empire = no
+			}
+		}
+		modifier = {
+			job_soul_penrose_engineer_add = @player_job_num_1
+		}
+	}
+
+
+  resources = {
+	category = planet_buildings
+    cost = {
+      minerals = @player_cost
+    }
+    produces = {
+      energy = @player_energy_1
+    }
+  }
+	country_modifier = {
+	megastructure_build_speed_mult = @player_megastructure_build_speed_mult_low_1
+	country_produces_mult = @player_country_produces_mult_low_1
+	}
+  upgrades = {
+    building_dark_matter_power_plant_player_2
+  }
+
+  prerequisites = { tech_ai_player }
+
+  ai_weight = {
+    weight = 0
+    modifier = {
+      weight = 10
+      from = {
+        owner = {
+          has_technology = tech_ai_player
+          has_country_flag = smart_governor
+        }
+      }
+    }
+    modifier = {
+      factor = 0.25
+      is_slave_tile_or_planet = yes
+    }
+  }
+}
+
+  building_dark_matter_power_plant_player_2 = {
+  base_buildtime = @player_time
+  can_be_ruined = no
+  can_build = no
+
+  category = planet_buildings
+
+#  allow = {
+#	is_player_empire = yes
+#  }
+#  
+  potential = {
+#    exists = owner
+#    owner = { is_ai = no }
+  }
+
+  triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_regular_empire = yes
+				is_fallen_empire_spiritualist = no
+				NOT = { has_authority = auth_united_fleet }
+			}
+		}
+		modifier = {
+			job_technician_add = @player_job_num_2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_gestalt = yes
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		modifier = {
+			job_technician_drone_add = @player_job_num_2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_fallen_empire_spiritualist = yes
+			}
+		}
+		modifier = {
+			job_fe_acolyte_generator_add = @player_job_num_2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				has_authority = auth_united_fleet
+				is_fallen_empire = no
+			}
+		}
+		modifier = {
+			job_soul_penrose_engineer_add = @player_job_num_2
+		}
+	}
+
+  resources = {
+	category = planet_buildings
+    cost = {
+      minerals = @player_cost
+    }
+    produces = {
+      energy = @player_energy_2
+    }
+  }
+	country_modifier = {
+	megastructure_build_speed_mult = @player_megastructure_build_speed_mult_low_2
+	country_produces_mult = @player_country_produces_mult_low_2
+	}
+  upgrades = {
+    building_dark_matter_power_plant_player_3
+  }
+
+  prerequisites = { tech_ai_player }
+}
+
+  building_dark_matter_power_plant_player_3 = {
+  base_buildtime = @player_time
+  can_be_ruined = no
+  can_build = no
+
+  category = planet_buildings
+
+#  allow = {
+#	is_player_empire = yes
+#  }
+#  
+  potential = {
+#    exists = owner
+#    owner = { is_ai = no }
+  }
+  
+  triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_regular_empire = yes
+				is_fallen_empire_spiritualist = no
+				NOT = { has_authority = auth_united_fleet }
+			}
+		}
+		modifier = {
+			job_technician_add = @player_job_num_3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_gestalt = yes
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		modifier = {
+			job_technician_drone_add = @player_job_num_3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_fallen_empire_spiritualist = yes
+			}
+		}
+		modifier = {
+			job_fe_acolyte_generator_add = @player_job_num_3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				has_authority = auth_united_fleet
+				is_fallen_empire = no
+			}
+		}
+		modifier = {
+			job_soul_penrose_engineer_add = @player_job_num_3
+		}
+	}
+
+  resources = {
+	category = planet_buildings
+    cost = {
+      minerals = @player_cost
+    }
+    produces = {
+      energy = @player_energy_3
+    }
+  }
+	country_modifier = {
+	megastructure_build_speed_mult = @player_megastructure_build_speed_mult_low_3
+	country_produces_mult = @player_country_produces_mult_low_3
+	}
+  upgrades = {
+  }
+
+  prerequisites = { tech_ai_player }
+}
+
+#agri_processing_complex
+
+  building_agri_processing_complex_player_1 = {
+  base_buildtime = @player_time
+  can_be_ruined = no
+
+  category = planet_buildings
+
+#  allow = {
+#	is_player_empire = yes
+#  }
+#  
+  potential = {
+#    exists = owner
+#    owner = { is_ai = no }
+  }
+  
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_regular_empire = yes
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		modifier = {
+			job_farmer_add = @player_job_num_1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_gestalt = yes
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		modifier = {
+			job_agri_drone_add = @player_job_num_1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_fallen_empire_spiritualist = yes
+			}
+		}
+		modifier = {
+			job_fe_acolyte_farm_add = @player_job_num_1
+		}
+	}
+
+  resources = {
+	category = planet_buildings
+    cost = {
+      minerals = @player_cost
+    }
+    produces = {
+      food = @player_production_1
+    }
+    upkeep = {
+      energy = @player_upkeep
+    }
+  }
+	country_modifier = {
+	megastructure_build_speed_mult = @player_megastructure_build_speed_mult_adv_1
+	country_produces_mult = @player_country_produces_mult_1
+	}
+  upgrades = {
+    building_agri_processing_complex_player_2
+  }
+
+  prerequisites = { tech_ai_player }
+
+  ai_weight = {
+    weight = 0
+    modifier = {
+      weight = 10
+      from = {
+        owner = {
+          has_technology = tech_ai_player
+          has_country_flag = smart_governor
+        }
+      }
+    }
+  }
+
+}
+
+  building_agri_processing_complex_player_2 = {
+  base_buildtime = @player_time
+  can_be_ruined = no
+  can_build = no
+
+  category = planet_buildings
+
+#  allow = {
+#	is_player_empire = yes
+#  }
+#  
+  potential = {
+#    exists = owner
+#    owner = { is_ai = no }
+  }
+
+  triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_regular_empire = yes
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		modifier = {
+			job_farmer_add = @player_job_num_2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_gestalt = yes
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		modifier = {
+			job_agri_drone_add = @player_job_num_2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_fallen_empire_spiritualist = yes
+			}
+		}
+		modifier = {
+			job_fe_acolyte_farm_add = @player_job_num_2
+		}
+	}
+  
+  resources = {
+	category = planet_buildings
+    cost = {
+      minerals = @player_cost
+    }
+    produces = {
+      food = @player_production_2
+    }
+    upkeep = {
+      energy = @player_upkeep
+    }
+  }
+	country_modifier = {
+	megastructure_build_speed_mult = @player_megastructure_build_speed_mult_adv_2
+	country_produces_mult = @player_country_produces_mult_2
+	}
+  upgrades = {
+    building_agri_processing_complex_player_3
+  }
+
+  prerequisites = { tech_ai_player }
+}
+
+  building_agri_processing_complex_player_3 = {
+  base_buildtime = @player_time
+  can_be_ruined = no
+  can_build = no
+
+  category = planet_buildings
+
+#  allow = {
+#	is_player_empire = yes
+#  }
+#  
+  potential = {
+#    exists = owner
+#    owner = { is_ai = no }
+  }
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_regular_empire = yes
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		modifier = {
+			job_farmer_add = @player_job_num_3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_gestalt = yes
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		modifier = {
+			job_agri_drone_add = @player_job_num_3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = no
+				is_fallen_empire_spiritualist = yes
+			}
+		}
+		modifier = {
+			job_fe_acolyte_farm_add = @player_job_num_3
+		}
+	}
+
+  resources = {
+	category = planet_buildings
+	category = planet_buildings
+    cost = {
+      minerals = @player_cost
+    }
+    produces = {
+      food = @player_production_3
+    }
+
+    upkeep = {
+      energy = @player_upkeep
+    }
+  }
+	country_modifier = {
+	megastructure_build_speed_mult = @player_megastructure_build_speed_mult_adv_3 
+	country_produces_mult = @player_country_produces_mult_3
+	}
+  upgrades = {
+  }
+
+  prerequisites = { tech_ai_player }
+}
+
+#Extradimensional Monolith
+
+#  building_rare_producer_1 = {
+#  base_buildtime = @player_time
+#  can_be_ruined = no
+#  can_build = no
+#
+#  allow = {
+#	is_player_empire = yes
+#  }
+#  
+#  potential = {
+#    exists = owner
+#    owner = { is_ai = no }
+#  }
+#
+#  cost = {
+#    minerals = @player_cost
+#  }
+#
+#  produced_resources = {
+#    sr_terraform_gases = @player_rare_1
+#    sr_terraform_liquids = @player_rare_1
+#    sr_garanthium = @player_rare_1
+#    sr_lythuric = @player_rare_1
+#    sr_teldar = @player_rare_1
+#    sr_yuranic = @player_rare_1
+#    sr_aldar = @player_rare_1
+#    sr_orillium = @player_rare_1
+#    sr_pitharan = @player_rare_1
+#    sr_engos = @player_rare_1
+#    sr_neutronium = @player_rare_1
+#    sr_living_metal = @player_rare_1
+#    sr_zro = @player_rare_1
+#    sr_dark_matter = @player_rare_1
+#    sr_satramene = @player_rare_1
+#    sr_alien_pets = @player_rare_1
+#    sr_betharian = @player_rare_1
+#    sr_riggan = @player_rare_1
+#    sr_xuran = @player_rare_1
+#    sr_muutagan = @player_rare_1
+#    sr_distar_nanodust = @player_rare_1
+#    sr_distar_nanocrystal = @player_rare_1
+#    sr_distar_nanoscale = @player_rare_1
+#    sr_distar_nanoactuator = @player_rare_1
+#  }
+#
+#  required_resources = {
+#    energy = @player_upkeep
+#  }
+#
+#  upgrades = {
+#    building_rare_producer_2
+#  }
+#
+#  prerequisites = { tech_ai_player }
+#
+#  ai_allow = {
+#    has_resource = no
+#  }
+#
+#  ai_weight = {
+#    weight = 0
+#    modifier = {
+#      weight = 100
+#      from = {
+#        owner = {
+#          has_technology = tech_ai_player
+#          has_country_flag = smart_governor
+#        }
+#      }
+#    }
+#  }
+#
+#  ai_replace = no
+#  adjacency_bonus = {
+#    tile_building_resource_minerals_add = 1
+#    tile_building_resource_food_add = 1
+#    tile_building_resource_energy_add = 1
+#  }
+#}
+#
+#  building_rare_producer_2 = {
+#  base_buildtime = @player_time
+#  can_be_ruined = no
+#
+#  can_build = no
+#
+#  allow = {
+#	is_player_empire = yes
+#  }
+#  
+#  potential = {
+#    exists = owner
+#    owner = { is_ai = no }
+#  }
+#
+#  cost = {
+#    minerals = @player_cost
+#  }
+#
+#  produced_resources = {
+#    sr_terraform_gases = @player_rare_2
+#    sr_terraform_liquids = @player_rare_2
+#    sr_garanthium = @player_rare_2
+#    sr_lythuric = @player_rare_2
+#    sr_teldar = @player_rare_2
+#    sr_yuranic = @player_rare_2
+#    sr_aldar = @player_rare_2
+#    sr_orillium = @player_rare_2
+#    sr_pitharan = @player_rare_2
+#    sr_engos = @player_rare_2
+#    sr_neutronium = @player_rare_2
+#    sr_living_metal = @player_rare_2
+#    sr_zro = @player_rare_2
+#    sr_dark_matter = @player_rare_2
+#    sr_satramene = @player_rare_2
+#    sr_alien_pets = @player_rare_2
+#    sr_betharian = @player_rare_2
+#    sr_riggan = @player_rare_2
+#    sr_xuran = @player_rare_2
+#    sr_muutagan = @player_rare_2
+#    sr_distar_nanodust = @player_rare_2
+#    sr_distar_nanocrystal = @player_rare_2
+#    sr_distar_nanoscale = @player_rare_2
+#    sr_distar_nanoactuator = @player_rare_2
+#  }
+#
+#  required_resources = {
+#    energy = @player_upkeep
+#  }
+#
+#  upgrades = {
+#    building_rare_producer_3
+#  }
+#
+#  prerequisites = { tech_ai_player }
+#
+#  ai_replace = no
+#  adjacency_bonus = {
+#    tile_building_resource_minerals_add = 1
+#    tile_building_resource_food_add = 1
+#    tile_building_resource_energy_add = 1
+#  }
+#}
+#
+#  building_rare_producer_3 = {
+#  base_buildtime = @player_time
+#  can_be_ruined = no
+#
+#  can_build = no
+#
+#  allow = {
+#	is_player_empire = yes
+#  }
+#  
+#  potential = {
+#    exists = owner
+#    owner = { is_ai = no }
+#  }
+#
+#  cost = {
+#    minerals = @player_cost
+#  }
+#
+#  produced_resources = {
+#    sr_terraform_gases = @player_rare_3
+#    sr_terraform_liquids = @player_rare_3
+#    sr_garanthium = @player_rare_3
+#    sr_lythuric = @player_rare_3
+#    sr_teldar = @player_rare_3
+#    sr_yuranic = @player_rare_3
+#    sr_aldar = @player_rare_3
+#    sr_orillium = @player_rare_3
+#    sr_pitharan = @player_rare_3
+#    sr_engos = @player_rare_3
+#    sr_neutronium = @player_rare_3
+#    sr_living_metal = @player_rare_3
+#    sr_zro = @player_rare_3
+#    sr_dark_matter = @player_rare_3
+#    sr_satramene = @player_rare_3
+#    sr_alien_pets = @player_rare_3
+#    sr_betharian = @player_rare_3
+#    sr_riggan = @player_rare_3
+#    sr_xuran = @player_rare_3
+#    sr_muutagan = @player_rare_3
+#    sr_distar_nanodust = @player_rare_3
+#    sr_distar_nanocrystal = @player_rare_3
+#    sr_distar_nanoscale = @player_rare_3
+#    sr_distar_nanoactuator = @player_rare_3
+#  }
+#
+#  required_resources = {
+#    energy = @player_upkeep
+#  }
+#
+#  prerequisites = { tech_ai_player }
+#
+#  ai_replace = no
+#  adjacency_bonus = {
+#    tile_building_resource_minerals_add = 1
+#    tile_building_resource_food_add = 1
+#    tile_building_resource_energy_add = 1
+#  }
+#}
+
+#Towers of Heaven
+
+  building_towers_of_heaven_1 = {
+  base_buildtime = @player_time
+  can_be_ruined = no
+  defense_armies = @player_garrison_1
+
+  planetary_ftl_inhibitor = yes
+
+#  allow = {
+#	is_player_empire = yes
+#  }
+#  
+  potential = {
+#    exists = owner
+#    owner = { is_ai = no }
+  }
+
+  resources = {
+	category = planet_buildings
+    cost = {
+      minerals = @player_cost
+    }
+    produces = {
+      unity = @player_unity_1
+      influence = @player_influence_1
+    }
+    upkeep = {
+      energy = @player_upkeep
+    }
+  }
+
+  planet_modifier = {
+    pop_happiness = @player_happiness_1
+	planet_max_districts_add = @player_districts_1
+	planet_housing_add = @player_stability_1
+	planet_amenities_add = @player_stability_1
+	planet_crime_add = -100
+	planet_stability_add = @player_stability_1
+    pop_growth_speed = @player_pop_growth_1
+    planet_orbital_bombardment_damage = @player_fort_str_1
+    planet_building_build_speed_mult = @player_build_speed_1
+	planet_max_buildings_add = @player_districts_1
+  }
+	country_modifier = {
+	megastructure_build_speed_mult = @player_megastructure_build_speed_mult_1
+	country_produces_mult = @player_country_produces_mult_1
+	planet_building_build_speed_mult = @player_build_speed_1
+	planet_decision_enact_speed_mult = 5.55
+	country_resource_max_add = @Store1
+		planet_max_buildings_add = @player_districts_1
+	country_admin_cap_add = @player_navy_size_1
+	}
+  upgrades = {
+    building_towers_of_heaven_2
+  }
+
+  prerequisites = { tech_ai_player }
+
+  ai_weight = {
+    weight = 0
+    modifier = {
+      weight = 100
+      from = {
+        owner = {
+          has_technology = tech_ai_player
+          has_country_flag = smart_governor
+        }
+      }
+    }
+  }
+}
+
+  building_towers_of_heaven_2 = {
+  base_buildtime = @player_time
+  can_be_ruined = no
+  can_build = no
+  defense_armies = @player_garrison_2
+
+  planetary_ftl_inhibitor = yes
+
+#  allow = {
+#	is_player_empire = yes
+#  }
+#  
+  potential = {
+#    exists = owner
+#    owner = { is_ai = no }
+  }
+
+  resources = {
+	category = planet_buildings
+    cost = {
+      minerals = @player_cost
+    }
+    produces = {
+      unity = @player_unity_2
+      influence = @player_influence_2
+    }
+    upkeep = {
+      energy = @player_upkeep
+    }
+  }
+
+  planet_modifier = {
+    pop_happiness = @player_happiness_2
+	planet_max_districts_add = @player_districts_2
+	planet_housing_add = @player_stability_2
+	planet_amenities_add = @player_stability_2
+	planet_crime_add = -150
+	planet_stability_add = @player_stability_2
+    pop_growth_speed = @player_pop_growth_2
+    planet_orbital_bombardment_damage = @player_fort_str_2
+    planet_building_build_speed_mult = @player_build_speed_2
+	planet_max_buildings_add = @player_districts_2
+
+  }
+	country_modifier = {
+	megastructure_build_speed_mult = @player_megastructure_build_speed_mult_2
+	country_produces_mult = @player_country_produces_mult_2
+	planet_building_build_speed_mult = @player_build_speed_2
+	planet_decision_enact_speed_mult = 11.11
+	country_resource_max_add = @Store2
+		planet_max_buildings_add = @player_districts_2
+	country_admin_cap_add = @player_navy_size_2
+	}
+
+  upgrades = {
+    building_towers_of_heaven_3
+  }
+
+  prerequisites = { tech_ai_player }
+}
+
+  building_towers_of_heaven_3 = {
+  base_buildtime = @player_time
+  can_be_ruined = no
+  can_build = no
+  defense_armies = @player_garrison_3
+
+  planetary_ftl_inhibitor = yes
+
+# allow = {
+#	is_player_empire = yes
+#  }
+#  
+  potential = {
+#   exists = owner
+#    owner = { is_ai = no }
+  }
+
+  resources = {
+	category = planet_buildings
+    cost = {
+      minerals = @player_cost
+    }
+    produces = {
+      unity = @player_unity_3
+      influence = @player_influence_3
+    }
+    upkeep = {
+      energy = @player_upkeep
+    }
+  }
+
+  planet_modifier = {
+    pop_happiness = @player_happiness_3
+	planet_max_districts_add = @player_districts_3
+	planet_housing_add = @player_stability_3
+	planet_amenities_add = @player_stability_3
+	planet_crime_add = -200
+	planet_stability_add = @player_stability_3
+    pop_growth_speed = @player_pop_growth_3
+    planet_orbital_bombardment_damage = @player_fort_str_3
+    planet_building_build_speed_mult = @player_build_speed_3
+	planet_max_buildings_add = @player_districts_3
+  }
+	country_modifier = {
+		megastructure_build_speed_mult = @player_megastructure_build_speed_mult_3
+		country_produces_mult = @player_country_produces_mult_3
+		planet_building_build_speed_mult = @player_build_speed_3
+		planet_decision_enact_speed_mult = 22.22
+		country_resource_max_add = @Store3
+		planet_max_buildings_add = @player_districts_3
+		country_admin_cap_add = @player_navy_size_3
+	}
+  prerequisites = { tech_ai_player }
+}
+
+#war_temple
+  building_war_temple_player_1 = {
+  base_buildtime = @player_time
+  can_be_ruined = no
+
+# allow = {
+#	is_player_empire = yes
+#	NOT = {
+#		owner = {
+#			any_owned_planet = {
+#				OR = {
+#					has_building = building_war_temple_player_1
+#					has_building = building_war_temple_player_2
+#					has_building = building_war_temple_player_3
+#				}
+#			}
+#		}
+#	}
+#  }
+#  
+  potential = {
+#    exists = owner
+#    owner = { is_ai = no }
+  }
+
+  resources = {
+    cost = {
+      minerals = @player_cost
+    }
+    upkeep = {
+      energy = @player_upkeep
+    }
+  }
+
+  country_modifier = {
+    ship_fire_rate_mult = @player_fire_rate_1
+    army_damage_mult = @player_army_damage_1
+	armies_cost_mult = @player_ship_cost_1
+	planet_army_build_speed_mult = @player_army_build_speed_1
+    starbase_shipyard_build_speed_mult = @player_ship_build_time_1
+	starbase_shipyard_build_cost_mult = @player_ship_cost_1
+    shipclass_military_station_build_speed_mult = @player_ship_build_time_1
+    shipclass_military_station_build_cost_mult = @player_ship_cost_1
+    country_ship_upgrade_cost_mult = @player_ship_upgrade_1
+    ship_upkeep_mult = @player_ship_upkeep_1
+    country_naval_cap_add = @player_navy_size_1
+    country_war_exhaustion_mult = @player_war_exhaustion_1
+		megastructure_build_speed_mult = @player_megastructure_build_speed_mult_adv_1
+	country_produces_mult = @player_country_produces_mult_adv_1
+	country_resource_max_add = @Store1
+  }
+
+  upgrades = {
+    building_war_temple_player_2
+  }
+
+  prerequisites = { tech_ai_player }
+
+  ai_weight = {
+    weight = 0
+    modifier = {
+      weight = 1000
+      from = {
+        owner = {
+          has_technology = tech_ai_player
+          has_country_flag = smart_governor
+        }
+      }
+    }
+  }
+}
+
+  building_war_temple_player_2 = {
+  base_buildtime = @player_time
+  can_be_ruined = no
+  can_build = no
+
+#  allow = {
+#	is_player_empire = yes
+#  }
+#  
+  potential = {
+#    exists = owner
+#    owner = { is_ai = no }
+  }
+
+  resources = {
+    cost = {
+      minerals = @player_cost
+    }
+    upkeep = {
+      energy = @player_upkeep
+    }
+  }
+
+  country_modifier = {
+    ship_fire_rate_mult = @player_fire_rate_2
+    army_damage_mult = @player_army_damage_2
+	armies_cost_mult = @player_ship_cost_2
+	planet_army_build_speed_mult = @player_army_build_speed_2
+    starbase_shipyard_build_speed_mult = @player_ship_build_time_2
+	starbase_shipyard_build_cost_mult = @player_ship_cost_2
+    shipclass_military_station_build_speed_mult = @player_ship_build_time_2
+    shipclass_military_station_build_cost_mult = @player_ship_cost_2
+    country_ship_upgrade_cost_mult = @player_ship_upgrade_2
+    ship_upkeep_mult = @player_ship_upkeep_2
+    country_naval_cap_add = @player_navy_size_2
+    country_war_exhaustion_mult = @player_war_exhaustion_2
+	megastructure_build_speed_mult = @player_megastructure_build_speed_mult_adv_2
+	country_produces_mult = @player_country_produces_mult_adv_2
+	country_resource_max_add = @Store2
+  }
+
+  upgrades = {
+    building_war_temple_player_3
+  }
+
+  prerequisites = { tech_ai_player }
+
+  ai_weight = {
+    weight = 0
+  }
+}
+
+  building_war_temple_player_3 = {
+  base_buildtime = @player_time
+  can_be_ruined = no
+  can_build = no
+
+#  allow = {
+#	is_player_empire = yes
+# }
+#  
+  potential = {
+#    exists = owner
+#    owner = { is_ai = no }
+  }
+
+  resources = {
+    cost = {
+      minerals = @player_cost
+    }
+    upkeep = {
+      energy = @player_upkeep
+    }
+  }
+
+  country_modifier = {
+    ship_fire_rate_mult = @player_fire_rate_3
+    army_damage_mult = @player_army_damage_3
+	armies_cost_mult = @player_ship_cost_3
+	planet_army_build_speed_mult = @player_army_build_speed_3
+	starbase_shipyard_build_speed_mult = @player_ship_build_time_3
+	starbase_shipyard_build_cost_mult = @player_ship_cost_3
+    shipclass_military_station_build_speed_mult = @player_ship_build_time_3
+    shipclass_military_station_build_cost_mult = @player_ship_cost_3
+    country_ship_upgrade_cost_mult = @player_ship_upgrade_3
+    ship_upkeep_mult = @player_ship_upkeep_3
+    country_naval_cap_add = @player_navy_size_3
+    country_war_exhaustion_mult = @player_war_exhaustion_3
+	megastructure_build_speed_mult = @player_megastructure_build_speed_mult_adv_3
+	country_produces_mult = @player_country_produces_mult_adv_3
+	ship_weapon_damage = @player_damage_3
+			ship_tracking_mult = @player_aiming_3
+			ship_accuracy_mult = @player_aiming_3
+			ship_shield_reduction = -0.50
+			ship_shield_mult = -0.75
+			ship_armor_reduction = -0.50
+			ship_armor_mult = -0.75
+			country_resource_max_add = @Store3
+			
+  }
+
+  upgrades = {
+  }
+
+  prerequisites = { tech_ai_player }
+
+  ai_weight = {
+    weight = 0
+  }
+}

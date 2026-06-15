@@ -1,0 +1,315 @@
+upload_planet_1 = {
+	sound = event_administrative_work
+	icon = decision_resources
+	
+	prerequisites = {
+		"tech_mass_drivers_1"
+	}
+	
+	resources = {
+		category = decisions
+		cost = {
+			rare_crystals = 500
+		}
+	}
+	enactment_time = 900
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_origin = origin_transcendent
+				has_technology = tech_synthetic_workers
+			}
+		}
+		NOR = {
+			has_modifier = planet_uploaded_1
+			has_modifier = planet_uploaded_2
+		}
+		is_colony = yes
+		NOR = {
+			is_planet_class = pc_habitat
+			is_planet_class = pc_virtual_reality
+			is_planet_class = pc_virtual_industry
+			is_planet_class = pc_virtual_stellar_industry
+		}
+	}
+	
+	allow = {
+		always = yes
+	}	
+	
+	effect = {
+		add_modifier = { modifier = planet_uploaded_1 days = -1 }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+upload_planet_2 = {
+	sound = event_administrative_work
+	icon = decision_resources
+	
+	prerequisites = {	
+		"tech_mass_drivers_1"
+	}
+	enactment_time = 900
+	resources = {
+		category = decisions
+		cost = {
+			rare_crystals = 800
+		}
+	}
+	
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_origin = origin_transcendent
+				has_technology = tech_synthetic_workers
+			}
+			AND = {
+				has_technology = tech_battleships
+				has_technology = tech_starbase_5
+			}
+		}
+		is_colony = yes
+		NOR = {
+			is_planet_class = pc_habitat
+			is_planet_class = pc_virtual_reality
+			is_planet_class = pc_virtual_industry
+			is_planet_class = pc_virtual_stellar_industry
+		}
+		
+		has_modifier = planet_uploaded_1
+	}
+	
+	allow = {
+		always = yes
+	}	
+	
+	effect = {
+		add_modifier = { modifier = planet_uploaded_2 days = -1 }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+upload_habitat_1 = {
+	sound = event_administrative_work
+	icon = decision_resources
+	
+	prerequisites = {
+		"tech_mass_drivers_1"
+	}
+	enactment_time = 900
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 1500
+			rare_crystals = 250
+		}
+	}
+	
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_origin = origin_transcendent
+				has_technology = tech_synthetic_workers
+			}
+		}
+		NOR = {
+			has_modifier = habitat_uploaded_1
+			has_modifier = habitat_uploaded_2
+		}
+		
+		is_planet_class = pc_habitat
+		is_colony = yes
+		NOR = {
+			is_planet_class = pc_virtual_reality
+			is_planet_class = pc_virtual_industry
+			is_planet_class = pc_virtual_stellar_industry
+		}
+	}
+	
+	allow = {
+		always = yes
+	}	
+	
+	effect = {
+		add_modifier = { modifier = habitat_uploaded_1 days = -1 }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+upload_habitat_2 = {
+	sound = event_administrative_work
+	icon = decision_resources
+	
+	prerequisites = {	
+		"tech_mass_drivers_1"
+	}
+	enactment_time = 900
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 1500
+			rare_crystals = 400
+		}
+	}
+	
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_origin = origin_transcendent
+				has_technology = tech_synthetic_workers
+			}
+			AND = {
+				has_technology = tech_battleships
+				has_technology = tech_starbase_5
+			}
+		}
+		is_colony = yes
+		NOR = {
+			is_planet_class = pc_virtual_reality
+			is_planet_class = pc_virtual_industry
+			is_planet_class = pc_virtual_stellar_industry
+		}
+		has_modifier = habitat_uploaded_1
+	}
+	
+	allow = {
+		always = yes
+	}	
+	
+	effect = {
+		add_modifier = { modifier = habitat_uploaded_2 days = -1 }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+prepare_terraforming = {
+	sound = event_administrative_work
+	icon = decision_resources
+	
+	prerequisites = {	
+		"tech_mass_drivers_1"
+	}
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 500
+			energy = 200
+		}
+	}
+	
+	potential = {
+		exists = space_owner
+		space_owner = {
+			has_origin = origin_transcendent
+		}
+		OR = {
+			is_planet_class = pc_barren
+			is_planet_class = pc_barren_cold
+		}
+	}
+	
+	allow = {
+		always = yes
+	}	
+	
+	effect = {
+		add_modifier = { modifier = terraforming_candidate days = -1 }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+prepare_terraforming_frozen = {
+	sound = event_administrative_work
+	icon = decision_resources
+	
+	prerequisites = {	
+		"tech_mass_drivers_1"
+	}
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 1000
+			energy = 200
+		}
+	}
+	
+	potential = {
+		exists = space_owner
+		space_owner = {
+			has_origin = origin_transcendent
+		}
+		OR = {
+			is_planet_class = pc_frozen
+		}
+	}
+	
+	allow = {
+		always = yes
+	}	
+	
+	effect = {
+		add_modifier = { modifier = terraforming_candidate days = -1 }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+make_pops = {
+	sound = event_administrative_work
+	icon = decision_resources
+	
+	prerequisites = {
+		"tech_bioreactor"
+	}
+	
+	resources = {
+		category = decisions
+		cost = {
+			volatile_motes = 200
+			exotic_gases = 250
+			food = 3000
+			energy = 2000
+		}
+	}
+	enactment_time = 30
+	potential = {
+		has_building = building_bioreactor_2
+	}
+	
+	allow = {
+		always = yes
+	}	
+	
+	effect = {
+		while = {
+			count = 3
+			create_pop = { species = owner_main_species }
+		}	
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

@@ -1,0 +1,23 @@
+# a new leader is generated for an empire, to be available for recruitment
+# scope: country, from: leader
+on_leader_spawned = {
+	events = {
+		jftraits.4001 # Genius Leaders
+		jftraits.4003 # Psi Amps
+		jftraits.1    # Erudite
+	}
+}
+
+on_modification_complete = {
+	events = {
+		jftraits.4002 # Genius Leaders after modification
+		jftraits.4004 # Psi Amps after modification
+		jftraits.10	  # Erudite after modification
+	}
+}
+
+on_yearly_pulse_country = {
+	events = {
+		jftraits.4000
+	}
+}

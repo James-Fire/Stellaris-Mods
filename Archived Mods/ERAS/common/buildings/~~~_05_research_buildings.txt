@@ -1,0 +1,2210 @@
+#############
+# Science buildings
+#############
+building_research_lab_1 = {
+	base_buildtime = @building_ukn_research_lab_2_build_time
+	base_cap_amount = 1
+	position_priority = 111
+	category = research
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+		UKN_USES_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = no
+			}
+			NOT = { has_building = building_research_lab_1 }
+		}
+		modifier = {
+			job_researcher_add = 1000
+		}
+	}
+#[AI-MACHINE] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_machine_empire = yes
+			}
+			NOT = { has_building = building_research_lab_1 }
+		}
+		modifier = {
+			job_calculator_add = 1000
+		}
+	}
+#[AI-MACHINE] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_hive_empire = yes
+			}
+			NOT = { has_building = building_research_lab_1 }
+		}
+		modifier = {
+			job_brain_drone_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_research_lab_1
+#########
+# COSTS #
+#########
+#[BASIC] AUTOMACHINES
+		cost = {
+			nanites = @building_ukn_research_lab_2_cost_basic_nanites
+		}
+		
+		
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_research_lab_2_cost_basic_consumer_goods
+		}
+		
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_research_lab_2_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_research_lab_2_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_research_lab_2_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_research_lab_2_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_research_lab_2_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_research_lab_2_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_research_lab_2_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_research_lab_2_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_research_lab_2_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_research_lab_2_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_research_lab_2_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_basic_science_lab_1"
+	}
+
+	upgrades = {
+		building_research_lab_2
+		building_research_lab_3
+		building_ukn_research_lab_4
+		building_ukn_research_lab_5
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+			owner = {
+				NOT = { has_technology = tech_basic_science_lab_2 }
+			}
+		}
+		text = unlock_district_ukn_science
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+			owner = {
+				has_technology = tech_basic_science_lab_2
+			}
+		}
+		text = upgrade_unlock_district_ukn_science
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+			owner = {
+				NOT = { has_technology = tech_basic_science_lab_2 }
+			}
+		}
+		text = unlock_district_ukn_hab_science
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+			owner = {
+				has_technology = tech_basic_science_lab_2
+			}
+		}
+		text = upgrade_unlock_district_ukn_hab_science
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = unlock_district_ukn_arcology_civilian_industry
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = unlock_district_ukn_rw_science
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = unlock_district_ukn_alderson_science
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				has_technology = tech_basic_science_lab_2
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_2_default_normal_effect_desc
+			planet_researchers_physics_research_produces_add = @building_ukn_research_lab_2_default_normal_physics_research_add
+			planet_researchers_society_research_produces_add = @building_ukn_research_lab_2_default_normal_society_research_add
+			planet_researchers_engineering_research_produces_add = @building_ukn_research_lab_2_default_normal_engineering_research_add
+			planet_researchers_consumer_goods_upkeep_add = @building_ukn_research_lab_2_default_normal_consumer_goods_add
+			planet_researchers_energy_upkeep_add = @building_ukn_research_lab_2_default_normal_energy_add
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_2_default_normal_minerals_add
+		}
+	}
+	
+#[NORMAL] Machine/Synthetic Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = { 
+				is_machine_empire = yes
+				has_technology = tech_basic_science_lab_2
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_2_machine_normal_effect_desc
+			planet_researchers_physics_research_produces_add = @building_ukn_research_lab_2_machine_normal_physics_research_add
+			planet_researchers_society_research_produces_add = @building_ukn_research_lab_2_machine_normal_society_research_add
+			planet_researchers_engineering_research_produces_add = @building_ukn_research_lab_2_machine_normal_engineering_research_add
+			planet_researchers_consumer_goods_upkeep_add = @building_ukn_research_lab_2_machine_normal_consumer_goods_add
+			planet_researchers_energy_upkeep_add = @building_ukn_research_lab_2_machine_normal_energy_add
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_2_machine_normal_minerals_add
+		}
+	}
+	
+#[NORMAL] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				has_technology = tech_basic_science_lab_2
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_2_hive_normal_effect_desc
+			planet_researchers_physics_research_produces_add = @building_ukn_research_lab_2_hive_normal_physics_research_add
+			planet_researchers_society_research_produces_add = @building_ukn_research_lab_2_hive_normal_society_research_add
+			planet_researchers_engineering_research_produces_add = @building_ukn_research_lab_2_hive_normal_engineering_research_add
+			planet_researchers_consumer_goods_upkeep_add = @building_ukn_research_lab_2_hive_normal_consumer_goods_add
+			planet_researchers_energy_upkeep_add = @building_ukn_research_lab_2_hive_normal_energy_add
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_2_hive_normal_minerals_add
+		}
+	}
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				has_technology = tech_basic_science_lab_2
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_2_default_normal_effect_desc
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_2_default_normal_minerals_subtract
+			planet_researchers_food_upkeep_add = @building_ukn_research_lab_2_default_normal_food_add
+		}
+	}
+	
+#[NORMAL] Machine/Synthetic Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = { 
+				is_machine_empire = yes
+				has_technology = tech_basic_science_lab_2
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_2_machine_normal_effect_desc
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_2_machine_normal_minerals_subtract
+			planet_researchers_food_upkeep_add = @building_ukn_research_lab_2_machine_normal_food_add
+		}
+	}
+	
+#[NORMAL] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				has_technology = tech_basic_science_lab_2
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_2_hive_normal_effect_desc
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_2_hive_normal_minerals_subtract
+			planet_researchers_food_upkeep_add = @building_ukn_research_lab_2_hive_normal_food_add
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		text = job_researcher_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { 
+				is_machine_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		text = job_calculator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		text = job_brain_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		text = job_ukn_researcher_organic_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		text = job_ukn_calculator_organic_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		text = job_ukn_brain_drone_organic_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_science_cost_mult = 0.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_hab_research_cost_mult = 0.00
+		}
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 20
+			}
+		}
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 40
+			}
+		}
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+}
+
+
+
+
+
+
+
+
+
+building_research_lab_2 = {
+	base_buildtime = @building_ukn_research_lab_3_build_time
+	can_build = no
+	position_priority = 111
+	category = research
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+		UKN_USES_NORMAL_DISTRICTS = yes
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = no
+			}
+			NOT = { has_building = building_research_lab_2 }
+		}
+		modifier = {
+			job_researcher_add = 1000
+		}
+	}
+#[AI-MACHINE] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_machine_empire = yes
+			}
+			NOT = { has_building = building_research_lab_2 }
+		}
+		modifier = {
+			job_calculator_add = 1000
+		}
+	}
+#[AI-MACHINE] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_hive_empire = yes
+			}
+			NOT = { has_building = building_research_lab_2 }
+		}
+		modifier = {
+			job_brain_drone_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_research_lab_2
+#########
+# COSTS #
+#########
+#[BASIC] AUTOMACHINES
+		cost = {
+			nanites = @building_ukn_research_lab_3_cost_basic_nanites
+		}
+		
+		
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_research_lab_3_cost_basic_consumer_goods
+		}
+		
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_research_lab_3_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_research_lab_3_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_research_lab_3_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_research_lab_3_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_research_lab_3_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_research_lab_3_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_research_lab_3_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_research_lab_3_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_research_lab_3_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_research_lab_3_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_research_lab_3_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_capital_productivity_2"
+	}
+
+	upgrades = {
+		building_research_lab_3
+		building_ukn_research_lab_4
+		building_ukn_research_lab_5
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_science
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_science
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_arcology_arms_industry
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_rw_science
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_alderson_science
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_3_default_normal_effect_desc
+			planet_researchers_physics_research_produces_add = @building_ukn_research_lab_3_default_normal_physics_research_add
+			planet_researchers_society_research_produces_add = @building_ukn_research_lab_3_default_normal_society_research_add
+			planet_researchers_engineering_research_produces_add = @building_ukn_research_lab_3_default_normal_engineering_research_add
+			planet_researchers_consumer_goods_upkeep_add = @building_ukn_research_lab_3_default_normal_consumer_goods_add
+			planet_researchers_energy_upkeep_add = @building_ukn_research_lab_3_default_normal_energy_add
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_3_default_normal_minerals_add
+		}
+	}
+	
+#[NORMAL] Machine/Synthetic Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = { 
+				is_machine_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_3_machine_normal_effect_desc
+			planet_researchers_physics_research_produces_add = @building_ukn_research_lab_3_machine_normal_physics_research_add
+			planet_researchers_society_research_produces_add = @building_ukn_research_lab_3_machine_normal_society_research_add
+			planet_researchers_engineering_research_produces_add = @building_ukn_research_lab_3_machine_normal_engineering_research_add
+			planet_researchers_consumer_goods_upkeep_add = @building_ukn_research_lab_3_machine_normal_consumer_goods_add
+			planet_researchers_energy_upkeep_add = @building_ukn_research_lab_3_machine_normal_energy_add
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_3_machine_normal_minerals_add
+		}
+	}
+	
+#[NORMAL] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_3_hive_normal_effect_desc
+			planet_researchers_physics_research_produces_add = @building_ukn_research_lab_3_hive_normal_physics_research_add
+			planet_researchers_society_research_produces_add = @building_ukn_research_lab_3_hive_normal_society_research_add
+			planet_researchers_engineering_research_produces_add = @building_ukn_research_lab_3_hive_normal_engineering_research_add
+			planet_researchers_consumer_goods_upkeep_add = @building_ukn_research_lab_3_hive_normal_consumer_goods_add
+			planet_researchers_energy_upkeep_add = @building_ukn_research_lab_3_hive_normal_energy_add
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_3_hive_normal_minerals_add
+		}
+	}
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_3_default_normal_effect_desc
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_3_default_normal_minerals_subtract
+			planet_researchers_food_upkeep_add = @building_ukn_research_lab_3_default_normal_food_add
+		}
+	}
+	
+#[NORMAL] Machine/Synthetic Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = { 
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_3_machine_normal_effect_desc
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_3_machine_normal_minerals_subtract
+			planet_researchers_food_upkeep_add = @building_ukn_research_lab_3_machine_normal_food_add
+		}
+	}
+	
+#[NORMAL] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_3_hive_normal_effect_desc
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_3_hive_normal_minerals_subtract
+			planet_researchers_food_upkeep_add = @building_ukn_research_lab_3_hive_normal_food_add
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		text = job_researcher_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { 
+				is_machine_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		text = job_calculator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		text = job_brain_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		text = job_ukn_researcher_organic_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		text = job_ukn_calculator_organic_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		text = job_ukn_brain_drone_organic_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_science_cost_mult = 0.40
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_hab_research_cost_mult = 0.40
+		}
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 20
+			}
+		}
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 40
+			}
+		}
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+}
+
+
+
+
+
+
+
+
+
+
+building_research_lab_3 = {
+	base_buildtime = @building_ukn_research_lab_4_build_time
+	can_build = no
+	position_priority = 111
+	category = research
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+		UKN_USES_SUB_RW_ARCOLOGY_DISTRICTS = yes
+		UKN_USES_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = no
+			}
+			NOT = { has_building = building_research_lab_3 }
+		}
+		modifier = {
+			job_researcher_add = 1000
+		}
+	}
+#[AI-MACHINE] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_machine_empire = yes
+			}
+			NOT = { has_building = building_research_lab_3 }
+		}
+		modifier = {
+			job_calculator_add = 1000
+		}
+	}
+#[AI-MACHINE] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_hive_empire = yes
+			}
+			NOT = { has_building = building_research_lab_3 }
+		}
+		modifier = {
+			job_brain_drone_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_research_lab_3
+#########
+# COSTS #
+#########
+#[BASIC] AUTOMACHINES
+		cost = {
+			nanites = @building_ukn_research_lab_4_cost_basic_nanites
+		}
+		
+		
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_research_lab_4_cost_basic_consumer_goods
+		}
+		
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_research_lab_4_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_research_lab_4_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_research_lab_4_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_research_lab_4_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_research_lab_4_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_research_lab_4_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_research_lab_4_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_research_lab_4_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_research_lab_4_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_research_lab_4_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_research_lab_4_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_capital_productivity_3"
+	}
+
+	upgrades = {
+		building_ukn_research_lab_4
+		building_ukn_research_lab_5
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_science
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_science
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_arcology_arms_industry
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_rw_science
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_alderson_science
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_4_default_normal_effect_desc
+			planet_researchers_physics_research_produces_add = @building_ukn_research_lab_4_default_normal_physics_research_add
+			planet_researchers_society_research_produces_add = @building_ukn_research_lab_4_default_normal_society_research_add
+			planet_researchers_engineering_research_produces_add = @building_ukn_research_lab_4_default_normal_engineering_research_add
+			planet_researchers_consumer_goods_upkeep_add = @building_ukn_research_lab_4_default_normal_consumer_goods_add
+			planet_researchers_energy_upkeep_add = @building_ukn_research_lab_4_default_normal_energy_add
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_4_default_normal_minerals_add
+		}
+	}
+	
+#[NORMAL] Machine/Synthetic Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = { 
+				is_machine_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_4_machine_normal_effect_desc
+			planet_researchers_physics_research_produces_add = @building_ukn_research_lab_4_machine_normal_physics_research_add
+			planet_researchers_society_research_produces_add = @building_ukn_research_lab_4_machine_normal_society_research_add
+			planet_researchers_engineering_research_produces_add = @building_ukn_research_lab_4_machine_normal_engineering_research_add
+			planet_researchers_consumer_goods_upkeep_add = @building_ukn_research_lab_4_machine_normal_consumer_goods_add
+			planet_researchers_energy_upkeep_add = @building_ukn_research_lab_4_machine_normal_energy_add
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_4_machine_normal_minerals_add
+		}
+	}
+	
+#[NORMAL] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_4_hive_normal_effect_desc
+			planet_researchers_physics_research_produces_add = @building_ukn_research_lab_4_hive_normal_physics_research_add
+			planet_researchers_society_research_produces_add = @building_ukn_research_lab_4_hive_normal_society_research_add
+			planet_researchers_engineering_research_produces_add = @building_ukn_research_lab_4_hive_normal_engineering_research_add
+			planet_researchers_consumer_goods_upkeep_add = @building_ukn_research_lab_4_hive_normal_consumer_goods_add
+			planet_researchers_energy_upkeep_add = @building_ukn_research_lab_4_hive_normal_energy_add
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_4_hive_normal_minerals_add
+		}
+	}
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_4_default_normal_effect_desc
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_4_default_normal_minerals_subtract
+			planet_researchers_food_upkeep_add = @building_ukn_research_lab_4_default_normal_food_add
+		}
+	}
+	
+#[NORMAL] Machine/Synthetic Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = { 
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_4_machine_normal_effect_desc
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_4_machine_normal_minerals_subtract
+			planet_researchers_food_upkeep_add = @building_ukn_research_lab_4_machine_normal_food_add
+		}
+	}
+	
+#[NORMAL] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_4_hive_normal_effect_desc
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_4_hive_normal_minerals_subtract
+			planet_researchers_food_upkeep_add = @building_ukn_research_lab_4_hive_normal_food_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[ARCOLOGY] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_4_default_arcology_effect_desc
+			planet_researchers_physics_research_produces_add = @building_ukn_research_lab_4_default_arcology_physics_research_add
+			planet_researchers_society_research_produces_add = @building_ukn_research_lab_4_default_arcology_society_research_add
+			planet_researchers_engineering_research_produces_add = @building_ukn_research_lab_4_default_arcology_engineering_research_add
+			planet_researchers_consumer_goods_upkeep_add = @building_ukn_research_lab_4_default_arcology_consumer_goods_add
+			planet_researchers_energy_upkeep_add = @building_ukn_research_lab_4_default_arcology_energy_add
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_4_default_arcology_minerals_add
+		}
+	}
+	
+#[ARCOLOGY] Machine/Synthetic Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = { 
+				is_machine_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_4_machine_arcology_effect_desc
+			planet_researchers_physics_research_produces_add = @building_ukn_research_lab_4_machine_arcology_physics_research_add
+			planet_researchers_society_research_produces_add = @building_ukn_research_lab_4_machine_arcology_society_research_add
+			planet_researchers_engineering_research_produces_add = @building_ukn_research_lab_4_machine_arcology_engineering_research_add
+			planet_researchers_consumer_goods_upkeep_add = @building_ukn_research_lab_4_machine_arcology_consumer_goods_add
+			planet_researchers_energy_upkeep_add = @building_ukn_research_lab_4_machine_arcology_energy_add
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_4_machine_arcology_minerals_add
+		}
+	}
+	
+#[ARCOLOGY] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_4_hive_arcology_effect_desc
+			planet_researchers_physics_research_produces_add = @building_ukn_research_lab_4_hive_arcology_physics_research_add
+			planet_researchers_society_research_produces_add = @building_ukn_research_lab_4_hive_arcology_society_research_add
+			planet_researchers_engineering_research_produces_add = @building_ukn_research_lab_4_hive_arcology_engineering_research_add
+			planet_researchers_consumer_goods_upkeep_add = @building_ukn_research_lab_4_hive_arcology_consumer_goods_add
+			planet_researchers_energy_upkeep_add = @building_ukn_research_lab_4_hive_arcology_energy_add
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_4_hive_arcology_minerals_add
+		}
+	}
+	
+#[ARCOLOGY] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_4_default_arcology_effect_desc
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_4_default_arcology_minerals_subtract
+			planet_researchers_food_upkeep_add = @building_ukn_research_lab_4_default_arcology_food_add
+		}
+	}
+	
+#[ARCOLOGY] Machine/Synthetic Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = { 
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_4_machine_arcology_effect_desc
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_4_machine_arcology_minerals_subtract
+			planet_researchers_food_upkeep_add = @building_ukn_research_lab_4_machine_arcology_food_add
+		}
+	}
+	
+#[ARCOLOGY] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_research_lab_4_hive_arcology_effect_desc
+			planet_researchers_minerals_upkeep_add = @building_ukn_research_lab_4_hive_arcology_minerals_subtract
+			planet_researchers_food_upkeep_add = @building_ukn_research_lab_4_hive_arcology_food_add
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		text = job_researcher_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { 
+				is_machine_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		text = job_calculator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		text = job_brain_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		text = job_ukn_researcher_organic_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		text = job_ukn_calculator_organic_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		text = job_ukn_brain_drone_organic_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_science_cost_mult = 0.60
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_hab_research_cost_mult = 0.60
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_arcology_civilian_industry_cost_mult = 0.30
+		}
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 20
+			}
+		}
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 40
+			}
+		}
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+}
+
+
+
+
+
+
+
+
+building_institute = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	position_priority = 112
+	category = research
+
+	potential = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+		OR = {
+			has_upgraded_capital = yes
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			owner = { 
+				is_regular_empire = no 
+				is_gestalt = no
+			}
+		}
+	}
+
+	convert_to = {
+		building_supercomputer
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_institute
+#########
+# COSTS #
+#########
+#[BASIC] AUTOMACHINES
+		cost = {
+			nanites = @building_ukn_research_lab_4_cost_basic_nanites
+		}
+		
+		
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_research_lab_4_cost_basic_consumer_goods
+		}
+		
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_research_lab_4_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_research_lab_4_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_research_lab_4_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_research_lab_4_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_research_lab_4_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_research_lab_4_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_research_lab_4_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_research_lab_4_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_research_lab_4_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_research_lab_4_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_research_lab_4_upkeep_energy
+		}
+	}
+
+	planet_modifier = {
+		planet_researchers_produces_mult = 0.15
+		job_head_researcher_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_civic = civic_bugged_research_cooperatives
+			}
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.05
+
+		}
+	}
+
+	prerequisites = {
+		"tech_global_research_initiative"
+	}
+
+	triggered_desc = {
+		text = job_head_researcher_effect_desc
+	}
+
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 20
+			}
+		}
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 40
+			}
+		}
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+}
+
+
+
+
+
+
+
+
+
+building_supercomputer = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	position_priority = 112
+	icon = building_institute
+	category = research
+
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+		OR = {
+			has_upgraded_capital = yes
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			owner = { is_gestalt = no }
+		}
+	}
+
+	convert_to = {
+		building_institute
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_supercomputer
+#########
+# COSTS #
+#########
+#[BASIC] AUTOMACHINES
+		cost = {
+			nanites = @building_ukn_research_lab_4_cost_basic_nanites
+		}
+		
+		
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_research_lab_4_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_research_lab_4_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_research_lab_4_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_research_lab_4_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_research_lab_4_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_research_lab_4_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_research_lab_4_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_research_lab_4_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_research_lab_4_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_research_lab_4_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_research_lab_4_upkeep_energy
+		}
+	}
+
+	planet_modifier = {
+		planet_researchers_produces_mult = 0.15
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_bugged_machine_researcher }
+		}
+		modifier = {
+			job_bugged_examinatron_add = 1
+#			job_calculator_add = -1
+		}
+	}
+
+	prerequisites = {
+		"tech_global_research_initiative"
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		text = job_brain_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_calculator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_civic = civic_bugged_machine_researcher }
+		}
+		text = job_bugged_examinatron_effect_desc
+	}
+	
+	show_tech_unlock_if = {
+		is_gestalt = yes
+	}
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 20
+			}
+		}
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 40
+			}
+		}
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+}

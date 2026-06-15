@@ -1,0 +1,154 @@
+@starbase_power_bastion = 50000
+
+#############
+#  REACTORS #
+#############
+
+utility_component_template = {
+	key = "BASTION_FISSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = @starbase_power_bastion
+
+	prerequisites = { "tech_fission_power" }
+	class_restriction = { shipclass_starbase }
+	component_set = "power_core"
+	size_restriction = {
+		starbase_outpost
+		starbase_starport
+		starbase_starhold
+		starbase_starfortress
+		starbase_citadel
+		starbase_bastion
+	}
+	upgrades_to = "BASTION_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "BASTION_FUSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = @starbase_power_bastion
+
+	prerequisites = { "tech_fusion_power" }
+	component_set = "power_core"
+	class_restriction = { shipclass_starbase }
+	size_restriction = {
+		starbase_outpost
+		starbase_starport
+		starbase_starhold
+		starbase_starfortress
+		starbase_citadel
+		starbase_bastion
+	}
+	upgrades_to = "BASTION_COLD_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "BASTION_COLD_FUSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = @starbase_power_bastion
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	class_restriction = { shipclass_starbase }
+	size_restriction = {
+		starbase_outpost
+		starbase_starport
+		starbase_starhold
+		starbase_starfortress
+		starbase_citadel
+		starbase_bastion
+	}
+	upgrades_to = "BASTION_ANTIMATTER_REACTOR"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "BASTION_ANTIMATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = @starbase_power_bastion
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	class_restriction = { shipclass_starbase }
+	size_restriction = {
+		starbase_outpost
+		starbase_starport
+		starbase_starhold
+		starbase_starfortress
+		starbase_citadel
+		starbase_bastion
+	}
+	upgrades_to = "BASTION_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "BASTION_ZERO_POINT_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @starbase_power_bastion
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	class_restriction = { shipclass_starbase }
+	size_restriction = {
+		starbase_outpost
+		starbase_starport
+		starbase_starhold
+		starbase_starfortress
+		starbase_citadel
+		starbase_bastion
+	}
+	upgrades_to = "BASTION_DARK_MATTER_REACTOR"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "BASTION_DARK_MATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @starbase_power_bastion
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	class_restriction = { shipclass_starbase }
+	size_restriction = {
+		starbase_outpost
+		starbase_starport
+		starbase_starhold
+		starbase_starfortress
+		starbase_citadel
+		starbase_bastion
+	}
+
+	ai_weight = {
+		weight = 6
+	}
+}

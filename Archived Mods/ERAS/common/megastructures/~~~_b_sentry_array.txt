@@ -1,0 +1,438 @@
+spy_orb_0 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -15 y = -5 }
+	prerequisites = { "tech_sentry_array" }
+	sensor_range = @ukn_sentry_array_p0_sensor_range
+	hyperlane_range = @ukn_sentry_array_p0_hyperlane_range
+	country_modifier = { add_base_country_intel = @ukn_sentry_array_p0_add_base_country_intel }
+	
+	build_time = @ukn_sentry_array_p0_build_time
+	resources = {
+		category = ukn_kilostructure_site
+		cost = {
+			influence = @ukn_sentry_array_p0_cost_influence
+			unity = @ukn_sentry_array_p0_cost_unity
+####
+			consumer_goods = @ukn_sentry_array_p0_cost_consumer_goods
+			alloys = @ukn_sentry_array_p0_cost_alloys
+#			ukn_meta_materials = @ukn_sentry_array_p0_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_sentry_array_p0_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_sentry_array_p0_cost_ukn_causalitons
+		}
+		upkeep = {
+			energy = @ukn_sentry_array_p0_upkeep_energy
+		}
+	}
+#######################
+
+	potential = {
+		OR = {
+			AND = {
+				NOT = { has_global_flag = gigastructures_enabled }
+			}
+			AND = {
+				has_global_flag = gigastructures_enabled
+				NOT = { has_global_flag = vanilla_array_disabled }
+				OR = {
+					check_variable = { which = giga_vanilla_array_cap value = 0 }						# No Cap
+					check_variable = { which = giga_current_vanilla_array value < giga_vanilla_array_cap }
+				}
+			}
+		}
+	}
+
+	possible = {
+		exists = starbase
+		from = { has_technology = tech_sentry_array }
+		custom_tooltip = { fail_text = "requires_inside_border"					is_inside_border = from }
+		custom_tooltip = { fail_text = "requires_surveyed_system"				giga_system_is_surveyed = yes }
+		custom_tooltip = {
+			fail_text = "requires_not_capped"
+			from = {
+				OR = {
+					check_variable = { which = giga_vanilla_array_cap value = 0 }						# No Cap
+					check_variable = { which = giga_current_vanilla_array value < giga_vanilla_array_cap }
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_spyorb"
+			from = { NOT = { has_country_flag = ukn_built_sentry_array } }
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = { fail_text = "requires_survey_not_habitable"		is_surveyed = { who = prev.from status = yes } is_planet_habitable = no }
+			custom_tooltip = { fail_text = "requires_no_anomaly"				has_anomaly = no }
+			custom_tooltip = { fail_text = "requires_no_existing_megastructure"	planet_has_no_megastructure = yes }
+			custom_tooltip = { fail_text = "requires_not_star"					is_star = no }
+			custom_tooltip = { fail_text = "requires_not_minor_planetary_body"	is_asteroid = no is_moon = no }
+			custom_tooltip = { fail_text = "requires_not_ring_world"			is_ringworld = no }
+		}
+	}
+
+	ai_weight = {
+		weight = 100	# Default = 100
+
+		# Can we afford the upkeep
+
+		# Do we want the production
+
+		# Is this system a good location?
+		modifier = { factor = 0.1	any_neighbor_system = { exists = owner NOT = { owner = { is_same_value = from } } } }
+		modifier = { factor = 0.5	any_neighbor_system = { any_neighbor_system = { exists = owner NOT = { owner = { is_same_value = from } } } } }
+
+		# Do we lean towards this from federation/ethic/civic?
+		modifier = { factor = 2		from = { has_federation = yes federation = { has_federation_type = military_federation } } }
+		modifier = { factor = 3		from = { has_ethic = ethic_fanatic_militarist } }
+		modifier = { factor = 1.5	from = { has_ethic = ethic_militarist } }
+		modifier = { factor = 1.5	from = { has_civic = civic_machine_terminator } }
+		modifier = { factor = 1.5	from = { has_civic = civic_fanatic_purifiers } }
+		modifier = { factor = 1.5	from = { has_civic = civic_hive_devouring_swarm } }
+		modifier = { factor = 2		from = { is_at_war = yes } }
+
+		# How many of this megastructure can the AI build?
+		modifier = { factor = 0.00 from = { has_country_flag = has_recently_built_spy_orb } }
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					has_megastructure = spy_orb_0
+					has_megastructure = spy_orb_1
+					has_megastructure = spy_orb_2
+					has_megastructure = spy_orb_3
+					has_megastructure = spy_orb_ruined
+				}
+			}
+		}
+	}
+	
+#	on_build_start = {
+#		from = { set_country_flag = ukn_built_sentry_array }
+#	}
+#	on_build_cancel = {
+#		from = { remove_country_flag = ukn_built_sentry_array }
+#	}
+	on_build_complete = {
+		from = { set_country_flag = ukn_built_sentry_array }
+		set_star_flag = spy_orb_built
+		from = {
+			set_timed_country_flag = { flag = has_recently_built_spy_orb years = 20 }
+			set_country_flag = built_spyorb
+			change_variable = { which = giga_current_vanilla_array value = 1 }
+		}
+		fromfrom.planet = {
+			set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+			set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+		}
+	}
+}
+
+spy_orb_1 = {
+	entity = "spyorb_phase_01_entity"
+	construction_entity = "spyorb_phase_01_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -15 y = -15 }
+	upgrade_from = { spy_orb_0 }
+	prerequisites = { "tech_sentry_array" }
+	sensor_range = @ukn_sentry_array_p1_sensor_range
+	hyperlane_range = @ukn_sentry_array_p1_hyperlane_range
+	country_modifier = { add_base_country_intel = @ukn_sentry_array_p1_add_base_country_intel }
+
+	build_time = @ukn_sentry_array_p1_build_time
+	resources = {
+		category = ukn_kilostructure_frame
+		cost = {
+			consumer_goods = @ukn_sentry_array_p1_cost_consumer_goods
+			alloys = @ukn_sentry_array_p1_cost_alloys
+			ukn_meta_materials = @ukn_sentry_array_p1_cost_ukn_meta_materials
+####
+			rare_crystals = @ukn_sentry_array_p1_cost_rare_crystals
+			exotic_gases = @ukn_sentry_array_p1_cost_exotic_gases
+#			ukn_femtomatter = @ukn_sentry_array_p1_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_sentry_array_p1_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_sentry_array_p1_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_sentry_array_p1_cost_ukn_causalitons
+		}
+		upkeep = {
+			energy = @ukn_sentry_array_p1_upkeep_energy
+			alloys = @ukn_sentry_array_p1_upkeep_alloys
+		}
+	}
+#######################
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+}
+
+spy_orb_2 = {
+	entity = "spyorb_phase_02_entity"
+	construction_entity = "spyorb_phase_02_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -15 y = -15 }
+	upgrade_from = { spy_orb_1 }
+	prerequisites = { "tech_sentry_array" }
+	sensor_range = @ukn_sentry_array_p2_sensor_range
+	hyperlane_range = @ukn_sentry_array_p2_hyperlane_range
+	country_modifier = { add_base_country_intel = @ukn_sentry_array_p2_add_base_country_intel }
+
+	build_time = @ukn_sentry_array_p2_build_time
+	resources = {
+		category = ukn_kilostructure_special
+		cost = {
+			consumer_goods = @ukn_sentry_array_p2_cost_consumer_goods
+			alloys = @ukn_sentry_array_p2_cost_alloys
+			ukn_meta_materials = @ukn_sentry_array_p2_cost_ukn_meta_materials
+####
+			rare_crystals = @ukn_sentry_array_p2_cost_rare_crystals
+			exotic_gases = @ukn_sentry_array_p2_cost_exotic_gases
+#			ukn_femtomatter = @ukn_sentry_array_p2_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_sentry_array_p2_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_sentry_array_p2_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_sentry_array_p2_cost_ukn_causalitons
+		}
+		upkeep = {
+			energy = @ukn_sentry_array_p2_upkeep_energy
+			alloys = @ukn_sentry_array_p2_upkeep_alloys
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+}
+
+spy_orb_3 = {
+	entity = "spyorb_phase_03_entity"
+	construction_entity = "spyorb_phase_03_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -15 y = -15 }
+	upgrade_from = { spy_orb_2 }
+	prerequisites = { "tech_sentry_array" }
+	sensor_range = @ukn_sentry_array_p3_sensor_range
+	hyperlane_range = @ukn_sentry_array_p3_hyperlane_range
+	country_modifier = { add_base_country_intel = @ukn_sentry_array_p3_add_base_country_intel }
+
+	build_time = @ukn_sentry_array_p3_build_time
+	resources = {
+		category = ukn_kilostructure_special
+		cost = {
+			consumer_goods = @ukn_sentry_array_p3_cost_consumer_goods
+			alloys = @ukn_sentry_array_p3_cost_alloys
+			ukn_meta_materials = @ukn_sentry_array_p3_cost_ukn_meta_materials
+####
+			rare_crystals = @ukn_sentry_array_p3_cost_rare_crystals
+			exotic_gases = @ukn_sentry_array_p3_cost_exotic_gases
+#			ukn_femtomatter = @ukn_sentry_array_p3_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_sentry_array_p3_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_sentry_array_p3_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_sentry_array_p3_cost_ukn_causalitons
+		}
+		upkeep = {
+			energy = @ukn_sentry_array_p3_upkeep_energy
+			alloys = @ukn_sentry_array_p3_upkeep_alloys
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+}
+
+spy_orb_4 = {
+	entity = "spyorb_phase_04_entity"
+	construction_entity = "spyorb_phase_04_construction_entity"
+	portrait = "GFX_megastructure_spy_orb_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -15 y = -15 }
+	upgrade_from = { spy_orb_3 }
+	prerequisites = { "tech_sentry_array" }
+#	show_prereqs = yes
+	country_modifier = { add_base_country_intel = @ukn_sentry_array_p4_add_base_country_intel }
+	
+	# effect implementation in game_rules (has_full_sensor_range)
+
+	build_time = @ukn_sentry_array_p4_build_time
+	resources = {
+		category = ukn_kilostructure_special
+		cost = {
+			consumer_goods = @ukn_sentry_array_p4_cost_consumer_goods
+			alloys = @ukn_sentry_array_p4_cost_alloys
+			ukn_meta_materials = @ukn_sentry_array_p4_cost_ukn_meta_materials
+####
+			rare_crystals = @ukn_sentry_array_p4_cost_rare_crystals
+			exotic_gases = @ukn_sentry_array_p4_cost_exotic_gases
+#			ukn_femtomatter = @ukn_sentry_array_p4_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_sentry_array_p4_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_sentry_array_p4_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_sentry_array_p4_cost_ukn_causalitons
+		}
+		upkeep = {
+			energy = @ukn_sentry_array_p4_upkeep_energy
+			alloys = @ukn_sentry_array_p4_upkeep_alloys
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+		from = {
+			set_country_flag = ukn_has_built_kilostructure 	# Triggers Galactic Wonders
+		}
+	}
+}
+
+# Permanently Ruined Sentry Array
+spy_orb_permanently_ruined = {
+	entity = "spy_orb_destroyed_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -15 y = -15 }
+	potential = { always = no }
+}
+
+# Ruined Sentry Array
+spy_orb_ruined = {
+	entity = "spy_orb_destroyed_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -15 y = -15 }
+	potential = { always = no }
+}
+
+# Restored Sentry Array
+spy_orb_restored = {
+	entity = "spyorb_phase_04_entity"
+	construction_entity = "spyorb_phase_04_construction_entity"
+	portrait = "GFX_megastructure_spy_orb_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -15 y = -15 }
+	upgrade_from = { spy_orb_ruined }
+	sensor_range = @ukn_sentry_array_r_sensor_range
+	hyperlane_range = @ukn_sentry_array_r_hyperlane_range
+	country_modifier = { add_base_country_intel = @ukn_sentry_array_r_add_base_country_intel }
+	
+	# effect implementation in game_rules (has_full_sensor_range)
+
+	build_time = @ukn_sentry_array_r_build_time
+	resources = {
+		category = ukn_kilostructure_special
+		cost = {
+			consumer_goods = @ukn_sentry_array_r_cost_consumer_goods
+			alloys = @ukn_sentry_array_r_cost_alloys
+			ukn_meta_materials = @ukn_sentry_array_r_cost_ukn_meta_materials
+####
+			rare_crystals = @ukn_sentry_array_r_cost_rare_crystals
+			exotic_gases = @ukn_sentry_array_r_cost_exotic_gases
+#			ukn_femtomatter = @ukn_sentry_array_r_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_sentry_array_r_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_sentry_array_r_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_sentry_array_r_cost_ukn_causalitons
+		}
+		upkeep = {
+			energy = @ukn_sentry_array_r_upkeep_energy
+			alloys = @ukn_sentry_array_r_upkeep_alloys
+		}
+	}
+#######################
+
+	possible = {
+		exists = from
+		from = { has_technology = tech_starbase_5 }
+	}
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_start = { fromfrom = { set_graphical_culture = root.from } }
+	on_build_complete = {
+		giga_remove_system_debris = yes
+		from = {
+			country_event = { id = utopia.2015 }
+		}
+		fromfrom.planet = {
+			set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+			set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+		}
+	}
+}
+
+spy_orb_4_dummy_text = {
+	entity = "spyorb_phase_04_entity"
+	construction_entity = "spyorb_phase_04_construction_entity"
+	portrait = "GFX_megastructure_spy_orb_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -15 y = -15 }
+	upgrade_from = { spy_orb_4 }
+	prerequisites = { "tech_sentry_array" }
+	show_prereqs = yes
+
+	build_time = 8100
+	resources = {
+		category = megastructures
+		cost = {
+			influence = @ukn_sentry_array_p0_cost_influence
+			unity = @ukn_sentry_array_p0_cost_unity
+####
+			consumer_goods = @ukn_sentry_array_p0_cost_consumer_goods
+			alloys = @ukn_sentry_array_p0_cost_alloys
+#			ukn_meta_materials = @ukn_sentry_array_p0_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_sentry_array_p0_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_sentry_array_p0_cost_ukn_causalitons
+		}
+		cost = {
+			consumer_goods = @ukn_sentry_array_p1_cost_consumer_goods
+			alloys = @ukn_sentry_array_p1_cost_alloys
+			ukn_meta_materials = @ukn_sentry_array_p1_cost_ukn_meta_materials
+####
+			rare_crystals = @ukn_sentry_array_p1_cost_rare_crystals
+			exotic_gases = @ukn_sentry_array_p1_cost_exotic_gases
+#			ukn_femtomatter = @ukn_sentry_array_p1_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_sentry_array_p1_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_sentry_array_p1_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_sentry_array_p1_cost_ukn_causalitons
+		}
+		cost = {
+			consumer_goods = @ukn_sentry_array_p2_cost_consumer_goods
+			alloys = @ukn_sentry_array_p2_cost_alloys
+			ukn_meta_materials = @ukn_sentry_array_p2_cost_ukn_meta_materials
+####
+			rare_crystals = @ukn_sentry_array_p2_cost_rare_crystals
+			exotic_gases = @ukn_sentry_array_p2_cost_exotic_gases
+#			ukn_femtomatter = @ukn_sentry_array_p2_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_sentry_array_p2_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_sentry_array_p2_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_sentry_array_p2_cost_ukn_causalitons
+		}
+		cost = {
+			consumer_goods = @ukn_sentry_array_p3_cost_consumer_goods
+			alloys = @ukn_sentry_array_p3_cost_alloys
+			ukn_meta_materials = @ukn_sentry_array_p3_cost_ukn_meta_materials
+####
+			rare_crystals = @ukn_sentry_array_p3_cost_rare_crystals
+			exotic_gases = @ukn_sentry_array_p3_cost_exotic_gases
+#			ukn_femtomatter = @ukn_sentry_array_p3_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_sentry_array_p3_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_sentry_array_p3_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_sentry_array_p3_cost_ukn_causalitons
+		}
+		cost = {
+			consumer_goods = @ukn_sentry_array_p4_cost_consumer_goods
+			alloys = @ukn_sentry_array_p4_cost_alloys
+			ukn_meta_materials = @ukn_sentry_array_p4_cost_ukn_meta_materials
+####
+			rare_crystals = @ukn_sentry_array_p4_cost_rare_crystals
+			exotic_gases = @ukn_sentry_array_p4_cost_exotic_gases
+#			ukn_femtomatter = @ukn_sentry_array_p4_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_sentry_array_p4_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_sentry_array_p4_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_sentry_array_p4_cost_ukn_causalitons
+		}
+	}
+#######################
+
+	potential = {
+		NOT = { has_technology = tech_sentry_array }
+	}
+}

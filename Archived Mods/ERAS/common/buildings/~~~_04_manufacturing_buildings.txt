@@ -1,0 +1,5519 @@
+#############
+# Resource buildings
+#############
+building_foundry_1 = {
+	base_buildtime = @building_ukn_foundry_2_build_time
+	base_cap_amount = 1
+	position_priority = 121
+	category = manufacturing
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+		UKN_USES_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+	
+	
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = no
+			}
+			NOT = { has_building = building_foundry_1 }
+		}
+		modifier = {
+			job_foundry_add = 1000
+		}
+	}
+#[AI-MACHINE] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_machine_empire = yes
+			}
+			NOT = { has_building = building_foundry_1 }
+		}
+		modifier = {
+			job_fabricator_add = 1000
+		}
+	}
+#[AI-MACHINE] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_hive_empire = yes
+			}
+			NOT = { has_building = building_foundry_1 }
+		}
+		modifier = {
+			job_alloy_drone_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_foundry_1
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_foundry_2_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_foundry_2_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_foundry_2_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_foundry_2_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_foundry_2_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			rare_crystals = @building_ukn_foundry_2_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_foundry_2_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_foundry_2_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_foundry_2_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_foundry_2_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_foundry_2_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_alloys_1"
+	}
+
+	upgrades = {
+		building_foundry_2
+		building_foundry_3
+		building_ukn_foundry_4
+		building_ukn_foundry_5
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = cost_info_district_ukn_industrial
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = cost_info_district_ukn_hab_industrial
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_industrial
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_industrial
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_arcology_arms_industry
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_rw_industrial
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_alderson_industrial
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_2_default_normal_100_0_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_2_default_normal_100_0_alloys_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_2_default_normal_100_0_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_2_default_normal_50_50_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_2_default_normal_50_50_alloys_add
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_2_default_normal_50_50_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_2_default_normal_50_50_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_2_default_normal_0_100_effect_desc
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_2_default_normal_0_100_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_2_default_normal_0_100_minerals_add
+		}
+	}
+	
+#[NORMAL] Machine Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_2_machine_normal_100_0_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_2_machine_normal_100_0_alloys_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_2_machine_normal_100_0_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_2_machine_normal_50_50_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_2_machine_normal_50_50_alloys_add
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_2_machine_normal_50_50_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_2_machine_normal_50_50_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_2_machine_normal_0_100_effect_desc
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_2_machine_normal_0_100_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_2_machine_normal_0_100_minerals_add
+		}
+	}
+	
+#[NORMAL] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_2_hive_normal_100_0_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_2_hive_normal_100_0_alloys_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_2_hive_normal_100_0_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_2_hive_normal_50_50_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_2_hive_normal_50_50_alloys_add
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_2_hive_normal_50_50_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_2_hive_normal_50_50_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_2_hive_normal_0_100_effect_desc
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_2_hive_normal_0_100_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_2_hive_normal_0_100_minerals_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_2_default_normal_100_0_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_2_default_normal_100_0_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_2_default_normal_100_0_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_2_default_normal_50_50_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_2_default_normal_50_50_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_2_default_normal_50_50_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_2_default_normal_0_100_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_2_default_normal_0_100_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_2_default_normal_0_100_food_add
+		}
+	}
+	
+#[NORMAL] Machine Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_2_machine_normal_100_0_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_2_machine_normal_100_0_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_2_machine_normal_100_0_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_2_machine_normal_50_50_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_2_machine_normal_50_50_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_2_machine_normal_50_50_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_2_machine_normal_0_100_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_2_machine_normal_0_100_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_2_machine_normal_0_100_food_add
+		}
+	}
+	
+#[NORMAL] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_2_hive_normal_100_0_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_2_hive_normal_100_0_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_2_hive_normal_100_0_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_2_hive_normal_50_50_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_2_hive_normal_50_50_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_2_hive_normal_50_50_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_2_hive_normal_0_100_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_2_hive_normal_0_100_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_2_hive_normal_0_100_food_add
+		}
+	}
+	
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			OR = {
+				UKN_FABRICATORS_50_50_PRODUCTION = yes
+				UKN_FABRICATORS_0_100_PRODUCTION = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_2_normal_energy_upkeep_mult_effect_desc
+			planet_metallurgists_energy_upkeep_mult = @building_ukn_foundry_2_normal_energy_upkeep_mult
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		text = job_foundry_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		text = job_fabricator_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		text = job_alloy_drone_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		text = job_catalytic_technician_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_catalytic_empire = yes
+			}
+		}
+		text = job_catalytic_drone_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+			NOR = {
+				has_building = building_factory_2
+				has_building = building_factory_3
+				has_building = building_ukn_factory_4
+				has_building = building_ukn_factory_5
+			}
+		}
+		modifier = {
+			planet_districts_industrial_cost_mult = 0.30
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+			NOR = {
+				has_building = building_factory_2
+				has_building = building_factory_3
+				has_building = building_ukn_factory_4
+				has_building = building_ukn_factory_5
+			}
+		}
+		modifier = {
+			planet_districts_hab_industrial_cost_mult = 0.30
+		}
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		alloys = 4 # This is an important building for future upgrades
+		trigger = {
+			always = yes
+		}
+	}
+	ai_resource_production = { # Overvalue this building if this planet is a major source of alloys.
+		alloys = 4
+		trigger = {
+			planet_resource_compare = {
+				resource = alloys
+				value >= 8
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		alloys = 4
+		trigger = {
+			planet_resource_compare = {
+				resource = alloys
+				value >= 16
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		alloys = 4
+		trigger = {
+			planet_resource_compare = {
+				resource = alloys
+				value >= 24
+				type = produces
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+building_foundry_2 = {
+	base_buildtime = @building_ukn_foundry_3_build_time
+	can_build = no
+	position_priority = 121
+	category = manufacturing
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+		UKN_USES_NORMAL_DISTRICTS = yes
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+	
+
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = no
+			}
+			NOT = { has_building = building_foundry_2 }
+		}
+		modifier = {
+			job_foundry_add = 1000
+		}
+	}
+#[AI-MACHINE] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_machine_empire = yes
+			}
+			NOT = { has_building = building_foundry_2 }
+		}
+		modifier = {
+			job_fabricator_add = 1000
+		}
+	}
+#[AI-MACHINE] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_hive_empire = yes
+			}
+			NOT = { has_building = building_foundry_2 }
+		}
+		modifier = {
+			job_alloy_drone_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_foundry_2
+#########
+# COSTS #
+#########
+#[BASIC] AUTOMACHINES
+		cost = {
+			nanites = @building_ukn_foundry_3_cost_basic_nanites
+		}
+		
+		
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_foundry_3_cost_basic_consumer_goods
+		}
+		
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_foundry_3_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_foundry_3_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_foundry_3_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_foundry_3_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			rare_crystals = @building_ukn_foundry_3_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_foundry_3_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_foundry_3_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_foundry_3_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_foundry_3_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_foundry_3_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_capital_productivity_2"
+	}
+
+	upgrades = {
+		building_foundry_3
+		building_ukn_foundry_4
+		building_ukn_foundry_5
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = cost_info_district_ukn_industrial
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = cost_info_district_ukn_hab_industrial
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_industrial
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_industrial
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_arcology_arms_industry
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_rw_industrial
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_alderson_industrial
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_3_default_normal_100_0_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_3_default_normal_100_0_alloys_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_3_default_normal_100_0_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_3_default_normal_50_50_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_3_default_normal_50_50_alloys_add
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_3_default_normal_50_50_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_3_default_normal_50_50_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_3_default_normal_0_100_effect_desc
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_3_default_normal_0_100_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_3_default_normal_0_100_minerals_add
+		}
+	}
+	
+#[NORMAL] Machine Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_3_machine_normal_100_0_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_3_machine_normal_100_0_alloys_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_3_machine_normal_100_0_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_3_machine_normal_50_50_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_3_machine_normal_50_50_alloys_add
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_3_machine_normal_50_50_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_3_machine_normal_50_50_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_3_machine_normal_0_100_effect_desc
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_3_machine_normal_0_100_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_3_machine_normal_0_100_minerals_add
+		}
+	}
+	
+#[NORMAL] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_3_hive_normal_100_0_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_3_hive_normal_100_0_alloys_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_3_hive_normal_100_0_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_3_hive_normal_50_50_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_3_hive_normal_50_50_alloys_add
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_3_hive_normal_50_50_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_3_hive_normal_50_50_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_3_hive_normal_0_100_effect_desc
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_3_hive_normal_0_100_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_3_hive_normal_0_100_minerals_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_3_default_normal_100_0_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_3_default_normal_100_0_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_3_default_normal_100_0_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_3_default_normal_50_50_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_3_default_normal_50_50_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_3_default_normal_50_50_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_3_default_normal_0_100_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_3_default_normal_0_100_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_3_default_normal_0_100_food_add
+		}
+	}
+	
+#[NORMAL] Machine Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_3_machine_normal_100_0_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_3_machine_normal_100_0_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_3_machine_normal_100_0_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_3_machine_normal_50_50_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_3_machine_normal_50_50_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_3_machine_normal_50_50_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_3_machine_normal_0_100_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_3_machine_normal_0_100_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_3_machine_normal_0_100_food_add
+		}
+	}
+	
+#[NORMAL] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_3_hive_normal_100_0_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_3_hive_normal_100_0_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_3_hive_normal_100_0_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_3_hive_normal_50_50_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_3_hive_normal_50_50_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_3_hive_normal_50_50_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_3_hive_normal_0_100_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_3_hive_normal_0_100_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_3_hive_normal_0_100_food_add
+		}
+	}
+	
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			OR = {
+				UKN_FABRICATORS_50_50_PRODUCTION = yes
+				UKN_FABRICATORS_0_100_PRODUCTION = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_3_normal_energy_upkeep_mult_effect_desc
+			planet_metallurgists_energy_upkeep_mult = @building_ukn_foundry_3_normal_energy_upkeep_mult
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		text = job_foundry_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		text = job_fabricator_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		text = job_alloy_drone_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		text = job_catalytic_technician_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_catalytic_empire = yes
+			}
+		}
+		text = job_catalytic_drone_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+			NOR = {
+				has_building = building_factory_3
+				has_building = building_ukn_factory_4
+				has_building = building_ukn_factory_5
+			}
+		}
+		modifier = {
+			planet_districts_industrial_cost_mult = 0.65
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+			NOR = {
+				has_building = building_factory_3
+				has_building = building_ukn_factory_4
+				has_building = building_ukn_factory_5
+			}
+		}
+		modifier = {
+			planet_districts_hab_industrial_cost_mult = 0.65
+		}
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		alloys = 8
+		trigger = {
+			always = yes
+		}
+	}
+	ai_resource_production = {
+		alloys = 8
+		trigger = {
+			planet_resource_compare = {
+				resource = alloys
+				value >= 8
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		alloys = 8
+		trigger = {
+			planet_resource_compare = {
+				resource = alloys
+				value >= 16
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		alloys = 8
+		trigger = {
+			planet_resource_compare = {
+				resource = alloys
+				value >= 24
+				type = produces
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+building_foundry_3 = {
+	base_buildtime = @building_ukn_foundry_4_build_time
+	can_build = no
+	position_priority = 121
+	category = manufacturing
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+		UKN_USES_SUB_RW_ARCOLOGY_DISTRICTS = yes
+		UKN_USES_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+	
+
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = no
+			}
+			NOT = { has_building = building_foundry_3 }
+		}
+		modifier = {
+			job_foundry_add = 1000
+		}
+	}
+#[AI-MACHINE] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_machine_empire = yes
+			}
+			NOT = { has_building = building_foundry_3 }
+		}
+		modifier = {
+			job_fabricator_add = 1000
+		}
+	}
+#[AI-MACHINE] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_hive_empire = yes
+			}
+			NOT = { has_building = building_foundry_3 }
+		}
+		modifier = {
+			job_alloy_drone_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_foundry_3
+#########
+# COSTS #
+#########
+#[BASIC] AUTOMACHINES
+		cost = {
+			nanites = @building_ukn_foundry_4_cost_basic_nanites
+		}
+		
+		
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_foundry_4_cost_basic_consumer_goods
+		}
+		
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_foundry_4_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_foundry_4_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_foundry_4_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_foundry_4_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			rare_crystals = @building_ukn_foundry_4_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_foundry_4_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_foundry_4_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_foundry_4_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_foundry_4_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_foundry_4_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_capital_productivity_3"
+	}
+
+	upgrades = {
+		building_ukn_foundry_4
+		building_ukn_foundry_5
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = cost_info_district_ukn_industrial
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = cost_info_district_ukn_hab_industrial
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = cost_info_district_ukn_arcology_arms_industry
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_industrial
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_industrial
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_arcology_arms_industry
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_rw_industrial
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_alderson_industrial
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_default_normal_100_0_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_4_default_normal_100_0_alloys_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_default_normal_100_0_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_default_normal_50_50_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_4_default_normal_50_50_alloys_add
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_4_default_normal_50_50_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_default_normal_50_50_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_default_normal_0_100_effect_desc
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_4_default_normal_0_100_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_default_normal_0_100_minerals_add
+		}
+	}
+	
+#[NORMAL] Machine Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_machine_normal_100_0_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_4_machine_normal_100_0_alloys_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_machine_normal_100_0_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_machine_normal_50_50_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_4_machine_normal_50_50_alloys_add
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_4_machine_normal_50_50_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_machine_normal_50_50_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_machine_normal_0_100_effect_desc
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_4_machine_normal_0_100_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_machine_normal_0_100_minerals_add
+		}
+	}
+	
+#[NORMAL] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_hive_normal_100_0_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_4_hive_normal_100_0_alloys_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_hive_normal_100_0_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_hive_normal_50_50_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_4_hive_normal_50_50_alloys_add
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_4_hive_normal_50_50_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_hive_normal_50_50_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_hive_normal_0_100_effect_desc
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_4_hive_normal_0_100_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_hive_normal_0_100_minerals_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[ARCOLOGY] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_default_arcology_100_0_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_4_default_arcology_100_0_alloys_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_default_arcology_100_0_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_default_arcology_50_50_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_4_default_arcology_50_50_alloys_add
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_4_default_arcology_50_50_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_default_arcology_50_50_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_default_arcology_0_100_effect_desc
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_4_default_arcology_0_100_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_default_arcology_0_100_minerals_add
+		}
+	}
+	
+#[ARCOLOGY] Machine Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_machine_arcology_100_0_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_4_machine_arcology_100_0_alloys_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_machine_arcology_100_0_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_machine_arcology_50_50_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_4_machine_arcology_50_50_alloys_add
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_4_machine_arcology_50_50_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_machine_arcology_50_50_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_machine_arcology_0_100_effect_desc
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_4_machine_arcology_0_100_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_machine_arcology_0_100_minerals_add
+		}
+	}
+	
+#[ARCOLOGY] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_hive_arcology_100_0_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_4_hive_arcology_100_0_alloys_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_hive_arcology_100_0_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_hive_arcology_50_50_effect_desc
+			planet_metallurgists_alloys_produces_add = @building_ukn_foundry_4_hive_arcology_50_50_alloys_add
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_4_hive_arcology_50_50_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_hive_arcology_50_50_minerals_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+#				is_catalytic_empire = no
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_hive_arcology_0_100_effect_desc
+			planet_metallurgists_ukn_meta_materials_produces_add = @building_ukn_foundry_4_hive_arcology_0_100_ukn_meta_materials_add
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_hive_arcology_0_100_minerals_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_default_normal_100_0_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_default_normal_100_0_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_4_default_normal_100_0_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_default_normal_50_50_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_default_normal_50_50_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_4_default_normal_50_50_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_default_normal_0_100_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_default_normal_0_100_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_4_default_normal_0_100_food_add
+		}
+	}
+	
+#[NORMAL] Machine Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_machine_normal_100_0_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_machine_normal_100_0_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_4_machine_normal_100_0_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_machine_normal_50_50_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_machine_normal_50_50_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_4_machine_normal_50_50_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_machine_normal_0_100_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_machine_normal_0_100_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_4_machine_normal_0_100_food_add
+		}
+	}
+	
+#[NORMAL] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_hive_normal_100_0_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_hive_normal_100_0_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_4_hive_normal_100_0_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_hive_normal_50_50_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_hive_normal_50_50_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_4_hive_normal_50_50_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_hive_normal_0_100_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_hive_normal_0_100_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_4_hive_normal_0_100_food_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[ARCOLOGY] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_default_arcology_100_0_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_default_arcology_100_0_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_4_default_arcology_100_0_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_default_arcology_50_50_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_default_arcology_50_50_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_4_default_arcology_50_50_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_default_arcology_0_100_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_default_arcology_0_100_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_4_default_arcology_0_100_food_add
+		}
+	}
+	
+#[ARCOLOGY] Machine Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_machine_arcology_100_0_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_machine_arcology_100_0_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_4_machine_arcology_100_0_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_machine_arcology_50_50_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_machine_arcology_50_50_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_4_machine_arcology_50_50_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_machine_arcology_0_100_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_machine_arcology_0_100_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_4_machine_arcology_0_100_food_add
+		}
+	}
+	
+#[ARCOLOGY] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_100_0_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_hive_arcology_100_0_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_hive_arcology_100_0_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_4_hive_arcology_100_0_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_50_50_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_hive_arcology_50_50_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_hive_arcology_50_50_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_4_hive_arcology_50_50_food_add
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = yes
+			}
+			UKN_FABRICATORS_0_100_PRODUCTION = yes
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_hive_arcology_0_100_effect_desc
+			planet_metallurgists_minerals_upkeep_add = @building_ukn_foundry_4_hive_arcology_0_100_minerals_subtract
+			planet_metallurgists_food_upkeep_add = @building_ukn_foundry_4_hive_arcology_0_100_food_add
+		}
+	}
+	
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			OR = {
+				UKN_FABRICATORS_50_50_PRODUCTION = yes
+				UKN_FABRICATORS_0_100_PRODUCTION = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_normal_energy_upkeep_mult_effect_desc
+			planet_metallurgists_energy_upkeep_mult = @building_ukn_foundry_4_normal_energy_upkeep_mult
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			OR = {
+				UKN_FABRICATORS_50_50_PRODUCTION = yes
+				UKN_FABRICATORS_0_100_PRODUCTION = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_foundry_4_arcology_energy_upkeep_mult_effect_desc
+			planet_metallurgists_energy_upkeep_mult = @building_ukn_foundry_4_arcology_energy_upkeep_mult
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		text = job_foundry_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		text = job_fabricator_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		text = job_alloy_drone_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		text = job_catalytic_technician_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_catalytic_empire = yes
+			}
+		}
+		text = job_catalytic_drone_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+			NOR = {
+				has_building = building_ukn_factory_4
+				has_building = building_ukn_factory_5
+			}
+		}
+		modifier = {
+			planet_districts_industrial_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+			NOR = {
+				has_building = building_ukn_factory_4
+				has_building = building_ukn_factory_5
+			}
+		}
+		modifier = {
+			planet_districts_hab_industrial_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			NOR = {
+				has_building = building_ukn_factory_4
+				has_building = building_ukn_factory_5
+			}
+		}
+		modifier = {
+			planet_districts_arcology_arms_industry_cost_mult = 0.30
+		}
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		alloys = 16
+		trigger = {
+			always = yes
+		}
+	}
+	ai_resource_production = {
+		alloys = 16
+		trigger = {
+			planet_resource_compare = {
+				resource = alloys
+				value >= 16
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		alloys = 16
+		trigger = {
+			planet_resource_compare = {
+				resource = alloys
+				value >= 32
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		alloys = 16
+		trigger = {
+			planet_resource_compare = {
+				resource = alloys
+				value >= 48
+				type = produces
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+building_factory_1 = {
+	base_buildtime = @building_ukn_factory_2_build_time
+	base_cap_amount = 1
+	position_priority = 122
+	category = manufacturing
+
+	potential = {
+		exists = owner
+		owner = {
+			country_uses_consumer_goods = yes
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+		UKN_USES_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			country_uses_consumer_goods = no
+		}
+		OR = {
+			UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+	
+	
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = no
+			}
+			NOT = { has_building = building_factory_1 }
+		}
+		modifier = {
+			job_artisan_add = 1000
+		}
+	}
+#[AI-GESTALT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = yes
+			}
+			NOT = { has_building = building_factory_1 }
+		}
+		modifier = {
+			job_artisan_drone_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_factory_1
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_factory_2_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_factory_2_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_factory_2_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_factory_2_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_factory_2_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			rare_crystals = @building_ukn_factory_2_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_factory_2_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_factory_2_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_factory_2_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_factory_2_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_factory_2_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_luxuries_1"
+	}
+
+	upgrades = {
+		building_factory_2
+		building_factory_3
+		building_ukn_factory_4
+		building_ukn_factory_5
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = cost_info_district_ukn_industrial
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = cost_info_district_ukn_hab_industrial
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_industrial
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_industrial
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_arcology_arms_industry
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_rw_industrial
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_alderson_industrial
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_factory_2_default_effect_desc
+			planet_artisans_consumer_goods_produces_add = @building_ukn_factory_2_default_normal_consumer_goods_add
+			planet_artisans_minerals_upkeep_add = @building_ukn_factory_2_default_normal_minerals_add
+		}
+	}
+	
+#[NORMAL] Gestalt Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_factory_2_gestalt_effect_desc
+			planet_artisans_consumer_goods_produces_add = @building_ukn_factory_2_gestalt_normal_consumer_goods_add
+			planet_artisans_minerals_upkeep_add = @building_ukn_factory_2_gestalt_normal_minerals_add
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_crafter_empire = no
+			}
+		}
+		text = job_artisan_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_artisan_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_crafter_empire = yes
+			}
+		}
+		text = job_artificer_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+			NOR = {
+				has_building = building_foundry_1
+				has_building = building_foundry_2
+				has_building = building_foundry_3
+				has_building = building_ukn_foundry_4
+				has_building = building_ukn_foundry_5
+			}
+		}
+		modifier = {
+			planet_districts_industrial_cost_mult = 0.30
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+			NOR = {
+				has_building = building_foundry_1
+				has_building = building_foundry_2
+				has_building = building_foundry_3
+				has_building = building_ukn_foundry_4
+				has_building = building_ukn_foundry_5
+			}
+		}
+		modifier = {
+			planet_districts_hab_industrial_cost_mult = 0.30
+		}
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		consumer_goods = 8  # This is an important building for future upgrades
+		trigger = {
+			always = yes
+		}
+	}
+	ai_resource_production = { # Overvalue this building if this planet is a major source of consumer goods
+		consumer_goods = 8
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 16
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 8
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 32
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 8
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 48
+				type = produces
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+building_factory_2 = {
+	base_buildtime = @building_ukn_factory_3_build_time
+	can_build = no
+	position_priority = 122
+	category = manufacturing
+
+	potential = {
+		exists = owner
+		owner = {
+			country_uses_consumer_goods = yes
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+		UKN_USES_NORMAL_DISTRICTS = yes
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			country_uses_consumer_goods = no
+		}
+		OR = {
+			UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+	
+	
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = no
+			}
+			NOT = { has_building = building_factory_2 }
+		}
+		modifier = {
+			job_artisan_add = 1000
+		}
+	}
+#[AI-GESTALT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = yes
+			}
+			NOT = { has_building = building_factory_2 }
+		}
+		modifier = {
+			job_artisan_drone_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_factory_2
+#########
+# COSTS #
+#########
+#[BASIC] AUTOMACHINES
+		cost = {
+			nanites = @building_ukn_factory_3_cost_basic_nanites
+		}
+		
+		
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_factory_3_cost_basic_consumer_goods
+		}
+		
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_factory_3_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_factory_3_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_factory_3_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_factory_3_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			rare_crystals = @building_ukn_factory_3_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_factory_3_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_factory_3_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_factory_3_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_factory_3_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_factory_3_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_capital_productivity_2"
+	}
+
+	upgrades = {
+		building_factory_3
+		building_ukn_factory_4
+		building_ukn_factory_5
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = cost_info_district_ukn_industrial
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = cost_info_district_ukn_hab_industrial
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_industrial
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_industrial
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_arcology_arms_industry
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_rw_industrial
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_alderson_industrial
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_factory_3_default_effect_desc
+			planet_artisans_consumer_goods_produces_add = @building_ukn_factory_3_default_normal_consumer_goods_add
+			planet_artisans_minerals_upkeep_add = @building_ukn_factory_3_default_normal_minerals_add
+		}
+	}
+	
+#[NORMAL] Gestalt Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_factory_3_gestalt_effect_desc
+			planet_artisans_consumer_goods_produces_add = @building_ukn_factory_3_gestalt_normal_consumer_goods_add
+			planet_artisans_minerals_upkeep_add = @building_ukn_factory_3_gestalt_normal_minerals_add
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_crafter_empire = no
+			}
+		}
+		text = job_artisan_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_artisan_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_crafter_empire = yes
+			}
+		}
+		text = job_artificer_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+			NOR = {
+				has_building = building_foundry_2
+				has_building = building_foundry_3
+				has_building = building_ukn_foundry_4
+				has_building = building_ukn_foundry_5
+			}
+		}
+		modifier = {
+			planet_districts_industrial_cost_mult = 0.65
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+			NOR = {
+				has_building = building_foundry_2
+				has_building = building_foundry_3
+				has_building = building_ukn_foundry_4
+				has_building = building_ukn_foundry_5
+			}
+		}
+		modifier = {
+			planet_districts_hab_industrial_cost_mult = 0.65
+		}
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		consumer_goods = 16
+		trigger = {
+			always = yes
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 16
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 16
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 16
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 32
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 16
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 48
+				type = produces
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+building_factory_3 = {
+	base_buildtime = @building_ukn_factory_4_build_time
+	can_build = no
+	position_priority = 122
+	category = manufacturing
+
+	potential = {
+		exists = owner
+		owner = {
+			country_uses_consumer_goods = yes
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+		UKN_USES_SUB_RW_ARCOLOGY_DISTRICTS = yes
+		UKN_USES_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			country_uses_consumer_goods = no
+		}
+		OR = {
+			UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+	
+	
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = no
+			}
+			NOT = { has_building = building_factory_3 }
+		}
+		modifier = {
+			job_artisan_add = 1000
+		}
+	}
+#[AI-GESTALT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = yes
+			}
+			NOT = { has_building = building_factory_3 }
+		}
+		modifier = {
+			job_artisan_drone_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_factory_3
+#########
+# COSTS #
+#########
+#[BASIC] AUTOMACHINES
+		cost = {
+			nanites = @building_ukn_factory_4_cost_basic_nanites
+		}
+		
+		
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_factory_4_cost_basic_consumer_goods
+		}
+		
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_factory_4_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_factory_4_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_factory_4_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_factory_4_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			rare_crystals = @building_ukn_factory_4_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_factory_4_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_factory_4_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_factory_4_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_factory_4_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_factory_4_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_capital_productivity_3"
+	}
+
+	upgrades = {
+		building_ukn_factory_4
+		building_ukn_factory_5
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = cost_info_district_ukn_industrial
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = cost_info_district_ukn_hab_industrial
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = cost_info_district_ukn_arcology_arms_industry
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_industrial
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_industrial
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_arcology_arms_industry
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_rw_industrial
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_alderson_industrial
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_factory_4_default_effect_desc
+			planet_artisans_consumer_goods_produces_add = @building_ukn_factory_4_default_normal_consumer_goods_add
+			planet_artisans_minerals_upkeep_add = @building_ukn_factory_4_default_normal_minerals_add
+		}
+	}
+	
+#[NORMAL] Gestalt Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_factory_4_gestalt_effect_desc
+			planet_artisans_consumer_goods_produces_add = @building_ukn_factory_4_gestalt_normal_consumer_goods_add
+			planet_artisans_minerals_upkeep_add = @building_ukn_factory_4_gestalt_normal_minerals_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[ARCOLOGY] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_factory_4_default_arcology_effect_desc
+			planet_artisans_consumer_goods_produces_add = @building_ukn_factory_4_default_arcology_consumer_goods_add
+			planet_artisans_minerals_upkeep_add = @building_ukn_factory_4_default_arcology_minerals_add
+		}
+	}
+	
+#[ARCOLOGY] Gestalt Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_factory_4_gestalt_arcology_effect_desc
+			planet_artisans_consumer_goods_produces_add = @building_ukn_factory_4_gestalt_arcology_consumer_goods_add
+			planet_artisans_minerals_upkeep_add = @building_ukn_factory_4_gestalt_arcology_minerals_add
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_crafter_empire = no
+			}
+		}
+		text = job_artisan_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = job_artisan_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_crafter_empire = yes
+			}
+		}
+		text = job_artificer_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+			NOR = {
+				has_building = building_foundry_3
+				has_building = building_ukn_foundry_4
+				has_building = building_ukn_foundry_5
+			}
+		}
+		modifier = {
+			planet_districts_industrial_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+			NOR = {
+				has_building = building_foundry_3
+				has_building = building_ukn_foundry_4
+				has_building = building_ukn_foundry_5
+			}
+		}
+		modifier = {
+			planet_districts_hab_industrial_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			NOR = {
+				has_building = building_foundry_3
+				has_building = building_ukn_foundry_4
+				has_building = building_ukn_foundry_5
+			}
+		}
+		modifier = {
+			planet_districts_arcology_arms_industry_cost_mult = 0.30
+		}
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		consumer_goods = 24
+		trigger = {
+			always = yes
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 24
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 24
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 20
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 44
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 20
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 64
+				type = produces
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+building_refinery = {
+	base_buildtime = @building_ukn_refinery_3_build_time
+	base_cap_amount = 1
+	position_priority = 124
+	category = manufacturing
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+		UKN_USES_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+	
+	
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = no
+			}
+			NOT = { has_building = building_refinery }
+		}
+		modifier = {
+			job_gas_refiner_add = 1000
+		}
+	}
+#[AI-GESTALT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = yes
+			}
+			NOT = { has_building = building_refinery }
+		}
+		modifier = {
+			job_gas_refiner_drone_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_refinery
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_refinery_3_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_refinery_3_cost_basic_minerals
+		}
+#[BASIC] POLYMERICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			alloys = @building_ukn_refinery_3_cost_basic_alloys
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_refinery_3_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_refinery_3_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_refinery_3_r_cost_basic_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_refinery_3_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_mine_exotic_gases"
+	}
+
+	upgrades = {
+		building_ukn_refinery_2
+		building_ukn_refinery_3
+		building_ukn_refinery_4
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_refinery
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_hab_refinery
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_arcology_refinery
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_rw_refinery
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_alderson_refinery
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_gas_refiner_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_gas_refiner_drone_effect_desc
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		exotic_gases = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+building_chemical_plant = {
+	base_buildtime = @building_ukn_particle_factory_grid_4_build_time
+	base_cap_amount = 1
+	position_priority = 126
+	category = manufacturing
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+		UKN_USES_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+	
+	
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = no
+			}
+			NOT = { has_building = building_chemical_plant }
+		}
+		modifier = {
+			job_ukn_exotic_particles_producer_add = 1000
+		}
+	}
+#[AI-GESTALT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = yes
+			}
+			NOT = { has_building = building_chemical_plant }
+		}
+		modifier = {
+			job_ukn_exotic_particles_production_drone_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_chemical_plant
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_particle_factory_grid_4_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_particle_factory_grid_4_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			ukn_meta_materials = @building_ukn_particle_factory_grid_4_cost_basic_ukn_meta_materials
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_particle_factory_grid_4_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_particle_factory_grid_4_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_particle_factory_grid_4_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			rare_crystals = @building_ukn_particle_factory_grid_4_cost_advanced_rare_crystals
+			exotic_gases = @building_ukn_particle_factory_grid_4_cost_advanced_exotic_gases
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_particle_factory_grid_4_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_particle_factory_grid_4_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_particle_factory_grid_4_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_particle_factory_grid_4_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_particle_factory_grid_4_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_mine_ukn_exotic_particles"
+	}
+	
+	upgrades = {
+		building_ukn_particle_factory_grid_2
+		building_ukn_particle_factory_grid_3
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_exotic_particles_factory
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_hab_exotic_particles_factory
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_arcology_exotic_particles_factory
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_rw_exotic_particles_factory
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_alderson_exotic_particles_factory
+	}
+#----------------------------------------------------
+
+#[MINERALS] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			NOR = {
+				has_modifier = mod_ukn_alloys_based_exotic_particles_production
+				has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+				has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+				has_modifier = mod_ukn_condensics_based_exotic_particles_production
+				has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+				has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+			}
+		}
+		text = job_ukn_exotic_particles_producer_minerals_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+			NOR = {
+				has_modifier = mod_ukn_alloys_based_exotic_particles_production
+				has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+				has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+				has_modifier = mod_ukn_condensics_based_exotic_particles_production
+				has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+				has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+			}
+		}
+		text = job_ukn_exotic_particles_production_drone_minerals_effect_desc
+	}
+
+#[POLYMERICS] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			has_modifier = mod_ukn_alloys_based_exotic_particles_production
+		}
+		text = job_ukn_exotic_particles_producer_alloys_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+			has_modifier = mod_ukn_alloys_based_exotic_particles_production
+		}
+		text = job_ukn_exotic_particles_production_drone_alloys_effect_desc
+	}
+
+#[META-MATERIALS] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+		}
+		text = job_ukn_exotic_particles_producer_ukn_meta_materials_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+			has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+		}
+		text = job_ukn_exotic_particles_production_drone_ukn_meta_materials_effect_desc
+	}
+
+#[FEMTOMATTER] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+		}
+		text = job_ukn_exotic_particles_producer_ukn_femtomatter_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+			has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+		}
+		text = job_ukn_exotic_particles_production_drone_ukn_femtomatter_effect_desc
+	}
+
+#[CONDENSICS] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			has_modifier = mod_ukn_condensics_based_exotic_particles_production
+		}
+		text = job_ukn_exotic_particles_producer_ukn_condensics_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+			has_modifier = mod_ukn_condensics_based_exotic_particles_production
+			}
+		text = job_ukn_exotic_particles_production_drone_ukn_condensics_effect_desc
+	}
+
+#[QUASI-MATTER] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+		}
+		text = job_ukn_exotic_particles_producer_ukn_quasi_matter_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+			has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+		}
+		text = job_ukn_exotic_particles_production_drone_ukn_quasi_matter_effect_desc
+	}
+
+#[OSCILLYONS] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+		}
+		text = job_ukn_exotic_particles_producer_ukn_causalitons_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+			has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+		}
+		text = job_ukn_exotic_particles_production_drone_ukn_causalitons_effect_desc
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		ukn_exotic_particles = 3
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+building_crystal_plant = {
+	base_buildtime = @building_ukn_crystal_plant_3_build_time
+	base_cap_amount = 1
+	position_priority = 125
+	category = manufacturing
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+		UKN_USES_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+	
+	
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = no
+			}
+			NOT = { has_building = building_crystal_plant }
+		}
+		modifier = {
+			job_translucer_add = 1000
+		}
+	}
+#[AI-GESTALT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = yes
+			}
+			NOT = { has_building = building_crystal_plant }
+		}
+		modifier = {
+			job_translucer_drone_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_crystal_plant
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_crystal_plant_3_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_crystal_plant_3_cost_basic_minerals
+		}
+#[BASIC] POLYMERICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			alloys = @building_ukn_crystal_plant_3_cost_basic_alloys
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_crystal_plant_3_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_crystal_plant_3_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_crystal_plant_3_r_cost_basic_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_crystal_plant_3_upkeep_energy
+		}
+	}
+	prerequisites = {
+		"tech_mine_rare_crystals"
+	}
+
+	upgrades = {
+		building_ukn_crystal_plant_2
+		building_ukn_crystal_plant_3
+		building_ukn_crystal_plant_4
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_refinery
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_hab_refinery
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_arcology_refinery
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_rw_refinery
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_alderson_refinery
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_translucer_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_translucer_drone_effect_desc
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		rare_crystals = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+building_nanite_transmuter = {
+	base_buildtime = @b3_time
+	category = manufacturing
+
+	potential = {
+		exists = owner
+		OWNER = {
+			OR = {
+				has_monthly_income = {
+					resource = nanites
+					value > 0
+				}
+				AND = {
+					is_ai = no
+					has_resource = {
+						type = nanites
+						amount > 0
+					}
+				}
+			}
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		produces = {
+			trigger = {
+				owner = {
+					NOT = {
+						has_deficit = nanites
+					}
+				}
+			}
+			rare_crystals = 2
+			ukn_exotic_particles = 2
+			exotic_gases = 2
+		}
+		upkeep = {
+			nanites = 1
+			energy = 5
+		}
+	}
+
+	prerequisites = {
+		"tech_nanite_transmutation"
+	}
+
+	ai_resource_production = {
+		rare_crystals = @b3_rare_upkeep
+		ukn_exotic_particles = @b3_rare_upkeep
+		exotic_gases = @b3_rare_upkeep
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+building_ministry_production = {
+	base_buildtime = @building_ukn_ministry_production_5_build_time
+	base_cap_amount = 1
+	position_priority = 131
+	icon = building_production_center
+	category = manufacturing
+
+	potential = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+		OR = {
+			has_major_upgraded_capital = yes
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+#----------------------------------------------------
+
+	planet_modifier = {
+		job_politician_add = @building_ukn_ministry_production_5_jobs
+		planet_metallurgists_produces_mult = 0.15
+		planet_artisans_produces_mult = 0.15
+	}
+
+#[NORMAL] Jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			UKN_USES_NORMAL_DISTRICTS = yes
+		}
+		modifier = {
+			job_foundry_normal_add = @building_ukn_ministry_production_5_jobs
+		}
+	}
+
+#[ARCOLOGY] Jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		modifier = {
+			job_foundry_add = @building_ukn_ministry_production_5_jobs
+		}
+	}
+
+#[RINGWORLD] Jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		modifier = {
+			job_foundry_add = @building_ukn_ministry_production_5_jobs
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings
+#########
+# COSTS #
+#########
+#[BASIC] AUTOMACHINES
+		cost = {
+			nanites = @building_ukn_ministry_production_5_cost_basic_nanites
+		}
+		
+		
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_ministry_production_5_cost_basic_consumer_goods
+		}
+		
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_ministry_production_5_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_ministry_production_5_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_ministry_production_5_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_ministry_production_5_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			rare_crystals = @building_ukn_ministry_production_5_cost_advanced_rare_crystals
+			exotic_gases = @building_ukn_ministry_production_5_cost_advanced_exotic_gases
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_ministry_production_5_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_ministry_production_5_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_ministry_production_5_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_ministry_production_5_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_ministry_production_5_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_global_production_strategy"
+	}
+
+	triggered_desc = {
+		text = job_politician_effect_desc
+	}
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_foundry_effect_desc
+	}
+#----------------------------------------------------
+
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		alloys = 3
+		consumer_goods = 6
+	}
+	ai_resource_production = {
+		alloys = 3
+		trigger = {
+			planet_resource_compare = {
+				resource = alloys
+				value >= 20
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		alloys = 3
+		trigger = {
+			planet_resource_compare = {
+				resource = alloys
+				value >= 40
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 5
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 33
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 5
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 66
+				type = produces
+			}
+		}
+	}
+}
+
+building_production_center = {
+	base_buildtime = @building_ukn_production_center_5_build_time
+	base_cap_amount = 1
+	position_priority = 131
+	category = manufacturing
+
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+		OR = {
+			has_major_upgraded_capital = yes
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+#----------------------------------------------------
+
+	planet_modifier = {
+		planet_metallurgists_produces_mult = 0.15
+		planet_artisans_produces_mult = 0.15
+	}
+
+	resources = {
+		category = planet_buildings
+#########
+# COSTS #
+#########
+#[BASIC] AUTOMACHINES
+		cost = {
+			nanites = @building_ukn_production_center_5_cost_basic_nanites
+		}
+		
+		
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_production_center_5_cost_basic_consumer_goods
+		}
+		
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_production_center_5_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_production_center_5_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_production_center_5_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_production_center_5_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			rare_crystals = @building_ukn_production_center_5_cost_advanced_rare_crystals
+			exotic_gases = @building_ukn_production_center_5_cost_advanced_exotic_gases
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_production_center_5_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_production_center_5_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_production_center_5_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_production_center_5_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_production_center_5_upkeep_energy
+		}
+	}
+
+#[NORMAL] Jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+			UKN_USES_NORMAL_DISTRICTS = yes
+		}
+		modifier = {
+			job_alloy_drone_normal_add = @building_ukn_production_center_5_jobs_hive
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+			UKN_USES_NORMAL_DISTRICTS = yes
+		}
+		modifier = {
+			job_fabricator_normal_add = @building_ukn_production_center_5_jobs_machine
+		}
+	}
+
+#[ARCOLOGY] Jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		modifier = {
+			job_alloy_drone_add = @building_ukn_production_center_5_jobs_hive
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		modifier = {
+			job_fabricator_add = @building_ukn_production_center_5_jobs_machine
+		}
+	}
+
+#[RINGWORLD] Jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		modifier = {
+			job_alloy_drone_add = @building_ukn_production_center_5_jobs_hive
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+		}
+		modifier = {
+			job_fabricator_add = @building_ukn_production_center_5_jobs_machine
+		}
+	}
+#----------------------------------------------------
+
+	prerequisites = {
+		"tech_global_production_strategy"
+	}
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		text = job_alloy_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_fabricator_effect_desc
+	}
+#----------------------------------------------------
+
+	show_tech_unlock_if = {
+		is_gestalt = yes
+	}
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		alloys = 3
+	}
+	ai_resource_production = {
+		trigger = {
+			owner = {
+				country_uses_consumer_goods = yes
+			}
+		}
+		consumer_goods = 6
+	}
+	ai_resource_production = {
+		alloys = 3
+		trigger = {
+			planet_resource_compare = {
+				resource = alloys
+				value >= 20
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		alloys = 3
+		trigger = {
+			planet_resource_compare = {
+				resource = alloys
+				value >= 40
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 5
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 33
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 5
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 66
+				type = produces
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+on_game_start = {
+	events = {
+		transhum.1000
+	}
+}
+
+on_leader_spawned = {
+	events = {
+		transhum.50
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		transhum.1000
+	}
+}
+
+on_first_contact = {
+	events = {
+		transhum.60
+	}
+}
+
+on_post_communications_established = {
+	events = {
+		transhum.61
+	}
+}

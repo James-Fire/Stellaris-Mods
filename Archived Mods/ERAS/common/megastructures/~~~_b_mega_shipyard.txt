@@ -1,0 +1,389 @@
+mega_shipyard_0 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	prerequisites = { "tech_mega_shipyard" }
+	ship_modifiers = { ship_starting_experience_add = @ukn_mega_shipyard_p0_ship_starting_experience_add }
+	station_modifier = {
+		starbase_shipyard_capacity_add = @ukn_mega_shipyard_p0_starbase_shipyard_capacity_add
+		starbase_shipyard_build_speed_mult = @ukn_mega_shipyard_p0_starbase_shipyard_build_speed_mult
+	}
+	
+
+	build_time = @ukn_mega_shipyard_p0_build_time
+	resources = {
+		category = ukn_kilostructure_site
+		cost = {
+			influence = @ukn_mega_shipyard_p0_cost_influence
+			unity = @ukn_mega_shipyard_p0_cost_unity
+####
+			consumer_goods = @ukn_mega_shipyard_p0_cost_consumer_goods
+			alloys = @ukn_mega_shipyard_p0_cost_alloys
+#			ukn_meta_materials = @ukn_mega_shipyard_p0_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_mega_shipyard_p0_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_mega_shipyard_p0_cost_ukn_causalitons
+		}
+		upkeep = {
+			energy = @ukn_mega_shipyard_p0_upkeep_energy
+		}
+	}
+#######################
+
+	potential = {
+		OR = {
+			AND = {
+				NOT = { has_global_flag = gigastructures_enabled }
+			}
+			AND = {
+				has_global_flag = gigastructures_enabled
+				NOT = { has_global_flag = vanilla_shipyard_disabled }
+				OR = {
+					check_variable = { which = giga_vanilla_shipyard_cap value = 0 }						# No Cap
+					check_variable = { which = giga_current_vanilla_shipyard value < giga_vanilla_shipyard_cap }
+				}
+			}
+		}
+	}
+
+	possible = {
+		exists = starbase
+		from = { has_technology = tech_mega_shipyard }
+		custom_tooltip = { fail_text = "requires_inside_border"			is_inside_border = from }
+		custom_tooltip = { fail_text = "requires_surveyed_system"		giga_system_is_surveyed = yes }
+		custom_tooltip = { fail_text = "requires_no_binary_trinary"		giga_is_bitrinary = no }
+		custom_tooltip = {
+			fail_text = "requires_not_capped"
+			from = {
+				OR = {
+					check_variable = { which = giga_vanilla_shipyard_cap value = 0 }						# No Cap
+					check_variable = { which = giga_current_vanilla_shipyard value < giga_vanilla_shipyard_cap }
+				}
+			}
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = { fail_text = "must_build_around_star"					is_star = yes }
+			custom_tooltip = { fail_text = "requires_no_existing_megastructure"		planet_has_no_megastructure = yes }
+			custom_tooltip = { fail_text = "requires_no_anomaly"					has_anomaly = no }
+			custom_tooltip = { fail_text = "requires_standard_planet_class"			giga_is_standard_star = yes }
+		}
+	}
+
+	ai_weight = {
+		weight = 100	# Default = 100
+
+		# Can we afford the upkeep
+
+		# Do we want the production
+
+		# Is this system a good location?
+		modifier = { factor = 0.1	any_neighbor_system = { exists = owner NOT = { owner = { is_same_value = from } } } }
+		modifier = { factor = 0.5	any_neighbor_system = { any_neighbor_system = { exists = owner NOT = { owner = { is_same_value = from } } } } }
+
+		# Do we lean towards this from federation/ethic/civic?
+		modifier = { factor = 2		from = { has_federation = yes federation = { has_federation_type = military_federation } } }
+		modifier = { factor = 3		from = { has_ethic = ethic_fanatic_militarist } }
+		modifier = { factor = 1.5	from = { has_ethic = ethic_militarist } }
+		modifier = { factor = 1.5	from = { has_civic = civic_machine_terminator } }
+		modifier = { factor = 1.5	from = { has_civic = civic_fanatic_purifiers } }
+		modifier = { factor = 1.5	from = { has_civic = civic_hive_devouring_swarm } }
+		modifier = { factor = 2		from = { is_at_war = yes } }
+
+		# How many of this megastructure can the AI build?
+		modifier = { factor = 0.00 from = { has_country_flag = has_recently_built_mega_shipyard } }
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					has_megastructure = mega_shipyard_0
+					has_megastructure = mega_shipyard_1
+					has_megastructure = mega_shipyard_2
+					has_megastructure = mega_shipyard_ruined
+				}
+			}
+		}
+	}
+
+	on_build_complete = {
+		from = {
+			set_timed_country_flag = { flag = has_recently_built_mega_shipyard years = 20 }
+			set_country_flag = built_mega_shipyard_site
+			change_variable = { which = giga_current_vanilla_shipyard value = 1 }
+		}
+		fromfrom.planet = {
+			set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+			set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+			if = { limit = { has_orbital_station = yes } orbital_station = { dismantle = yes } }
+		}
+	}
+}
+
+mega_shipyard_1 = {
+	entity = "mega_shipyard_01_stage_1_entity"
+	construction_entity = "mega_shipyard_01_stage_1_entity"
+	portrait = GFX_megastructure_construction_background
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	upgrade_from = { mega_shipyard_0 }
+	prerequisites = { "tech_mega_shipyard" }
+	ship_modifiers = { ship_starting_experience_add = @ukn_mega_shipyard_p1_ship_starting_experience_add }
+	station_modifier = {
+		starbase_shipyard_capacity_add = @ukn_mega_shipyard_p1_starbase_shipyard_capacity_add
+		starbase_shipyard_build_speed_mult = @ukn_mega_shipyard_p1_starbase_shipyard_build_speed_mult
+	}
+
+	build_time = @ukn_mega_shipyard_p1_build_time
+	resources = {
+		category = ukn_kilostructure_frame
+		cost = {
+			consumer_goods = @ukn_mega_shipyard_p1_cost_consumer_goods
+			alloys = @ukn_mega_shipyard_p1_cost_alloys
+			ukn_meta_materials = @ukn_mega_shipyard_p1_cost_ukn_meta_materials
+####
+			rare_crystals = @ukn_mega_shipyard_p1_cost_rare_crystals
+			exotic_gases = @ukn_mega_shipyard_p1_cost_exotic_gases
+#			ukn_femtomatter = @ukn_mega_shipyard_p1_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_mega_shipyard_p1_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_mega_shipyard_p1_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_mega_shipyard_p1_cost_ukn_causalitons
+		}
+		upkeep = {
+			energy = @ukn_mega_shipyard_p1_upkeep_energy
+			alloys = @ukn_mega_shipyard_p1_upkeep_alloys
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = { from = { country_event = { id = feda.1 } } }
+}
+
+mega_shipyard_2 = {
+	entity = "mega_shipyard_01_stage_2_entity"
+	construction_entity = "mega_shipyard_01_stage_2_entity"
+	portrait = GFX_megastructure_construction_background
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	upgrade_from = { mega_shipyard_1 }
+	prerequisites = { "tech_mega_shipyard" }
+	ship_modifiers = { ship_starting_experience_add = @ukn_mega_shipyard_p2_ship_starting_experience_add }
+	station_modifier = {
+		starbase_shipyard_capacity_add = @ukn_mega_shipyard_p2_starbase_shipyard_capacity_add
+		starbase_shipyard_build_speed_mult = @ukn_mega_shipyard_p2_starbase_shipyard_build_speed_mult
+	}
+
+	build_time = @ukn_mega_shipyard_p2_build_time
+	resources = {
+		category = ukn_kilostructure_main
+		cost = {
+			consumer_goods = @ukn_mega_shipyard_p2_cost_consumer_goods
+			alloys = @ukn_mega_shipyard_p2_cost_alloys
+			ukn_meta_materials = @ukn_mega_shipyard_p2_cost_ukn_meta_materials
+####
+			nanites = @ukn_mega_shipyard_p2_cost_nanites
+			rare_crystals = @ukn_mega_shipyard_p2_cost_rare_crystals
+			exotic_gases = @ukn_mega_shipyard_p2_cost_exotic_gases
+#			ukn_femtomatter = @ukn_mega_shipyard_p2_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_mega_shipyard_p2_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_mega_shipyard_p2_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_mega_shipyard_p2_cost_ukn_causalitons
+		}
+		upkeep = {
+			energy = @ukn_mega_shipyard_p2_upkeep_energy
+			alloys = @ukn_mega_shipyard_p2_upkeep_alloys
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = { from = { country_event = { id = feda.2 } } }
+}
+
+mega_shipyard_3 = {
+	entity = "mega_shipyard_01_stage_3_entity"
+	construction_entity = "mega_shipyard_01_stage_3_entity"
+	portrait = "GFX_megastructure_mega_shipyard_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	upgrade_from = { mega_shipyard_2 }
+	prerequisites = { "tech_mega_shipyard" }
+#	show_prereqs = yes
+	ship_modifiers = { ship_starting_experience_add = @ukn_mega_shipyard_p3_ship_starting_experience_add }
+	station_modifier = {
+		starbase_shipyard_capacity_add = @ukn_mega_shipyard_p3_starbase_shipyard_capacity_add
+		starbase_shipyard_build_speed_mult = @ukn_mega_shipyard_p3_starbase_shipyard_build_speed_mult
+	}
+
+	build_time = @ukn_mega_shipyard_p3_build_time
+	resources = {
+		category = ukn_kilostructure_special
+		cost = {
+			consumer_goods = @ukn_mega_shipyard_p3_cost_consumer_goods
+			alloys = @ukn_mega_shipyard_p3_cost_alloys
+			ukn_meta_materials = @ukn_mega_shipyard_p3_cost_ukn_meta_materials
+####
+			nanites = @ukn_mega_shipyard_p3_cost_nanites
+			rare_crystals = @ukn_mega_shipyard_p3_cost_rare_crystals
+			exotic_gases = @ukn_mega_shipyard_p3_cost_exotic_gases
+#			ukn_femtomatter = @ukn_mega_shipyard_p3_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_mega_shipyard_p3_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_mega_shipyard_p3_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_mega_shipyard_p3_cost_ukn_causalitons
+		}
+		upkeep = {
+			energy = @ukn_mega_shipyard_p3_upkeep_energy
+			alloys = @ukn_mega_shipyard_p3_upkeep_alloys
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+		set_star_flag = mega_shipyard_built
+		from = {
+			set_country_flag = ukn_has_built_kilostructure 	# Triggers Galactic Wonders
+			country_event = { id = feda.3 }
+		}
+	}
+}
+
+# Ruined mega shipyard
+mega_shipyard_ruined = {
+	entity = "mega_shipyard_01_destroyed_entity"
+	construction_entity = "mega_shipyard_01_destroyed_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	potential = { always = no }
+}
+
+# Restored mega shipyard
+mega_shipyard_restored = {
+	entity = "mega_shipyard_01_stage_3_entity"
+	construction_entity = "mega_shipyard_01_stage_3_entity"
+	portrait = "GFX_megastructure_mega_shipyard_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	upgrade_from = { mega_shipyard_ruined }
+	ship_modifiers = { ship_starting_experience_add = @ukn_mega_shipyard_r_ship_starting_experience_add }
+	station_modifier = {
+		starbase_shipyard_capacity_add = @ukn_mega_shipyard_r_starbase_shipyard_capacity_add
+		starbase_shipyard_build_speed_mult = @ukn_mega_shipyard_r_starbase_shipyard_build_speed_mult
+	}
+
+	build_time = @ukn_mega_shipyard_r_build_time
+	resources = {
+		category = ukn_kilostructure_special
+		cost = {
+			consumer_goods = @ukn_mega_shipyard_r_cost_consumer_goods
+			alloys = @ukn_mega_shipyard_r_cost_alloys
+			ukn_meta_materials = @ukn_mega_shipyard_r_cost_ukn_meta_materials
+####
+			nanites = @ukn_mega_shipyard_r_cost_nanites
+			rare_crystals = @ukn_mega_shipyard_r_cost_rare_crystals
+			exotic_gases = @ukn_mega_shipyard_r_cost_exotic_gases
+#			ukn_femtomatter = @ukn_mega_shipyard_r_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_mega_shipyard_r_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_mega_shipyard_r_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_mega_shipyard_r_cost_ukn_causalitons
+		}
+		upkeep = {
+			energy = @ukn_mega_shipyard_r_upkeep_energy
+			alloys = @ukn_mega_shipyard_r_upkeep_alloys
+		}
+	}
+#######################
+
+	possible = {
+		exists = from
+		from = { has_technology = tech_starbase_5 }
+	}
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_start = { fromfrom = { set_graphical_culture = root.from } }
+	on_build_complete = {
+		set_star_flag = mega_shipyard_built
+		giga_remove_system_debris = yes
+		from = {
+			country_event = { id = feda.6 }
+		}
+		fromfrom.planet = {
+			set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+			set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+			if = { limit = { has_orbital_station = yes } orbital_station = { dismantle = yes } }
+		}
+	}
+}
+
+mega_shipyard_3_dummy_text = {
+	entity = "mega_shipyard_01_stage_3_entity"
+	construction_entity = "mega_shipyard_01_stage_3_entity"
+	portrait = "GFX_megastructure_mega_shipyard_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	upgrade_from = { mega_shipyard_3 }
+	prerequisites = { "tech_mega_shipyard" }
+	show_prereqs = yes
+
+	build_time = 9900
+	resources = {
+		category = megastructures
+		cost = {
+			influence = @ukn_mega_shipyard_p0_cost_influence
+			unity = @ukn_mega_shipyard_p0_cost_unity
+####
+			consumer_goods = @ukn_mega_shipyard_p0_cost_consumer_goods
+			alloys = @ukn_mega_shipyard_p0_cost_alloys
+#			ukn_meta_materials = @ukn_mega_shipyard_p0_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_mega_shipyard_p0_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_mega_shipyard_p0_cost_ukn_causalitons
+		}
+		cost = {
+			consumer_goods = @ukn_mega_shipyard_p1_cost_consumer_goods
+			alloys = @ukn_mega_shipyard_p1_cost_alloys
+			ukn_meta_materials = @ukn_mega_shipyard_p1_cost_ukn_meta_materials
+####
+			rare_crystals = @ukn_mega_shipyard_p1_cost_rare_crystals
+			exotic_gases = @ukn_mega_shipyard_p1_cost_exotic_gases
+#			ukn_femtomatter = @ukn_mega_shipyard_p1_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_mega_shipyard_p1_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_mega_shipyard_p1_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_mega_shipyard_p1_cost_ukn_causalitons
+		}
+		cost = {
+			consumer_goods = @ukn_mega_shipyard_p2_cost_consumer_goods
+			alloys = @ukn_mega_shipyard_p2_cost_alloys
+			ukn_meta_materials = @ukn_mega_shipyard_p2_cost_ukn_meta_materials
+####
+			nanites = @ukn_mega_shipyard_p2_cost_nanites
+			rare_crystals = @ukn_mega_shipyard_p2_cost_rare_crystals
+			exotic_gases = @ukn_mega_shipyard_p2_cost_exotic_gases
+#			ukn_femtomatter = @ukn_mega_shipyard_p2_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_mega_shipyard_p2_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_mega_shipyard_p2_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_mega_shipyard_p2_cost_ukn_causalitons
+		}
+		cost = {
+			consumer_goods = @ukn_mega_shipyard_p3_cost_consumer_goods
+			alloys = @ukn_mega_shipyard_p3_cost_alloys
+			ukn_meta_materials = @ukn_mega_shipyard_p3_cost_ukn_meta_materials
+####
+			nanites = @ukn_mega_shipyard_p3_cost_nanites
+			rare_crystals = @ukn_mega_shipyard_p3_cost_rare_crystals
+			exotic_gases = @ukn_mega_shipyard_p3_cost_exotic_gases
+#			ukn_femtomatter = @ukn_mega_shipyard_p3_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_mega_shipyard_p3_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_mega_shipyard_p3_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_mega_shipyard_p3_cost_ukn_causalitons
+		}
+	}
+#######################
+
+	potential = {
+		NOT = { has_technology = tech_mega_shipyard }
+	}
+}

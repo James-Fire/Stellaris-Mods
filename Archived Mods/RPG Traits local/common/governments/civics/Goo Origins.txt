@@ -1,0 +1,43 @@
+origin_gray_goo = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_mechanist.dds"
+	picture = GFX_origin_mechanist
+	max_once_global = yes
+
+	playable = {
+		always = yes
+	}
+	
+	potential = {
+		always = yes
+	}
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_agrarian_idyll
+				value = civic_fanatic_purifiers
+				value = civic_hive_devouring_swarm
+				value = civic_barbaric_despoilers
+				value = civic_fanatic_purifiers
+				value = civic_inwards_perfection
+			}
+		}	
+	}
+	random_weight = { base = 0 }
+	modifier = {
+		shipclass_colonizer_build_cost_mult = -1
+		shipsize_colonizer_build_speed_mult = 9
+		planet_colony_development_speed_mult = 1
+		
+		planet_building_build_speed_mult = 1
+		megastructure_build_speed_mult = 1				# much faster building
+		building_time_mult = -0.75				
+		starbase_shipyard_build_speed_mult = 4			# incredibly fast ship building
+		planet_army_build_speed_mult = 9				# instant nano clouds that destroy everything
+		#planet_army_build_cost_mult = -0.25
+		ship_hull_regen_add_perc = 1					# big hull and armour regeneration
+		ship_armor_regen_add_perc = 1
+		planet_clear_blocker_time_mult = -1
+	}
+	
+}

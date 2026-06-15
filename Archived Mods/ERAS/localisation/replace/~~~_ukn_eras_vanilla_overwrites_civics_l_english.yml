@@ -1,0 +1,24 @@
+﻿l_english:
+ 
+# CIVICS #---------------
+ 
+# Regular
+ civic_catalytic_processing:0 "Catalytic Processing"
+ civic_catalytic_processing_desc:0 "By focusing their industrial efforts on catalytic chemistry, this civilization has unlocked the key to using a combination of organic- and standard materials in the construction of spacebound structures."
+ civic_tooltip_catalytic_processing_effects:0 "Replaces £job_foundry£ §Y$job_foundry_plural$§! with £job_catalytic_technician£ §Y$job_catalytic_technician_plural$§!.\n$job_catalytic_technician_effect_desc$.\n\n£job_researcher£ §Y$job_researcher_plural$§! have their £minerals£ §YMineral§! upkeep replaced with £food£ §Y$food$§! upkeep."
+ civic_tooltip_not_catalytic:0 "Does NOT have §Y$civic_catalytic_processing$§! Civic"
+
+# Corporate
+ civic_corporate_catalytic_processing:0 "$civic_catalytic_processing$"
+ civic_corporate_catalytic_processing_desc:0 "This Megacorporation seeks to maximize profits by combining standard materials with excess organic matter to form advanced resources suitable for spacebound structures."
+ civic_tooltip_catalytic_processing_corporate_effects:0 "$civic_tooltip_catalytic_processing_effects$"
+
+# Hive Mind
+ civic_hive_catalytic_processing:0 "$civic_catalytic_processing$"
+ civic_hive_catalytic_processing_desc:0 "The Hive Mind reprocesses a combination of excess organic matter and standard materials into advanced resources suitable for spacebound structures."
+ civic_tooltip_hive_catalytic_processing_effects:0 "Replaces £job_alloy_drone£ §Y$job_alloy_drone_plural$§! with £job_catalytic_drone£ §Y$job_catalytic_drone_plural$§!.\n$job_catalytic_drone_effect_desc$.\n\n£job_brain_drone£ §Y$job_brain_drone_plural$§! have their £minerals£ §YMineral§! upkeep replaced with £food£ §Y$food$§! upkeep."
+
+# Machine Intelligence
+ civic_machine_catalytic_processing:0 "$civic_catalytic_processing$"
+ civic_machine_catalytic_processing_desc:0 "The Machine Intelligence reprocesses a combination of redundant organic matter and standard materials into advanced resources suitable for spacebound structures."
+ civic_tooltip_machine_catalytic_processing_effects:0 "Replaces £job_fabricator£ §Y$job_fabricator_plural$§! with £job_catalytic_drone£ §Y$job_catalytic_drone_plural$§!.\n$job_catalytic_drone_effect_desc$.\n\n£job_calculator£ §Y$job_calculator_plural$§! have their £minerals£ §YMineral§! upkeep replaced with £food£ §Y$food$§! upkeep."

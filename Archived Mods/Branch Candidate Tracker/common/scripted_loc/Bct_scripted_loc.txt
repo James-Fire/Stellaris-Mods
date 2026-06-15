@@ -1,0 +1,117 @@
+
+##########################################
+##########################################
+#####                                #####
+#####    Branch Candidate Tracker    #####
+#####                                #####
+#####    scripted_loc                #####
+#####                                #####
+##########################################
+##########################################
+
+####################################
+###  Get Current Configurations  ###
+####################################
+
+defined_text = {
+	name = GetText_MarkAlsoNoCommercialPact
+	text = {
+		trigger = {
+			NOR = {
+				has_country_flag = BctFlagMarkAlsoNoCommercialPact
+				is_criminal_syndicate = yes
+			}
+		}
+		localization_key = BctEvent.0001.111.name
+	}
+	text = {
+		trigger = {
+			has_country_flag = BctFlagMarkAlsoNoCommercialPact
+			NOT = { is_criminal_syndicate = yes }
+		}
+		localization_key = BctEvent.0001.112.name
+	}
+	text = {
+		trigger = { is_criminal_syndicate = yes }
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GetText_NoMarkFreePlanet
+	text = {
+		trigger = { NOT = { has_country_flag = BctFlagNoMarkFreePlanet } }
+		localization_key = BctEvent.0001.121.name
+	}
+	text = {
+		trigger = { has_country_flag = BctFlagNoMarkFreePlanet }
+		localization_key = BctEvent.0001.122.name
+	}
+}
+
+defined_text = {
+	name = GetText_MarkPlanetWithForeignBranch
+	text = {
+		trigger = { NOT = { has_country_flag = BctFlagMarkPlanetWithForeignBranch } }
+		localization_key = BctEvent.0001.131.name
+	}
+	text = {
+		trigger = { has_country_flag = BctFlagMarkPlanetWithForeignBranch }
+		localization_key = BctEvent.0001.132.name
+	}
+}
+
+
+#############################################
+###  Exception Handling for Variable = 0  ###
+#############################################
+
+defined_text = {
+	name = GetText_BranchValueThreshold_Any
+	text = {
+		trigger = { check_variable = { which = BctVarBranchCandidatePlanetValue value = 0 } }
+		localization_key = BctTextAny
+	}
+	text = {
+		trigger = { NOT = { check_variable = { which = BctVarBranchCandidatePlanetValue value = 0 } } }
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GetText_NumPopsThreshold_Any
+	text = {
+		trigger = { check_variable = { which = BctVarBranchCandidateNumPops value = 0 } }
+		localization_key = BctTextAny
+	}
+	text = {
+		trigger = { NOT = { check_variable = { which = BctVarBranchCandidateNumPops value = 0 } } }
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GetText_PlanetSizeThreshold_Any
+	text = {
+		trigger = { check_variable = { which = BctVarBranchCandidatePlanetSize value = 0 } }
+		localization_key = BctTextAny
+	}
+	text = {
+		trigger = { NOT = { check_variable = { which = BctVarBranchCandidatePlanetSize value = 0 } } }
+		localization_key = ""
+	}
+}
+
+defined_text = {
+	name = GetText_CountBranchCandidate_Zero
+	text = {
+		trigger = { check_variable = { which = BctVarCountBranchCandidate value = 0 } }
+		localization_key = BctTextZero
+	}
+	text = {
+		trigger = { NOT = { check_variable = { which = BctVarCountBranchCandidate value = 0 } } }
+		localization_key = ""
+	}
+}
+
+

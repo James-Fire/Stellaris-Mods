@@ -1,0 +1,477 @@
+
+###########################
+### TECH COSTS - REPEATABLE  ###
+###########################
+
+###########################
+### TECH WEIGHTS - REPEATABLE  ###
+###########################
+
+@repeatableTechWeight = 25
+@repatableTechFactor = 0.5
+
+tech_living_metal_forges = {
+	area = engineering
+	cost = @repeatableTechBaseCost
+	tier = 5
+	category = { industry }
+	prerequisites = { "tech_living_metal" }
+	weight = @repeatableTechWeight
+
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+		planet_metallurgists_minerals_upkeep_add = 6
+		planet_metallurgists_energy_upkeep_add = 2
+		planet_metallurgists_sr_living_metal_produces_add = 2
+	}
+}
+
+tech_living_metal_ships = {
+	area = engineering
+	cost = @repeatableTechBaseCost
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_living_metal" }
+	weight = @repeatableTechWeight
+
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+		ship_hull_regen_add_perc = 0.2
+		ship_armor_regen_add_perc = 0.1
+		ships_alloys_cost_add = -200
+		ships_sr_living_metal_cost_add = 200
+		megastructures_alloys_cost_add = -2000
+		megastructures_sr_living_metal_cost_add = 2000
+	}
+}
+
+tech_civic_society = {
+	area = society
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { statecraft }
+	levels = 2
+	prerequisites = { "tech_galactic_administration" }
+	weight = @repeatableTechWeight
+	
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	
+	modifier = {
+		country_government_civic_points_add = 1
+	}
+}
+
+tech_nanomachines_2a = {
+	area = engineering
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { industry }
+	prerequisites = { "tech_nanomachines_1" }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+        levels = 5
+	weight = @repeatableTechWeight
+	
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	modifier = {
+		planet_building_build_speed_mult = 0.20
+		planet_pops_robotics_upkeep_mult = -0.05
+		pop_assembly_speed = 0.20
+		planet_buildings_upkeep_mult = -0.05
+		planet_buildings_cost_mult = -0.05
+                
+	}
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+tech_nanomachines_2b = {
+	area = engineering
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { industry }
+	prerequisites = { "tech_nanomachines_1" "tech_starbase_5" }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+        levels = 5
+	weight = @repeatableTechWeight
+	
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	modifier = {
+		starbase_upgrade_cost_mult = -0.05
+		starbase_modules_cost_mult = -0.05
+		starbase_shipyard_build_speed_mult = 0.20
+		starbase_shipyard_build_cost_mult = -0.05
+		starbase_shipyard_build_time_mult = -0.01
+		ships_upkeep_mult = -0.05
+		planet_army_build_speed_mult = 0.20
+		country_ship_upgrade_cost_mult = -0.05
+	}
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+tech_nanomachines_2c = {
+	area = engineering
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { industry }
+	prerequisites = { "tech_nanomachines_1" "tech_mega_engineering" }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+        levels = 5
+	weight = @repeatableTechWeight
+	
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	modifier = {
+		megastructures_cost_mult = -0.05
+		megastructure_build_speed_mult = 0.20
+		megastructures_time_cost_mult = -0.01
+		country_megastructure_build_cap_add = 1
+	}
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_nanomachines_2d = {
+	area = engineering
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { industry }
+	prerequisites = { "tech_nanomachines_1" }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+        levels = 5
+	weight = @repeatableTechWeight
+	
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	modifier = {
+		planet_jobs_minerals_produces_mult = 0.03
+		planet_jobs_food_produces_mult = 0.03
+		planet_jobs_energy_produces_mult = 0.03
+	}
+
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_influential_government = {
+	area = society
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { statecraft }
+	levels = 5
+	prerequisites = { "tech_galactic_administration" }
+	weight = @repeatableTechWeight
+	
+	weight_modifier = {
+		factor = @repatableTechFactor
+		modifier = {
+			factor = 0
+			has_ethic = ethic_gestalt_consciousness	
+		}
+	}
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	
+	modifier = {
+		country_influence_produces_add = 0.5
+	}
+}
+
+tech_influential_consciousness = {
+	area = society
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { statecraft }
+	levels = 5
+	prerequisites = { "tech_galactic_administration" }
+	weight = @repeatableTechWeight
+	
+	weight_modifier = {
+		factor = @repatableTechFactor
+		modifier = {
+			factor = 0
+			NOT = { has_ethic = ethic_gestalt_consciousness	}
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	
+	modifier = {
+		country_influence_produces_add = 0.5
+	}
+}
+tech_influential_society = {
+	area = society
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { statecraft }
+	levels = 5
+	prerequisites = { "tech_galactic_administration" }
+	weight = @repeatableTechWeight
+	
+	weight_modifier = {
+		factor = @repatableTechFactor
+		modifier = {
+			factor = 0
+			has_ethic = ethic_gestalt_consciousness	
+		}
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	
+	modifier = {
+		pop_factions_influence_produces_add = 1
+	}
+}
+
+tech_research_ai = {
+	area = physics
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { computing }
+	levels = 10
+	prerequisites = { "tech_sapient_ai" }
+	weight = @repeatableTechWeight
+	
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	
+	modifier = {
+		all_technology_research_speed = 0.03
+	}
+}
+
+tech_united_society = {
+	area = society
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { statecraft }
+	levels = 5
+	prerequisites = { "tech_galactic_administration" }
+	weight = @repeatableTechWeight
+	
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.03
+	}
+}
+
+tech_terraforming_expertise = {
+	area = society
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { new_worlds }
+	levels = 5
+	prerequisites = { "tech_climate_restoration" }
+	weight = @repeatableTechWeight
+	
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	
+	modifier = {
+		terraform_speed_mult = 0.20
+	}
+}
+
+tech_biological_expertise = {
+	area = society
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { biology }
+	levels = 10
+	prerequisites = { "tech_nano_bio_engineering" }
+	weight = @repeatableTechWeight
+	
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	
+	modifier = {
+		BIOLOGICAL_species_trait_points_add = 1
+	}
+}
+
+tech_robo_expertise = {
+	area = engineering
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { industry }
+	levels = 10
+	prerequisites = { "tech_nano_robo_engineering" }
+	weight = @repeatableTechWeight
+	
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	
+	modifier = {
+		ROBOT_species_trait_points_add = 1
+		MACHINE_species_trait_points_add = 1
+	}
+}

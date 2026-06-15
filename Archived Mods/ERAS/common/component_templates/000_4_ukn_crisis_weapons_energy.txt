@@ -1,0 +1,266 @@
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+
+# Updated Range on these
+
+# DEFAULT VALUES:
+# is_missile = no
+# is_beam = no
+# is_point_defence = no
+
+#NOTE that values from weapon_components.csv will override values from this file
+
+######################
+### SCOURGE PLASMA ###
+######################
+
+############ TRANSLIGHT ############
+
+### Planck-Scale Superfoam Cannons (T7)
+weapon_component_template = {
+	key = "UKN_SMALL_SCOURGE_PLASMA_0"
+	size = small
+	#entity = "small_plasma_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_scourge_plasma_0"
+	icon_frame = 1
+    power = @ukn_crisis_scourge_plasma_8_s_power
+	
+	damage = { min = @ukn_crisis_scourge_plasma_8_s_dmg_min max = @ukn_crisis_scourge_plasma_8_s_dmg_max }
+    windup = { min = @ukn_crisis_scourge_plasma_8_s_windup_min max = @ukn_crisis_scourge_plasma_8_s_windup_max }
+    total_fire_time = @ukn_crisis_scourge_plasma_8_s_total_fire_time
+    range = @ukn_crisis_scourge_plasma_8_s_range
+    accuracy = @ukn_crisis_scourge_plasma_8_accuracy
+	
+    hull_damage = @ukn_crisis_scourge_plasma_8_hull_damage_mult
+    armor_penetration = @ukn_crisis_scourge_plasma_8_armor_penetration_mult
+    armor_damage = @ukn_crisis_scourge_plasma_8_armor_damage_mult
+    shield_penetration = @ukn_crisis_scourge_plasma_8_shield_penetration_mult
+    shield_damage = @ukn_crisis_scourge_plasma_8_shield_damage_mult
+    tracking = @ukn_crisis_scourge_plasma_8_s_tracking
+	
+	prerequisites = { "tech_ukn_scourge_plasma_8" } #To Be Done
+	component_set = "UKN_SET_SCOURGE_PLASMA_0"
+	projectile_gfx = "projectile_ukn_scourge_plasma_0S"
+	tags = { weapon_type_energy ukn_weapon_type_plasma }
+	upgrades_to = "UKN_SMALL_SCOURGE_PLASMA_1"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_small_t8_component_cost_minerals
+#			alloys = @ukn_small_t8_component_cost_alloys
+			food = @ukn_small_t8_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t8_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t8_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_small_t8_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t8_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_small_t8_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t8_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_small_t8_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t8_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_small_t8_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_small_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t8_component_upkeep_energy
+#			minerals = @ukn_small_t8_component_upkeep_minerals
+#			alloys = @ukn_small_t8_component_upkeep_alloys
+			food = @ukn_small_t8_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t8_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t8_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t8_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t8_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t8_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t8_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_small_t8_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t8_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_small_t8_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_small_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_small_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t8_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_scourge_plasma_t8
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = exotic_gases value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_armor }	#tags must be pre-registered in common/weapon_tags
+}
+
+
+weapon_component_template = {
+	key = "UKN_MEDIUM_SCOURGE_PLASMA_0"
+	size = medium
+	#entity = "medium_plasma_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_scourge_plasma_0"
+	icon_frame = 1
+    power = @ukn_crisis_scourge_plasma_8_m_power
+	
+	damage = { min = @ukn_crisis_scourge_plasma_8_m_dmg_min max = @ukn_crisis_scourge_plasma_8_m_dmg_max }
+    windup = { min = @ukn_crisis_scourge_plasma_8_m_windup_min max = @ukn_crisis_scourge_plasma_8_m_windup_max }
+    total_fire_time = @ukn_crisis_scourge_plasma_8_m_total_fire_time
+    range = @ukn_crisis_scourge_plasma_8_m_range
+    accuracy = @ukn_crisis_scourge_plasma_8_accuracy
+	
+    hull_damage = @ukn_crisis_scourge_plasma_8_hull_damage_mult
+    armor_penetration = @ukn_crisis_scourge_plasma_8_armor_penetration_mult
+    armor_damage = @ukn_crisis_scourge_plasma_8_armor_damage_mult
+    shield_penetration = @ukn_crisis_scourge_plasma_8_shield_penetration_mult
+    shield_damage = @ukn_crisis_scourge_plasma_8_shield_damage_mult
+    tracking = @ukn_crisis_scourge_plasma_8_m_tracking
+	
+	prerequisites = { "tech_ukn_scourge_plasma_8" } #To Be Done
+	component_set = "UKN_SET_SCOURGE_PLASMA_0"
+	projectile_gfx = "projectile_ukn_scourge_plasma_0M"
+	tags = { weapon_type_energy ukn_weapon_type_plasma }
+	upgrades_to = "UKN_MEDIUM_SCOURGE_PLASMA_1"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_medium_t8_component_cost_minerals
+#			alloys = @ukn_medium_t8_component_cost_alloys
+			food = @ukn_medium_t8_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t8_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t8_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_medium_t8_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t8_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t8_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t8_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_medium_t8_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t8_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_medium_t8_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_medium_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t8_component_upkeep_energy
+#			minerals = @ukn_medium_t8_component_upkeep_minerals
+#			alloys = @ukn_medium_t8_component_upkeep_alloys
+			food = @ukn_medium_t8_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t8_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t8_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t8_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t8_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t8_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t8_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_medium_t8_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t8_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t8_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_medium_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t8_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_scourge_plasma_t8
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = exotic_gases value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_armor }	#tags must be pre-registered in common/weapon_tags
+}
+
+weapon_component_template = {
+	key = "UKN_LARGE_SCOURGE_PLASMA_0"
+	size = large
+	#entity = "large_plasma_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_scourge_plasma_0"
+	icon_frame = 1
+    power = @ukn_crisis_scourge_plasma_8_l_power
+	
+	damage = { min = @ukn_crisis_scourge_plasma_8_l_dmg_min max = @ukn_crisis_scourge_plasma_8_l_dmg_max }
+    windup = { min = @ukn_crisis_scourge_plasma_8_l_windup_min max = @ukn_crisis_scourge_plasma_8_l_windup_max }
+    total_fire_time = @ukn_crisis_scourge_plasma_8_l_total_fire_time
+    range = @ukn_crisis_scourge_plasma_8_l_range
+    accuracy = @ukn_crisis_scourge_plasma_8_accuracy
+	
+    hull_damage = @ukn_crisis_scourge_plasma_8_hull_damage_mult
+    armor_penetration = @ukn_crisis_scourge_plasma_8_armor_penetration_mult
+    armor_damage = @ukn_crisis_scourge_plasma_8_armor_damage_mult
+    shield_penetration = @ukn_crisis_scourge_plasma_8_shield_penetration_mult
+    shield_damage = @ukn_crisis_scourge_plasma_8_shield_damage_mult
+    tracking = @ukn_crisis_scourge_plasma_8_l_tracking
+	
+	prerequisites = { "tech_ukn_scourge_plasma_8" } #To Be Done
+	component_set = "UKN_SET_SCOURGE_PLASMA_0"
+	projectile_gfx = "projectile_ukn_scourge_plasma_0L"
+	tags = { weapon_type_energy ukn_weapon_type_plasma }
+	upgrades_to = "UKN_LARGE_SCOURGE_PLASMA_1"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_large_t8_component_cost_minerals
+#			alloys = @ukn_large_t8_component_cost_alloys
+			food = @ukn_large_t8_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t8_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t8_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_large_t8_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t8_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_large_t8_component_cost_exotic_gases
+#			rare_crystals = @ukn_large_t8_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_large_t8_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_large_t8_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_large_t8_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_large_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_large_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_large_t8_component_upkeep_energy
+#			minerals = @ukn_large_t8_component_upkeep_minerals
+#			alloys = @ukn_large_t8_component_upkeep_alloys
+			food = @ukn_large_t8_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t8_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t8_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t8_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t8_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_large_t8_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_large_t8_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_large_t8_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_large_t8_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_large_t8_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_large_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_large_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t8_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_scourge_plasma_t8
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = exotic_gases value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_armor }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------

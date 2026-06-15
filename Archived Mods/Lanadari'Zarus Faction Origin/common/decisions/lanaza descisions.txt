@@ -1,0 +1,38 @@
+decision_expand_lanaza = {
+	owned_planets_only = yes
+	#sound = event_administrative_work
+	#icon = decision_autofab
+	
+	resources = {
+		category = planet_districts
+		cost = {
+			trigger = {
+				NOT = { has_global_flag = giga_game_started }
+			}
+			minerals = 15000
+		}
+		cost = {
+			trigger = {
+				has_global_flag = giga_game_started
+			}
+			sr_solar_energy = 1 #TODO
+		}
+	}
+	
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_lanaza
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			add_deposit = lanaza_district_slot
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

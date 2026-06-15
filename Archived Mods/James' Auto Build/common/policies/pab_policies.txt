@@ -1,0 +1,116 @@
+##########################################################################
+# Empire Policies
+#
+# #####
+#
+# AI:
+# Base AI-weight is 100, if unchanged
+# AI will grab whatever policy-option has the highest weight
+#
+# #####
+#
+##########################################################################
+
+reserve_mieral = {
+	potential = {
+		is_ai = no
+	}
+
+	allow = {
+		is_ai = no
+	}
+	
+	option = {
+		name = "2k_2K_200"
+
+		policy_flags = {
+			pab_2000_mineral
+		}
+		valid = {
+			always = yes
+		}
+	}
+	option = {
+		name = "5k_5K_500"
+
+		policy_flags = {
+			pab_5000_mineral
+		}
+		valid = {
+			always = yes
+		}
+	}
+	option = {
+		name = "10K_10K_1k"
+
+		policy_flags = {
+			pab_10000_mineral
+		}
+		valid = {
+			always = yes
+		}
+	}
+}
+
+pab_allow_rebuild = {
+	potential = {
+		is_ai = no
+	}
+
+	allow = {
+		is_ai = no
+	}
+	
+	option = {
+		name = "disable_rebuild"
+
+		policy_flags = {
+			pab_rebuild_disabled
+		}
+		valid = {
+			always = yes
+		}
+	}
+	option = {
+		name = "enable_rebuild"
+
+		policy_flags = {
+			pab_rebuild_enabled
+		}
+		valid = {
+			always = yes
+		}
+	}
+}
+
+pab_allow_upgrade = {
+	potential = {
+		is_ai = no
+	}
+
+	allow = {
+		is_ai = no
+	}
+
+	option = {
+		name = "enable_upgrade"
+
+		policy_flags = {
+			pab_upgrade_enabled
+		}
+		valid = {
+			always = yes
+		}
+	}
+	
+	option = {
+		name = "disable_upgrade"
+
+		policy_flags = {
+			pab_upgrade_disabled
+		}
+		valid = {
+			always = yes
+		}
+	}
+}

@@ -1,0 +1,606 @@
+#All files in gfx/projectiles are reloadable with the "reload projectiles" console command
+#Filewatcher is also enabled for all files
+
+####################
+### MASS DRIVERS ###
+####################
+
+######----------------------------------
+# T1 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_1S"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_1S"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_1S"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_1S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_1S"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_1M"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_1M"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_1M"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_1M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_1M"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_1L"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_1L"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_1L"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_1L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_1L"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+######----------------------------------
+# T2 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_2S"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_2S"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_2S"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_2S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_2S"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_2M"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_2M"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_2M"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_2M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_2M"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_2L"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_2L"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_2L"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_2L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_2L"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+######----------------------------------
+# T3 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_3S"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_3S"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_3S"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_3S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_3S"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_3M"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_3M"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_3M"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_3M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_3M"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_3L"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_3L"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_3L"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_3L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_3L"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+######----------------------------------
+# T4 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_4S"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_4S"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_4S"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_4S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_4S"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_4M"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_4M"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_4M"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_4M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_4M"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_4L"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_4L"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_4L"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_4L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_4L"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+######----------------------------------
+# T5 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_5S"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_5S"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_5S"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_5S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_5S"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_5M"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_5M"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_5M"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_5M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_5M"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_5L"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_5L"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_5L"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_5L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_5L"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+######----------------------------------
+# T6 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_6S"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_6S"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_6S"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_6S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_6S"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_6M"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_6M"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_6M"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_6M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_6M"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_6L"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_6L"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_6L"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_6L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_6L"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+######----------------------------------
+# T7 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_7S"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_7S"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_7S"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_7S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_7S"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_7M"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_7M"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_7M"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_7M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_7M"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_7L"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_7L"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_7L"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_7L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_7L"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+######----------------------------------
+# T8 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_8S"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_8S"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_8S"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_8S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_8S"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_8M"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_8M"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_8M"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_8M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_8M"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_8L"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_8L"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_8L"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_8L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_8L"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+######----------------------------------
+# T9 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_9S"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_9S"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_9S"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_9S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_9S"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_9M"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_9M"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_9M"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_9M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_9M"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_9L"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_9L"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_9L"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_9L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_9L"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+#######----------------------------------
+# T10 #----------------------------------
+#######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_10S"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_10S"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_10S"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_10S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_10S"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_10M"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_10M"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_10M"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_10M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_10M"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_mass_driver_10L"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_mass_driver_10L"
+	shield_hit_entity = "shield_hit_entity_ukn_mass_driver_10L"
+	muzzle_flash_entity = "muzzle_entity_ukn_mass_driver_10L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_mass_driver_10L"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}

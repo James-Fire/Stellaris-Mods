@@ -1,0 +1,109 @@
+@cost_99S = 1200
+@cost_99M = 2400
+@cost_99L = 4800
+
+@armor_99S = 400000
+@armor_99M = 800000
+@armor_99L = 1600000
+
+@shield_99S = 200000
+@shield_99M = 400000
+@shield_99L = 800000
+
+@regen_speed_S = 40000
+@regen_speed_M = 80000
+@regen_speed_L = 160000
+
+# Hyperdimensional Armor
+utility_component_template = {
+	key = "SMALL_PLAYER_SUPER_ARMOR_1"
+	size = small
+	icon = "GFX_ship_part_player_super_armor_1"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_99S
+			energy = 600
+		}
+	}
+
+	prerequisites = { "tech_all_ascension" }
+	component_set = "PLAYER_SUPER_ARMOR_1"
+
+	modifier = {
+		ship_armor_add = @armor_99S
+		ship_hull_add = @armor_99S
+		ship_shield_add = @shield_99S
+		ship_shield_regen_add_static = @regen_speed_S
+		ship_hull_regen_add_static = @regen_speed_S
+		ship_armor_regen_add_static = @regen_speed_S
+		ship_evasion_add = 10
+		ship_evasion_mult = 0.10
+		ship_weapon_damage = 0.02
+		ship_fire_rate_mult = 0.01
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_PLAYER_SUPER_ARMOR_1"
+	size = medium
+	icon = "GFX_ship_part_player_super_armor_1"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_99M
+			energy = @cost_99S
+		}
+	}
+
+	prerequisites = { "tech_all_ascension" }
+	component_set = "PLAYER_SUPER_ARMOR_1"
+
+	modifier = {
+		ship_armor_add = @armor_99M
+		ship_hull_add = @armor_99M
+		ship_shield_add = @shield_99M
+		ship_shield_regen_add_static = @regen_speed_M
+		ship_hull_regen_add_static = @regen_speed_M
+		ship_armor_regen_add_static = @regen_speed_M
+		ship_evasion_add = 10
+		ship_evasion_mult = 0.10
+		ship_weapon_damage = 0.02
+		ship_fire_rate_mult = 0.01
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_PLAYER_SUPER_ARMOR_1"
+	size = large
+	icon = "GFX_ship_part_player_super_armor_1"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_99L
+			energy = @cost_99M
+		}
+	}
+
+	prerequisites = { "tech_all_ascension" }
+	component_set = "PLAYER_SUPER_ARMOR_1"
+
+	modifier = {
+		ship_armor_add = @armor_99L
+		ship_hull_add = @armor_99L
+		ship_shield_add = @shield_99L
+		ship_shield_regen_add_static = @regen_speed_L
+		ship_hull_regen_add_static = @regen_speed_L
+		ship_armor_regen_add_static = @regen_speed_L
+		ship_evasion_add = 10
+		ship_evasion_mult = 0.10
+		ship_weapon_damage = 0.02
+		ship_fire_rate_mult = 0.01	
+	}
+}

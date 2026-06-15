@@ -1,0 +1,271 @@
+set_tiberium_variables = {
+	set_planet_flag = tiberium_variable_setup_done
+	set_variable = { which = tiberium_takeover_count value = 0 }
+	set_variable = { which = tiberium_total_count value = 0 }
+	set_variable = { which = tiberium_total_cap value = trigger:planet_size }
+	multiply_variable = { which = tiberium_total_cap value = 6 }
+	add_modifier = {
+		modifier = tiberium_infestation_status
+		days = -1
+	}
+	set_timed_planet_flag = {
+		flag = tiberium_initial_infest_delay
+		months = 6
+	}
+}
+
+tib_eat_blue_zone = {
+	remove_district = district_blue_zone
+	#random_list = {
+	#	10 = {
+	#		modifier = {
+	#			factor = 0
+	#			num_free_districts = { type = district_blue_zone value > 0 }
+	#		}
+	#		remove_district = district_blue_zone
+	#	}
+	#	10 = {
+	#		modifier = {
+	#			factor = 0
+	#			num_free_districts = { type = district_blue_zone_industry value > 0 }
+	#		}
+	#		remove_district = district_blue_zone_industry
+	#	}
+	#}
+}
+
+tib_convert_planet = {
+	clear_deposits = yes
+	remove_all_districts = yes
+	set_planet_flag = tiberium_asteroid_collision
+	set_tiberium_variables = yes
+	switch = {
+		trigger = is_planet_class
+		pc_tropical = {
+			set_planet_flag = tib_pc_tropical
+			change_pc = pc_habitable_tiberium
+		}
+		pc_continental = {
+			set_planet_flag = tib_pc_continental
+			change_pc = pc_habitable_tiberium
+		}
+		pc_ocean = {
+			set_planet_flag = tib_pc_ocean
+			change_pc = pc_habitable_tiberium
+		}
+		pc_desert = {
+			set_planet_flag = tib_pc_desert
+			change_pc = pc_habitable_tiberium
+		}
+		pc_arid = {
+			set_planet_flag = tib_pc_arid
+			change_pc = pc_habitable_tiberium
+		}
+		pc_savannah = {
+			set_planet_flag = tib_pc_savannah
+			change_pc = pc_habitable_tiberium
+		}
+		pc_tundra = {
+			set_planet_flag = tib_pc_tundra
+			change_pc = pc_habitable_tiberium
+		}
+		pc_alpine = {
+			set_planet_flag = tib_pc_alpine
+			change_pc = pc_habitable_tiberium
+		}
+		pc_arctic = {
+			set_planet_flag = tib_pc_arctic
+			change_pc = pc_habitable_tiberium
+		}
+		pc_nuked = {
+			set_planet_flag = tib_pc_nuked
+			change_pc = pc_habitable_tiberium
+		}
+		pc_gaia = {
+			set_planet_flag = tib_pc_gaia
+			change_pc = pc_habitable_tiberium
+		}
+		pc_machine = {
+			set_planet_flag = tib_pc_machine
+			change_pc = pc_habitable_tiberium
+		}
+		pc_hive = {
+			set_planet_flag = tib_pc_hive
+			change_pc = pc_habitable_tiberium
+		}
+		pc_city = {
+			set_planet_flag = tib_pc_city
+			change_pc = pc_habitable_tiberium
+		}
+		pc_barren = {
+			set_planet_flag = tib_pc_barren
+			change_pc = pc_uninhabitable_tiberium
+		}
+		pc_barren_cold = {
+			set_planet_flag = tib_pc_cold_barren
+			change_pc = pc_uninhabitable_tiberium
+		}
+		pc_molten = {
+			set_planet_flag = tib_pc_molten
+			change_pc = pc_uninhabitable_tiberium
+		}
+		pc_toxic = {
+			set_planet_flag = tib_pc_toxic
+			change_pc = pc_uninhabitable_tiberium
+		}
+	}
+}
+
+tiberium_planet_climate_impact = {
+	if = {
+		limit = {
+			NOR = {
+				is_planet_class = pc_habitable_tiberium
+				is_planet_class = pc_uninhabitable_tiberium
+			}
+		}
+		switch = {
+			trigger = is_planet_class
+			pc_tropical = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 2 } }
+			}
+			pc_continental = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 1 } }
+			}				
+			pc_ocean = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 0 } }
+			}
+			pc_desert = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 2 } }
+			}
+			pc_arid = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 2 } }
+			}				
+			pc_savannah = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 1 } }
+			}				
+			pc_tundra = {
+				ROOT = { change_variable = { which = tiberium_takeover_count_temp value = -1 } }
+			}				
+			pc_alpine = {
+				ROOT = { change_variable = { which = tiberium_takeover_count_temp value = -1 } }
+			}				
+			pc_arctic = {
+				ROOT = { change_variable = { which = tiberium_takeover_count_temp value = -2 } }
+			}			
+			pc_nuked = {
+				ROOT = { change_variable = { which = tiberium_takeover_count_temp value = -1 } }
+			}			
+			pc_gaia = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 1 } }
+			}			
+			pc_machine = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 0 } }
+			}	
+			pc_hive = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 1 } }
+			}		
+			pc_city = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 1 } }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				is_planet_class = pc_habitable_tiberium
+				is_planet_class = pc_uninhabitable_tiberium
+			}
+		}
+		switch = {
+			trigger = has_planet_flag
+			tib_pc_tropical = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 2 } }
+			}
+			tib_pc_continental = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 1 } }
+			}				
+			tib_pc_ocean = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 0 } }
+			}
+			tib_pc_desert = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 2 } }
+			}
+			tib_pc_arid = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 2 } }
+			}				
+			tib_pc_savannah = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 1 } }
+			}				
+			tib_pc_tundra = {
+				ROOT = { change_variable = { which = tiberium_takeover_count_temp value = -1 } }
+			}				
+			tib_pc_alpine = {
+				ROOT = { change_variable = { which = tiberium_takeover_count_temp value = -1 } }
+			}				
+			tib_pc_arctic = {
+				ROOT = { change_variable = { which = tiberium_takeover_count_temp value = -2 } }
+			}			
+			tib_pc_nuked = {
+				ROOT = { change_variable = { which = tiberium_takeover_count_temp value = -1 } }
+			}
+			tib_pc_gaia = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 1 } }
+			}
+			tib_pc_machine = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 0 } }
+			}
+			tib_pc_hive = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 1 } }
+			}
+			tib_pc_city = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 1 } }
+			}
+			tib_pc_barren = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 0 } }
+			}
+			tib_pc_cold_barren = {
+				ROOT = { change_variable = { which = tiberium_takeover_count_temp value = -1 } }
+			}
+			tib_pc_molten = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 1 } }
+			}
+			tib_pc_toxic = {
+				ROOT = { change_variable = { which = tiberium_takeover_count value = 1 } }
+			}
+		}
+	}
+}
+
+tib_count_pops_takeover = {
+	every_owned_pop = {
+		limit = { has_trait = trait_tiberium_mutated }
+		ROOT = { change_variable = { which = tiberium_takeover_count value = 2 } }
+	}
+	every_owned_pop = {
+		limit = {
+			OR = {
+				has_trait = trait_tiberium_infected
+				has_trait = trait_tiberium_infested
+			}
+		}
+		ROOT = { change_variable = { which = tiberium_takeover_count value = 1 } }
+	}
+	every_owned_pop = {
+		limit = {
+			has_job = tiberium_researcher
+			NOT = {
+				ROOT = { has_planet_flag = tiberium_depleted }
+			}
+		}
+		ROOT = { change_variable = { which = tiberium_takeover_count value = -1 } }
+	}
+	every_owned_pop = {
+		limit = { has_job = green_tiberium_harvester }
+		ROOT = { change_variable = { which = tiberium_takeover_count value = -1 } }
+	}
+	every_owned_pop = {
+		limit = { has_job = blue_tiberium_harvester }
+		ROOT = { change_variable = { which = tiberium_takeover_count value = -1 } }
+	}
+}

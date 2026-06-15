@@ -1,0 +1,339 @@
+#All files in gfx/projectiles are reloadable with the "reload projectiles" console command
+#Filewatcher is also enabled for all files
+
+################
+### LASER PD ###
+################
+
+######----------------------------------
+# T1 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_laser_pd_1"
+	color = { 1.0 	0.4 	0.4 	1.5 }
+	hit_entity = "hit_entity_ukn_laser_pd_1"
+	muzzle_flash_entity = "muzzle_entity_ukn_laser_pd_1"
+	
+	#beam specific data
+	width = 0.05
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.2
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.2
+	}
+	texture = "gfx/models/combat_items/ukn_laser_1_diffuse.dds"
+}
+
+######----------------------------------
+# T2 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_laser_pd_2"
+	color = { 1.0 	0.4 	0.4 	1.5 }
+	hit_entity = "hit_entity_ukn_laser_pd_2"
+	muzzle_flash_entity = "muzzle_entity_ukn_laser_pd_2"
+	
+	#beam specific data
+	width = 0.05
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.2
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.2
+	}
+	texture = "gfx/models/combat_items/ukn_laser_2_diffuse.dds"
+}
+
+######----------------------------------
+# T3 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_laser_pd_3"
+	color = { 1.0 	0.4 	0.4 	1.5 }
+	hit_entity = "hit_entity_ukn_laser_pd_3"
+	muzzle_flash_entity = "muzzle_entity_ukn_laser_pd_3"
+	
+	#beam specific data
+	width = 0.05
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.2
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.2
+	}
+	texture = "gfx/models/combat_items/ukn_laser_3_diffuse.dds"
+}
+
+######----------------------------------
+# T4 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_laser_pd_4"
+	color = { 1.0 	0.4 	0.4 	1.5 }
+	hit_entity = "hit_entity_ukn_laser_pd_4"
+	muzzle_flash_entity = "muzzle_entity_ukn_laser_pd_4"
+	
+	#beam specific data
+	width = 0.05
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.2
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.2
+	}
+	texture = "gfx/models/combat_items/ukn_laser_4_diffuse.dds"
+}
+
+######----------------------------------
+# T5 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_laser_pd_5"
+	color = { 1.0 	0.4 	0.4 	1.5 }
+	hit_entity = "hit_entity_ukn_laser_pd_5"
+	muzzle_flash_entity = "muzzle_entity_ukn_laser_pd_5"
+	
+	#beam specific data
+	width = 0.05
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.2
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.2
+	}
+	texture = "gfx/models/combat_items/ukn_laser_5_diffuse.dds"
+}
+
+######----------------------------------
+# T6 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_laser_pd_6"
+	color = { 1.0 	0.4 	0.4 	1.5 }
+	hit_entity = "hit_entity_ukn_laser_pd_6"
+	muzzle_flash_entity = "muzzle_entity_ukn_laser_pd_6"
+	
+	#beam specific data
+	width = 0.05
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.2
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.2
+	}
+	texture = "gfx/models/combat_items/ukn_laser_6_diffuse.dds"
+}
+
+######----------------------------------
+# T7 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_laser_pd_7"
+	color = { 1.0 	0.4 	0.4 	1.5 }
+	hit_entity = "hit_entity_ukn_laser_pd_7"
+	muzzle_flash_entity = "muzzle_entity_ukn_laser_pd_7"
+	
+	#beam specific data
+	width = 0.05
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.2
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.2
+	}
+	texture = "gfx/models/combat_items/ukn_laser_7_diffuse.dds"
+}
+
+######----------------------------------
+# T8 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_laser_pd_8"
+	color = { 1.0 	0.4 	0.4 	1.5 }
+	hit_entity = "hit_entity_ukn_laser_pd_8"
+	muzzle_flash_entity = "muzzle_entity_ukn_laser_pd_8"
+	
+	#beam specific data
+	width = 0.05
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.2
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.2
+	}
+	texture = "gfx/models/combat_items/ukn_laser_8_diffuse.dds"
+}
+
+######----------------------------------
+# T9 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_laser_pd_9"
+	color = { 1.0 	0.4 	0.4 	1.5 }
+	hit_entity = "hit_entity_ukn_laser_pd_9"
+	muzzle_flash_entity = "muzzle_entity_ukn_laser_pd_9"
+	
+	#beam specific data
+	width = 0.05
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.2
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 0.2
+	}
+	texture = "gfx/models/combat_items/ukn_laser_9_diffuse.dds"
+}

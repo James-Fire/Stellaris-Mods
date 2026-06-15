@@ -1,0 +1,14 @@
+### Lock Tech ###----------------------
+tech_ukn_LOCKED = {
+	area = engineering
+	cost = 0
+	tier = 0
+	category = { particles }
+	ai_update_type = all
+#	prerequisites = { "tech_ukn_quasi_matter_replicator" }
+	weight = 0
+
+	ai_weight = {
+		factor = 0 #never
+	}
+}

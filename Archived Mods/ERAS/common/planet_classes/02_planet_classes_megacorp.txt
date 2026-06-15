@@ -1,0 +1,60 @@
+pc_city = {
+	entity = "city_planet"
+	entity_scale = @planet_standard_scale
+	icon_frame = 25
+
+	climate = "dry"
+
+	atmosphere_color 		= hsv { 0.75 0.10 0.60 }		#DONE
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+
+	city_color_lut = "gfx/portraits/misc/colorcorrection_continental.dds"
+
+	modifier = {
+#		planet_jobs_produces_mult = 0.20
+#		pop_growth_speed = 0.50
+#		planet_max_buildings_add = 12
+		planet_max_districts_mult = -0.20
+#---
+		planet_technician_energy_produces_add = 12
+#---
+		planet_farmers_food_produces_add = 12
+#---
+#		planet_miners_minerals_produces_add = 8
+#---
+#		planet_metallurgists_alloys_produces_add = 6
+#		planet_metallurgists_minerals_upkeep_add = 12
+#---
+		planet_artisans_consumer_goods_produces_add = 12
+		planet_artisans_minerals_upkeep_add = 12
+#---
+		planet_refiners_exotic_gases_produces_add = 2
+		planet_refiners_minerals_upkeep_add = 10
+#---
+		planet_translucers_rare_crystals_produces_add = 2
+		planet_translucers_minerals_upkeep_add = 10
+	}
+
+	min_distance_from_sun = @habitable_min_distance
+	max_distance_from_sun = @habitable_max_distance
+	spawn_odds = 0
+
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	fixed_city_level = 6
+
+	chance_of_ring = 0.2
+
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
+	colonizable = yes
+	district_set = city_world
+	starting_planet = no
+	ideal = yes
+	uses_alternative_skies_for_moons = yes
+
+	carry_cap_per_free_district = @carry_cap_high
+}

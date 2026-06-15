@@ -1,0 +1,66 @@
+decision_energy_station = {
+	owned_planets_only = yes
+	sound = event_construction
+	icon = decision_energy_station
+	
+	enactment_time = 300
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+			unity = 500
+		}
+	}
+	
+	potential = {
+		has_planet_flag = planetary_station
+		NOR = {
+			has_planet_flag = energy_station
+			has_planet_flag = mining_station
+			has_planet_flag = research_station
+			has_planet_flag = civil_station
+			has_planet_flag = industrial_station
+			has_planet_flag = military_station
+			has_planet_flag = cultural_station
+			has_planet_flag = prison_station
+			has_planet_flag = cracking_station
+		}
+	}
+	
+	allow = {
+		is_controlled_by = owner
+		has_ground_combat = no
+		has_orbital_bombardment = no
+	}
+	
+	effect = {
+		custom_tooltip = district_reactor_block_add
+		hidden_effect = {
+			if = {
+				limit = { has_deposit = d_geothermal_springs }
+				custom_tooltip = district_geothermal_power_plant_add
+			}
+			if = {
+				limit = { has_deposit = d_hydrocarbon_deposits }
+				custom_tooltip = district_hydrocarbon_power_plant_add
+			}
+		
+			set_planet_flag = energy_station
+			validate_planet_buildings_and_districts = yes
+		}
+	}
+	
+	ai_weight = {
+		weight = 20
+		modifier = {
+			factor = 0
+			owner = {
+				has_deficit = volatile_motes
+				resource_stockpile_compare = { #can buy on market
+					resource = energy
+					value < 1500
+				}
+			}
+		}
+	}
+}

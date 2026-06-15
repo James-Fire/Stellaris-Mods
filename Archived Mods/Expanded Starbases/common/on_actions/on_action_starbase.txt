@@ -1,0 +1,20 @@
+# Triggers when the game starts
+on_game_start = {
+	events = {
+		gamestartsb.1
+	}
+}
+
+# No scope, like on_game_start
+on_monthly_pulse = {
+	events = {
+		
+	}
+}
+
+# No scope, like on_game_start
+on_yearly_pulse = {
+	events = {
+		#starbaseai.1
+	}
+}

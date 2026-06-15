@@ -1,0 +1,25 @@
+tech_civilian_ship_speed = {
+	area = society
+	cost = 0
+	tier = 0
+	category = { statecraft }
+	start_tech = yes
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	
+	modifier = {
+		shipsize_constructor_build_speed_mult = 0.70
+		shipsize_colonizer_build_speed_mult = 0.70
+		shipsize_sponsored_colonizer_build_speed_mult = 0.70
+		shipsize_science_build_speed_mult = 0.70
+	}
+}

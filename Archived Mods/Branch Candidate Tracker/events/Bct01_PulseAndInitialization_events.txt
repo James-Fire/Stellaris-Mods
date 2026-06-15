@@ -1,0 +1,325 @@
+namespace = BctEvent
+
+##############################################
+##############################################
+#####                                    #####
+#####    Branch Candidate Tracker        #####
+#####                                    #####
+#####    Pulse, Initialization Events    #####
+#####                                    #####
+##############################################
+##############################################
+#
+#	Event List
+#		00xx		Menus
+#			0001		Main Menu
+#			0011		Menu for Branch Office Value
+#			0021		Menu for Planet Size
+#		1xxx		Initialization and Varidation
+#			10xx		Common
+#				1001		Pulse (on_game_start, on_monthly_pulse)
+#				1002		Call Event Chain, Special Project
+#				1010		Apply Template
+#			11xx		Track Candidates
+#				1101		Initialization, Set Flag to Planets
+#				1102		Remove All Marks for Initialization
+#				1103		Set Mark to Planets
+#			12xx		Notice Free Building Slots
+#				1201		Planet Event
+#				1202		Country Event
+#
+#
+
+
+#######################
+###  Common Events  ###
+#######################
+
+### Pulse Event
+event = {
+	id = BctEvent.1001
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_playable_country = {
+			country_event = { id = BctEvent.1002 scopes = { from = this } }		## scopes is required for BranchCandidateTracker_chain_desc
+			country_event = { id = BctEvent.1101 }
+			country_event = { id = BctEvent.1101 days = 15 }
+		}
+		if = {
+			limit = { always = @BctConstEnableBranchFreeSlotDetector }
+			every_country = {
+				limit = { any_owned_planet = { always = yes } }
+				every_owned_planet = {
+					limit = { always = yes }
+					planet_event = { id = BctEvent.1201 days = 1 }
+				}
+			}
+		}
+	}
+}
+
+
+### Call Event Chain, Special Project, scopes: from MUST be branch builder country for BranchCandidateTracker_chain_desc
+country_event = {
+	id = BctEvent.1002
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		BctTriggerBuildBranchPossible = yes
+		NOT = { has_event_chain = BranchCandidateTracker_chain }
+	}
+	
+	immediate = {
+		begin_event_chain = {
+			event_chain = BranchCandidateTracker_chain
+			target = root
+		}
+		capital_scope = {
+			enable_special_project = {
+				name = BctOpenMenu_PROJECT
+				location = this
+				owner = root
+			}
+		}
+	}
+}
+
+
+### Apply Template on_game_start
+event = {
+	id = BctEvent.1010
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		years_passed < 1
+	}
+	
+	immediate = {
+		every_playable_country = {
+			limit = { BctTriggerBuildBranchPossible = yes }
+			if = {
+				limit = { always = @BctConstTemplateActivate }
+				
+				if = {
+					limit = { always = @BctConstTemplateMarkAlsoNoCommercialPact }
+					set_country_flag = BctFlagMarkAlsoNoCommercialPact
+				} else = { remove_country_flag = BctFlagMarkAlsoNoCommercialPact }
+				if = {
+					limit = { NOT = { always = @BctConstTemplateMarkFreePlanet } }
+					set_country_flag = BctFlagNoMarkFreePlanet
+				} else = { remove_country_flag = BctFlagNoMarkFreePlanet }
+				if = {
+					limit = { always = @BctConstTemplateMarkPlanetWithForeignBranch }
+					set_country_flag = BctFlagMarkPlanetWithForeignBranch
+				} else = { remove_country_flag = BctFlagMarkPlanetWithForeignBranch }
+				if = {
+					limit = { always = @BctConstTemplatePlayNotificationSound }
+					set_country_flag = BctFlagPlayNotificationSound
+				} else = { remove_country_flag = BctFlagPlayNotificationSound }
+				
+				set_variable = { which = BctVarBranchCandidatePlanetValue value = @BctConstTemplateBranchCandidatePlanetValue }
+				set_variable = { which = BctVarBranchCandidatePlanetSize value = @BctConstTemplateBranchCandidatePlanetSize }
+				set_variable = { which = BctVarBranchCandidateNumPops value = @BctConstTemplateBranchCandidateNumPops }
+				
+			} else = {
+				set_variable = { which = BctVarBranchCandidatePlanetValue value = 0 }
+				set_variable = { which = BctVarBranchCandidatePlanetSize value = 0 }
+				set_variable = { which = BctVarBranchCandidateNumPops value = 0 }
+			}
+		}
+	}
+}
+
+
+########################################
+###  Events for Tracking Candidates  ###
+########################################
+
+### Initialization, Mark Planets
+country_event = {
+	id = BctEvent.1101
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		BctTriggerBuildBranchPossible = yes
+		
+		any_playable_country = {
+			OR = {
+				AND = {
+					BctTriggerSupportBranchPossible = yes
+					any_owned_planet = {
+						#calc_true_if = {	## <- Has bug at 2.2.4: trigger calc_true_if = { amount = 1 always = yes always = yes } -> TRUE
+						#	amount = 1
+						#	has_planet_flag = BctFlagBranchCandidatePlanet@root
+						#	BctTriggerTargetPlanet = yes
+						#}
+						OR = {
+							AND = {
+								NOT = { has_planet_flag = BctFlagBranchCandidatePlanet@root }
+								BctTriggerTargetPlanet = yes
+							}
+							AND = {
+								has_planet_flag = BctFlagBranchCandidatePlanet@root
+								NOT = { BctTriggerTargetPlanet = yes }
+							}
+						}
+					}
+				}
+				AND = {
+					NOT = { BctTriggerSupportBranchPossible = yes }
+					any_owned_planet = { has_planet_flag = BctFlagBranchCandidatePlanet@root }
+				}
+			}
+		}
+	}
+	immediate = {
+		### Initialization
+		country_event = { id = BctEvent.1102 }		## Remove Old Point of Interest
+		set_variable = { which = BctVarCountBranchCandidate value = 0 }
+		every_country = {
+			limit = { any_owned_planet = { always = yes } }
+			every_owned_planet = {
+				limit = { has_planet_flag = BctFlagBranchCandidatePlanet@root }
+				remove_planet_flag = BctFlagBranchCandidatePlanet@root
+			}
+		}
+		
+		### Set Flags to Candidate Planets
+		every_playable_country = {
+			limit = { BctTriggerSupportBranchPossible = yes }
+			every_owned_planet = {
+				limit = { BctTriggerTargetPlanet = yes }
+				set_planet_flag = BctFlagBranchCandidatePlanet@root
+				root = { change_variable = { which = BctVarCountBranchCandidate value = 1 } }
+				planet_event = { id = BctEvent.1103 scopes = { from = root } }		## scopes is required for BranchCandidateTrackerStandardPoi.desc
+			}
+		}
+		
+		### Notification Sound
+		if = {
+			limit = { has_country_flag = BctFlagPlayNotificationSound }
+			play_sound = @BctConstNotificationSound
+		}
+	}
+}
+
+
+
+#############################################
+###  Event to Notice Free Building Slots  ###
+#############################################
+
+planet_event = {
+	id = BctEvent.1201
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_branch_office = yes
+		free_branch_office_building_slots > 0
+		
+		exists = controller
+		controller = { is_same_value = root.owner }
+		
+		exists = branch_office_owner
+		branch_office_owner = {
+			is_ai = no
+			NOT = { branch_office_owner = { has_country_flag = BctFlagNoSlotNotificationCountry } }
+		}
+		NOT = { has_planet_flag = BctFlagNoSlotNotificationPlanet@branch_office_owner }
+	}
+	
+	immediate = {
+		branch_office_owner = { country_event = { id = BctEvent.1202 } }
+	}
+}
+
+country_event = {
+	id = BctEvent.1202
+	title = BctEvent.1202.name
+	desc = BctEvent.1202.desc
+	picture = @BctConstMenuPicture
+	is_triggered_only = yes
+	location = from
+	
+	option = {
+		name = BctEvent.1202b2.name
+		custom_tooltip = BctEvent.1202b2.tooltip
+		hidden_effect = { from = { set_timed_planet_flag = { flag = BctFlagNoSlotNotificationPlanet@root days = @BctConstForbidNotificationTime_V2 } } }
+	}
+	
+	option = {
+		name = BctEvent.1202a.name
+		custom_tooltip = BctEvent.1202a.tooltip
+	}
+	
+	option = {
+		name = BctTextSeparator.name
+		custom_tooltip = BctTextSeparator.tooltip
+		allow = { hidden_trigger = { always = no } }
+	}
+	
+	option = {
+		name = BctEvent.1202b1.name
+		custom_tooltip = BctEvent.1202b1.tooltip
+		hidden_effect = { from = { set_timed_planet_flag = { flag = BctFlagNoSlotNotificationPlanet@root days = @BctConstForbidNotificationTime_V1 } } }
+	}
+	option = {
+		name = BctEvent.1202b2.name
+		custom_tooltip = BctEvent.1202b2.tooltip
+		hidden_effect = { from = { set_timed_planet_flag = { flag = BctFlagNoSlotNotificationPlanet@root days = @BctConstForbidNotificationTime_V2 } } }
+	}
+	option = {
+		name = BctEvent.1202b3.name
+		custom_tooltip = BctEvent.1202b3.tooltip
+		hidden_effect = { from = { set_timed_planet_flag = { flag = BctFlagNoSlotNotificationPlanet@root days = @BctConstForbidNotificationTime_V3 } } }
+	}
+	option = {
+		name = BctEvent.1202b4.name
+		custom_tooltip = BctEvent.1202b4.tooltip
+		hidden_effect = { from = { set_timed_planet_flag = { flag = BctFlagNoSlotNotificationPlanet@root days = @BctConstForbidNotificationTime_V4 } } }
+	}
+	option = {
+		name = BctEvent.1202b9.name
+		custom_tooltip = BctEvent.1202b9.tooltip
+		hidden_effect = { from = { set_planet_flag = BctFlagNoSlotNotificationPlanet@root } }
+	}
+	
+	option = {
+		name = BctTextSeparator.name
+		custom_tooltip = BctTextSeparator.tooltip
+		allow = { hidden_trigger = { always = no } }
+	}
+	
+	option = {
+		name = BctEvent.1202c1.name
+		custom_tooltip = BctEvent.1202c1.tooltip
+		hidden_effect = { set_timed_country_flag = { flag = BctFlagNoSlotNotificationCountry days = @BctConstForbidNotificationTime_V1 } }
+	}
+	option = {
+		name = BctEvent.1202c2.name
+		custom_tooltip = BctEvent.1202c2.tooltip
+		hidden_effect = { set_timed_country_flag = { flag = BctFlagNoSlotNotificationCountry days = @BctConstForbidNotificationTime_V2 } }
+	}
+	option = {
+		name = BctEvent.1202c3.name
+		custom_tooltip = BctEvent.1202c3.tooltip
+		hidden_effect = { set_timed_country_flag = { flag = BctFlagNoSlotNotificationCountry days = @BctConstForbidNotificationTime_V3 } }
+	}
+	option = {
+		name = BctEvent.1202c4.name
+		custom_tooltip = BctEvent.1202c4.tooltip
+		hidden_effect = { set_timed_country_flag = { flag = BctFlagNoSlotNotificationCountry days = @BctConstForbidNotificationTime_V4 } }
+	}
+	option = {
+		name = BctEvent.1202c9.name
+		custom_tooltip = BctEvent.1202c9.tooltip
+		hidden_effect = { set_country_flag = BctFlagNoSlotNotificationCountry }
+	}
+}
+

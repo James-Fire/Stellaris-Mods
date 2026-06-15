@@ -1,0 +1,147 @@
+private_mine = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_rare
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+		job_tax_collector_add = 1
+		district_mining_max = -1
+		trade_value_add = 2
+	}
+	
+	resources = {
+		category = private_industry
+		produces = {
+			minerals = 2	
+		}		
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+private_farm = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_rare
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+		job_tax_collector_add = 1
+		district_farming_max = -1
+		trade_value_add = 3
+	}
+	
+	resources = {
+		category = private_industry
+		produces = {
+			food = 3	
+		}		
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+private_generator = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_rare
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+		job_tax_collector_add = 1
+		district_generator_max = -1
+		trade_value_add = 2
+	}
+	
+	resources = {
+		category = private_industry
+		produces = {
+			energy = 2	
+		}		
+	}
+	
+	potential = {
+		always = yes
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+private_alloys = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_rare
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+		job_tax_enforcer_add = 5
+		trade_value_add = 15
+	}
+	
+	resources = {
+		category = private_industry
+		produces = {
+			alloys = 7.5	
+		}		
+	}
+	
+	potential = {
+		OR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_ringworld_city
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+private_industry = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_rare
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+		job_tax_enforcer_add = 5
+		trade_value_add = 15
+	}
+	
+	resources = {
+		category = private_industry
+		produces = {
+			consumer_goods = 15
+		}		
+	}
+	
+	potential = {
+		OR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_ringworld_city
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}

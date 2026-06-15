@@ -1,0 +1,171 @@
+@station_cost = 300
+@station_maintenance = 4
+
+# Mining Station
+
+district_helium_extractor = {
+	base_buildtime = 240
+	
+	min_for_deposits_on_planet = 1
+	max_for_deposits_on_planet = 5
+
+	show_on_uncolonized = {
+		uses_district_set = planetary_station
+		OR = {
+			has_planet_flag = mining_station
+			has_planet_flag = prison_station
+		}
+		has_deposit = d_rich_regolith_formations
+	}
+
+	potential = {
+		uses_district_set = planetary_station
+		OR = {
+			has_planet_flag = mining_station
+			has_planet_flag = prison_station
+		}
+		has_deposit = d_rich_regolith_formations
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1
+	}
+
+	resources = {
+		category = station_complex
+		cost = {
+			alloys = @station_cost
+		}
+		upkeep = {
+			energy = @station_maintenance
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		modifier = {
+			job_regolith_miner_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_regolith_miner_drone_add = 2
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_regolith_miner_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_regolith_miner_effect_desc
+	}
+
+	ai_resource_production = {
+		volatile_motes = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+district_mote_mine = {
+	base_buildtime = 240
+	
+	min_for_deposits_on_planet = 1
+	max_for_deposits_on_planet = 5
+
+	show_on_uncolonized = {
+		uses_district_set = planetary_station
+		OR = {
+			has_planet_flag = mining_station
+			has_planet_flag = prison_station
+			has_planet_flag = cracking_station
+		}
+		owner = { has_technology = tech_mine_volatile_motes }
+		has_deposit = d_dust_cavities
+	}
+
+	potential = {
+		uses_district_set = planetary_station
+		OR = {
+			has_planet_flag = mining_station
+			has_planet_flag = prison_station
+		}
+		owner = { has_technology = tech_mine_volatile_motes }
+		has_deposit = d_dust_cavities
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1
+	}
+
+	resources = {
+		category = station_complex
+		cost = {
+			alloys = @station_cost
+		}
+		upkeep = {
+			energy = @station_maintenance
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_mote_harvester_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_mote_harvesting_drone_add = 2
+		}
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_mote_harvester_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_mote_harvesting_drone_effect_desc
+	}
+
+	ai_resource_production = {
+		volatile_motes = 1
+		trigger = {
+			always = yes
+		}
+	}
+}

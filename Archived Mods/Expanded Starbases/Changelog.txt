@@ -1,0 +1,259 @@
+1.3.1
+Additions:
+- Juggernaut gives extra xp to newly built ships
+
+Tweakes:
+- Increased the effects of resolutions on starbase modules and buildings
+
+1.3.2
+Additions:
+- Juggernauts now get +20,000 base armor
+- Starbase power cores (except Juggernaut) will always produce 50,000 power
+
+Tweaks:
+- Trading Hubs gives +1% system trade value
+- Offworld Trading Company gives +1% system trade value per Trading Hub, instead of a flat +10%
+
+Bug Fix:
+- Trading Post now actually require your neighbor to have open borders with you
+
+1.3.1
+Additions:
+- Juggernaut tech now require Stellar Bastion tech
+- Gestalts get their own equivalent of the customs office
+
+Tweaks:
+Reordered the starbase buildigns so the new ones aren't clustered at the bottom of the list
+- Atmospheric Manipulator is now more expensive and requires exotic gases
+
+1.3.0
+Updated for 2.6
+Tweaks:
+- Intergalactic Customs now gives +5% diplomatic weight from economy
+- I have disabled the ai starbase building code for now. I will re-add it if I find it is still needed
+
+Bug Fixes:
+- Fixed harmless bug that was clogging up the error logs
+
+1.2.9.1
+Removals:
+-Extra bonus for space mining and research from techs and traditions moved to expanded pops
+
+1.2.9
+Updated for 2.5
+Bug Fixes:
+- Defense Grid Supercomputer will give correct number of defense platform slots to non-gestalts
+- Positronic Defense Algorithms actually works
+
+1.2.8
+Additions:
+- NEW: Minelayer Hanger Starbase Building
+- Made ai more capable of building starbases (work in progress)
+
+Tweaks:
+- Tweaked ai weights for starbase buildigns and modules
+- Hyperlane Registrar will now also effect trade collection and prodection
+- Black site also gives -25% crime
+
+Bug Fixes:
+- Improved black site will subtract crime rather than add it
+
+1.2.7
+Additions:
+- NEW: Zero-G Foundries technology
+- NEW: Dark Matter Extraction technology
+- NEW: Eternal Vigilance technology
+- NEW: Shipyard Optimization technology
+- NEW: Resource Processing Center starbase building
+- Restored Atmospheric Manipulator
+
+Tweaks:
+- Interstellar Customs Office (and criminal equivalent) now requires their own unique tech
+- Interstellar Enforcement also gives +5 base trade protection
+- Space production techs each give approximately 25% bonus to relavant starbase buildings
+- Black Site gives +3 unity (up from 2)
+
+Bug Fixes:
+- Weights for new rare now look like actual rare techs
+- Cleaned up some bugs in the tech files
+- Dathnak Embassy won't give bonus shield and armor
+- Fixed localization on Improved Photovoltaics
+
+1.2.6.1
+Updated to 2.3.3
+
+Additions:
+- Added improved tech icons
+
+Tweaks:
+- Starbase Fortification III gives the Stellar Fortifications building +5% armor and shields, +1 armor and shield daily regen
+
+1.2.6
+Addition:
+- Orbital Gene Crops, hydroponic farms on habitats gives +1 farmer job
+- Prototype Cannon renamed Mega Cannon, given same states as vanilla Mega Cannon
+
+Tweaks:
+- Orbital Gene Crops now also requires Hydroponics
+
+1.2.5
+Compatibility with Stellaris Patch 2.3.0 (Wolfe)
+
+Additions:
+- Real Space: Black Hole Observatory can be built around microquasars
+
+Removals:
+- Removed Glavius AI code, as that code was removed from Glavius
+
+1.2.4
+Additions:
+- Resource Silos give +4000 storage (up from +2000)
+- Black Site gives +2 unity
+- Artist College gives +15 unity (up from 10 )
+- Proxy Office gives +10 trade
+- Space Mining and Research bonus from techs and traditions give +25% bonus (from +10%)
+
+Tweaks:
+- Hydroponics Bay gives 6 food (up from 5)
+- Orbital Gene Crops gives +4 food to Hydroponics Bay (was +2)
+- Bonus to Nebula Refinery moved to Autonomous Mining Drones, now gives +4 minerals and +2 alloys (from +3 minerals and +1 alloy)
+- Curator Think Tank gives +10 of each research type
+- Other research buildings give +15 research
+- Bonus to Research Buildings moved to Autonomous Station Protocols, now gives +5 research
+- Interstellar Customs Office gives +5 trade value and society research
+- Syndicate Free Haven gives +10 trade value
+- Dathnak Embassy gives +10 society research and trade/energy
+
+Bug Fix:
+- Fixed bug in the Dathnak Embassy
+
+
+1.2.4
+Additions:
+- Positronic Defense Algorithms tech, tier 5 tech that gives an additional +6 defense platform capacity from Defense-Grid Supercomputers. Requires Synchronized Defenses and Positronic AI (or gestalt equivalent)
+
+Tweaks:
+- Updated Glavius AI starbase code
+
+
+1.2.3
+Additions:
+Dathnak Embassy, gives +6 society research, +6 trade/energy, can only be built in systems with Dathnak colonies
+
+Tweaks:
+Offworld Trading Company gives +10% system trade value
+
+1.2.2
+Updated for patch 2.2.3
+Additions:
+	- +1 starbase capacity per 200 pops
+	- Patrol Office, requires Interstellar Enforcement. Doubles trade protection and protection range from the three military modules
+	- Interstellar Enforcement tech, tier 2 tech that gives access to Patrol Office starbase building
+	- With Nanite Mineral Probes, Nebula Refineries produce an additional +3 minerals, +1 alloys
+	- With Multi-Dimensional Analysis, starbase research buildings produce an additional +3 research
+
+Tweaks
+	- Utilizes Glavius's AI starbase code, if Glavius's AI Mod is active
+	- Syndicate Customs Office renamed Syndicate Free Haven, gives +8 trade value, +1 protection range, +20 trade protection
+	- Interstellar Customs Office gives +4 trade value, +10 trade protection
+	- Cost of Interstellar Customs Office and Syndicate Free Haven increased to 125 alloys (up from 100)
+	- Trade Hubs give +1 trade value
+	- Solar Panels give +4 energy (up from +3)
+	- Hydroponic Bays give +5 food (up from +3)
+	- +2 piracy suppresion from defense platforms
+	
+
+Bug Fixes
+	- Space Trading no longer requires a rare resource technology or access to the galatic market to research
+	- Rewrote the reactor file to make it more compatible with other mods
+
+1.2.1
+Bug Fixes
+	- Titan slots on bastions being empty
+	- Relaxed restrictions on custom office to include vassals and federation members
+
+1.2
+Compatibility with 2.2:
+- Interstellar Customs Office gives +1 trade collection and protection range, +2 society research and trade value. Requires a commercial pact with neighbor
+- Galactic Trading Company, Offworld Trading Company gives an additional +2 trade value to trading hubs
+
+Additions:
+- Syndicate Customs Office, gives +1 trade collection and protection range, +4 trade value. Requires Criminal Syndicate civic. Can only be built in systems bordering a country that has one of your branch offices on one of their planets
+- Improved Photovoltaics, rare tier 3 tech, solar panels give an additional +2 energy
+
+Tweaks
+- Atmospheric Manipulator appears to have been broken by 2.2, has been temporarily removed
+
+1.1.1
+Additions
+	- Orbital Gene Crops, tier 3 tech that gives +2 food from orbital hydroponics. Requires Gene Crops
+	- Galactic Trading Company, rare tier 4 tech, Offworld Trading Company gives an additional +2 energy to trading hubs
+	- Interstellar Fleet Doctrines, rare tier 4 tech, Naval Logistic Office gives an additional +2 naval capacity to anchorages
+
+Bug Fixes
+	- Neighbors who are rivals or who have a truce with you won't count as a neighbor with open borders for the purposes of building the custom office
+
+1.1.0
+Additions
+	- New T6 Starbase Stellar Bastion, gives 12 module and 8 building slots, 24 platform slots, twice the hp and armor as a citadel, has 1 titan, 2 extra large, 4 large, 25 medium, 2 guided, 2 hanger, 10 point defense, 50 utility, and 3 auxiliary slots. Requires T5 technology of the same name, which requires Titans tech (for titan weapon), if you don't have Apocalypse, requires battleships instead (titan weapon slot will be empty without Apocalypse)
+	- Fallen Empire starbases upgraded to bastions
+	- Interstellar Customs Office, gives +6 energy, +2 society research. Can only be built in systems bordering a country with whom you have open borders. Requires Adaptive Bureaucracy
+	- Stellar Fortifications, gives +25% shields and armor, requires starbase fortification I
+	- Third starbase fortification tech, tier 5, gives +25% starbase hp
+	
+
+Tweaks
+	- Star Fortress gives 4 building slots
+	- Citadel gives 9 module slots and 6 building slots, 18 platform slots
+	- Titans tech requires Citadel tech
+	- Atmospheric Manipulator give +15% habitability (up from +10%)
+
+1.0.3
+	- New XL weapon, intended for Citadels when no other XL weapon is researched. Has accuracy of a mega cannon, but damage of a tier 5 large kinetic weapon.
+
+1.0.2
+	- Hull Points restored to vanilla values
+	- Improved Structural Integrity gives +10% starbase hull points
+	- Two engineering techs that increase starbase hull points by +15/+20%
+
+1.0.1
+Additions:
+- Atmospheric Manipulator, increases planet habitability by 10%, food production by 20%, requires terrestrial sculpting
+- Synchronized Defenses gives +1 starbase capacity
+- Basic starting flak cannons, intended for use in early starbases
+
+Tweaks:
+- Hanger Bay Module gives +1 point defense slot
+- Improved Localization
+
+1.0
+Initial Release
+
+Starbases
+	- Hull points doubled
+	- Starbases get +1 medium gun slots for all levels
+	- Starbases get +2 utility slots for all levels
+	- All starbases except outposts get +1 hanger slot
+	- Starhold and Star Fortress gets +1 guided slot and +1 large slot, Citadel gets +2 of each
+	- Citadel gets +1 extra large gun slot
+	- Starbases get point defense slots, ranging from 1 for outposts to 8 for citadels
+	- Star Fortress and Citadel get +1 auxiliary component slot
+
+Starbase Modules
+	- Trading hubs get +1 energy if built in a system with a trading enclave
+	- Offworld Trading Company gives an additional +3 instead of +2 energy to trading hubs if empire has the corporate dominion civic
+	- The weapon modules give +1 weapon slot each
+	- Trading hubs can be built in systems with a Dathnak (Gasmen) colony
+
+Starbase Buildings
+	- NEW: Pulsar Observatory, +10 engineering, requires level 3 sensor tech
+	- Black Hole Observatory can be built in systems with a natural wormhole
+	- Command Center gives +5 tracking
+	- Communications Jammer gives enemy ships -5 tracking
+	- Defense Grid Supercomputer gives +10 defense platform capacity, up from +8
+	- Disruption Field Generator gives enemy ships -25% shields, up from -20%
+	- Hyperlane Registrar gives +20% sublight speed
+	- Target Uplink Computer gives +5 tracking
+	For Real Space 3.0:
+		- Protostar observatory, built around young stars, +8 physics, requires level 2 sensor tech
+		- Nebula Refinery can be build in any system with a local nebula or proto-planetary disk

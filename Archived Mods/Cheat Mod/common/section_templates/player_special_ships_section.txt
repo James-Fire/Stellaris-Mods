@@ -1,0 +1,1389 @@
+ship_section_template = {
+	key = "player_station_star_builder_key"
+	ship_size = star_builder_station
+
+	fits_on_slot = "mid"
+
+	entity = "fallen_empire_01_construction_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	prerequisites = { "tech_all_none" }
+
+	large_utility_slots = 6
+}
+
+ship_section_template = {
+	key = "ship_player_chronos_section_1_humanoid_01"
+	ship_size = player_chronos
+
+	fits_on_slot = "north"
+
+	entity = "humanoid_01_colossus_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "PLANET_KILLER_GUN_01"
+		template = "invisible_planet_killer_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_05"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_06"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 20
+	aux_utility_slots = 5
+}
+
+ship_section_template = {
+	key = "ship_player_chronos_section_1_mammalian_01"
+	ship_size = player_chronos
+
+	fits_on_slot = "north"
+
+	entity = "mammalian_01_colossus_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "PLANET_KILLER_GUN_01"
+		template = "invisible_planet_killer_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_05"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_06"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 20
+	aux_utility_slots = 5
+}
+
+ship_section_template = {
+	key = "ship_player_chronos_section_1_reptilian_01"
+	ship_size = player_chronos
+
+	fits_on_slot = "north"
+
+	entity = "reptilian_01_colossus_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "PLANET_KILLER_GUN_01"
+		template = "invisible_planet_killer_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_05"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_06"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 20
+	aux_utility_slots = 5
+}
+
+ship_section_template = {
+	key = "ship_player_chronos_section_1_avian_01"
+	ship_size = player_chronos
+
+	fits_on_slot = "north"
+
+	entity = "avian_01_colossus_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "PLANET_KILLER_GUN_01"
+		template = "invisible_planet_killer_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_05"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_06"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 20
+	aux_utility_slots = 5
+}
+
+ship_section_template = {
+	key = "ship_player_chronos_section_1_arthropoid_01"
+	ship_size = player_chronos
+
+	fits_on_slot = "north"
+
+	entity = "arthropoid_01_colossus_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "PLANET_KILLER_GUN_01"
+		template = "invisible_planet_killer_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_05"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_06"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 20
+	aux_utility_slots = 5
+}
+
+ship_section_template = {
+	key = "ship_player_chronos_section_1_molluscoid_01"
+	ship_size = player_chronos
+
+	fits_on_slot = "north"
+
+	entity = "molluscoid_01_colossus_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "PLANET_KILLER_GUN_01"
+		template = "invisible_planet_killer_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_05"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_06"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 20
+	aux_utility_slots = 5
+}
+
+ship_section_template = {
+	key = "ship_player_chronos_section_1_fungoid_01"
+	ship_size = player_chronos
+
+	fits_on_slot = "north"
+
+	entity = "fungoid_01_colossus_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "PLANET_KILLER_GUN_01"
+		template = "invisible_planet_killer_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_05"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_06"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 20
+	aux_utility_slots = 5
+}
+
+ship_section_template = {
+	key = "ship_player_chronos_section_1_plantoid_01"
+	ship_size = player_chronos
+
+	fits_on_slot = "north"
+
+	entity = "plantoid_01_colossus_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "PLANET_KILLER_GUN_01"
+		template = "invisible_planet_killer_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_05"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_06"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 20
+	aux_utility_slots = 5
+}
+
+ship_section_template = {
+	key = "ship_player_chronos_section_1_fallen_empire_01"
+	ship_size = player_chronos
+
+	fits_on_slot = "north"
+
+	entity = "fallen_empire_01_colossus_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "PLANET_KILLER_GUN_01"
+		template = "invisible_planet_killer_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_05"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_06"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 20
+	aux_utility_slots = 5
+}
+
+ship_section_template = {
+	key = "ship_player_chronos_section_1_fallen_empire_02"
+	ship_size = player_chronos
+
+	fits_on_slot = "north"
+
+	entity = "fallen_empire_02_colossus_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "PLANET_KILLER_GUN_01"
+		template = "invisible_planet_killer_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_05"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_06"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 20
+	aux_utility_slots = 5
+}
+
+ship_section_template = {
+	key = "ship_player_chronos_section_1_fallen_empire_03"
+	ship_size = player_chronos
+
+	fits_on_slot = "north"
+
+	entity = "fallen_empire_03_colossus_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "PLANET_KILLER_GUN_01"
+		template = "invisible_planet_killer_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_05"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_06"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 20
+	aux_utility_slots = 5
+}
+
+ship_section_template = {
+	key = "ship_player_chronos_section_1_fallen_empire_04"
+	ship_size = player_chronos
+
+	fits_on_slot = "north"
+
+	entity = "fallen_empire_04_colossus_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "PLANET_KILLER_GUN_01"
+		template = "invisible_planet_killer_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_05"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_06"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 20
+	aux_utility_slots = 5
+}
+
+ ship_section_template = {
+	key = "ship_player_chronos_section_1_fallen_machine_empire_01"
+	ship_size = player_chronos
+
+	fits_on_slot = "north"
+
+	entity = "fallen_machine_empire_01_colossus_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "PLANET_KILLER_GUN_01"
+		template = "invisible_planet_killer_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_05"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_06"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 20
+	aux_utility_slots = 5
+}
+
+ship_section_template = {
+	key = "ship_player_chronos_section_2"
+	ship_size = player_chronos
+
+	fits_on_slot = "west"
+	fits_on_slot = "east"
+	fits_on_slot = "south"
+
+	entity = "invisible_turret_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "TITANIC_01"
+		template = "invisible_titanic_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "TITANIC_02"
+		template = "invisible_titanic_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "TITANIC_03"
+		template = "invisible_titanic_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+	
+	component_slot = {
+		name = "TITANIC_04"
+		template = "invisible_titanic_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "TITANIC_05"
+		template = "invisible_titanic_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "TITANIC_06"
+		template = "invisible_titanic_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		locatorname = "planet_killer_gun_01"
+	}
+
+	small_utility_slots = 0
+	medium_utility_slots = 0
+	large_utility_slots = 20
+	aux_utility_slots = 5
+}
+
+ship_section_template = {
+	key = "PLAYER_CONSTRUCTION_SECTION_1"
+	ship_size = player_combat_constructor
+	fits_on_slot = mid
+	entity = "construction_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	prerequisites = { "tech_all_none" }
+
+	ai_weight = {
+		weight = 1
+	}
+	
+	component_slot = {
+		name = "TITANIC_01"
+		template = "invisible_titanic_fixed"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "TORPEDO_01"
+		template = "medium_missile_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+
+	large_utility_slots = 10
+	aux_utility_slots = 2
+}
+
+ship_section_template = {
+	key = "PLAYER_SCIENCESHIP_SECTION_1"
+	ship_size = player_combat_science
+	fits_on_slot = mid
+	entity = "science_ship_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	prerequisites = { "tech_all_none" }
+
+	ai_weight = {
+		weight = 1
+	}
+
+	component_slot = {
+		name = "TITANIC_01"
+		template = "invisible_titanic_fixed"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "TORPEDO_01"
+		template = "medium_missile_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		locatorname = "root"
+	}
+
+	large_utility_slots = 10
+	aux_utility_slots = 2
+}

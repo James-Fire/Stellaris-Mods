@@ -1,0 +1,115 @@
+country_has_tiberium = {
+	OR = {
+		any_owned_planet = {
+			planet_has_tiberium = yes
+		}
+		has_monthly_income = { resource = sr_tiberium_green  value > 0 }
+		has_monthly_income = { resource = sr_tiberium_blue  value > 0 }
+		has_monthly_income = { resource = sr_tiberium_liquid  value > 0 }
+		any_owned_species = {
+			OR = {
+				has_trait = trait_tiberium_infected
+				has_trait = trait_tiberium_infested
+				has_trait = trait_tiberium_mutated
+			}
+		}
+	}
+}
+
+planet_has_tiberium_growth = {
+	OR = {
+		is_planet_class = pc_habitable_tiberium
+		is_planet_class = pc_uninhabitable_tiberium
+		has_deposit = d_blue_zone
+		has_deposit = b_blue_zone
+		has_deposit = t_blue_zone
+		has_deposit = d_yellow_zone
+		has_deposit = b_yellow_zone
+		has_deposit = t_yellow_zone
+		has_deposit = d_red_zone
+		has_deposit = b_red_zone
+		has_deposit = t_red_zone
+		has_deposit = d_green_tiberium_field
+		has_deposit = d_blue_tiberium_field
+		has_deposit = d_green_tiberium_glacier
+		has_deposit = d_blue_tiberium_glacier
+		has_deposit = d_liquid_tiberium_pool
+		has_deposit = d_tiberium_asteroid
+	}
+}
+
+planet_has_tiberium = {
+	OR = {
+		planet_has_tiberium_building = yes
+		is_planet_class = pc_habitable_tiberium
+		is_planet_class = pc_uninhabitable_tiberium
+		has_deposit = d_blue_zone
+		has_deposit = b_blue_zone
+		has_deposit = t_blue_zone
+		has_deposit = d_yellow_zone
+		has_deposit = b_yellow_zone
+		has_deposit = t_yellow_zone
+		has_deposit = d_red_zone
+		has_deposit = b_red_zone
+		has_deposit = t_red_zone
+		has_deposit = d_green_tiberium_field
+		has_deposit = d_blue_tiberium_field
+		has_deposit = d_green_tiberium_glacier
+		has_deposit = d_blue_tiberium_glacier
+		has_deposit = d_liquid_tiberium_pool
+		has_deposit = d_tiberium_asteroid
+	}
+}
+
+planet_has_tiberium_building = {
+	OR = {
+		has_tiberium_refinery = yes
+		has_liquid_tiberium_refinery = yes
+		has_tiberium_reactor = yes
+		has_building = building_initial_tiberium_research_lab
+		has_building = building_tiberium_threshold
+	}
+}
+
+has_tiberium_refinery = {
+	OR = {
+		has_district = district_tiberium_refinery
+		has_building = tiberium_green_refinery
+		has_building = tiberium_green_refinery_2
+		has_building = tiberium_green_refinery_3
+		has_building = tiberium_blue_refinery
+		has_building = tiberium_blue_refinery_2
+		has_building = tiberium_blue_refinery_3
+	}
+}
+
+has_liquid_tiberium_refinery = {
+	OR = {
+		has_building = liquid_tiberium_factory_green
+		has_building = liquid_tiberium_factory_green_2
+		has_building = liquid_tiberium_factory_green_3
+		has_building = liquid_tiberium_factory_blue
+		has_building = liquid_tiberium_factory_blue_2
+		has_building = liquid_tiberium_factory_blue_3
+	}
+}
+
+has_tiberium_reactor = {
+	OR = {
+		has_building = liquid_tiberium_reactor
+		has_building = liquid_tiberium_reactor_2
+	}
+}
+
+planet_tiberium_depleted = {
+	check_variable = { which = tiberium_total_count value >= tiberium_total_cap }
+}
+
+pop_is_tiberium_infected = {
+	OR = {
+		has_trait = trait_tiberium_infected
+		has_trait = trait_tiberium_infested
+		has_trait = trait_tiberium_mutated
+		has_pop_flag = tiberium_infected
+	}
+}

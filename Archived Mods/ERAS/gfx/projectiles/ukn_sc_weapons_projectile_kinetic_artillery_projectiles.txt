@@ -1,0 +1,167 @@
+#All files in gfx/projectiles are reloadable with the "reload projectiles" console command
+#Filewatcher is also enabled for all files
+
+#########################
+### KINETIC ARTILLERY ###
+#########################
+
+######----------------------------------
+# T1 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_kinetic_artillery_1"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_kinetic_artillery_1"
+	shield_hit_entity = "shield_hit_entity_ukn_kinetic_artillery_1"
+	muzzle_flash_entity = "muzzle_entity_ukn_kinetic_artillery_1"
+	#windup_entity = "kinetic_artillery_windup_entity"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_kinetic_artillery_1"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T2 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_kinetic_artillery_2"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_kinetic_artillery_2"
+	shield_hit_entity = "shield_hit_entity_ukn_kinetic_artillery_2"
+	muzzle_flash_entity = "muzzle_entity_ukn_kinetic_artillery_2"
+	#windup_entity = "kinetic_artillery_windup_entity"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_kinetic_artillery_2"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T3 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_kinetic_artillery_3"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_kinetic_artillery_3"
+	shield_hit_entity = "shield_hit_entity_ukn_kinetic_artillery_3"
+	muzzle_flash_entity = "muzzle_entity_ukn_kinetic_artillery_3"
+	#windup_entity = "kinetic_artillery_windup_entity"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_kinetic_artillery_3"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T4 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_kinetic_artillery_4"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_kinetic_artillery_4"
+	shield_hit_entity = "shield_hit_entity_ukn_kinetic_artillery_4"
+	muzzle_flash_entity = "muzzle_entity_ukn_kinetic_artillery_4"
+	#windup_entity = "kinetic_artillery_windup_entity"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_kinetic_artillery_4"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T5 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_kinetic_artillery_5"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_kinetic_artillery_5"
+	shield_hit_entity = "shield_hit_entity_ukn_kinetic_artillery_5"
+	muzzle_flash_entity = "muzzle_entity_ukn_kinetic_artillery_5"
+	#windup_entity = "kinetic_artillery_windup_entity"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_kinetic_artillery_5"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T6 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_kinetic_artillery_6"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_kinetic_artillery_6"
+	shield_hit_entity = "shield_hit_entity_ukn_kinetic_artillery_6"
+	muzzle_flash_entity = "muzzle_entity_ukn_kinetic_artillery_6"
+	#windup_entity = "kinetic_artillery_windup_entity"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_kinetic_artillery_6"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T7 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_kinetic_artillery_7"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_kinetic_artillery_7"
+	shield_hit_entity = "shield_hit_entity_ukn_kinetic_artillery_7"
+	muzzle_flash_entity = "muzzle_entity_ukn_kinetic_artillery_7"
+	#windup_entity = "kinetic_artillery_windup_entity"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_kinetic_artillery_7"
+	speed = 450.0			#preferred speed of the projectile
+	max_duration = 1.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}

@@ -1,0 +1,16 @@
+iisl_is_supply_lines_not_installed = {
+	always = no
+}
+
+iisl_is_supply_lines_installed = {
+	always = yes
+}
+
+# country scope
+iisl_is_supply_country = {
+	has_country_flag = iisl_supply_country
+}
+
+iisl_can_use_supplies = {
+	is_country_type = default
+}

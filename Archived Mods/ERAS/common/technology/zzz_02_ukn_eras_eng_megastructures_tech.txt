@@ -1,0 +1,961 @@
+          ########################################
+#---------## [MEGASTRUCTURES] Vanilla (POST-GW) ##---------#
+          ########################################
+		  
+### Mega-Engineering ###----------------------
+tech_mega_engineering = {
+	area = engineering
+	cost = @tech_mega_engineering_cost
+	tier = @tech_mega_engineering_tier
+	category = { voidcraft }
+	ai_update_type = all
+	prerequisites = { "tech_starbase_5" "tech_ship_armor_4" }
+	weight = @tech_mega_engineering_weight
+	is_rare = yes
+
+#P]	potential = {
+#P]		has_technology = tech_ship_armor_4
+#P]		has_technology = tech_starbase_5
+#P] }
+
+	feature_flags = {
+		megaengineering
+	}
+
+	modifier = {
+		country_resource_max_add = 20000
+	}
+
+	weight_modifier = {
+		factor = 0.25
+#[ALL] (E5) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ship_armor_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.5
+			OR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_voidcraft"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_mega_engineering }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			count_starbase_sizes = {
+				starbase_size = starbase_starhold
+				count >= 1
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			count_starbase_sizes = {
+				starbase_size = starbase_starhold
+				count >= 2
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			count_starbase_sizes = {
+				starbase_size = starbase_starhold
+				count >= 3
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			count_starbase_sizes = {
+				starbase_size = starbase_starhold
+				count >= 4
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			count_starbase_sizes = {
+				starbase_size = starbase_starhold
+				count >= 5
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			count_starbase_sizes = {
+				starbase_size = starbase_starhold
+				count >= 6
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			count_starbase_sizes = {
+				starbase_size = starbase_citadel
+				count >= 1
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			count_starbase_sizes = {
+				starbase_size = starbase_citadel
+				count >= 2
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			count_starbase_sizes = {
+				starbase_size = starbase_citadel
+				count >= 3
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			count_starbase_sizes = {
+				starbase_size = starbase_citadel
+				count >= 4
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			count_starbase_sizes = {
+				starbase_size = starbase_citadel
+				count >= 5
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			count_starbase_sizes = {
+				starbase_size = starbase_citadel
+				count >= 6
+			}
+		}
+
+		modifier = {
+			factor = 2
+			any_owned_planet = {
+				is_planet_class = pc_habitat
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			any_neighbor_country = {
+				has_technology = tech_mega_engineering
+			}
+		}
+
+		modifier = {
+			factor = 20
+			has_any_megastructure_in_empire = yes
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+          ###################################
+#---------## [MEGASTRUCTURES] GE (POST-GW) ##---------#
+          ###################################
+	
+###########
+# PLANETS # (ORBITAL!)
+###########
+
+### Equatorial Shipyard ###----------------------
+giga_tech_equatorial_shipyard = {
+	cost = @tech_ukn_equatorial_shipyard_cost
+	area = engineering
+	tier = @tech_ukn_equatorial_shipyard_tier
+	category = { industry }
+	is_rare = yes
+	prerequisites = { "tech_mining_3" "tech_mega_engineering" "tech_alloys_2" }
+	weight = @tech_ukn_equatorial_shipyard_weight
+	prereqfor_desc = {
+		custom = { title = "allow_eq_shipyard"	desc = "desc_eq_shipyard" }
+	}
+	modifier = { planet_jobs_alloys_produces_mult = 0.025 }
+	
+#P]	potential = {
+#P]		has_technology = tech_ship_armor_4
+#P]		has_technology = tech_mining_3
+#P]		has_technology = tech_mega_engineering
+#P]		has_technology = tech_alloys_2
+#P] }
+
+	weight_modifier = {
+#[ALL] Required DLC
+		modifier = {
+			factor = 0
+			has_utopia = no
+		}
+#[ALL] (E5) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ship_armor_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_industry" } }
+		modifier = {
+			factor = 1.5
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 2
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = giga_tech_equatorial_shipyard }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_industry" } }
+		modifier = { factor = 0 has_utopia = no }
+	}
+}
+
+###[TECH-1] Planetary Drive Yard ###----------------------
+giga_tech_planetary_drive_yard = {
+	cost = @tech_ukn_planetary_drive_yard_cost
+	area = engineering
+	tier = @tech_ukn_planetary_drive_yard_tier
+	category = { voidcraft }
+	is_rare = yes
+	prerequisites = { "tech_mega_engineering" }
+	weight = @tech_ukn_planetary_drive_yard_weight
+	prereqfor_desc = {
+		custom = { title = "allow_planetary_drive_yard"	desc = "desc_planetary_drive_yard" }
+	}
+	modifier = { starbase_shipyard_build_speed_mult = 0.10 }			# Incase this tech's megastructure is disabled
+
+#P]	potential = {
+#P]		has_technology = tech_ship_armor_4
+#P]		has_technology = tech_mega_engineering
+#P] }
+
+	weight_modifier = {
+#[ALL] Required DLC
+		modifier = {
+			factor = 0
+			has_utopia = no
+		}
+#[ALL] (E5) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ship_armor_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_voidcraft" } }
+		modifier = {
+			factor = 1.5
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 2
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = giga_tech_planetary_drive_yard }
+			}
+		}
+		modifier = { factor = 0     has_global_flag = planetshipyard_disabled }
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_voidcraft" } }
+		modifier = { factor = 0 has_utopia = no }
+		modifier = { factor = 0     has_global_flag = planetshipyard_disabled }
+	}
+}
+
+###[TECH-2] Planetary Drive Yard (Defense) ###----------------------
+giga_tech_planetary_drive_yard_defense = {
+	cost = @tech_ukn_planetary_drive_yard_defense_cost
+	area = engineering
+	tier = @tech_ukn_planetary_drive_yard_defense_tier
+	category = { voidcraft }
+	is_rare = yes
+	prerequisites = { "giga_tech_planetary_drive_yard" }
+	weight = @tech_ukn_planetary_drive_yard_defense_weight
+	prereqfor_desc = {
+		custom = { title = "allow_planetary_drive_yard_defense"	desc = "desc_planetary_drive_yard_defense" }
+	}
+	modifier = { army_defense_health_mult = 0.15 army_defense_damage_mult = 0.15 }			# Incase this tech's megastructure is disabled
+
+#P]	potential = {
+#P]		has_technology = tech_ship_armor_4
+#P]		has_technology = giga_tech_planetary_drive_yard
+#P] }
+
+	weight_modifier = {
+#[ALL] Required DLC
+		modifier = {
+			factor = 0
+			has_utopia = no
+		}
+#[ALL] (E5) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ship_armor_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_voidcraft" } }
+		modifier = {
+			factor = 1.5
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 2
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = giga_tech_planetary_drive_yard_defense }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_voidcraft" } }
+		modifier = { factor = 0 has_utopia = no }
+	}
+}
+
+###[TECH-3] Planetary Drive Yard (Shipyard) ###----------------------
+giga_tech_planetary_drive_yard_shipyard = {
+	cost = @tech_ukn_planetary_drive_yard_shipyard_cost
+	area = engineering
+	tier = @giga_tech_planetary_drive_yard_shipyard_tier
+	category = { voidcraft }
+	is_rare = yes
+	prerequisites = { "giga_tech_planetary_drive_yard" }
+	weight = @tech_ukn_planetary_drive_yard_shipyard_weight
+	prereqfor_desc = {
+		custom = { title = "allow_planetary_drive_yard_shipyard"	desc = "desc_planetary_drive_yard_shipyard" }
+	}
+	modifier = { starbase_shipyard_build_cost_mult = -0.05 }			# Incase this tech's megastructure is disabled
+
+#P]	potential = {
+#P]		has_technology = tech_ship_armor_4
+#P]		has_technology = giga_tech_planetary_drive_yard
+#P] }
+
+	weight_modifier = {
+#[ALL] Required DLC
+		modifier = {
+			factor = 0
+			has_utopia = no
+		}
+#[ALL] (E5) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ship_armor_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_voidcraft" } }
+		modifier = {
+			factor = 1.5
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 2
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = giga_tech_planetary_drive_yard_shipyard }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_voidcraft" } }
+		modifier = { factor = 0 has_utopia = no }
+	}
+}
+
+
+###########
+# PLANETS # (HARVESTING!)
+###########
+
+###[TECH-2] Stripmine ###----------------------
+giga_tech_automated_stripmine_2 = {
+	cost = @tech_ukn_automated_stripmine_2_cost
+	area = engineering
+	tier = @tech_ukn_automated_stripmine_2_tier
+	category = { industry }
+	is_rare = yes
+	prerequisites = { "tech_mining_3" "tech_mineral_purification_2" "giga_tech_automated_stripmine_1" }
+	weight = @tech_ukn_automated_stripmine_2_weight
+	prereqfor_desc = {
+		custom = { title = "allow_auto_stripmine"	desc = "desc_auto_stripmine" }
+	}
+	modifier = {
+		country_resource_max_add = 5000
+		planet_jobs_minerals_produces_mult = 0.05
+	}
+
+#P]	potential = {
+#P]		has_technology = tech_ship_armor_4
+#P]		has_technology = tech_mining_3
+#P]		has_technology = tech_mineral_purification_2
+#P]		has_technology = giga_tech_automated_stripmine_1
+#P] }
+
+	weight_modifier = {
+#[ALL] Required DLC
+		modifier = {
+			factor = 0
+			has_utopia = no
+		}
+#[ALL] (E5) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ship_armor_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_industry" } }
+		modifier = {
+			factor = 1.5
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 2
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = giga_tech_automated_stripmine_2 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_industry" } }
+		modifier = { factor = 0 has_utopia = no }
+	}
+}
+
+### S.U.C.C. ###----------------------
+giga_tech_succ = {
+	cost = @tech_ukn_succ_cost
+	area = engineering
+	tier = @tech_ukn_succ_tier
+	category = { voidcraft }
+	is_rare = yes
+	prerequisites = { "tech_mega_engineering" "tech_power_plant_4" "tech_mine_exotic_gases" }
+	weight = @tech_ukn_succ_weight
+	prereqfor_desc = {
+		custom = { title = "allow_succ"	desc = "desc_succ" }
+	}
+	modifier = { country_exotic_gases_produces_mult = 0.10 }			# Incase this tech's megastructure is disabled
+
+#P]	potential = {
+#P]		has_technology = tech_ship_armor_4
+#P]		has_technology = tech_mega_engineering
+#P]		has_technology = tech_power_plant_4
+#P]		has_technology = tech_mine_exotic_gases
+#P] }
+
+	weight_modifier = {
+#[ALL] Required DLC
+		modifier = {
+			factor = 0
+			has_utopia = no
+		}
+#[ALL] (E5) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ship_armor_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_voidcraft" } }
+		modifier = {
+			factor = 1.5
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 2
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = giga_tech_succ }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_voidcraft" } }
+		modifier = { factor = 0 has_utopia = no }
+	}
+}
+
+
+          ###################################
+#---------## [MEGASTRUCTURES] GE (POST-GW) ##---------#
+          ###################################
+	
+################
+# INTERSTELLAR # (ORBITAL!)
+################
+
+###[TECH-1] Interstellar Habitat ###----------------------
+giga_tech_interstellar_habitat = {
+	cost = @tech_ukn_interstellar_habitat_cost
+	area = engineering
+	tier = @tech_ukn_interstellar_habitat_tier
+	category = { voidcraft }
+	is_rare = yes
+	prerequisites = { "tech_mega_engineering" "tech_gateway_construction" "tech_habitat_1" }
+	weight = @tech_ukn_interstellar_habitat_weight
+	prereqfor_desc = {
+		custom = { title = "allow_interstellar_hab"	desc = "desc_interstellar_hab" }
+	}
+	modifier = { megastructure_build_speed_mult = 0.05 }			# Incase this tech's megastructure is disabled
+
+#P]	potential = {
+#P]		has_technology = tech_ship_armor_4
+#P]		has_technology = tech_mega_engineering
+#P]		has_technology = tech_gateway_construction
+#P]		has_technology = tech_habitat_1
+#P] }
+
+	weight_modifier = {
+#[ALL] Required DLC
+		modifier = {
+			factor = 0
+			has_utopia = no
+		}
+#[ALL] (E5) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ship_armor_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = { factor = 0 NOT = { has_ascension_perk = ap_voidborn } }
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_voidcraft" } }
+		modifier = {
+			factor = 1.5
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 2
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = giga_tech_interstellar_habitat }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier
+		modifier = { factor = 0 NOT = { has_ascension_perk = ap_voidborn } }
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_voidcraft" } }
+		modifier = { factor = 0 has_utopia = no }
+	}
+}
+
+###[TECH-2] Interstellar Ringworld ###----------------------
+giga_tech_interstellar_ringworld = {
+	cost = @tech_ukn_interstellar_ringworld_cost
+	area = engineering
+	tier = @tech_ukn_interstellar_ringworld_tier
+	category = { voidcraft }
+	is_rare = yes
+	prerequisites = { "giga_tech_interstellar_habitat" "giga_tech_ringworld_titanic_1" "giga_tech_penrose_sphere_3" }
+	weight = @tech_ukn_interstellar_ringworld_weight
+	prereqfor_desc = {
+		custom = { title = "allow_interstellar_ring"	desc = "desc_interstellar_ring" }
+	}
+	modifier = { all_technology_research_speed = 0.05 }			# Incase this tech's megastructure is disabled
+
+#P]	potential = {
+#P]		has_technology = tech_ship_armor_4
+#P]		has_technology = giga_tech_interstellar_habitat
+#P]		has_technology = giga_tech_ringworld_titanic_1
+#P]		has_technology = giga_tech_penrose_sphere_3
+#P] }
+
+	weight_modifier = {
+#[ALL] Required DLC
+		modifier = {
+			factor = 0
+			has_utopia = no
+		}
+#[ALL] (E5) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ship_armor_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_voidcraft" } }
+		modifier = { factor = 0 has_galactic_wonders = no }
+		modifier = {
+			factor = 1.5
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 2
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = giga_tech_interstellar_ringworld }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_voidcraft" } }
+		modifier = { factor = 0 has_utopia = no }
+		modifier = { factor = 0 has_galactic_wonders = no }
+	}
+}
+
+
+#########
+# STARS # (ORBITAL!)
+#########
+
+###[TECH-2] Titanic Ringworld ###----------------------
+giga_tech_ringworld_titanic_2 = {
+	cost = @tech_ukn_ringworld_titanic_2_cost
+	area = engineering
+	tier = @tech_ukn_ringworld_titanic_2_tier
+	category = { voidcraft }
+	is_rare = yes
+	prerequisites = { "giga_tech_ringworld_titanic_1" }
+	weight = @tech_ukn_ringworld_titanic_2_weight
+	prereqfor_desc = {
+		custom = { title = "allow_ringworld_titanic"	desc = "desc_ringworld_titanic" }
+	}
+	modifier = { megastructure_build_speed_mult = 0.05 }			# Incase this tech's megastructure is disabled
+
+#P]	potential = {
+#P]		has_technology = tech_ship_armor_4
+#P]		has_technology = giga_tech_ringworld_titanic_1
+#P] }
+
+	weight_modifier = {
+#[ALL] Required DLC
+		modifier = {
+			factor = 0
+			has_utopia = no
+		}
+#[ALL] (E5) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ship_armor_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_voidcraft" } }
+		modifier = { factor = 0 has_galactic_wonders = no }
+		modifier = {
+			factor = 1.5
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 2
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = giga_tech_ringworld_titanic_2 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_voidcraft" } }
+		modifier = { factor = 0 has_utopia = no }
+		modifier = { factor = 0 has_galactic_wonders = no }
+	}
+}
+
+
+#########
+# STARS # (HARVESTING!)
+#########
+
+###[TECH-1] Star Lifter ###----------------------
+giga_tech_star_lifter = {
+	cost = @tech_ukn_star_lifter_cost
+	area = engineering
+	tier = @tech_ukn_star_lifter_tier
+	category = { industry }
+	is_rare = yes
+	prerequisites = { "giga_tech_particle_accelerator" "tech_zero_point_power" "giga_tech_engineering_test_site" }
+	weight = @tech_ukn_star_lifter_weight
+	prereqfor_desc = {
+		custom = { title = "allow_starlifter"	desc = "desc_starlifter" }
+	}
+	modifier = {
+		country_resource_max_add = 10000
+		planet_jobs_minerals_produces_mult = 0.05
+	}
+
+#P]	potential = {
+#P]		has_technology = tech_ship_armor_4
+#P]		has_technology = giga_tech_particle_accelerator
+#P]		has_technology = tech_zero_point_power
+#P]		has_technology = giga_tech_engineering_test_site
+#P] }
+
+	weight_modifier = {
+#[ALL] Required DLC
+		modifier = {
+			factor = 0
+			has_utopia = no
+		}
+#[ALL] (E5) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ship_armor_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_industry" } }
+		modifier = { factor = 0 has_galactic_wonders = no }
+		modifier = {
+			factor = 1.5
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 2
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = giga_tech_star_lifter }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_industry" } }
+		modifier = { factor = 0 has_utopia = no }
+		modifier = { factor = 0 has_galactic_wonders = no }
+	}
+}
+
+
+###############
+# BLACK HOLES # (ORBITAL!)
+###############
+
+###[TECH-3] Penrose Ringworld ###----------------------
+giga_tech_penrose_sphere_3 = {
+	cost = @tech_ukn_penrose_sphere_3_cost
+	area = engineering
+	tier = @tech_ukn_penrose_sphere_3_tier
+	category = { voidcraft }
+	is_rare = yes
+	prerequisites = { "giga_tech_penrose_sphere_2" "giga_tech_ringworld_titanic_1" }
+	weight = @tech_ukn_penrose_sphere_3_weight
+	prereqfor_desc = {
+		custom = { title = "allow_penrose_ringworld"	desc = "desc_penrose_ringworld" }
+	}
+	modifier = { all_technology_research_speed = 0.05 }			# Incase this tech's megastructure is disabled
+
+#P]	potential = {
+#P]		has_technology = tech_ship_armor_4
+#P]		has_technology = giga_tech_penrose_sphere_2
+#P]		has_technology = giga_tech_ringworld_titanic_1
+#P] }
+
+	weight_modifier = {
+#[ALL] Required DLC
+		modifier = {
+			factor = 0
+			has_utopia = no
+		}
+#[ALL] (E5) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ship_armor_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_voidcraft" } }
+		modifier = { factor = 0 has_galactic_wonders = no }
+		modifier = {
+			factor = 1.5
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 2
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = giga_tech_penrose_sphere_3 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_voidcraft" } }
+		modifier = { factor = 0 has_utopia = no }
+		modifier = { factor = 0 has_galactic_wonders = no }
+	}
+}
+
+
+############
+# VEHICLES #
+############
+
+###[TECH-1] Attack Moon ###----------------------
+giga_tech_war_moon_1 = {
+	cost = @tech_ukn_war_moon_1_cost
+	area = engineering
+	tier = @tech_ukn_war_moon_1_tier
+	category = { voidcraft }
+	is_rare = yes
+	prerequisites = { "tech_mega_engineering" "tech_thrusters_4" "giga_tech_asteroid_artillery" }
+	weight = @tech_ukn_war_moon_1_weight
+	modifier = { ship_base_speed_mult = 0.10 }
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = ship
+		custom = { title = "giga_mobile_planet_quest_chain" desc = "giga_mobile_planet_quest_chain" }
+	}
+
+#P]	potential = {
+#P]		has_technology = tech_ship_armor_4
+#P]		has_technology = tech_mega_engineering
+#P]		has_technology = tech_thrusters_4
+#P]		has_technology = giga_tech_asteroid_artillery
+#P] }
+
+	weight_modifier = {
+#[ALL] Required DLC
+		modifier = {
+			factor = 0
+			has_utopia = no
+		}
+#[ALL] (E5) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ship_armor_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_voidcraft" } }
+		modifier = {
+			factor = 1.5
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 2
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = giga_tech_war_moon_1 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_voidcraft" } }
+		modifier = { factor = 0 has_utopia = no }
+	}
+}
+
+###[TECH-2] Attack Moon ###----------------------
+giga_tech_war_moon_2 = {
+	cost = @tech_ukn_war_moon_2_cost
+	area = engineering
+	tier = @tech_ukn_war_moon_2_tier
+	category = { voidcraft }
+	is_rare = yes
+	prerequisites = { "giga_tech_war_moon_1" }
+	weight = @tech_ukn_war_moon_2_weight
+	prereqfor_desc = {
+		custom = { title = "allow_war_moon"	desc = "desc_war_moons" }
+		custom = { title = "giga_mobile_planet_quest_chain" desc = "giga_mobile_planet_quest_chain" }
+	}
+	modifier = { megastructure_build_speed_mult = 0.05 }			# Incase this tech's megastructure is disabled
+
+#P]	potential = {
+#P]		has_technology = tech_ship_armor_4
+#P]		has_technology = giga_tech_war_moon_1
+#P] }
+
+	weight_modifier = {
+#[ALL] Required DLC
+		modifier = {
+			factor = 0
+			has_utopia = no
+		}
+#[ALL] (E5) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ship_armor_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_voidcraft" } }
+		modifier = { factor = 0 has_galactic_wonders = no }
+		modifier = {
+			factor = 1.5
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 2
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = giga_tech_war_moon_2 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @giga_aiweight_multiplier
+		modifier = { factor = 1.25 research_leader = { area = engineering has_trait = "leader_trait_expertise_voidcraft" } }
+		modifier = { factor = 0 has_utopia = no }
+		modifier = { factor = 0 has_galactic_wonders = no }
+	}
+}

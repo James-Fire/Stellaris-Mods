@@ -1,0 +1,609 @@
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+
+# Updated Range on these
+
+# DEFAULT VALUES:
+# is_missile = no
+# is_beam = no
+# is_point_defence = no
+
+#######################
+### MACRODISRUPTORS ###
+#######################
+
+### Subspace Disruptor (T4)
+weapon_component_template = {
+	key = "UKN_MACRO_DISRUPTOR_0"
+	size = large
+	#entity = "destabilizer_gun_entity"
+	type = instant
+    power = @ukn_macro_disruptor_5_power
+	
+	icon = "GFX_ship_part_ukn_macro_disruptor_1"
+	icon_frame = 1
+	#color = { 1.0 1.0 1.0 1 }
+	
+	damage = { min = @ukn_macro_disruptor_5_dmg_min max = @ukn_macro_disruptor_5_dmg_max }
+    windup = { min = @ukn_macro_disruptor_5_windup_min max = @ukn_macro_disruptor_5_windup_max }
+    total_fire_time = @ukn_macro_disruptor_5_total_fire_time
+    range = @ukn_macro_disruptor_5_range
+    accuracy = @ukn_macro_disruptor_5_accuracy
+	
+    hull_damage = @ukn_macro_disruptor_5_hull_damage_mult
+    armor_penetration = @ukn_macro_disruptor_5_armor_penetration_mult
+    armor_damage = @ukn_macro_disruptor_5_armor_damage_mult
+    shield_penetration = @ukn_macro_disruptor_5_shield_penetration_mult
+    shield_damage = @ukn_macro_disruptor_5_shield_damage_mult
+    tracking = @ukn_macro_disruptor_5_tracking
+	
+	prerequisites = { "tech_space_cloud_weapon_1" }
+	component_set = "UKN_SET_MACRO_DISRUPTOR_0"
+	projectile_gfx = "projectile_ukn_macro_disruptor_1"
+	tags = { weapon_type_energy ukn_weapon_type_disruptor }
+	ai_tags = { weapon_role_anti_hull }
+	upgrades_to = "UKN_MACRO_DISRUPTOR_1"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_large_t5_component_cost_minerals
+#			alloys = @ukn_large_t5_component_cost_alloys
+			ukn_meta_materials = @ukn_large_t5_component_cost_ukn_meta_materials
+			ukn_femtomatter = @ukn_large_t5_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t5_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t5_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t5_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_large_t5_component_cost_exotic_gases
+#			rare_crystals = @ukn_large_t5_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_large_t5_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_large_t5_armor_cost_ukn_meta_materials
+#			nanites = @ukn_large_t5_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_large_t5_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_large_t5_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_large_t5_component_upkeep_energy
+#			minerals = @ukn_large_t5_component_upkeep_minerals
+#			alloys = @ukn_large_t5_component_upkeep_alloys
+			ukn_meta_materials = @ukn_large_t5_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t5_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t5_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t5_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t5_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_large_t5_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_large_t5_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_large_t5_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_large_t5_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_large_t5_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_large_t5_component_upkeep_nanites
+#---
+#			minerals = @ukn_large_t5_kinetics_upkeep_minerals
+#			alloys = @ukn_large_t5_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t5_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+
+	ai_weight = {
+		weight = 54
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_femtomatter value <= 0 }
+				has_monthly_income = { resource = rare_crystals value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Higgs Disruptor (T5)
+weapon_component_template = {
+	key = "UKN_MACRO_DISRUPTOR_1"
+	size = large
+	#entity = "destabilizer_gun_entity"
+	type = instant
+    power = @ukn_macro_disruptor_6_power
+	
+	icon = "GFX_ship_part_ukn_macro_disruptor_2"
+	icon_frame = 1
+	#color = { 0.1 1.0 0.1 1 }
+	
+	damage = { min = @ukn_macro_disruptor_6_dmg_min max = @ukn_macro_disruptor_6_dmg_max }
+    windup = { min = @ukn_macro_disruptor_6_windup_min max = @ukn_macro_disruptor_6_windup_max }
+    total_fire_time = @ukn_macro_disruptor_6_total_fire_time
+    range = @ukn_macro_disruptor_6_range
+    accuracy = @ukn_macro_disruptor_6_accuracy
+	
+    hull_damage = @ukn_macro_disruptor_6_hull_damage_mult
+    armor_penetration = @ukn_macro_disruptor_6_armor_penetration_mult
+    armor_damage = @ukn_macro_disruptor_6_armor_damage_mult
+    shield_penetration = @ukn_macro_disruptor_6_shield_penetration_mult
+    shield_damage = @ukn_macro_disruptor_6_shield_damage_mult
+    tracking = @ukn_macro_disruptor_6_tracking
+	
+	prerequisites = { "tech_ukn_macro_disruptor_1" }
+	component_set = "UKN_SET_MACRO_DISRUPTOR_1"
+	projectile_gfx = "projectile_ukn_macro_disruptor_2"
+	tags = { weapon_type_energy ukn_weapon_type_disruptor }
+	ai_tags = { weapon_role_anti_hull }
+	upgrades_to = "UKN_MACRO_DISRUPTOR_2"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_large_t6_component_cost_minerals
+#			alloys = @ukn_large_t6_component_cost_alloys
+			ukn_meta_materials = @ukn_large_t6_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t6_component_cost_ukn_femtomatter
+			ukn_condensics = @ukn_large_t6_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t6_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t6_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_large_t6_component_cost_exotic_gases
+#			rare_crystals = @ukn_large_t6_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_large_t6_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_large_t6_armor_cost_ukn_meta_materials
+#			nanites = @ukn_large_t6_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_large_t6_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_large_t6_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_large_t6_component_upkeep_energy
+#			minerals = @ukn_large_t6_component_upkeep_minerals
+#			alloys = @ukn_large_t6_component_upkeep_alloys
+			ukn_meta_materials = @ukn_large_t6_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t6_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t6_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t6_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t6_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_large_t6_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_large_t6_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_large_t6_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_large_t6_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_large_t6_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_large_t6_component_upkeep_nanites
+#---
+#			minerals = @ukn_large_t6_kinetics_upkeep_minerals
+#			alloys = @ukn_large_t6_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t6_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+
+	ai_weight = {
+		weight = 128
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_condensics value <= 0 }
+				has_monthly_income = { resource = rare_crystals value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Axionic Disruptor (T6)
+weapon_component_template = {
+	key = "UKN_MACRO_DISRUPTOR_2"
+	size = large
+	#entity = "destabilizer_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_macro_disruptor_3"
+	icon_frame = 1
+    power = @ukn_macro_disruptor_7_power
+	
+	damage = { min = @ukn_macro_disruptor_7_dmg_min max = @ukn_macro_disruptor_7_dmg_max }
+    windup = { min = @ukn_macro_disruptor_7_windup_min max = @ukn_macro_disruptor_7_windup_max }
+    total_fire_time = @ukn_macro_disruptor_7_total_fire_time
+    range = @ukn_macro_disruptor_7_range
+    accuracy = @ukn_macro_disruptor_7_accuracy
+	
+    hull_damage = @ukn_macro_disruptor_7_hull_damage_mult
+    armor_penetration = @ukn_macro_disruptor_7_armor_penetration_mult
+    armor_damage = @ukn_macro_disruptor_7_armor_damage_mult
+    shield_penetration = @ukn_macro_disruptor_7_shield_penetration_mult
+    shield_damage = @ukn_macro_disruptor_7_shield_damage_mult
+    tracking = @ukn_macro_disruptor_7_tracking
+	
+	prerequisites = { "tech_ukn_macro_disruptor_2" } #To Be Done
+	component_set = "UKN_SET_MACRO_DISRUPTOR_2"
+	projectile_gfx = "projectile_ukn_macro_disruptor_3"
+	tags = { weapon_type_energy ukn_weapon_type_disruptor }
+	upgrades_to = "UKN_MACRO_DISRUPTOR_3"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_large_t7_component_cost_minerals
+#			alloys = @ukn_large_t7_component_cost_alloys
+			ukn_meta_materials = @ukn_large_t7_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t7_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t7_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_large_t7_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t7_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_large_t7_component_cost_exotic_gases
+#			rare_crystals = @ukn_large_t7_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_large_t7_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_large_t7_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_large_t7_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_large_t7_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_large_t7_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_large_t7_component_upkeep_energy
+#			minerals = @ukn_large_t7_component_upkeep_minerals
+#			alloys = @ukn_large_t7_component_upkeep_alloys
+			ukn_meta_materials = @ukn_large_t7_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t7_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t7_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t7_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t7_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_large_t7_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_large_t7_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_large_t7_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_large_t7_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_large_t7_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_large_t7_kinetics_upkeep_minerals
+#			alloys = @ukn_large_t7_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t7_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 256
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = rare_crystals value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_hull }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------
+
+### Planck Disruptor (T7)
+weapon_component_template = {
+	key = "UKN_MACRO_DISRUPTOR_3"
+	size = large
+	#entity = "destabilizer_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_macro_disruptor_4"
+	icon_frame = 1
+    power = @ukn_macro_disruptor_8_power
+	
+	damage = { min = @ukn_macro_disruptor_8_dmg_min max = @ukn_macro_disruptor_8_dmg_max }
+    windup = { min = @ukn_macro_disruptor_8_windup_min max = @ukn_macro_disruptor_8_windup_max }
+    total_fire_time = @ukn_macro_disruptor_8_total_fire_time
+    range = @ukn_macro_disruptor_8_range
+    accuracy = @ukn_macro_disruptor_8_accuracy
+	
+    hull_damage = @ukn_macro_disruptor_8_hull_damage_mult
+    armor_penetration = @ukn_macro_disruptor_8_armor_penetration_mult
+    armor_damage = @ukn_macro_disruptor_8_armor_damage_mult
+    shield_penetration = @ukn_macro_disruptor_8_shield_penetration_mult
+    shield_damage = @ukn_macro_disruptor_8_shield_damage_mult
+    tracking = @ukn_macro_disruptor_8_tracking
+	
+	prerequisites = { "tech_ukn_macro_disruptor_3" } #To Be Done
+	component_set = "UKN_SET_MACRO_DISRUPTOR_3"
+	projectile_gfx = "projectile_ukn_macro_disruptor_4"
+	tags = { weapon_type_energy ukn_weapon_type_disruptor }
+	upgrades_to = "UKN_MACRO_DISRUPTOR_4"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_large_t8_component_cost_minerals
+#			alloys = @ukn_large_t8_component_cost_alloys
+			ukn_meta_materials = @ukn_large_t8_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t8_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t8_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_large_t8_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t8_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_large_t8_component_cost_exotic_gases
+#			rare_crystals = @ukn_large_t8_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_large_t8_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_large_t8_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_large_t8_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_large_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_large_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_large_t8_component_upkeep_energy
+#			minerals = @ukn_large_t8_component_upkeep_minerals
+#			alloys = @ukn_large_t8_component_upkeep_alloys
+			ukn_meta_materials = @ukn_large_t8_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t8_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t8_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t8_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t8_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_large_t8_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_large_t8_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_large_t8_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_large_t8_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_large_t8_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_large_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_large_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t8_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 512
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = rare_crystals value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_hull }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------
+
+### Planck Disruptor (T7)
+weapon_component_template = {
+	key = "UKN_MACRO_DISRUPTOR_PLANCK"
+	size = large
+	#entity = "destabilizer_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_macro_disruptor_planck"
+	icon_frame = 1
+    power = @ukn_macro_disruptor_planck_power
+	
+	damage = { min = @ukn_macro_disruptor_planck_dmg_min max = @ukn_macro_disruptor_planck_dmg_max }
+    windup = { min = @ukn_macro_disruptor_planck_windup_min max = @ukn_macro_disruptor_planck_windup_max }
+    total_fire_time = @ukn_macro_disruptor_planck_total_fire_time
+    range = @ukn_macro_disruptor_planck_range
+    accuracy = @ukn_macro_disruptor_planck_accuracy
+	
+    hull_damage = @ukn_macro_disruptor_planck_hull_damage_mult
+    armor_penetration = @ukn_macro_disruptor_planck_armor_penetration_mult
+    armor_damage = @ukn_macro_disruptor_planck_armor_damage_mult
+    shield_penetration = @ukn_macro_disruptor_planck_shield_penetration_mult
+    shield_damage = @ukn_macro_disruptor_planck_shield_damage_mult
+    tracking = @ukn_macro_disruptor_planck_tracking
+	
+	prerequisites = { "tech_ukn_macro_disruptor_planck" } #To Be Done
+	component_set = "UKN_SET_MACRO_DISRUPTOR_PLANCK"
+	projectile_gfx = "projectile_ukn_macro_disruptor_planck"
+	tags = { weapon_type_energy ukn_weapon_type_disruptor }
+	upgrades_to = "UKN_MACRO_DISRUPTOR_4"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_large_t_p_component_cost_minerals
+#			alloys = @ukn_large_t_p_component_cost_alloys
+			ukn_meta_materials = @ukn_large_t_p_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t_p_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t_p_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_large_t_p_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t_p_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_large_t_p_component_cost_exotic_gases
+#			rare_crystals = @ukn_large_t_p_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_large_t_p_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_large_t_p_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_large_t_p_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_large_t_p_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_large_t_p_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_large_t_p_component_upkeep_energy
+#			minerals = @ukn_large_t_p_component_upkeep_minerals
+#			alloys = @ukn_large_t_p_component_upkeep_alloys
+			ukn_meta_materials = @ukn_large_t_p_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t_p_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t_p_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t_p_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t_p_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_large_t_p_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_large_t_p_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_large_t_p_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_large_t_p_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_large_t_p_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_large_t_p_kinetics_upkeep_minerals
+#			alloys = @ukn_large_t_p_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t_p_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 768
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = sr_dark_matter value <= 0 }
+				has_monthly_income = { resource = rare_crystals value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_hull }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------
+
+### Sub-Planck Disruptor (T8)
+weapon_component_template = {
+	key = "UKN_MACRO_DISRUPTOR_4"
+	size = large
+	#entity = "destabilizer_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_macro_disruptor_5"
+	icon_frame = 1
+    power = @ukn_macro_disruptor_9_power
+	
+	damage = { min = @ukn_macro_disruptor_9_dmg_min max = @ukn_macro_disruptor_9_dmg_max }
+    windup = { min = @ukn_macro_disruptor_9_windup_min max = @ukn_macro_disruptor_9_windup_max }
+    total_fire_time = @ukn_macro_disruptor_9_total_fire_time
+    range = @ukn_macro_disruptor_9_range
+    accuracy = @ukn_macro_disruptor_9_accuracy
+	
+    hull_damage = @ukn_macro_disruptor_9_hull_damage_mult
+    armor_penetration = @ukn_macro_disruptor_9_armor_penetration_mult
+    armor_damage = @ukn_macro_disruptor_9_armor_damage_mult
+    shield_penetration = @ukn_macro_disruptor_9_shield_penetration_mult
+    shield_damage = @ukn_macro_disruptor_9_shield_damage_mult
+    tracking = @ukn_macro_disruptor_9_tracking
+	
+	prerequisites = { "tech_ukn_macro_disruptor_4" } #To Be Done
+	component_set = "UKN_SET_MACRO_DISRUPTOR_4"
+	projectile_gfx = "projectile_ukn_macro_disruptor_5"
+	tags = { weapon_type_energy ukn_weapon_type_disruptor }
+	upgrades_to = "UKN_MACRO_DISRUPTOR_5"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_large_t9_component_cost_minerals
+#			alloys = @ukn_large_t9_component_cost_alloys
+#			ukn_meta_materials = @ukn_large_t9_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t9_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t9_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t9_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_large_t9_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_large_t9_component_cost_exotic_gases
+#			rare_crystals = @ukn_large_t9_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_large_t9_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_large_t9_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_large_t9_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_large_t9_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_large_t9_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_large_t9_component_upkeep_energy
+#			minerals = @ukn_large_t9_component_upkeep_minerals
+#			alloys = @ukn_large_t9_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t9_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t9_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t9_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t9_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t9_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_large_t9_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_large_t9_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_large_t9_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_large_t9_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_large_t9_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_large_t9_kinetics_upkeep_minerals
+#			alloys = @ukn_large_t9_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t9_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 1024
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = rare_crystals value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_hull }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------
+
+### Flux Disruptor (T9)
+weapon_component_template = {
+	key = "UKN_MACRO_DISRUPTOR_5"
+	size = large
+	#entity = "destabilizer_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_macro_disruptor_6"
+	icon_frame = 1
+    power = @ukn_macro_disruptor_10_power
+	
+	damage = { min = @ukn_macro_disruptor_10_dmg_min max = @ukn_macro_disruptor_10_dmg_max }
+    windup = { min = @ukn_macro_disruptor_10_windup_min max = @ukn_macro_disruptor_10_windup_max }
+    total_fire_time = @ukn_macro_disruptor_10_total_fire_time
+    range = @ukn_macro_disruptor_10_range
+    accuracy = @ukn_macro_disruptor_10_accuracy
+	
+    hull_damage = @ukn_macro_disruptor_10_hull_damage_mult
+    armor_penetration = @ukn_macro_disruptor_10_armor_penetration_mult
+    armor_damage = @ukn_macro_disruptor_10_armor_damage_mult
+    shield_penetration = @ukn_macro_disruptor_10_shield_penetration_mult
+    shield_damage = @ukn_macro_disruptor_10_shield_damage_mult
+    tracking = @ukn_macro_disruptor_10_tracking
+	
+	prerequisites = { "tech_ukn_macro_disruptor_5" } #To Be Done
+	component_set = "UKN_SET_MACRO_DISRUPTOR_5"
+	projectile_gfx = "projectile_ukn_macro_disruptor_6"
+	tags = { weapon_type_energy ukn_weapon_type_disruptor }
+#	upgrades_to = "UKN_MACRO_DISRUPTOR_5"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_large_t10_component_cost_minerals
+#			alloys = @ukn_large_t10_component_cost_alloys
+#			ukn_meta_materials = @ukn_large_t10_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t10_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t10_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t10_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_large_t10_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_large_t10_component_cost_exotic_gases
+#			rare_crystals = @ukn_large_t10_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_large_t10_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_large_t10_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_large_t10_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_large_t10_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_large_t10_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_large_t10_component_upkeep_energy
+#			minerals = @ukn_large_t10_component_upkeep_minerals
+#			alloys = @ukn_large_t10_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t10_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t10_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t10_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t10_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t10_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_large_t10_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_large_t10_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_large_t10_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_large_t10_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_large_t10_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_large_t10_kinetics_upkeep_minerals
+#			alloys = @ukn_large_t10_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t10_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 2048
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = rare_crystals value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_hull }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------

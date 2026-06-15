@@ -1,0 +1,1352 @@
+###################
+##### LASERS ######
+###################
+
+@ukn_laser_1_hull_damage_mult = 1.00
+@ukn_laser_2_hull_damage_mult = 1.00
+@ukn_laser_3_hull_damage_mult = 1.00
+@ukn_laser_4_hull_damage_mult = 1.00
+@ukn_laser_5_hull_damage_mult = 1.00
+@ukn_laser_6_hull_damage_mult = 1.10
+@ukn_laser_7_hull_damage_mult = 1.10
+@ukn_laser_8_hull_damage_mult = 1.10
+@ukn_laser_9_hull_damage_mult = 1.25
+@ukn_laser_10_hull_damage_mult = 1.25
+@ukn_laser_planck_hull_damage_mult = 1.25
+
+@ukn_laser_1_armor_penetration_mult = 0.00
+@ukn_laser_2_armor_penetration_mult = 0.00
+@ukn_laser_3_armor_penetration_mult = 0.00
+@ukn_laser_4_armor_penetration_mult = 0.00
+@ukn_laser_5_armor_penetration_mult = 0.00
+@ukn_laser_6_armor_penetration_mult = 0.00
+@ukn_laser_7_armor_penetration_mult = 0.00
+@ukn_laser_8_armor_penetration_mult = 0.00
+@ukn_laser_9_armor_penetration_mult = 0.00
+@ukn_laser_10_armor_penetration_mult = 0.00
+@ukn_laser_planck_armor_penetration_mult = 0.00
+
+@ukn_laser_1_shield_penetration_mult = 0.00
+@ukn_laser_2_shield_penetration_mult = 0.00
+@ukn_laser_3_shield_penetration_mult = 0.00
+@ukn_laser_4_shield_penetration_mult = 0.00
+@ukn_laser_5_shield_penetration_mult = 0.00
+@ukn_laser_6_shield_penetration_mult = 0.00
+@ukn_laser_7_shield_penetration_mult = 0.00
+@ukn_laser_8_shield_penetration_mult = 0.00
+@ukn_laser_9_shield_penetration_mult = 0.00
+@ukn_laser_10_shield_penetration_mult = 0.00
+@ukn_laser_planck_shield_penetration_mult = 0.00
+
+@ukn_laser_1_armor_damage_mult = 1.50
+@ukn_laser_2_armor_damage_mult = 1.50
+@ukn_laser_3_armor_damage_mult = 1.50
+@ukn_laser_4_armor_damage_mult = 1.50
+@ukn_laser_5_armor_damage_mult = 1.50
+@ukn_laser_6_armor_damage_mult = 1.65
+@ukn_laser_7_armor_damage_mult = 1.65
+@ukn_laser_8_armor_damage_mult = 1.65
+@ukn_laser_9_armor_damage_mult = 1.90
+@ukn_laser_10_armor_damage_mult = 1.90
+@ukn_laser_planck_armor_damage_mult = 1.90
+
+@ukn_laser_1_shield_damage_mult = 0.50
+@ukn_laser_2_shield_damage_mult = 0.50
+@ukn_laser_3_shield_damage_mult = 0.50
+@ukn_laser_4_shield_damage_mult = 0.50
+@ukn_laser_5_shield_damage_mult = 0.50
+@ukn_laser_6_shield_damage_mult = 0.55
+@ukn_laser_7_shield_damage_mult = 0.55
+@ukn_laser_8_shield_damage_mult = 0.55
+@ukn_laser_9_shield_damage_mult = 0.65
+@ukn_laser_10_shield_damage_mult = 0.65
+@ukn_laser_planck_shield_damage_mult = 0.65
+#---
+
+@ukn_laser_1_accuracy = 0.90
+@ukn_laser_2_accuracy = 0.90
+@ukn_laser_3_accuracy = 0.90
+@ukn_laser_4_accuracy = 0.90
+@ukn_laser_5_accuracy = 0.90
+@ukn_laser_6_accuracy = 0.90
+@ukn_laser_7_accuracy = 0.90
+@ukn_laser_8_accuracy = 0.90
+@ukn_laser_9_accuracy = 0.90
+@ukn_laser_10_accuracy = 0.90
+@ukn_laser_planck_accuracy = 0.90
+
+
+# SMALL #---------------------------
+
+@ukn_laser_1_s_power = -6 
+@ukn_laser_2_s_power = -8 
+@ukn_laser_3_s_power = -10 
+@ukn_laser_4_s_power = -13 
+@ukn_laser_5_s_power = -17 
+@ukn_laser_6_s_power = -23 
+@ukn_laser_7_s_power = -32 
+@ukn_laser_8_s_power = -47 
+@ukn_laser_9_s_power = -102 
+@ukn_laser_10_s_power = -158 
+@ukn_laser_planck_s_power = -68 
+#---
+
+@ukn_laser_1_s_dmg_min = 6 
+@ukn_laser_2_s_dmg_min = 8 
+@ukn_laser_3_s_dmg_min = 10 
+@ukn_laser_4_s_dmg_min = 13 
+@ukn_laser_5_s_dmg_min = 17 
+@ukn_laser_6_s_dmg_min = 23 
+@ukn_laser_7_s_dmg_min = 32 
+@ukn_laser_8_s_dmg_min = 47 
+@ukn_laser_9_s_dmg_min = 102 
+@ukn_laser_10_s_dmg_min = 158 
+@ukn_laser_planck_s_dmg_min = 68 
+
+@ukn_laser_1_s_dmg_max = 16 
+@ukn_laser_2_s_dmg_max = 21 
+@ukn_laser_3_s_dmg_max = 27 
+@ukn_laser_4_s_dmg_max = 35 
+@ukn_laser_5_s_dmg_max = 46 
+@ukn_laser_6_s_dmg_max = 62 
+@ukn_laser_7_s_dmg_max = 87 
+@ukn_laser_8_s_dmg_max = 126 
+@ukn_laser_9_s_dmg_max = 274 
+@ukn_laser_10_s_dmg_max = 425 
+@ukn_laser_planck_s_dmg_max = 183 
+#---
+
+@ukn_laser_1_s_windup_min = 2
+@ukn_laser_2_s_windup_min = 2
+@ukn_laser_3_s_windup_min = 2
+@ukn_laser_4_s_windup_min = 2
+@ukn_laser_5_s_windup_min = 2
+@ukn_laser_6_s_windup_min = 2
+@ukn_laser_7_s_windup_min = 2
+@ukn_laser_8_s_windup_min = 2
+@ukn_laser_9_s_windup_min = 2
+@ukn_laser_10_s_windup_min = 2
+@ukn_laser_planck_s_windup_min = 2
+
+@ukn_laser_1_s_windup_max = 20
+@ukn_laser_2_s_windup_max = 20
+@ukn_laser_3_s_windup_max = 20
+@ukn_laser_4_s_windup_max = 20
+@ukn_laser_5_s_windup_max = 20
+@ukn_laser_6_s_windup_max = 20
+@ukn_laser_7_s_windup_max = 20
+@ukn_laser_8_s_windup_max = 20
+@ukn_laser_9_s_windup_max = 20
+@ukn_laser_10_s_windup_max = 20
+@ukn_laser_planck_s_windup_max = 20
+#---
+
+@ukn_laser_1_s_total_fire_time = 35
+@ukn_laser_2_s_total_fire_time = 35
+@ukn_laser_3_s_total_fire_time = 35
+@ukn_laser_4_s_total_fire_time = 35
+@ukn_laser_5_s_total_fire_time = 35
+@ukn_laser_6_s_total_fire_time = 35
+@ukn_laser_7_s_total_fire_time = 35
+@ukn_laser_8_s_total_fire_time = 35
+@ukn_laser_9_s_total_fire_time = 35
+@ukn_laser_10_s_total_fire_time = 35
+@ukn_laser_planck_s_total_fire_time = 35
+#---
+
+@ukn_laser_1_s_range = 40
+@ukn_laser_2_s_range = 40
+@ukn_laser_3_s_range = 40
+@ukn_laser_4_s_range = 40
+@ukn_laser_5_s_range = 40
+@ukn_laser_6_s_range = 45
+@ukn_laser_7_s_range = 45
+@ukn_laser_8_s_range = 45
+@ukn_laser_9_s_range = 55
+@ukn_laser_10_s_range = 55
+@ukn_laser_planck_s_range = 45
+#---
+
+@ukn_laser_1_s_tracking = 0.50
+@ukn_laser_2_s_tracking = 0.50
+@ukn_laser_3_s_tracking = 0.50
+@ukn_laser_4_s_tracking = 0.50
+@ukn_laser_5_s_tracking = 0.50
+@ukn_laser_6_s_tracking = 0.55
+@ukn_laser_7_s_tracking = 0.55
+@ukn_laser_8_s_tracking = 0.55
+@ukn_laser_9_s_tracking = 0.60
+@ukn_laser_10_s_tracking = 0.60
+@ukn_laser_planck_s_tracking = 0.55
+
+
+# MEDIUM #---------------------------
+
+@ukn_laser_1_m_power = -11 
+@ukn_laser_2_m_power = -14 
+@ukn_laser_3_m_power = -18 
+@ukn_laser_4_m_power = -23 
+@ukn_laser_5_m_power = -30 
+@ukn_laser_6_m_power = -40 
+@ukn_laser_7_m_power = -57 
+@ukn_laser_8_m_power = -82 
+@ukn_laser_9_m_power = -179 
+@ukn_laser_10_m_power = -277
+@ukn_laser_planck_m_power = -119
+#---
+
+@ukn_laser_1_m_dmg_min = 15 
+@ukn_laser_2_m_dmg_min = 20 
+@ukn_laser_3_m_dmg_min = 25 
+@ukn_laser_4_m_dmg_min = 33 
+@ukn_laser_5_m_dmg_min = 43 
+@ukn_laser_6_m_dmg_min = 58 
+@ukn_laser_7_m_dmg_min = 81 
+@ukn_laser_8_m_dmg_min = 117 
+@ukn_laser_9_m_dmg_min = 255 
+@ukn_laser_10_m_dmg_min = 396 
+@ukn_laser_planck_m_dmg_min = 170 
+
+@ukn_laser_1_m_dmg_max = 40 
+@ukn_laser_2_m_dmg_max = 52 
+@ukn_laser_3_m_dmg_max = 68 
+@ukn_laser_4_m_dmg_max = 88 
+@ukn_laser_5_m_dmg_max = 115 
+@ukn_laser_6_m_dmg_max = 155
+@ukn_laser_7_m_dmg_max = 217 
+@ukn_laser_8_m_dmg_max = 315 
+@ukn_laser_9_m_dmg_max = 685 
+@ukn_laser_10_m_dmg_max = 1062 
+@ukn_laser_planck_m_dmg_max = 457 
+#---
+
+@ukn_laser_1_m_windup_min = 2
+@ukn_laser_2_m_windup_min = 2
+@ukn_laser_3_m_windup_min = 2
+@ukn_laser_4_m_windup_min = 2
+@ukn_laser_5_m_windup_min = 2
+@ukn_laser_6_m_windup_min = 2
+@ukn_laser_7_m_windup_min = 2
+@ukn_laser_8_m_windup_min = 2
+@ukn_laser_9_m_windup_min = 2
+@ukn_laser_10_m_windup_min = 2
+@ukn_laser_planck_m_windup_min = 2
+
+@ukn_laser_1_m_windup_max = 20
+@ukn_laser_2_m_windup_max = 20
+@ukn_laser_3_m_windup_max = 20
+@ukn_laser_4_m_windup_max = 20
+@ukn_laser_5_m_windup_max = 20
+@ukn_laser_6_m_windup_max = 20
+@ukn_laser_7_m_windup_max = 20
+@ukn_laser_8_m_windup_max = 20
+@ukn_laser_9_m_windup_max = 20
+@ukn_laser_10_m_windup_max = 20
+@ukn_laser_planck_m_windup_max = 20
+#---
+
+@ukn_laser_1_m_total_fire_time = 35
+@ukn_laser_2_m_total_fire_time = 35
+@ukn_laser_3_m_total_fire_time = 35
+@ukn_laser_4_m_total_fire_time = 35
+@ukn_laser_5_m_total_fire_time = 35
+@ukn_laser_6_m_total_fire_time = 35
+@ukn_laser_7_m_total_fire_time = 35
+@ukn_laser_8_m_total_fire_time = 35
+@ukn_laser_9_m_total_fire_time = 35
+@ukn_laser_10_m_total_fire_time = 35
+@ukn_laser_planck_m_total_fire_time = 35
+#---
+
+@ukn_laser_1_m_range = 60
+@ukn_laser_2_m_range = 60
+@ukn_laser_3_m_range = 60
+@ukn_laser_4_m_range = 60
+@ukn_laser_5_m_range = 60
+@ukn_laser_6_m_range = 65
+@ukn_laser_7_m_range = 65
+@ukn_laser_8_m_range = 65
+@ukn_laser_9_m_range = 80
+@ukn_laser_10_m_range = 80
+@ukn_laser_planck_m_range = 65
+#---
+
+@ukn_laser_1_m_tracking = 0.30
+@ukn_laser_2_m_tracking = 0.30
+@ukn_laser_3_m_tracking = 0.30
+@ukn_laser_4_m_tracking = 0.30
+@ukn_laser_5_m_tracking = 0.30
+@ukn_laser_6_m_tracking = 0.33
+@ukn_laser_7_m_tracking = 0.33
+@ukn_laser_8_m_tracking = 0.33
+@ukn_laser_9_m_tracking = 0.36
+@ukn_laser_10_m_tracking = 0.36
+@ukn_laser_planck_m_tracking = 0.33
+
+
+# LARGE #---------------------------
+
+@ukn_laser_1_l_power = -20
+@ukn_laser_2_l_power = -27 
+@ukn_laser_3_l_power = -35 
+@ukn_laser_4_l_power = -45 
+@ukn_laser_5_l_power = -58 
+@ukn_laser_6_l_power = -79 
+@ukn_laser_7_l_power = -111 
+@ukn_laser_8_l_power = -160 
+@ukn_laser_9_l_power = -349 
+@ukn_laser_10_l_power = -540 
+@ukn_laser_planck_l_power = -232 
+#---
+
+@ukn_laser_1_l_dmg_min = 36 
+@ukn_laser_2_l_dmg_min = 47 
+@ukn_laser_3_l_dmg_min = 61 
+@ukn_laser_4_l_dmg_min = 79 
+@ukn_laser_5_l_dmg_min = 103 
+@ukn_laser_6_l_dmg_min = 139 
+@ukn_laser_7_l_dmg_min = 194 
+@ukn_laser_8_l_dmg_min = 282 
+@ukn_laser_9_l_dmg_min = 613 
+@ukn_laser_10_l_dmg_min = 950 
+@ukn_laser_planck_l_dmg_min = 409 
+
+@ukn_laser_1_l_dmg_max = 97 
+@ukn_laser_2_l_dmg_max = 126 
+@ukn_laser_3_l_dmg_max = 163 
+@ukn_laser_4_l_dmg_max = 212 
+@ukn_laser_5_l_dmg_max = 276 
+@ukn_laser_6_l_dmg_max = 372 
+@ukn_laser_7_l_dmg_max = 521 
+@ukn_laser_8_l_dmg_max = 756 
+@ukn_laser_9_l_dmg_max = 1645 
+@ukn_laser_10_l_dmg_max = 2549 
+@ukn_laser_planck_l_dmg_max = 1096 
+#---
+
+@ukn_laser_1_l_windup_min = 2
+@ukn_laser_2_l_windup_min = 2
+@ukn_laser_3_l_windup_min = 2
+@ukn_laser_4_l_windup_min = 2
+@ukn_laser_5_l_windup_min = 2
+@ukn_laser_6_l_windup_min = 2
+@ukn_laser_7_l_windup_min = 2
+@ukn_laser_8_l_windup_min = 2
+@ukn_laser_9_l_windup_min = 2
+@ukn_laser_10_l_windup_min = 2
+@ukn_laser_planck_l_windup_min = 2
+
+@ukn_laser_1_l_windup_max = 20
+@ukn_laser_2_l_windup_max = 20
+@ukn_laser_3_l_windup_max = 20
+@ukn_laser_4_l_windup_max = 20
+@ukn_laser_5_l_windup_max = 20
+@ukn_laser_6_l_windup_max = 20
+@ukn_laser_7_l_windup_max = 20
+@ukn_laser_8_l_windup_max = 20
+@ukn_laser_9_l_windup_max = 20
+@ukn_laser_10_l_windup_max = 20
+@ukn_laser_planck_l_windup_max = 20
+#---
+
+@ukn_laser_1_l_total_fire_time = 35
+@ukn_laser_2_l_total_fire_time = 35
+@ukn_laser_3_l_total_fire_time = 35
+@ukn_laser_4_l_total_fire_time = 35
+@ukn_laser_5_l_total_fire_time = 35
+@ukn_laser_6_l_total_fire_time = 35
+@ukn_laser_7_l_total_fire_time = 35
+@ukn_laser_8_l_total_fire_time = 35
+@ukn_laser_9_l_total_fire_time = 35
+@ukn_laser_10_l_total_fire_time = 35
+@ukn_laser_planck_l_total_fire_time = 35
+#---
+
+@ukn_laser_1_l_range = 80
+@ukn_laser_2_l_range = 80
+@ukn_laser_3_l_range = 80
+@ukn_laser_4_l_range = 80
+@ukn_laser_5_l_range = 80
+@ukn_laser_6_l_range = 90
+@ukn_laser_7_l_range = 90
+@ukn_laser_8_l_range = 90
+@ukn_laser_9_l_range = 105
+@ukn_laser_10_l_range = 105
+@ukn_laser_planck_l_range = 90
+#---
+
+@ukn_laser_1_l_tracking = 0.05
+@ukn_laser_2_l_tracking = 0.05
+@ukn_laser_3_l_tracking = 0.05
+@ukn_laser_4_l_tracking = 0.05
+@ukn_laser_5_l_tracking = 0.05
+@ukn_laser_6_l_tracking = 0.06
+@ukn_laser_7_l_tracking = 0.06
+@ukn_laser_8_l_tracking = 0.06
+@ukn_laser_9_l_tracking = 0.06
+@ukn_laser_10_l_tracking = 0.06
+@ukn_laser_planck_l_tracking = 0.05
+
+
+#############################
+##### ENERGY TORPEDOES ######
+#############################
+
+@ukn_energy_torpedo_1_hull_damage_mult = 1.75
+@ukn_energy_torpedo_2_hull_damage_mult = 1.75
+@ukn_energy_torpedo_3_hull_damage_mult = 1.75
+@ukn_energy_torpedo_4_hull_damage_mult = 1.75
+@ukn_energy_torpedo_5_hull_damage_mult = 1.75
+@ukn_energy_torpedo_6_hull_damage_mult = 1.90
+@ukn_energy_torpedo_7_hull_damage_mult = 1.90
+@ukn_energy_torpedo_8_hull_damage_mult = 1.90
+@ukn_energy_torpedo_9_hull_damage_mult = 2.20
+@ukn_energy_torpedo_10_hull_damage_mult = 2.20
+@ukn_energy_torpedo_planck_hull_damage_mult = 1.90
+
+@ukn_energy_torpedo_1_armor_penetration_mult = 0.00
+@ukn_energy_torpedo_2_armor_penetration_mult = 0.00
+@ukn_energy_torpedo_3_armor_penetration_mult = 0.00
+@ukn_energy_torpedo_4_armor_penetration_mult = 0.00
+@ukn_energy_torpedo_5_armor_penetration_mult = 0.00
+@ukn_energy_torpedo_6_armor_penetration_mult = 0.00
+@ukn_energy_torpedo_7_armor_penetration_mult = 0.00
+@ukn_energy_torpedo_8_armor_penetration_mult = 0.00
+@ukn_energy_torpedo_9_armor_penetration_mult = 0.00
+@ukn_energy_torpedo_10_armor_penetration_mult = 0.00
+@ukn_energy_torpedo_planck_armor_penetration_mult = 0.00
+
+@ukn_energy_torpedo_1_shield_penetration_mult = 0.00
+@ukn_energy_torpedo_2_shield_penetration_mult = 0.00
+@ukn_energy_torpedo_3_shield_penetration_mult = 0.00
+@ukn_energy_torpedo_4_shield_penetration_mult = 0.00
+@ukn_energy_torpedo_5_shield_penetration_mult = 0.00
+@ukn_energy_torpedo_6_shield_penetration_mult = 0.00
+@ukn_energy_torpedo_7_shield_penetration_mult = 0.00
+@ukn_energy_torpedo_8_shield_penetration_mult = 0.00
+@ukn_energy_torpedo_9_shield_penetration_mult = 0.00
+@ukn_energy_torpedo_10_shield_penetration_mult = 0.00
+@ukn_energy_torpedo_planck_shield_penetration_mult = 0.00
+
+@ukn_energy_torpedo_1_armor_damage_mult = 1.50
+@ukn_energy_torpedo_2_armor_damage_mult = 1.50
+@ukn_energy_torpedo_3_armor_damage_mult = 1.50
+@ukn_energy_torpedo_4_armor_damage_mult = 1.50
+@ukn_energy_torpedo_5_armor_damage_mult = 1.50
+@ukn_energy_torpedo_6_armor_damage_mult = 1.65
+@ukn_energy_torpedo_7_armor_damage_mult = 1.65
+@ukn_energy_torpedo_8_armor_damage_mult = 1.65
+@ukn_energy_torpedo_9_armor_damage_mult = 1.90
+@ukn_energy_torpedo_10_armor_damage_mult = 1.90
+@ukn_energy_torpedo_planck_armor_damage_mult = 1.65
+
+@ukn_energy_torpedo_1_shield_damage_mult = 0.50
+@ukn_energy_torpedo_2_shield_damage_mult = 0.50
+@ukn_energy_torpedo_3_shield_damage_mult = 0.50
+@ukn_energy_torpedo_4_shield_damage_mult = 0.50
+@ukn_energy_torpedo_5_shield_damage_mult = 0.50
+@ukn_energy_torpedo_6_shield_damage_mult = 0.55
+@ukn_energy_torpedo_7_shield_damage_mult = 0.55
+@ukn_energy_torpedo_8_shield_damage_mult = 0.55
+@ukn_energy_torpedo_9_shield_damage_mult = 0.65
+@ukn_energy_torpedo_10_shield_damage_mult = 0.65
+@ukn_energy_torpedo_planck_shield_damage_mult = 0.55
+#---
+
+@ukn_energy_torpedo_1_accuracy = 0.90
+@ukn_energy_torpedo_2_accuracy = 0.90
+@ukn_energy_torpedo_3_accuracy = 0.90
+@ukn_energy_torpedo_4_accuracy = 0.90
+@ukn_energy_torpedo_5_accuracy = 0.90
+@ukn_energy_torpedo_6_accuracy = 0.90
+@ukn_energy_torpedo_7_accuracy = 0.90
+@ukn_energy_torpedo_8_accuracy = 0.90
+@ukn_energy_torpedo_9_accuracy = 0.90
+@ukn_energy_torpedo_10_accuracy = 0.90
+@ukn_energy_torpedo_planck_accuracy = 0.90
+
+
+# LARGE (ONLY SLOT) #---------------------------
+
+@ukn_energy_torpedo_1_power = -32 
+@ukn_energy_torpedo_2_power = -41 
+@ukn_energy_torpedo_3_power = -53 
+@ukn_energy_torpedo_4_power = -69 
+@ukn_energy_torpedo_5_power = -90 
+@ukn_energy_torpedo_6_power = -121 
+@ukn_energy_torpedo_7_power = -170 
+@ukn_energy_torpedo_8_power = -247 
+@ukn_energy_torpedo_9_power = -536 
+@ukn_energy_torpedo_10_power = -831 
+@ukn_energy_torpedo_planck_power = -358 
+#---
+
+@ukn_energy_torpedo_1_dmg_min = 164 
+@ukn_energy_torpedo_2_dmg_min = 213 
+@ukn_energy_torpedo_3_dmg_min = 277 
+@ukn_energy_torpedo_4_dmg_min = 360 
+@ukn_energy_torpedo_5_dmg_min = 468 
+@ukn_energy_torpedo_6_dmg_min = 632 
+@ukn_energy_torpedo_7_dmg_min = 885 
+@ukn_energy_torpedo_8_dmg_min = 1284 
+@ukn_energy_torpedo_9_dmg_min = 2792 
+@ukn_energy_torpedo_10_dmg_min = 4328 
+@ukn_energy_torpedo_planck_dmg_min = 1861 
+
+@ukn_energy_torpedo_1_dmg_max = 364 
+@ukn_energy_torpedo_2_dmg_max = 473 
+@ukn_energy_torpedo_3_dmg_max = 615 
+@ukn_energy_torpedo_4_dmg_max = 800 
+@ukn_energy_torpedo_5_dmg_max = 1040 
+@ukn_energy_torpedo_6_dmg_max = 1403 
+@ukn_energy_torpedo_7_dmg_max = 1965 
+@ukn_energy_torpedo_8_dmg_max = 2849 
+@ukn_energy_torpedo_9_dmg_max = 6197 
+@ukn_energy_torpedo_10_dmg_max = 9605 
+@ukn_energy_torpedo_planck_dmg_max = 4131 
+#---
+
+@ukn_energy_torpedo_1_windup_min = 1
+@ukn_energy_torpedo_2_windup_min = 1
+@ukn_energy_torpedo_3_windup_min = 1
+@ukn_energy_torpedo_4_windup_min = 1
+@ukn_energy_torpedo_5_windup_min = 1
+@ukn_energy_torpedo_6_windup_min = 1
+@ukn_energy_torpedo_7_windup_min = 1
+@ukn_energy_torpedo_8_windup_min = 1
+@ukn_energy_torpedo_9_windup_min = 1
+@ukn_energy_torpedo_10_windup_min = 1
+@ukn_energy_torpedo_planck_windup_min = 1
+
+@ukn_energy_torpedo_1_windup_max = 19
+@ukn_energy_torpedo_2_windup_max = 19
+@ukn_energy_torpedo_3_windup_max = 19
+@ukn_energy_torpedo_4_windup_max = 19
+@ukn_energy_torpedo_5_windup_max = 19
+@ukn_energy_torpedo_6_windup_max = 19
+@ukn_energy_torpedo_7_windup_max = 19
+@ukn_energy_torpedo_8_windup_max = 19
+@ukn_energy_torpedo_9_windup_max = 19
+@ukn_energy_torpedo_10_windup_max = 19
+@ukn_energy_torpedo_planck_windup_max = 19
+#---
+
+@ukn_energy_torpedo_1_total_fire_time = 150
+@ukn_energy_torpedo_2_total_fire_time = 150
+@ukn_energy_torpedo_3_total_fire_time = 150
+@ukn_energy_torpedo_4_total_fire_time = 150
+@ukn_energy_torpedo_5_total_fire_time = 150
+@ukn_energy_torpedo_6_total_fire_time = 150
+@ukn_energy_torpedo_7_total_fire_time = 150
+@ukn_energy_torpedo_8_total_fire_time = 150
+@ukn_energy_torpedo_9_total_fire_time = 150
+@ukn_energy_torpedo_10_total_fire_time = 150
+@ukn_energy_torpedo_planck_total_fire_time = 150
+#---
+
+@ukn_energy_torpedo_1_range = 130
+@ukn_energy_torpedo_2_range = 130
+@ukn_energy_torpedo_3_range = 130
+@ukn_energy_torpedo_4_range = 130
+@ukn_energy_torpedo_5_range = 130
+@ukn_energy_torpedo_6_range = 145
+@ukn_energy_torpedo_7_range = 145
+@ukn_energy_torpedo_8_range = 145
+@ukn_energy_torpedo_9_range = 170
+@ukn_energy_torpedo_10_range = 170
+@ukn_energy_torpedo_planck_range = 145
+#---
+
+@ukn_energy_torpedo_1_tracking = 0.00
+@ukn_energy_torpedo_2_tracking = 0.00
+@ukn_energy_torpedo_3_tracking = 0.00
+@ukn_energy_torpedo_4_tracking = 0.00
+@ukn_energy_torpedo_5_tracking = 0.00
+@ukn_energy_torpedo_6_tracking = 0.00
+@ukn_energy_torpedo_7_tracking = 0.00
+@ukn_energy_torpedo_8_tracking = 0.00
+@ukn_energy_torpedo_9_tracking = 0.00
+@ukn_energy_torpedo_10_tracking = 0.00
+@ukn_energy_torpedo_planck_tracking = 0.00
+
+
+
+###################
+##### PLASMA ######
+###################
+
+@ukn_plasma_1_hull_damage_mult = 1.50
+@ukn_plasma_2_hull_damage_mult = 1.50
+@ukn_plasma_3_hull_damage_mult = 1.50
+@ukn_plasma_4_hull_damage_mult = 1.50
+@ukn_plasma_5_hull_damage_mult = 1.50
+@ukn_plasma_6_hull_damage_mult = 1.65
+@ukn_plasma_7_hull_damage_mult = 1.65
+@ukn_plasma_8_hull_damage_mult = 1.65
+@ukn_plasma_9_hull_damage_mult = 1.90
+@ukn_plasma_10_hull_damage_mult = 1.90
+@ukn_plasma_planck_hull_damage_mult = 1.65
+
+@ukn_plasma_1_armor_penetration_mult = 0.00
+@ukn_plasma_2_armor_penetration_mult = 0.00
+@ukn_plasma_3_armor_penetration_mult = 0.00
+@ukn_plasma_4_armor_penetration_mult = 0.00
+@ukn_plasma_5_armor_penetration_mult = 0.00
+@ukn_plasma_6_armor_penetration_mult = 0.00
+@ukn_plasma_7_armor_penetration_mult = 0.00
+@ukn_plasma_8_armor_penetration_mult = 0.00
+@ukn_plasma_9_armor_penetration_mult = 0.00
+@ukn_plasma_10_armor_penetration_mult = 0.00
+@ukn_plasma_planck_armor_penetration_mult = 0.00
+
+@ukn_plasma_1_shield_penetration_mult = 0.00
+@ukn_plasma_2_shield_penetration_mult = 0.00
+@ukn_plasma_3_shield_penetration_mult = 0.00
+@ukn_plasma_4_shield_penetration_mult = 0.00
+@ukn_plasma_5_shield_penetration_mult = 0.00
+@ukn_plasma_6_shield_penetration_mult = 0.00
+@ukn_plasma_7_shield_penetration_mult = 0.00
+@ukn_plasma_8_shield_penetration_mult = 0.00
+@ukn_plasma_9_shield_penetration_mult = 0.00
+@ukn_plasma_10_shield_penetration_mult = 0.00
+@ukn_plasma_planck_shield_penetration_mult = 0.00
+
+@ukn_plasma_1_armor_damage_mult = 2.00
+@ukn_plasma_2_armor_damage_mult = 2.00
+@ukn_plasma_3_armor_damage_mult = 2.00
+@ukn_plasma_4_armor_damage_mult = 2.00
+@ukn_plasma_5_armor_damage_mult = 2.00
+@ukn_plasma_6_armor_damage_mult = 2.20
+@ukn_plasma_7_armor_damage_mult = 2.20
+@ukn_plasma_8_armor_damage_mult = 2.20
+@ukn_plasma_9_armor_damage_mult = 2.50
+@ukn_plasma_10_armor_damage_mult = 2.50
+@ukn_plasma_planck_armor_damage_mult = 2.20
+
+@ukn_plasma_1_shield_damage_mult = 0.25
+@ukn_plasma_2_shield_damage_mult = 0.25
+@ukn_plasma_3_shield_damage_mult = 0.25
+@ukn_plasma_4_shield_damage_mult = 0.25
+@ukn_plasma_5_shield_damage_mult = 0.25
+@ukn_plasma_6_shield_damage_mult = 0.30
+@ukn_plasma_7_shield_damage_mult = 0.30
+@ukn_plasma_8_shield_damage_mult = 0.30
+@ukn_plasma_9_shield_damage_mult = 0.35
+@ukn_plasma_10_shield_damage_mult = 0.35
+@ukn_plasma_planck_shield_damage_mult = 0.30
+#---
+
+@ukn_plasma_1_accuracy = 0.80
+@ukn_plasma_2_accuracy = 0.80
+@ukn_plasma_3_accuracy = 0.80
+@ukn_plasma_4_accuracy = 0.80
+@ukn_plasma_5_accuracy = 0.80
+@ukn_plasma_6_accuracy = 0.80
+@ukn_plasma_7_accuracy = 0.80
+@ukn_plasma_8_accuracy = 0.80
+@ukn_plasma_9_accuracy = 0.80
+@ukn_plasma_10_accuracy = 0.80
+@ukn_plasma_planck_accuracy = 0.80
+
+
+# SMALL #---------------------------
+
+@ukn_plasma_1_s_power = -6 
+@ukn_plasma_2_s_power = -8 
+@ukn_plasma_3_s_power = -10 
+@ukn_plasma_4_s_power = -13 
+@ukn_plasma_5_s_power = -17 
+@ukn_plasma_6_s_power = -23 
+@ukn_plasma_7_s_power = -32 
+@ukn_plasma_8_s_power = -47 
+@ukn_plasma_9_s_power = -102 
+@ukn_plasma_10_s_power = -158 
+@ukn_plasma_planck_s_power = -68 
+#---
+
+@ukn_plasma_1_s_dmg_min = 7 
+@ukn_plasma_2_s_dmg_min = 9 
+@ukn_plasma_3_s_dmg_min = 12 
+@ukn_plasma_4_s_dmg_min = 15 
+@ukn_plasma_5_s_dmg_min = 20 
+@ukn_plasma_6_s_dmg_min = 27 
+@ukn_plasma_7_s_dmg_min = 38 
+@ukn_plasma_8_s_dmg_min = 55 
+@ukn_plasma_9_s_dmg_min = 119 
+@ukn_plasma_10_s_dmg_min = 185 
+@ukn_plasma_planck_s_dmg_min = 79 
+
+@ukn_plasma_1_s_dmg_max = 15 
+@ukn_plasma_2_s_dmg_max = 19 
+@ukn_plasma_3_s_dmg_max = 25 
+@ukn_plasma_4_s_dmg_max = 32 
+@ukn_plasma_5_s_dmg_max = 42 
+@ukn_plasma_6_s_dmg_max = 57 
+@ukn_plasma_7_s_dmg_max = 79 
+@ukn_plasma_8_s_dmg_max = 115 
+@ukn_plasma_9_s_dmg_max = 250 
+@ukn_plasma_10_s_dmg_max = 388 
+@ukn_plasma_planck_s_dmg_max = 167 
+#---
+
+@ukn_plasma_1_s_windup_min = 2
+@ukn_plasma_2_s_windup_min = 2
+@ukn_plasma_3_s_windup_min = 2
+@ukn_plasma_4_s_windup_min = 2
+@ukn_plasma_5_s_windup_min = 2
+@ukn_plasma_6_s_windup_min = 2
+@ukn_plasma_7_s_windup_min = 2
+@ukn_plasma_8_s_windup_min = 2
+@ukn_plasma_9_s_windup_min = 2
+@ukn_plasma_10_s_windup_min = 2
+@ukn_plasma_planck_s_windup_min = 2
+
+@ukn_plasma_1_s_windup_max = 20
+@ukn_plasma_2_s_windup_max = 20
+@ukn_plasma_3_s_windup_max = 20
+@ukn_plasma_4_s_windup_max = 20
+@ukn_plasma_5_s_windup_max = 20
+@ukn_plasma_6_s_windup_max = 20
+@ukn_plasma_7_s_windup_max = 20
+@ukn_plasma_8_s_windup_max = 20
+@ukn_plasma_9_s_windup_max = 20
+@ukn_plasma_10_s_windup_max = 20
+@ukn_plasma_planck_s_windup_max = 20
+#---
+
+@ukn_plasma_1_s_total_fire_time = 40
+@ukn_plasma_2_s_total_fire_time = 40
+@ukn_plasma_3_s_total_fire_time = 40
+@ukn_plasma_4_s_total_fire_time = 40
+@ukn_plasma_5_s_total_fire_time = 40
+@ukn_plasma_6_s_total_fire_time = 40
+@ukn_plasma_7_s_total_fire_time = 40
+@ukn_plasma_8_s_total_fire_time = 40
+@ukn_plasma_9_s_total_fire_time = 40
+@ukn_plasma_10_s_total_fire_time = 40
+@ukn_plasma_planck_s_total_fire_time = 40
+#---
+
+@ukn_plasma_1_s_range = 40
+@ukn_plasma_2_s_range = 40
+@ukn_plasma_3_s_range = 40
+@ukn_plasma_4_s_range = 40
+@ukn_plasma_5_s_range = 40
+@ukn_plasma_6_s_range = 45
+@ukn_plasma_7_s_range = 45
+@ukn_plasma_8_s_range = 45
+@ukn_plasma_9_s_range = 50
+@ukn_plasma_10_s_range = 50
+@ukn_plasma_planck_s_range = 45
+#---
+
+@ukn_plasma_1_s_tracking = 0.40
+@ukn_plasma_2_s_tracking = 0.40
+@ukn_plasma_3_s_tracking = 0.40
+@ukn_plasma_4_s_tracking = 0.40
+@ukn_plasma_5_s_tracking = 0.40
+@ukn_plasma_6_s_tracking = 0.44
+@ukn_plasma_7_s_tracking = 0.44
+@ukn_plasma_8_s_tracking = 0.44
+@ukn_plasma_9_s_tracking = 0.48
+@ukn_plasma_10_s_tracking = 0.48
+@ukn_plasma_planck_s_tracking = 0.44
+
+
+# MEDIUM #---------------------------
+
+@ukn_plasma_1_m_power = -11 
+@ukn_plasma_2_m_power = -14 
+@ukn_plasma_3_m_power = -18 
+@ukn_plasma_4_m_power = -23 
+@ukn_plasma_5_m_power = -30 
+@ukn_plasma_6_m_power = -40 
+@ukn_plasma_7_m_power = -57 
+@ukn_plasma_8_m_power = -82 
+@ukn_plasma_9_m_power = -179 
+@ukn_plasma_10_m_power = -277 
+@ukn_plasma_planck_m_power = -119 
+#---
+
+@ukn_plasma_1_m_dmg_min = 18 
+@ukn_plasma_2_m_dmg_min = 23 
+@ukn_plasma_3_m_dmg_min = 30 
+@ukn_plasma_4_m_dmg_min = 38 
+@ukn_plasma_5_m_dmg_min = 50 
+@ukn_plasma_6_m_dmg_min = 67 
+@ukn_plasma_7_m_dmg_min = 94 
+@ukn_plasma_8_m_dmg_min = 137 
+@ukn_plasma_9_m_dmg_min = 298 
+@ukn_plasma_10_m_dmg_min = 462 
+@ukn_plasma_planck_m_dmg_min = 199 
+
+@ukn_plasma_1_m_dmg_max = 37 
+@ukn_plasma_2_m_dmg_max = 48 
+@ukn_plasma_3_m_dmg_max = 62 
+@ukn_plasma_4_m_dmg_max = 81 
+@ukn_plasma_5_m_dmg_max = 105 
+@ukn_plasma_6_m_dmg_max = 142 
+@ukn_plasma_7_m_dmg_max = 198 
+@ukn_plasma_8_m_dmg_max = 288 
+@ukn_plasma_9_m_dmg_max = 626 
+@ukn_plasma_10_m_dmg_max = 970 
+@ukn_plasma_planck_m_dmg_max = 417 
+#---
+
+@ukn_plasma_1_m_windup_min = 2
+@ukn_plasma_2_m_windup_min = 2
+@ukn_plasma_3_m_windup_min = 2
+@ukn_plasma_4_m_windup_min = 2
+@ukn_plasma_5_m_windup_min = 2
+@ukn_plasma_6_m_windup_min = 2
+@ukn_plasma_7_m_windup_min = 2
+@ukn_plasma_8_m_windup_min = 2
+@ukn_plasma_9_m_windup_min = 2
+@ukn_plasma_10_m_windup_min = 2
+@ukn_plasma_planck_m_windup_min = 2
+
+@ukn_plasma_1_m_windup_max = 20
+@ukn_plasma_2_m_windup_max = 20
+@ukn_plasma_3_m_windup_max = 20
+@ukn_plasma_4_m_windup_max = 20
+@ukn_plasma_5_m_windup_max = 20
+@ukn_plasma_6_m_windup_max = 20
+@ukn_plasma_7_m_windup_max = 20
+@ukn_plasma_8_m_windup_max = 20
+@ukn_plasma_9_m_windup_max = 20
+@ukn_plasma_10_m_windup_max = 20
+@ukn_plasma_planck_m_windup_max = 20
+#---
+
+@ukn_plasma_1_m_total_fire_time = 40
+@ukn_plasma_2_m_total_fire_time = 40
+@ukn_plasma_3_m_total_fire_time = 40
+@ukn_plasma_4_m_total_fire_time = 40
+@ukn_plasma_5_m_total_fire_time = 40
+@ukn_plasma_6_m_total_fire_time = 40
+@ukn_plasma_7_m_total_fire_time = 40
+@ukn_plasma_8_m_total_fire_time = 40
+@ukn_plasma_9_m_total_fire_time = 40
+@ukn_plasma_10_m_total_fire_time = 40
+@ukn_plasma_planck_m_total_fire_time = 40
+#---
+
+@ukn_plasma_1_m_range = 60
+@ukn_plasma_2_m_range = 60
+@ukn_plasma_3_m_range = 60
+@ukn_plasma_4_m_range = 60
+@ukn_plasma_5_m_range = 60
+@ukn_plasma_6_m_range = 65
+@ukn_plasma_7_m_range = 65
+@ukn_plasma_8_m_range = 65
+@ukn_plasma_9_m_range = 75
+@ukn_plasma_10_m_range = 75
+@ukn_plasma_planck_m_range = 65
+#---
+
+@ukn_plasma_1_m_tracking = 0.20
+@ukn_plasma_2_m_tracking = 0.20
+@ukn_plasma_3_m_tracking = 0.20
+@ukn_plasma_4_m_tracking = 0.20
+@ukn_plasma_5_m_tracking = 0.20
+@ukn_plasma_6_m_tracking = 0.22
+@ukn_plasma_7_m_tracking = 0.22
+@ukn_plasma_8_m_tracking = 0.22
+@ukn_plasma_9_m_tracking = 0.24
+@ukn_plasma_10_m_tracking = 0.24
+@ukn_plasma_planck_m_tracking = 0.22
+
+
+# LARGE #---------------------------
+
+@ukn_plasma_1_l_power = -20 
+@ukn_plasma_2_l_power = -27 
+@ukn_plasma_3_l_power = -35 
+@ukn_plasma_4_l_power = -45 
+@ukn_plasma_5_l_power = -58 
+@ukn_plasma_6_l_power = -79 
+@ukn_plasma_7_l_power = -111 
+@ukn_plasma_8_l_power = -160 
+@ukn_plasma_9_l_power = -349 
+@ukn_plasma_10_l_power = -540 
+@ukn_plasma_planck_l_power = -232 
+#---
+
+@ukn_plasma_1_l_dmg_min = 42 
+@ukn_plasma_2_l_dmg_min = 55 
+@ukn_plasma_3_l_dmg_min = 71 
+@ukn_plasma_4_l_dmg_min = 92 
+@ukn_plasma_5_l_dmg_min = 120 
+@ukn_plasma_6_l_dmg_min = 162 
+@ukn_plasma_7_l_dmg_min = 227 
+@ukn_plasma_8_l_dmg_min = 329 
+@ukn_plasma_9_l_dmg_min = 715 
+@ukn_plasma_10_l_dmg_min = 1108 
+@ukn_plasma_planck_l_dmg_min = 477 
+
+@ukn_plasma_1_l_dmg_max = 88 
+@ukn_plasma_2_l_dmg_max = 115 
+@ukn_plasma_3_l_dmg_max = 149 
+@ukn_plasma_4_l_dmg_max = 194 
+@ukn_plasma_5_l_dmg_max = 252 
+@ukn_plasma_6_l_dmg_max = 340 
+@ukn_plasma_7_l_dmg_max = 476 
+@ukn_plasma_8_l_dmg_max = 690 
+@ukn_plasma_9_l_dmg_max = 1502 
+@ukn_plasma_10_l_dmg_max = 2327 
+@ukn_plasma_planck_l_dmg_max = 1001 
+#---
+
+@ukn_plasma_1_l_windup_min = 2
+@ukn_plasma_2_l_windup_min = 2
+@ukn_plasma_3_l_windup_min = 2
+@ukn_plasma_4_l_windup_min = 2
+@ukn_plasma_5_l_windup_min = 2
+@ukn_plasma_6_l_windup_min = 2
+@ukn_plasma_7_l_windup_min = 2
+@ukn_plasma_8_l_windup_min = 2
+@ukn_plasma_9_l_windup_min = 2
+@ukn_plasma_10_l_windup_min = 2
+@ukn_plasma_planck_l_windup_min = 2
+
+@ukn_plasma_1_l_windup_max = 20
+@ukn_plasma_2_l_windup_max = 20
+@ukn_plasma_3_l_windup_max = 20
+@ukn_plasma_4_l_windup_max = 20
+@ukn_plasma_5_l_windup_max = 20
+@ukn_plasma_6_l_windup_max = 20
+@ukn_plasma_7_l_windup_max = 20
+@ukn_plasma_8_l_windup_max = 20
+@ukn_plasma_9_l_windup_max = 20
+@ukn_plasma_10_l_windup_max = 20
+@ukn_plasma_planck_l_windup_max = 20
+#---
+
+@ukn_plasma_1_l_total_fire_time = 40
+@ukn_plasma_2_l_total_fire_time = 40
+@ukn_plasma_3_l_total_fire_time = 40
+@ukn_plasma_4_l_total_fire_time = 40
+@ukn_plasma_5_l_total_fire_time = 40
+@ukn_plasma_6_l_total_fire_time = 40
+@ukn_plasma_7_l_total_fire_time = 40
+@ukn_plasma_8_l_total_fire_time = 40
+@ukn_plasma_9_l_total_fire_time = 40
+@ukn_plasma_10_l_total_fire_time = 40
+@ukn_plasma_planck_l_total_fire_time = 40
+#---
+
+@ukn_plasma_1_l_range = 80
+@ukn_plasma_2_l_range = 80
+@ukn_plasma_3_l_range = 80
+@ukn_plasma_4_l_range = 80
+@ukn_plasma_5_l_range = 80
+@ukn_plasma_6_l_range = 90
+@ukn_plasma_7_l_range = 90
+@ukn_plasma_8_l_range = 90
+@ukn_plasma_9_l_range = 100
+@ukn_plasma_10_l_range = 100
+@ukn_plasma_planck_l_range = 90
+#---
+
+@ukn_plasma_1_l_tracking = 0.05
+@ukn_plasma_2_l_tracking = 0.05
+@ukn_plasma_3_l_tracking = 0.05
+@ukn_plasma_4_l_tracking = 0.05
+@ukn_plasma_5_l_tracking = 0.05
+@ukn_plasma_6_l_tracking = 0.06
+@ukn_plasma_7_l_tracking = 0.06
+@ukn_plasma_8_l_tracking = 0.06
+@ukn_plasma_9_l_tracking = 0.06
+@ukn_plasma_10_l_tracking = 0.06
+@ukn_plasma_planck_l_tracking = 0.05
+
+
+
+##################################
+##### POTENTIAL DISLOCATORS ######
+##################################
+
+@ukn_potential_dislocator_1_hull_damage_mult = 1.75
+@ukn_potential_dislocator_2_hull_damage_mult = 1.75
+@ukn_potential_dislocator_3_hull_damage_mult = 1.75
+@ukn_potential_dislocator_4_hull_damage_mult = 1.75
+@ukn_potential_dislocator_5_hull_damage_mult = 1.75
+@ukn_potential_dislocator_6_hull_damage_mult = 1.90
+@ukn_potential_dislocator_7_hull_damage_mult = 1.90
+@ukn_potential_dislocator_8_hull_damage_mult = 1.90
+@ukn_potential_dislocator_9_hull_damage_mult = 2.20
+@ukn_potential_dislocator_10_hull_damage_mult = 2.20
+@ukn_potential_dislocator_planck_hull_damage_mult = 1.90
+
+@ukn_potential_dislocator_1_armor_penetration_mult = 0.00
+@ukn_potential_dislocator_2_armor_penetration_mult = 0.00
+@ukn_potential_dislocator_3_armor_penetration_mult = 0.00
+@ukn_potential_dislocator_4_armor_penetration_mult = 0.00
+@ukn_potential_dislocator_5_armor_penetration_mult = 0.00
+@ukn_potential_dislocator_6_armor_penetration_mult = 0.00
+@ukn_potential_dislocator_7_armor_penetration_mult = 0.00
+@ukn_potential_dislocator_8_armor_penetration_mult = 0.00
+@ukn_potential_dislocator_9_armor_penetration_mult = 0.00
+@ukn_potential_dislocator_10_armor_penetration_mult = 0.00
+@ukn_potential_dislocator_planck_armor_penetration_mult = 0.00
+
+@ukn_potential_dislocator_1_shield_penetration_mult = 0.00
+@ukn_potential_dislocator_2_shield_penetration_mult = 0.00
+@ukn_potential_dislocator_3_shield_penetration_mult = 0.00
+@ukn_potential_dislocator_4_shield_penetration_mult = 0.00
+@ukn_potential_dislocator_5_shield_penetration_mult = 0.00
+@ukn_potential_dislocator_6_shield_penetration_mult = 0.00
+@ukn_potential_dislocator_7_shield_penetration_mult = 0.00
+@ukn_potential_dislocator_8_shield_penetration_mult = 0.00
+@ukn_potential_dislocator_9_shield_penetration_mult = 0.00
+@ukn_potential_dislocator_10_shield_penetration_mult = 0.00
+@ukn_potential_dislocator_planck_shield_penetration_mult = 0.00
+
+@ukn_potential_dislocator_1_armor_damage_mult = 0.25
+@ukn_potential_dislocator_2_armor_damage_mult = 0.25
+@ukn_potential_dislocator_3_armor_damage_mult = 0.25
+@ukn_potential_dislocator_4_armor_damage_mult = 0.25
+@ukn_potential_dislocator_5_armor_damage_mult = 0.25
+@ukn_potential_dislocator_6_armor_damage_mult = 0.30
+@ukn_potential_dislocator_7_armor_damage_mult = 0.30
+@ukn_potential_dislocator_8_armor_damage_mult = 0.30
+@ukn_potential_dislocator_9_armor_damage_mult = 0.35
+@ukn_potential_dislocator_10_armor_damage_mult = 0.35
+@ukn_potential_dislocator_planck_armor_damage_mult = 0.30
+
+@ukn_potential_dislocator_1_shield_damage_mult = 1.25
+@ukn_potential_dislocator_2_shield_damage_mult = 1.25
+@ukn_potential_dislocator_3_shield_damage_mult = 1.25
+@ukn_potential_dislocator_4_shield_damage_mult = 1.25
+@ukn_potential_dislocator_5_shield_damage_mult = 1.25
+@ukn_potential_dislocator_6_shield_damage_mult = 1.35
+@ukn_potential_dislocator_7_shield_damage_mult = 1.35
+@ukn_potential_dislocator_8_shield_damage_mult = 1.35
+@ukn_potential_dislocator_9_shield_damage_mult = 1.55
+@ukn_potential_dislocator_10_shield_damage_mult = 1.55
+@ukn_potential_dislocator_planck_shield_damage_mult = 1.35
+#---
+
+@ukn_potential_dislocator_1_accuracy = 0.90
+@ukn_potential_dislocator_2_accuracy = 0.90
+@ukn_potential_dislocator_3_accuracy = 0.90
+@ukn_potential_dislocator_4_accuracy = 0.90
+@ukn_potential_dislocator_5_accuracy = 0.90
+@ukn_potential_dislocator_6_accuracy = 0.90
+@ukn_potential_dislocator_7_accuracy = 0.90
+@ukn_potential_dislocator_8_accuracy = 0.90
+@ukn_potential_dislocator_9_accuracy = 0.90
+@ukn_potential_dislocator_10_accuracy = 0.90
+@ukn_potential_dislocator_planck_accuracy = 0.90
+
+
+# SMALL #---------------------------
+
+@ukn_potential_dislocator_1_s_power = -6 
+@ukn_potential_dislocator_2_s_power = -8 
+@ukn_potential_dislocator_3_s_power = -10 
+@ukn_potential_dislocator_4_s_power = -13 
+@ukn_potential_dislocator_5_s_power = -17 
+@ukn_potential_dislocator_6_s_power = -23 
+@ukn_potential_dislocator_7_s_power = -32 
+@ukn_potential_dislocator_8_s_power = -47 
+@ukn_potential_dislocator_9_s_power = -102 
+@ukn_potential_dislocator_10_s_power = -158 
+@ukn_potential_dislocator_planck_s_power = -68 
+#---
+
+@ukn_potential_dislocator_1_s_dmg_min = 4 
+@ukn_potential_dislocator_2_s_dmg_min = 5 
+@ukn_potential_dislocator_3_s_dmg_min = 7 
+@ukn_potential_dislocator_4_s_dmg_min = 9 
+@ukn_potential_dislocator_5_s_dmg_min = 12 
+@ukn_potential_dislocator_6_s_dmg_min = 16 
+@ukn_potential_dislocator_7_s_dmg_min = 23 
+@ukn_potential_dislocator_8_s_dmg_min = 33 
+@ukn_potential_dislocator_9_s_dmg_min = 72 
+@ukn_potential_dislocator_10_s_dmg_min = 111 
+@ukn_potential_dislocator_planck_s_dmg_min = 48 
+
+@ukn_potential_dislocator_1_s_dmg_max = 8 
+@ukn_potential_dislocator_2_s_dmg_max = 10 
+@ukn_potential_dislocator_3_s_dmg_max = 13 
+@ukn_potential_dislocator_4_s_dmg_max = 17 
+@ukn_potential_dislocator_5_s_dmg_max = 22 
+@ukn_potential_dislocator_6_s_dmg_max = 30 
+@ukn_potential_dislocator_7_s_dmg_max = 42 
+@ukn_potential_dislocator_8_s_dmg_max = 60 
+@ukn_potential_dislocator_9_s_dmg_max = 132 
+@ukn_potential_dislocator_10_s_dmg_max = 204 
+@ukn_potential_dislocator_planck_s_dmg_max = 88 
+#---
+
+@ukn_potential_dislocator_1_s_windup_min = 1
+@ukn_potential_dislocator_2_s_windup_min = 1
+@ukn_potential_dislocator_3_s_windup_min = 1
+@ukn_potential_dislocator_4_s_windup_min = 1
+@ukn_potential_dislocator_5_s_windup_min = 1
+@ukn_potential_dislocator_6_s_windup_min = 1
+@ukn_potential_dislocator_7_s_windup_min = 1
+@ukn_potential_dislocator_8_s_windup_min = 1
+@ukn_potential_dislocator_9_s_windup_min = 1
+@ukn_potential_dislocator_10_s_windup_min = 1
+@ukn_potential_dislocator_planck_s_windup_min = 1
+
+@ukn_potential_dislocator_1_s_windup_min = 19
+@ukn_potential_dislocator_2_s_windup_min = 19
+@ukn_potential_dislocator_3_s_windup_min = 19
+@ukn_potential_dislocator_4_s_windup_min = 19
+@ukn_potential_dislocator_5_s_windup_min = 19
+@ukn_potential_dislocator_6_s_windup_min = 19
+@ukn_potential_dislocator_7_s_windup_min = 19
+@ukn_potential_dislocator_8_s_windup_min = 19
+@ukn_potential_dislocator_9_s_windup_min = 19
+@ukn_potential_dislocator_10_s_windup_min = 19
+@ukn_potential_dislocator_planck_s_windup_min = 19
+#---
+
+@ukn_potential_dislocator_1_s_total_fire_time = 20
+@ukn_potential_dislocator_2_s_total_fire_time = 20
+@ukn_potential_dislocator_3_s_total_fire_time = 20
+@ukn_potential_dislocator_4_s_total_fire_time = 20
+@ukn_potential_dislocator_5_s_total_fire_time = 20
+@ukn_potential_dislocator_6_s_total_fire_time = 20
+@ukn_potential_dislocator_7_s_total_fire_time = 20
+@ukn_potential_dislocator_8_s_total_fire_time = 20
+@ukn_potential_dislocator_9_s_total_fire_time = 20
+@ukn_potential_dislocator_10_s_total_fire_time = 20
+@ukn_potential_dislocator_planck_s_total_fire_time = 20
+#---
+
+@ukn_potential_dislocator_1_s_range = 40
+@ukn_potential_dislocator_2_s_range = 40
+@ukn_potential_dislocator_3_s_range = 40
+@ukn_potential_dislocator_4_s_range = 40
+@ukn_potential_dislocator_5_s_range = 40
+@ukn_potential_dislocator_6_s_range = 45
+@ukn_potential_dislocator_7_s_range = 45
+@ukn_potential_dislocator_8_s_range = 45
+@ukn_potential_dislocator_9_s_range = 50
+@ukn_potential_dislocator_10_s_range = 50
+@ukn_potential_dislocator_planck_s_range = 45
+#---
+
+@ukn_potential_dislocator_1_s_tracking = 0.50
+@ukn_potential_dislocator_2_s_tracking = 0.50
+@ukn_potential_dislocator_3_s_tracking = 0.50
+@ukn_potential_dislocator_4_s_tracking = 0.50
+@ukn_potential_dislocator_5_s_tracking = 0.50
+@ukn_potential_dislocator_6_s_tracking = 0.55
+@ukn_potential_dislocator_7_s_tracking = 0.55
+@ukn_potential_dislocator_8_s_tracking = 0.55
+@ukn_potential_dislocator_9_s_tracking = 0.60
+@ukn_potential_dislocator_10_s_tracking = 0.60
+@ukn_potential_dislocator_planck_s_tracking = 0.55
+
+
+# MEDIUM #---------------------------
+
+@ukn_potential_dislocator_1_m_power = -11 
+@ukn_potential_dislocator_2_m_power = -14 
+@ukn_potential_dislocator_3_m_power = -18 
+@ukn_potential_dislocator_4_m_power = -23 
+@ukn_potential_dislocator_5_m_power = -30 
+@ukn_potential_dislocator_6_m_power = -40 
+@ukn_potential_dislocator_7_m_power = -57 
+@ukn_potential_dislocator_8_m_power = -82 
+@ukn_potential_dislocator_9_m_power = -179 
+@ukn_potential_dislocator_10_m_power = -277 
+@ukn_potential_dislocator_planck_m_power = -119 
+#---
+
+@ukn_potential_dislocator_1_m_dmg_min = 11 
+@ukn_potential_dislocator_2_m_dmg_min = 14 
+@ukn_potential_dislocator_3_m_dmg_min = 18 
+@ukn_potential_dislocator_4_m_dmg_min = 23 
+@ukn_potential_dislocator_5_m_dmg_min = 30 
+@ukn_potential_dislocator_6_m_dmg_min = 40 
+@ukn_potential_dislocator_7_m_dmg_min = 57 
+@ukn_potential_dislocator_8_m_dmg_min = 82 
+@ukn_potential_dislocator_9_m_dmg_min = 179 
+@ukn_potential_dislocator_10_m_dmg_min = 277 
+@ukn_potential_dislocator_planck_m_dmg_min = 119 
+
+@ukn_potential_dislocator_1_m_dmg_max = 19 
+@ukn_potential_dislocator_2_m_dmg_max = 25 
+@ukn_potential_dislocator_3_m_dmg_max = 33 
+@ukn_potential_dislocator_4_m_dmg_max = 42 
+@ukn_potential_dislocator_5_m_dmg_max = 55 
+@ukn_potential_dislocator_6_m_dmg_max = 74 
+@ukn_potential_dislocator_7_m_dmg_max = 104 
+@ukn_potential_dislocator_8_m_dmg_max = 151 
+@ukn_potential_dislocator_9_m_dmg_max = 329 
+@ukn_potential_dislocator_10_m_dmg_max = 510 
+@ukn_potential_dislocator_planck_m_dmg_max = 219 
+#---
+
+@ukn_potential_dislocator_1_m_windup_min = 1
+@ukn_potential_dislocator_2_m_windup_min = 1
+@ukn_potential_dislocator_3_m_windup_min = 1
+@ukn_potential_dislocator_4_m_windup_min = 1
+@ukn_potential_dislocator_5_m_windup_min = 1
+@ukn_potential_dislocator_6_m_windup_min = 1
+@ukn_potential_dislocator_7_m_windup_min = 1
+@ukn_potential_dislocator_8_m_windup_min = 1
+@ukn_potential_dislocator_9_m_windup_min = 1
+@ukn_potential_dislocator_10_m_windup_min = 1
+@ukn_potential_dislocator_planck_m_windup_min = 1
+
+@ukn_potential_dislocator_1_m_windup_min = 19
+@ukn_potential_dislocator_2_m_windup_min = 19
+@ukn_potential_dislocator_3_m_windup_min = 19
+@ukn_potential_dislocator_4_m_windup_min = 19
+@ukn_potential_dislocator_5_m_windup_min = 19
+@ukn_potential_dislocator_6_m_windup_min = 19
+@ukn_potential_dislocator_7_m_windup_min = 19
+@ukn_potential_dislocator_8_m_windup_min = 19
+@ukn_potential_dislocator_9_m_windup_min = 19
+@ukn_potential_dislocator_10_m_windup_min = 19
+@ukn_potential_dislocator_planck_m_windup_min = 19
+#---
+
+@ukn_potential_dislocator_1_m_total_fire_time = 20
+@ukn_potential_dislocator_2_m_total_fire_time = 20
+@ukn_potential_dislocator_3_m_total_fire_time = 20
+@ukn_potential_dislocator_4_m_total_fire_time = 20
+@ukn_potential_dislocator_5_m_total_fire_time = 20
+@ukn_potential_dislocator_6_m_total_fire_time = 20
+@ukn_potential_dislocator_7_m_total_fire_time = 20
+@ukn_potential_dislocator_8_m_total_fire_time = 20
+@ukn_potential_dislocator_9_m_total_fire_time = 20
+@ukn_potential_dislocator_10_m_total_fire_time = 20
+@ukn_potential_dislocator_planck_m_total_fire_time = 20
+#---
+
+@ukn_potential_dislocator_1_m_range = 60
+@ukn_potential_dislocator_2_m_range = 60
+@ukn_potential_dislocator_3_m_range = 60
+@ukn_potential_dislocator_4_m_range = 60
+@ukn_potential_dislocator_5_m_range = 60
+@ukn_potential_dislocator_6_m_range = 65
+@ukn_potential_dislocator_7_m_range = 65
+@ukn_potential_dislocator_8_m_range = 65
+@ukn_potential_dislocator_9_m_range = 75
+@ukn_potential_dislocator_10_m_range = 75
+@ukn_potential_dislocator_planck_m_range = 65
+#---
+
+@ukn_potential_dislocator_1_m_tracking = 0.30
+@ukn_potential_dislocator_2_m_tracking = 0.30
+@ukn_potential_dislocator_3_m_tracking = 0.30
+@ukn_potential_dislocator_4_m_tracking = 0.30
+@ukn_potential_dislocator_5_m_tracking = 0.30
+@ukn_potential_dislocator_6_m_tracking = 0.33
+@ukn_potential_dislocator_7_m_tracking = 0.33
+@ukn_potential_dislocator_8_m_tracking = 0.33
+@ukn_potential_dislocator_9_m_tracking = 0.36
+@ukn_potential_dislocator_10_m_tracking = 0.36
+@ukn_potential_dislocator_planck_m_tracking = 0.33
+
+
+# LARGE #---------------------------
+
+@ukn_potential_dislocator_1_l_power = -20 
+@ukn_potential_dislocator_2_l_power = -27 
+@ukn_potential_dislocator_3_l_power = -35 
+@ukn_potential_dislocator_4_l_power = -45 
+@ukn_potential_dislocator_5_l_power = -58 
+@ukn_potential_dislocator_6_l_power = -79 
+@ukn_potential_dislocator_7_l_power = -111 
+@ukn_potential_dislocator_8_l_power = -160 
+@ukn_potential_dislocator_9_l_power = -349 
+@ukn_potential_dislocator_10_l_power = -540 
+@ukn_potential_dislocator_planck_l_power = -232 
+#---
+
+@ukn_potential_dislocator_1_l_dmg_min = 25 
+@ukn_potential_dislocator_2_l_dmg_min = 33 
+@ukn_potential_dislocator_3_l_dmg_min = 43 
+@ukn_potential_dislocator_4_l_dmg_min = 55 
+@ukn_potential_dislocator_5_l_dmg_min = 72 
+@ukn_potential_dislocator_6_l_dmg_min = 97 
+@ukn_potential_dislocator_7_l_dmg_min = 136 
+@ukn_potential_dislocator_8_l_dmg_min = 197 
+@ukn_potential_dislocator_9_l_dmg_min = 429 
+@ukn_potential_dislocator_10_l_dmg_min = 665 
+@ukn_potential_dislocator_planck_l_dmg_min = 286 
+
+@ukn_potential_dislocator_1_l_dmg_max = 46 
+@ukn_potential_dislocator_2_l_dmg_max = 60 
+@ukn_potential_dislocator_3_l_dmg_max = 78 
+@ukn_potential_dislocator_4_l_dmg_max = 102 
+@ukn_potential_dislocator_5_l_dmg_max = 132 
+@ukn_potential_dislocator_6_l_dmg_max = 179 
+@ukn_potential_dislocator_7_l_dmg_max = 250 
+@ukn_potential_dislocator_8_l_dmg_max = 363 
+@ukn_potential_dislocator_9_l_dmg_max = 789 
+@ukn_potential_dislocator_10_l_dmg_max = 1224 
+@ukn_potential_dislocator_planck_l_dmg_max = 526 
+#---
+
+@ukn_potential_dislocator_1_l_windup_min = 1
+@ukn_potential_dislocator_2_l_windup_min = 1
+@ukn_potential_dislocator_3_l_windup_min = 1
+@ukn_potential_dislocator_4_l_windup_min = 1
+@ukn_potential_dislocator_5_l_windup_min = 1
+@ukn_potential_dislocator_6_l_windup_min = 1
+@ukn_potential_dislocator_7_l_windup_min = 1
+@ukn_potential_dislocator_8_l_windup_min = 1
+@ukn_potential_dislocator_9_l_windup_min = 1
+@ukn_potential_dislocator_10_l_windup_min = 1
+@ukn_potential_dislocator_planck_l_windup_min = 1
+
+@ukn_potential_dislocator_1_l_windup_min = 19
+@ukn_potential_dislocator_2_l_windup_min = 19
+@ukn_potential_dislocator_3_l_windup_min = 19
+@ukn_potential_dislocator_4_l_windup_min = 19
+@ukn_potential_dislocator_5_l_windup_min = 19
+@ukn_potential_dislocator_6_l_windup_min = 19
+@ukn_potential_dislocator_7_l_windup_min = 19
+@ukn_potential_dislocator_8_l_windup_min = 19
+@ukn_potential_dislocator_9_l_windup_min = 19
+@ukn_potential_dislocator_10_l_windup_min = 19
+@ukn_potential_dislocator_planck_l_windup_min = 19
+#---
+
+@ukn_potential_dislocator_1_l_total_fire_time = 20
+@ukn_potential_dislocator_2_l_total_fire_time = 20
+@ukn_potential_dislocator_3_l_total_fire_time = 20
+@ukn_potential_dislocator_4_l_total_fire_time = 20
+@ukn_potential_dislocator_5_l_total_fire_time = 20
+@ukn_potential_dislocator_6_l_total_fire_time = 20
+@ukn_potential_dislocator_7_l_total_fire_time = 20
+@ukn_potential_dislocator_8_l_total_fire_time = 20
+@ukn_potential_dislocator_9_l_total_fire_time = 20
+@ukn_potential_dislocator_10_l_total_fire_time = 20
+@ukn_potential_dislocator_planck_l_total_fire_time = 20
+#---
+
+@ukn_potential_dislocator_1_l_range = 80
+@ukn_potential_dislocator_2_l_range = 80
+@ukn_potential_dislocator_3_l_range = 80
+@ukn_potential_dislocator_4_l_range = 80
+@ukn_potential_dislocator_5_l_range = 80
+@ukn_potential_dislocator_6_l_range = 90
+@ukn_potential_dislocator_7_l_range = 90
+@ukn_potential_dislocator_8_l_range = 90
+@ukn_potential_dislocator_9_l_range = 100
+@ukn_potential_dislocator_10_l_range = 100
+@ukn_potential_dislocator_planck_l_range = 90
+#---
+
+@ukn_potential_dislocator_1_l_tracking = 0.05
+@ukn_potential_dislocator_2_l_tracking = 0.05
+@ukn_potential_dislocator_3_l_tracking = 0.05
+@ukn_potential_dislocator_4_l_tracking = 0.05
+@ukn_potential_dislocator_5_l_tracking = 0.05
+@ukn_potential_dislocator_6_l_tracking = 0.06
+@ukn_potential_dislocator_7_l_tracking = 0.06
+@ukn_potential_dislocator_8_l_tracking = 0.06
+@ukn_potential_dislocator_9_l_tracking = 0.06
+@ukn_potential_dislocator_10_l_tracking = 0.06
+@ukn_potential_dislocator_planck_l_tracking = 0.05

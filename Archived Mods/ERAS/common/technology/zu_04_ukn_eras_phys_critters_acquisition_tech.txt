@@ -1,0 +1,47 @@
+          #####################################
+#---------## [CRITTER-ACQUISITION] ADDITIONS ##---------#
+          #####################################
+		  
+### Quasi-Solid Armor (T2) ###----------------------
+tech_ukn_void_cloud_components_1 = {
+	area = physics
+	cost = @tech_ukn_void_cloud_components_5_cost
+	tier = @tech_ukn_void_cloud_components_5_tier
+	category = { field_manipulation }
+	ai_update_type = all
+#	prerequisites = { "tech_ship_armor_1" }
+	is_reverse_engineerable = yes
+	weight = @tech_ukn_void_cloud_components_5_weight
+
+	gateway = tech_ukn_void_cloud_components_5_gateway
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_UKN_VOID_CLOUD_COMPONENTS_1_GLIMPSE_TITLE"
+			desc = "TECH_UNLOCK_UKN_VOID_CLOUD_COMPONENTS_1_GLIMPSE_DESC"
+		}
+	}
+
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}

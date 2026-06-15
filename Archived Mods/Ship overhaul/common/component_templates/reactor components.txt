@@ -1,0 +1,524 @@
+#Fission Reactors
+utility_component_template = {
+	key = "SMALL_FISSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = @smallpower1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @reactorcost_S1
+		}	
+		upkeep = {
+			energy = @reactorcost_S1_upkeep_energy
+			alloys = @reactorcost_S1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+	}
+	prerequisites = { "tech_fission_power" }
+	component_set = "SECONDARY_FISSION_REACTOR"
+	upgrades_to = "SMALL_FUSION_REACTOR"
+}
+
+utility_component_template = {
+	key = "MEDIUM_FISSION_REACTOR"
+	size = medium
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = @mediumpower1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @reactorcost_M1
+		}
+		upkeep = {
+			energy = @reactorcost_M1_upkeep_energy
+			alloys = @reactorcost_M1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+	}
+	prerequisites = { "tech_fission_power" }
+	component_set = "SECONDARY_FISSION_REACTOR"
+	upgrades_to = "MEDIUM_FUSION_REACTOR"
+}
+
+utility_component_template = {
+	key = "LARGE_FISSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = @largepower1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @reactorcost_L1
+		}
+		upkeep = {
+			energy = @reactorcost_L1_upkeep_energy
+			alloys = @reactorcost_L1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+	}
+	prerequisites = { "tech_fission_power" }
+	component_set = "SECONDARY_FISSION_REACTOR"
+	upgrades_to = "LARGE_FUSION_REACTOR"
+}
+
+# Advanced Deflectors
+utility_component_template = {
+	key = "SMALL_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = @smallpower2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @reactorcost_S2
+		}
+		upkeep = {
+			energy = @reactorcost_S2_upkeep_energy
+			alloys = @reactorcost_S2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+	}
+	prerequisites = { "tech_fusion_power" }
+	component_set = "SECONDARY_FUSION_REACTOR"
+	upgrades_to = "SMALL_COLD_FUSION_REACTOR"
+}
+
+utility_component_template = {
+	key = "MEDIUM_FUSION_REACTOR"
+	size = medium
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = @mediumpower2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @reactorcost_M2
+		}
+		upkeep = {
+			energy = @reactorcost_M2_upkeep_energy
+			alloys = @reactorcost_M2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+	}
+	prerequisites = { "tech_fusion_power" }
+	component_set = "SECONDARY_FUSION_REACTOR"
+	upgrades_to = "MEDIUM_COLD_FUSION_REACTOR"
+}
+
+utility_component_template = {
+	key = "LARGE_FUSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = @largepower2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @reactorcost_L2
+		}
+		upkeep = {
+			energy = @reactorcost_L2_upkeep_energy
+			alloys = @reactorcost_L2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+	}
+	prerequisites = { "tech_fusion_power" }
+	component_set = "SECONDARY_FUSION_REACTOR"
+	upgrades_to = "LARGE_COLD_FUSION_REACTOR"
+}
+
+# Shields
+utility_component_template = {
+	key = "SMALL_COLD_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = @smallpower3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @reactorcost_S3
+		}
+		upkeep = {
+			energy = @reactorcost_S3_upkeep_energy
+			alloys = @reactorcost_S3_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+	}
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "SECONDARY_COLD_FUSION_REACTOR"
+	upgrades_to = "SMALL_ANTIMATTER_REACTOR"
+}
+
+utility_component_template = {
+	key = "MEDIUM_COLD_FUSION_REACTOR"
+	size = medium
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = @mediumpower3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @reactorcost_M3
+		}
+		upkeep = {
+			energy = @reactorcost_M3_upkeep_energy
+			alloys = @reactorcost_M3_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+	}
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "SECONDARY_COLD_FUSION_REACTOR"
+	upgrades_to = "MEDIUM_ANTIMATTER_REACTOR"
+}
+
+utility_component_template = {
+	key = "LARGE_COLD_FUSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = @largepower3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @reactorcost_L3
+		}
+		upkeep = {
+			energy = @reactorcost_L3_upkeep_energy
+			alloys = @reactorcost_L3_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+	}
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "SECONDARY_COLD_FUSION_REACTOR"
+	upgrades_to = "LARGE_ANTIMATTER_REACTOR"
+}
+
+# Advanced Shields
+utility_component_template = {
+	key = "SMALL_ANTIMATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = @smallpower4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @reactorcost_S4
+			exotic_gases = 0.25
+		}
+		upkeep = {
+			energy = @reactorcost_S4_upkeep_energy
+			alloys = @reactorcost_S4_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+	}
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "SECONDARY_ANTIMATTER_REACTOR"
+	upgrades_to = "SMALL_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_ANTIMATTER_REACTOR"
+	size = medium
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = @mediumpower4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @reactorcost_M4
+			exotic_gases = 0.50
+		}
+		upkeep = {
+			energy = @reactorcost_M4_upkeep_energy
+			alloys = @reactorcost_M4_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+	}
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "SECONDARY_ANTIMATTER_REACTOR"
+	upgrades_to = "MEDIUM_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_ANTIMATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = @largepower4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @reactorcost_L4
+			exotic_gases = 1
+		}
+		upkeep = {
+			energy = @reactorcost_L4_upkeep_energy
+			alloys = @reactorcost_L4_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+	}
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "SECONDARY_ANTIMATTER_REACTOR"
+	upgrades_to = "LARGE_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+# Hyper Shields
+utility_component_template = {
+	key = "SMALL_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @smallpower5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @reactorcost_S5
+			exotic_gases = 0.333
+		}
+		upkeep = {
+			energy = @reactorcost_S5_upkeep_energy
+			alloys = @reactorcost_S5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+	}
+	prerequisites = { "tech_zero_point_power" }
+	upgrades_to = "SMALL_DARK_MATTER_REACTOR"
+	component_set = "SECONDARY_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_ZERO_POINT_REACTOR"
+	size = medium
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @mediumpower5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @reactorcost_M5
+			exotic_gases = 0.666
+		}
+		upkeep = {
+			energy = @reactorcost_M5_upkeep_energy
+			alloys = @reactorcost_M5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+	}
+	prerequisites = { "tech_zero_point_power" }
+	upgrades_to = "MEDIUM_DARK_MATTER_REACTOR"
+	component_set = "SECONDARY_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_ZERO_POINT_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @largepower5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @reactorcost_L5
+			exotic_gases = 1.333
+		}
+		upkeep = {
+			energy = @reactorcost_L5_upkeep_energy
+			alloys = @reactorcost_L5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+	}
+	prerequisites = { "tech_zero_point_power" }
+	upgrades_to = "LARGE_DARK_MATTER_REACTOR"
+	component_set = "SECONDARY_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+#Dark Matter Reactors
+utility_component_template = {
+	key = "SMALL_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @smallpower6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @reactorcost_S6
+			sr_dark_matter = 0.25
+		}
+		upkeep = {
+			energy = @reactorcost_S6_upkeep_energy
+			alloys = @reactorcost_S6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+	}
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "SECONDARY_DARK_MATTER_REACTOR"
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			is_country_type = default
+			has_monthly_income = { resource = sr_dark_matter value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_DARK_MATTER_REACTOR"
+	size = medium
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @mediumpower6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @reactorcost_M6
+			sr_dark_matter = 0.5
+		}
+		upkeep = {
+			energy = @reactorcost_M6_upkeep_energy
+			alloys = @reactorcost_M6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+	}
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "SECONDARY_DARK_MATTER_REACTOR"
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = sr_dark_matter value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_DARK_MATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @largepower6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @reactorcost_L6
+			sr_dark_matter = 1
+		}
+		upkeep = {
+			energy = @reactorcost_L6_upkeep_energy
+			alloys = @reactorcost_L6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+	}
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "SECONDARY_DARK_MATTER_REACTOR"
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = sr_dark_matter value <= 0 }
+		}
+	}
+}

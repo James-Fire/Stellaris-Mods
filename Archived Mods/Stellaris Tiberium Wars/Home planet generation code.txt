@@ -1,0 +1,102 @@
+if = {
+						limit = {
+							is_homeworld = yes
+						}
+						while = {
+							count = 4
+							random_list = {
+								5 = { }
+								5 = {
+									add_deposit = b_red_zone
+								}
+							}
+						}
+						while = {
+							count = 10
+							random_list = {
+								5 = { }
+								5 = {
+									add_deposit = b_yellow_zone
+								}
+							}
+						}
+						while = {
+							count = 3
+							random_list = {
+								5 = { }
+								5 = {
+									add_deposit = b_yellow_zone
+									add_deposit = b_red_zone
+								}
+							}
+						}
+						while = {
+							count = 2
+								add_deposit = b_yellow_zone
+								add_deposit = b_red_zone
+						}
+						while = {
+							count = 50
+							limit = {
+								num_free_districts = { type = any value > 0 }
+							}
+							remove_last_built_district = yes
+							add_district = district_blue_zone
+							add_deposit = b_blue_zone
+						}
+						remove_last_built_district = yes
+						every_deposit = {
+							limit = { is_deposit_type = b_blue_zone }
+							remove_deposit = yes
+							PREV = { add_deposit = d_blue_zone }
+						}
+						every_deposit = {
+							limit = { is_deposit_type = b_yellow_zone }
+							remove_deposit = yes
+							PREV = { add_deposit = d_yellow_zone }
+						}
+						every_deposit = {
+							limit = { is_deposit_type = b_red_zone }
+							remove_deposit = yes
+							PREV = { add_deposit = d_red_zone }
+						}
+						add_deposit = d_blue_zone
+						while = {
+							count = 4
+							add_district = district_blue_zone
+						}
+						while = {
+							count = 2
+							add_district = district_yellow_zone
+						}
+						while = {
+							count = 1
+							add_district = district_tiberium_refinery
+						}
+						while = {
+							count = 5
+							random_list = {
+								5 = { }
+								5 = {
+									add_deposit = b_yellow_zone
+								}
+							}
+						}
+						while = {
+							count = 3
+							random_list = {
+								5 = { }
+								5 = {
+									add_deposit = b_red_zone
+									add_deposit = b_yellow_zone
+								}
+							}
+						}
+						while = {
+							limit = { 
+								num_free_districts = { type = district_yellow_zone value < 0 }
+							}
+							remove_deposit = b_yellow_zone
+						}
+						planet_event = { id = tiberium_start.3 }
+					}

@@ -1,0 +1,110 @@
+#reloadable with 'reload stats'
+# This file is where you start when you want to configure something new, then go to sections
+
+@titan_combat_speed = 0.75
+@titan_combat_rotation = 0.02
+@titan_collision_radius = 15
+
+@build_block_radius_none = 0
+@build_block_radius_civilian = 20
+@build_block_radius_military = 200
+
+player_enclave_station = {
+	entity = enclave_station_entity
+	graphical_culture = no
+	max_speed = 10
+	rotation_speed = 10
+	acceleration = 10
+	max_hitpoints = 50000
+	modifier = {
+		ship_evasion_mult = -1
+	}
+	ship_modifier = {
+		ship_weapon_range_mult = 0.2
+		ship_fire_rate_mult = 2
+	}
+	size_multiplier = 1
+	fleet_slot_size = 0
+	combat_size_multiplier = 8
+	section_slots = {
+		"north" = { locator = "station" }
+		"west" = { locator = "station" }
+		"east" = { locator = "station" }
+		"south" = { locator = "station" }
+	}
+	is_designable = yes
+	components_add_to_cost = no
+	uses_name_prefix = no
+	takes_name_from_ship_design = yes
+	num_target_locators = 0
+	is_space_station = yes
+
+	prerequisites = { "tech_all_none" }
+
+	resources = {
+		category = starbase_stations
+		cost = {
+			alloys = 1000
+		}
+	}
+	base_buildtime = 30
+	auto_upgrade = no
+
+	class = shipclass_military_station
+	ship_class_icon_frame = 26
+	construction_type = starbase_defenses
+	enable_default_design = yes
+	required_component_set = "power_core"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+	
+	build_block_radius = 200
+}
+
+# Automated Dreadnought
+player_npc_warship_01 = {
+	formation_priority = 50
+	graphical_culture = no
+	max_speed = 80
+	acceleration = 0.15
+	rotation_speed = 0.1
+	collision_radius = 7
+	modifier = {
+		ship_evasion_add = 2
+		ship_fire_rate_mult = 1
+		ship_weapon_damage = 2
+		ship_shield_mult = 3
+		ship_armor_add = 5000
+	}
+	max_hitpoints = 10000
+	combat_size_multiplier = 50
+	size_multiplier = 16
+	fleet_slot_size = 8
+	section_slots = { "bow" = { locator = "part1" } "mid" = { locator = "part1" } "stern" = { locator = "part1" } }
+	num_target_locators = 4
+	is_space_station = no
+	icon_frame = 6
+	
+	default_behavior = massive_ship_player_fallen_empire_default
+
+	prerequisites = { "tech_all_none" }
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = 3000
+		}
+	}
+	base_buildtime = 500
+
+	components_add_to_cost = no
+	class = shipclass_military
+	can_have_federation_design = no
+	enable_default_design = yes
+	construction_type = starbase_shipyard
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+}

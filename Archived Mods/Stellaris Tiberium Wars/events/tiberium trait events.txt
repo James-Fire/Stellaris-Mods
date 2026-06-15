@@ -1,0 +1,916 @@
+namespace = tiberium_traits
+
+
+#Monthly event manager for trait related events
+country_event = {
+	id = tiberium_traits.0
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		every_country = {
+			limit = {
+				country_has_tiberium = yes
+			}
+			fire_on_action = { on_action = tiberium_traits_cycle }
+		}
+	}
+}
+
+
+#Recheck whether the country has tib stuff, for other events.
+country_event = {
+	id = tiberium_traits.1000
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					country_has_tiberium = yes
+					any_owned_species = {
+						OR = {
+							has_trait = trait_tiberium_infected
+							has_trait = trait_tiberium_infested
+						}
+					}
+				}
+			}
+			set_country_flag = has_tiberium
+		}
+	}
+}
+country_event = {
+	id = tiberium_traits.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				planet_has_tiberium = yes
+			}
+			planet_event = { id = tiberium_traits.6 days = 1 }
+			planet_event = { id = tiberium_traits.7 days = 2 }
+			every_owned_pop = {
+				limit = {
+					has_trait = trait_tiberium_infested
+				}
+				if = {
+					limit = {
+						has_pop_flag = tiberium_infected
+					}
+					remove_pop_flag = tiberium_infected
+					random_list = {
+						5 = {
+							modifier = {
+								factor = 3
+								owner = { has_policy_flag = tiberium_augmentation }
+							}
+							if = {
+								limit = {
+									owner = { has_policy_flag = tiberium_banned }
+								}
+								kill_pop = yes
+								if = {
+									limit = {
+										NOT = { owner = { has_country_flag = tiberium_banned_pops_die } }
+									}
+									PREV = { planet_event = { id = tiberium_traits.8 days = -1 } }
+								}
+							}
+							else = {
+								if = {
+									limit = {
+										NOT = { owner = { has_country_flag = tiberium_pops_mutate_care } }
+									}
+									PREV = { planet_event = { id = tiberium_traits.2 days = -1 } }
+								}
+								modify_species = {
+									species = this
+									add_traits_at_start_of_list = yes
+									add_trait = trait_tiberium_mutated
+									remove_trait = trait_tiberium_infested
+								}
+							}
+						}
+						5 = {
+							if = {
+								limit = {
+									NOT = { owner = { has_country_flag = tiberium_pops_die_care } }
+								}
+								PREV = { planet_event = { id = tiberium_traits.5 days = -1 } }
+							}
+							kill_pop = yes
+						}
+					}
+					#modify_species = {
+					#	species = species # species to modify
+					#	base = <target>/auto/none # new base species; default: auto (uses species)
+					#	add_trait = <key> # optional, can specify multiple
+					#	remove_trait = <key> # optional, can specify multiple
+					#	ideal_planet_class = <target or pc_name> # optional
+					#	change_scoped_species = yes/no # modify scoped pops/planet/leader/country; default: yes
+					#	portrait = <target or portrait name> # optional
+					#}
+				}
+				else = {
+					random_list = {
+						10 = {
+							modifier = {
+								add = 10
+								OR = {
+									has_job = green_tiberium_harvester
+									has_job = blue_tiberium_harvester
+									has_job = green_tiberium_refiner
+									has_job = blue_tiberium_refiner
+								}
+							}
+							modifier = {
+								factor = 0.5
+								planet = { has_planet_flag = tiberium_sonic_protection }
+							}
+							modifier = {
+								factor = 1
+								owner = { has_policy_flag = tiberium_safe }
+							}
+							modifier = {
+								factor = 2
+								owner = { has_policy_flag = tiberium_priority_safe }
+							}
+							modifier = {
+								factor = 3
+								owner = { has_policy_flag = tiberium_balanced_safe }
+							}
+							modifier = {
+								factor = 4
+								owner = { has_policy_flag = tiberium_minimal_safe }
+							}
+							modifier = {
+								factor = 5
+								owner = { has_policy_flag = tiberium_no_safe }
+							}
+							modifier = {
+								factor = 3
+								owner = { has_policy_flag = tiberium_augmentation }
+							}
+							modifier = {
+								factor = 0
+								has_pop_flag = tiberium_infected
+							}
+							set_pop_flag = tiberium_infected
+						}
+						5 = {
+							modifier = {
+								factor = 5
+								planet = { has_planet_flag = tiberium_sonic_protection }
+							}
+							modifier = {
+								factor = 4
+								owner = { has_policy_flag = tiberium_safe }
+							}
+							modifier = {
+								factor = 3
+								owner = { has_policy_flag = tiberium_priority_safe }
+							}
+							modifier = {
+								factor = 2
+								owner = { has_policy_flag = tiberium_balanced_safe }
+							}
+							modifier = {
+								factor = 1
+								owner = { has_policy_flag = tiberium_minimal_safe }
+							}
+							modifier = {
+								factor = 0.5
+								owner = { has_policy_flag = tiberium_no_safe }
+							}
+						}
+						5 = {
+							modifier = {
+								add = 10
+								OR = {
+									has_job = green_tiberium_harvester
+									has_job = blue_tiberium_harvester
+									has_job = green_tiberium_refiner
+									has_job = blue_tiberium_refiner
+								}
+							}
+							modifier = {
+								factor = 0.5
+								planet = { has_planet_flag = tiberium_sonic_protection }
+							}
+							modifier = {
+								factor = 0.5
+								owner = { has_policy_flag = tiberium_safe }
+							}
+							modifier = {
+								factor = 1
+								owner = { has_policy_flag = tiberium_priority_safe }
+							}
+							modifier = {
+								factor = 2
+								owner = { has_policy_flag = tiberium_balanced_safe }
+							}
+							modifier = {
+								factor = 3
+								owner = { has_policy_flag = tiberium_minimal_safe }
+							}
+							modifier = {
+								factor = 4
+								owner = { has_policy_flag = tiberium_no_safe }
+							}
+							modifier = {
+								factor = 3
+								owner = { has_policy_flag = tiberium_augmentation }
+							}
+							modifier = {
+								factor = 3
+								has_pop_flag = tiberium_infected
+							}
+							random_list = {
+								5 = {
+									modifier = {
+										factor = 3
+										owner = { has_policy_flag = tiberium_augmentation }
+									}
+									if = {
+										limit = {
+											owner = { has_policy_flag = tiberium_banned }
+										}
+										kill_pop = yes
+										if = {
+											limit = {
+												NOT = { owner = { has_country_flag = tiberium_banned_pops_die } }
+											}
+											PREV = { planet_event = { id = tiberium_traits.8 days = -1 } }
+										}
+									}
+									else = {
+										if = {
+											limit = {
+												NOT = { owner = { has_country_flag = tiberium_pops_mutate_care } }
+											}
+											PREV = { planet_event = { id = tiberium_traits.2 days = -1 } }
+										}
+										modify_species = {
+											species = this
+											add_traits_at_start_of_list = yes
+											add_trait = trait_tiberium_mutated
+											remove_trait = trait_tiberium_infested
+										}
+									}
+								}
+								5 = {
+									if = {
+										limit = {
+											NOT = { owner = { has_country_flag = tiberium_pops_die_care } }
+										}
+										PREV = { planet_event = { id = tiberium_traits.5 days = -1 } }
+									}
+									kill_pop = yes
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#Pop mutates
+planet_event = {
+	id = tiberium_traits.2
+	title = "tiberium_traits.2.name"
+	desc = "tiberium_traits.2.desc"
+	is_triggered_only = yes
+	option = {
+		name = "Are these mutations useful?"
+	}
+	option = {
+		name = "Their suffering is still of no concern to me."
+		hidden_effect = {
+			owner = { set_country_flag = tiberium_pops_mutate_care }
+		}
+	}
+	
+}
+
+#Pop infested
+planet_event = {
+	id = tiberium_traits.3
+	title = "tiberium_traits.3.name"
+	desc = "tiberium_traits.3.desc"
+	is_triggered_only = yes
+	option = {
+		name = "Can we help them?"
+	}
+	option = {
+		name = "Their suffering is of no concern to me."
+		hidden_effect = {
+			owner = { set_country_flag = tiberium_pops_infested_care }
+		}
+	}
+}
+
+#Pop infected
+planet_event = {
+	id = tiberium_traits.4
+	title = "tiberium_traits.4.name"
+	desc = "tiberium_traits.4.desc"
+	is_triggered_only = yes
+	option = {
+		name = "Worrying."
+	}
+	option = {
+		name = "Don't bother me with collateral damage."
+		hidden_effect = {
+			owner = { set_country_flag = tiberium_pops_infected_care }
+		}
+	}
+}
+
+#Pop dies
+planet_event = {
+	id = tiberium_traits.5
+	title = "tiberium_traits.5.name"
+	desc = "tiberium_traits.5.desc"
+	is_triggered_only = yes
+	option = {
+		name = "Oh no."
+	}
+	option = {
+		name = "They will always be acceptable losses, cease the notifications."
+		hidden_effect = {
+			owner = { set_country_flag = tiberium_pops_die_care }
+		}
+	}
+}
+#Pops have Infected trait
+planet_event = {
+	id = tiberium_traits.6
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				has_trait = trait_tiberium_infected
+			}
+			if = {
+				limit = {
+					has_pop_flag = tiberium_infected
+				}
+				if = {
+					limit = {
+						owner = { has_policy_flag = tiberium_banned }
+					}
+					kill_pop = yes
+					if = {
+						limit = {
+							NOT = { owner = { has_country_flag = tiberium_banned_pops_die } }
+						}
+						PREV = { planet_event = { id = tiberium_traits.8 days = -1 } }
+					}
+				}
+				else = {
+					remove_pop_flag = tiberium_infected
+					if = {
+						limit = {
+							NOT = { owner = { has_country_flag = tiberium_pops_infested_care } }
+						}
+						ROOT = { planet_event = { id = tiberium_traits.3 days = -1 } }
+					}
+					modify_species = {
+						species = this
+						add_traits_at_start_of_list = yes
+						add_trait = trait_tiberium_infested
+						remove_trait = trait_tiberium_infected
+					}
+				}
+				
+				#modify_species = {
+				#	species = species # species to modify
+				#	base = <target>/auto/none # new base species; default: auto (uses species)
+				#	add_trait = <key> # optional, can specify multiple
+				#	remove_trait = <key> # optional, can specify multiple
+				#	ideal_planet_class = <target or pc_name> # optional
+				#	change_scoped_species = yes/no # modify scoped pops/planet/leader/country; default: yes
+				#	portrait = <target or portrait name> # optional
+				#}
+			}
+			else = {
+				random_list = {
+					5 = {
+						modifier = {
+							add = 5
+							OR = {
+								has_job = green_tiberium_harvester
+								has_job = blue_tiberium_harvester
+								has_job = green_tiberium_refiner
+								has_job = blue_tiberium_refiner
+							}
+						}
+						modifier = {
+							factor = 0.5
+							ROOT = { has_planet_flag = tiberium_sonic_protection }
+						}
+						modifier = {
+							factor = 1
+							owner = { has_policy_flag = tiberium_safe }
+						}
+						modifier = {
+							factor = 2
+							owner = { has_policy_flag = tiberium_priority_safe }
+						}
+						modifier = {
+							factor = 3
+							owner = { has_policy_flag = tiberium_balanced_safe }
+						}
+						modifier = {
+							factor = 4
+							owner = { has_policy_flag = tiberium_minimal_safe }
+						}
+						modifier = {
+							factor = 5
+							owner = { has_policy_flag = tiberium_no_safe }
+						}
+						if = {
+							limit = {
+								NOT = { owner = { has_country_flag = tiberium_pops_die_care } }
+							}
+							ROOT = { planet_event = { id = tiberium_traits.5 days = -1 } }
+						}
+						kill_pop = yes
+					}
+					5 = {
+						modifier = {
+							add = 10
+							OR = {
+								has_job = green_tiberium_harvester
+								has_job = blue_tiberium_harvester
+								has_job = green_tiberium_refiner
+								has_job = blue_tiberium_refiner
+							}
+						}
+						modifier = {
+							factor = 0.5
+							ROOT = { has_planet_flag = tiberium_sonic_protection }
+						}
+						modifier = {
+							factor = 1
+							owner = { has_policy_flag = tiberium_safe }
+						}
+						modifier = {
+							factor = 2
+							owner = { has_policy_flag = tiberium_priority_safe }
+						}
+						modifier = {
+							factor = 3
+							owner = { has_policy_flag = tiberium_balanced_safe }
+						}
+						modifier = {
+							factor = 4
+							owner = { has_policy_flag = tiberium_minimal_safe }
+						}
+						modifier = {
+							factor = 5
+							owner = { has_policy_flag = tiberium_no_safe }
+						}
+						modifier = {
+							factor = 3
+							owner = { has_policy_flag = tiberium_augmentation }
+						}
+						modifier = {
+							factor = 0
+							has_pop_flag = tiberium_infected
+						}
+						set_pop_flag = tiberium_infected
+					}
+					5 = {
+						modifier = {
+							factor = 5
+							ROOT = { has_planet_flag = tiberium_sonic_protection }
+						}
+						modifier = {
+							factor = 5
+							owner = { has_policy_flag = tiberium_safe }
+						}
+						modifier = {
+							factor = 4
+							owner = { has_policy_flag = tiberium_priority_safe }
+						}
+						modifier = {
+							factor = 3
+							owner = { has_policy_flag = tiberium_balanced_safe }
+						}
+						modifier = {
+							factor = 2
+							owner = { has_policy_flag = tiberium_minimal_safe }
+						}
+						modifier = {
+							factor = 1
+							owner = { has_policy_flag = tiberium_no_safe }
+						}
+					}
+					10 = {
+						modifier = {
+							add = 10
+							OR = {
+								has_job = green_tiberium_harvester
+								has_job = blue_tiberium_harvester
+								has_job = green_tiberium_refiner
+								has_job = blue_tiberium_refiner
+							}
+						}
+						modifier = {
+							factor = 0.5
+							ROOT = { has_planet_flag = tiberium_sonic_protection }
+						}
+						modifier = {
+							factor = 0.5
+							owner = { has_policy_flag = tiberium_safe }
+						}
+						modifier = {
+							factor = 1
+							owner = { has_policy_flag = tiberium_priority_safe }
+						}
+						modifier = {
+							factor = 2
+							owner = { has_policy_flag = tiberium_balanced_safe }
+						}
+						modifier = {
+							factor = 3
+							owner = { has_policy_flag = tiberium_minimal_safe }
+						}
+						modifier = {
+							factor = 4
+							owner = { has_policy_flag = tiberium_no_safe }
+						}
+						modifier = {
+							factor = 3
+							owner = { has_policy_flag = tiberium_augmentation }
+						}
+						if = {
+							limit = {
+								owner = { has_policy_flag = tiberium_banned }
+							}
+							kill_pop = yes
+							if = {
+								limit = {
+									NOT = { owner = { has_country_flag = tiberium_banned_pops_die } }
+								}
+								PREV = { planet_event = { id = tiberium_traits.8 days = -1 } }
+							}
+						}
+						else = {
+							if = {
+								limit = {
+									NOT = { owner = { has_country_flag = tiberium_pops_infested_care } }
+								}
+								ROOT = { planet_event = { id = tiberium_traits.3 days = -1 } }
+							}
+							modify_species = {
+								species = this
+								add_traits_at_start_of_list = yes
+								add_trait = trait_tiberium_infested
+								remove_trait = trait_tiberium_infected
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Pops have no trait
+planet_event = {
+	id = tiberium_traits.7
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				NOR = {
+					has_trait = trait_tiberium_infected
+					has_trait = trait_tiberium_infested
+					has_trait = trait_tiberium_mutated
+				}
+			}
+			if = {
+				limit = {
+					has_pop_flag = tiberium_infected
+				}
+				if = {
+					limit = {
+						NOT = { owner = { has_country_flag = tiberium_pops_infected_care } }
+					}
+					ROOT = { planet_event = { id = tiberium_traits.4 days = -1 } }
+				}
+				remove_pop_flag = tiberium_infected
+				modify_species = {
+					species = this
+					add_traits_at_start_of_list = yes
+					add_trait = trait_tiberium_infected
+				}
+			}
+			else = {
+				random_list = {
+					5 = {
+						modifier = {
+							add = 2
+							OR = {
+								has_job = green_tiberium_harvester
+								has_job = blue_tiberium_harvester
+								has_job = green_tiberium_refiner
+								has_job = blue_tiberium_refiner
+							}
+						}
+						modifier = {
+							factor = 0
+							ROOT = { has_planet_flag = tiberium_sonic_protection }
+						}
+						modifier = {
+							factor = 0
+							owner = { has_policy_flag = tiberium_safe }
+						}
+						modifier = {
+							factor = 1
+							owner = { has_policy_flag = tiberium_priority_safe }
+						}
+						modifier = {
+							factor = 2
+							owner = { has_policy_flag = tiberium_balanced_safe }
+						}
+						modifier = {
+							factor = 3
+							owner = { has_policy_flag = tiberium_minimal_safe }
+						}
+						modifier = {
+							factor = 4
+							owner = { has_policy_flag = tiberium_no_safe }
+						}
+						if = {
+							limit = {
+								NOT = { owner = { has_country_flag = tiberium_pops_die_care } }
+							}
+							ROOT = { planet_event = { id = tiberium_traits.5 days = -1 } }
+						}
+						kill_pop = yes 
+					}
+					2.5 = {
+						modifier = {
+							add = 10
+							OR = {
+								has_job = green_tiberium_harvester
+								has_job = blue_tiberium_harvester
+								has_job = green_tiberium_refiner
+								has_job = blue_tiberium_refiner
+							}
+
+						}
+						modifier = {
+							factor = 0.25
+							ROOT = { has_planet_flag = tiberium_sonic_protection }
+						}
+						modifier = {
+							factor = 2
+							owner = { has_policy_flag = tiberium_safe }
+						}
+						modifier = {
+							factor = 3
+							owner = { has_policy_flag = tiberium_priority_safe }
+						}
+						modifier = {
+							factor = 4
+							owner = { has_policy_flag = tiberium_balanced_safe }
+						}
+						modifier = {
+							factor = 5
+							owner = { has_policy_flag = tiberium_minimal_safe }
+						}
+						modifier = {
+							factor = 6
+							owner = { has_policy_flag = tiberium_no_safe }
+						}
+						modifier = {
+							factor = 3
+							owner = { has_policy_flag = tiberium_augmentation }
+						}
+						modifier = {
+							factor = 0
+							has_pop_flag = tiberium_infected
+						}
+						set_pop_flag = tiberium_infected
+					}
+					10 = {
+						modifier = {
+							factor = 5
+							ROOT = { has_planet_flag = tiberium_sonic_protection }
+						}
+						modifier = {
+							factor = 5
+							owner = { has_policy_flag = tiberium_safe }
+						}
+						modifier = {
+							factor = 4
+							owner = { has_policy_flag = tiberium_priority_safe }
+						}
+						modifier = {
+							factor = 3
+							owner = { has_policy_flag = tiberium_balanced_safe }
+						}
+						modifier = {
+							factor = 2
+							owner = { has_policy_flag = tiberium_minimal_safe }
+						}
+						modifier = {
+							factor = 1
+							owner = { has_policy_flag = tiberium_no_safe }
+						}
+					}
+					5 = {
+						modifier = {
+							add = 10
+							OR = {
+								has_job = green_tiberium_harvester
+								has_job = blue_tiberium_harvester
+								has_job = green_tiberium_refiner
+								has_job = blue_tiberium_refiner
+							}
+						}
+						modifier = {
+							factor = 0.25
+							ROOT = { has_planet_flag = tiberium_sonic_protection }
+						}
+						modifier = {
+							factor = 2
+							owner = { has_policy_flag = tiberium_safe }
+						}
+						modifier = {
+							factor = 3
+							owner = { has_policy_flag = tiberium_priority_safe }
+						}
+						modifier = {
+							factor = 4
+							owner = { has_policy_flag = tiberium_balanced_safe }
+						}
+						modifier = {
+							factor = 5
+							owner = { has_policy_flag = tiberium_minimal_safe }
+						}
+						modifier = {
+							factor = 6
+							owner = { has_policy_flag = tiberium_no_safe }
+						}
+						modifier = {
+							factor = 3
+							owner = { has_policy_flag = tiberium_augmentation }
+						}
+						if = {
+							limit = {
+								owner = { has_policy_flag = tiberium_banned }
+							}
+							kill_pop = yes
+							if = {
+								limit = {
+									NOT = { owner = { has_country_flag = tiberium_banned_pops_die } }
+								}
+								PREV = { planet_event = { id = tiberium_traits.8 days = -1 } }
+							}
+						}
+						else = {
+							if = {
+								limit = {
+									NOT = { owner = { has_country_flag = tiberium_pops_infected_care } }
+								}
+								ROOT = { planet_event = { id = tiberium_traits.4 days = -1 } }
+							}
+							modify_species = {
+								species = this
+								add_traits_at_start_of_list = yes
+								add_trait = trait_tiberium_infected
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#Pop dies because we cannot accept them for what they are
+planet_event = {
+	id = tiberium_traits.8
+	title = "tiberium_traits.8.name"
+	desc = "tiberium_traits.8.desc"
+	is_triggered_only = yes
+	option = {
+		name = "Good Riddance."
+	}
+	option = {
+		name = "I don't care about the peasants."
+		hidden_effect = {
+			owner = { set_country_flag = tiberium_banned_pops_die }
+		}
+	}
+}
+#Uninfested Planet gets some tib growth from infected pops
+planet_event = {
+	id = tiberium_traits.9
+	title = "tiberium_traits.9.name"
+	desc = "tiberium_traits.9.desc"
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				check_variable = { which = tiberium_takeover_count value > 0 } 
+			}
+			change_variable = { which = tiberium_takeover_count value = -1 }
+		}
+	}
+	option = {
+		name = "Dammit, contain it at once!"
+		custom_tooltip = "tiberium_traits.9.option_4"
+		allow = {
+			owner = {
+				resource_stockpile_compare = { resource = energy value >= 500 }
+			}
+		}
+		owner = {
+			add_resource = { energy = -500 }
+		}
+	}
+	option = {
+		name = "No matter."
+		custom_tooltip = "tiberium_traits.9.option_1"
+		hidden_effect = {
+			every_owned_pop = {
+				limit = {
+					OR = {
+						has_trait = trait_tiberium_infected
+						has_trait = trait_tiberium_infested
+						has_trait = trait_tiberium_mutated
+						has_pop_flag = tiberium_infected
+					}
+				}
+				PREV = { change_variable = { which = tiberium_takeover_count value = 1 } }
+			}
+		}
+	}
+	option = {
+		name = "Kill all those responsible, and enact containment."
+		allow = {
+			owner = {
+				resource_stockpile_compare = { resource = energy value >= 500 }
+			}
+		}
+		owner = {
+			add_resource = { energy = -500 }
+		}
+		custom_tooltip = "tiberium_traits.9.option_2"
+		hidden_effect = {
+			every_owned_pop = {
+				limit = {
+					OR = {
+						has_trait = trait_tiberium_infected
+						has_trait = trait_tiberium_infested
+						has_trait = trait_tiberium_mutated
+						has_pop_flag = tiberium_infected
+					}
+				}
+				kill_pop = yes
+			}
+		}
+	}
+	option = {
+		name = "Kill all those responsible."
+		custom_tooltip = "tiberium_traits.9.option_3"
+		hidden_effect = {
+			every_owned_pop = {
+				limit = {
+					OR = {
+						has_trait = trait_tiberium_infected
+						has_trait = trait_tiberium_infested
+						has_trait = trait_tiberium_mutated
+						has_pop_flag = tiberium_infected
+					}
+				}
+				kill_pop = yes
+				PREV = { change_variable = { which = tiberium_takeover_count value = 1 } }
+			}
+		}
+	}
+	
+	after = {
+		if = {
+			limit = {
+				check_variable = { which = tiberium_takeover_count value > 10 } 
+			}
+			random_list = {
+				10 = {
+					add_deposit = t_yellow_zone
+				}
+				10 = { }
+			}
+		}
+	}
+}

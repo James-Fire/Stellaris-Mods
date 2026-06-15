@@ -1,0 +1,265 @@
+@d_amount_aai_1 = 100
+
+d_minerals_aai_1 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = @d_amount_aai_1
+		}
+	}
+	
+	station = shipclass_mining_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }	
+	drop_weight = { weight = 0 }
+}
+
+d_energy_aai_1 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			energy = @d_amount_aai_1
+		}
+	}
+	
+	station = shipclass_mining_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }	
+	drop_weight = { weight = 0 }
+}
+
+d_food_aai_1 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			food = @d_amount_aai_1
+		}
+	}
+	
+	station = shipclass_mining_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }	
+	drop_weight = { weight = 0 }
+}
+
+d_society_aai_1 = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			society_research = @d_amount_aai_1
+		}
+	}
+	
+	station = shipclass_research_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }	
+	drop_weight = { weight = 0 }
+}
+
+d_physics_aai_1 = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			physics_research = @d_amount_aai_1
+		}
+	}
+	
+	station = shipclass_research_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }	
+	drop_weight = { weight = 0 }
+}
+
+d_engineering_aai_1 = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			engineering_research = @d_amount_aai_1
+		}
+	}
+	
+	station = shipclass_research_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }	
+	drop_weight = { weight = 0 }
+}
+
+d_trade_value_aai_1 = {
+	station = shipclass_mining_station
+	is_for_colonizeable = no
+	
+	planet_modifier = { 
+		trade_value_add = @d_amount_aai_1
+	}
+	
+	potential = { always = no }	
+	drop_weight = { weight = 0 }
+}
+
+d_alloys_aai_1 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			alloys = @d_amount_aai_1
+		}
+	}
+	
+	station = shipclass_mining_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }	
+	drop_weight = { weight = 0 }
+}
+
+d_consumer_goods_aai_1 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			consumer_goods = @d_amount_aai_1
+		}
+	}
+	
+	station = shipclass_mining_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }	
+	drop_weight = { weight = 0 }
+}
+
+d_influence_aai_1 = {
+	resources = {
+		produces = {
+			influence = @d_amount_aai_1
+		}
+	}
+	
+	station = shipclass_research_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }	
+	drop_weight = { weight = 0 }
+}
+
+d_unity_aai_1 = {
+	resources = {
+		produces = {
+			unity = @d_amount_aai_1
+		}
+	}
+	
+	station = shipclass_research_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }	
+	drop_weight = { weight = 0 }
+}
+
+d_exotic_gases_aai_1 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			exotic_gases = @d_amount_aai_1
+		}
+	}
+	
+	station = shipclass_mining_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }	
+	drop_weight = { weight = 0 }
+}
+
+d_rare_crystals_aai_1 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			rare_crystals = @d_amount_aai_1
+		}
+	}
+	
+	station = shipclass_mining_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }	
+	drop_weight = { weight = 0 }
+}
+
+d_volatile_motes_aai_1 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			volatile_motes = @d_amount_aai_1
+		}
+	}
+	
+	station = shipclass_mining_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }	
+	drop_weight = { weight = 0 }
+}
+
+d_zro_aai_1 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			sr_zro = @d_amount_aai_1
+		}
+	}
+	
+	station = shipclass_mining_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }	
+	drop_weight = { weight = 0 }
+}
+
+d_dark_matter_aai_1 = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			sr_dark_matter = @d_amount_aai_1
+		}
+	}
+	
+	station = shipclass_research_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }	
+	drop_weight = { weight = 0 }
+}
+
+d_living_metal_aai_1 = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			sr_living_metal = @d_amount_aai_1
+		}
+	}
+	
+	station = shipclass_mining_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }	
+	drop_weight = { weight = 0 }
+}
+
+d_nanites_aai_1 = {
+	resources = {
+		produces = {
+			nanites = @d_amount_aai_1
+		}
+	}
+	
+	station = shipclass_mining_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }	
+	drop_weight = { weight = 0 }
+}

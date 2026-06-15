@@ -1,0 +1,161 @@
+##########[NORMAL] AUTOMACHINES ##########
+clerk = {
+	category = worker
+	condition_string = WORKER_JOB_TRIGGER
+	building_icon = building_residence
+	clothes_texture_index = 2
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+
+    planet_modifier = {
+		planet_jobs_produces_mult = 0.0025
+		planet_jobs_upkeep_mult = 0.0025
+    }
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_add = 5
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @clerk_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+#		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
+		modifier = {
+			factor = 0.25
+			is_enslaved = yes
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 10
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+			can_fill_specialist_job = no
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+#		modifier = {
+#			factor = 1.1
+#			exists = owner
+#			owner = { is_megacorp = yes }
+#		}
+		modifier = {
+			factor = 0.5
+			exists = owner
+			owner = { is_fallen_empire = yes }
+		}
+	}
+}
+
+maintenance_drone = {
+	category = simple_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = building_maintenance_depot
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+    planet_modifier = {
+		pop_amenities_usage_no_happiness_mult = -0.010
+    }
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_no_happiness_add = 5
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.orbital_defence
+			planet.orbital_defence = {
+				exists = starbase
+				starbase = {
+					has_starbase_building = ring_maintenance_hub
+				}
+			}
+		}
+		planet_amenities_no_happiness_add = 1
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	resources = {
+		category = planet_jobs
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_valid_civic = civic_machine_maintenance_protocols
+				}
+			}
+			unity = 1
+		}
+	}
+
+	weight = {
+		weight = @maintenance_drone_job
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			mult = value:job_weights_modifier|JOB|maintenance_drone|RESOURCE|unity|FACTOR|0.25|
+			exists = owner
+			owner = {
+				has_valid_civic = civic_machine_maintenance_protocols
+			}
+		}
+		modifier = {
+			factor = 1.1
+			exists = owner
+			years_passed < 1
+			owner = { has_valid_civic = civic_machine_assimilator }
+			has_trait = trait_cybernetic
+		}
+
+		modifier = {
+			factor = 1000 # <- hive mind amenities jobs are non specialist so they have base weight 1 instead of 1000 but we still want them
+			NOT = { has_job = maintenance_drone }
+			planet = {
+				free_amenities < 3
+			}
+		}
+
+		modifier = {
+			factor = 1000 # <- hive mind amenities jobs are non specialist so they have base weight 1 instead of 1000 but we still want them
+			has_job = maintenance_drone
+			planet = {
+				free_amenities < 8
+			}
+		}
+	}
+}

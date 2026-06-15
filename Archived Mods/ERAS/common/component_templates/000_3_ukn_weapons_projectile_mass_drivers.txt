@@ -1,0 +1,2708 @@
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+
+#Updated Range on these
+
+# DEFAULT VALUES:
+# is_missile = no
+# is_beam = no
+# is_point_defence = no
+
+####################
+### MASS DRIVERS ###
+####################
+
+########## EARLY SPACE AGE ###########
+
+### Mass Drivers (T0B)
+weapon_component_template = {
+	key = "SMALL_MASS_DRIVER_1"
+	size = small
+	#entity = "small_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_mass_driver_1"
+	icon_frame = 1
+    power = @ukn_mass_driver_1_s_power
+	
+	damage = { min = @ukn_mass_driver_1_s_dmg_min max = @ukn_mass_driver_1_s_dmg_max }
+    windup = { min = @ukn_mass_driver_1_s_windup_min max = @ukn_mass_driver_1_s_windup_max }
+    total_fire_time = @ukn_mass_driver_1_s_total_fire_time
+    range = @ukn_mass_driver_1_s_range
+    accuracy = @ukn_mass_driver_1_accuracy
+	
+    hull_damage = @ukn_mass_driver_1_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_1_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_1_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_1_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_1_shield_damage_mult
+    tracking = @ukn_mass_driver_1_s_tracking
+	
+	prerequisites = { "tech_mass_drivers_1" } 
+	component_set = "UKN_SET_MASS_DRIVER_1"
+	projectile_gfx = "projectile_ukn_mass_driver_1S"
+	tags = { weapon_type_kinetic ukn_weapon_type_accelerator }
+	upgrades_to = "SMALL_MASS_DRIVER_2"
+	
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_small_t1_component_cost_minerals
+			alloys = @ukn_small_t1_component_cost_alloys
+#			ukn_meta_materials = @ukn_small_t1_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t1_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t1_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t1_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t1_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_small_t1_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t1_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_small_t1_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t1_armor_cost_ukn_meta_materials
+#			nanites = @ukn_small_t1_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_small_t1_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t1_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t1_component_upkeep_energy
+#			minerals = @ukn_small_t1_component_upkeep_minerals
+#			alloys = @ukn_small_t1_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t1_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t1_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t1_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t1_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t1_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t1_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t1_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_small_t1_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t1_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_small_t1_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_small_t1_component_upkeep_nanites
+#---
+			minerals = @ukn_small_t1_kinetics_upkeep_minerals
+			alloys = @ukn_small_t1_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t1_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t1
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+weapon_component_template = {
+	key = "MEDIUM_MASS_DRIVER_1"
+	size = medium
+	#entity = "medium_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_mass_driver_1"
+	icon_frame = 1
+    power = @ukn_mass_driver_1_m_power
+	
+	damage = { min = @ukn_mass_driver_1_m_dmg_min max = @ukn_mass_driver_1_m_dmg_max }
+    windup = { min = @ukn_mass_driver_1_m_windup_min max = @ukn_mass_driver_1_m_windup_max }
+    total_fire_time = @ukn_mass_driver_1_m_total_fire_time
+    range = @ukn_mass_driver_1_m_range
+    accuracy = @ukn_mass_driver_1_accuracy
+	
+    hull_damage = @ukn_mass_driver_1_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_1_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_1_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_1_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_1_shield_damage_mult
+    tracking = @ukn_mass_driver_1_m_tracking
+	
+	prerequisites = { "tech_mass_drivers_1" } 
+	component_set = "UKN_SET_MASS_DRIVER_1"
+	projectile_gfx = "projectile_ukn_mass_driver_1M"
+	tags = { weapon_type_kinetic ukn_weapon_type_accelerator }
+	upgrades_to = "MEDIUM_MASS_DRIVER_2"
+	
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_medium_t1_component_cost_minerals
+			alloys = @ukn_medium_t1_component_cost_alloys
+#			ukn_meta_materials = @ukn_medium_t1_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t1_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t1_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t1_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t1_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t1_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t1_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t1_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t1_armor_cost_ukn_meta_materials
+#			nanites = @ukn_medium_t1_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_medium_t1_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t1_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t1_component_upkeep_energy
+#			minerals = @ukn_medium_t1_component_upkeep_minerals
+#			alloys = @ukn_medium_t1_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t1_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t1_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t1_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t1_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t1_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t1_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t1_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_medium_t1_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t1_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t1_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_medium_t1_component_upkeep_nanites
+#---
+			minerals = @ukn_medium_t1_kinetics_upkeep_minerals
+			alloys = @ukn_medium_t1_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t1_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t1
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+weapon_component_template = {
+	key = "LARGE_MASS_DRIVER_1"
+	size = large
+	#entity = "large_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_mass_driver_1"
+	icon_frame = 1
+    power = @ukn_mass_driver_1_l_power
+	
+	damage = { min = @ukn_mass_driver_1_l_dmg_min max = @ukn_mass_driver_1_l_dmg_max }
+    windup = { min = @ukn_mass_driver_1_l_windup_min max = @ukn_mass_driver_1_l_windup_max }
+    total_fire_time = @ukn_mass_driver_1_l_total_fire_time
+    range = @ukn_mass_driver_1_l_range
+    accuracy = @ukn_mass_driver_1_accuracy
+	
+    hull_damage = @ukn_mass_driver_1_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_1_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_1_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_1_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_1_shield_damage_mult
+    tracking = @ukn_mass_driver_1_l_tracking
+	
+	prerequisites = { "tech_mass_drivers_1" } 
+	component_set = "UKN_SET_MASS_DRIVER_1"
+	projectile_gfx = "projectile_ukn_mass_driver_1L"
+	tags = { weapon_type_kinetic ukn_weapon_type_accelerator }
+	upgrades_to = "LARGE_MASS_DRIVER_2"
+	
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_large_t1_component_cost_minerals
+			alloys = @ukn_large_t1_component_cost_alloys
+#			ukn_meta_materials = @ukn_large_t1_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t1_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t1_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t1_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t1_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_large_t1_component_cost_exotic_gases
+#			rare_crystals = @ukn_large_t1_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_large_t1_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_large_t1_armor_cost_ukn_meta_materials
+#			nanites = @ukn_large_t1_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_large_t1_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_large_t1_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_large_t1_component_upkeep_energy
+#			minerals = @ukn_large_t1_component_upkeep_minerals
+#			alloys = @ukn_large_t1_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t1_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t1_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t1_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t1_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t1_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_large_t1_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_large_t1_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_large_t1_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_large_t1_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_large_t1_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_large_t1_component_upkeep_nanites
+#---
+			minerals = @ukn_large_t1_kinetics_upkeep_minerals
+			alloys = @ukn_large_t1_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t1_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t1
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------
+
+############ TRANSLIGHT ############
+
+#~~~~~~~~~~Vanilla T1-T5 Mass Drivers Overwritten~~~~~~~~~~ (Vanilla File Nullified)
+
+### Coilguns (T1)
+weapon_component_template = {
+	type = instant
+	
+	key = "SMALL_MASS_DRIVER_2"
+	size = small
+	#entity = "small_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_ukn_mass_driver_2"
+	icon_frame = 1
+    power = @ukn_mass_driver_2_s_power
+	
+	damage = { min = @ukn_mass_driver_2_s_dmg_min max = @ukn_mass_driver_2_s_dmg_max }
+    windup = { min = @ukn_mass_driver_2_s_windup_min max = @ukn_mass_driver_2_s_windup_max }
+    total_fire_time = @ukn_mass_driver_2_s_total_fire_time
+    range = @ukn_mass_driver_2_s_range
+    accuracy = @ukn_mass_driver_2_accuracy
+	
+    hull_damage = @ukn_mass_driver_2_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_2_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_2_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_2_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_2_shield_damage_mult
+    tracking = @ukn_mass_driver_2_s_tracking
+	
+	prerequisites = { "tech_mass_drivers_2" }
+	component_set = "UKN_SET_MASS_DRIVER_2"
+	projectile_gfx = "projectile_ukn_mass_driver_2S"
+	tags = { weapon_type_kinetic ukn_weapon_type_accelerator }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = "SMALL_MASS_DRIVER_3"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_small_t2_component_cost_minerals
+			alloys = @ukn_small_t2_component_cost_alloys
+#			ukn_meta_materials = @ukn_small_t2_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t2_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t2_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t2_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t2_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_small_t2_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t2_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_small_t2_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t2_armor_cost_ukn_meta_materials
+#			nanites = @ukn_small_t2_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_small_t2_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t2_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t2_component_upkeep_energy
+#			minerals = @ukn_small_t2_component_upkeep_minerals
+#			alloys = @ukn_small_t2_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t2_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t2_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t2_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t2_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t2_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t2_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t2_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_small_t2_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t2_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_small_t2_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_small_t2_component_upkeep_nanites
+#---
+			minerals = @ukn_small_t2_kinetics_upkeep_minerals
+			alloys = @ukn_small_t2_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t2_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t2
+	}
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "MEDIUM_MASS_DRIVER_2"
+	size = medium
+	#entity = "medium_kinetic_gun_entity"
+		
+	icon = "GFX_ship_part_ukn_mass_driver_2"
+	icon_frame = 1
+    power = @ukn_mass_driver_2_m_power
+	
+	damage = { min = @ukn_mass_driver_2_m_dmg_min max = @ukn_mass_driver_2_m_dmg_max }
+    windup = { min = @ukn_mass_driver_2_m_windup_min max = @ukn_mass_driver_2_m_windup_max }
+    total_fire_time = @ukn_mass_driver_2_m_total_fire_time
+    range = @ukn_mass_driver_2_m_range
+    accuracy = @ukn_mass_driver_2_accuracy
+	
+    hull_damage = @ukn_mass_driver_2_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_2_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_2_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_2_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_2_shield_damage_mult
+    tracking = @ukn_mass_driver_2_m_tracking
+	
+	prerequisites = { "tech_mass_drivers_2" }
+	component_set = "UKN_SET_MASS_DRIVER_2"
+	projectile_gfx = "projectile_ukn_mass_driver_2M"
+	tags = { weapon_type_kinetic ukn_weapon_type_accelerator }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = "MEDIUM_MASS_DRIVER_3"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_medium_t2_component_cost_minerals
+			alloys = @ukn_medium_t2_component_cost_alloys
+#			ukn_meta_materials = @ukn_medium_t2_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t2_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t2_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t2_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t2_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t2_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t2_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t2_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t2_armor_cost_ukn_meta_materials
+#			nanites = @ukn_medium_t2_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_medium_t2_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t2_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t2_component_upkeep_energy
+#			minerals = @ukn_medium_t2_component_upkeep_minerals
+#			alloys = @ukn_medium_t2_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t2_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t2_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t2_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t2_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t2_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t2_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t2_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_medium_t2_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t2_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t2_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_medium_t2_component_upkeep_nanites
+#---
+			minerals = @ukn_medium_t2_kinetics_upkeep_minerals
+			alloys = @ukn_medium_t2_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t2_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t2
+	}
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "LARGE_MASS_DRIVER_2"
+	size = large
+	#entity = "large_kinetic_gun_entity"
+		
+	icon = "GFX_ship_part_ukn_mass_driver_2"
+	icon_frame = 1
+    power = @ukn_mass_driver_2_l_power
+	
+	damage = { min = @ukn_mass_driver_2_l_dmg_min max = @ukn_mass_driver_2_l_dmg_max }
+    windup = { min = @ukn_mass_driver_2_l_windup_min max = @ukn_mass_driver_2_l_windup_max }
+    total_fire_time = @ukn_mass_driver_2_l_total_fire_time
+    range = @ukn_mass_driver_2_l_range
+    accuracy = @ukn_mass_driver_2_accuracy
+	
+    hull_damage = @ukn_mass_driver_2_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_2_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_2_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_2_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_2_shield_damage_mult
+    tracking = @ukn_mass_driver_2_l_tracking
+	
+	prerequisites = { "tech_mass_drivers_2" }
+	component_set = "UKN_SET_MASS_DRIVER_2"
+	projectile_gfx = "projectile_ukn_mass_driver_2L"
+	tags = { weapon_type_kinetic ukn_weapon_type_accelerator }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = "LARGE_MASS_DRIVER_3"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_large_t2_component_cost_minerals
+			alloys = @ukn_large_t2_component_cost_alloys
+#			ukn_meta_materials = @ukn_large_t2_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t2_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t2_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t2_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t2_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_large_t2_component_cost_exotic_gases
+#			rare_crystals = @ukn_large_t2_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_large_t2_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_large_t2_armor_cost_ukn_meta_materials
+#			nanites = @ukn_large_t2_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_large_t2_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_large_t2_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_large_t2_component_upkeep_energy
+#			minerals = @ukn_large_t2_component_upkeep_minerals
+#			alloys = @ukn_large_t2_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t2_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t2_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t2_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t2_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t2_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_large_t2_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_large_t2_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_large_t2_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_large_t2_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_large_t2_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_large_t2_component_upkeep_nanites
+#---
+			minerals = @ukn_large_t2_kinetics_upkeep_minerals
+			alloys = @ukn_large_t2_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t2_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t2
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Railguns (T2)
+weapon_component_template = {
+	type = instant
+	
+	key = "SMALL_MASS_DRIVER_3"
+	size = small
+	#entity = "small_kinetic_gun_entity"
+		
+	icon = "GFX_ship_part_ukn_mass_driver_3"
+	icon_frame = 1
+    power = @ukn_mass_driver_3_s_power
+	
+	damage = { min = @ukn_mass_driver_3_s_dmg_min max = @ukn_mass_driver_3_s_dmg_max }
+    windup = { min = @ukn_mass_driver_3_s_windup_min max = @ukn_mass_driver_3_s_windup_max }
+    total_fire_time = @ukn_mass_driver_3_s_total_fire_time
+    range = @ukn_mass_driver_3_s_range
+    accuracy = @ukn_mass_driver_3_accuracy
+	
+    hull_damage = @ukn_mass_driver_3_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_3_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_3_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_3_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_3_shield_damage_mult
+    tracking = @ukn_mass_driver_3_s_tracking
+	
+	prerequisites = { "tech_mass_drivers_3" }
+	component_set = "UKN_SET_MASS_DRIVER_3"
+	projectile_gfx = "projectile_ukn_mass_driver_3S"
+	tags = { weapon_type_kinetic ukn_weapon_type_accelerator }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = "SMALL_MASS_DRIVER_4"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_small_t3_component_cost_minerals
+			alloys = @ukn_small_t3_component_cost_alloys
+#			ukn_meta_materials = @ukn_small_t3_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t3_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t3_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t3_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t3_component_cost_ukn_causalitons
+			exotic_gases = @ukn_small_t3_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t3_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_small_t3_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t3_armor_cost_ukn_meta_materials
+#			nanites = @ukn_small_t3_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_small_t3_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t3_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t3_component_upkeep_energy
+#			minerals = @ukn_small_t3_component_upkeep_minerals
+#			alloys = @ukn_small_t3_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t3_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t3_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t3_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t3_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t3_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t3_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t3_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_small_t3_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t3_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_small_t3_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_small_t3_component_upkeep_nanites
+#---
+			minerals = @ukn_small_t3_kinetics_upkeep_minerals
+			alloys = @ukn_small_t3_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t3_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t3
+	}
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "MEDIUM_MASS_DRIVER_3"
+	size = medium
+	#entity = "medium_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_ukn_mass_driver_3"
+	icon_frame = 1
+    power = @ukn_mass_driver_3_m_power
+	
+	damage = { min = @ukn_mass_driver_3_m_dmg_min max = @ukn_mass_driver_3_m_dmg_max }
+    windup = { min = @ukn_mass_driver_3_m_windup_min max = @ukn_mass_driver_3_m_windup_max }
+    total_fire_time = @ukn_mass_driver_3_m_total_fire_time
+    range = @ukn_mass_driver_3_m_range
+    accuracy = @ukn_mass_driver_3_accuracy
+	
+    hull_damage = @ukn_mass_driver_3_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_3_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_3_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_3_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_3_shield_damage_mult
+    tracking = @ukn_mass_driver_3_m_tracking
+	
+	prerequisites = { "tech_mass_drivers_3" }
+	component_set = "UKN_SET_MASS_DRIVER_3"
+	projectile_gfx = "projectile_ukn_mass_driver_3M"
+	tags = { weapon_type_kinetic ukn_weapon_type_accelerator }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = "MEDIUM_MASS_DRIVER_4"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_medium_t3_component_cost_minerals
+			alloys = @ukn_medium_t3_component_cost_alloys
+#			ukn_meta_materials = @ukn_medium_t3_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t3_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t3_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t3_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t3_component_cost_ukn_causalitons
+			exotic_gases = @ukn_medium_t3_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t3_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t3_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t3_armor_cost_ukn_meta_materials
+#			nanites = @ukn_medium_t3_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_medium_t3_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t3_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t3_component_upkeep_energy
+#			minerals = @ukn_medium_t3_component_upkeep_minerals
+#			alloys = @ukn_medium_t3_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t3_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t3_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t3_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t3_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t3_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t3_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t3_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_medium_t3_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t3_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t3_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_medium_t3_component_upkeep_nanites
+#---
+			minerals = @ukn_medium_t3_kinetics_upkeep_minerals
+			alloys = @ukn_medium_t3_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t3_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t3
+	}
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "LARGE_MASS_DRIVER_3"
+	size = large
+	#entity = "large_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_ukn_mass_driver_3"
+	icon_frame = 1
+    power = @ukn_mass_driver_3_l_power
+	
+	damage = { min = @ukn_mass_driver_3_l_dmg_min max = @ukn_mass_driver_3_l_dmg_max }
+    windup = { min = @ukn_mass_driver_3_l_windup_min max = @ukn_mass_driver_3_l_windup_max }
+    total_fire_time = @ukn_mass_driver_3_l_total_fire_time
+    range = @ukn_mass_driver_3_l_range
+    accuracy = @ukn_mass_driver_3_accuracy
+	
+    hull_damage = @ukn_mass_driver_3_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_3_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_3_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_3_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_3_shield_damage_mult
+    tracking = @ukn_mass_driver_3_l_tracking
+	
+	prerequisites = { "tech_mass_drivers_3" }
+	component_set = "UKN_SET_MASS_DRIVER_3"
+	projectile_gfx = "projectile_ukn_mass_driver_3L"
+	tags = { weapon_type_kinetic ukn_weapon_type_accelerator }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = "LARGE_MASS_DRIVER_4"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_large_t3_component_cost_minerals
+			alloys = @ukn_large_t3_component_cost_alloys
+#			ukn_meta_materials = @ukn_large_t3_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t3_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t3_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t3_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t3_component_cost_ukn_causalitons
+			exotic_gases = @ukn_large_t3_component_cost_exotic_gases
+#			rare_crystals = @ukn_large_t3_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_large_t3_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_large_t3_armor_cost_ukn_meta_materials
+#			nanites = @ukn_large_t3_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_large_t3_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_large_t3_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_large_t3_component_upkeep_energy
+#			minerals = @ukn_large_t3_component_upkeep_minerals
+#			alloys = @ukn_large_t3_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t3_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t3_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t3_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t3_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t3_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_large_t3_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_large_t3_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_large_t3_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_large_t3_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_large_t3_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_large_t3_component_upkeep_nanites
+#---
+			minerals = @ukn_large_t3_kinetics_upkeep_minerals
+			alloys = @ukn_large_t3_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t3_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t3
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Hybrid Accelerators (T3)
+weapon_component_template = {
+	type = instant
+	
+	key = "SMALL_MASS_DRIVER_4"
+	size = small
+	#entity = "small_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_ukn_mass_driver_4"
+	icon_frame = 1
+    power = @ukn_mass_driver_4_s_power
+	
+	damage = { min = @ukn_mass_driver_4_s_dmg_min max = @ukn_mass_driver_4_s_dmg_max }
+    windup = { min = @ukn_mass_driver_4_s_windup_min max = @ukn_mass_driver_4_s_windup_max }
+    total_fire_time = @ukn_mass_driver_4_s_total_fire_time
+    range = @ukn_mass_driver_4_s_range
+    accuracy = @ukn_mass_driver_4_accuracy
+	
+    hull_damage = @ukn_mass_driver_4_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_4_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_4_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_4_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_4_shield_damage_mult
+    tracking = @ukn_mass_driver_4_s_tracking
+	
+	prerequisites = { "tech_mass_drivers_4" }
+	component_set = "UKN_SET_MASS_DRIVER_4"
+	projectile_gfx = "projectile_ukn_mass_driver_4S"
+	tags = { weapon_type_kinetic ukn_weapon_type_accelerator }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = "SMALL_MASS_DRIVER_5"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_small_t4_component_cost_minerals
+			alloys = @ukn_small_t4_component_cost_alloys
+			ukn_meta_materials = @ukn_small_t4_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t4_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t4_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t4_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t4_component_cost_ukn_causalitons
+			exotic_gases = @ukn_small_t4_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t4_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_small_t4_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t4_armor_cost_ukn_meta_materials
+#			nanites = @ukn_small_t4_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_small_t4_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t4_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t4_component_upkeep_energy
+#			minerals = @ukn_small_t4_component_upkeep_minerals
+#			alloys = @ukn_small_t4_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t4_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t4_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t4_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t4_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t4_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t4_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t4_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_small_t4_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t4_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_small_t4_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_small_t4_component_upkeep_nanites
+#---
+			minerals = @ukn_small_t4_kinetics_upkeep_minerals
+			alloys = @ukn_small_t4_kinetics_upkeep_alloys
+			ukn_meta_materials = @ukn_small_t4_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t4
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "MEDIUM_MASS_DRIVER_4"
+	size = medium
+	#entity = "medium_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_ukn_mass_driver_4"
+	icon_frame = 1
+    power = @ukn_mass_driver_4_m_power
+	
+	damage = { min = @ukn_mass_driver_4_m_dmg_min max = @ukn_mass_driver_4_m_dmg_max }
+    windup = { min = @ukn_mass_driver_4_m_windup_min max = @ukn_mass_driver_4_m_windup_max }
+    total_fire_time = @ukn_mass_driver_4_m_total_fire_time
+    range = @ukn_mass_driver_4_m_range
+    accuracy = @ukn_mass_driver_4_accuracy
+	
+    hull_damage = @ukn_mass_driver_4_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_4_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_4_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_4_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_4_shield_damage_mult
+    tracking = @ukn_mass_driver_4_m_tracking
+	
+	prerequisites = { "tech_mass_drivers_4" }
+	component_set = "UKN_SET_MASS_DRIVER_4"
+	projectile_gfx = "projectile_ukn_mass_driver_4M"
+	tags = { weapon_type_kinetic ukn_weapon_type_accelerator }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = "MEDIUM_MASS_DRIVER_5"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_medium_t4_component_cost_minerals
+			alloys = @ukn_medium_t4_component_cost_alloys
+			ukn_meta_materials = @ukn_medium_t4_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t4_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t4_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t4_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t4_component_cost_ukn_causalitons
+			exotic_gases = @ukn_medium_t4_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t4_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t4_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t4_armor_cost_ukn_meta_materials
+#			nanites = @ukn_medium_t4_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_medium_t4_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t4_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t4_component_upkeep_energy
+#			minerals = @ukn_medium_t4_component_upkeep_minerals
+#			alloys = @ukn_medium_t4_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t4_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t4_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t4_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t4_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t4_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t4_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t4_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_medium_t4_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t4_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t4_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_medium_t4_component_upkeep_nanites
+#---
+			minerals = @ukn_medium_t4_kinetics_upkeep_minerals
+			alloys = @ukn_medium_t4_kinetics_upkeep_alloys
+			ukn_meta_materials = @ukn_medium_t4_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t4
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "LARGE_MASS_DRIVER_4"
+	size = large
+	#entity = "large_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_ukn_mass_driver_4"
+	icon_frame = 1
+    power = @ukn_mass_driver_4_l_power
+	
+	damage = { min = @ukn_mass_driver_4_l_dmg_min max = @ukn_mass_driver_4_l_dmg_max }
+    windup = { min = @ukn_mass_driver_4_l_windup_min max = @ukn_mass_driver_4_l_windup_max }
+    total_fire_time = @ukn_mass_driver_4_l_total_fire_time
+    range = @ukn_mass_driver_4_l_range
+    accuracy = @ukn_mass_driver_4_accuracy
+	
+    hull_damage = @ukn_mass_driver_4_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_4_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_4_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_4_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_4_shield_damage_mult
+    tracking = @ukn_mass_driver_4_l_tracking
+	
+	prerequisites = { "tech_mass_drivers_4" }
+	component_set = "UKN_SET_MASS_DRIVER_4"
+	projectile_gfx = "projectile_ukn_mass_driver_4L"
+	tags = { weapon_type_kinetic ukn_weapon_type_accelerator }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = "LARGE_MASS_DRIVER_5"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_large_t4_component_cost_minerals
+			alloys = @ukn_large_t4_component_cost_alloys
+			ukn_meta_materials = @ukn_large_t4_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t4_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t4_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t4_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t4_component_cost_ukn_causalitons
+			exotic_gases = @ukn_large_t4_component_cost_exotic_gases
+#			rare_crystals = @ukn_large_t4_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_large_t4_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_large_t4_armor_cost_ukn_meta_materials
+#			nanites = @ukn_large_t4_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_large_t4_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_large_t4_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_large_t4_component_upkeep_energy
+#			minerals = @ukn_large_t4_component_upkeep_minerals
+#			alloys = @ukn_large_t4_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t4_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t4_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t4_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t4_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t4_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_large_t4_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_large_t4_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_large_t4_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_large_t4_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_large_t4_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_large_t4_component_upkeep_nanites
+#---
+			minerals = @ukn_large_t4_kinetics_upkeep_minerals
+			alloys = @ukn_large_t4_kinetics_upkeep_alloys
+			ukn_meta_materials = @ukn_large_t4_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t4
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Phased Accelerators (T4)
+weapon_component_template = {
+	type = instant
+	
+	key = "SMALL_MASS_DRIVER_5"
+	size = small
+	#entity = "small_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_ukn_mass_driver_5"
+	icon_frame = 1
+    power = @ukn_mass_driver_5_s_power
+	
+	damage = { min = @ukn_mass_driver_5_s_dmg_min max = @ukn_mass_driver_5_s_dmg_max }
+    windup = { min = @ukn_mass_driver_5_s_windup_min max = @ukn_mass_driver_5_s_windup_max }
+    total_fire_time = @ukn_mass_driver_5_s_total_fire_time
+    range = @ukn_mass_driver_5_s_range
+    accuracy = @ukn_mass_driver_5_accuracy
+	
+    hull_damage = @ukn_mass_driver_5_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_5_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_5_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_5_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_5_shield_damage_mult
+    tracking = @ukn_mass_driver_5_s_tracking
+	
+	prerequisites = { "tech_mass_drivers_5" }
+	component_set = "UKN_SET_MASS_DRIVER_5"
+	projectile_gfx = "projectile_ukn_mass_driver_5S"
+	tags = { weapon_type_kinetic ukn_weapon_type_semi_guided_accelerator }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = "UKN_SMALL_MASS_DRIVER_6"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_small_t5_component_cost_minerals
+#			alloys = @ukn_small_t5_component_cost_alloys
+			ukn_meta_materials = @ukn_small_t5_component_cost_ukn_meta_materials
+			ukn_femtomatter = @ukn_small_t5_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t5_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t5_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t5_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_small_t5_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t5_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_small_t5_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t5_armor_cost_ukn_meta_materials
+#			nanites = @ukn_small_t5_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_small_t5_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t5_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t5_component_upkeep_energy
+#			minerals = @ukn_small_t5_component_upkeep_minerals
+#			alloys = @ukn_small_t5_component_upkeep_alloys
+			ukn_meta_materials = @ukn_small_t5_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t5_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t5_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t5_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t5_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t5_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t5_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_small_t5_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t5_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_small_t5_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_small_t5_component_upkeep_nanites
+#---
+#			minerals = @ukn_small_t5_kinetics_upkeep_minerals
+#			alloys = @ukn_small_t5_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t5_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t5
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_femtomatter value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "MEDIUM_MASS_DRIVER_5"
+	size = medium
+	#entity = "medium_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_ukn_mass_driver_5"
+	icon_frame = 1
+    power = @ukn_mass_driver_5_m_power
+	
+	damage = { min = @ukn_mass_driver_5_m_dmg_min max = @ukn_mass_driver_5_m_dmg_max }
+    windup = { min = @ukn_mass_driver_5_m_windup_min max = @ukn_mass_driver_5_m_windup_max }
+    total_fire_time = @ukn_mass_driver_5_m_total_fire_time
+    range = @ukn_mass_driver_5_m_range
+    accuracy = @ukn_mass_driver_5_accuracy
+	
+    hull_damage = @ukn_mass_driver_5_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_5_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_5_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_5_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_5_shield_damage_mult
+    tracking = @ukn_mass_driver_5_m_tracking
+	
+	prerequisites = { "tech_mass_drivers_5" }
+	component_set = "UKN_SET_MASS_DRIVER_5"
+	projectile_gfx = "projectile_ukn_mass_driver_5M"
+	tags = { weapon_type_kinetic ukn_weapon_type_semi_guided_accelerator }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = "UKN_MEDIUM_MASS_DRIVER_6"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_medium_t5_component_cost_minerals
+#			alloys = @ukn_medium_t5_component_cost_alloys
+			ukn_meta_materials = @ukn_medium_t5_component_cost_ukn_meta_materials
+			ukn_femtomatter = @ukn_medium_t5_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t5_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t5_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t5_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t5_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t5_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t5_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t5_armor_cost_ukn_meta_materials
+#			nanites = @ukn_medium_t5_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_medium_t5_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t5_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t5_component_upkeep_energy
+#			minerals = @ukn_medium_t5_component_upkeep_minerals
+#			alloys = @ukn_medium_t5_component_upkeep_alloys
+			ukn_meta_materials = @ukn_medium_t5_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t5_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t5_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t5_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t5_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t5_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t5_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_medium_t5_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t5_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t5_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_medium_t5_component_upkeep_nanites
+#---
+#			minerals = @ukn_medium_t5_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t5_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t5_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t5
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_femtomatter value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "LARGE_MASS_DRIVER_5"
+	size = large
+	#entity = "large_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_ukn_mass_driver_5"
+	icon_frame = 1
+    power = @ukn_mass_driver_5_l_power
+	
+	damage = { min = @ukn_mass_driver_5_l_dmg_min max = @ukn_mass_driver_5_l_dmg_max }
+    windup = { min = @ukn_mass_driver_5_l_windup_min max = @ukn_mass_driver_5_l_windup_max }
+    total_fire_time = @ukn_mass_driver_5_l_total_fire_time
+    range = @ukn_mass_driver_5_l_range
+    accuracy = @ukn_mass_driver_5_accuracy
+	
+    hull_damage = @ukn_mass_driver_5_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_5_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_5_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_5_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_5_shield_damage_mult
+    tracking = @ukn_mass_driver_5_l_tracking
+	
+	prerequisites = { "tech_mass_drivers_5" }
+	component_set = "UKN_SET_MASS_DRIVER_5"
+	projectile_gfx = "projectile_ukn_mass_driver_5L"
+	tags = { weapon_type_kinetic ukn_weapon_type_semi_guided_accelerator }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = "UKN_LARGE_MASS_DRIVER_6"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_large_t5_component_cost_minerals
+#			alloys = @ukn_large_t5_component_cost_alloys
+			ukn_meta_materials = @ukn_large_t5_component_cost_ukn_meta_materials
+			ukn_femtomatter = @ukn_large_t5_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t5_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t5_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t5_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_large_t5_component_cost_exotic_gases
+#			rare_crystals = @ukn_large_t5_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_large_t5_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_large_t5_armor_cost_ukn_meta_materials
+#			nanites = @ukn_large_t5_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_large_t5_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_large_t5_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_large_t5_component_upkeep_energy
+#			minerals = @ukn_large_t5_component_upkeep_minerals
+#			alloys = @ukn_large_t5_component_upkeep_alloys
+			ukn_meta_materials = @ukn_large_t5_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t5_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t5_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t5_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t5_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_large_t5_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_large_t5_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_large_t5_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_large_t5_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_large_t5_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_large_t5_component_upkeep_nanites
+#---
+#			minerals = @ukn_large_t5_kinetics_upkeep_minerals
+#			alloys = @ukn_large_t5_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t5_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t5
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_femtomatter value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Ultra-Relativistic Accelerators (T5)
+weapon_component_template = {
+	type = instant
+	
+	key = "UKN_SMALL_MASS_DRIVER_6"
+	size = small
+	#entity = "small_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_ukn_mass_driver_6"
+	icon_frame = 1
+    power = @ukn_mass_driver_6_s_power
+	
+	damage = { min = @ukn_mass_driver_6_s_dmg_min max = @ukn_mass_driver_6_s_dmg_max }
+    windup = { min = @ukn_mass_driver_6_s_windup_min max = @ukn_mass_driver_6_s_windup_max }
+    total_fire_time = @ukn_mass_driver_6_s_total_fire_time
+    range = @ukn_mass_driver_6_s_range
+    accuracy = @ukn_mass_driver_6_accuracy
+	
+    hull_damage = @ukn_mass_driver_6_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_6_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_6_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_6_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_6_shield_damage_mult
+    tracking = @ukn_mass_driver_6_s_tracking
+	
+	prerequisites = { "tech_ukn_mass_driver_6" }
+	component_set = "UKN_SET_MASS_DRIVER_6"
+	projectile_gfx = "projectile_ukn_mass_driver_6S"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = "UKN_SMALL_MASS_DRIVER_7"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_small_t6_component_cost_minerals
+#			alloys = @ukn_small_t6_component_cost_alloys
+			ukn_meta_materials = @ukn_small_t6_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t6_component_cost_ukn_femtomatter
+			ukn_condensics = @ukn_small_t6_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t6_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t6_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_small_t6_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t6_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_small_t6_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t6_armor_cost_ukn_meta_materials
+#			nanites = @ukn_small_t6_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_small_t6_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t6_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t6_component_upkeep_energy
+#			minerals = @ukn_small_t6_component_upkeep_minerals
+#			alloys = @ukn_small_t6_component_upkeep_alloys
+			ukn_meta_materials = @ukn_small_t6_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t6_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t6_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t6_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t6_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t6_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t6_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_small_t6_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t6_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_small_t6_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_small_t6_component_upkeep_nanites
+#---
+#			minerals = @ukn_small_t6_kinetics_upkeep_minerals
+#			alloys = @ukn_small_t6_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t6_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t6
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_condensics value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "UKN_MEDIUM_MASS_DRIVER_6"
+	size = medium
+	#entity = "medium_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_ukn_mass_driver_6"
+	icon_frame = 1
+    power = @ukn_mass_driver_6_m_power
+	
+	damage = { min = @ukn_mass_driver_6_m_dmg_min max = @ukn_mass_driver_6_m_dmg_max }
+    windup = { min = @ukn_mass_driver_6_m_windup_min max = @ukn_mass_driver_6_m_windup_max }
+    total_fire_time = @ukn_mass_driver_6_m_total_fire_time
+    range = @ukn_mass_driver_6_m_range
+    accuracy = @ukn_mass_driver_6_accuracy
+	
+    hull_damage = @ukn_mass_driver_6_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_6_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_6_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_6_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_6_shield_damage_mult
+    tracking = @ukn_mass_driver_6_m_tracking
+	
+	prerequisites = { "tech_ukn_mass_driver_6" }
+	component_set = "UKN_SET_MASS_DRIVER_6"
+	projectile_gfx = "projectile_ukn_mass_driver_6M"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = "UKN_MEDIUM_MASS_DRIVER_7"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_medium_t6_component_cost_minerals
+#			alloys = @ukn_medium_t6_component_cost_alloys
+			ukn_meta_materials = @ukn_medium_t6_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t6_component_cost_ukn_femtomatter
+			ukn_condensics = @ukn_medium_t6_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t6_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t6_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t6_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t6_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t6_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t6_armor_cost_ukn_meta_materials
+#			nanites = @ukn_medium_t6_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_medium_t6_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t6_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t6_component_upkeep_energy
+#			minerals = @ukn_medium_t6_component_upkeep_minerals
+#			alloys = @ukn_medium_t6_component_upkeep_alloys
+			ukn_meta_materials = @ukn_medium_t6_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t6_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t6_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t6_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t6_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t6_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t6_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_medium_t6_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t6_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t6_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_medium_t6_component_upkeep_nanites
+#---
+#			minerals = @ukn_medium_t6_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t6_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t6_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t6
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_condensics value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	type = instant
+	
+	key = "UKN_LARGE_MASS_DRIVER_6"
+	size = large
+	#entity = "large_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_ukn_mass_driver_6"
+	icon_frame = 1
+    power = @ukn_mass_driver_6_l_power
+	
+	damage = { min = @ukn_mass_driver_6_l_dmg_min max = @ukn_mass_driver_6_l_dmg_max }
+    windup = { min = @ukn_mass_driver_6_l_windup_min max = @ukn_mass_driver_6_l_windup_max }
+    total_fire_time = @ukn_mass_driver_6_l_total_fire_time
+    range = @ukn_mass_driver_6_l_range
+    accuracy = @ukn_mass_driver_6_accuracy
+	
+    hull_damage = @ukn_mass_driver_6_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_6_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_6_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_6_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_6_shield_damage_mult
+    tracking = @ukn_mass_driver_6_l_tracking
+	
+	prerequisites = { "tech_ukn_mass_driver_6" }
+	component_set = "UKN_SET_MASS_DRIVER_6"
+	projectile_gfx = "projectile_ukn_mass_driver_6L"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = "UKN_LARGE_MASS_DRIVER_7"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_large_t6_component_cost_minerals
+#			alloys = @ukn_large_t6_component_cost_alloys
+			ukn_meta_materials = @ukn_large_t6_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t6_component_cost_ukn_femtomatter
+			ukn_condensics = @ukn_large_t6_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t6_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t6_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_large_t6_component_cost_exotic_gases
+#			rare_crystals = @ukn_large_t6_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_large_t6_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_large_t6_armor_cost_ukn_meta_materials
+#			nanites = @ukn_large_t6_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_large_t6_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_large_t6_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_large_t6_component_upkeep_energy
+#			minerals = @ukn_large_t6_component_upkeep_minerals
+#			alloys = @ukn_large_t6_component_upkeep_alloys
+			ukn_meta_materials = @ukn_large_t6_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t6_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t6_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t6_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t6_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_large_t6_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_large_t6_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_large_t6_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_large_t6_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_large_t6_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_large_t6_component_upkeep_nanites
+#---
+#			minerals = @ukn_large_t6_kinetics_upkeep_minerals
+#			alloys = @ukn_large_t6_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t6_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t6
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_condensics value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+#~~~~~~~~~~Vanilla Overwrite End (Mass Drivers T1-T5)~~~~~~~~~~
+
+### Superluminal Accelerators (T6)
+weapon_component_template = {
+	key = "UKN_SMALL_MASS_DRIVER_7"
+	size = small
+	#entity = "small_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_mass_driver_7"
+	icon_frame = 1
+    power = @ukn_mass_driver_7_s_power
+	
+	damage = { min = @ukn_mass_driver_7_s_dmg_min max = @ukn_mass_driver_7_s_dmg_max }
+    windup = { min = @ukn_mass_driver_7_s_windup_min max = @ukn_mass_driver_7_s_windup_max }
+    total_fire_time = @ukn_mass_driver_7_s_total_fire_time
+    range = @ukn_mass_driver_7_s_range
+    accuracy = @ukn_mass_driver_7_accuracy
+	
+    hull_damage = @ukn_mass_driver_7_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_7_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_7_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_7_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_7_shield_damage_mult
+    tracking = @ukn_mass_driver_7_s_tracking
+	
+	prerequisites = { "tech_ukn_mass_driver_7" } #
+	component_set = "UKN_SET_MASS_DRIVER_7"
+	projectile_gfx = "projectile_ukn_mass_driver_7S"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator }
+	upgrades_to = "UKN_SMALL_MASS_DRIVER_8"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_small_t7_component_cost_minerals
+#			alloys = @ukn_small_t7_component_cost_alloys
+			ukn_meta_materials = @ukn_small_t7_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t7_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t7_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_small_t7_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t7_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_small_t7_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t7_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_small_t7_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t7_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_small_t7_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_small_t7_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t7_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t7_component_upkeep_energy
+#			minerals = @ukn_small_t7_component_upkeep_minerals
+#			alloys = @ukn_small_t7_component_upkeep_alloys
+			ukn_meta_materials = @ukn_small_t7_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t7_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t7_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t7_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t7_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t7_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t7_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_small_t7_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t7_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_small_t7_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_small_t7_kinetics_upkeep_minerals
+#			alloys = @ukn_small_t7_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t7_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t7
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+weapon_component_template = {
+	key = "UKN_MEDIUM_MASS_DRIVER_7"
+	size = medium
+	#entity = "medium_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_mass_driver_7"
+	icon_frame = 1
+    power = @ukn_mass_driver_7_m_power
+	
+	damage = { min = @ukn_mass_driver_7_m_dmg_min max = @ukn_mass_driver_7_m_dmg_max }
+    windup = { min = @ukn_mass_driver_7_m_windup_min max = @ukn_mass_driver_7_m_windup_max }
+    total_fire_time = @ukn_mass_driver_7_m_total_fire_time
+    range = @ukn_mass_driver_7_m_range
+    accuracy = @ukn_mass_driver_7_accuracy
+	
+    hull_damage = @ukn_mass_driver_7_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_7_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_7_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_7_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_7_shield_damage_mult
+    tracking = @ukn_mass_driver_7_m_tracking
+	
+	prerequisites = { "tech_ukn_mass_driver_7" } #
+	component_set = "UKN_SET_MASS_DRIVER_7"
+	projectile_gfx = "projectile_ukn_mass_driver_7M"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator }
+	upgrades_to = "UKN_MEDIUM_MASS_DRIVER_8"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_medium_t7_component_cost_minerals
+#			alloys = @ukn_medium_t7_component_cost_alloys
+			ukn_meta_materials = @ukn_medium_t7_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t7_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t7_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_medium_t7_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t7_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t7_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t7_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t7_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t7_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_medium_t7_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_medium_t7_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t7_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t7_component_upkeep_energy
+#			minerals = @ukn_medium_t7_component_upkeep_minerals
+#			alloys = @ukn_medium_t7_component_upkeep_alloys
+			ukn_meta_materials = @ukn_medium_t7_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t7_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t7_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t7_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t7_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t7_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t7_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_medium_t7_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t7_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t7_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_medium_t7_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t7_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t7_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t7
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+weapon_component_template = {
+	key = "UKN_LARGE_MASS_DRIVER_7"
+	size = large
+	#entity = "large_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_mass_driver_7"
+	icon_frame = 1
+    power = @ukn_mass_driver_7_l_power
+	
+	damage = { min = @ukn_mass_driver_7_l_dmg_min max = @ukn_mass_driver_7_l_dmg_max }
+    windup = { min = @ukn_mass_driver_7_l_windup_min max = @ukn_mass_driver_7_l_windup_max }
+    total_fire_time = @ukn_mass_driver_7_l_total_fire_time
+    range = @ukn_mass_driver_7_l_range
+    accuracy = @ukn_mass_driver_7_accuracy
+	
+    hull_damage = @ukn_mass_driver_7_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_7_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_7_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_7_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_7_shield_damage_mult
+    tracking = @ukn_mass_driver_7_l_tracking
+	
+	prerequisites = { "tech_ukn_mass_driver_7" } #
+	component_set = "UKN_SET_MASS_DRIVER_7"
+	projectile_gfx = "projectile_ukn_mass_driver_7L"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator }
+	upgrades_to = "UKN_LARGE_MASS_DRIVER_8"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_large_t7_component_cost_minerals
+#			alloys = @ukn_large_t7_component_cost_alloys
+			ukn_meta_materials = @ukn_large_t7_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t7_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t7_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_large_t7_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t7_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_large_t7_component_cost_exotic_gases
+#			rare_crystals = @ukn_large_t7_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_large_t7_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_large_t7_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_large_t7_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_large_t7_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_large_t7_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_large_t7_component_upkeep_energy
+#			minerals = @ukn_large_t7_component_upkeep_minerals
+#			alloys = @ukn_large_t7_component_upkeep_alloys
+			ukn_meta_materials = @ukn_large_t7_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t7_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t7_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t7_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t7_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_large_t7_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_large_t7_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_large_t7_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_large_t7_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_large_t7_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_large_t7_kinetics_upkeep_minerals
+#			alloys = @ukn_large_t7_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t7_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t7
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------
+
+### Supersolid Accelerators (T7)
+weapon_component_template = {
+	key = "UKN_SMALL_MASS_DRIVER_8"
+	size = small
+	#entity = "small_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_mass_driver_8"
+	icon_frame = 1
+    power = @ukn_mass_driver_8_s_power
+	
+	damage = { min = @ukn_mass_driver_8_s_dmg_min max = @ukn_mass_driver_8_s_dmg_max }
+    windup = { min = @ukn_mass_driver_8_s_windup_min max = @ukn_mass_driver_8_s_windup_max }
+    total_fire_time = @ukn_mass_driver_8_s_total_fire_time
+    range = @ukn_mass_driver_8_s_range
+    accuracy = @ukn_mass_driver_8_accuracy
+	
+    hull_damage = @ukn_mass_driver_8_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_8_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_8_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_8_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_8_shield_damage_mult
+    tracking = @ukn_mass_driver_8_s_tracking
+	
+	prerequisites = { "tech_ukn_mass_driver_8" } #
+	component_set = "UKN_SET_MASS_DRIVER_8"
+	projectile_gfx = "projectile_ukn_mass_driver_8S"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator }
+	upgrades_to = "UKN_SMALL_MASS_DRIVER_9"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_small_t8_component_cost_minerals
+#			alloys = @ukn_small_t8_component_cost_alloys
+			ukn_meta_materials = @ukn_small_t8_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t8_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t8_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_small_t8_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t8_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_small_t8_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t8_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_small_t8_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t8_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_small_t8_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_small_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t8_component_upkeep_energy
+#			minerals = @ukn_small_t8_component_upkeep_minerals
+#			alloys = @ukn_small_t8_component_upkeep_alloys
+			ukn_meta_materials = @ukn_small_t8_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t8_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t8_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t8_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t8_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t8_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t8_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_small_t8_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t8_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_small_t8_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_small_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_small_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t8_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t8
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+weapon_component_template = {
+	key = "UKN_MEDIUM_MASS_DRIVER_8"
+	size = medium
+	#entity = "medium_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_mass_driver_8"
+	icon_frame = 1
+    power = @ukn_mass_driver_8_m_power
+	
+	damage = { min = @ukn_mass_driver_8_m_dmg_min max = @ukn_mass_driver_8_m_dmg_max }
+    windup = { min = @ukn_mass_driver_8_m_windup_min max = @ukn_mass_driver_8_m_windup_max }
+    total_fire_time = @ukn_mass_driver_8_m_total_fire_time
+    range = @ukn_mass_driver_8_m_range
+    accuracy = @ukn_mass_driver_8_accuracy
+	
+    hull_damage = @ukn_mass_driver_8_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_8_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_8_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_8_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_8_shield_damage_mult
+    tracking = @ukn_mass_driver_8_m_tracking
+	
+	prerequisites = { "tech_ukn_mass_driver_8" } #
+	component_set = "UKN_SET_MASS_DRIVER_8"
+	projectile_gfx = "projectile_ukn_mass_driver_8M"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator }
+	upgrades_to = "UKN_MEDIUM_MASS_DRIVER_9"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_medium_t8_component_cost_minerals
+#			alloys = @ukn_medium_t8_component_cost_alloys
+			ukn_meta_materials = @ukn_medium_t8_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t8_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t8_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_medium_t8_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t8_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t8_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t8_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_medium_t8_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t8_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_medium_t8_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_medium_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t8_component_upkeep_energy
+#			minerals = @ukn_medium_t8_component_upkeep_minerals
+#			alloys = @ukn_medium_t8_component_upkeep_alloys
+			ukn_meta_materials = @ukn_medium_t8_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t8_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t8_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t8_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t8_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t8_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t8_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_medium_t8_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t8_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t8_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_medium_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t8_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t8
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+weapon_component_template = {
+	key = "UKN_LARGE_MASS_DRIVER_8"
+	size = large
+	#entity = "large_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_mass_driver_8"
+	icon_frame = 1
+    power = @ukn_mass_driver_8_l_power
+	
+	damage = { min = @ukn_mass_driver_8_l_dmg_min max = @ukn_mass_driver_8_l_dmg_max }
+    windup = { min = @ukn_mass_driver_8_l_windup_min max = @ukn_mass_driver_8_l_windup_max }
+    total_fire_time = @ukn_mass_driver_8_l_total_fire_time
+    range = @ukn_mass_driver_8_l_range
+    accuracy = @ukn_mass_driver_8_accuracy
+	
+    hull_damage = @ukn_mass_driver_8_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_8_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_8_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_8_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_8_shield_damage_mult
+    tracking = @ukn_mass_driver_8_l_tracking
+	
+	prerequisites = { "tech_ukn_mass_driver_8" } #
+	component_set = "UKN_SET_MASS_DRIVER_8"
+	projectile_gfx = "projectile_ukn_mass_driver_8L"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator }
+	upgrades_to = "UKN_LARGE_MASS_DRIVER_9"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_large_t8_component_cost_minerals
+#			alloys = @ukn_large_t8_component_cost_alloys
+			ukn_meta_materials = @ukn_large_t8_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t8_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t8_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_large_t8_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t8_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_large_t8_component_cost_exotic_gases
+#			rare_crystals = @ukn_large_t8_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_large_t8_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_large_t8_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_large_t8_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_large_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_large_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_large_t8_component_upkeep_energy
+#			minerals = @ukn_large_t8_component_upkeep_minerals
+#			alloys = @ukn_large_t8_component_upkeep_alloys
+			ukn_meta_materials = @ukn_large_t8_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t8_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t8_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t8_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t8_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_large_t8_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_large_t8_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_large_t8_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_large_t8_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_large_t8_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_large_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_large_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t8_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t8
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------
+
+### Supersolid Accelerators (T7)
+weapon_component_template = {
+	key = "UKN_SMALL_MASS_DRIVER_PLANCK"
+	size = small
+	#entity = "small_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_mass_driver_planck"
+	icon_frame = 1
+    power = @ukn_mass_driver_planck_s_power
+	
+	damage = { min = @ukn_mass_driver_planck_s_dmg_min max = @ukn_mass_driver_planck_s_dmg_max }
+    windup = { min = @ukn_mass_driver_planck_s_windup_min max = @ukn_mass_driver_planck_s_windup_max }
+    total_fire_time = @ukn_mass_driver_planck_s_total_fire_time
+    range = @ukn_mass_driver_planck_s_range
+    accuracy = @ukn_mass_driver_planck_accuracy
+	
+    hull_damage = @ukn_mass_driver_planck_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_planck_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_planck_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_planck_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_planck_shield_damage_mult
+    tracking = @ukn_mass_driver_planck_s_tracking
+	
+	prerequisites = { "tech_ukn_mass_driver_planck" } #
+	component_set = "UKN_SET_MASS_DRIVER_PLANCK"
+	projectile_gfx = "projectile_ukn_mass_driver_planckS"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator }
+	upgrades_to = "UKN_SMALL_MASS_DRIVER_9"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_small_t_p_component_cost_minerals
+#			alloys = @ukn_small_t_p_component_cost_alloys
+			ukn_meta_materials = @ukn_small_t_p_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t_p_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t_p_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_small_t_p_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t_p_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_small_t_p_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t_p_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_small_t_p_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t_p_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_small_t_p_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_small_t_p_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t_p_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t_p_component_upkeep_energy
+#			minerals = @ukn_small_t_p_component_upkeep_minerals
+#			alloys = @ukn_small_t_p_component_upkeep_alloys
+			ukn_meta_materials = @ukn_small_t_p_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t_p_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t_p_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t_p_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t_p_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t_p_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t_p_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_small_t_p_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t_p_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_small_t_p_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_small_t_p_kinetics_upkeep_minerals
+#			alloys = @ukn_small_t_p_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t_p_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t_d
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = sr_dark_matter value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+weapon_component_template = {
+	key = "UKN_MEDIUM_MASS_DRIVER_PLANCK"
+	size = medium
+	#entity = "medium_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_mass_driver_planck"
+	icon_frame = 1
+    power = @ukn_mass_driver_planck_m_power
+	
+	damage = { min = @ukn_mass_driver_planck_m_dmg_min max = @ukn_mass_driver_planck_m_dmg_max }
+    windup = { min = @ukn_mass_driver_planck_m_windup_min max = @ukn_mass_driver_planck_m_windup_max }
+    total_fire_time = @ukn_mass_driver_planck_m_total_fire_time
+    range = @ukn_mass_driver_planck_m_range
+    accuracy = @ukn_mass_driver_planck_accuracy
+	
+    hull_damage = @ukn_mass_driver_planck_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_planck_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_planck_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_planck_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_planck_shield_damage_mult
+    tracking = @ukn_mass_driver_planck_m_tracking
+	
+	prerequisites = { "tech_ukn_mass_driver_planck" } #
+	component_set = "UKN_SET_MASS_DRIVER_PLANCK"
+	projectile_gfx = "projectile_ukn_mass_driver_planckM"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator }
+	upgrades_to = "UKN_MEDIUM_MASS_DRIVER_9"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_medium_t_p_component_cost_minerals
+#			alloys = @ukn_medium_t_p_component_cost_alloys
+			ukn_meta_materials = @ukn_medium_t_p_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t_p_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t_p_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_medium_t_p_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t_p_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t_p_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t_p_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_medium_t_p_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t_p_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_medium_t_p_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_medium_t_p_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t_p_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t_p_component_upkeep_energy
+#			minerals = @ukn_medium_t_p_component_upkeep_minerals
+#			alloys = @ukn_medium_t_p_component_upkeep_alloys
+			ukn_meta_materials = @ukn_medium_t_p_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t_p_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t_p_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t_p_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t_p_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t_p_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t_p_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_medium_t_p_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t_p_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t_p_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_medium_t_p_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t_p_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t_p_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t_d
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = sr_dark_matter value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+weapon_component_template = {
+	key = "UKN_LARGE_MASS_DRIVER_PLANCK"
+	size = large
+	#entity = "large_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_mass_driver_planck"
+	icon_frame = 1
+    power = @ukn_mass_driver_planck_l_power
+	
+	damage = { min = @ukn_mass_driver_planck_l_dmg_min max = @ukn_mass_driver_planck_l_dmg_max }
+    windup = { min = @ukn_mass_driver_planck_l_windup_min max = @ukn_mass_driver_planck_l_windup_max }
+    total_fire_time = @ukn_mass_driver_planck_l_total_fire_time
+    range = @ukn_mass_driver_planck_l_range
+    accuracy = @ukn_mass_driver_planck_accuracy
+	
+    hull_damage = @ukn_mass_driver_planck_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_planck_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_planck_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_planck_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_planck_shield_damage_mult
+    tracking = @ukn_mass_driver_planck_l_tracking
+	
+	prerequisites = { "tech_ukn_mass_driver_planck" } #
+	component_set = "UKN_SET_MASS_DRIVER_PLANCK"
+	projectile_gfx = "projectile_ukn_mass_driver_planckL"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator }
+	upgrades_to = "UKN_LARGE_MASS_DRIVER_9"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_large_t_p_component_cost_minerals
+#			alloys = @ukn_large_t_p_component_cost_alloys
+			ukn_meta_materials = @ukn_large_t_p_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t_p_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t_p_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_large_t_p_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t_p_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_large_t_p_component_cost_exotic_gases
+#			rare_crystals = @ukn_large_t_p_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_large_t_p_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_large_t_p_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_large_t_p_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_large_t_p_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_large_t_p_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_large_t_p_component_upkeep_energy
+#			minerals = @ukn_large_t_p_component_upkeep_minerals
+#			alloys = @ukn_large_t_p_component_upkeep_alloys
+			ukn_meta_materials = @ukn_large_t_p_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t_p_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t_p_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t_p_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t_p_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_large_t_p_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_large_t_p_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_large_t_p_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_large_t_p_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_large_t_p_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_large_t_p_kinetics_upkeep_minerals
+#			alloys = @ukn_large_t_p_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t_p_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t_d
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = sr_dark_matter value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------
+
+### Oscillative Accelerators (T8)
+weapon_component_template = {
+	key = "UKN_SMALL_MASS_DRIVER_9"
+	size = small
+	#entity = "small_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_mass_driver_9"
+	icon_frame = 1
+    power = @ukn_mass_driver_9_s_power
+	
+	damage = { min = @ukn_mass_driver_9_s_dmg_min max = @ukn_mass_driver_9_s_dmg_max }
+    windup = { min = @ukn_mass_driver_9_s_windup_min max = @ukn_mass_driver_9_s_windup_max }
+    total_fire_time = @ukn_mass_driver_9_s_total_fire_time
+    range = @ukn_mass_driver_9_s_range
+    accuracy = @ukn_mass_driver_9_accuracy
+	
+    hull_damage = @ukn_mass_driver_9_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_9_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_9_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_9_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_9_shield_damage_mult
+    tracking = @ukn_mass_driver_9_s_tracking
+	
+	prerequisites = { "tech_ukn_mass_driver_9" } #
+	component_set = "UKN_SET_MASS_DRIVER_9"
+	projectile_gfx = "projectile_ukn_mass_driver_9S"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator }
+	upgrades_to = "UKN_SMALL_MASS_DRIVER_10"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_small_t9_component_cost_minerals
+#			alloys = @ukn_small_t9_component_cost_alloys
+#			ukn_meta_materials = @ukn_small_t9_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t9_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t9_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t9_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_small_t9_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_small_t9_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t9_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_small_t9_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t9_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_small_t9_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_small_t9_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t9_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t9_component_upkeep_energy
+#			minerals = @ukn_small_t9_component_upkeep_minerals
+#			alloys = @ukn_small_t9_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t9_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t9_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t9_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t9_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t9_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t9_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t9_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_small_t9_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t9_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_small_t9_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_small_t9_kinetics_upkeep_minerals
+#			alloys = @ukn_small_t9_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t9_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t9
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+weapon_component_template = {
+	key = "UKN_MEDIUM_MASS_DRIVER_9"
+	size = medium
+	#entity = "medium_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_mass_driver_9"
+	icon_frame = 1
+    power = @ukn_mass_driver_9_m_power
+	
+	damage = { min = @ukn_mass_driver_9_m_dmg_min max = @ukn_mass_driver_9_m_dmg_max }
+    windup = { min = @ukn_mass_driver_9_m_windup_min max = @ukn_mass_driver_9_m_windup_max }
+    total_fire_time = @ukn_mass_driver_9_m_total_fire_time
+    range = @ukn_mass_driver_9_m_range
+    accuracy = @ukn_mass_driver_9_accuracy
+	
+    hull_damage = @ukn_mass_driver_9_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_9_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_9_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_9_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_9_shield_damage_mult
+    tracking = @ukn_mass_driver_9_m_tracking
+	
+	prerequisites = { "tech_ukn_mass_driver_9" } #
+	component_set = "UKN_SET_MASS_DRIVER_9"
+	projectile_gfx = "projectile_ukn_mass_driver_9M"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator }
+	upgrades_to = "UKN_MEDIUM_MASS_DRIVER_10"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_medium_t9_component_cost_minerals
+#			alloys = @ukn_medium_t9_component_cost_alloys
+#			ukn_meta_materials = @ukn_medium_t9_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t9_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t9_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t9_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_medium_t9_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t9_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t9_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t9_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t9_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_medium_t9_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_medium_t9_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t9_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t9_component_upkeep_energy
+#			minerals = @ukn_medium_t9_component_upkeep_minerals
+#			alloys = @ukn_medium_t9_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t9_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t9_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t9_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t9_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t9_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t9_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t9_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_medium_t9_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t9_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_medium_t9_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_medium_t9_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t9_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t9_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t9
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+weapon_component_template = {
+	key = "UKN_LARGE_MASS_DRIVER_9"
+	size = large
+	#entity = "large_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_mass_driver_9"
+	icon_frame = 1
+    power = @ukn_mass_driver_9_l_power
+	
+	damage = { min = @ukn_mass_driver_9_l_dmg_min max = @ukn_mass_driver_9_l_dmg_max }
+    windup = { min = @ukn_mass_driver_9_l_windup_min max = @ukn_mass_driver_9_l_windup_max }
+    total_fire_time = @ukn_mass_driver_9_l_total_fire_time
+    range = @ukn_mass_driver_9_l_range
+    accuracy = @ukn_mass_driver_9_accuracy
+	
+    hull_damage = @ukn_mass_driver_9_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_9_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_9_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_9_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_9_shield_damage_mult
+    tracking = @ukn_mass_driver_9_l_tracking
+	
+	prerequisites = { "tech_ukn_mass_driver_9" } #
+	component_set = "UKN_SET_MASS_DRIVER_9"
+	projectile_gfx = "projectile_ukn_mass_driver_9L"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator }
+	upgrades_to = "UKN_LARGE_MASS_DRIVER_10"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_large_t9_component_cost_minerals
+#			alloys = @ukn_large_t9_component_cost_alloys
+#			ukn_meta_materials = @ukn_large_t9_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t9_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t9_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t9_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_large_t9_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_large_t9_component_cost_exotic_gases
+#			rare_crystals = @ukn_large_t9_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_large_t9_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_large_t9_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_large_t9_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_large_t9_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_large_t9_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_large_t9_component_upkeep_energy
+#			minerals = @ukn_large_t9_component_upkeep_minerals
+#			alloys = @ukn_large_t9_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t9_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t9_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t9_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t9_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t9_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_large_t9_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_large_t9_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_large_t9_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_large_t9_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_large_t9_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_large_t9_kinetics_upkeep_minerals
+#			alloys = @ukn_large_t9_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t9_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t9
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------
+
+### Synchronic Accelerators (T9)
+weapon_component_template = {
+	key = "UKN_SMALL_MASS_DRIVER_10"
+	size = small
+	#entity = "small_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_mass_driver_10"
+	icon_frame = 1
+    power = @ukn_mass_driver_10_s_power
+	
+	damage = { min = @ukn_mass_driver_10_s_dmg_min max = @ukn_mass_driver_10_s_dmg_max }
+    windup = { min = @ukn_mass_driver_10_s_windup_min max = @ukn_mass_driver_10_s_windup_max }
+    total_fire_time = @ukn_mass_driver_10_s_total_fire_time
+    range = @ukn_mass_driver_10_s_range
+    accuracy = @ukn_mass_driver_10_accuracy
+	
+    hull_damage = @ukn_mass_driver_10_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_10_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_10_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_10_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_10_shield_damage_mult
+    tracking = @ukn_mass_driver_10_s_tracking
+	
+	prerequisites = { "tech_ukn_mass_driver_10" } #
+	component_set = "UKN_SET_MASS_DRIVER_10"
+	projectile_gfx = "projectile_ukn_mass_driver_10S"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator }
+#	upgrades_to = "UKN_SMALL_MASS_DRIVER_10"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_small_t10_component_cost_minerals
+#			alloys = @ukn_small_t10_component_cost_alloys
+#			ukn_meta_materials = @ukn_small_t10_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t10_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t10_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t10_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_small_t10_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_small_t10_component_cost_exotic_gases
+#			rare_crystals = @ukn_small_t10_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_small_t10_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_small_t10_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_small_t10_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_small_t10_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_small_t10_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_small_t10_component_upkeep_energy
+#			minerals = @ukn_small_t10_component_upkeep_minerals
+#			alloys = @ukn_small_t10_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t10_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_small_t10_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_small_t10_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_small_t10_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_small_t10_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_small_t10_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_small_t10_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_small_t10_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_small_t10_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_small_t10_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_small_t10_kinetics_upkeep_minerals
+#			alloys = @ukn_small_t10_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_small_t10_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+weapon_component_template = {
+	key = "UKN_MEDIUM_MASS_DRIVER_10"
+	size = medium
+	#entity = "medium_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_mass_driver_10"
+	icon_frame = 1
+    power = @ukn_mass_driver_10_m_power
+	
+	damage = { min = @ukn_mass_driver_10_m_dmg_min max = @ukn_mass_driver_10_m_dmg_max }
+    windup = { min = @ukn_mass_driver_10_m_windup_min max = @ukn_mass_driver_10_m_windup_max }
+    total_fire_time = @ukn_mass_driver_10_m_total_fire_time
+    range = @ukn_mass_driver_10_m_range
+    accuracy = @ukn_mass_driver_10_accuracy
+	
+    hull_damage = @ukn_mass_driver_10_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_10_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_10_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_10_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_10_shield_damage_mult
+    tracking = @ukn_mass_driver_10_m_tracking
+	
+	prerequisites = { "tech_ukn_mass_driver_10" } #
+	component_set = "UKN_SET_MASS_DRIVER_10"
+	projectile_gfx = "projectile_ukn_mass_driver_10M"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator }
+#	upgrades_to = "UKN_MEDIUM_MASS_DRIVER_10"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_medium_t10_component_cost_minerals
+#			alloys = @ukn_medium_t10_component_cost_alloys
+#			ukn_meta_materials = @ukn_medium_t10_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t10_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t10_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t10_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_medium_t10_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t10_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t10_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t10_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t10_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_medium_t10_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_medium_t10_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t10_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t10_component_upkeep_energy
+#			minerals = @ukn_medium_t10_component_upkeep_minerals
+#			alloys = @ukn_medium_t10_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t10_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t10_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t10_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t10_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t10_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t10_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t10_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_medium_t10_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t10_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_medium_t10_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_medium_t10_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t10_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t10_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+weapon_component_template = {
+	key = "UKN_LARGE_MASS_DRIVER_10"
+	size = large
+	#entity = "large_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_mass_driver_10"
+	icon_frame = 1
+    power = @ukn_mass_driver_10_l_power
+	
+	damage = { min = @ukn_mass_driver_10_l_dmg_min max = @ukn_mass_driver_10_l_dmg_max }
+    windup = { min = @ukn_mass_driver_10_l_windup_min max = @ukn_mass_driver_10_l_windup_max }
+    total_fire_time = @ukn_mass_driver_10_l_total_fire_time
+    range = @ukn_mass_driver_10_l_range
+    accuracy = @ukn_mass_driver_10_accuracy
+	
+    hull_damage = @ukn_mass_driver_10_hull_damage_mult
+    armor_penetration = @ukn_mass_driver_10_armor_penetration_mult
+    armor_damage = @ukn_mass_driver_10_armor_damage_mult
+    shield_penetration = @ukn_mass_driver_10_shield_penetration_mult
+    shield_damage = @ukn_mass_driver_10_shield_damage_mult
+    tracking = @ukn_mass_driver_10_l_tracking
+	
+	prerequisites = { "tech_ukn_mass_driver_10" } #
+	component_set = "UKN_SET_MASS_DRIVER_10"
+	projectile_gfx = "projectile_ukn_mass_driver_10L"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator }
+#	upgrades_to = "UKN_LARGE_MASS_DRIVER_10"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_large_t10_component_cost_minerals
+#			alloys = @ukn_large_t10_component_cost_alloys
+#			ukn_meta_materials = @ukn_large_t10_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t10_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t10_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t10_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_large_t10_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_large_t10_component_cost_exotic_gases
+#			rare_crystals = @ukn_large_t10_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_large_t10_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_large_t10_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_large_t10_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_large_t10_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_large_t10_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_large_t10_component_upkeep_energy
+#			minerals = @ukn_large_t10_component_upkeep_minerals
+#			alloys = @ukn_large_t10_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t10_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_large_t10_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_large_t10_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_large_t10_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_large_t10_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_large_t10_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_large_t10_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_large_t10_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_large_t10_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_large_t10_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_large_t10_kinetics_upkeep_minerals
+#			alloys = @ukn_large_t10_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_large_t10_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_mass_driver_t10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------

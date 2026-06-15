@@ -1,0 +1,1952 @@
+#############
+# Automation buildings
+#############
+building_ukn_automation_grid_1 = {
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 1
+	base_buildtime = @building_ukn_automation_grid_1_build_time
+	base_cap_amount = 1
+#	category = research
+
+	potential = {
+		UKN_USES_SUB_ALDERSON_ARCOLOGY_DISTRICTS = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_ukn_automation_grid_1
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_automation_grid_1_cost_basic_consumer_goods
+		}
+		
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_automation_grid_1_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_automation_grid_1_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_automation_grid_1_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_automation_grid_1_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_automation_grid_1_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_automation_grid_1_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_automation_grid_1_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_automation_grid_1_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_automation_grid_1_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_automation_grid_1_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			trigger = {
+				exists = owner
+				UKN_USES_NORMAL_DISTRICTS = yes
+			}
+			energy = @building_ukn_automation_grid_1_normal_upkeep_energy
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				OR = {
+					UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			energy = @building_ukn_automation_grid_1_arcology_upkeep_energy
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				OR = {
+					UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			energy = @building_ukn_automation_grid_1_rw_upkeep_energy
+		}
+	}
+
+	upgrades = {
+		building_ukn_automation_grid_2
+	}
+
+	convert_to = {
+		building_ukn_automation_grid_2
+	}
+#----------------------------------------------------
+
+#[ALL] Base Infrastructure Slot Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		modifier = {
+			planet_max_buildings_add = 2
+		}
+	}
+
+#[HABITAT] Base Infrastructure Slot Add
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		modifier = {
+			planet_max_buildings_add = 1
+		}
+	}
+
+#[HABITAT] Tradition Infrastructure Slot Add
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+			owner = { has_active_tradition = tr_prosperity_void_works }
+		}
+		modifier = {
+			planet_max_buildings_add = 1
+		}
+	}
+
+#[HABITAT] Voidborne Infrastructure Slots Add
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+			owner = { has_ascension_perk = ap_voidborn }
+		}
+		modifier = {
+			 planet_max_buildings_add = 2
+		}
+	}
+
+#[RESORT] Infrastructure Slots Add
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			has_modifier = resort_colony
+		}
+		modifier = {
+			 planet_max_buildings_add = 3
+		}
+	}
+#----------------------------------------------------
+
+#[NORMAL] Base Automation Technician Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			UKN_USES_NORMAL_DISTRICTS = yes
+		}
+		modifier = {
+			job_ukn_automation_technician_normal_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			UKN_USES_NORMAL_DISTRICTS = yes
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_normal_add = 1
+		}
+	}
+
+#[ARCOLOGY] Base Automation Technician Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			job_ukn_automation_technician_arcology_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_arcology_add = 1
+		}
+	}
+#----------------------------------------------------
+
+#[BASIC] Capital Planet Extra Automation Technician Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			UKN_USES_BASIC_DISTRICTS = yes
+			is_capital = yes
+		}
+		modifier = {
+			planet_max_buildings_add = 2
+			job_ukn_automation_technician_normal_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			UKN_USES_BASIC_DISTRICTS = yes
+			is_capital = yes
+		}
+		modifier = {
+			planet_max_buildings_add = 2
+			job_ukn_automation_technician_drone_normal_add = 1
+		}
+	}
+
+#[HABITAT] Capital Planet Extra Automation Technician Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			UKN_USES_HABITAT_DISTRICTS = yes
+			is_capital = yes
+		}
+		modifier = {
+			planet_max_buildings_add = 1
+			job_ukn_automation_technician_normal_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			UKN_USES_HABITAT_DISTRICTS = yes
+			is_capital = yes
+		}
+		modifier = {
+			planet_max_buildings_add = 1
+			job_ukn_automation_technician_drone_normal_add = 1
+		}
+	}
+
+#[ARCOLOGY] Capital Planet Extra Automation Technician Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		modifier = {
+			planet_max_buildings_add = 2
+			job_ukn_automation_technician_arcology_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		modifier = {
+			planet_max_buildings_add = 2
+			job_ukn_automation_technician_drone_arcology_add = 1
+		}
+	}
+#----------------------------------------------------
+
+#[RINGWORLD] BASIC Automation Overdrive
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			has_modifier = mod_ukn_automation_overdrive_rw_1
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			has_modifier = mod_ukn_automation_overdrive_rw_1
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 1
+		}
+	}
+	
+#[RINGWORLD] MODERATE Automation Overdrive
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			has_modifier = mod_ukn_automation_overdrive_rw_2
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			has_modifier = mod_ukn_automation_overdrive_rw_2
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 2
+		}
+	}
+	
+#[RINGWORLD] COMPREHENSIVE Automation Overdrive
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			has_modifier = mod_ukn_automation_overdrive_rw_3
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			has_modifier = mod_ukn_automation_overdrive_rw_3
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 3
+		}
+	}
+#----------------------------------------------------
+
+#[RINGWORLD] Default Empire - Automatically Provided Jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 1 }
+			num_districts = { type = any value < 3 }
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 3 }
+			num_districts = { type = any value < 5 }
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 5 }
+			num_districts = { type = any value < 7 }
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 7 }
+			num_districts = { type = any value < 9 }
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 4
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 9 }
+			num_districts = { type = any value < 11 }
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 5
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 11 }
+			num_districts = { type = any value < 13 }
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 6
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 13 }
+			num_districts = { type = any value < 15 }
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 7
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 15 }
+			num_districts = { type = any value < 17 }
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 8
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 17 }
+			num_districts = { type = any value < 19 }
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 9
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 19 }
+			num_districts = { type = any value < 21 }
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 10
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 21 }
+			num_districts = { type = any value < 23 }
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 11
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 23 }
+			num_districts = { type = any value < 25 }
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 12
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 25 }
+			num_districts = { type = any value < 27 }
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 13
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 27 }
+			num_districts = { type = any value < 29 }
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 14
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 29 }
+			num_districts = { type = any value < 31 }
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 15
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 31 }
+			num_districts = { type = any value < 33 }
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 16
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 33 }
+			num_districts = { type = any value < 35 }
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 17
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 35 }
+			num_districts = { type = any value < 37 }
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 18
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 37 }
+			num_districts = { type = any value < 39 }
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 19
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 39 }
+			num_districts = { type = any value < 41 }
+		}
+		modifier = {
+			job_ukn_automation_technician_rw_add = 20
+		}
+	}
+#----------------------------------------------------
+
+#[RINGWORLD] Gestalt Empire - Automatically Provided Jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 1 }
+			num_districts = { type = any value < 3 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 3 }
+			num_districts = { type = any value < 5 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 5 }
+			num_districts = { type = any value < 7 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 7 }
+			num_districts = { type = any value < 9 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 4
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 9 }
+			num_districts = { type = any value < 11 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 5
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 11 }
+			num_districts = { type = any value < 13 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 6
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 13 }
+			num_districts = { type = any value < 15 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 7
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 15 }
+			num_districts = { type = any value < 17 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 8
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 17 }
+			num_districts = { type = any value < 19 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 9
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 19 }
+			num_districts = { type = any value < 21 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 10
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 21 }
+			num_districts = { type = any value < 23 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 11
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 23 }
+			num_districts = { type = any value < 25 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 12
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 25 }
+			num_districts = { type = any value < 27 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 13
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 27 }
+			num_districts = { type = any value < 29 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 14
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 29 }
+			num_districts = { type = any value < 31 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 15
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 31 }
+			num_districts = { type = any value < 33 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 16
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 33 }
+			num_districts = { type = any value < 35 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 17
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 35 }
+			num_districts = { type = any value < 37 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 18
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 37 }
+			num_districts = { type = any value < 39 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 19
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			num_districts = { type = any value >= 39 }
+			num_districts = { type = any value < 41 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_rw_add = 20
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_automation
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = unlock_district_ukn_hab_automation
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = unlock_district_ukn_arcology_automation
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = job_ukn_automation_technician_auto_provide
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+			is_capital = yes
+		}
+		text = job_ukn_automation_technician_infrastructure_slot_capital_basic_provide
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+			is_capital = yes
+		}
+		text = job_ukn_automation_technician_infrastructure_slot_capital_habitat_provide
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		text = job_ukn_automation_technician_infrastructure_slot_capital_arcology_provide
+	}
+#----------------------------------------------------
+
+#[NORMAL] Automation Technician Job
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+			UKN_USES_NORMAL_DISTRICTS = yes
+		}
+		text = job_ukn_automation_technician_normal_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			UKN_USES_NORMAL_DISTRICTS = yes
+		}
+		text = job_ukn_automation_technician_drone_normal_effect_desc
+	}
+
+#[ARCOLOGY] Automation Technician Job
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = job_ukn_automation_technician_arcology_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = job_ukn_automation_technician_drone_arcology_effect_desc
+	}
+
+#[RINGWORLD] Automation Technician Job
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = job_ukn_automation_technician_rw_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = job_ukn_automation_technician_drone_rw_effect_desc
+	}
+#----------------------------------------------------
+}
+
+
+
+
+
+
+
+
+
+building_ukn_automation_grid_2 = {
+	can_build = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 1
+	base_buildtime = @building_ukn_automation_grid_7_build_time
+#	category = research
+
+	potential = {
+		exists = owner
+		OR = {
+			UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+			owner = {
+				has_technology = tech_ukn_automation_5
+			}
+		}
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		NOR = {
+			UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+			owner = {
+				has_technology = tech_ukn_automation_5
+			}
+		}
+	}
+	
+	
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = no
+			}
+			NOT = { has_building = building_ukn_automation_grid_2 }
+		}
+		modifier = {
+			job_ukn_automation_technician_normal_add = 1000
+			job_foundry_add = 1000
+			job_artisan_add = 1000
+			job_gas_refiner_add = 1000
+			job_translucer_add = 1000
+			job_ukn_exotic_particles_producer_add = 1000
+		}
+	}
+#[AI-MACHINE] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = yes
+			}
+			NOT = { has_building = building_ukn_automation_grid_2 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_normal_add = 1000
+			job_technician_add = 1000
+			job_miner_add = 1000
+			job_farmer_add = 1000
+			job_fabricator_add = 1000
+			job_artisan_drone_add = 1000
+			job_gas_refiner_drone_add = 1000
+			job_translucer_drone_add = 1000
+			job_ukn_exotic_particles_production_drone_add = 1000
+		}
+	}
+#[AI-HIVE] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+				is_gestalt = yes
+			}
+			NOT = { has_building = building_ukn_automation_grid_2 }
+		}
+		modifier = {
+			job_ukn_automation_technician_drone_normal_add = 1000
+			job_technician_drone_add = 1000
+			job_mining_drone_add = 1000
+			job_agri_drone_add = 1000
+			job_alloy_drone_add = 1000
+			job_artisan_drone_add = 1000
+			job_gas_refiner_drone_add = 1000
+			job_translucer_drone_add = 1000
+			job_ukn_exotic_particles_production_drone_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_ukn_automation_grid_2
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_automation_grid_7_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_automation_grid_7_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			ukn_meta_materials = @building_ukn_automation_grid_7_cost_basic_ukn_meta_materials
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_automation_grid_7_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_automation_grid_7_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_automation_grid_7_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			rare_crystals = @building_ukn_automation_grid_7_cost_advanced_rare_crystals
+			exotic_gases = @building_ukn_automation_grid_7_cost_advanced_exotic_gases
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_automation_grid_7_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_automation_grid_7_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_automation_grid_7_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_automation_grid_7_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_automation_grid_7_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_ukn_automation_5"
+	}
+
+#	upgrades = {
+#		building_ukn_automation_grid_2
+#	}
+
+	convert_to = {
+		building_ukn_automation_grid_1
+	}
+#----------------------------------------------------
+
+#[ALL] Base Infrastructure Slot Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		modifier = {
+			planet_max_buildings_add = 4
+		}
+	}
+
+#[HABITAT] Tradition Infrastructure Slot Add
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_void_works }
+		}
+		modifier = {
+			 planet_max_buildings_add = 1
+		}
+	}
+
+#[HABITAT] Voidborne Infrastructure Slots Add
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_voidborn }
+		}
+		modifier = {
+			 planet_max_buildings_add = 2
+		}
+	}
+
+#[RESORT] Infrastructure Slots Add
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			has_modifier = resort_colony
+		}
+		modifier = {
+			 planet_max_buildings_add = 1
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			NOR = {
+				has_modifier = mod_ukn_automation_alderson_p_0
+				has_modifier = mod_ukn_automation_alderson_p_1
+				has_modifier = mod_ukn_automation_alderson_p_2
+				has_modifier = mod_ukn_automation_alderson_p_3
+			}
+		}
+		text = ukn_automation_integrity_auto_provide_0
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				has_modifier = mod_ukn_automation_alderson_p_0
+			}
+		}
+		text = ukn_automation_integrity_auto_provide_0
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				has_modifier = mod_ukn_automation_alderson_p_1
+			}
+		}
+		text = ukn_automation_integrity_auto_provide_1
+	}
+
+	triggered_desc = {
+		trigger = {
+			OR = {
+				has_modifier = mod_ukn_automation_alderson_p_2
+			}
+		}
+		text = ukn_automation_integrity_auto_provide_2
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				has_modifier = mod_ukn_automation_alderson_p_3
+			}
+		}
+		text = ukn_automation_integrity_auto_provide_3
+	}
+#----------------------------------------------------
+
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = modify_district_ukn_automation
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = modify_district_ukn_hab_automation
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = modify_district_ukn_arcology_automation
+	}
+#----------------------------------------------------
+}

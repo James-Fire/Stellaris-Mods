@@ -1,0 +1,99 @@
+
+##########################################
+##########################################
+#####                                #####
+#####    Branch Candidate Tracker    #####
+#####                                #####
+#####    Global Constants            #####
+#####                                #####
+##########################################
+##########################################
+
+#############################
+###  Branch Office Value  ###
+#############################
+#
+# Must synchlonize value with localisation file and templete file
+#
+
+### Base Value
+@BctConstBranchCandidatePlanetValue_V0 =  0
+@BctConstBranchCandidatePlanetValue_V1 =  5
+@BctConstBranchCandidatePlanetValue_V2 = 10
+@BctConstBranchCandidatePlanetValue_V3 = 15
+@BctConstBranchCandidatePlanetValue_V4 = 20
+@BctConstBranchCandidatePlanetValue_V5 = 30
+
+### Threshold
+@BctConstBranchCandidatePlanetValue_T1 =  2.5
+@BctConstBranchCandidatePlanetValue_T2 =  7.5
+@BctConstBranchCandidatePlanetValue_T3 = 12.5
+@BctConstBranchCandidatePlanetValue_T4 = 17.5
+@BctConstBranchCandidatePlanetValue_T5 = 25
+
+
+
+########################
+###  Number of Pops  ###
+########################
+#
+# Must synchlonize value with localisation file and templete file
+#
+
+### Base Value
+@BctConstBranchCandidateNumPops_V0 =   0
+@BctConstBranchCandidateNumPops_V1 =   5
+@BctConstBranchCandidateNumPops_V2 =  10
+@BctConstBranchCandidateNumPops_V3 =  15
+@BctConstBranchCandidateNumPops_V4 =  25
+@BctConstBranchCandidateNumPops_V5 =  50
+
+### Threshold
+@BctConstBranchCandidateNumPops_T1 =   2.5
+@BctConstBranchCandidateNumPops_T2 =   7.5
+@BctConstBranchCandidateNumPops_T3 =  12.5
+@BctConstBranchCandidateNumPops_T4 =  20
+@BctConstBranchCandidateNumPops_T5 =  37.5
+
+
+
+#####################
+###  Planet Size  ###
+#####################
+#
+# Must synchlonize Value with Localisation file
+#
+
+### Base Value
+@BctConstBranchCandidatePlanetSize_V0 =  0
+@BctConstBranchCandidatePlanetSize_V1 =  8
+@BctConstBranchCandidatePlanetSize_V2 = 10
+@BctConstBranchCandidatePlanetSize_V3 = 12
+@BctConstBranchCandidatePlanetSize_V4 = 15
+@BctConstBranchCandidatePlanetSize_V5 = 18
+
+### Threshold
+@BctConstBranchCandidatePlanetSize_T1 =  7
+@BctConstBranchCandidatePlanetSize_T2 =  9
+@BctConstBranchCandidatePlanetSize_T3 = 11
+@BctConstBranchCandidatePlanetSize_T4 = 13.5
+@BctConstBranchCandidatePlanetSize_T5 = 16.5
+
+
+
+##########################################
+###  Interval for Notice of Free Slot  ###
+##########################################
+
+@BctConstForbidNotificationTime_V1 =   32
+@BctConstForbidNotificationTime_V2 =  362
+@BctConstForbidNotificationTime_V3 = 1082
+@BctConstForbidNotificationTime_V4 = 3602
+
+
+################
+###  Others  ###
+################
+
+@BctConstMenuPicture = GFX_evt_galactic_market
+@BctConstEnableBranchFreeSlotDetector = no

@@ -1,0 +1,81 @@
+origin_nuetral_tiberium = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_mechanist.dds"
+	picture = GFX_origin_mechanist
+	max_once_global = yes
+	description = "origin_tooltip_nuetral_tiberium_effects"
+
+	playable = {
+		always = yes
+	}
+	
+	potential = {
+		always = yes
+	}
+	possible = {
+		civics = {
+			NOT = {
+				value = civic_agrarian_idyll
+			}
+		}	
+	}
+	random_weight = { base = 0 }
+	modifier = {
+
+	}
+	
+}
+origin_gdi_tiberium = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_mechanist.dds"
+	picture = GFX_origin_mechanist
+	max_once_global = yes
+
+	playable = {
+		always = no
+	}
+	potential = {
+		always = no
+	}
+	possible = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		civics = {
+			NOT = {
+				value = civic_agrarian_idyll
+			}
+		}	
+	}
+	random_weight = { base = 0 }
+	modifier = {
+
+	}
+	
+}
+
+origin_nod_tiberium = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_mechanist.dds"
+	picture = GFX_origin_mechanist
+	max_once_global = yes
+
+	playable = {
+		always = no
+	}
+	
+	potential = {
+		always = no
+	}
+	possible = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		civics = {
+			NOT = {
+				value = civic_agrarian_idyll
+			}
+		}	
+	}
+	random_weight = { base = 0 }
+	modifier = {
+
+	}
+	
+}

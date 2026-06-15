@@ -1,0 +1,61 @@
+
+#NEGATIVE MASS ACCELERATOR PROJECTILE
+entity = {
+	name = "neg_mass_tracer_round_tiny_entity"
+	pdxmesh = "neg_mass_tracer_round_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" }
+	
+	scale = 0.8
+}
+
+entity = {
+	name = "neg_mass_tracer_round_small_entity"
+	pdxmesh = "neg_mass_tracer_round_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" }
+	
+	scale = 1.2
+}
+
+entity = {
+	name = "neg_mass_tracer_round_medium_entity"
+	pdxmesh = "neg_mass_tracer_round_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" }
+	
+	scale = 1.5
+}
+
+entity = {
+	name = "neg_mass_tracer_round_large_entity"
+	pdxmesh = "neg_mass_tracer_round_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" }
+	
+	scale = 2
+}
+
+entity = {
+	name = "neg_mass_tracer_round_ex_entity"
+	pdxmesh = "neg_mass_tracer_round_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" }
+	
+	scale = 3
+}
+
+entity = {
+	name = "neg_mass_tracer_round_huge_entity"
+	pdxmesh = "neg_mass_tracer_round_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" }
+	
+	scale = 5
+}

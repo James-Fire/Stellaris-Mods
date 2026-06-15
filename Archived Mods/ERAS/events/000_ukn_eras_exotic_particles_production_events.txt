@@ -1,0 +1,188 @@
+namespace = ukn_exotic_particles_production_events
+
+#[ALL] Remove Modifier If Doesn't Have Approriate Tech
+country_event = {
+	id = ukn_exotic_particles_production_events.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					is_regular_empire = yes
+					is_gestalt = yes
+				}
+				NOT = { has_technology = tech_mine_ukn_exotic_particles }
+			}
+			every_owned_planet = {
+				limit = {
+					is_colony = yes
+				}
+				if = {
+					limit = {
+						is_colony = yes
+						OR = {
+							has_modifier = mod_ukn_alloys_based_exotic_particles_production
+							has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+							has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+							has_modifier = mod_ukn_condensics_based_exotic_particles_production
+							has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+							has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+						}
+					}
+					remove_modifier = mod_ukn_alloys_based_exotic_particles_production
+					remove_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+					remove_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+					remove_modifier = mod_ukn_condensics_based_exotic_particles_production
+					remove_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+					remove_modifier = mod_ukn_causalitons_based_exotic_particles_production
+				}
+			}
+		}
+	}
+}
+
+#[FEMTOMATTER+] Remove Modifier If Doesn't Have Approriate Tech
+country_event = {
+	id = ukn_exotic_particles_production_events.12
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					is_regular_empire = yes
+					is_gestalt = yes
+				}
+				NOT = { has_technology = tech_ship_armor_4 }
+			}
+			every_owned_planet = {
+				limit = {
+					is_colony = yes
+				}
+				if = {
+					limit = {
+						is_colony = yes
+						OR = {
+							has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+							has_modifier = mod_ukn_condensics_based_exotic_particles_production
+							has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+							has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+						}
+					}
+					remove_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+					remove_modifier = mod_ukn_condensics_based_exotic_particles_production
+					remove_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+					remove_modifier = mod_ukn_causalitons_based_exotic_particles_production
+				}
+			}
+		}
+	}
+}
+
+#[CONDENSICS+] Remove Modifier If Doesn't Have Approriate Tech
+country_event = {
+	id = ukn_exotic_particles_production_events.13
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					is_regular_empire = yes
+					is_gestalt = yes
+				}
+				NOT = { has_technology = tech_ship_armor_5 }
+			}
+			every_owned_planet = {
+				limit = {
+					is_colony = yes
+				}
+				if = {
+					limit = {
+						is_colony = yes
+						OR = {
+							has_modifier = mod_ukn_condensics_based_exotic_particles_production
+							has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+							has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+						}
+					}
+					remove_modifier = mod_ukn_condensics_based_exotic_particles_production
+					remove_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+					remove_modifier = mod_ukn_causalitons_based_exotic_particles_production
+				}
+			}
+		}
+	}
+}
+
+#[QUASI-MATTER+] Remove Modifier If Doesn't Have Approriate Tech
+country_event = {
+	id = ukn_exotic_particles_production_events.14
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					is_regular_empire = yes
+					is_gestalt = yes
+				}
+				NOT = { has_technology = tech_ukn_materials_6 }
+			}
+			every_owned_planet = {
+				limit = {
+					is_colony = yes
+				}
+				if = {
+					limit = {
+						is_colony = yes
+						OR = {
+							has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+							has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+						}
+					}
+					remove_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+					remove_modifier = mod_ukn_causalitons_based_exotic_particles_production
+				}
+			}
+		}
+	}
+}
+
+#[OSCILLYONS] Remove Modifier If Doesn't Have Approriate Tech
+country_event = {
+	id = ukn_exotic_particles_production_events.15
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					is_regular_empire = yes
+					is_gestalt = yes
+				}
+				NOT = { has_technology = tech_ukn_materials_8 }
+			}
+			every_owned_planet = {
+				limit = {
+					is_colony = yes
+				}
+				if = {
+					limit = {
+						is_colony = yes
+						OR = {
+							has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+						}
+					}
+					remove_modifier = mod_ukn_causalitons_based_exotic_particles_production
+				}
+			}
+		}
+	}
+}

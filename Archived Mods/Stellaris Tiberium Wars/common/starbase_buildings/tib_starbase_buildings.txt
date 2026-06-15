@@ -1,0 +1,196 @@
+green_refinery = {
+	icon = "building_tiberium_refinery_green"
+	construction_days = 180
+	
+	possible = {
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 150
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			minerals = 8
+			alloys = 2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			sr_tiberium_green = 2
+			energy = 3
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_technology = tech_tiberium_refining }
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			minerals = 4
+			alloys = 1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_technology = tech_tiberium_refining }
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			sr_tiberium_green = 1
+			energy = 1
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_technology = tech_tiberium_refining_2 }
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			minerals = 4
+			alloys = 1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_technology = tech_tiberium_refining_2 }
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			sr_tiberium_green = 1
+			energy = 1
+		}
+	}
+	
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_tiberium_green }
+	}
+	
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			owner = {
+				AND = {
+					has_monthly_income = {
+						resource = sr_tiberium_green
+						value > 5
+					}
+					OR = {
+						has_monthly_income = {
+							resource = alloys
+							value < 20
+						}
+						has_monthly_income = {
+							resource = minerals
+							value < 20
+						}
+					}
+				}
+			}
+		}
+	}
+}
+blue_refinery = {
+	icon = "building_tiberium_refinery_blue"
+	construction_days = 180
+	
+	possible = {
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 175
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+			}
+			minerals = 4
+			alloys = 10
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+			}
+			sr_tiberium_blue = 2
+			energy = 3
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+				owner = { has_technology = tech_tiberium_refining }
+			}
+			minerals = 2
+			alloys = 5
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+				owner = { has_technology = tech_tiberium_refining }
+			}
+			sr_tiberium_blue = 1
+			energy = 1
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+				owner = { has_technology = tech_tiberium_refining_2 }
+			}
+			minerals = 2
+			alloys = 5
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+				owner = { has_technology = tech_tiberium_refining_2 }
+			}
+			sr_tiberium_blue = 1
+			energy = 1
+		}
+	}
+	
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_tiberium_blue }
+	}
+	
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			owner = {
+				AND = {
+					has_monthly_income = {
+						resource = sr_tiberium_blue
+						value > 5
+					}
+					OR = {
+						has_monthly_income = {
+							resource = alloys
+							value < 20
+						}
+						has_monthly_income = {
+							resource = minerals
+							value < 20
+						}
+					}
+				}
+			}
+		}
+	}
+}

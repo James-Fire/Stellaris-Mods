@@ -1,0 +1,962 @@
+### Mod Techs ###
+
+### Starbase Hull ###
+# Starbase Hull
+tech_starbase_hull_1 = {
+	cost = @tier3cost3
+	area = engineering
+	tier = 3
+	category = { voidcraft }		
+	prerequisites = { "tech_starbase_4" "tech_defense_platform_hull_1" }
+	is_rare = yes
+	weight = @tier3weight3
+		
+	modifier = {
+		shipclass_starbase_hull_mult = 0.15
+	}
+	
+	weight_modifier = {
+		factor = 0.75
+		modifier = {
+			factor = 0.50
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_voidcraft"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_starbase_hull_1 }
+			}
+		}
+	}
+	ai_weight = {
+		factor = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+tech_starbase_hull_2 = {
+	cost = @tier4cost3
+	area = engineering
+	tier = 4
+	category = { voidcraft }		
+	prerequisites = { "tech_starbase_5" "tech_starbase_hull_1" }
+	is_rare = yes
+	weight = @tier4weight3
+		
+	modifier = {
+		shipclass_starbase_hull_mult = 0.20
+	}
+	
+	weight_modifier = {
+		factor = 0.66
+		modifier = {
+			factor = 0.50
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_voidcraft"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_starbase_hull_2 }
+			}
+		}
+	}
+	ai_weight = {
+		factor = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+tech_starbase_hull_3 = {
+	cost = @tier5cost3
+	area = engineering
+	tier = 5
+	category = { voidcraft }		
+	prerequisites = { "tech_starbase_6" "tech_starbase_hull_2" }
+	is_rare = yes
+	weight = @tier5weight3
+		
+	modifier = {
+		shipclass_starbase_hull_mult = 0.25
+		show_only_custom_tooltip = no
+		custom_tooltip = feature_buff_space_fortification_desc
+	}
+	
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.50
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_voidcraft"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_starbase_hull_3 }
+			}
+		}
+	}
+	ai_weight = {
+		factor = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+### Starbase Levels and Upgrades ###
+# Stellar Bastion
+tech_starbase_6 = {
+	cost = @tier5cost2
+	area = engineering
+	category = { voidcraft }
+	tier = 5
+	prerequisites = { "tech_starbase_5" }
+	weight = @tier5weight2
+	
+	# unlocks Citadel
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					host_has_dlc = "Apocalypse"
+					NOT = { has_technology = tech_titans }
+				}
+				AND = {
+					NOT = { host_has_dlc = "Apocalypse" }
+					NOT = { has_technology = tech_battleships }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { years_passed > 90 }
+		}	
+		modifier = {
+			factor = 10
+			any_neighbor_country = {
+				has_technology = tech_starbase_6
+			}
+		}
+		modifier = {
+			factor = 2
+			years_passed > 110
+		}
+		modifier = {
+			factor = 3
+			years_passed > 115
+		}
+		modifier = {
+			factor = 4
+			years_passed > 120
+		}
+		modifier = {
+			factor = 5
+			count_starbase_sizes = {
+				starbase_size = starbase_citadel
+				count >= 3
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	prereqfor_desc = {	
+		ship = {
+			title = "TECH_UNLOCK_BASTION_CONSTRUCTION_TITLE"
+			desc = "TECH_UNLOCK_BASTION_CONSTRUCTION_DESC"
+		}
+	}
+	
+	ai_weight = {
+		factor = 100 #higher factor due to starbase upgrade
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+# Shipyard Optimization
+tech_shipyard_optimization = {
+	cost = @tier4cost2
+	area = engineering
+	tier = 4
+	category = { voidcraft }
+	prerequisites = { "tech_space_defense_station_improvement" }
+	is_rare = yes
+	weight = @tier4weight2
+		
+	modifier = {
+		starbase_shipyard_build_speed_mult = 0.25
+	}
+	
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.25
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_voidcraft"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_shipyard_optimization }
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+### Starbase Buildings ###
+# Interstellar Fleet Doctrines
+tech_interstellar_fleet_doctrines = {
+	cost = @tier4cost3
+	area = society
+	tier = 4
+	is_rare = yes
+	category = { military_theory }
+	prerequisites = { "tech_interstellar_fleet_traditions" }
+	weight = @tier4weight3
+	
+	modifier = {
+		custom_tooltip = feature_buff_logistic_office_desc
+	}
+		
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.50
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_military_theory"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_interstellar_fleet_doctrines }
+			}
+		}
+	}
+}
+
+# Orbital Hydroponics
+tech_advanced_orbital_hydroponics = {
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	category = { biology }
+	prerequisites = { "tech_gene_crops" "tech_hydroponics" }
+	weight = @tier3weight2
+	
+	modifier = {
+		custom_tooltip = feature_buff_orbital_hydroponics_desc
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+# Solar Cells
+tech_advanced_improved_solar_cells = {
+	cost = @tier3cost3
+	area = engineering
+	tier = 3
+	is_rare = yes
+	category = { voidcraft }
+	prerequisites = { "tech_solar_panel_network" }
+	weight = @tier3weight3
+	
+	potential = {
+		is_gestalt = yes
+	}
+	
+	modifier = {
+		custom_tooltip = feature_buff_improved_solar_cells_desc
+	}
+		
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.50
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_voidcraft"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_advanced_improved_solar_cells }
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+# Defense-Grid Supercomputer
+tech_synchronized_defences_2 = {
+	area = physics
+	tier = 5
+	cost = @tier5cost2
+	category = { computing }
+	ai_update_type = military		
+	prerequisites = { "tech_synchronized_defences" }
+	weight = @tier5weight2
+	
+	# improves starbase building - defense-grid supercomputer
+	modifier = {
+		custom_tooltip = feature_buff_improved_defense_grid_desc
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = "tech_sapient_ai"
+				has_technology = "tech_positronic_implants"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 0.65
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.10
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.20
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}	
+}
+
+# New - Patrol Office
+tech_interstellar_enforcement = {
+	cost = @tier2cost2
+	area = society
+	tier = 2
+	category = { military_theory }
+	prerequisites = { "tech_space_trading" }
+	weight = @tier2weight2
+	
+	potential = {
+		is_gestalt = no
+	}
+	
+	modifier = {
+		local_trade_protection_add = 5
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_prosperity_adopt
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+}
+
+# Customs Office
+tech_customs_office  = {
+	cost = @tier2cost1
+	area = society
+	tier = 2
+	category = { statecraft }
+	prerequisites = { "tech_space_trading" "tech_adaptive_bureaucracy" }
+	weight = @tier2weight1
+	
+	potential = {
+		is_gestalt = no
+	}
+	
+	modifier = {
+		trade_value_mult = 0.05
+		diplo_weight_economy_mult = 0.05
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			num_communications < 2
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_prosperity_adopt
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_civic = civic_corporate_dominion
+				is_megacorp = yes
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}
+tech_gestalt_economics = {
+	icon = tech_customs_office
+	cost = @tier2cost1
+	area = society
+	tier = 2
+	category = { statecraft }
+	prerequisites = { "tech_adaptive_bureaucracy" }
+	weight = @tier2weight1
+	
+	potential = {
+		is_gestalt = yes
+	}
+	
+	modifier = {
+		country_trade_fee = -0.05
+		diplo_weight_economy_mult = 0.05
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			num_communications < 2
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_prosperity_adopt
+		}
+	}
+	
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+	}
+}
+
+tech_space_alloys = {
+	cost = @tier3cost3
+	area = engineering
+	tier = 3
+	is_rare = yes
+	category = { industry }	
+	prerequisites = { "tech_space_mining_4" }
+	weight = @tier3weight3
+	
+	modifier = {
+		#show_only_custom_tooltip = no
+		custom_tooltip = feature_buff_nebula_refinery_desc
+	}
+	
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.50
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_industry"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_space_alloys }
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_dark_matter_observatory = {
+	cost = @tier5cost1
+	area = physics
+	tier = 5
+	is_rare = yes
+	category = { field_manipulation }	
+	prerequisites = { "tech_mine_dark_matter" }
+	weight = @tier5weight1
+	
+	modifier = {
+		#show_only_custom_tooltip = no
+		custom_tooltip = feature_buff_black_hole_observatory_desc
+	}
+	
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.50
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_dark_matter_observatory }
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 3 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_improved_black_site = {
+	cost = @tier4cost2
+	area = society
+	tier = 4
+	is_rare = yes
+	category = { statecraft }	
+	prerequisites = { "tech_living_state" "tech_collective_self" }
+	weight = @tier4weight2
+	
+	modifier = {
+		pop_government_ethic_attraction = 0.25
+	}
+	
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_IMPROVED_BLACK_SITE_TITLE"
+			desc = "TECH_UNLOCK_IMPROVED_BLACK_SITE_DESC"
+		}
+	}
+	
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.50
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_statecraft"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_improved_black_site }
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_egalitarian = yes
+		}
+		modifier = {
+			factor = 2
+			is_authoritarian = yes
+		}
+	}
+	
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+		modifier = {
+			factor = 0
+			is_egalitarian = yes
+		}
+		modifier = {
+			factor = 3
+			is_authoritarian = yes
+		}
+		modifier = {
+			factor = 3
+			allows_slavery = yes
+		}
+	}
+}
+
+### Put new techs above here
+# Galactic Trading Companies
+tech_galactic_trading_companies = {
+	cost = @tier4cost1
+	area = society
+	tier = 4
+	is_rare = yes
+	category = { statecraft }
+	prerequisites = { "tech_space_trading" }
+	weight = @tier4weight1
+	
+	potential = {
+		is_gestalt = no
+	}
+	
+	modifier = {
+		custom_tooltip = feature_buff_trading_hubs_desc
+	}
+	
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.50
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_statecraft"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_prosperity_adopt
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_civic = civic_corporate_dominion
+				is_megacorp = yes
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_galactic_trading_companies }
+			}
+		}
+	}
+}
+### Put nothing below here

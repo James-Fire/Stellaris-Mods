@@ -1,0 +1,122 @@
+entity = {
+	name = "terran_torus_2_entity"
+	pdxmesh = "terran_torus_mesh"
+		default_state = "idle"
+		cull_radius = 20000
+		scale =0.3
+		state = { name = "idle" state_time = 5
+
+event = { time = 0 node = "locator0" particle = "gate_wormwhole_effect" keep_particle = yes trigger_once = yes  }
+
+event = { time = 0 node = "locator1" particle = "nav_1_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0 node = "locator2" particle = "nav_1_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0 node = "locator3" particle = "nav_1_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0 node = "locator4" particle = "nav_1_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0 node = "locator5" particle = "nav_1_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0 node = "locator6" particle = "nav_1_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0 node = "locator7" particle = "nav_1_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0 node = "locator8" particle = "nav_1_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0 node = "locator9" particle = "nav_1_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0 node = "locator10" particle = "nav_1_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0 node = "locator11" particle = "nav_1_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0 node = "locator12" particle = "nav_1_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 1.4 node = "locator1" particle = "nav_2_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 1.2 node = "locator2" particle = "nav_2_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 1 node = "locator3" particle = "nav_2_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0.8 node = "locator4" particle = "nav_2_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0.6 node = "locator5" particle = "nav_2_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 1.4 node = "locator6" particle = "nav_2_effect" keep_particle = yes trigger_once = yes  }
+
+event = { time = 1.4 node = "locator7" particle = "nav_2_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 1.2 node = "locator8" particle = "nav_2_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 1 node = "locator9" particle = "nav_2_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0.8 node = "locator10" particle = "nav_2_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0.6 node = "locator11" particle = "nav_2_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 1.4 node = "locator12" particle = "nav_2_effect" keep_particle = yes trigger_once = yes  }
+
+
+	}
+}
+entity = {
+	name = "terran_torus_3_entity"
+	pdxmesh = "terran_torus_mesh"
+		default_state = "idle"
+		cull_radius = 20000
+		scale =0.5
+		
+		meshsettings = {
+			name = "Torun_ringShape"
+			index = 0
+			texture_diffuse = "terran_torus_diffuse.dds"
+			texture_normal = "terran_torus_normal.dds"
+			texture_specular = "terran_torus_specular.dds"
+			shader = "PdxMeshAlphaAdditive"
+		}
+}
+entity = {
+	name = "terran_light_entity"
+	pdxmesh = "terran_light_mesh"
+			default_state = "idle"
+		state = { name = "idle" state_time = 5
+
+event = { time = 0 node = "locator0" particle = "gate_wormwhole_effect" keep_particle = yes trigger_once = yes  }
+
+event = { time = 0 node = "locator1" particle = "nav_1_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0 node = "locator2" particle = "nav_1_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0 node = "locator3" particle = "nav_1_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0 node = "locator4" particle = "nav_1_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0 node = "locator5" particle = "nav_1_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0 node = "locator6" particle = "nav_1_effect" keep_particle = yes trigger_once = yes  }
+
+event = { time = 1.4 node = "locator1" particle = "nav_2_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 1.2 node = "locator2" particle = "nav_2_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 1 node = "locator3" particle = "nav_2_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0.8 node = "locator4" particle = "nav_2_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 0.6 node = "locator5" particle = "nav_2_effect" keep_particle = yes trigger_once = yes  }
+event = { time = 1.4 node = "locator6" particle = "nav_2_effect" keep_particle = yes trigger_once = yes  	}
+
+
+	}
+}
+entity = {
+	name = "terran_earth_entity"
+	pdxmesh = "planet_clouded_mesh"
+	scale = 7
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "continental_05_diffuse.dds"
+	texture_normal = "continental_05_normals.dds"
+	texture_specular = "continental_05_spec.dds"
+	}
+	
+	##pole texture override
+	meshsettings = {
+	name = "polesShape"
+	texture_diffuse = "poles_1_diffuse.dds"
+	texture_normal = "poles_1_normal.dds"
+	texture_specular = "poles_1_specular.dds"
+	}
+	
+	##cloud texture override
+	meshsettings = {
+	name = "clouds_geosphereShape"
+	texture_diffuse = "clouds_medium_diffuse.dds"
+	texture_normal = "clouds_medium_normal.dds"
+	texture_specular = "clouds_medium_specular.dds"
+	}
+	
+	##cloud shadow texture override
+	meshsettings = {
+	name = "clouds_shadow_geosphereShape"
+	texture_diffuse = "clouds_medium_shadow_diffuse.dds"
+	texture_normal = "nonormal.dds"
+	texture_specular = "nospec.dds"
+	}
+		#locator = { name = "root" 	position = { 0 	0 	0 	} rotation ={ 0 0 0} 	}
+	#attach = { root = "terran_torus_entity" }
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}

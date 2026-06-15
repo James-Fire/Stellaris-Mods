@@ -1,0 +1,196 @@
+@regen = 0.5
+
+# ####################
+#  Critter Weapons - Swarm
+# ####################
+
+@critter_cost_value = 35
+@missile_speed = 5
+
+### Missiles
+
+# Standard Scourge Missile
+weapon_component_template = {
+	key = "LARGE_SCOURGE_MISSILE_1"
+	size = torpedo
+	entity = "turret_missile_large_entity"
+
+	icon = "GFX_ship_part_scourge_missile_1"
+	icon_frame = 1
+	type = missile
+    power = @ukn_crisis_scourge_missile_1_power
+	
+	damage = { min = @ukn_crisis_scourge_missile_1_dmg_min max = @ukn_crisis_scourge_missile_1_dmg_max }
+    windup = { min = @ukn_crisis_scourge_missile_1_windup_min max = @ukn_crisis_scourge_missile_1_windup_max }
+    total_fire_time = @ukn_crisis_scourge_missile_1_total_fire_time
+    range = @ukn_crisis_scourge_missile_1_range
+    accuracy = @ukn_crisis_scourge_missile_1_accuracy
+	
+    missile_speed = @ukn_crisis_scourge_missile_1_missile_speed # 18 = 400 -- apparently, the game doesn't auto-convert speed for non-vanilla components
+    missile_evasion = @ukn_crisis_scourge_missile_1_missile_evasion
+    missile_health = @ukn_crisis_scourge_missile_1_missile_health
+    missile_retarget_range = @ukn_crisis_scourge_missile_1_missile_retarget_range
+	
+    hull_damage = @ukn_crisis_scourge_missile_1_hull_damage_mult
+    armor_damage = @ukn_crisis_scourge_missile_1_armor_damage_mult
+    armor_penetration = @ukn_crisis_scourge_missile_1_armor_penetration_mult
+    shield_damage = @ukn_crisis_scourge_missile_1_shield_damage_mult
+    shield_penetration = @ukn_crisis_scourge_missile_1_shield_penetration_mult
+    tracking = @ukn_crisis_scourge_missile_1_tracking
+
+	prerequisites = { "tech_scourge_missile_1" }
+	component_set = "SCOURGE_MISSILE_1"
+	projectile_gfx = "scourge_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 65
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+### Projectiles
+
+# Medium Projectile
+weapon_component_template = {
+	key = "MEDIUM_SCOURGE_PROJECTILE_WEAPON"
+	hidden = yes
+
+	size = medium
+	entity = "medium_scourge_projectile_weapon_entity"
+	type = instant
+	icon = "GFX_ship_part_scourge_missile_1"
+	icon_frame = 1
+	projectile_gfx = "scourge_projectile_weapon"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+    power = @ukn_crisis_scourge_plasma_1_s_power
+	
+	damage = { min = @ukn_crisis_scourge_plasma_1_s_dmg_min max = @ukn_crisis_scourge_plasma_1_s_dmg_max }
+    windup = { min = @ukn_crisis_scourge_plasma_1_s_windup_min max = @ukn_crisis_scourge_plasma_1_s_windup_max }
+    total_fire_time = @ukn_crisis_scourge_plasma_1_s_total_fire_time
+    range = @ukn_crisis_scourge_plasma_1_s_range
+    accuracy = @ukn_crisis_scourge_plasma_1_accuracy
+	
+    hull_damage = @ukn_crisis_scourge_plasma_1_hull_damage_mult
+    armor_penetration = @ukn_crisis_scourge_plasma_1_armor_penetration_mult
+    armor_damage = @ukn_crisis_scourge_plasma_1_armor_damage_mult
+    shield_penetration = @ukn_crisis_scourge_plasma_1_shield_penetration_mult
+    shield_damage = @ukn_crisis_scourge_plasma_1_shield_damage_mult
+    tracking = @ukn_crisis_scourge_plasma_1_s_tracking
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @critter_cost_value
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+# Small Projectile
+weapon_component_template = {
+	key = "SMALL_SCOURGE_PROJECTILE_WEAPON"
+	hidden = yes
+
+	size = small
+	entity = "small_scourge_projectile_weapon_entity"
+	type = instant
+	icon = "GFX_ship_part_scourge_missile_1"
+	icon_frame = 1
+	projectile_gfx = "small_scourge_projectile_weapon"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+    power = @ukn_crisis_scourge_plasma_1_m_power
+	
+	damage = { min = @ukn_crisis_scourge_plasma_1_m_dmg_min max = @ukn_crisis_scourge_plasma_1_m_dmg_max }
+    windup = { min = @ukn_crisis_scourge_plasma_1_m_windup_min max = @ukn_crisis_scourge_plasma_1_m_windup_max }
+    total_fire_time = @ukn_crisis_scourge_plasma_1_m_total_fire_time
+    range = @ukn_crisis_scourge_plasma_1_m_range
+    accuracy = @ukn_crisis_scourge_plasma_1_accuracy
+	
+    hull_damage = @ukn_crisis_scourge_plasma_1_hull_damage_mult
+    armor_penetration = @ukn_crisis_scourge_plasma_1_armor_penetration_mult
+    armor_damage = @ukn_crisis_scourge_plasma_1_armor_damage_mult
+    shield_penetration = @ukn_crisis_scourge_plasma_1_shield_penetration_mult
+    shield_damage = @ukn_crisis_scourge_plasma_1_shield_damage_mult
+    tracking = @ukn_crisis_scourge_plasma_1_m_tracking
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @critter_cost_value
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+### Strike Craft
+
+# Standard Swarm Fighter
+strike_craft_component_template = {
+	key = "SWARM_STRIKE_CRAFT"
+	size = LARGE
+	entity = "swarm_01_fighter_entity"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 100
+		}
+	}
+    power = @ukn_crisis_swarm_strike_craft_1_power
+	
+	damage = { min = @ukn_crisis_swarm_strike_craft_1_dmg_min max = @ukn_crisis_swarm_strike_craft_1_dmg_max }
+	cooldown = @ukn_crisis_swarm_strike_craft_1_cooldown
+    range = @ukn_crisis_swarm_strike_craft_1_range
+    accuracy = @ukn_crisis_swarm_strike_craft_1_accuracy
+	
+    hull_damage = @ukn_crisis_swarm_strike_craft_1_hull_damage_mult
+    armor_penetration = @ukn_crisis_swarm_strike_craft_1_armor_penetration_mult
+    armor_damage = @ukn_crisis_swarm_strike_craft_1_armor_damage_mult
+    shield_penetration = @ukn_crisis_swarm_strike_craft_1_shield_penetration_mult
+    shield_damage = @ukn_crisis_swarm_strike_craft_1_shield_damage_mult
+    tracking = @ukn_crisis_swarm_strike_craft_1_tracking
+	
+	engagement_range = @ukn_crisis_swarm_strike_craft_1_engagement_range
+	count = @ukn_crisis_swarm_strike_craft_1_count
+	regeneration_per_day = @ukn_crisis_swarm_strike_craft_1_regen
+	launch_time = @ukn_crisis_swarm_strike_craft_1_launch_time
+
+	health = @ukn_crisis_swarm_strike_craft_1_health
+	armor = @ukn_crisis_swarm_strike_craft_1_armor
+	shield = @ukn_crisis_swarm_strike_craft_1_shield
+	
+	evasion = @ukn_crisis_swarm_strike_craft_1_evasion
+	speed = @ukn_crisis_swarm_strike_craft_1_speed
+	rotation_speed = @ukn_crisis_swarm_strike_craft_1_rotation_speed
+	acceleration = @ukn_crisis_swarm_strike_craft_1_acceleration
+
+	ship_behavior = "bombers_behavior"
+
+	weapon_type = instant # Not PD, unlike normal strike craft
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	prerequisites = { "tech_swarm_strike_craft_1" }
+	component_set = "SWARM_STRIKE_CRAFT_1"
+	icon = "GFX_ship_part_swarm_strike_craft_1"
+	icon_frame = 1
+	tags = { weapon_type_strike_craft }
+	
+	ai_weight = {
+		weight = 0
+	}
+}

@@ -1,0 +1,289 @@
+#Dyson Sphere Site
+dyson_sphere_0_b_star = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -7 y = -7 }
+	potential = { always = no }
+
+	resources = {
+		category = ukn_megastructure_site
+		cost = {
+			influence = @ukn_dyson_sphere_p0_cost_influence_b_star
+####
+			consumer_goods = @ukn_dyson_sphere_p0_cost_consumer_goods_g_star
+			ukn_meta_materials = @ukn_dyson_sphere_p0_cost_ukn_meta_materials_g_star
+#			ukn_quasi_matter = @ukn_dyson_sphere_p0_cost_ukn_quasi_matter_g_star
+#			ukn_causalitons = @ukn_dyson_sphere_p0_cost_ukn_causalitons_g_star
+		}
+		upkeep = {
+			energy = @ukn_dyson_sphere_p0_upkeep_energy_g_star
+		}
+	}
+#######################
+}
+
+#Dyson Sphere Frame
+dyson_sphere_1_b_star = {
+	entity = "dyson_sphere_phase_01_entity"
+	construction_entity = "dyson_sphere_frame_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { dyson_sphere_0_b_star }
+	prerequisites = { "tech_dyson_sphere" }
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+
+	build_time = @ukn_dyson_sphere_p1_build_time_b_star
+	resources = {
+		category = ukn_megastructure_frame
+		cost = {
+			influence = @ukn_dyson_sphere_p1_cost_influence_b_star
+####
+			consumer_goods = @ukn_dyson_sphere_p1_cost_consumer_goods_b_star
+			ukn_meta_materials = @ukn_dyson_sphere_p1_cost_ukn_meta_materials_b_star
+####
+			ukn_femtomatter = @ukn_dyson_sphere_p1_cost_ukn_femtomatter_b_star
+#			ukn_condensics = @ukn_dyson_sphere_p1_cost_ukn_condensics_b_star
+#			ukn_quasi_matter = @ukn_dyson_sphere_p1_cost_ukn_quasi_matter_b_star
+#			ukn_causalitons = @ukn_dyson_sphere_p1_cost_ukn_causalitons_b_star
+		}
+		upkeep = {
+			energy = @ukn_dyson_sphere_p1_upkeep_energy_b_star
+			ukn_meta_materials = @ukn_dyson_sphere_p1_upkeep_ukn_meta_materials_b_star
+		}
+		produces = {
+			energy = @ukn_dyson_sphere_p1_output_energy_b_star
+		}
+	}
+#######################
+}
+
+#Partial Dyson Sphere
+dyson_sphere_2_b_star = {
+	entity = "dyson_sphere_phase_02_entity"
+	construction_entity = "dyson_sphere_part_1_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { dyson_sphere_1_b_star }
+	prerequisites = { "tech_dyson_sphere" }
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+
+	build_time = @ukn_dyson_sphere_p2_build_time_b_star
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			influence = @ukn_dyson_sphere_p2_cost_influence_b_star
+####
+			consumer_goods = @ukn_dyson_sphere_p2_cost_consumer_goods_b_star
+			ukn_meta_materials = @ukn_dyson_sphere_p2_cost_ukn_meta_materials_b_star
+####
+			ukn_femtomatter = @ukn_dyson_sphere_p2_cost_ukn_femtomatter_b_star
+#			ukn_condensics = @ukn_dyson_sphere_p2_cost_ukn_condensics_b_star
+#			ukn_quasi_matter = @ukn_dyson_sphere_p2_cost_ukn_quasi_matter_b_star
+#			ukn_causalitons = @ukn_dyson_sphere_p2_cost_ukn_causalitons_b_star
+		}
+		upkeep = {
+			ukn_meta_materials = @ukn_dyson_sphere_p2_upkeep_ukn_meta_materials_b_star
+		}
+		produces = {
+			energy = @ukn_dyson_sphere_p2_output_energy_b_star
+		}
+	}
+#######################
+}
+
+#Partial Dyson Sphere
+dyson_sphere_3_b_star = {
+	entity = "dyson_sphere_phase_03_entity"
+	construction_entity = "dyson_sphere_part_2_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { dyson_sphere_2_b_star }
+	prerequisites = { "tech_dyson_sphere" }
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+
+	build_time = @ukn_dyson_sphere_p3_build_time_b_star
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			influence = @ukn_dyson_sphere_p3_cost_influence_b_star
+####
+			consumer_goods = @ukn_dyson_sphere_p3_cost_consumer_goods_b_star
+			ukn_meta_materials = @ukn_dyson_sphere_p3_cost_ukn_meta_materials_b_star
+####
+			ukn_femtomatter = @ukn_dyson_sphere_p3_cost_ukn_femtomatter_b_star
+#			ukn_condensics = @ukn_dyson_sphere_p3_cost_ukn_condensics_b_star
+#			ukn_quasi_matter = @ukn_dyson_sphere_p3_cost_ukn_quasi_matter_b_star
+#			ukn_causalitons = @ukn_dyson_sphere_p3_cost_ukn_causalitons_b_star
+		}
+		upkeep = {
+			ukn_meta_materials = @ukn_dyson_sphere_p3_upkeep_ukn_meta_materials_b_star
+		}
+		produces = {
+			energy = @ukn_dyson_sphere_p3_output_energy_b_star
+		}
+	}
+#######################
+}
+
+#Partial Dyson Sphere
+dyson_sphere_4_b_star = {
+	entity = "dyson_sphere_phase_04_entity"
+	construction_entity = "dyson_sphere_part_3_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { dyson_sphere_3_b_star }
+	prerequisites = { "tech_dyson_sphere" }
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+
+	build_time = @ukn_dyson_sphere_p4_build_time_b_star
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			influence = @ukn_dyson_sphere_p4_cost_influence_b_star
+####
+			consumer_goods = @ukn_dyson_sphere_p4_cost_consumer_goods_b_star
+			ukn_meta_materials = @ukn_dyson_sphere_p4_cost_ukn_meta_materials_b_star
+####
+			ukn_femtomatter = @ukn_dyson_sphere_p4_cost_ukn_femtomatter_b_star
+#			ukn_condensics = @ukn_dyson_sphere_p4_cost_ukn_condensics_b_star
+#			ukn_quasi_matter = @ukn_dyson_sphere_p4_cost_ukn_quasi_matter_b_star
+#			ukn_causalitons = @ukn_dyson_sphere_p4_cost_ukn_causalitons_b_star
+		}
+		upkeep = {
+			ukn_meta_materials = @ukn_dyson_sphere_p4_upkeep_ukn_meta_materials_b_star
+		}
+		produces = {
+			energy = @ukn_dyson_sphere_p4_output_energy_b_star
+		}
+	}
+#######################
+}
+
+#Dyson Sphere
+dyson_sphere_5_b_star = {
+	entity = "dyson_sphere_phase_05_entity"
+	construction_entity = "dyson_sphere_part_4_entity"
+	portrait = "GFX_megastructure_dyson_sphere_background"
+	upgrade_from = { dyson_sphere_4_b_star }
+	prerequisites = { "tech_dyson_sphere" }
+#	show_prereqs = yes
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+
+	build_time = @ukn_dyson_sphere_p5_build_time_b_star
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			influence = @ukn_dyson_sphere_p5_cost_influence_b_star
+####
+			consumer_goods = @ukn_dyson_sphere_p5_cost_consumer_goods_b_star
+			ukn_meta_materials = @ukn_dyson_sphere_p5_cost_ukn_meta_materials_b_star
+####
+			ukn_femtomatter = @ukn_dyson_sphere_p5_cost_ukn_femtomatter_b_star
+#			ukn_condensics = @ukn_dyson_sphere_p5_cost_ukn_condensics_b_star
+#			ukn_quasi_matter = @ukn_dyson_sphere_p5_cost_ukn_quasi_matter_b_star
+#			ukn_causalitons = @ukn_dyson_sphere_p5_cost_ukn_causalitons_b_star
+		}
+		upkeep = {
+			ukn_meta_materials = @ukn_dyson_sphere_p5_upkeep_ukn_meta_materials_b_star
+		}
+		produces = {
+			energy = @ukn_dyson_sphere_p5_output_energy_b_star
+		}
+	}
+#######################
+
+	on_build_complete = {
+		if = {
+			limit = {
+				count_system_planet = {
+					limit = { is_star = yes }
+					count = 1
+				}
+			}
+			set_star_class = sc_dyson_star
+			every_system_planet = {
+				limit = { is_star = yes }
+				change_pc = pc_b_star
+			}
+		}
+		from = {
+			set_country_flag = has_built_or_repaired_megastructure	# Backup
+			set_country_flag = ukn_has_built_megastructure 	# Triggers Master Builders
+		}
+		every_system_planet = {
+			if = {		limit = { is_planet_class = pc_barren }											change_pc = pc_barren_cold }
+			else_if = {	limit = { OR = { is_planet_class = pc_molten	is_planet_class = pc_toxic } }	change_pc = pc_frozen }
+		}
+	}
+}
+
+# Ruined Dyson Sphere
+dyson_sphere_ruined_b_star = {
+	entity = "dyson_sphere_destroyed_entity"
+	portrait = "GFX_megastructure_construction_background"
+	potential = { always = no }
+}
+
+# Restored Dyson Sphere
+dyson_sphere_restored_b_star = {
+	entity = "dyson_sphere_phase_05_entity"
+	construction_entity = "dyson_sphere_part_4_entity"
+	portrait = "GFX_megastructure_dyson_sphere_background"
+	upgrade_from = { dyson_sphere_ruined_b_star }
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+
+	build_time = @ukn_dyson_r_build_time_b_star
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			influence = @ukn_dyson_r_cost_influence_b_star
+####
+			consumer_goods = @ukn_dyson_r_cost_consumer_goods_b_star
+			ukn_meta_materials = @ukn_dyson_r_cost_ukn_meta_materials_b_star
+####
+			ukn_femtomatter = @ukn_dyson_r_cost_ukn_femtomatter_b_star
+#			ukn_condensics = @ukn_dyson_r_cost_ukn_condensics_b_star
+#			ukn_quasi_matter = @ukn_dyson_r_cost_ukn_quasi_matter_b_star
+#			ukn_causalitons = @ukn_dyson_r_cost_ukn_causalitons_b_star
+		}
+		upkeep = {
+			ukn_meta_materials = @ukn_dyson_r_upkeep_ukn_meta_materials_b_star
+		}
+		produces = {
+			energy = @ukn_dyson_r_output_energy_b_star
+		}
+	}
+#######################
+
+	possible = {
+		exists = from
+		from = { has_technology = tech_mega_engineering }
+	}
+
+	on_build_start = { fromfrom = { set_graphical_culture = root.from } }
+	on_build_complete = {
+		if = {
+			limit = {
+				count_system_planet = {
+					limit = { is_star = yes }
+					count = 1
+				}
+			}
+			set_star_class = sc_dyson_star
+		}
+		every_system_planet = {
+			if = {		limit = { has_modifier = terraforming_candidate }								remove_modifier = terraforming_candidate }
+			if = {		limit = { is_planet_class = pc_barren }											change_pc = pc_barren_cold }
+			else_if = {	limit = { OR = { is_planet_class = pc_molten	is_planet_class = pc_toxic } }	change_pc = pc_frozen }
+		}
+		giga_remove_system_debris = yes
+		from = {
+			set_country_flag = ukn_has_repaired_megastructure
+			set_country_flag = has_built_or_repaired_megastructure	# Backup
+			country_event = { id = utopia.2011 }
+		}
+		fromfrom.planet = {
+			change_pc = pc_b_star
+			set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+			set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+		}
+	}
+}

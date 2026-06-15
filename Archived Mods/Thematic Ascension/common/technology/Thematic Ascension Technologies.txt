@@ -1,0 +1,230 @@
+
+###########################
+### TECH COSTS - REPEATABLE  ###
+###########################
+
+###########################
+### TECH WEIGHTS - REPEATABLE  ###
+###########################
+
+@repeatableTechWeight = 25
+@repatableTechFactor = 0.5
+
+@corvette_sections_cost = 450
+@negcorvette_sections_cost = -450
+@destroyer_sections_cost = 420
+@negdestroyer_sections_cost = -420
+@cruiser_sections_cost = 360
+@negcruiser_sections_cost = -360
+@battleship_sections_cost = 240
+@negbattleship_sections_cost = -240
+@titan_sections_cost = 480
+@negtitan_sections_cost = -480
+
+@corvette_upkeep_cost = 1.5
+@negcorvette_upkeep_cost = -1.5
+@destroyer_upkeep_cost = 1.4
+@negdestroyer_upkeep_cost = -1.4
+@cruiser_upkeep_cost = 1.2
+@negcruiser_upkeep_cost = -1.2
+@battleship_upkeep_cost = 0.8
+@negbattleship_upkeep_cost = -0.8
+@titan_upkeep_cost = 1.6
+@negtitan_upkeep_cost = -1.6
+
+@titan_upkeep_energy = 4.8
+@titan_upkeep_alloys = 1.6
+
+@battleship_upkeep_energy = 2.4
+@battleship_upkeep_alloys = 0.8
+
+@cruiser_upkeep_energy = 1.2
+@cruiser_upkeep_alloys = 0.4
+
+@destroyer_upkeep_energy = 0.6
+@destroyer_upkeep_alloys = 0.2
+
+@corvette_upkeep_energy = 0.3
+@corvette_upkeep_alloys = 0.1
+
+ship_corvette_time_cost_mult
+ship_corvette_alloys_cost_mult
+ship_corvette_food_cost_mult
+
+ship_corvette_nanites_cost_mult
+
+tech_biological_replacements = {
+	area = engineering
+	cost = @repeatableTechBaseCost
+	tier = 5
+	category = { industry }
+	prerequisites = { }
+	weight = 0
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+		
+	}
+}
+
+tech_cloning_repeatable = {
+	area = society
+	cost = @repeatableTechBaseCost
+	tier = 5
+	category = { biology }
+	prerequisites = { "tech_genetic_resequencing" }
+	weight = 10
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+		pop_growth_speed_reduction = -1
+	}
+}
+
+tech_bioship = {
+	area = engineering
+	cost = @repeatableTechBaseCost
+	tier = 5
+	category = { industry }
+	prerequisites = { "tech_genetic_resequencing" }
+	weight = 10
+
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+		ships_alloys_cost_add = @negtitan_sections_cost
+		ships_food_cost_add = @titan_sections_cost
+		
+		ship_corvette_alloys_cost_add = @corvette_sections_cost
+		ship_corvette_food_cost_add = @negcorvette_sections_cost
+		
+		ship_destroyer_alloys_cost_add = @destroyer_sections_cost
+		ship_destroyer_food_cost_add = @negdestroyer_sections_cost
+		
+		ship_cruiser_alloys_cost_add = @cruiser_sections_cost
+		ship_cruiser_food_cost_add = @negcruiser_sections_cost
+		
+		ship_battleship_alloys_cost_add = @battleship_sections_cost
+		ship_battleship_food_cost_add = @negbattleship_sections_cost
+		
+		ship_hull_regen_add_perc = 0.2
+		ship_armor_regen_add_perc = 0.1
+		
+		ships_alloys_upkeep_add = @negtitan_upkeep_cost
+		ships_food_upkeep_add = @titan_upkeep_cost
+		
+		ship_corvette_alloys_upkeep_add = @corvette_upkeep_cost
+		ship_corvette_food_upkeep_add = @negcorvette_upkeep_cost
+		
+		ship_destroyer_alloys_upkeep_add = @destroyer_upkeep_cost
+		ship_destroyer_food_upkeep_add = @negdestroyer_upkeep_cost
+		
+		ship_cruiser_alloys_upkeep_add = @cruiser_upkeep_cost
+		ship_cruiser_food_upkeep_add = @negcruiser_upkeep_cost
+		
+		ship_battleship_alloys_upkeep_add = @battleship_upkeep_cost
+		ship_battleship_food_upkeep_add = @negbattleship_upkeep_cost
+	}
+}
+
+tech_virtual_planets = {
+	area = engineering
+	cost = @repeatableTechBaseCost
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { }	
+	weight = 0
+
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+		planet_jobs_robotic_produces_mult = 1
+	}
+}
+
+tech_virtual_ships = {
+	area = engineering
+	cost = @repeatableTechBaseCost
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_virtual_planets" }
+	weight = 10
+
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+	}
+}
+
+tech_psionic_society = {
+	area = society
+	cost = @repeatableTechBaseCost
+	tier = 5
+	category = { psionics }
+	prerequisites = { "tech_telepathy" }
+	weight = 10
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				has_ascension_perk = ap_transcendence
+			}
+		}	
+	}
+
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+		faction_approval = 2
+		planet_stability_add = 5
+		planet_crime_add = -20
+		planet_amenities_add = 50
+	}
+}
+
+tech_psionic_ships = {
+	area = society
+	cost = @repeatableTechBaseCost
+	tier = 5
+	category = { psionics }
+	prerequisites = { "tech_psionic_society" }
+	weight = 10
+
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	modifier = {
+		ships_sr_zro_cost_add = 40
+		
+		ship_corvette_sr_zro_cost_add = -5
+		
+		ship_destroyer_sr_zro_cost_add = -5
+		
+		ship_cruiser_sr_zro_cost_add = -10
+		
+		ship_battleship_sr_zro_cost_add = -20
+		
+		ship_evasion_add = 5
+		ship_base_speed_mult = 0.2
+		ship_sensor_range_add = 1
+		ship_hyperlane_range_add = 2
+		ship_windup_mult = 0.8
+		ship_winddown_mult = 0.8
+		ship_disengage_chance_mult = 1.5
+		ship_shield_mult = 0.2
+	}
+}

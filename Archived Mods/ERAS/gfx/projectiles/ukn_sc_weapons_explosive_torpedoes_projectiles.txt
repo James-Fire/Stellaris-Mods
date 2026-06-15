@@ -1,0 +1,438 @@
+#All files in gfx/projectiles are reloadable with the "reload projectiles" console command
+#Filewatcher is also enabled for all files
+
+##################
+### TORPEDOES  ###
+##################
+
+######----------------------------------
+# T1 #----------------------------------
+######----------------------------------
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_1S"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_1S"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_2S"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_1S"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_1S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_1M"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_1M"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_2M"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_1M"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_1M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_1L"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_1L"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_2L"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_1L"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_1L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T2 #----------------------------------
+######----------------------------------
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_2S"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_2S"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_3S"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_2S"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_2S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_2M"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_2M"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_3M"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_2M"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_2M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_2L"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_2L"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_3L"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_2L"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_2L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T3 #----------------------------------
+######----------------------------------
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_3S"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_3S"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_4S"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_3S"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_3S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_3M"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_3M"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_4M"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_3M"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_3M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_3L"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_3L"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_4L"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_3L"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_3L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T4 #----------------------------------
+######----------------------------------
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_4S"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_4S"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_5S"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_4S"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_4S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_4M"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_4M"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_5M"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_4M"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_4M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_4L"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_4L"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_5L"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_4L"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_4L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T5 #----------------------------------
+######----------------------------------
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_5S"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_5S"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_6S"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_5S"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_5S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_5M"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_5M"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_6M"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_5M"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_5M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_5L"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_5L"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_6L"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_5L"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_5L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T6 #----------------------------------
+######----------------------------------
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_6S"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_6S"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_7S"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_6S"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_6S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_6M"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_6M"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_7M"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_6M"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_6M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_6L"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_6L"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_7L"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_6L"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_6L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T7 #----------------------------------
+######----------------------------------
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_7S"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_7S"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_8S"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_7S"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_7S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_7M"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_7M"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_8M"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_7M"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_7M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_7L"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_7L"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_8L"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_7L"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_7L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T8 #----------------------------------
+######----------------------------------
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_8S"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_8S"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_9S"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_8S"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_8S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_8M"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_8M"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_9M"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_8M"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_8M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_torpedo_8L"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_torpedo_8L"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_9L"
+	muzzle_flash_entity = "muzzle_entity_ukn_torpedo_8L"
+	
+	#torpedo specific data
+	entity = "missile_entity_ukn_torpedo_8L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}

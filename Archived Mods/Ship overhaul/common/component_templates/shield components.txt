@@ -1,0 +1,1416 @@
+#Primary Shield Generators# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#############
+# UTILITIES #
+#############
+
+# Deflectors
+utility_component_template = {
+	key = "SIZE_1_SHIELD_1"
+	size = small
+	icon = "GFX_ship_part_shield_1"
+	icon_frame = 1
+	power = @shieldpower_S1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldS1_cost
+		}	
+		upkeep = {
+			energy = @shieldS1_upkeep_energy
+			alloys = @shieldS1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_S1
+		ship_shield_regen_add_static = @shieldregen_S1 #Regeneration per day
+	}
+	size_restriction = { corvette destroyer colonizer lithoid_colonizer sponsored_colonizer constructor science transport }
+	prerequisites = { "tech_shields_1" }
+	component_set = "ship_shield_generator"
+	upgrades_to = "SIZE_1_SHIELD_2"
+}
+
+utility_component_template = {
+	key = "SIZE_2_SHIELD_1"
+	size = medium
+	icon = "GFX_ship_part_shield_1"
+	icon_frame = 1
+	power = @shieldpower_M1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldM1_cost
+		}
+		upkeep = {
+			energy = @shieldM1_upkeep_energy
+			alloys = @shieldM1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_M1
+		ship_shield_regen_add_static = @shieldregen_M1 #Regeneration per day
+	}
+	size_restriction = { cruiser ion_cannon military_station_small }
+	prerequisites = { "tech_shields_1" }
+	component_set = "ship_shield_generator"
+	upgrades_to = "SIZE_2_SHIELD_2"
+}
+
+utility_component_template = {
+	key = "SIZE_3_SHIELD_1"
+	size = large
+	icon = "GFX_ship_part_shield_1"
+	icon_frame = 1
+	power = @shieldpower_L1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldL1_cost
+		}
+		upkeep = {
+			energy = @shieldL1_upkeep_energy
+			alloys = @shieldL1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_L1
+		ship_shield_regen_add_static = @shieldregen_L1 #Regeneration per day
+	}
+	size_restriction = { battleship titan }
+	prerequisites = { "tech_shields_1" }
+	component_set = "ship_shield_generator"
+	upgrades_to = "SIZE_3_SHIELD_2"
+}
+
+utility_component_template = {
+	key = "STARBASE_SHIELD_1"
+	size = large
+	icon = "GFX_ship_part_shield_1"
+	icon_frame = 1
+	power = @shieldpower_L2
+	resources = {
+		category = ship_components
+		cost = {
+		}
+		upkeep = {
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_L2
+		ship_shield_regen_add_static = @shieldregen_L2 #Regeneration per day
+	}
+	class_restriction = { shipclass_starbase }
+	prerequisites = { "tech_shields_1" }
+	component_set = "ship_shield_generator"
+	upgrades_to = "STARBASE_SHIELD_2"
+}
+
+# Advanced Deflectors
+utility_component_template = {
+	key = "SIZE_1_SHIELD_2"
+	size = small
+	icon = "GFX_ship_part_shield_2"
+	icon_frame = 1
+	power = @shieldpower_S2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldS2_cost
+		}
+		upkeep = {
+			energy = @shieldS2_upkeep_energy
+			alloys = @shieldS2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_S2
+		ship_shield_regen_add_static = @shieldregen_S2 #Regeneration per day
+	}
+	size_restriction = { corvette destroyer colonizer lithoid_colonizer sponsored_colonizer constructor science transport }
+	prerequisites = { "tech_shields_2" }
+	component_set = "ship_shield_generator"
+	upgrades_to = "SIZE_1_SHIELD_3"
+}
+
+utility_component_template = {
+	key = "SIZE_2_SHIELD_2"
+	size = medium
+	icon = "GFX_ship_part_shield_2"
+	icon_frame = 1
+	power = @shieldpower_M2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldM2_cost
+		}
+		upkeep = {
+			energy = @shieldM2_upkeep_energy
+			alloys = @shieldM2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_M2
+		ship_shield_regen_add_static = @shieldregen_M2 #Regeneration per day
+	}
+	size_restriction = { cruiser ion_cannon military_station_small }
+	prerequisites = { "tech_shields_2" }
+	component_set = "ship_shield_generator"
+	upgrades_to = "SIZE_2_SHIELD_3"
+}
+
+utility_component_template = {
+	key = "SIZE_3_SHIELD_2"
+	size = large
+	icon = "GFX_ship_part_shield_2"
+	icon_frame = 1
+	power = @shieldpower_L2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldL2_cost
+		}
+		upkeep = {
+			energy = @shieldL2_upkeep_energy
+			alloys = @shieldL2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_L2
+		ship_shield_regen_add_static = @shieldregen_L2 #Regeneration per day
+	}
+	size_restriction = { battleship titan }
+	prerequisites = { "tech_shields_2" }
+	component_set = "ship_shield_generator"
+	upgrades_to = "SIZE_3_SHIELD_3"
+}
+
+utility_component_template = {
+	key = "STARBASE_SHIELD_2"
+	size = large
+	icon = "GFX_ship_part_shield_2"
+	icon_frame = 1
+	power = @shieldpower_L3
+	resources = {
+		category = ship_components
+		cost = {
+		}
+		upkeep = {
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_L3
+		ship_shield_regen_add_static = @shieldregen_L3 #Regeneration per day
+	}
+	class_restriction = { shipclass_starbase }
+	prerequisites = { "tech_shields_2" }
+	component_set = "ship_shield_generator"
+	upgrades_to = "STARBASE_SHIELD_3"
+}
+
+# Shields
+utility_component_template = {
+	key = "SIZE_1_SHIELD_3"
+	size = small
+	icon = "GFX_ship_part_shield_3"
+	icon_frame = 1
+	power = @shieldpower_S3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldS3_cost
+		}
+		upkeep = {
+			energy = @shieldS3_upkeep_energy
+			alloys = @shieldS3_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_S3
+		ship_shield_regen_add_static = @shieldregen_S3 #Regeneration per day
+	}
+	size_restriction = { corvette destroyer colonizer lithoid_colonizer sponsored_colonizer constructor science transport }
+	prerequisites = { "tech_shields_3" }
+	component_set = "ship_shield_generator"
+	upgrades_to = "SIZE_1_SHIELD_4"
+}
+
+utility_component_template = {
+	key = "SIZE_2_SHIELD_3"
+	size = medium
+	icon = "GFX_ship_part_shield_3"
+	icon_frame = 1
+	power = @shieldpower_M3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldM3_cost
+		}
+		upkeep = {
+			energy = @shieldM3_upkeep_energy
+			alloys = @shieldM3_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_M3
+		ship_shield_regen_add_static = @shieldregen_M3 #Regeneration per day
+	}
+	size_restriction = { cruiser ion_cannon military_station_small }
+	prerequisites = { "tech_shields_3" }
+	component_set = "ship_shield_generator"
+	upgrades_to = "SIZE_2_SHIELD_4"
+}
+
+utility_component_template = {
+	key = "SIZE_3_SHIELD_3"
+	size = large
+	icon = "GFX_ship_part_shield_3"
+	icon_frame = 1
+	power = @shieldpower_L3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldL3_cost
+		}
+		upkeep = {
+			energy = @shieldL3_upkeep_energy
+			alloys = @shieldL3_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_L3
+		ship_shield_regen_add_static = @shieldregen_L3 #Regeneration per day
+	}
+	size_restriction = { battleship titan }
+	prerequisites = { "tech_shields_3" }
+	component_set = "ship_shield_generator"
+	upgrades_to = "SIZE_3_SHIELD_4"
+}
+
+utility_component_template = {
+	key = "STARBASE_SHIELD_3"
+	size = large
+	icon = "GFX_ship_part_shield_3"
+	icon_frame = 1
+	power = @shieldpower_L4
+	resources = {
+		category = ship_components
+		cost = {
+		}
+		upkeep = {
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_L4
+		ship_shield_regen_add_static = @shieldregen_L4 #Regeneration per day
+	}
+	class_restriction = { shipclass_starbase }
+	prerequisites = { "tech_shields_3" }
+	component_set = "ship_shield_generator"
+	upgrades_to = "STARBASE_SHIELD_4"
+}
+
+# Advanced Shields
+utility_component_template = {
+	key = "SIZE_1_SHIELD_4"
+	size = small
+	icon = "GFX_ship_part_shield_4"
+	icon_frame = 1
+	power = @shieldpower_S4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldS4_cost
+			exotic_gases = 0.25
+		}
+		upkeep = {
+			energy = @shieldS4_upkeep_energy
+			alloys = @shieldS4_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_S4
+		ship_shield_regen_add_static = @shieldregen_S4 #Regeneration per day
+	}
+	size_restriction = { corvette destroyer colonizer lithoid_colonizer sponsored_colonizer constructor science transport }
+	prerequisites = { "tech_shields_4" }
+	component_set = "ship_shield_generator"
+	upgrades_to = "SIZE_1_SHIELD_5"
+
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SIZE_2_SHIELD_4"
+	size = medium
+	icon = "GFX_ship_part_shield_4"
+	icon_frame = 1
+	power = @shieldpower_M4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldM4_cost
+			exotic_gases = 0.50
+		}
+		upkeep = {
+			energy = @shieldM4_upkeep_energy
+			alloys = @shieldM4_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_M4
+		ship_shield_regen_add_static = @shieldregen_M4 #Regeneration per day
+	}
+	size_restriction = { cruiser ion_cannon military_station_small }
+	prerequisites = { "tech_shields_4" }
+	component_set = "ship_shield_generator"
+	upgrades_to = "SIZE_2_SHIELD_5"
+
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SIZE_3_SHIELD_4"
+	size = large
+	icon = "GFX_ship_part_shield_4"
+	icon_frame = 1
+	power = @shieldpower_L4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldL4_cost
+			exotic_gases = 1
+		}
+		upkeep = {
+			energy = @shieldL4_upkeep_energy
+			alloys = @shieldL4_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_L4
+		ship_shield_regen_add_static = @shieldregen_L4 #Regeneration per day
+	}
+	size_restriction = { battleship titan }
+	prerequisites = { "tech_shields_4" }
+	component_set = "ship_shield_generator"
+	upgrades_to = "SIZE_3_SHIELD_5"
+
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_SHIELD_4"
+	size = large
+	icon = "GFX_ship_part_shield_4"
+	icon_frame = 1
+	power = @shieldpower_L5
+	resources = {
+		category = ship_components
+		cost = {
+		}
+		upkeep = {
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_L5
+		ship_shield_regen_add_static = @shieldregen_L5 #Regeneration per day
+	}
+	class_restriction = { shipclass_starbase }
+	prerequisites = { "tech_shields_4" }
+	component_set = "ship_shield_generator"
+	upgrades_to = "STARBASE_SHIELD_5"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+# Hyper Shields
+utility_component_template = {
+	key = "SIZE_1_SHIELD_5"
+	size = small
+	icon = "GFX_ship_part_shield_5"
+	icon_frame = 1
+	power = @shieldpower_S5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldS5_cost
+			exotic_gases = 0.333
+		}
+		upkeep = {
+			energy = @shieldS5_upkeep_energy
+			alloys = @shieldS5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_S5
+		ship_shield_regen_add_static = @shieldregen_S5 #Regeneration per day
+	}
+	size_restriction = { corvette destroyer colonizer lithoid_colonizer sponsored_colonizer constructor science transport }
+	prerequisites = { "tech_shields_5" }
+	upgrades_to = "SIZE_1_DARK_MATTER_DEFLECTOR"
+	component_set = "ship_shield_generator"
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SIZE_2_SHIELD_5"
+	size = medium
+	icon = "GFX_ship_part_shield_5"
+	icon_frame = 1
+	power = @shieldpower_M5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldM5_cost
+			exotic_gases = 0.666
+		}
+		upkeep = {
+			energy = @shieldM5_upkeep_energy
+			alloys = @shieldM5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_M5
+		ship_shield_regen_add_static = @shieldregen_M5 #Regeneration per day
+	}
+	size_restriction = { cruiser ion_cannon military_station_small }
+	prerequisites = { "tech_shields_5" }
+	upgrades_to = "SIZE_2_DARK_MATTER_DEFLECTOR"
+	component_set = "ship_shield_generator"
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SIZE_3_SHIELD_5"
+	size = large
+	icon = "GFX_ship_part_shield_5"
+	icon_frame = 1
+	power = @shieldpower_L5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldL5_cost
+			exotic_gases = 1.333
+		}
+		upkeep = {
+			energy = @shieldL5_upkeep_energy
+			alloys = @shieldL5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_L5
+		ship_shield_regen_add_static = @shieldregen_L5 #Regeneration per day
+	}
+	size_restriction = { battleship titan }
+	prerequisites = { "tech_shields_5" }
+	upgrades_to = "SIZE_3_DARK_MATTER_DEFLECTOR"
+	component_set = "ship_shield_generator"
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_SHIELD_5"
+	size = large
+	icon = "GFX_ship_part_shield_5"
+	icon_frame = 1
+	power = @shieldpower_L6
+	resources = {
+		category = ship_components
+		cost = {
+		}
+		upkeep = {
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_L6
+		ship_shield_regen_add_static = @shieldregen_L6 #Regeneration per day
+	}
+	class_restriction = { shipclass_starbase }
+	prerequisites = { "tech_shields_5" }
+	upgrades_to = "STARBASE_DARK_MATTER_DEFLECTOR"
+	component_set = "ship_shield_generator"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_SHIELD_5"
+	size = large
+	icon = "GFX_ship_part_shield_5"
+	icon_frame = 1
+	power = @shieldpower_L6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldL5_cost
+			exotic_gases = 1.333
+		}
+		upkeep = {
+			energy = @shieldL5_upkeep_energy
+			alloys = @shieldL5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_L6
+		ship_shield_regen_add_static = @shieldregen_L6 #Regeneration per day
+	}
+	size_restriction = { colossus }
+	prerequisites = { "tech_shields_5" }
+	upgrades_to = "STARBASE_DARK_MATTER_DEFLECTOR"
+	component_set = "ship_shield_generator"
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+####################
+# Engimatic Shields
+####################
+
+# Enigmatic Deflectors
+utility_component_template = {
+	key = "SIZE_1_DARK_MATTER_DEFLECTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_shield"
+	icon_frame = 1
+	power = @shieldpower_S6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldS6_cost
+			sr_dark_matter = 0.25
+		}
+		upkeep = {
+			energy = @shieldS6_upkeep_energy
+			alloys = @shieldS6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_S6
+		ship_shield_regen_add_static = @shieldregen_S6 #Regeneration per day
+	}
+	size_restriction = { corvette destroyer colonizer lithoid_colonizer sponsored_colonizer constructor science transport }
+	prerequisites = { "tech_dark_matter_deflector" }
+	component_set = "ship_shield_generator"
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			is_country_type = default
+			has_monthly_income = { resource = sr_dark_matter value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SIZE_2_DARK_MATTER_DEFLECTOR"
+	size = medium
+	icon = "GFX_ship_part_dark_matter_shield"
+	icon_frame = 1
+	power = @shieldpower_M6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldM6_cost
+			sr_dark_matter = 0.5
+		}
+		upkeep = {
+			energy = @shieldM6_upkeep_energy
+			alloys = @shieldM6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_M6
+		ship_shield_regen_add_static = @shieldregen_M6 #Regeneration per day
+	}
+	size_restriction = { cruiser ion_cannon military_station_small }
+	prerequisites = { "tech_dark_matter_deflector" }
+	component_set = "ship_shield_generator"
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = sr_dark_matter value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SIZE_3_DARK_MATTER_DEFLECTOR"
+	size = large
+	icon = "GFX_ship_part_dark_matter_shield"
+	icon_frame = 1
+	power = @shieldpower_L6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldL6_cost
+			sr_dark_matter = 1
+		}
+		upkeep = {
+			energy = @shieldL6_upkeep_energy
+			alloys = @shieldL6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_L6
+		ship_shield_regen_add_static = @shieldregen_L6 #Regeneration per day
+	}
+	size_restriction = { battleship titan }
+	prerequisites = { "tech_dark_matter_deflector" }
+	component_set = "ship_shield_generator"
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = sr_dark_matter value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_DARK_MATTER_DEFLECTOR"
+	size = large
+	icon = "GFX_ship_part_dark_matter_shield"
+	icon_frame = 1
+	power = @shieldpower_L6
+	resources = {
+		category = ship_components
+		cost = {
+		}
+		upkeep = {
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_L6
+		ship_shield_regen_add_static = @shieldregen_L6 #Regeneration per day
+	}
+	class_restriction = { shipclass_starbase }
+	prerequisites = { "tech_dark_matter_deflector" }
+	component_set = "ship_shield_generator"
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_DARK_MATTER_DEFLECTOR"
+	size = large
+	icon = "GFX_ship_part_dark_matter_shield"
+	icon_frame = 1
+	power = @shieldpower_L6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldL6_cost
+			sr_dark_matter = 1
+		}
+		upkeep = {
+			energy = @shieldL6_upkeep_energy
+			alloys = @shieldL6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_L6
+		ship_shield_regen_add_static = @shieldregen_L6 #Regeneration per day
+	}
+	size_restriction = { colossus }
+	prerequisites = { "tech_dark_matter_deflector" }
+	component_set = "ship_shield_generator"
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = sr_dark_matter value <= 0 }
+		}
+	}
+}
+
+####################
+# Psionic Shields
+####################
+
+utility_component_template = {
+	key = "SIZE_1_PSI_SHIELD"
+	size = small
+	icon = "GFX_ship_part_psi_shield"
+	icon_frame = 1
+	power = @shieldpower_S6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldS6_cost
+			sr_zro = 0.111
+		}
+		upkeep = {
+			energy = @shieldS6_upkeep_energy
+			alloys = @shieldS6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_S6
+		ship_shield_regen_add_static = @shieldregen_S6 #Regeneration per day
+	}
+	size_restriction = { corvette destroyer colonizer lithoid_colonizer sponsored_colonizer constructor science transport }
+	prerequisites = { "tech_psionic_shield" }
+	component_set = "ship_shield_generator"
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SIZE_2_PSI_SHIELD"
+	size = medium
+	icon = "GFX_ship_part_psi_shield"
+	icon_frame = 1
+	power = @shieldpower_M6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldM6_cost
+			sr_zro = 0.222
+		}
+		upkeep = {
+			energy = @shieldM6_upkeep_energy
+			alloys = @shieldM6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_M6
+		ship_shield_regen_add_static = @shieldregen_M6 #Regeneration per day
+	}
+	size_restriction = { cruiser ion_cannon military_station_small }
+	prerequisites = { "tech_psionic_shield" }
+	component_set = "ship_shield_generator"
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SIZE_3_PSI_SHIELD"
+	size = large
+	icon = "GFX_ship_part_psi_shield"
+	icon_frame = 1
+	power = @shieldpower_L6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldL6_cost
+			sr_zro = 0.333
+		}
+		upkeep = {
+			energy = @shieldL6_upkeep_energy
+			alloys = @shieldL6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_L6
+		ship_shield_regen_add_static = @shieldregen_L6 #Regeneration per day
+	}
+	size_restriction = { battleship titan }
+	prerequisites = { "tech_psionic_shield" }
+	component_set = "ship_shield_generator"
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_PSI_SHIELD"
+	size = large
+	icon = "GFX_ship_part_psi_shield"
+	icon_frame = 1
+	power = @shieldpower_L6
+	resources = {
+		category = ship_components
+		cost = {
+		}
+		upkeep = {
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_L6
+		ship_shield_regen_add_static = @shieldregen_L6 #Regeneration per day
+	}
+	class_restriction = { shipclass_starbase }
+	prerequisites = { "tech_psionic_shield" }
+	component_set = "ship_shield_generator"
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_PSI_SHIELD"
+	size = large
+	icon = "GFX_ship_part_psi_shield"
+	icon_frame = 1
+	power = @shieldpower_L6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldL6_cost
+			sr_zro = 0.333
+		}
+		upkeep = {
+			energy = @shieldL6_upkeep_energy
+			alloys = @shieldL6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_L6
+		ship_shield_regen_add_static = @shieldregen_L6 #Regeneration per day
+	}
+	size_restriction = { colossus }
+	prerequisites = { "tech_psionic_shield" }
+	component_set = "ship_shield_generator"
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+}
+
+utility_component_template = { #Low power requirements, lower str. Maybe good regen.
+	key = "SIZE_1_PSI_BARRIER"
+	size = small
+	icon = "GFX_ship_part_psi_shield"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldS2_cost
+		}
+		upkeep = {
+			alloys = @shieldS2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_S2
+		ship_shield_regen_add_static = @shieldregen_S5 #Regeneration per day
+	}
+	size_restriction = { corvette destroyer colonizer lithoid_colonizer sponsored_colonizer constructor science transport }
+	prerequisites = { "tech_psionic_barrier" }
+	component_set = "ship_shield_generator"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = { #Low power requirements, lower str. Maybe good regen.
+	key = "SIZE_2_PSI_BARRIER"
+	size = medium
+	icon = "GFX_ship_part_psi_shield"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldM2_cost
+		}
+		upkeep = {
+			alloys = @shieldM2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_M2
+		ship_shield_regen_add_static = @shieldregen_M5 #Regeneration per day
+	}
+	size_restriction = { cruiser ion_cannon military_station_small }
+	prerequisites = { "tech_psionic_barrier" }
+	component_set = "ship_shield_generator"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = { #Low power requirements, lower str. Maybe good regen.
+	key = "SIZE_3_PSI_BARRIER"
+	size = large
+	icon = "GFX_ship_part_psi_shield"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldL2_cost
+		}
+		upkeep = {
+			alloys = @shieldL2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_L2
+		ship_shield_regen_add_static = @shieldregen_L5 #Regeneration per day
+	}
+	size_restriction = { battleship titan }
+	prerequisites = { "tech_psionic_barrier" }
+	component_set = "ship_shield_generator"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = { #Low power requirements, lower str. Maybe good regen.
+	key = "STARBASE_PSI_BARRIER"
+	size = large
+	icon = "GFX_ship_part_psi_shield"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+		}
+		upkeep = {
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_L2
+		ship_shield_regen_add_static = @shieldregen_L5 #Regeneration per day
+	}
+	class_restriction = { shipclass_starbase }
+	prerequisites = { "tech_psionic_barrier" }
+	component_set = "ship_shield_generator"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+#Shield Capacitors
+
+utility_component_template = {
+	key = "SMALL_SHIELD_CAPACITOR_1"
+	size = small
+	icon = "GFX_ship_part_shield_recharger"
+	icon_frame = 1
+	power = @smallshieldcappower1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+		}
+	}
+	
+	prerequisites = { "tech_fission_power" }
+	component_set = "SHIELD_CAPACITOR_1"
+	
+	modifier = {
+		ship_armor_add = 1
+		ship_shield_mult = @smallshieldbonus1
+		ship_shield_regen_add_perc = @smallcapregen
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+utility_component_template = {
+	key = "MEDIUM_SHIELD_CAPACITOR_1"
+	size = medium
+	icon = "GFX_ship_part_shield_recharger"
+	icon_frame = 1
+	power = @mediumshieldcappower1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 20
+		}
+	}
+	
+	prerequisites = { "tech_fission_power" }
+	component_set = "SHIELD_CAPACITOR_1"
+	
+	modifier = {
+		ship_armor_add = 1
+		ship_shield_mult = @mediumshieldbonus1
+		ship_shield_regen_add_perc = @mediumcapregen
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+utility_component_template = {
+	key = "LARGE_SHIELD_CAPACITOR_1"
+	size = large
+	icon = "GFX_ship_part_shield_recharger"
+	icon_frame = 1
+	power = @largeshieldcappower1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 40
+		}
+	}
+	
+	prerequisites = { "tech_fission_power" }
+	component_set = "SHIELD_CAPACITOR_1"
+	
+	modifier = {
+		ship_armor_add = 1
+		ship_shield_mult = @largeshieldbonus1
+		ship_shield_regen_add_perc = @largecapregen
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+
+##Auxilliary Shields##
+
+utility_component_template = {
+	key = "SHIELD_1_AUX"
+	size = aux
+	icon = "GFX_ship_part_shield_1"
+	icon_frame = 1
+	power = @shieldpower_S1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldM1_cost
+		}
+		upkeep = {
+			energy = @shieldM1_upkeep_energy
+			alloys = @shieldM1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_S1
+		ship_shield_regen_add_static = @shieldregen_S1 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_1" }
+	component_set = "auxilliary_shield_generator_1"
+	upgrades_to = "SHIELD_2_AUX"
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "SHIELD_2_AUX"
+	size = aux
+	icon = "GFX_ship_part_shield_2"
+	icon_frame = 1
+	power = @shieldpower_S2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldM2_cost
+		}
+		upkeep = {
+			energy = @shieldM2_upkeep_energy
+			alloys = @shieldM2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_S2
+		ship_shield_regen_add_static = @shieldregen_S2 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_2" }
+	component_set = "auxilliary_shield_generator_2"
+	upgrades_to = "SHIELD_3_AUX"
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "SHIELD_3_AUX"
+	size = aux
+	icon = "GFX_ship_part_shield_3"
+	icon_frame = 1
+	power = @shieldpower_S3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldM3_cost
+		}
+		upkeep = {
+			energy = @shieldM3_upkeep_energy
+			alloys = @shieldM3_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_S3
+		ship_shield_regen_add_static = @shieldregen_S3 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_3" }
+	component_set = "auxilliary_shield_generator_3"
+	upgrades_to = "SHIELD_4_AUX"
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "SHIELD_4_AUX"
+	size = aux
+	icon = "GFX_ship_part_shield_4"
+	icon_frame = 1
+	power = @shieldpower_S4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldM4_cost
+			exotic_gases = 0.50
+		}
+		upkeep = {
+			energy = @shieldM4_upkeep_energy
+			alloys = @shieldM4_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_S4
+		ship_shield_regen_add_static = @shieldregen_S4 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_4" }
+	component_set = "auxilliary_shield_generator_4"
+	upgrades_to = "SHIELD_5_AUX"
+
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SHIELD_5_AUX"
+	size = aux
+	icon = "GFX_ship_part_shield_5"
+	icon_frame = 1
+	power = @shieldpower_S5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldM5_cost
+			exotic_gases = 0.666
+		}
+		upkeep = {
+			energy = @shieldM5_upkeep_energy
+			alloys = @shieldM5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_S5
+		ship_shield_regen_add_static = @shieldregen_S5 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_5" }
+	upgrades_to = "DARK_MATTER_DEFLECTOR_AUX"
+	component_set = "auxilliary_shield_generator_5"
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = exotic_gases value <= 0 }
+		}
+	}
+}
+
+####################
+# Engimatic Shields
+####################
+
+utility_component_template = {
+	key = "DARK_MATTER_DEFLECTOR_AUX"
+	size = aux
+	icon = "GFX_ship_part_dark_matter_shield"
+	icon_frame = 1
+	power = @shieldpower_S6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldM6_cost
+			sr_dark_matter = 0.5
+		}
+		upkeep = {
+			energy = @shieldM6_upkeep_energy
+			alloys = @shieldM6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_S6
+		ship_shield_regen_add_static = @shieldregen_S6 #Regeneration per day
+	}
+	prerequisites = { "tech_dark_matter_deflector" }
+	component_set = "auxilliary_shield_generator_dm"
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = sr_dark_matter value <= 0 }
+		}
+	}
+}
+
+####################
+# Psionic Shields
+####################
+
+utility_component_template = {
+	key = "PSI_SHIELD_AUX"
+	size = aux
+	icon = "GFX_ship_part_psi_shield"
+	icon_frame = 1
+	power = @shieldpower_S6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldM6_cost
+			sr_zro = 0.222
+		}
+		upkeep = {
+			energy = @shieldM6_upkeep_energy
+			alloys = @shieldM6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_S6
+		ship_shield_regen_add_static = @shieldregen_S6 #Regeneration per day
+	}
+	prerequisites = { "tech_psionic_shield" }
+	component_set = "auxilliary_shield_generator_psi"
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = sr_zro value <= 0 }
+		}
+	}
+}
+
+utility_component_template = { #Low power requirements, lower str. Maybe good regen.
+	key = "PSI_BARRIER_AUX"
+	size = aux
+	icon = "GFX_ship_part_psi_shield"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @shieldM2_cost
+		}
+		upkeep = {
+			alloys = @shieldM2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @shieldstrength_S2
+		ship_shield_regen_add_static = @shieldregen_S5 #Regeneration per day
+	}
+	upgrades_to = "PSI_SHIELD_AUX"
+	prerequisites = { "tech_psionic_barrier" }
+	component_set = "auxilliary_shield_generator_psibar"
+
+	ai_weight = {
+		weight = 1
+	}
+}

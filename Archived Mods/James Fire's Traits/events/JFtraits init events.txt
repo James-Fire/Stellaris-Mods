@@ -1,0 +1,18 @@
+namespace = jftraits
+
+event = {
+	id = jftraits.1
+	hide_window = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	trigger = {
+		NOT = { has_global_flag = jftraits_enabled }
+	}
+	
+	immediate = {
+		set_global_flag = jftraits_enabled
+	}
+}

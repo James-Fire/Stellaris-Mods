@@ -1,0 +1,255 @@
+namespace = ukn_automation_planet_overdrive_events
+
+          #######################
+#---------## AUTOMATION EVENTS ##---------#
+          #######################
+
+##################
+# NORMAL PLANETS #
+##################
+
+# NORMAL | Automation Overdrive Event
+planet_event = {
+	id = ukn_automation_planet_overdrive_events.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_colony = yes
+		UKN_USES_NORMAL_DISTRICTS = yes
+		NOT = { has_building = building_ukn_automation_grid_2 }
+	}
+	
+	immediate = {
+#[0] NORMAL PLANET
+		if = {
+			limit = {
+				NOR = {
+					has_planet_flag = ukn_planet_flag_automation_overdrive_1
+					has_planet_flag = ukn_planet_flag_automation_overdrive_2
+					has_planet_flag = ukn_planet_flag_automation_overdrive_3
+				}
+			}
+			ukn_remove_all_automation_overdrive_planet_modifiers = yes
+			add_modifier = { modifier = mod_ukn_automation_overdrive_normal_0 }
+		}
+#[1] NORMAL PLANET
+		if = {
+			limit = {
+				has_planet_flag = ukn_planet_flag_automation_overdrive_1
+			}
+			ukn_remove_all_automation_overdrive_planet_modifiers = yes
+			add_modifier = { modifier = mod_ukn_automation_overdrive_normal_1 }
+		}
+#[1] NORMAL PLANET
+		if = {
+			limit = {
+				has_planet_flag = ukn_planet_flag_automation_overdrive_2
+			}
+			remove_planet_flag = ukn_planet_flag_automation_overdrive_2
+			set_planet_flag = ukn_planet_flag_automation_overdrive_1
+			
+			ukn_remove_all_automation_overdrive_planet_modifiers = yes
+			add_modifier = { modifier = mod_ukn_automation_overdrive_normal_1 }
+		}
+#[1] NORMAL PLANET
+		if = {
+			limit = {
+				has_planet_flag = ukn_planet_flag_automation_overdrive_3
+			}
+			remove_planet_flag = ukn_planet_flag_automation_overdrive_3
+			set_planet_flag = ukn_planet_flag_automation_overdrive_1
+			
+			ukn_remove_all_automation_overdrive_planet_modifiers = yes
+			add_modifier = { modifier = mod_ukn_automation_overdrive_normal_1 }
+		}
+	}
+}
+
+###################
+# ARCOLOGY WORLDS #
+###################
+
+# ARCOLOGY | Automation Overdrive Event
+planet_event = {
+	id = ukn_automation_planet_overdrive_events.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_colony = yes
+		OR = {
+			UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+		}
+		NOT = { has_building = building_ukn_automation_grid_2 }
+	}
+	
+	immediate = {
+#[0] ARCOLOGY WORLD
+		if = {
+			limit = {
+				NOR = {
+					has_planet_flag = ukn_planet_flag_automation_overdrive_1
+					has_planet_flag = ukn_planet_flag_automation_overdrive_2
+					has_planet_flag = ukn_planet_flag_automation_overdrive_3
+				}
+			}
+			ukn_remove_all_automation_overdrive_planet_modifiers = yes
+			add_modifier = { modifier = mod_ukn_automation_overdrive_arcology_0 }
+		}
+#[1] ARCOLOGY WORLD
+		if = {
+			limit = {
+				has_planet_flag = ukn_planet_flag_automation_overdrive_1
+			}
+			ukn_remove_all_automation_overdrive_planet_modifiers = yes
+			add_modifier = { modifier = mod_ukn_automation_overdrive_arcology_1 }
+		}
+#[2] ARCOLOGY WORLD
+		if = {
+			limit = {
+				has_planet_flag = ukn_planet_flag_automation_overdrive_2
+			}
+			ukn_remove_all_automation_overdrive_planet_modifiers = yes
+			add_modifier = { modifier = mod_ukn_automation_overdrive_arcology_2 }
+		}
+#[2] ARCOLOGY WORLD
+		if = {
+			limit = {
+				has_planet_flag = ukn_planet_flag_automation_overdrive_3
+			}
+			remove_planet_flag = ukn_planet_flag_automation_overdrive_3
+			set_planet_flag = ukn_planet_flag_automation_overdrive_2
+			
+			ukn_remove_all_automation_overdrive_planet_modifiers = yes
+			add_modifier = { modifier = mod_ukn_automation_overdrive_arcology_2 }
+		}
+	}
+}
+
+##############
+# RINGWORLDS #
+##############
+
+# RINGWORLD | Automation Overdrive Event
+planet_event = {
+	id = ukn_automation_planet_overdrive_events.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_colony = yes
+		OR = {
+			UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+		}
+		NOT = { has_building = building_ukn_automation_grid_2 }
+	}
+	
+	immediate = {
+#[0] RINGWORLD / ALDERSON DISK / BIRCH WORLD
+		if = {
+			limit = {
+				NOR = {
+					has_planet_flag = ukn_planet_flag_automation_overdrive_1
+					has_planet_flag = ukn_planet_flag_automation_overdrive_2
+					has_planet_flag = ukn_planet_flag_automation_overdrive_3
+				}
+			}
+			ukn_remove_all_automation_overdrive_planet_modifiers = yes
+			add_modifier = { modifier = mod_ukn_automation_overdrive_rw_0 }
+		}
+#[1] RINGWORLD / ALDERSON DISK / BIRCH WORLD
+		if = {
+			limit = {
+				has_planet_flag = ukn_planet_flag_automation_overdrive_1
+			}
+			ukn_remove_all_automation_overdrive_planet_modifiers = yes
+			add_modifier = { modifier = mod_ukn_automation_overdrive_rw_1 }
+		}
+#[2] RINGWORLD / ALDERSON DISK / BIRCH WORLD
+		if = {
+			limit = {
+				has_planet_flag = ukn_planet_flag_automation_overdrive_2
+			}
+			ukn_remove_all_automation_overdrive_planet_modifiers = yes
+			add_modifier = { modifier = mod_ukn_automation_overdrive_rw_2 }
+		}
+#[3] RINGWORLD / ALDERSON DISK / BIRCH WORLD
+		if = {
+			limit = {
+				has_planet_flag = ukn_planet_flag_automation_overdrive_3
+			}
+			ukn_remove_all_automation_overdrive_planet_modifiers = yes
+			add_modifier = { modifier = mod_ukn_automation_overdrive_rw_3 }
+		}
+	}
+}
+
+##############################################
+# RINGWORLDS / ALDERSON DISKS / BIRCH WORLDS #
+##############################################
+
+# RINGWORLD | Automation Overdrive Event
+planet_event = {
+	id = ukn_automation_planet_overdrive_events.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_colony = yes
+		OR = {
+			UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+			has_building = building_ukn_automation_grid_2
+		}
+	}
+	
+	immediate = {
+#[0] RINGWORLD / ALDERSON DISK / BIRCH WORLD
+		if = {
+			limit = {
+				NOR = {
+					has_planet_flag = ukn_planet_flag_automation_overdrive_1
+					has_planet_flag = ukn_planet_flag_automation_overdrive_2
+					has_planet_flag = ukn_planet_flag_automation_overdrive_3
+				}
+			}
+			ukn_remove_all_automation_overdrive_planet_modifiers = yes
+			add_modifier = { modifier = mod_ukn_automation_overdrive_alderson_0 }
+		}
+#[1] RINGWORLD / ALDERSON DISK / BIRCH WORLD
+		if = {
+			limit = {
+				has_planet_flag = ukn_planet_flag_automation_overdrive_1
+			}
+			ukn_remove_all_automation_overdrive_planet_modifiers = yes
+			add_modifier = { modifier = mod_ukn_automation_overdrive_alderson_1 }
+		}
+#[2] RINGWORLD / ALDERSON DISK / BIRCH WORLD
+		if = {
+			limit = {
+				has_planet_flag = ukn_planet_flag_automation_overdrive_2
+			}
+			ukn_remove_all_automation_overdrive_planet_modifiers = yes
+			add_modifier = { modifier = mod_ukn_automation_overdrive_alderson_2 }
+		}
+#[3] RINGWORLD / ALDERSON DISK / BIRCH WORLD
+		if = {
+			limit = {
+				has_planet_flag = ukn_planet_flag_automation_overdrive_3
+			}
+			ukn_remove_all_automation_overdrive_planet_modifiers = yes
+			add_modifier = { modifier = mod_ukn_automation_overdrive_alderson_3 }
+		}
+	}
+}

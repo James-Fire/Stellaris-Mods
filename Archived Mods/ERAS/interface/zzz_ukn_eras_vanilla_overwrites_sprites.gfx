@@ -1,0 +1,23 @@
+spriteTypes = {
+
+####################
+# Macro-Capacitors #
+####################
+
+	spriteType = {
+		name = "GFX_ship_designer_slot"
+		texturefile = "gfx/interface/ship_designer/ship_designer_slot.dds"
+		noOfFrames = 18
+	}
+
+###################
+# Modifier Frames #
+###################
+
+	spriteType = {
+		name = "GFX_modifier_frames"
+		texturefile = "gfx/interface/icons/planet_modifiers/modifier_frames.dds"
+		noOfFrames = 4
+	}
+	
+}

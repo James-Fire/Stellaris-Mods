@@ -1,0 +1,53 @@
+#Defensive armies can't transport of the planet
+#Garrison armies are created by pops
+#maintenance is directly scripted here. 0.25 translates to 0.25 monthly cost (excluding other upkeep modifiers)
+
+# Assault Armies
+player_assault_army_1 = {
+	damage = 20000.0
+	health = 20000.0
+	has_morale = no
+	morale_damage = 2.0
+	collateral_damage = 0.0
+	war_exhaustion = 100.0
+	time = 30
+	maintenance = 0
+	has_species = no
+	icon_frame = 11
+
+	resources = {
+		category = armies
+		cost = {
+			minerals = 300
+		}
+	}
+
+	potential = {
+		owner = {
+			is_ai = no
+		}
+	}
+
+	prerequisites = { "tech_all_none" }
+}
+
+# Defense Armies
+player_defense_army_1 = {
+	defensive = yes
+	is_pop_spawned = yes
+	health = 20000.0
+	damage = 10000.0
+	has_morale = no
+	morale_damage = 10.0
+	collateral_damage = 0.0
+	war_exhaustion = 0.0 # No WE from defense armies
+	icon_frame = 12
+	has_species = no
+
+	potential = {
+		owner = {
+			is_ai = no
+			has_technology = tech_all_none
+		}
+	}
+}

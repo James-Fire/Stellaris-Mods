@@ -1,0 +1,821 @@
+# Icons set here are the ones show in the actual slot. 
+
+###############
+### FLAK PD ###
+###############
+
+############ TRANSLIGHT ############
+
+#~~~~~~~~~~Vanilla T1-T3 Flak PD Overwritten (T1 here)~~~~~~~~~~ (Vanilla File Nullified)
+
+### Shrapnel Point Defense [Shrapnel Coilguns] (T1)
+weapon_component_template = {
+	type = point_defence
+    power = @ukn_flak_pd_1_power
+	
+	key = "FLAK_BATTERY_1"
+	size = point_defence
+	#entity = "small_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_ukn_flak_batteries_1"
+	icon_frame = 1
+	
+	damage = { min = @ukn_flak_pd_1_dmg_min max = @ukn_flak_pd_1_dmg_max }
+    windup = { min = @ukn_flak_pd_1_windup_min max = @ukn_flak_pd_1_windup_max }
+    total_fire_time = @ukn_flak_pd_1_total_fire_time
+    range = @ukn_flak_pd_1_range
+    accuracy = @ukn_flak_pd_1_accuracy
+	
+    hull_damage = @ukn_flak_pd_1_hull_damage_mult
+    armor_penetration = @ukn_flak_pd_1_armor_penetration_mult
+    armor_damage = @ukn_flak_pd_1_armor_damage_mult
+    shield_penetration = @ukn_flak_pd_1_shield_penetration_mult
+    shield_damage = @ukn_flak_pd_1_shield_damage_mult
+    tracking = @ukn_flak_pd_1_tracking
+	
+	prerequisites = { "tech_flak_batteries_1" }
+	component_set = "UKN_SET_FLAK_BATTERY_1"
+	projectile_gfx = "projectile_ukn_flak_pd_1"
+	tags = { weapon_type_kinetic ukn_weapon_type_accelerator weapon_type_point_defense }
+	ai_tags = { weapon_role_point_defense }
+	upgrades_to = "FLAK_BATTERY_2"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_pointdefense_t1_component_cost_minerals
+			alloys = @ukn_pointdefense_t1_component_cost_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t1_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t1_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t1_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t1_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t1_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t1_component_cost_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t1_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_pointdefense_t1_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t1_armor_cost_ukn_meta_materials
+#			nanites = @ukn_pointdefense_t1_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t1_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_pointdefense_t1_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_pointdefense_t1_component_upkeep_energy
+#			minerals = @ukn_pointdefense_t1_component_upkeep_minerals
+#			alloys = @ukn_pointdefense_t1_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t1_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t1_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t1_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t1_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t1_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t1_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t1_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_pointdefense_t1_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_pointdefense_t1_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_pointdefense_t1_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_pointdefense_t1_component_upkeep_nanites
+#---
+			minerals = @ukn_pointdefense_t1_kinetics_upkeep_minerals
+			alloys = @ukn_pointdefense_t1_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t1_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_flak_pd_t1
+	}
+}
+
+# -----------------------------------------------------------------------
+
+#~~~~~~~~~~Vanilla Overwrite End (Flak PD T1, T2-T3 Follows Below)~~~~~~~~~~
+
+### Flak Point Defense [Shrapnel Railguns] (T2)
+weapon_component_template = {
+	key = "FLAK_BATTERY_2"
+	size = point_defence
+	#entity = "small_kinetic_gun_entity"	
+	type = point_defence
+	icon = "GFX_ship_part_ukn_flak_batteries_2"
+	icon_frame = 1
+    power = @ukn_flak_pd_3_power
+	
+	damage = { min = @ukn_flak_pd_3_dmg_min max = @ukn_flak_pd_3_dmg_max }
+    windup = { min = @ukn_flak_pd_3_windup_min max = @ukn_flak_pd_3_windup_max }
+    total_fire_time = @ukn_flak_pd_3_total_fire_time
+    range = @ukn_flak_pd_3_range
+    accuracy = @ukn_flak_pd_3_accuracy
+	
+    hull_damage = @ukn_flak_pd_3_hull_damage_mult
+    armor_penetration = @ukn_flak_pd_3_armor_penetration_mult
+    armor_damage = @ukn_flak_pd_3_armor_damage_mult
+    shield_penetration = @ukn_flak_pd_3_shield_penetration_mult
+    shield_damage = @ukn_flak_pd_3_shield_damage_mult
+    tracking = @ukn_flak_pd_3_tracking
+	
+	prerequisites = { "tech_flak_batteries_2" }
+	component_set = "UKN_SET_FLAK_BATTERY_2"
+	projectile_gfx = "projectile_ukn_flak_pd_2"
+	tags = { weapon_type_kinetic ukn_weapon_type_accelerator weapon_type_point_defense }
+	ai_tags = { weapon_role_point_defense }
+	upgrades_to = "FLAK_BATTERY_3"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_pointdefense_t3_component_cost_minerals
+			alloys = @ukn_pointdefense_t3_component_cost_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t3_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t3_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t3_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t3_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t3_component_cost_ukn_causalitons
+			exotic_gases = @ukn_pointdefense_t3_component_cost_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t3_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_pointdefense_t3_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t3_armor_cost_ukn_meta_materials
+#			nanites = @ukn_pointdefense_t3_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t3_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_pointdefense_t3_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_pointdefense_t3_component_upkeep_energy
+#			minerals = @ukn_pointdefense_t3_component_upkeep_minerals
+#			alloys = @ukn_pointdefense_t3_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t3_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t3_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t3_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t3_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t3_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t3_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t3_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_pointdefense_t3_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_pointdefense_t3_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_pointdefense_t3_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_pointdefense_t3_component_upkeep_nanites
+#---
+			minerals = @ukn_pointdefense_t3_kinetics_upkeep_minerals
+			alloys = @ukn_pointdefense_t3_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t3_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_flak_pd_t3
+	}
+}
+
+# -----------------------------------------------------------------------
+
+#~~~~~~~~~~Vanilla T1-T3 Flak PD Overwritten (T2 here)~~~~~~~~~~ (Vanilla File Nullified)
+
+### Scattershot Point Defense [Shrapnel, Hybrid] (T3)
+weapon_component_template = {
+	type = point_defence
+    power = @ukn_flak_pd_4_power
+	
+	key = "FLAK_BATTERY_3"
+	size = point_defence
+	#entity = "small_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_ukn_flak_batteries_3"
+	icon_frame = 1
+	
+	damage = { min = @ukn_flak_pd_4_dmg_min max = @ukn_flak_pd_4_dmg_max }
+    windup = { min = @ukn_flak_pd_4_windup_min max = @ukn_flak_pd_4_windup_max }
+    total_fire_time = @ukn_flak_pd_4_total_fire_time
+    range = @ukn_flak_pd_4_range
+    accuracy = @ukn_flak_pd_4_accuracy
+	
+    hull_damage = @ukn_flak_pd_4_hull_damage_mult
+    armor_penetration = @ukn_flak_pd_4_armor_penetration_mult
+    armor_damage = @ukn_flak_pd_4_armor_damage_mult
+    shield_penetration = @ukn_flak_pd_4_shield_penetration_mult
+    shield_damage = @ukn_flak_pd_4_shield_damage_mult
+    tracking = @ukn_flak_pd_4_tracking
+	
+	prerequisites = { "tech_flak_batteries_3" }
+	component_set = "UKN_SET_FLAK_BATTERY_3"
+	projectile_gfx = "projectile_ukn_flak_pd_3"
+	tags = { weapon_type_kinetic ukn_weapon_type_accelerator weapon_type_point_defense }
+	ai_tags = { weapon_role_point_defense }
+	upgrades_to = "UKN_FLAK_BATTERY_4"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_pointdefense_t4_component_cost_minerals
+			alloys = @ukn_pointdefense_t4_component_cost_alloys
+			ukn_meta_materials = @ukn_pointdefense_t4_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t4_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t4_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t4_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t4_component_cost_ukn_causalitons
+			exotic_gases = @ukn_pointdefense_t4_component_cost_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t4_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_pointdefense_t4_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t4_armor_cost_ukn_meta_materials
+#			nanites = @ukn_pointdefense_t4_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t4_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_pointdefense_t4_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_pointdefense_t4_component_upkeep_energy
+#			minerals = @ukn_pointdefense_t4_component_upkeep_minerals
+#			alloys = @ukn_pointdefense_t4_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t4_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t4_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t4_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t4_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t4_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t4_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t4_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_pointdefense_t4_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_pointdefense_t4_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_pointdefense_t4_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_pointdefense_t4_component_upkeep_nanites
+#---
+			minerals = @ukn_pointdefense_t4_kinetics_upkeep_minerals
+			alloys = @ukn_pointdefense_t4_kinetics_upkeep_alloys
+			ukn_meta_materials = @ukn_pointdefense_t4_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_flak_pd_t4
+	}
+}
+
+# -----------------------------------------------------------------------
+
+#~~~~~~~~~~Vanilla Overwrite End (Laser PD T2, T3 Follows Below)~~~~~~~~~~
+
+### Torrent Point Defense [Shrapnel, Phased] (T4)
+weapon_component_template = {
+	key = "UKN_FLAK_BATTERY_4"
+	size = point_defence
+	#entity = "small_kinetic_gun_entity"	
+	type = point_defence
+	icon = "GFX_ship_part_ukn_flak_batteries_4"
+	icon_frame = 1
+    power = @ukn_flak_pd_5_power
+	
+	damage = { min = @ukn_flak_pd_5_dmg_min max = @ukn_flak_pd_5_dmg_max }
+    windup = { min = @ukn_flak_pd_5_windup_min max = @ukn_flak_pd_5_windup_max }
+    total_fire_time = @ukn_flak_pd_5_total_fire_time
+    range = @ukn_flak_pd_5_range
+    accuracy = @ukn_flak_pd_5_accuracy
+	
+    hull_damage = @ukn_flak_pd_5_hull_damage_mult
+    armor_penetration = @ukn_flak_pd_5_armor_penetration_mult
+    armor_damage = @ukn_flak_pd_5_armor_damage_mult
+    shield_penetration = @ukn_flak_pd_5_shield_penetration_mult
+    shield_damage = @ukn_flak_pd_5_shield_damage_mult
+    tracking = @ukn_flak_pd_5_tracking
+	
+	prerequisites = { "tech_ukn_flak_pd_4" }
+	component_set = "UKN_SET_FLAK_BATTERY_4"
+	projectile_gfx = "projectile_ukn_flak_pd_4"
+	tags = { weapon_type_kinetic ukn_weapon_type_semi_guided_accelerator weapon_type_point_defense }
+	ai_tags = { weapon_role_point_defense }
+	upgrades_to = "UKN_FLAK_BATTERY_5"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_pointdefense_t5_component_cost_minerals
+#			alloys = @ukn_pointdefense_t5_component_cost_alloys
+			ukn_meta_materials = @ukn_pointdefense_t5_component_cost_ukn_meta_materials
+			ukn_femtomatter = @ukn_pointdefense_t5_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t5_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t5_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t5_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t5_component_cost_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t5_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_pointdefense_t5_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t5_armor_cost_ukn_meta_materials
+#			nanites = @ukn_pointdefense_t5_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t5_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_pointdefense_t5_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_pointdefense_t5_component_upkeep_energy
+#			minerals = @ukn_pointdefense_t5_component_upkeep_minerals
+#			alloys = @ukn_pointdefense_t5_component_upkeep_alloys
+			ukn_meta_materials = @ukn_pointdefense_t5_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t5_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t5_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t5_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t5_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t5_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t5_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_pointdefense_t5_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_pointdefense_t5_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_pointdefense_t5_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_pointdefense_t5_component_upkeep_nanites
+#---
+#			minerals = @ukn_pointdefense_t5_kinetics_upkeep_minerals
+#			alloys = @ukn_pointdefense_t5_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t5_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_flak_pd_t5
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = ukn_femtomatter value <= 0 }
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+#~~~~~~~~~~Vanilla T1-T3 Flak PD Overwritten (T3 here)~~~~~~~~~~ (Vanilla File Nullified)
+
+### Hailstorm Point Defense [Shrapnel, Semi-Guided, Ultra-Relativistic] (T5)
+weapon_component_template = {
+	type = point_defence
+    power = @ukn_flak_pd_6_power
+	
+	key = "UKN_FLAK_BATTERY_5"
+	size = point_defence
+	#entity = "small_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_ukn_flak_batteries_5"
+	icon_frame = 1
+	
+	damage = { min = @ukn_flak_pd_6_dmg_min max = @ukn_flak_pd_6_dmg_max }
+    windup = { min = @ukn_flak_pd_6_windup_min max = @ukn_flak_pd_6_windup_max }
+    total_fire_time = @ukn_flak_pd_6_total_fire_time
+    range = @ukn_flak_pd_6_range
+    accuracy = @ukn_flak_pd_6_accuracy
+	
+    hull_damage = @ukn_flak_pd_6_hull_damage_mult
+    armor_penetration = @ukn_flak_pd_6_armor_penetration_mult
+    armor_damage = @ukn_flak_pd_6_armor_damage_mult
+    shield_penetration = @ukn_flak_pd_6_shield_penetration_mult
+    shield_damage = @ukn_flak_pd_6_shield_damage_mult
+    tracking = @ukn_flak_pd_6_tracking
+	
+	prerequisites = { "tech_ukn_flak_pd_5" }
+	component_set = "UKN_SET_FLAK_BATTERY_5"
+	projectile_gfx = "projectile_ukn_flak_pd_5"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator weapon_type_point_defense }
+	ai_tags = { weapon_role_point_defense }
+	upgrades_to = "UKN_FLAK_BATTERY_6"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_pointdefense_t6_component_cost_minerals
+#			alloys = @ukn_pointdefense_t6_component_cost_alloys
+			ukn_meta_materials = @ukn_pointdefense_t6_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t6_component_cost_ukn_femtomatter
+			ukn_condensics = @ukn_pointdefense_t6_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t6_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t6_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t6_component_cost_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t6_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_pointdefense_t6_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t6_armor_cost_ukn_meta_materials
+#			nanites = @ukn_pointdefense_t6_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t6_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_pointdefense_t6_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_pointdefense_t6_component_upkeep_energy
+#			minerals = @ukn_pointdefense_t6_component_upkeep_minerals
+#			alloys = @ukn_pointdefense_t6_component_upkeep_alloys
+			ukn_meta_materials = @ukn_pointdefense_t6_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t6_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t6_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t6_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t6_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t6_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t6_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_pointdefense_t6_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_pointdefense_t6_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_pointdefense_t6_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_pointdefense_t6_component_upkeep_nanites
+#---
+#			minerals = @ukn_pointdefense_t6_kinetics_upkeep_minerals
+#			alloys = @ukn_pointdefense_t6_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t6_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_flak_pd_t6
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = ukn_condensics value <= 0 }
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+#~~~~~~~~~~Vanilla Overwrite End (Flak PD T3)~~~~~~~~~~
+
+### Landslide Point Defense [Shrapnel, Semi-Guided, Superluminal] (T6)
+weapon_component_template = {
+	key = "UKN_FLAK_BATTERY_6"
+	size = point_defence
+	#entity = "small_kinetic_gun_entity"	
+	type = point_defence
+	icon = "GFX_ship_part_ukn_flak_batteries_6"
+	icon_frame = 1
+    power = @ukn_flak_pd_7_power
+	
+	damage = { min = @ukn_flak_pd_7_dmg_min max = @ukn_flak_pd_7_dmg_max }
+    windup = { min = @ukn_flak_pd_7_windup_min max = @ukn_flak_pd_7_windup_max }
+    total_fire_time = @ukn_flak_pd_7_total_fire_time
+    range = @ukn_flak_pd_7_range
+    accuracy = @ukn_flak_pd_7_accuracy
+	
+    hull_damage = @ukn_flak_pd_7_hull_damage_mult
+    armor_penetration = @ukn_flak_pd_7_armor_penetration_mult
+    armor_damage = @ukn_flak_pd_7_armor_damage_mult
+    shield_penetration = @ukn_flak_pd_7_shield_penetration_mult
+    shield_damage = @ukn_flak_pd_7_shield_damage_mult
+    tracking = @ukn_flak_pd_7_tracking
+	
+	prerequisites = { "tech_ukn_flak_pd_6" }
+	component_set = "UKN_SET_FLAK_BATTERY_6"
+	projectile_gfx = "projectile_ukn_flak_pd_6"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator weapon_type_point_defense }
+	ai_tags = { weapon_role_point_defense }
+	upgrades_to = "UKN_FLAK_BATTERY_7"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_pointdefense_t7_component_cost_minerals
+#			alloys = @ukn_pointdefense_t7_component_cost_alloys
+			ukn_meta_materials = @ukn_pointdefense_t7_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t7_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t7_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_pointdefense_t7_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t7_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t7_component_cost_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t7_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_pointdefense_t7_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t7_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_pointdefense_t7_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t7_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_pointdefense_t7_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_pointdefense_t7_component_upkeep_energy
+#			minerals = @ukn_pointdefense_t7_component_upkeep_minerals
+#			alloys = @ukn_pointdefense_t7_component_upkeep_alloys
+			ukn_meta_materials = @ukn_pointdefense_t7_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t7_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t7_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t7_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t7_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t7_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t7_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_pointdefense_t7_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_pointdefense_t7_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_pointdefense_t7_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_pointdefense_t7_kinetics_upkeep_minerals
+#			alloys = @ukn_pointdefense_t7_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t7_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_flak_pd_t7
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+			has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Sandquake Point Defense [Shrapnel, Semi-Guided, Supersolid] (T7)
+weapon_component_template = {
+	key = "UKN_FLAK_BATTERY_7"
+	size = point_defence
+	#entity = "small_kinetic_gun_entity"	
+	type = point_defence
+	icon = "GFX_ship_part_ukn_flak_batteries_7"
+	icon_frame = 1
+    power = @ukn_flak_pd_8_power
+	
+	damage = { min = @ukn_flak_pd_8_dmg_min max = @ukn_flak_pd_8_dmg_max }
+    windup = { min = @ukn_flak_pd_8_windup_min max = @ukn_flak_pd_8_windup_max }
+    total_fire_time = @ukn_flak_pd_8_total_fire_time
+    range = @ukn_flak_pd_8_range
+    accuracy = @ukn_flak_pd_8_accuracy
+	
+    hull_damage = @ukn_flak_pd_8_hull_damage_mult
+    armor_penetration = @ukn_flak_pd_8_armor_penetration_mult
+    armor_damage = @ukn_flak_pd_8_armor_damage_mult
+    shield_penetration = @ukn_flak_pd_8_shield_penetration_mult
+    shield_damage = @ukn_flak_pd_8_shield_damage_mult
+    tracking = @ukn_flak_pd_8_tracking
+	
+	prerequisites = { "tech_ukn_flak_pd_7" }
+	component_set = "UKN_SET_FLAK_BATTERY_7"
+	projectile_gfx = "projectile_ukn_flak_pd_7"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator weapon_type_point_defense }
+	ai_tags = { weapon_role_point_defense }
+	upgrades_to = "UKN_FLAK_BATTERY_8"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_pointdefense_t8_component_cost_minerals
+#			alloys = @ukn_pointdefense_t8_component_cost_alloys
+			ukn_meta_materials = @ukn_pointdefense_t8_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t8_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t8_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_pointdefense_t8_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t8_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t8_component_cost_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t8_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_pointdefense_t8_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t8_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_pointdefense_t8_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_pointdefense_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_pointdefense_t8_component_upkeep_energy
+#			minerals = @ukn_pointdefense_t8_component_upkeep_minerals
+#			alloys = @ukn_pointdefense_t8_component_upkeep_alloys
+			ukn_meta_materials = @ukn_pointdefense_t8_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t8_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t8_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t8_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t8_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t8_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t8_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_pointdefense_t8_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_pointdefense_t8_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_pointdefense_t8_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_pointdefense_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_pointdefense_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t8_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_flak_pd_t8
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+			has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Sandquake Point Defense [Shrapnel, Semi-Guided, Supersolid] (T7)
+weapon_component_template = {
+	key = "UKN_FLAK_BATTERY_PLANCK"
+	size = point_defence
+	#entity = "small_kinetic_gun_entity"	
+	type = point_defence
+	icon = "GFX_ship_part_ukn_flak_batteries_planck"
+	icon_frame = 1
+    power = @ukn_flak_pd_planck_power
+	
+	damage = { min = @ukn_flak_pd_planck_dmg_min max = @ukn_flak_pd_planck_dmg_max }
+    windup = { min = @ukn_flak_pd_planck_windup_min max = @ukn_flak_pd_planck_windup_max }
+    total_fire_time = @ukn_flak_pd_planck_total_fire_time
+    range = @ukn_flak_pd_planck_range
+    accuracy = @ukn_flak_pd_planck_accuracy
+	
+    hull_damage = @ukn_flak_pd_planck_hull_damage_mult
+    armor_penetration = @ukn_flak_pd_planck_armor_penetration_mult
+    armor_damage = @ukn_flak_pd_planck_armor_damage_mult
+    shield_penetration = @ukn_flak_pd_planck_shield_penetration_mult
+    shield_damage = @ukn_flak_pd_planck_shield_damage_mult
+    tracking = @ukn_flak_pd_planck_tracking
+	
+	prerequisites = { "tech_ukn_flak_pd_planck" }
+	component_set = "UKN_SET_FLAK_BATTERY_PLANCK"
+	projectile_gfx = "projectile_ukn_flak_pd_planck"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator weapon_type_point_defense }
+	ai_tags = { weapon_role_point_defense }
+	upgrades_to = "UKN_FLAK_BATTERY_8"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_pointdefense_t_p_component_cost_minerals
+#			alloys = @ukn_pointdefense_t_p_component_cost_alloys
+			ukn_meta_materials = @ukn_pointdefense_t_p_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t_p_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t_p_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_pointdefense_t_p_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t_p_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t_p_component_cost_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t_p_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_pointdefense_t_p_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t_p_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_pointdefense_t_p_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t_p_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_pointdefense_t_p_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_pointdefense_t_p_component_upkeep_energy
+#			minerals = @ukn_pointdefense_t_p_component_upkeep_minerals
+#			alloys = @ukn_pointdefense_t_p_component_upkeep_alloys
+			ukn_meta_materials = @ukn_pointdefense_t_p_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t_p_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t_p_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t_p_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t_p_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t_p_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t_p_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_pointdefense_t_p_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_pointdefense_t_p_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_pointdefense_t_p_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_pointdefense_t_p_kinetics_upkeep_minerals
+#			alloys = @ukn_pointdefense_t_p_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t_p_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_flak_pd_t_d
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+			has_monthly_income = { resource = sr_dark_matter value <= 0 }
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Meteor Point Defense [Shrapnel, Semi-Guided, Oscillative] (T8)
+weapon_component_template = {
+	key = "UKN_FLAK_BATTERY_8"
+	size = point_defence
+	#entity = "small_kinetic_gun_entity"	
+	type = point_defence
+	icon = "GFX_ship_part_ukn_flak_batteries_8"
+	icon_frame = 1
+    power = @ukn_flak_pd_9_power
+	
+	damage = { min = @ukn_flak_pd_9_dmg_min max = @ukn_flak_pd_9_dmg_max }
+    windup = { min = @ukn_flak_pd_9_windup_min max = @ukn_flak_pd_9_windup_max }
+    total_fire_time = @ukn_flak_pd_9_total_fire_time
+    range = @ukn_flak_pd_9_range
+    accuracy = @ukn_flak_pd_9_accuracy
+	
+    hull_damage = @ukn_flak_pd_9_hull_damage_mult
+    armor_penetration = @ukn_flak_pd_9_armor_penetration_mult
+    armor_damage = @ukn_flak_pd_9_armor_damage_mult
+    shield_penetration = @ukn_flak_pd_9_shield_penetration_mult
+    shield_damage = @ukn_flak_pd_9_shield_damage_mult
+    tracking = @ukn_flak_pd_9_tracking
+	
+	prerequisites = { "tech_ukn_flak_pd_8" }
+	component_set = "UKN_SET_FLAK_BATTERY_8"
+	projectile_gfx = "projectile_ukn_flak_pd_8"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator weapon_type_point_defense }
+	ai_tags = { weapon_role_point_defense }
+	upgrades_to = "UKN_FLAK_BATTERY_9"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_pointdefense_t9_component_cost_minerals
+#			alloys = @ukn_pointdefense_t9_component_cost_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t9_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t9_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t9_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t9_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_pointdefense_t9_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t9_component_cost_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t9_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_pointdefense_t9_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t9_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_pointdefense_t9_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t9_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_pointdefense_t9_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_pointdefense_t9_component_upkeep_energy
+#			minerals = @ukn_pointdefense_t9_component_upkeep_minerals
+#			alloys = @ukn_pointdefense_t9_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t9_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t9_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t9_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t9_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t9_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t9_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t9_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_pointdefense_t9_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_pointdefense_t9_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_pointdefense_t9_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_pointdefense_t9_kinetics_upkeep_minerals
+#			alloys = @ukn_pointdefense_t9_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t9_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_flak_pd_t9
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = ukn_causalitons value <= 0 }
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Impact Point Defense [Shrapnel, Semi-Guided, Synchronic] (T9)
+weapon_component_template = {
+	key = "UKN_FLAK_BATTERY_9"
+	size = point_defence
+	#entity = "small_kinetic_gun_entity"	
+	type = point_defence
+	icon = "GFX_ship_part_ukn_flak_batteries_9"
+	icon_frame = 1
+    power = @ukn_flak_pd_10_power
+	
+	damage = { min = @ukn_flak_pd_10_dmg_min max = @ukn_flak_pd_10_dmg_max }
+    windup = { min = @ukn_flak_pd_10_windup_min max = @ukn_flak_pd_10_windup_max }
+    total_fire_time = @ukn_flak_pd_10_total_fire_time
+    range = @ukn_flak_pd_10_range
+    accuracy = @ukn_flak_pd_10_accuracy
+	
+    hull_damage = @ukn_flak_pd_10_hull_damage_mult
+    armor_penetration = @ukn_flak_pd_10_armor_penetration_mult
+    armor_damage = @ukn_flak_pd_10_armor_damage_mult
+    shield_penetration = @ukn_flak_pd_10_shield_penetration_mult
+    shield_damage = @ukn_flak_pd_10_shield_damage_mult
+    tracking = @ukn_flak_pd_10_tracking
+	
+	prerequisites = { "tech_ukn_flak_pd_9" }
+	component_set = "UKN_SET_FLAK_BATTERY_9"
+	projectile_gfx = "projectile_ukn_flak_pd_9"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_accelerator weapon_type_point_defense }
+	ai_tags = { weapon_role_point_defense }
+#	upgrades_to = "UKN_FLAK_BATTERY_9"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_pointdefense_t10_component_cost_minerals
+#			alloys = @ukn_pointdefense_t10_component_cost_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t10_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t10_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t10_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t10_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_pointdefense_t10_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t10_component_cost_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t10_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_pointdefense_t10_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t10_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_pointdefense_t10_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t10_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_pointdefense_t10_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_pointdefense_t10_component_upkeep_energy
+#			minerals = @ukn_pointdefense_t10_component_upkeep_minerals
+#			alloys = @ukn_pointdefense_t10_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t10_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t10_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t10_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t10_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t10_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t10_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t10_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_pointdefense_t10_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_pointdefense_t10_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_pointdefense_t10_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_pointdefense_t10_kinetics_upkeep_minerals
+#			alloys = @ukn_pointdefense_t10_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t10_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_flak_pd_t10
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = ukn_causalitons value <= 0 }
+		}
+	}
+}
+
+# -----------------------------------------------------------------------

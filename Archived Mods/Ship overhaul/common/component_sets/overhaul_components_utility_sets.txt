@@ -1,0 +1,153 @@
+#shields
+component_set = {
+	key = "ship_shield_generator"
+	required_component_set = yes
+	icon = "GFX_ship_part_shield_1"
+	icon_frame = 1
+}
+component_set = {
+	key = "auxilliary_shield_generator_1"
+	icon = "GFX_ship_part_shield_1"
+	icon_frame = 1
+}
+component_set = {
+	key = "auxilliary_shield_generator_2"
+	icon = "GFX_ship_part_shield_2"
+	icon_frame = 1
+}
+component_set = {
+	key = "auxilliary_shield_generator_3"
+	icon = "GFX_ship_part_shield_3"
+	icon_frame = 1
+}
+component_set = {
+	key = "auxilliary_shield_generator_4"
+	icon = "GFX_ship_part_shield_4"
+	icon_frame = 1
+}
+component_set = {
+	key = "auxilliary_shield_generator_5"
+	icon = "GFX_ship_part_shield_5"
+	icon_frame = 1
+}
+component_set = {
+	key = "auxilliary_shield_generator_dm"
+	icon = "GFX_ship_part_dark_matter_shield"
+	icon_frame = 1
+}
+component_set = {
+	key = "auxilliary_shield_generator_psi"
+	icon = "GFX_ship_part_psi_shield"
+	icon_frame = 1
+}
+component_set = {
+	key = "auxilliary_shield_generator_psibar"
+	icon = "GFX_ship_part_psi_shield"
+	icon_frame = 1
+}
+component_set = {
+	key = "SHIELD_CAPACITOR_1"
+	icon = "GFX_ship_part_shield_recharger"
+	icon_frame = 1
+}
+
+
+#armour
+component_set = {
+	key = "ship_armour_plating"
+	required_component_set = yes
+	icon = "GFX_ship_part_crystal_armor_2"
+	icon_frame = 1
+}
+component_set = {
+	key = "armour_thickness"
+	required_component_set = yes
+	icon = "GFX_ship_part_crystal_armor_2"
+	icon_frame = 1
+}
+
+
+#hull
+component_set = {
+	key = "ship_hull_material"
+	required_component_set = yes
+	icon = "GFX_ship_part_crystal_armor_2"
+	icon_frame = 1
+}
+component_set = {
+	key = "hull_reinforcement_1"
+	icon = "GFX_ship_part_hull_1"
+	icon_frame = 1
+}
+component_set = {
+	key = "hull_reinforcement_2"
+	icon = "GFX_ship_part_hull_2"
+	icon_frame = 1
+}
+component_set = {
+	key = "hull_reinforcement_3"
+	icon = "GFX_ship_part_hull_3"
+	icon_frame = 1
+}
+component_set = {
+	key = "hull_reinforcement_4"
+	icon = "GFX_ship_part_hull_4"
+	icon_frame = 1
+}
+component_set = {
+	key = "hull_reinforcement_5"
+	icon = "GFX_ship_part_hull_5"
+	icon_frame = 1
+}
+component_set = {
+	key = "hull_reinforcement_6"
+	icon = "GFX_ship_part_hull_6"
+	icon_frame = 1
+}
+
+
+#Weapon Components
+component_set = {
+	key = "WEAPON_CAPACITOR_1"
+	icon = "GFX_ship_part_weapon_capacitor"
+	icon_frame = 1
+}
+component_set = {
+	key = "STRIKE_CRAFT_CONTROL"
+	icon = "GFX_ship_part_weapon_capacitor"
+	icon_frame = 1
+}
+
+
+#auxilliary reactors
+component_set = {
+	key = "SECONDARY_FISSION_REACTOR"
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+}
+component_set = {
+	key = "SECONDARY_FUSION_REACTOR"
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+}
+component_set = {
+	key = "SECONDARY_COLD_FUSION_REACTOR"
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+}
+component_set = {
+	key = "SECONDARY_ANTIMATTER_REACTOR"
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+}
+component_set = {
+	key = "SECONDARY_ZERO_POINT_REACTOR"
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+}
+component_set = {
+	key = "SECONDARY_DARK_MATTER_REACTOR"
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+}
+

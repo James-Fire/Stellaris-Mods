@@ -1,0 +1,180 @@
+#####################
+##### FIGHTERS ######
+#####################
+
+strike_craft_domponent_template = {
+	key = "UKN_STRIKE_CRAFT_HANGAR_ESOTERIC_TEST_1_SMALL"
+	size = SMALL
+	entity = "fighter_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_fighter_1"
+    power = @ukn_strike_craft_fighter_3_power
+	
+	size_restriction = { giga_quasarcraft }
+	
+	damage = { min = @ukn_strike_craft_fighter_3_dmg_min max = @ukn_strike_craft_fighter_3_dmg_max }
+	cooldown = @ukn_strike_craft_fighter_3_cooldown
+    range = @ukn_strike_craft_fighter_3_range
+    accuracy = @ukn_strike_craft_fighter_3_accuracy
+	
+    hull_damage = @ukn_strike_craft_fighter_3_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_fighter_3_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_fighter_3_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_fighter_3_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_fighter_3_shield_damage_mult
+    tracking = @ukn_strike_craft_fighter_3_tracking
+	
+	engagement_range = @ukn_strike_craft_fighter_3_engagement_range
+	count = @ukn_strike_craft_fighter_3_count
+	regeneration_per_day = @ukn_strike_craft_fighter_3_regen
+	launch_time = @ukn_strike_craft_fighter_3_launch_time
+
+	health = @ukn_strike_craft_fighter_3_health
+	armor = @ukn_strike_craft_fighter_3_armor
+	shield = @ukn_strike_craft_fighter_3_shield
+	
+	evasion = @ukn_strike_craft_fighter_3_evasion
+	speed = @ukn_strike_craft_fighter_3_speed
+	rotation_speed = @ukn_strike_craft_fighter_3_rotation_speed
+	acceleration = @ukn_strike_craft_fighter_3_acceleration
+	
+	ship_behavior = "fighters_behavior"
+#	prerequisites = { "tech_strike_craft_1" }
+	projectile_gfx = "projectile_ukn_strike_craft_fighter_1"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_point_defense }
+	component_set = "UKN_STRIKE_CRAFT_HANGAR_ESOTERIC_TEST_1_SMALL"
+#	upgrades_to = "STRIKE_CRAFT_HANGAR_2"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ukn_l_t3_cost
+		}		
+		upkeep = {
+			energy = @ukn_l_t3_upkeep_energy
+			alloys = @ukn_l_t3_upkeep_cost
+		}
+	}
+	ai_weight = {
+		weight = 16
+	}
+}
+
+strike_craft_domponent_template = {
+	key = "UKN_STRIKE_CRAFT_HANGAR_ESOTERIC_TEST_1_MEDIUM"
+	size = MEDIUM
+	entity = "fighter_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_fighter_1"
+    power = @ukn_strike_craft_fighter_3_power
+	
+	size_restriction = { giga_quasarcraft }
+	
+	damage = { min = @ukn_strike_craft_fighter_3_dmg_min max = @ukn_strike_craft_fighter_3_dmg_max }
+	cooldown = @ukn_strike_craft_fighter_3_cooldown
+    range = @ukn_strike_craft_fighter_3_range
+    accuracy = @ukn_strike_craft_fighter_3_accuracy
+	
+    hull_damage = @ukn_strike_craft_fighter_3_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_fighter_3_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_fighter_3_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_fighter_3_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_fighter_3_shield_damage_mult
+    tracking = @ukn_strike_craft_fighter_3_tracking
+	
+	engagement_range = @ukn_strike_craft_fighter_3_engagement_range
+	count = @ukn_strike_craft_fighter_3_count
+	regeneration_per_day = @ukn_strike_craft_fighter_3_regen
+	launch_time = @ukn_strike_craft_fighter_3_launch_time
+
+	health = @ukn_strike_craft_fighter_3_health
+	armor = @ukn_strike_craft_fighter_3_armor
+	shield = @ukn_strike_craft_fighter_3_shield
+	
+	evasion = @ukn_strike_craft_fighter_3_evasion
+	speed = @ukn_strike_craft_fighter_3_speed
+	rotation_speed = @ukn_strike_craft_fighter_3_rotation_speed
+	acceleration = @ukn_strike_craft_fighter_3_acceleration
+	
+	ship_behavior = "fighters_behavior"
+#	prerequisites = { "tech_strike_craft_1" }
+	projectile_gfx = "projectile_ukn_strike_craft_fighter_1"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_point_defense }
+	component_set = "UKN_STRIKE_CRAFT_HANGAR_ESOTERIC_TEST_1_SMALL"
+#	upgrades_to = "STRIKE_CRAFT_HANGAR_2"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ukn_l_t3_cost
+		}		
+		upkeep = {
+			energy = @ukn_l_t3_upkeep_energy
+			alloys = @ukn_l_t3_upkeep_cost
+		}
+	}
+	ai_weight = {
+		weight = 16
+	}
+}
+
+strike_craft_domponent_template = {
+	key = "UKN_STRIKE_CRAFT_HANGAR_ESOTERIC_TEST_1_PLANET_KILLER"
+	size = PLANET_KILLER
+	entity = "fighter_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_fighter_1"
+    power = @ukn_strike_craft_fighter_3_power
+	
+	size_restriction = { giga_quasarcraft }
+	
+	damage = { min = @ukn_strike_craft_fighter_3_dmg_min max = @ukn_strike_craft_fighter_3_dmg_max }
+	cooldown = @ukn_strike_craft_fighter_3_cooldown
+    range = @ukn_strike_craft_fighter_3_range
+    accuracy = @ukn_strike_craft_fighter_3_accuracy
+	
+    hull_damage = @ukn_strike_craft_fighter_3_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_fighter_3_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_fighter_3_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_fighter_3_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_fighter_3_shield_damage_mult
+    tracking = @ukn_strike_craft_fighter_3_tracking
+	
+	engagement_range = @ukn_strike_craft_fighter_3_engagement_range
+	count = @ukn_strike_craft_fighter_3_count
+	regeneration_per_day = @ukn_strike_craft_fighter_3_regen
+	launch_time = @ukn_strike_craft_fighter_3_launch_time
+
+	health = @ukn_strike_craft_fighter_3_health
+	armor = @ukn_strike_craft_fighter_3_armor
+	shield = @ukn_strike_craft_fighter_3_shield
+	
+	evasion = @ukn_strike_craft_fighter_3_evasion
+	speed = @ukn_strike_craft_fighter_3_speed
+	rotation_speed = @ukn_strike_craft_fighter_3_rotation_speed
+	acceleration = @ukn_strike_craft_fighter_3_acceleration
+	
+	ship_behavior = "fighters_behavior"
+#	prerequisites = { "tech_strike_craft_1" }
+	projectile_gfx = "projectile_ukn_strike_craft_fighter_1"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_point_defense }
+	component_set = "UKN_STRIKE_CRAFT_HANGAR_ESOTERIC_TEST_1_SMALL"
+#	upgrades_to = "STRIKE_CRAFT_HANGAR_2"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ukn_l_t3_cost
+		}		
+		upkeep = {
+			energy = @ukn_l_t3_upkeep_energy
+			alloys = @ukn_l_t3_upkeep_cost
+		}
+	}
+	ai_weight = {
+		weight = 16
+	}
+}

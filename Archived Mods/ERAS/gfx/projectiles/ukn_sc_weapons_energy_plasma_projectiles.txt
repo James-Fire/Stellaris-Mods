@@ -1,0 +1,486 @@
+#All files in gfx/projectiles are reloadable with the "reload projectiles" console command
+#Filewatcher is also enabled for all files
+
+######################
+### PLASMA CANNONS ###
+######################
+
+######----------------------------------
+# T1 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_1S"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_1S"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_1S"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_1S"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_1S"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_1M"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_1M"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_1M"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_1M"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_1M"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_1L"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_1L"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_1L"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_1L"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_1L"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T2 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_2S"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_2S"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_2S"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_2S"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_2S"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_2M"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_2M"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_2M"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_2M"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_2M"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_2L"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_2L"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_2L"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_2L"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_2L"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T3 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_3S"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_3S"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_3S"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_3S"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_3S"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_3M"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_3M"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_3M"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_3M"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_3M"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_3L"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_3L"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_3L"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_3L"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_3L"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T4 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_4S"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_4S"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_4S"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_4S"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_4S"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_4M"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_4M"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_4M"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_4M"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_4M"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_4L"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_4L"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_4L"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_4L"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_4L"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T5 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_5S"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_5S"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_5S"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_5S"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_5S"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_5M"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_5M"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_5M"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_5M"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_5M"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_5L"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_5L"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_5L"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_5L"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_5L"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T6 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_6S"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_6S"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_6S"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_6S"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_6S"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_6M"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_6M"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_6M"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_6M"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_6M"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_6L"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_6L"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_6L"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_6L"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_6L"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T7 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_7S"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_7S"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_7S"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_7S"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_7S"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_7M"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_7M"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_7M"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_7M"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_7M"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_7L"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_7L"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_7L"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_7L"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_7L"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T8 #----------------------------------
+######----------------------------------
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_8S"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_8S"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_8S"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_8S"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_8S"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_8M"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_8M"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_8M"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_8M"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_8M"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "projectile_ukn_plasma_8L"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "hit_entity_ukn_plasma_8L"
+	shield_hit_entity = "shield_hit_entity_ukn_plasma_8L"
+	muzzle_flash_entity = "muzzle_entity_ukn_plasma_8L"
+	
+	#ballistic specific
+	entity = "tracer_round_entity_ukn_plasma_8L"
+	speed = 90.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}

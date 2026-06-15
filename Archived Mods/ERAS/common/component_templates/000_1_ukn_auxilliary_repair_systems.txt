@@ -1,0 +1,1442 @@
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+
+##################
+# REPAIR SYSTEMS #
+##################
+
+# Cyclonic Propulsion Overdrivers
+utility_component_template = {
+	key = "UKN_REPAIR_SYSTEM_1"
+	size = aux
+	icon = "GFX_ship_part_ukn_repair_system_automachine_1"
+	icon_frame = 1
+	power = @ukn_repair_system_automachine_3_power		#-10
+	
+	modifier = {
+		ship_hull_regen_add_static = @ukn_repair_system_automachine_3_ship_hull_regen
+		ship_armor_regen_add_static = @ukn_repair_system_automachine_3_ship_armor_regen
+	}
+	class_restriction = { shipclass_military shipclass_military_special }
+	prerequisites = { "tech_engineering_2" }
+	component_set = "UKN_SET_REPAIR_SYSTEM_1"
+	upgrades_to = "UKN_REPAIR_SYSTEM_2"
+	
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_pointdefense_t3_component_cost_minerals
+			alloys = @ukn_pointdefense_t3_component_cost_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t3_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t3_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t3_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t3_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t3_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t3_component_cost_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t3_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_pointdefense_t3_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t3_armor_cost_ukn_meta_materials
+			nanites = @ukn_pointdefense_t3_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t3_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_pointdefense_t3_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_pointdefense_t3_component_upkeep_energy
+#			minerals = @ukn_pointdefense_t3_component_upkeep_minerals
+			alloys = @ukn_pointdefense_t3_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t3_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t3_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t3_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t3_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t3_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t3_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t3_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_pointdefense_t3_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_pointdefense_t3_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_pointdefense_t3_component_upkeep_ehof_sr_negative_mass
+			nanites = @ukn_pointdefense_t3_component_upkeep_nanites
+#---
+#			minerals = @ukn_pointdefense_t3_kinetics_upkeep_minerals
+#			alloys = @ukn_pointdefense_t3_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t3_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ai_weight = {
+		weight = 640	#10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = nanites value <= 0 }
+			}
+		}
+		modifier = {
+			factor = 1.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0.5
+			is_preferred_weapons = weapon_type_explosive
+		}		
+	}
+}
+
+# Cyclonic Propulsion Overdrivers
+utility_component_template = {
+	key = "UKN_REPAIR_SYSTEM_2"
+	size = aux
+	icon = "GFX_ship_part_ukn_repair_system_automachine_2"
+	icon_frame = 1
+	power = @ukn_repair_system_automachine_4_power		#-10
+	
+	modifier = {
+		ship_hull_regen_add_static = @ukn_repair_system_automachine_4_ship_hull_regen
+		ship_armor_regen_add_static = @ukn_repair_system_automachine_4_ship_armor_regen
+	}
+	class_restriction = { shipclass_military shipclass_military_special }
+	prerequisites = { "tech_engineering_3" }
+	component_set = "UKN_SET_REPAIR_SYSTEM_2"
+	upgrades_to = "UKN_REPAIR_SYSTEM_3"
+	
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_pointdefense_t4_component_cost_minerals
+			alloys = @ukn_pointdefense_t4_component_cost_alloys
+			ukn_meta_materials = @ukn_pointdefense_t4_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t4_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t4_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t4_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t4_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t4_component_cost_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t4_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_pointdefense_t4_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t4_armor_cost_ukn_meta_materials
+			nanites = @ukn_pointdefense_t4_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t4_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_pointdefense_t4_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_pointdefense_t4_component_upkeep_energy
+#			minerals = @ukn_pointdefense_t4_component_upkeep_minerals
+			alloys = @ukn_pointdefense_t4_component_upkeep_alloys
+			ukn_meta_materials = @ukn_pointdefense_t4_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t4_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t4_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t4_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t4_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t4_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t4_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_pointdefense_t4_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_pointdefense_t4_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_pointdefense_t4_component_upkeep_ehof_sr_negative_mass
+			nanites = @ukn_pointdefense_t4_component_upkeep_nanites
+#---
+#			minerals = @ukn_pointdefense_t4_kinetics_upkeep_minerals
+#			alloys = @ukn_pointdefense_t4_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t4_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ai_weight = {
+		weight = 640	#10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = nanites value <= 0 }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0.5
+			is_preferred_weapons = weapon_type_explosive
+		}		
+	}
+}
+
+# Cyclonic Propulsion Overdrivers
+utility_component_template = {
+	key = "UKN_REPAIR_SYSTEM_3"
+	size = aux
+	icon = "GFX_ship_part_ukn_repair_system_automachine_3"
+	icon_frame = 1
+	power = @ukn_repair_system_automachine_5_power		#-30
+	
+	modifier = {
+		ship_hull_regen_add_static = @ukn_repair_system_automachine_5_ship_hull_regen
+		ship_armor_regen_add_static = @ukn_repair_system_automachine_5_ship_armor_regen
+	}
+	class_restriction = { shipclass_military shipclass_military_special }
+	prerequisites = { "tech_ukn_engineering_output_4" }
+	component_set = "UKN_SET_REPAIR_SYSTEM_3"
+	upgrades_to = "UKN_REPAIR_SYSTEM_4"
+	
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_pointdefense_t5_component_cost_minerals
+#			alloys = @ukn_pointdefense_t5_component_cost_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t5_component_cost_ukn_meta_materials
+			ukn_femtomatter = @ukn_pointdefense_t5_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t5_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t5_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t5_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t5_component_cost_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t5_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_pointdefense_t5_component_cost_ehof_sr_negative_mass
+#---
+			ukn_meta_materials = @ukn_pointdefense_t5_armor_cost_ukn_meta_materials
+			nanites = @ukn_pointdefense_t5_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t5_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_pointdefense_t5_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_pointdefense_t5_component_upkeep_energy
+#			minerals = @ukn_pointdefense_t5_component_upkeep_minerals
+#			alloys = @ukn_pointdefense_t5_component_upkeep_alloys
+			ukn_meta_materials = @ukn_pointdefense_t5_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t5_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t5_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t5_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t5_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t5_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t5_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_pointdefense_t5_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_pointdefense_t5_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_pointdefense_t5_component_upkeep_ehof_sr_negative_mass
+			nanites = @ukn_pointdefense_t5_component_upkeep_nanites
+#---
+#			minerals = @ukn_pointdefense_t5_kinetics_upkeep_minerals
+#			alloys = @ukn_pointdefense_t5_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t5_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ai_weight = {
+		weight = 640	#30
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = nanites value <= 0 }
+				has_monthly_income = { resource = ukn_femtomatter value <= 0 }
+			}
+		}
+		modifier = {
+			factor = 4.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0.5
+			is_preferred_weapons = weapon_type_explosive
+		}		
+	}
+}
+
+# Multifold Propulsion Overdrivers
+utility_component_template = {
+	key = "UKN_REPAIR_SYSTEM_4"
+	size = aux
+	icon = "GFX_ship_part_ukn_repair_system_automachine_4"
+	icon_frame = 1
+	power = @ukn_repair_system_automachine_6_power		#-10
+	
+	modifier = {
+		ship_hull_regen_add_static = @ukn_repair_system_automachine_6_ship_hull_regen		#0.10
+		ship_armor_regen_add_static = @ukn_repair_system_automachine_6_ship_armor_regen	#0.05
+	}
+	class_restriction = { shipclass_military shipclass_military_special }
+	prerequisites = { "tech_ukn_engineering_output_5" }
+	component_set = "UKN_SET_REPAIR_SYSTEM_4"
+	upgrades_to = "UKN_REPAIR_SYSTEM_SENTIENT_METAL_0"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_pointdefense_t6_component_cost_minerals
+#			alloys = @ukn_pointdefense_t6_component_cost_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t6_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t6_component_cost_ukn_femtomatter
+			ukn_condensics = @ukn_pointdefense_t6_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t6_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t6_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t6_component_cost_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t6_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_pointdefense_t6_component_cost_ehof_sr_negative_mass
+#---
+			ukn_meta_materials = @ukn_pointdefense_t6_armor_cost_ukn_meta_materials
+			nanites = @ukn_pointdefense_t6_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t6_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_pointdefense_t6_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_pointdefense_t6_component_upkeep_energy
+#			minerals = @ukn_pointdefense_t6_component_upkeep_minerals
+#			alloys = @ukn_pointdefense_t6_component_upkeep_alloys
+			ukn_meta_materials = @ukn_pointdefense_t6_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t6_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t6_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t6_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t6_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t6_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t6_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_pointdefense_t6_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_pointdefense_t6_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_pointdefense_t6_component_upkeep_ehof_sr_negative_mass
+			nanites = @ukn_pointdefense_t6_component_upkeep_nanites
+#---
+#			minerals = @ukn_pointdefense_t6_kinetics_upkeep_minerals
+#			alloys = @ukn_pointdefense_t6_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t6_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ai_weight = {
+		weight = 1480	#10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = nanites value <= 0 }
+				has_monthly_income = { resource = ukn_condensics value <= 0 }
+			}
+		}
+		modifier = {
+			factor = 4.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0.5
+			is_preferred_weapons = weapon_type_explosive
+		}		
+	}
+}
+
+# Spatial Propulsion Overdrivers
+utility_component_template = {
+	key = "UKN_REPAIR_SYSTEM_SENTIENT_METAL_0"
+	size = aux
+	icon = "GFX_ship_part_ukn_repair_system_sentient_metal_0"
+	icon_frame = 1
+	power = @ukn_repair_system_sentient_metal_7_power		#-10
+	
+	modifier = {
+		ship_hull_regen_add_static = @ukn_repair_system_sentient_metal_7_ship_hull_regen		#0.10
+		ship_armor_regen_add_static = @ukn_repair_system_sentient_metal_7_ship_armor_regen	#0.05
+	}
+	class_restriction = { shipclass_military shipclass_military_special }
+	prerequisites = { "tech_ukn_repair_system_sentient_metal_0" }
+	component_set = "UKN_SET_REPAIR_SYSTEM_SENTIENT_METAL_0"
+	upgrades_to = "UKN_REPAIR_SYSTEM_SENTIENT_METAL_1"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_pointdefense_t7_component_cost_minerals
+#			alloys = @ukn_pointdefense_t7_component_cost_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t7_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t7_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t7_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_pointdefense_t7_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t7_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t7_component_cost_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t7_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_pointdefense_t7_component_cost_ehof_sr_negative_mass
+#---
+			ukn_meta_materials = @ukn_pointdefense_t7_armor_cost_ukn_meta_materials
+			ehof_sr_sentient_metal = @ukn_pointdefense_t7_armor_cost_ehof_sr_sentient_metal
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t7_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_pointdefense_t7_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_pointdefense_t7_component_upkeep_energy
+#			minerals = @ukn_pointdefense_t7_component_upkeep_minerals
+#			alloys = @ukn_pointdefense_t7_component_upkeep_alloys
+			ukn_meta_materials = @ukn_pointdefense_t7_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t7_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t7_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t7_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t7_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t7_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t7_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_pointdefense_t7_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_pointdefense_t7_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_pointdefense_t7_component_upkeep_ehof_sr_negative_mass
+			ehof_sr_sentient_metal = @ukn_pointdefense_t7_component_upkeep_ehof_sr_sentient_metal
+#---
+#			minerals = @ukn_pointdefense_t7_kinetics_upkeep_minerals
+#			alloys = @ukn_pointdefense_t7_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t7_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ai_weight = {
+		weight = 2560	#10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ehof_sr_sentient_metal value <= 0 }
+#				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0.5
+			is_preferred_weapons = weapon_type_explosive
+		}		
+	}
+}
+
+# Nul Fluctuative Propulsion Overdrivers
+utility_component_template = {
+	key = "UKN_REPAIR_SYSTEM_SENTIENT_METAL_1"
+	size = aux
+	icon = "GFX_ship_part_ukn_repair_system_sentient_metal_1"
+	icon_frame = 1
+	power = @ukn_repair_system_sentient_metal_8_power		#-10
+	
+	modifier = {
+		ship_hull_regen_add_static = @ukn_repair_system_sentient_metal_8_ship_hull_regen		#0.10
+		ship_armor_regen_add_static = @ukn_repair_system_sentient_metal_8_ship_armor_regen	#0.05
+	}
+	class_restriction = { shipclass_military shipclass_military_special }
+	prerequisites = { "tech_ukn_repair_system_sentient_metal_1" }
+	component_set = "UKN_SET_REPAIR_SYSTEM_SENTIENT_METAL_1"
+	upgrades_to = "UKN_REPAIR_SYSTEM_SENTIENT_METAL_PLANCK"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_pointdefense_t8_component_cost_minerals
+#			alloys = @ukn_pointdefense_t8_component_cost_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t8_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t8_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t8_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_pointdefense_t8_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t8_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t8_component_cost_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t8_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_pointdefense_t8_component_cost_ehof_sr_negative_mass
+#---
+			ukn_meta_materials = @ukn_pointdefense_t8_armor_cost_ukn_meta_materials
+			ehof_sr_sentient_metal = @ukn_pointdefense_t8_armor_cost_ehof_sr_sentient_metal
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_pointdefense_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_pointdefense_t8_component_upkeep_energy
+#			minerals = @ukn_pointdefense_t8_component_upkeep_minerals
+#			alloys = @ukn_pointdefense_t8_component_upkeep_alloys
+			ukn_meta_materials = @ukn_pointdefense_t8_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t8_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t8_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t8_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t8_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t8_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t8_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_pointdefense_t8_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_pointdefense_t8_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_pointdefense_t8_component_upkeep_ehof_sr_negative_mass
+			ehof_sr_sentient_metal = @ukn_pointdefense_t8_component_upkeep_ehof_sr_sentient_metal
+#---
+#			minerals = @ukn_pointdefense_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_pointdefense_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t8_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ai_weight = {
+		weight = 5120	#10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ehof_sr_sentient_metal value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0.5
+			is_preferred_weapons = weapon_type_explosive
+		}		
+	}
+}
+
+# Nul Fluctuative Propulsion Overdrivers
+utility_component_template = {
+	key = "UKN_REPAIR_SYSTEM_SENTIENT_METAL_PLANCK"
+	size = aux
+	icon = "GFX_ship_part_ukn_repair_system_sentient_metal_planck"
+	icon_frame = 1
+	power = @ukn_repair_system_sentient_metal_planck_power		#-10
+	
+	modifier = {
+		ship_hull_regen_add_static = @ukn_repair_system_sentient_metal_planck_ship_hull_regen		#0.10
+		ship_armor_regen_add_static = @ukn_repair_system_sentient_metal_planck_ship_armor_regen	#0.05
+	}
+	class_restriction = { shipclass_military shipclass_military_special }
+	prerequisites = { "tech_ukn_repair_system_sentient_metal_planck" }
+	component_set = "UKN_SET_REPAIR_SYSTEM_SENTIENT_METAL_PLANCK"
+	upgrades_to = "UKN_REPAIR_SYSTEM_LIVING_METAL_1"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_pointdefense_t_p_component_cost_minerals
+#			alloys = @ukn_pointdefense_t_p_component_cost_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t_p_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t_p_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t_p_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_pointdefense_t_p_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t_p_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t_p_component_cost_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t_p_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_pointdefense_t_p_component_cost_ehof_sr_negative_mass
+#---
+			ukn_meta_materials = @ukn_pointdefense_t_p_armor_cost_ukn_meta_materials
+			ehof_sr_sentient_metal = @ukn_pointdefense_t_p_armor_cost_ehof_sr_sentient_metal
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t_p_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_pointdefense_t_p_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_pointdefense_t_p_component_upkeep_energy
+#			minerals = @ukn_pointdefense_t_p_component_upkeep_minerals
+#			alloys = @ukn_pointdefense_t_p_component_upkeep_alloys
+			ukn_meta_materials = @ukn_pointdefense_t_p_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t_p_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t_p_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t_p_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t_p_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t_p_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t_p_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_pointdefense_t_p_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_pointdefense_t_p_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_pointdefense_t_p_component_upkeep_ehof_sr_negative_mass
+			ehof_sr_sentient_metal = @ukn_pointdefense_t_p_component_upkeep_ehof_sr_sentient_metal
+#---
+#			minerals = @ukn_pointdefense_t_p_kinetics_upkeep_minerals
+#			alloys = @ukn_pointdefense_t_p_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t_p_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ai_weight = {
+		weight = 7680	#10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ehof_sr_sentient_metal value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = sr_dark_matter value <= 0 }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0.5
+			is_preferred_weapons = weapon_type_explosive
+		}		
+	}
+}
+
+# Cyclonic Propulsion Overdrivers
+utility_component_template = {
+	key = "UKN_REPAIR_SYSTEM_LIVING_METAL_1"
+	size = aux
+	icon = "GFX_ship_part_ukn_repair_system_living_metal_1"
+	icon_frame = 1
+	power = @ukn_repair_system_living_metal_9_power		#-10
+	
+	modifier = {
+		ship_hull_regen_add_static = @ukn_repair_system_living_metal_9_ship_hull_regen
+		ship_armor_regen_add_static = @ukn_repair_system_living_metal_9_ship_armor_regen
+	}
+	class_restriction = { shipclass_military shipclass_military_special }
+	prerequisites = { "tech_ukn_repair_system_living_metal_1" }
+	component_set = "UKN_SET_REPAIR_SYSTEM_LIVING_METAL_1"
+	upgrades_to = "UKN_REPAIR_SYSTEM_LIVING_METAL_2"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_pointdefense_t9_component_cost_minerals
+#			alloys = @ukn_pointdefense_t9_component_cost_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t9_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t9_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t9_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t9_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_pointdefense_t9_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t9_component_cost_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t9_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_pointdefense_t9_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t9_armor_cost_ukn_meta_materials
+			sr_living_metal = @ukn_pointdefense_t9_armor_cost_sr_living_metal
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t9_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_pointdefense_t9_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_pointdefense_t9_component_upkeep_energy
+#			minerals = @ukn_pointdefense_t9_component_upkeep_minerals
+#			alloys = @ukn_pointdefense_t9_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t9_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t9_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t9_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t9_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t9_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t9_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t9_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_pointdefense_t9_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_pointdefense_t9_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_pointdefense_t9_component_upkeep_ehof_sr_negative_mass
+			sr_living_metal = @ukn_pointdefense_t9_component_upkeep_sr_living_metal
+#---
+#			minerals = @ukn_pointdefense_t9_kinetics_upkeep_minerals
+#			alloys = @ukn_pointdefense_t9_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t9_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ai_weight = {
+		weight = 10240	#10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = sr_living_metal value <= 0 }
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+			}
+		}
+		modifier = {
+			factor = 1.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0.5
+			is_preferred_weapons = weapon_type_explosive
+		}		
+	}
+}
+
+# Cyclonic Propulsion Overdrivers
+utility_component_template = {
+	key = "UKN_REPAIR_SYSTEM_LIVING_METAL_2"
+	size = aux
+	icon = "GFX_ship_part_ukn_repair_system_living_metal_2"
+	icon_frame = 1
+	power = @ukn_repair_system_living_metal_10_power		#-10
+	
+	modifier = {
+		ship_hull_regen_add_static = @ukn_repair_system_living_metal_10_ship_hull_regen
+		ship_armor_regen_add_static = @ukn_repair_system_living_metal_10_ship_armor_regen
+	}
+	class_restriction = { shipclass_military shipclass_military_special }
+	prerequisites = { "tech_ukn_repair_system_living_metal_2" }
+	component_set = "UKN_SET_REPAIR_SYSTEM_LIVING_METAL_2"
+#	upgrades_to = "UKN_REPAIR_SYSTEM_LIVING_METAL_3"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_pointdefense_t10_component_cost_minerals
+#			alloys = @ukn_pointdefense_t10_component_cost_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t10_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t10_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t10_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t10_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_pointdefense_t10_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t10_component_cost_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t10_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_pointdefense_t10_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t10_armor_cost_ukn_meta_materials
+			sr_living_metal = @ukn_pointdefense_t10_armor_cost_sr_living_metal
+#---
+#			ukn_meta_materials = @ukn_pointdefense_t10_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_pointdefense_t10_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_pointdefense_t10_component_upkeep_energy
+#			minerals = @ukn_pointdefense_t10_component_upkeep_minerals
+#			alloys = @ukn_pointdefense_t10_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t10_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_pointdefense_t10_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_pointdefense_t10_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_pointdefense_t10_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_pointdefense_t10_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_pointdefense_t10_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_pointdefense_t10_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_pointdefense_t10_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_pointdefense_t10_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_pointdefense_t10_component_upkeep_ehof_sr_negative_mass
+			sr_living_metal = @ukn_pointdefense_t10_component_upkeep_sr_living_metal
+#---
+#			minerals = @ukn_pointdefense_t10_kinetics_upkeep_minerals
+#			alloys = @ukn_pointdefense_t10_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_pointdefense_t10_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ai_weight = {
+		weight = 20480	#10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = sr_living_metal value <= 0 }
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0.5
+			is_preferred_weapons = weapon_type_explosive
+		}		
+	}
+}
+
+###################################
+# REPAIR SYSTEMS (Starbase Class) #
+###################################
+
+# Cyclonic Propulsion Overdrivers
+utility_component_template = {
+	key = "UKN_REPAIR_SYSTEM_STARBASE_CLASS_AUTOMACHINE_1"
+	size = aux
+	icon = "GFX_ship_part_ukn_repair_system_automachine_1"
+	icon_frame = 1
+	power = @ukn_repair_system_automachine_3_power		#-10
+	
+	modifier = {
+		ship_hull_regen_add_static = @ukn_repair_system_automachine_3_ship_hull_regen
+		ship_armor_regen_add_static = @ukn_repair_system_automachine_3_ship_armor_regen
+	}
+	class_restriction = { shipclass_starbase }
+	size_restriction = { juggernaut }
+	prerequisites = { "tech_engineering_2" }
+	component_set = "UKN_SET_REPAIR_SYSTEM_STARBASE_CLASS_AUTOMACHINE_1"
+	upgrades_to = "UKN_REPAIR_SYSTEM_STARBASE_CLASS_AUTOMACHINE_2"
+	
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_medium_t3_component_cost_minerals
+			alloys = @ukn_medium_t3_component_cost_alloys
+#			ukn_meta_materials = @ukn_medium_t3_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t3_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t3_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t3_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t3_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t3_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t3_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t3_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t3_armor_cost_ukn_meta_materials
+			nanites = @ukn_medium_t3_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_medium_t3_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t3_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t3_component_upkeep_energy
+#			minerals = @ukn_medium_t3_component_upkeep_minerals
+			alloys = @ukn_medium_t3_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t3_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t3_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t3_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t3_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t3_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t3_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t3_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_medium_t3_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t3_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t3_component_upkeep_ehof_sr_negative_mass
+			nanites = @ukn_medium_t3_component_upkeep_nanites
+#---
+#			minerals = @ukn_medium_t3_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t3_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t3_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ai_weight = {
+		weight = 640	#10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = nanites value <= 0 }
+			}
+		}
+		modifier = {
+			factor = 1.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0.5
+			is_preferred_weapons = weapon_type_explosive
+		}		
+	}
+}
+
+# Cyclonic Propulsion Overdrivers
+utility_component_template = {
+	key = "UKN_REPAIR_SYSTEM_STARBASE_CLASS_AUTOMACHINE_2"
+	size = aux
+	icon = "GFX_ship_part_ukn_repair_system_automachine_2"
+	icon_frame = 1
+	power = @ukn_repair_system_automachine_4_power		#-10
+	
+	modifier = {
+		ship_hull_regen_add_static = @ukn_repair_system_automachine_4_ship_hull_regen
+		ship_armor_regen_add_static = @ukn_repair_system_automachine_4_ship_armor_regen
+	}
+	class_restriction = { shipclass_starbase }
+	size_restriction = { juggernaut }
+	prerequisites = { "tech_engineering_3" }
+	component_set = "UKN_SET_REPAIR_SYSTEM_STARBASE_CLASS_AUTOMACHINE_2"
+	upgrades_to = "UKN_REPAIR_SYSTEM_STARBASE_CLASS_AUTOMACHINE_3"
+	
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_medium_t4_component_cost_minerals
+			alloys = @ukn_medium_t4_component_cost_alloys
+			ukn_meta_materials = @ukn_medium_t4_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t4_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t4_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t4_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t4_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t4_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t4_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t4_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t4_armor_cost_ukn_meta_materials
+			nanites = @ukn_medium_t4_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_medium_t4_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t4_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t4_component_upkeep_energy
+#			minerals = @ukn_medium_t4_component_upkeep_minerals
+			alloys = @ukn_medium_t4_component_upkeep_alloys
+			ukn_meta_materials = @ukn_medium_t4_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t4_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t4_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t4_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t4_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t4_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t4_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_medium_t4_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t4_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t4_component_upkeep_ehof_sr_negative_mass
+			nanites = @ukn_medium_t4_component_upkeep_nanites
+#---
+#			minerals = @ukn_medium_t4_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t4_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t4_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ai_weight = {
+		weight = 640	#10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = nanites value <= 0 }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0.5
+			is_preferred_weapons = weapon_type_explosive
+		}		
+	}
+}
+
+# Cyclonic Propulsion Overdrivers
+utility_component_template = {
+	key = "UKN_REPAIR_SYSTEM_STARBASE_CLASS_AUTOMACHINE_3"
+	size = aux
+	icon = "GFX_ship_part_ukn_repair_system_automachine_3"
+	icon_frame = 1
+	power = @ukn_repair_system_automachine_5_power		#-30
+	
+	modifier = {
+		ship_hull_regen_add_static = @ukn_repair_system_automachine_5_ship_hull_regen
+		ship_armor_regen_add_static = @ukn_repair_system_automachine_5_ship_armor_regen
+	}
+	class_restriction = { shipclass_starbase }
+	size_restriction = { juggernaut }
+	prerequisites = { "tech_ukn_engineering_output_4" }
+	component_set = "UKN_SET_REPAIR_SYSTEM_STARBASE_CLASS_AUTOMACHINE_3"
+	upgrades_to = "UKN_REPAIR_SYSTEM_STARBASE_CLASS_AUTOMACHINE_4"
+	
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_medium_t5_component_cost_minerals
+#			alloys = @ukn_medium_t5_component_cost_alloys
+#			ukn_meta_materials = @ukn_medium_t5_component_cost_ukn_meta_materials
+			ukn_femtomatter = @ukn_medium_t5_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t5_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t5_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t5_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t5_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t5_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t5_component_cost_ehof_sr_negative_mass
+#---
+			ukn_meta_materials = @ukn_medium_t5_armor_cost_ukn_meta_materials
+			nanites = @ukn_medium_t5_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_medium_t5_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t5_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t5_component_upkeep_energy
+#			minerals = @ukn_medium_t5_component_upkeep_minerals
+#			alloys = @ukn_medium_t5_component_upkeep_alloys
+			ukn_meta_materials = @ukn_medium_t5_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t5_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t5_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t5_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t5_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t5_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t5_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_medium_t5_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t5_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t5_component_upkeep_ehof_sr_negative_mass
+			nanites = @ukn_medium_t5_component_upkeep_nanites
+#---
+#			minerals = @ukn_medium_t5_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t5_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t5_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ai_weight = {
+		weight = 640	#30
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = nanites value <= 0 }
+				has_monthly_income = { resource = ukn_femtomatter value <= 0 }
+			}
+		}
+		modifier = {
+			factor = 4.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0.5
+			is_preferred_weapons = weapon_type_explosive
+		}		
+	}
+}
+
+# Multifold Propulsion Overdrivers
+utility_component_template = {
+	key = "UKN_REPAIR_SYSTEM_STARBASE_CLASS_AUTOMACHINE_4"
+	size = aux
+	icon = "GFX_ship_part_ukn_repair_system_automachine_4"
+	icon_frame = 1
+	power = @ukn_repair_system_automachine_6_power		#-10
+	
+	modifier = {
+		ship_hull_regen_add_static = @ukn_repair_system_automachine_6_ship_hull_regen		#0.10
+		ship_armor_regen_add_static = @ukn_repair_system_automachine_6_ship_armor_regen	#0.05
+	}
+	class_restriction = { shipclass_starbase }
+	size_restriction = { juggernaut }
+	prerequisites = { "tech_ukn_engineering_output_5" }
+	component_set = "UKN_SET_REPAIR_SYSTEM_STARBASE_CLASS_AUTOMACHINE_4"
+	upgrades_to = "UKN_REPAIR_SYSTEM_STARBASE_CLASS_SENTIENT_METAL_0"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_medium_t6_component_cost_minerals
+#			alloys = @ukn_medium_t6_component_cost_alloys
+#			ukn_meta_materials = @ukn_medium_t6_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t6_component_cost_ukn_femtomatter
+			ukn_condensics = @ukn_medium_t6_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t6_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t6_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t6_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t6_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t6_component_cost_ehof_sr_negative_mass
+#---
+			ukn_meta_materials = @ukn_medium_t6_armor_cost_ukn_meta_materials
+			nanites = @ukn_medium_t6_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_medium_t6_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t6_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t6_component_upkeep_energy
+#			minerals = @ukn_medium_t6_component_upkeep_minerals
+#			alloys = @ukn_medium_t6_component_upkeep_alloys
+			ukn_meta_materials = @ukn_medium_t6_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t6_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t6_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t6_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t6_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t6_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t6_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_medium_t6_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t6_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t6_component_upkeep_ehof_sr_negative_mass
+			nanites = @ukn_medium_t6_component_upkeep_nanites
+#---
+#			minerals = @ukn_medium_t6_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t6_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t6_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ai_weight = {
+		weight = 1480	#10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = nanites value <= 0 }
+				has_monthly_income = { resource = ukn_condensics value <= 0 }
+			}
+		}
+		modifier = {
+			factor = 4.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0.5
+			is_preferred_weapons = weapon_type_explosive
+		}		
+	}
+}
+
+# Spatial Propulsion Overdrivers
+utility_component_template = {
+	key = "UKN_REPAIR_SYSTEM_STARBASE_CLASS_SENTIENT_METAL_0"
+	size = aux
+	icon = "GFX_ship_part_ukn_repair_system_sentient_metal_0"
+	icon_frame = 1
+	power = @ukn_repair_system_sentient_metal_7_power		#-10
+	
+	modifier = {
+		ship_hull_regen_add_static = @ukn_repair_system_sentient_metal_7_ship_hull_regen		#0.10
+		ship_armor_regen_add_static = @ukn_repair_system_sentient_metal_7_ship_armor_regen	#0.05
+	}
+	class_restriction = { shipclass_starbase }
+	size_restriction = { juggernaut }
+	prerequisites = { "tech_ukn_repair_system_sentient_metal_0" }
+	component_set = "UKN_SET_REPAIR_SYSTEM_STARBASE_CLASS_SENTIENT_METAL_0"
+	upgrades_to = "UKN_REPAIR_SYSTEM_STARBASE_CLASS_SENTIENT_METAL_1"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_medium_t7_component_cost_minerals
+#			alloys = @ukn_medium_t7_component_cost_alloys
+#			ukn_meta_materials = @ukn_medium_t7_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t7_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t7_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_medium_t7_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t7_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t7_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t7_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t7_component_cost_ehof_sr_negative_mass
+#---
+			ukn_meta_materials = @ukn_medium_t7_armor_cost_ukn_meta_materials
+			ehof_sr_sentient_metal = @ukn_medium_t7_armor_cost_ehof_sr_sentient_metal
+#---
+#			ukn_meta_materials = @ukn_medium_t7_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t7_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t7_component_upkeep_energy
+#			minerals = @ukn_medium_t7_component_upkeep_minerals
+#			alloys = @ukn_medium_t7_component_upkeep_alloys
+			ukn_meta_materials = @ukn_medium_t7_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t7_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t7_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t7_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t7_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t7_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t7_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_medium_t7_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t7_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t7_component_upkeep_ehof_sr_negative_mass
+			ehof_sr_sentient_metal = @ukn_medium_t7_component_upkeep_ehof_sr_sentient_metal
+#---
+#			minerals = @ukn_medium_t7_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t7_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t7_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ai_weight = {
+		weight = 2560	#10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ehof_sr_sentient_metal value <= 0 }
+#				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0.5
+			is_preferred_weapons = weapon_type_explosive
+		}		
+	}
+}
+
+# Nul Fluctuative Propulsion Overdrivers
+utility_component_template = {
+	key = "UKN_REPAIR_SYSTEM_STARBASE_CLASS_SENTIENT_METAL_1"
+	size = aux
+	icon = "GFX_ship_part_ukn_repair_system_sentient_metal_1"
+	icon_frame = 1
+	power = @ukn_repair_system_sentient_metal_8_power		#-10
+	
+	modifier = {
+		ship_hull_regen_add_static = @ukn_repair_system_sentient_metal_8_ship_hull_regen		#0.10
+		ship_armor_regen_add_static = @ukn_repair_system_sentient_metal_8_ship_armor_regen	#0.05
+	}
+	class_restriction = { shipclass_starbase }
+	size_restriction = { juggernaut }
+	prerequisites = { "tech_ukn_repair_system_sentient_metal_1" }
+	component_set = "UKN_SET_REPAIR_SYSTEM_STARBASE_CLASS_SENTIENT_METAL_1"
+	upgrades_to = "UKN_REPAIR_SYSTEM_STARBASE_CLASS_SENTIENT_METAL_PLANCK"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_medium_t8_component_cost_minerals
+#			alloys = @ukn_medium_t8_component_cost_alloys
+#			ukn_meta_materials = @ukn_medium_t8_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t8_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t8_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_medium_t8_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t8_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t8_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t8_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_medium_t8_component_cost_ehof_sr_negative_mass
+#---
+			ukn_meta_materials = @ukn_medium_t8_armor_cost_ukn_meta_materials
+			ehof_sr_sentient_metal = @ukn_medium_t8_armor_cost_ehof_sr_sentient_metal
+#---
+#			ukn_meta_materials = @ukn_medium_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t8_component_upkeep_energy
+#			minerals = @ukn_medium_t8_component_upkeep_minerals
+#			alloys = @ukn_medium_t8_component_upkeep_alloys
+			ukn_meta_materials = @ukn_medium_t8_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t8_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t8_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t8_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t8_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t8_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t8_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_medium_t8_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t8_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t8_component_upkeep_ehof_sr_negative_mass
+			ehof_sr_sentient_metal = @ukn_medium_t8_component_upkeep_ehof_sr_sentient_metal
+#---
+#			minerals = @ukn_medium_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t8_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ai_weight = {
+		weight = 5120	#10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ehof_sr_sentient_metal value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0.5
+			is_preferred_weapons = weapon_type_explosive
+		}		
+	}
+}
+
+# Nul Fluctuative Propulsion Overdrivers
+utility_component_template = {
+	key = "UKN_REPAIR_SYSTEM_STARBASE_CLASS_SENTIENT_METAL_PLANCK"
+	size = aux
+	icon = "GFX_ship_part_ukn_repair_system_sentient_metal_planck"
+	icon_frame = 1
+	power = @ukn_repair_system_sentient_metal_planck_power		#-10
+	
+	modifier = {
+		ship_hull_regen_add_static = @ukn_repair_system_sentient_metal_planck_ship_hull_regen		#0.10
+		ship_armor_regen_add_static = @ukn_repair_system_sentient_metal_planck_ship_armor_regen	#0.05
+	}
+	class_restriction = { shipclass_starbase }
+	size_restriction = { juggernaut }
+	prerequisites = { "tech_ukn_repair_system_sentient_metal_planck" }
+	component_set = "UKN_SET_REPAIR_SYSTEM_STARBASE_CLASS_SENTIENT_METAL_PLANCK"
+	upgrades_to = "UKN_REPAIR_SYSTEM_STARBASE_CLASS_LIVING_METAL_1"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_medium_t_p_component_cost_minerals
+#			alloys = @ukn_medium_t_p_component_cost_alloys
+#			ukn_meta_materials = @ukn_medium_t_p_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t_p_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t_p_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_medium_t_p_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t_p_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t_p_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t_p_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_medium_t_p_component_cost_ehof_sr_negative_mass
+#---
+			ukn_meta_materials = @ukn_medium_t_p_armor_cost_ukn_meta_materials
+			ehof_sr_sentient_metal = @ukn_medium_t_p_armor_cost_ehof_sr_sentient_metal
+#---
+#			ukn_meta_materials = @ukn_medium_t_p_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t_p_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t_p_component_upkeep_energy
+#			minerals = @ukn_medium_t_p_component_upkeep_minerals
+#			alloys = @ukn_medium_t_p_component_upkeep_alloys
+			ukn_meta_materials = @ukn_medium_t_p_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t_p_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t_p_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t_p_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t_p_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t_p_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t_p_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_medium_t_p_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t_p_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t_p_component_upkeep_ehof_sr_negative_mass
+			ehof_sr_sentient_metal = @ukn_medium_t_p_component_upkeep_ehof_sr_sentient_metal
+#---
+#			minerals = @ukn_medium_t_p_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t_p_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t_p_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ai_weight = {
+		weight = 7680	#10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ehof_sr_sentient_metal value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = sr_dark_matter value <= 0 }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0.5
+			is_preferred_weapons = weapon_type_explosive
+		}		
+	}
+}
+
+# Cyclonic Propulsion Overdrivers
+utility_component_template = {
+	key = "UKN_REPAIR_SYSTEM_STARBASE_CLASS_LIVING_METAL_1"
+	size = aux
+	icon = "GFX_ship_part_ukn_repair_system_living_metal_1"
+	icon_frame = 1
+	power = @ukn_repair_system_living_metal_9_power		#-10
+	
+	modifier = {
+		ship_hull_regen_add_static = @ukn_repair_system_living_metal_9_ship_hull_regen
+		ship_armor_regen_add_static = @ukn_repair_system_living_metal_9_ship_armor_regen
+	}
+	class_restriction = { shipclass_starbase }
+	size_restriction = { juggernaut }
+	prerequisites = { "tech_ukn_repair_system_living_metal_1" }
+	component_set = "UKN_SET_REPAIR_SYSTEM_STARBASE_CLASS_LIVING_METAL_1"
+	upgrades_to = "UKN_REPAIR_SYSTEM_STARBASE_CLASS_LIVING_METAL_2"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_medium_t9_component_cost_minerals
+#			alloys = @ukn_medium_t9_component_cost_alloys
+#			ukn_meta_materials = @ukn_medium_t9_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t9_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t9_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t9_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_medium_t9_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t9_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t9_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t9_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t9_armor_cost_ukn_meta_materials
+			sr_living_metal = @ukn_medium_t9_armor_cost_sr_living_metal
+#---
+#			ukn_meta_materials = @ukn_medium_t9_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t9_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t9_component_upkeep_energy
+#			minerals = @ukn_medium_t9_component_upkeep_minerals
+#			alloys = @ukn_medium_t9_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t9_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t9_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t9_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t9_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t9_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t9_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t9_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_medium_t9_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t9_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t9_component_upkeep_ehof_sr_negative_mass
+			sr_living_metal = @ukn_medium_t9_component_upkeep_sr_living_metal
+#---
+#			minerals = @ukn_medium_t9_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t9_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t9_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ai_weight = {
+		weight = 10240	#10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = sr_living_metal value <= 0 }
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+			}
+		}
+		modifier = {
+			factor = 1.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0.5
+			is_preferred_weapons = weapon_type_explosive
+		}		
+	}
+}
+
+# Cyclonic Propulsion Overdrivers
+utility_component_template = {
+	key = "UKN_REPAIR_SYSTEM_STARBASE_CLASS_LIVING_METAL_2"
+	size = aux
+	icon = "GFX_ship_part_ukn_repair_system_living_metal_2"
+	icon_frame = 1
+	power = @ukn_repair_system_living_metal_10_power		#-10
+	
+	modifier = {
+		ship_hull_regen_add_static = @ukn_repair_system_living_metal_10_ship_hull_regen
+		ship_armor_regen_add_static = @ukn_repair_system_living_metal_10_ship_armor_regen
+	}
+	class_restriction = { shipclass_starbase }
+	size_restriction = { juggernaut }
+	prerequisites = { "tech_ukn_repair_system_living_metal_2" }
+	component_set = "UKN_SET_REPAIR_SYSTEM_STARBASE_CLASS_LIVING_METAL_2"
+#	upgrades_to = "UKN_REPAIR_SYSTEM_STARBASE_CLASS_LIVING_METAL_3"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_medium_t10_component_cost_minerals
+#			alloys = @ukn_medium_t10_component_cost_alloys
+#			ukn_meta_materials = @ukn_medium_t10_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t10_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t10_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t10_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_medium_t10_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t10_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t10_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t10_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t10_armor_cost_ukn_meta_materials
+			sr_living_metal = @ukn_medium_t10_armor_cost_sr_living_metal
+#---
+#			ukn_meta_materials = @ukn_medium_t10_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t10_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t10_component_upkeep_energy
+#			minerals = @ukn_medium_t10_component_upkeep_minerals
+#			alloys = @ukn_medium_t10_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t10_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t10_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t10_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t10_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t10_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t10_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t10_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_medium_t10_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t10_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t10_component_upkeep_ehof_sr_negative_mass
+			sr_living_metal = @ukn_medium_t10_component_upkeep_sr_living_metal
+#---
+#			minerals = @ukn_medium_t10_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t10_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t10_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ai_weight = {
+		weight = 20480	#10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = sr_living_metal value <= 0 }
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+			}
+		}
+		modifier = {
+			factor = 2.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0.5
+			is_preferred_weapons = weapon_type_explosive
+		}		
+	}
+}

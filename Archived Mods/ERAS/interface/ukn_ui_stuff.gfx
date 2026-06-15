@@ -1,0 +1,58 @@
+spriteTypes = {
+	spriteType = { name = "GFX_half_menu_button_bg"					texturefile = "gfx/interface/menu_ui/half_button_background.dds" }
+	spriteType = { name = "GFX_hms_arrow_left_toll"							texturefile = "gfx/interface/menu_ui/hms_arrow_left_toll.dds" }
+	spriteType = { name = "GFX_hms_arrow_right_toll"							texturefile = "gfx/interface/menu_ui/hms_arrow_right_toll.dds" }
+
+	spriteType = {
+		name = "GFX_giga_menu_3"
+		texturefile = "gfx/interface/menu_ui/giga_menu_3.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_menu_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/crystal_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_giga_menu_enabled"
+		texturefile = "gfx/interface/menu_ui/giga_menu_enabled.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_menu_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/crystal_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_giga_menu_disabled"
+		texturefile = "gfx/interface/menu_ui/giga_menu_disabled.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_menu_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/crystal_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+}

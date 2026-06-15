@@ -1,0 +1,38 @@
+objectTypes = {
+	pdxmesh = {
+		name = "giga_machine_01_gateway_mesh"
+		file = "gfx/models/ships/megastructures/quasistellar/giga_machine_01_gateway.mesh"
+		scale = 1.0
+	}
+	
+
+	pdxmesh = {
+		name = "giga_machine_01_thinktank_part3_mesh"
+		file = "gfx/models/ships/megastructures/quasistellar/giga_machine_01_think_tank_stage_3.mesh"
+		scale = 1.0
+	}
+	
+	
+	pdxmesh = {
+		name = "giga_machine_01_ringworld_tech_01_mesh"
+		file = "gfx/models/ships/megastructures/quasistellar/giga_machine_01_ringworld_tech.mesh"
+
+		cull_distance = 999999999.0f
+
+		scale = 1.0
+	}
+
+
+	pdxmesh = {
+		name = "giga_machine_01_strategic_coordination_center_stage_1_mesh"
+		file = "gfx/models/ships/megastructures/quasistellar/giga_machine_01_strategy_centre_stage_1.mesh"
+		scale = 1.0
+	}
+
+
+	pdxmesh = {
+		name = "giga_machine_01_interstellar_assembly_01_stage_3_mesh"
+		file = "gfx/models/ships/megastructures/quasistellar/giga_machine_01_interstellar_assembly_part_3.mesh"
+		scale = 1.0
+	}
+}

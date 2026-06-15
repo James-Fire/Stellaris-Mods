@@ -1,0 +1,189 @@
+# Icons set here are the ones show in the actual slot.
+
+@aai_thruster_power_1 = -20
+@aai_thruster_power_2 = -30
+@aai_thruster_power_3 = -40
+@aai_thruster_power_4 = -50
+@aai_thruster_power_5 = -60
+
+@aai_thruster_cost1 = 6
+@aai_thruster_cost2 = 12
+@aai_thruster_cost3 = 18
+@aai_thruster_cost4 = 24
+@aai_thruster_cost5 = 30
+
+#############
+# THRUSTERS #
+#############
+
+###
+
+utility_component_template = {
+	key = "PLAYER_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_player_thruster_1"
+	icon_frame = 1
+	power = 20000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 8000
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 30.00
+		ship_evasion_add = 180.00
+		ship_evasion_mult = 180.00
+		ship_hull_add = 2500
+		ship_shield_add = 2500
+		ship_armor_add = 2500
+	}
+
+	prerequisites = { "tech_all_ascension" }
+	component_set = "thruster_components"
+
+	ai_weight = {
+		weight = 2000
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+#replications of original thrusters
+
+utility_component_template = {
+	key = "AAI_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	power = @aai_thruster_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @aai_thruster_cost1
+		}
+	}
+
+	modifier = {
+	}
+
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	size_restriction = { massive_ship_player_fallen_empire player_npc_warship_01 player_chronos large_ship_player_fallen_empire small_ship_player_fallen_empire star_builder_station player_combat_constructor player_combat_science }
+	upgrades_to = "AAI_SHIP_THRUSTER_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "AAI_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	power = @aai_thruster_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @aai_thruster_cost2
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_evasion_add = 4
+	}
+
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	size_restriction = { massive_ship_player_fallen_empire player_npc_warship_01 player_chronos large_ship_player_fallen_empire small_ship_player_fallen_empire star_builder_station player_combat_constructor player_combat_science }
+	upgrades_to = "AAI_SHIP_THRUSTER_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "AAI_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	power = @aai_thruster_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @aai_thruster_cost3
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_evasion_add = 8
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	size_restriction = { massive_ship_player_fallen_empire player_npc_warship_01 player_chronos large_ship_player_fallen_empire small_ship_player_fallen_empire star_builder_station player_combat_constructor player_combat_science }
+	upgrades_to = "AAI_SHIP_THRUSTER_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "AAI_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	power = @aai_thruster_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @aai_thruster_cost4
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_evasion_add = 12
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	size_restriction = { massive_ship_player_fallen_empire player_npc_warship_01 player_chronos large_ship_player_fallen_empire small_ship_player_fallen_empire star_builder_station player_combat_constructor player_combat_science }
+	upgrades_to = "AAI_SHIP_THRUSTER_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "AAI_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_thruster_5"
+	icon_frame = 1
+	power = @aai_thruster_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @aai_thruster_cost5
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.00
+		ship_evasion_add = 16
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	size_restriction = { massive_ship_player_fallen_empire player_npc_warship_01 player_chronos large_ship_player_fallen_empire small_ship_player_fallen_empire star_builder_station player_combat_constructor player_combat_science }
+
+	ai_weight = {
+		weight = 5
+	}
+}

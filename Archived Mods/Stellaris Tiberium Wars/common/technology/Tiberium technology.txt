@@ -1,0 +1,993 @@
+tech_tiberium_green = {
+	cost = @tier1cost1
+	area = engineering
+	tier = 1
+	category = { materials }
+	prerequisites = { "tech_powered_exoskeletons" "tech_mineral_purification_1" }
+	weight = @tier1weight1
+	is_dangerous = no
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = 20
+			NOT = {
+				any_planet_within_border = {
+					OR = {
+						is_planet_class = pc_habitable_tiberium
+						is_planet_class = pc_uninhabitable_tiberium
+						has_deposit = d_tiberium_asteroid
+					}
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+tech_tiberium_blue = {
+	cost = @tier1cost2
+	area = engineering
+	tier = 1
+	category = { materials }
+	prerequisites = { "tech_tiberium_green" "tech_mining_3" }
+	weight = @tier1weight2
+	is_dangerous = no
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+tech_tiberium_liquid = {
+	cost = @tier1cost3
+	area = engineering
+	tier = 1
+	category = { materials }
+	prerequisites = { "tech_tiberium_green" "tech_mineral_purification_2" }
+	weight = @tier1weight3
+	is_dangerous = yes
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = 10
+			has_technology = tech_tiberium_blue
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+##Liquid Tiberium Reactors
+
+tech_tiberium_liquid_power_1 = {
+	cost = @tier2cost1
+	area = physics
+	tier = 2
+	category = { particles }
+	prerequisites = { "tech_tiberium_liquid" }
+	weight = @tier2weight1
+	is_dangerous = yes
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_tiberium_liquid_power_2 = {
+	cost = @tier2cost2
+	area = physics
+	tier = 2
+	category = { particles }
+	prerequisites = { "tech_tiberium_liquid_power_1" }
+	weight = @tier2weight2
+	is_dangerous = yes
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_tiberium_liquid_power_3 = {
+	cost = @tier2cost3
+	area = physics
+	tier = 2
+	category = { particles }
+	prerequisites = { "tech_tiberium_liquid_power_2" }
+	weight = @tier2weight3
+	is_dangerous = yes
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_tiberium_liquid_power_4 = {
+	cost = @tier3cost3
+	area = physics
+	tier = 3
+	category = { particles }
+	prerequisites = { "tech_tiberium_liquid_power_3" }
+	weight = @tier3weight3
+	is_dangerous = yes
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_tiberium_liquid_power_5 = {
+	cost = @tier4cost1
+	area = physics
+	tier = 4
+	category = { particles }
+	prerequisites = { "tech_tiberium_liquid_power_4" }
+	weight = @tier4weight1
+	is_dangerous = yes
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_tiberium_protection = {
+	cost = @tier2cost2
+	area = engineering
+	tier = 2
+	category = { materials }
+	prerequisites = { "tech_tiberium_green" }
+	weight = @tier2weight2
+	is_dangerous = no
+	
+	prereqfor_desc = {
+		custom = {
+			title = tiberium_protection_title
+			desc = tiberium_protection_desc
+		}
+	}
+	
+	modifier = {
+		#pc_habitable_tiberium_habitability = 0.7
+		#pc_uninhabitable_tiberium_habitability = 0.7
+	}
+	
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#Refining Tech
+
+tech_tiberium_refining = {
+	cost = @tier2cost1
+	area = engineering
+	tier = 2
+	category = { materials }
+	prerequisites = { "tech_tiberium_green" }
+	weight = @tier2weight1
+	is_dangerous = no	
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+tech_tiberium_refining_2 = {
+	cost = @tier3cost3
+	area = engineering
+	tier = 3
+	category = { materials }
+	prerequisites = { "tech_tiberium_blue" "tech_tiberium_refining" }
+	weight = @tier3weight3
+	is_dangerous = no
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#Weapons Tech
+
+tech_tiberium_kinetics_1 = {
+	cost = @tier1cost2
+	area = engineering
+	tier = 1
+	category = { materials }
+	prerequisites = { "tech_tiberium_liquid_power_1" }
+	weight = @tier1weight2
+	is_dangerous = no	
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+tech_tiberium_kinetics_2 = {
+	cost = @tier1cost3
+	area = engineering
+	tier = 1
+	category = { materials }
+	prerequisites = { "tech_tiberium_kinetics_1" }
+	weight = @tier1weight3
+	is_dangerous = no	
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+tech_tiberium_kinetics_3 = {
+	cost = @tier2cost2
+	area = engineering
+	tier = 2
+	category = { materials }
+	prerequisites = { "tech_tiberium_kinetics_2" }
+	weight = @tier2weight2
+	is_dangerous = no	
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+tech_tiberium_kinetics_4 = {
+	cost = @tier3cost2
+	area = engineering
+	tier = 3
+	category = { materials }
+	prerequisites = { "tech_tiberium_kinetics_3" }
+	weight = @tier3weight2
+	is_dangerous = no	
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+tech_tiberium_kinetics_5 = {
+	cost = @tier4cost2
+	area = engineering
+	tier = 4
+	category = { materials }
+	prerequisites = { "tech_tiberium_kinetics_4" }
+	weight = @tier4weight2
+	is_dangerous = no	
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+tech_tiberium_kinetic_artillery_1 = {
+	area = engineering
+	cost = @tier3cost3
+	tier = 3
+	category = { propulsion }	
+	prerequisites = { "tech_tiberium_kinetics_4" }
+	weight = @tier3weight3
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 2		#weapons are good, disable AI getting this stuff, AI doesn't refine Tiberium
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+tech_tiberium_kinetic_artillery_2 = {
+	area = engineering
+	cost = @tier4cost2
+	tier = 4
+	category = { propulsion }	
+	prerequisites = { "tech_tiberium_kinetics_5" "tech_tiberium_kinetic_artillery_1" }
+	weight = @tier4weight2
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 2		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+###Ion Cannon
+tech_tiberium_ionization_1 = {
+	cost = @tier1cost2
+	area = physics
+	tier = 1
+	category = { particles }
+	prerequisites = { "tech_tiberium_liquid_power_1" }
+	weight = @tier1weight2
+	is_dangerous = no
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_tiberium_ionization_2 = {
+	cost = @tier1cost3
+	area = physics
+	tier = 1
+	category = { particles }
+	prerequisites = { "tech_tiberium_ionization_1" }
+	weight = @tier1weight3
+	is_dangerous = no
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_tiberium_ionization_3 = {
+	cost = @tier2cost3
+	area = physics
+	tier = 2
+	category = { particles }
+	prerequisites = { "tech_tiberium_ionization_2" }
+	weight = @tier2weight3
+	is_dangerous = no
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_tiberium_ionization_4 = {
+	cost = @tier3cost2
+	area = physics
+	tier = 3
+	category = { particles }
+	prerequisites = { "tech_tiberium_ionization_3" }
+	weight = @tier3weight2
+	is_dangerous = no
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_tiberium_ionization_5 = {
+	cost = @tier4cost2
+	area = physics
+	tier = 4
+	category = { particles }
+	prerequisites = { "tech_tiberium_ionization_4" }
+	weight = @tier4weight2
+	is_dangerous = no
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+###Tiberium Missiles
+
+tech_tiberium_missile_core_1 = {
+	cost = @tier2cost2
+	area = engineering
+	tier = 2
+	category = { propulsion }
+	prerequisites = { "tech_tiberium_liquid_power_1" }
+	weight = @tier2weight2
+	is_dangerous = no
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+tech_tiberium_missile_core_2 = {
+	cost = @tier2cost3
+	area = engineering
+	tier = 2
+	category = { propulsion }
+	prerequisites = { "tech_tiberium_missile_core_1" }
+	weight = @tier2weight2
+	is_dangerous = no
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+tech_tiberium_missile_core_3 = {
+	cost = @tier3cost1
+	area = engineering
+	tier = 3
+	category = { propulsion }
+	prerequisites = { "tech_tiberium_missile_core_2" }
+	weight = @tier2weight2
+	is_dangerous = no
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+tech_tiberium_missile_core_4 = {
+	cost = @tier3cost3
+	area = engineering
+	tier = 3
+	category = { propulsion }
+	prerequisites = { "tech_tiberium_missile_core_3" }
+	weight = @tier3weight2
+	is_dangerous = no
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+tech_tiberium_missile_core_5 = {
+	cost = @tier4cost2
+	area = engineering
+	tier = 4
+	category = { propulsion }
+	prerequisites = { "tech_tiberium_missile_core_4" }
+	weight = @tier4weight2
+	is_dangerous = no
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+tech_tiberium_sonics = {
+	cost = @tier1cost2
+	area = physics
+	tier = 2
+	category = { field_manipulation }
+	prerequisites = { "tech_tiberium_green" }
+	weight = @tier1weight2
+	is_dangerous = no
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5 #strategic resource
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}

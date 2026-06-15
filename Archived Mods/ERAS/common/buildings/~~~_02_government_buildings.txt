@@ -1,0 +1,2703 @@
+#############
+# Crime Buildings
+#############
+building_precinct_house = {
+	base_buildtime = @building_ukn_precinct_house_1_build_time
+	base_cap_amount = 1
+	position_priority = 161
+	category = government
+
+	potential = {
+		owner = { is_regular_empire = yes }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			NOT = {	owner = { is_regular_empire = yes }	}
+			AND = {
+				owner = { is_ai = yes } #Players dont like random buildings blowing up
+				planet = { has_building = building_hall_judgment }
+			}#This way the AI gets to reclaim its building slots that it sunk into this expense
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_precinct_house_1_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_precinct_house_1_cost_basic_minerals
+		}
+#[BASIC] POLYMERICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			alloys = @building_ukn_precinct_house_1_cost_basic_alloys
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_precinct_house_1_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_precinct_house_1_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_precinct_house_1_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_precinct_house_1_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_precinct_house_1_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_precinct_house_1_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_precinct_house_1_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_precinct_house_1_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_precinct_house_1_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_precinct_house_1_upkeep_energy
+		}
+		upkeep = {
+			trigger = {
+				owner = { has_civic = civic_police_state }
+			}
+			energy = 1
+		}
+	}
+
+	prerequisites = {
+		"tech_planetary_government"
+	}
+
+	upgrades = {
+		"building_hall_judgment"
+	}
+
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+#----------------------------------------------------
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = district_ukn_city_enforcers_add_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = district_ukn_hab_housing_enforcers_add_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = district_ukn_arcology_housing_enforcers_add_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = district_ukn_rw_city_enforcers_add_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = district_ukn_alderson_city_enforcers_add_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		text = job_enforcer_effect_desc
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 100
+			planet_crime > 15
+			NOR = {
+				AND = {
+					has_building = building_precinct_house
+					owner = { has_technology = tech_colonial_centralization }
+				}
+				has_building = building_hall_judgment
+				num_buildings = { type = building_precinct_house value = 3 }
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+building_hall_judgment = {
+	base_buildtime = @building_ukn_precinct_house_2_build_time
+	can_build = no
+	position_priority = 162
+	category = government
+
+	potential = {
+		owner = { is_regular_empire = yes }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			buildings_no_exotic_gases = yes
+			NOT = { owner = { is_regular_empire = yes } }
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_precinct_house_2_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_precinct_house_2_cost_basic_minerals
+		}
+#[BASIC] POLYMERICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			alloys = @building_ukn_precinct_house_2_cost_basic_alloys
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_precinct_house_2_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_precinct_house_2_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_precinct_house_2_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_precinct_house_2_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_precinct_house_2_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_precinct_house_2_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_precinct_house_2_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_precinct_house_2_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_precinct_house_2_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_precinct_house_2_upkeep_energy
+		}
+		upkeep = {
+			trigger = {
+				owner = { has_civic = civic_police_state }
+			}
+			energy = 1
+		}
+	}
+
+	prerequisites = {
+		"tech_planetary_government"
+	}
+
+	upgrades = {
+		"building_hall_judgment"
+	}
+
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+#----------------------------------------------------
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = district_ukn_city_enforcers_add_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = district_ukn_hab_housing_enforcers_add_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = district_ukn_arcology_housing_enforcers_add_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = district_ukn_rw_city_enforcers_add_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = district_ukn_alderson_city_enforcers_add_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		text = job_enforcer_effect_desc
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+
+
+
+
+
+
+
+building_sentinel_posts = {
+	base_buildtime = @building_ukn_sentinel_posts_1_build_time
+	can_build = no
+	position_priority = 166
+	category = government
+
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+
+	allow = {
+		hidden_trigger = {
+			OR = {
+				owner = { is_ai = no }
+				AND = {
+					buildings_simple_allow = yes
+					NOT = { has_building = building_sentinel_posts }
+				}
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { is_gestalt = yes }
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_sentinel_posts_1_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_sentinel_posts_1_cost_basic_minerals
+		}
+#[BASIC] POLYMERICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			alloys = @building_ukn_sentinel_posts_1_cost_basic_alloys
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_sentinel_posts_1_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_sentinel_posts_1_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_sentinel_posts_1_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_sentinel_posts_1_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_sentinel_posts_1_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_sentinel_posts_1_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_sentinel_posts_1_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_sentinel_posts_1_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_sentinel_posts_1_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_sentinel_posts_1_upkeep_energy
+		}
+		upkeep = {
+			trigger = {
+				owner = { has_civic = civic_police_state }
+			}
+			energy = 1
+		}
+	}
+
+	prerequisites = {
+		"tech_planetary_government"
+	}
+
+	upgrades = {
+		"building_hall_judgment"
+	}
+
+	show_tech_unlock_if = {
+		is_gestalt = yes
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		text = district_ukn_nexus_patrol_drones_add_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		text = district_ukn_hab_housing_patrol_drones_add_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		text = district_ukn_arcology_nexus_patrol_drones_add_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		text = district_ukn_rw_nexus_patrol_drones_add_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		text = district_ukn_alderson_nexus_patrol_drones_add_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		text = district_ukn_hive_patrol_drones_add_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		text = district_ukn_hab_housing_patrol_drones_add_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		text = district_ukn_arcology_hive_patrol_drones_add_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		text = district_ukn_rw_hive_patrol_drones_add_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		text = district_ukn_alderson_hive_patrol_drones_add_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		text = job_patrol_drone_effect_desc
+	}
+}
+
+
+
+
+
+
+
+
+
+#############
+# Government buildings
+#############
+building_noble_estates = {
+	base_buildtime = @b2_time
+	icon = building_palace
+	base_cap_amount = 1
+
+	category = government
+
+	potential = {
+		exists = owner
+		planet = {
+			or = {
+				has_building = building_noble_estates
+				owner = { is_ai = no }
+			}
+		}
+		owner = { has_valid_civic = civic_aristocratic_elite }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_civic = civic_aristocratic_elite }
+		}
+	}
+
+	planet_modifier = {
+		job_noble_add = 1
+		planet_housing_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	triggered_desc = {
+		text = job_noble_effect_desc
+	}
+}
+
+building_slave_processing = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	category = government
+
+	potential = {
+		owner = { is_regular_empire = yes }
+		owner = { has_policy_flag = slavery_allowed }
+		NOT = { has_modifier = resort_colony }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = { # destroys if true
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			NOT = { owner = { has_policy_flag = slavery_allowed } }
+			has_modifier = resort_colony
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_slave_produces_mult = 0.05
+		pop_cat_slave_political_power = -0.25
+		planet_resettlement_unemployed_mult = -0.50
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	prerequisites = {
+		"tech_neural_implants"
+	}
+
+	triggered_desc = {
+		text = building_slave_processing_slave_army_effect_desc
+	}
+
+	triggered_desc = {
+		text = building_slave_processing_migrate_effect_desc
+	}
+}
+
+#############
+# Ascension perks
+#############
+
+#Psionic path
+building_psi_corps = {
+	base_buildtime = @b2_time
+
+	category = government
+
+	base_cap_amount = 1
+
+	potential = {
+		owner = { has_ascension_perk = ap_mind_over_matter }
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_ascension_perk = ap_mind_over_matter }
+		}
+	}
+
+	planet_modifier = {
+		job_telepath_add = 2
+		planet_stability_add = 5
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+
+	triggered_desc = {
+		text = job_telepath_effect_desc
+	}
+}
+
+#Biological path
+building_clone_vats = {
+	base_buildtime = @b1_time
+
+	category = pop_assembly
+
+	base_cap_amount = 1
+
+	potential = {
+		exists = owner
+		owner = { has_ascension_perk = ap_engineered_evolution }
+		NOT = { has_modifier = resort_colony }
+		OR = {
+			owner = { is_ai = no }
+			NOT = { exists = assembling_species }
+			assembling_species = { is_organic_species = yes }
+			NAND = {
+				free_district_slots = 0
+				free_building_slots <= 1
+				free_housing <= 0
+				free_jobs <= 0
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			AND = {
+				owner = { is_ai = yes }
+				free_district_slots = 0
+				free_building_slots = 0
+				free_housing <= 0
+				free_jobs <= 0
+			}
+			NOT = { owner = { has_ascension_perk = ap_engineered_evolution } }
+		}
+	}
+
+	planet_modifier = {
+		planet_pop_assembly_organic_add = 3
+	}
+
+	resources = {
+		category = planet_buildings
+
+		# Base cost
+		cost = {
+			minerals = 500
+		}
+		# Org/Lith cost
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid_empire = no }
+			}
+			food = 500
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid_empire = yes }
+			}
+			energy = 500
+		}
+
+		# Base upkeep
+		upkeep = {
+			energy = 2
+		}
+		# Org/Lith upkeep
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid_empire = no }
+			}
+			food = 30
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid_empire = yes }
+			}
+			minerals = 30
+		}
+	}
+
+	triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_bugged_evolutionary_architects = yes
+            }
+        }
+        modifier = {
+            planet_jobs_unity_produces_mult = 0.1
+        }
+    }
+	
+	triggered_desc = {
+		trigger = {
+			OR = {
+				has_building = building_robot_assembly_plant
+				AND = {
+					exists = assembling_species
+					assembling_species = { is_robotic_species = yes }
+				}
+			}
+		}
+		text = tooltip_organic_and_artificial_assembly_warning
+	}
+}
+
+building_embassy = {
+	base_buildtime = @b2_time
+
+	category = government
+
+	base_cap_amount = 1
+
+	potential = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+
+		exists = planet
+		planet = { is_capital = yes }
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	upgrades = {
+		"building_grand_embassy"
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = { is_regular_empire = no }
+			}
+			planet = { is_capital = no }
+			buildings_no_crystals = yes
+		}
+	}
+
+	country_modifier = {
+		envoys_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			rare_crystals = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			rare_crystals = @b2_rare_upkeep
+		}
+	}
+
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+
+	prerequisites = {
+		"tech_xeno_diplomacy"
+	}
+}
+
+building_grand_embassy = {
+	base_buildtime = @b3_time
+	can_build = no
+
+	category = government
+
+	potential = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+
+		planet = { is_capital = yes }
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = { is_regular_empire = no }
+			}
+			planet = { is_capital = no }
+			buildings_no_crystals = yes
+		}
+	}
+
+	country_modifier = {
+		envoys_add = 2
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			rare_crystals = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			rare_crystals = @b3_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_xeno_relations"
+	}
+
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+}
+
+building_gaiaseeders_1 = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	category = government
+	can_be_disabled = no
+	upgrades = { "building_gaiaseeders_2" }
+
+	potential = {
+		exists = owner
+		owner = {
+			is_country_type = default
+			OR = {
+				has_valid_civic = civic_idyllic_bloom
+				has_valid_civic = civic_hive_idyllic_bloom
+			}
+		}
+		NOR = {
+			is_planet_class = pc_gaia
+			is_planet_class = pc_city
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+		}
+		is_artificial = no
+	}
+
+	allow = {
+		is_ideal_planet_class = {
+			who = owner
+			status = yes
+		}
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			is_planet_class = pc_gaia	# No double bonuses if player uses other tools to turn it into a Gaia world.
+			is_planet_class = pc_city
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			NOT = { exists = owner }
+			owner = {
+				NOR = {
+					has_valid_civic = civic_idyllic_bloom
+					has_valid_civic = civic_hive_idyllic_bloom
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			energy = 1500
+		}
+		upkeep = {
+			energy = 20
+		}
+	}
+
+	planet_modifier = {
+		pop_growth_speed = 0.1
+	}
+}
+
+building_gaiaseeders_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+	category = government
+	can_be_disabled = no
+	upgrades = { "building_gaiaseeders_3" }
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			energy = 1500
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			energy = 20
+			exotic_gases = @b2_rare_upkeep
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			is_planet_class = pc_gaia
+			is_planet_class = pc_city
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			NOT = { exists = owner }
+			owner = {
+				NOR = {
+					has_valid_civic = civic_idyllic_bloom
+					has_valid_civic = civic_hive_idyllic_bloom
+				}
+			}
+		}
+	}
+
+	allow = {
+		is_ideal_planet_class = {
+			who = owner
+			status = yes
+		}
+	}
+
+	planet_modifier = {
+		pop_growth_speed = 0.05
+		pop_environment_tolerance = 0.1
+	}
+}
+
+building_gaiaseeders_3 = {
+	base_buildtime = @b2_time
+	can_build = no
+	category = government
+	can_be_disabled = no
+	upgrades = { "building_gaiaseeders_4" }
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			energy = 1500
+			exotic_gases = @b3_rare_cost
+		}
+		upkeep = {
+			energy = 20
+			exotic_gases = @b3_rare_upkeep
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			is_planet_class = pc_gaia
+			is_planet_class = pc_city
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			NOT = { exists = owner }
+			owner = {
+				NOR = {
+					has_valid_civic = civic_idyllic_bloom
+					has_valid_civic = civic_hive_idyllic_bloom
+				}
+			}
+		}
+	}
+
+	allow = {
+		is_ideal_planet_class = {
+			who = owner
+			status = yes
+		}
+	}
+
+	planet_modifier = {
+		pop_environment_tolerance = 0.2
+	}
+}
+
+building_gaiaseeders_4 = {
+	base_buildtime = @b2_time
+	can_build = no
+	category = government
+	can_be_disabled = no
+
+	destroy_trigger = {
+		OR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			NOT = { exists = owner }
+			owner = {
+				NOR = {
+					has_valid_civic = civic_idyllic_bloom
+					has_valid_civic = civic_hive_idyllic_bloom
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			energy = 1500
+			exotic_gases = @b4_rare_cost
+		}
+	}
+
+	allow = {
+		is_ideal_planet_class = {
+			who = owner
+			status = yes
+		}
+	}
+
+	triggered_desc = {
+		text = building_gaiaseeders_4_effect_desc
+	}
+}
+
+
+
+
+
+
+
+
+
+#Sanctuary of Repose
+building_galactic_memorial_1 = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = unity
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			is_memorialist_empire = yes
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			owner = {
+				is_memorialist_empire = no
+			}
+		}
+	}
+
+	convert_to = {
+		building_autochthon_monument
+		building_corporate_monument
+		building_simulation_1
+		building_sensorium_1
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 1
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			minerals = @b1_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.05
+	}
+
+	triggered_desc = {
+		text = building_autochthon_monument_effect
+	}
+
+	prerequisites = {
+		"tech_cultural_heritage"
+	}
+
+	#Jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_death_chronicler_add = @b1_jobs
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = "job_death_chronicler_effect_desc"
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_chronicle_drone_add = @b1_jobs
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = "job_chronicle_drone_effect_desc"
+	}
+
+	#Tomb/Relic worlds
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+			OR = {
+				is_planet_class = pc_nuked
+				is_planet_class = pc_relic
+			}
+		}
+		pop_government_ethic_attraction = 0.20
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+			OR = {
+				is_planet_class = pc_nuked
+				is_planet_class = pc_relic
+			}
+		}
+		planet_crime_no_happiness_add = -20
+	}
+
+	upgrades = {
+		building_galactic_memorial_2
+	}
+
+	show_tech_unlock_if = {
+		is_memorialist_empire = yes
+	}
+}
+
+#Pillar of Quietus
+building_galactic_memorial_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+	category = unity
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			is_memorialist_empire = yes
+		}
+	}
+
+	allow = {
+		exists = owner
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			buildings_no_exotic_gases = yes
+			owner = {
+				is_memorialist_empire = no
+			}
+		}
+	}
+
+	convert_to = {
+		building_heritage_site
+		building_corporate_site
+		building_simulation_2
+		building_sensorium_2
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 2
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		cost = {
+			minerals = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			minerals = @b2_upkeep
+			exotic_gases = @b2_rare_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.10
+	}
+
+	triggered_desc = {
+		text = building_heritage_site_effect
+	}
+
+	prerequisites = {
+		"tech_heritage_site"
+	}
+
+	#Jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_death_chronicler_add = @b2_jobs
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = "job_death_chronicler_effect_desc"
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_chronicle_drone_add = @b2_jobs
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = "job_chronicle_drone_effect_desc"
+	}
+
+	#Tomb/Relic worlds
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+			OR = {
+				is_planet_class = pc_nuked
+				is_planet_class = pc_relic
+			}
+		}
+		pop_government_ethic_attraction = 0.20
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+			OR = {
+				is_planet_class = pc_nuked
+				is_planet_class = pc_relic
+			}
+		}
+		planet_crime_no_happiness_add = -20
+	}
+
+	upgrades = {
+		building_galactic_memorial_3
+	}
+
+	show_tech_unlock_if = {
+		is_memorialist_empire = yes
+	 }
+}
+
+#Galactic Memorial
+building_galactic_memorial_3 = {
+	base_buildtime = @b3_time
+	can_build = no
+	category = unity
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			is_memorialist_empire = yes
+		}
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			buildings_no_exotic_gases = yes
+			owner = {
+				is_memorialist_empire = no
+			}
+		}
+	}
+
+	convert_to = {
+		building_hypercomms_forum
+		building_corporate_forum
+		building_simulation_3
+		building_sensorium_3
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 2
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		cost = {
+			minerals = @b3_minerals
+			exotic_gases = @b3_rare_cost
+		}
+		upkeep = {
+			minerals = @b3_upkeep
+			exotic_gases = @b3_rare_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.15
+	}
+
+	triggered_desc = {
+		text = building_hypercomms_forum_effect
+	}
+
+	prerequisites = {
+		"tech_hypercomms_forum"
+	}
+
+	#Jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_death_chronicler_add = @b3_jobs
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = "job_death_chronicler_effect_desc"
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_chronicle_drone_add = @b3_jobs
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = "job_chronicle_drone_effect_desc"
+	}
+
+	#Tomb/Relic worlds
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+			OR = {
+				is_planet_class = pc_nuked
+				is_planet_class = pc_relic
+			}
+		}
+		pop_government_ethic_attraction = 0.20
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+			OR = {
+				is_planet_class = pc_nuked
+				is_planet_class = pc_relic
+			}
+		}
+		planet_crime_no_happiness_add = -20
+	}
+
+	show_tech_unlock_if = {
+		is_memorialist_empire = yes
+	 }
+}
+
+
+##########################
+# Machine Empire Memorial
+##########################
+building_simulation_1 = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	icon = building_holo_theatres
+
+	category = unity
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			is_machine_empire = yes
+			is_memorialist_empire = no
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			owner = {
+				OR = {
+					is_machine_empire = no
+					is_memorialist_empire = yes
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 1
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		cost = {
+			minerals = @b1_minerals
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.05
+	}
+
+	triggered_desc = {
+		text = building_autochthon_monument_effect
+	}
+
+	prerequisites = {
+		"tech_cultural_heritage"
+	}
+
+	convert_to = {
+		building_autochthon_monument
+		building_corporate_monument
+		building_galactic_memorial_1
+		building_sensorium_1
+	}
+
+	show_tech_unlock_if = {
+		is_machine_empire = yes
+		is_memorialist_empire = no
+	}
+
+	upgrades = {
+		building_simulation_2
+	}
+}
+
+building_simulation_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+	icon = building_hyper_entertainment_forum
+
+	category = unity
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			is_machine_empire = yes
+			is_memorialist_empire = no
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			owner = {
+				OR = {
+					is_machine_empire = no
+					is_memorialist_empire = yes
+				}
+			}
+		}
+	}
+
+	convert_to = {
+		building_corporate_site
+		building_heritage_site
+		building_galactic_memorial_2
+		building_sensorium_2
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 2
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.10
+	}
+
+	triggered_desc = {
+		text = building_heritage_site_effect
+	}
+
+	prerequisites = {
+		"tech_heritage_site"
+	}
+
+	show_tech_unlock_if = {
+		is_machine_empire = yes
+		is_memorialist_empire = no
+	}
+
+	upgrades = {
+		building_simulation_3
+	}
+}
+
+building_simulation_3 = {
+	base_buildtime = @b3_time
+	can_build = no
+	icon = building_citadel_of_faith
+
+	category = unity
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			is_machine_empire = yes
+			is_memorialist_empire = no
+		}
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			owner = {
+				OR = {
+					is_machine_empire = no
+					is_memorialist_empire = yes
+				}
+			}
+		}
+	}
+
+	convert_to = {
+		building_corporate_forum
+		building_hypercomms_forum
+		building_galactic_memorial_3
+		building_sensorium_3
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 3
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		cost = {
+			minerals = @b3_minerals
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.15
+	}
+
+	triggered_desc = {
+		text = building_hypercomms_forum_effect
+	}
+
+	prerequisites = {
+		"tech_hypercomms_forum"
+	}
+
+	show_tech_unlock_if = {
+		is_machine_empire = yes
+		is_memorialist_empire = no
+	}
+}
+
+####################
+# Autochthon Monuments
+####################
+
+# Regular empire
+building_autochthon_monument = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = unity
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			NOR = {
+				is_gestalt = yes
+				is_megacorp = yes
+				is_memorialist_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			owner = {
+				OR = {
+					is_gestalt = yes
+					is_megacorp = yes
+					is_memorialist_empire = yes
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 1
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		cost = {
+			minerals = @b1_minerals
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.05
+	}
+
+	triggered_desc = {
+		text = building_autochthon_monument_effect
+	}
+
+	prerequisites = {
+		"tech_cultural_heritage"
+	}
+
+	upgrades = {
+		building_heritage_site
+	}
+
+	convert_to = {
+		building_corporate_monument
+		building_simulation_1
+		building_galactic_memorial_1
+		building_sensorium_1
+	}
+
+	show_tech_unlock_if = {
+		is_gestalt = no
+		is_megacorp = no
+		is_memorialist_empire = no
+	}
+}
+
+building_heritage_site = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = unity
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			NOR = {
+				is_gestalt = yes
+				is_megacorp = yes
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			owner = {
+				OR = {
+					is_gestalt = yes
+					is_megacorp = yes
+				}
+			}
+		}
+	}
+
+	convert_to = {
+		building_corporate_site
+		building_simulation_2
+		building_galactic_memorial_2
+		building_sensorium_2
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 2
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.10
+	}
+
+	triggered_desc = {
+		text = building_heritage_site_effect
+	}
+
+	prerequisites = {
+		"tech_heritage_site"
+	}
+
+	show_tech_unlock_if = {
+		is_gestalt = no
+		is_megacorp = no
+		is_memorialist_empire = no
+	}
+
+	upgrades = {
+		building_hypercomms_forum
+	}
+}
+
+building_hypercomms_forum = {
+	base_buildtime = @b3_time
+	can_build = no
+
+	category = unity
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			NOR = {
+				is_gestalt = yes
+				is_megacorp = yes
+			}
+		}
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			owner = {
+				OR = {
+					is_gestalt = yes
+					is_megacorp = yes
+				}
+			}
+		}
+	}
+
+	convert_to = {
+		building_corporate_forum
+		building_simulation_3
+		building_galactic_memorial_3
+		building_sensorium_3
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 3
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		cost = {
+			minerals = @b3_minerals
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.15
+	}
+
+	triggered_desc = {
+		text = building_hypercomms_forum_effect
+	}
+
+	prerequisites = {
+		"tech_hypercomms_forum"
+	}
+
+	show_tech_unlock_if = {
+		is_gestalt = no
+		is_megacorp = no
+		is_memorialist_empire = no
+	}
+}
+
+####################
+# Megacorp Memorial
+####################
+building_corporate_monument = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	icon = building_autochthon_monument
+
+	category = unity
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			is_megacorp = yes
+			is_memorialist_empire = no
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			owner = {
+				is_megacorp = no
+				is_memorialist_empire = yes
+			}
+		}
+	}
+
+	convert_to = {
+		building_autochthon_monument
+		building_simulation_1
+		building_galactic_memorial_1
+		building_sensorium_1
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 1
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		cost = {
+			minerals = @b1_minerals
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.05
+	}
+
+	triggered_desc = {
+		text = building_autochthon_monument_effect
+	}
+
+	prerequisites = {
+		"tech_cultural_heritage"
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_memorialist_empire = no
+	}
+
+	upgrades = {
+		building_corporate_site
+	}
+}
+
+building_corporate_site = {
+	base_buildtime = @b2_time
+	can_build = no
+	icon = building_heritage_site
+
+	category = unity
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			is_megacorp = yes
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			owner = {
+				is_megacorp = no
+			}
+		}
+	}
+
+	convert_to = {
+		building_heritage_site
+		building_galactic_memorial_2
+		building_simulation_2
+		building_sensorium_2
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 2
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.10
+	}
+
+	triggered_desc = {
+		text = building_heritage_site_effect
+	}
+
+	prerequisites = {
+		"tech_heritage_site"
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+	}
+
+	upgrades = {
+		building_corporate_forum
+	}
+}
+
+building_corporate_forum = {
+	base_buildtime = @b3_time
+	can_build = no
+	icon = building_hypercomms_forum
+
+	category = unity
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			is_megacorp = yes
+		}
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			owner = {
+				is_megacorp = no
+			}
+		}
+	}
+
+	convert_to = {
+		building_hypercomms_forum
+		building_simulation_3
+		building_galactic_memorial_3
+		building_sensorium_3
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 3
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		cost = {
+			minerals = @b3_minerals
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.15
+	}
+
+	triggered_desc = {
+		text = building_hypercomms_forum_effect
+	}
+
+	prerequisites = {
+		"tech_hypercomms_forum"
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+	}
+}
+
+#######################
+# Hive Empire Memorial
+#######################
+building_sensorium_1 = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	icon = building_holo_theatres
+
+	category = unity
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			is_hive_empire = yes
+			is_memorialist_empire = no
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			owner = {
+				OR = {
+					is_hive_empire = no
+					is_memorialist_empire = yes
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 1
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		cost = {
+			minerals = @b1_minerals
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.05
+	}
+
+	triggered_desc = {
+		text = building_autochthon_monument_effect
+	}
+
+	prerequisites = {
+		"tech_hive_node"
+	}
+
+	convert_to = {
+		building_autochthon_monument
+		building_corporate_monument
+		building_galactic_memorial_1
+		building_simulation_1
+	}
+
+	show_tech_unlock_if = {
+		is_hive_empire = yes
+		is_memorialist_empire = no
+	}
+
+	upgrades = {
+		building_sensorium_2
+	}
+}
+
+building_sensorium_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+	icon = building_hyper_entertainment_forum
+
+	category = unity
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			is_hive_empire = yes
+			is_memorialist_empire = no
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			owner = {
+				OR = {
+					is_hive_empire = no
+					is_memorialist_empire = yes
+				}
+			}
+		}
+	}
+
+	convert_to = {
+		building_corporate_site
+		building_heritage_site
+		building_galactic_memorial_2
+		building_simulation_2
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 2
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.10
+	}
+
+	triggered_desc = {
+		text = building_heritage_site_effect
+	}
+
+	prerequisites = {
+		"tech_hive_cluster"
+	}
+
+	show_tech_unlock_if = {
+		is_hive_empire = yes
+		is_memorialist_empire = no
+	}
+
+	upgrades = {
+		building_sensorium_3
+	}
+}
+
+building_sensorium_3 = {
+	base_buildtime = @b3_time
+	can_build = no
+	icon = building_citadel_of_faith
+
+	category = unity
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			is_hive_empire = yes
+			is_memorialist_empire = no
+		}
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			owner = {
+				OR = {
+					is_hive_empire = no
+					is_memorialist_empire = yes
+				}
+			}
+		}
+	}
+
+	convert_to = {
+		building_corporate_forum
+		building_hypercomms_forum
+		building_galactic_memorial_3
+		building_simulation_3
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 3
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		cost = {
+			minerals = @b3_minerals
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.15
+	}
+
+	triggered_desc = {
+		text = building_hypercomms_forum_effect
+	}
+
+	prerequisites = {
+		"tech_hive_confluence"
+	}
+
+	show_tech_unlock_if = {
+		is_hive_empire = yes
+		is_memorialist_empire = no
+	}
+}

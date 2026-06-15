@@ -1,0 +1,10 @@
+point_defence_turret = {
+	size = point_defence
+	component = weapon
+	entities = {
+		weapon_type_kinetic = "turret_point_defence_entity"
+		weapon_type_energy = "turret_point_defence_entity"
+#		weapon_type_explosive = "turret_missile_small_entity"
+		weapon_type_explosive = "turret_point_defence_entity"
+	}
+}

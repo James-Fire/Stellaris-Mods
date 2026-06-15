@@ -1,0 +1,421 @@
+# ENVIRONMENTAL GRID
+UKN_HAS_ANY_TWO_ENVIRONMENTAL_GRIDS_BUILT = {
+	OR = {
+		num_buildings = { type = building_luxury_residence value > 1 }
+		num_buildings = { type = building_paradise_dome value > 1 }
+		num_buildings = { type = building_ukn_environmental_grid_3 value > 1 }
+		AND = {
+			num_buildings = { type = building_luxury_residence value > 0 }
+			num_buildings = { type = building_paradise_dome value > 0 }
+		}
+		AND = {
+			num_buildings = { type = building_luxury_residence value > 0 }
+			num_buildings = { type = building_ukn_environmental_grid_3 value > 0 }
+		}
+		AND = {
+			num_buildings = { type = building_paradise_dome value > 0 }
+			num_buildings = { type = building_ukn_environmental_grid_3 value > 0 }
+		}
+	}
+#	calc_true_if = {
+#		amount >= 2
+#		has_building = building_luxury_residence
+#		has_building = building_paradise_dome
+#		has_building = building_ukn_environmental_grid_3
+#	}
+}
+
+
+
+
+# COMMERCIAL GRID
+UKN_CAN_BUILD_COMMERCIAL_GRID = {
+	owner = {
+		is_regular_empire = yes
+	}
+	NOT = { has_modifier = slave_colony }
+}
+
+UKN_CANNOT_BUILD_COMMERCIAL_GRID = {
+	OR = {
+		owner = {
+			is_regular_empire = no
+		}
+		has_modifier = slave_colony
+	}
+}
+#---
+
+
+
+# BUREAUCRATIC GRID
+UKN_CAN_BUILD_BUREAUCRATIC_GRID = {
+	owner = {
+		is_regular_empire = yes
+		is_spiritualist = no
+		is_megacorp = no
+	}
+	NOT = { has_modifier = slave_colony }
+}
+
+UKN_CANNOT_BUILD_BUREAUCRATIC_GRID = {
+	OR = {
+		owner = {
+			OR = {
+				is_regular_empire = no
+				is_spiritualist = yes
+				is_megacorp = yes
+			}
+		}
+		has_modifier = slave_colony
+	}
+}
+
+UKN_HAS_BUREAUCRATIC_GRID = {
+	OR = {
+		has_building = building_bureaucratic_1
+		has_building = building_bureaucratic_2
+		has_building = building_bureaucratic_2
+		has_building = building_ukn_bureaucratic_4
+		has_building = building_ukn_bureaucratic_5
+	}
+}
+#---
+
+
+
+# CORPORO-BUREAUCRATIC GRID
+UKN_CAN_BUILD_CORPORATE_BUREAUCRATIC_GRID = {
+	owner = {
+		is_megacorp = yes
+		is_spiritualist = no
+	}
+	NOT = { has_modifier = slave_colony }
+}
+
+UKN_CANNOT_BUILD_CORPORATE_BUREAUCRATIC_GRID = {
+	OR = {
+		owner = {
+			OR = {
+				is_megacorp = no
+				is_spiritualist = yes
+			}
+		}
+		has_modifier = slave_colony
+	}
+}
+
+UKN_HAS_CORPORATE_BUREAUCRATIC_GRID = {
+	OR = {
+		has_building = building_ukn_corporate_bureaucratic_1
+		has_building = building_ukn_corporate_bureaucratic_2
+		has_building = building_ukn_corporate_bureaucratic_3
+		has_building = building_ukn_corporate_monument_4
+		has_building = building_ukn_corporate_monument_5		
+	}
+}
+#---
+
+
+
+# SYNAPTIC GRID
+UKN_CAN_BUILD_SYNAPTIC_GRID = {
+	owner = {
+		is_hive_empire = yes
+	}
+	NOT = { has_modifier = slave_colony }
+}
+
+UKN_CANNOT_BUILD_SYNAPTIC_GRID = {
+	OR = {
+		owner = {
+			is_hive_empire = no
+		}
+		has_modifier = slave_colony
+	}
+}
+
+UKN_HAS_SYNAPTIC_GRID = {
+	OR ={
+		has_building = building_hive_node
+		has_building = building_hive_cluster
+		has_building = building_hive_confluence
+		has_building = building_ukn_hive_node_4
+		has_building = building_ukn_hive_node_5		
+	}
+}
+#---
+
+
+
+# UPLINK GRID
+UKN_CAN_BUILD_UPLINK_GRID = {
+	owner = {
+		is_machine_empire = yes
+	}
+	NOT = { has_modifier = slave_colony }
+}
+
+UKN_CANNOT_BUILD_UPLINK_GRID = {
+	OR = {
+		owner = {
+			is_machine_empire = no
+		}
+		has_modifier = slave_colony
+	}
+}
+
+UKN_HAS_UPLINK_GRID = {
+	OR ={
+		has_building = building_uplink_node
+		has_building = building_network_junction
+		has_building = building_system_conflux
+		has_building = building_ukn_uplink_4
+		has_building = building_ukn_uplink_5		
+	}
+}
+#---
+
+
+
+
+# MEMORIAL GRID
+UKN_CAN_BUILD_GALACTIC_MEMORIAL_GRID = {
+	owner = {
+		OR = {
+			has_valid_civic = civic_memorialist
+			has_valid_civic = civic_hive_memorialist
+			has_valid_civic = civic_machine_memorialist
+		}
+		NOR = {
+			is_megacorp = yes
+			has_valid_civic = civic_fanatic_purifiers
+			has_valid_civic = civic_hive_devouring_swarm
+			has_valid_civic = civic_machine_assimilator
+			has_valid_civic = civic_machine_terminator
+		}
+	}
+	NOT = { has_modifier = slave_colony }
+}
+
+UKN_CANNOT_BUILD_GALACTIC_MEMORIAL_GRID = {
+	OR = {
+		owner = {
+			OR = {
+				is_megacorp = yes
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_assimilator
+				has_valid_civic = civic_machine_terminator
+				NOR = {
+					has_valid_civic = civic_memorialist
+					has_valid_civic = civic_hive_memorialist
+					has_valid_civic = civic_machine_memorialist
+				}
+			}
+		}
+		has_modifier = slave_colony
+	}
+}
+#---
+
+
+
+
+# TEMPLE GRID
+UKN_CAN_BUILD_TEMPLE_GRID = {
+	owner = {
+		is_spiritualist = yes
+		is_bugged_cult = no
+	}
+	NOT = { has_modifier = slave_colony }
+}
+
+UKN_CANNOT_BUILD_TEMPLE_GRID = {
+	OR = {
+		owner = {
+			OR = {
+				is_spiritualist = no
+				is_bugged_cult = yes
+			}
+		}
+		has_modifier = slave_colony
+	}
+}
+#---
+
+
+
+# SACRIFICIAL TEMPLE GRID
+UKN_CAN_BUILD_SACRIFICIAL_TEMPLE_GRID = {
+	owner = {
+		is_spiritualist = yes
+		is_bugged_death_cult = yes
+	}
+	NOT = { has_modifier = slave_colony }
+}
+
+UKN_CANNOT_BUILD_SACRIFICIAL_TEMPLE_GRID = {
+	OR = {
+		owner = {
+			OR = {
+				is_spiritualist = no
+				is_bugged_death_cult = no
+			}
+		}
+		has_modifier = slave_colony
+	}
+}
+#---
+
+
+
+# LIGHT TEMPLE GRID
+UKN_CAN_BUILD_LIGHT_TEMPLE_GRID = {
+	owner = {
+		is_spiritualist = yes
+		is_bugged_luminosity_cult = yes
+	}
+	NOT = { has_modifier = slave_colony }
+}
+
+UKN_CANNOT_BUILD_LIGHT_TEMPLE_GRID = {
+	OR = {
+		owner = {
+			OR = {
+				is_spiritualist = no
+				is_bugged_luminosity_cult = no
+			}
+		}
+		has_modifier = slave_colony
+	}
+}
+#---
+
+# WAR TEMPLE GRID
+UKN_CAN_BUILD_WAR_TEMPLE_GRID = {
+	owner = {
+		is_spiritualist = yes
+		is_bugged_war_cult = yes
+	}
+	NOT = { has_modifier = slave_colony }
+}
+
+UKN_CANNOT_BUILD_WAR_TEMPLE_GRID = {
+	OR = {
+		owner = {
+			OR = {
+				is_spiritualist = no
+				is_bugged_war_cult = no
+			}
+		}
+		has_modifier = slave_colony
+	}
+}
+#---
+
+
+
+
+# ALL SPIRITUALIST UNITY GRIDS
+UKN_HAS_ANY_SPIRITUALIST_UNITY_GRID = {
+	OR = {
+		#Normal
+		has_building = building_temple
+		has_building = building_holotemple
+		has_building = building_sacred_nexus
+		has_building = building_ukn_temple_4
+		has_building = building_ukn_temple_5
+		#Light
+		has_building = building_bugged_light_temple_1
+		has_building = building_bugged_light_temple_2
+		has_building = building_bugged_light_temple_3
+		has_building = building_ukn_bugged_light_temple_4
+		has_building = building_ukn_bugged_light_temple_5
+		#Death
+		has_building = building_sacrificial_temple_1
+		has_building = building_sacrificial_temple_2
+		has_building = building_sacrificial_temple_3
+		has_building = building_ukn_sacrificial_temple_4
+		has_building = building_ukn_sacrificial_temple_5
+		#War
+		has_building = building_bugged_war_temple_1
+		has_building = building_bugged_war_temple_2
+		has_building = building_bugged_war_temple_3
+		has_building = building_ukn_bugged_war_temple_4
+		has_building = building_ukn_bugged_war_temple_5
+		#Gravity
+		has_building = building_bugged_gravity_monastery
+		has_building = building_bugged_gravity_monastery_two
+		has_building = building_ukn_bugged_gravity_monastery_3
+		has_building = building_ukn_bugged_gravity_monastery_4
+		has_building = building_ukn_bugged_gravity_monastery_5
+		#Life
+		has_building = building_bugged_life_monastery
+		has_building = building_bugged_life_monastery_two
+		has_building = building_ukn_bugged_life_monastery_3
+		has_building = building_ukn_bugged_life_monastery_4
+		has_building = building_ukn_bugged_life_monastery_5
+		#Machine
+		has_building = building_bugged_mecha_monastery
+		has_building = building_bugged_mecha_monastery_two
+		has_building = building_ukn_bugged_mecha_monastery_3
+		has_building = building_ukn_bugged_mecha_monastery_4
+		has_building = building_ukn_bugged_mecha_monastery_5
+	}
+}
+
+######################
+# RESEARCH BUILDINGS #
+######################
+
+UKN_HAS_SCIENCE_BUILDING = {
+	OR = { 
+		has_building = building_research_lab_1
+		has_building = building_research_lab_2
+		has_building = building_research_lab_3
+		has_building = building_ukn_research_lab_4
+		has_building = building_ukn_research_lab_5
+	}
+}
+
+###########################
+# RARE RESOURCE BUILDINGS #
+###########################
+
+UKN_HAS_GAS_BUILDING = {
+	OR ={
+		has_building = building_refinery
+		has_building = building_ukn_refinery_2
+		has_building = building_ukn_refinery_3
+		has_building = building_ukn_refinery_4		
+	}
+}
+
+UKN_HAS_CRYSTAL_BUILDING = {
+	OR ={
+		has_building = building_crystal_plant
+		has_building = building_ukn_crystal_plant_2
+		has_building = building_ukn_crystal_plant_3
+		has_building = building_ukn_crystal_plant_4	
+	}
+}
+
+#########################
+# AUTOMACHINE BUILDINGS #
+#########################
+
+UKN_HAS_AUTOMACHINE_BUILDING = { # Automachines, son! They harden in response to physical trauma!
+	OR = {
+		has_building = building_ukn_automachine_assembly_grid_1
+		has_building = building_ukn_automachine_assembly_grid_2
+		has_building = building_ukn_automachine_assembly_grid_3
+		has_building = building_ukn_automachine_assembly_grid_4
+		has_building = building_ukn_automachine_assembly_grid_5		
+	}
+}
+
+#############################
+# EXOTIC PARTICLE BUILDINGS #
+#############################
+

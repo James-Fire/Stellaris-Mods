@@ -1,0 +1,713 @@
+###Secondary Reactors
+
+#@\[( 2 + ( $MAX$ + $DIE_MAX$ - |$MAX$ - $SCORE$ - $DIE_MAX$| ) - ( $MIN$ + $DIE_MIN$ + |$MIN$ - $SCORE$ - $DIE_MIN$| ) ) / ( 2*( $DIE_MAX$ -  $DIE_MIN$ + 1 ) )]
+#@\[(2*@smallpower1)]
+
+@size_effect_multiplier = 2
+@tier_effect_multiplier = 1.5
+
+@smallpower1 = 50
+@mediumpower1 = 100
+@largepower1 = 200
+
+@reactorcost_S1 = 30
+@reactorcost_M1 = 45
+@reactorcost_L1 = 68
+
+@reactorcost_S1_upkeep_alloys = 0.75
+@reactorcost_M1_upkeep_alloys = 1.13
+@reactorcost_L1_upkeep_alloys = 1.7
+
+@reactorcost_S1_upkeep_energy = 1.5
+@reactorcost_M1_upkeep_energy = 2.25
+@reactorcost_L1_upkeep_energy = 3.4
+
+@smallpower2 = 75
+@mediumpower2 = 150
+@largepower2 = 300
+
+@reactorcost_S2 = 36
+@reactorcost_M2 = 54
+@reactorcost_L2 = 82
+
+@reactorcost_S2_upkeep_alloys = 0.9
+@reactorcost_M2_upkeep_alloys = 1.36
+@reactorcost_L2_upkeep_alloys = 2
+
+@reactorcost_S2_upkeep_energy = 1.8
+@reactorcost_M2_upkeep_energy = 2.7
+@reactorcost_L2_upkeep_energy = 4
+
+@smallpower3 = 113
+@mediumpower3 = 225
+@largepower3 = 450
+
+@reactorcost_S3 = 43
+@reactorcost_M3 = 65
+@reactorcost_L3 = 98
+
+@reactorcost_S3_upkeep_alloys = 1.08
+@reactorcost_M3_upkeep_alloys = 1.63
+@reactorcost_L3_upkeep_alloys = 2.45
+
+@reactorcost_S3_upkeep_energy = 2.16
+@reactorcost_M3_upkeep_energy = 3.24
+@reactorcost_L3_upkeep_energy = 4.87
+
+@smallpower4 = 170
+@mediumpower4 = 340
+@largepower4 = 680
+
+@reactorcost_S4 = 52
+@reactorcost_M4 = 78
+@reactorcost_L4 = 118
+
+@reactorcost_S4_upkeep_alloys = 1.3
+@reactorcost_M4_upkeep_alloys = 1.96
+@reactorcost_L4_upkeep_alloys = 2.94
+
+@reactorcost_S4_upkeep_energy = 2.6
+@reactorcost_M4_upkeep_energy = 3.9
+@reactorcost_L4_upkeep_energy = 5.84
+
+@smallpower5 = 255
+@mediumpower5 = 510
+@largepower5 = 1020
+
+@reactorcost_S5 = 62
+@reactorcost_M5 = 94
+@reactorcost_L5 = 142
+
+@reactorcost_S5_upkeep_alloys = 1.56
+@reactorcost_M5_upkeep_alloys = 2.35
+@reactorcost_L5_upkeep_alloys = 3.53
+
+@reactorcost_S5_upkeep_energy = 3.11
+@reactorcost_M5_upkeep_energy = 4.67
+@reactorcost_L5_upkeep_energy = 7
+
+@smallpower6 = 383
+@mediumpower6 = 766 
+@largepower6 = 1532
+
+@reactorcost_S6 = 74
+@reactorcost_M6 = 113
+@reactorcost_L6 = 170
+
+@reactorcost_S6_upkeep_alloys = 1.87
+@reactorcost_M6_upkeep_alloys = 2.82
+@reactorcost_L6_upkeep_alloys = 4.24
+
+@reactorcost_S6_upkeep_energy = 3.73
+@reactorcost_M6_upkeep_energy = 5.6
+@reactorcost_L6_upkeep_energy = 8.41
+
+#############
+#	HULL	#
+#############
+
+#Nanocomposite
+@corvettecost1 = 40
+@destroyercost1 = 80
+@cruisercost1 = 160
+@battleshipcost1 = 320 
+@titancost1 = 640
+
+@corvettehull1 = 100
+@destroyerhull1 = 300
+@cruiserhull1 = 800
+@battleshiphull1 = 1800
+@titanhull1 = 4000
+@starbasehull1 = 6000
+
+@corvetteupkeepalloys1 = 1
+@destroyerupkeepalloys1 = 2
+@cruiserupkeepalloys1 = 4
+@battleshipupkeepalloys1 = 8
+@titanupkeepalloys1 = 16
+
+@corvetteupkeepenergy1 = 2
+@destroyerupkeepenergy1 = 4 
+@cruiserupkeepenergy1 = 8
+@battleshipupkeepenergy1 = 16
+@titanupkeepenergy1 = 32
+
+#Ceramo Metal
+@corvettecost2 = 52
+@destroyercost2 = 104
+@cruisercost2 = 208
+@battleshipcost2 = 416
+@titancost2 = 832
+
+@corvettehull2 = 150
+@destroyerhull2 = 450
+@cruiserhull2 = 1200
+@battleshiphull2 = 2700
+@titanhull2 = 6000
+@starbasehull2 = 12000
+
+@corvetteupkeepalloys2 = 1.3
+@destroyerupkeepalloys2 = 2.6
+@cruiserupkeepalloys2 = 5.2
+@battleshipupkeepalloys2 = 10.4
+@titanupkeepalloys2 = 20.8
+
+@corvetteupkeepenergy2 = 2.6
+@destroyerupkeepenergy2 = 5.2
+@cruiserupkeepenergy2 = 10.4
+@battleshipupkeepenergy2 = 20.8
+@titanupkeepenergy2 = 41.6
+
+#Plasteel
+@corvettecost3 = 68
+@destroyercost3 = 135
+@cruisercost3 = 270
+@battleshipcost3 = 541 
+@titancost3 = 1082
+
+@corvettehull3 = 225
+@destroyerhull3 = 675
+@cruiserhull3 = 1800
+@battleshiphull3 = 4050
+@titanhull3 = 9000
+@starbasehull3 = 24000
+
+@corvetteupkeepalloys3 = 1.69
+@destroyerupkeepalloys3 = 3.38
+@cruiserupkeepalloys3 = 7
+@battleshipupkeepalloys3 = 14
+@titanupkeepalloys3 = 28
+
+@corvetteupkeepenergy3 = 3.38
+@destroyerupkeepenergy3 = 7
+@cruiserupkeepenergy3 = 14
+@battleshipupkeepenergy3 = 28
+@titanupkeepenergy3 = 56
+
+#Durasteel
+@corvettecost4 = 88
+@destroyercost4 = 176
+@cruisercost4 = 351
+@battleshipcost4 = 703 
+@titancost4 = 1407
+
+@corvettehull4 = 340
+@destroyerhull4 = 1015
+@cruiserhull4 = 2700
+@battleshiphull4 = 6075
+@titanhull4 = 13500
+@starbasehull4 = 48000
+
+@corvetteupkeepalloys4 = 2.2
+@destroyerupkeepalloys4 = 4.39
+@cruiserupkeepalloys4 = 9
+@battleshipupkeepalloys4 = 18
+@titanupkeepalloys4 = 36
+
+@corvetteupkeepenergy4 = 4.39
+@destroyerupkeepenergy4 = 9
+@cruiserupkeepenergy4 = 18
+@battleshipupkeepenergy4 = 36
+@titanupkeepenergy4 = 72
+
+#Neutronium
+@corvettecost5 = 114
+@destroyercost5 = 229
+@cruisercost5 = 456
+@battleshipcost5 = 914 
+@titancost5 = 1829
+
+@corvettehull5 = 510
+@destroyerhull5 = 1520
+@cruiserhull5 = 4050
+@battleshiphull5 = 9115
+@titanhull5 = 20250
+@starbasehull5 = 96000
+
+@colossushull5 = 96000
+@juggernauthull5 = 202500
+
+@corvetteupkeepalloys5 = 2.86
+@destroyerupkeepalloys5 = 5.71
+@cruiserupkeepalloys5 = 12
+@battleshipupkeepalloys5 = 24
+@titanupkeepalloys5 = 48
+
+@corvetteupkeepenergy5 = 5.71
+@destroyerupkeepenergy5 = 12
+@cruiserupkeepenergy5 = 24
+@battleshipupkeepenergy5 = 48
+@titanupkeepenergy5 = 96
+
+#Dragonscale
+@corvettecost6 = 148
+@destroyercost6 = 298
+@cruisercost6 = 593
+@battleshipcost6 = 1188 
+@titancost6 = 2378
+
+@corvettehull6 = 765
+@destroyerhull6 = 2300
+@cruiserhull6 = 6075
+@battleshiphull6 = 13675
+@titanhull6 = 30375
+@starbasehull6 = 192000
+
+@colossushull6 = 60000
+@juggernauthull6 = 600000
+
+@corvetteupkeepalloys6 = 3.72
+@destroyerupkeepalloys6 = 7.42
+@cruiserupkeepalloys6 = 16
+@battleshipupkeepalloys6 = 32
+@titanupkeepalloys6 = 64
+
+@corvetteupkeepenergy6 = 7.42
+@destroyerupkeepenergy6 = 16
+@cruiserupkeepenergy6 = 32
+@battleshipupkeepenergy6 = 64
+@titanupkeepenergy6 = 128
+
+
+##Reinforcement##
+
+@hullreinforcebonus_S1 = 0.10
+@hullreinforcebonus_M1 = 0.15
+@hullreinforcebonus_L1 = 0.2
+
+@hullcost_S1 = 20
+@hullcost_M1 = 40
+@hullcost_L1 = 80
+
+@hullcost_S1_upkeep_alloys = 0.5
+@hullcost_M1_upkeep_alloys = 1
+@hullcost_L1_upkeep_alloys = 2
+
+@hullcost_S1_upkeep_energy = 1
+@hullcost_M1_upkeep_energy = 2
+@hullcost_L1_upkeep_energy = 4
+
+@hullreinforcebonus_S2 = 0.20
+@hullreinforcebonus_M2 = 0.30
+@hullreinforcebonus_L2 = 0.4
+
+@hullcost_S2 = 26
+@hullcost_M2 = 52
+@hullcost_L2 = 104
+
+@hullcost_S2_upkeep_alloys = 0.65
+@hullcost_M2_upkeep_alloys = 1.3
+@hullcost_L2_upkeep_alloys = 2.6
+
+@hullcost_S2_upkeep_energy = 1.3
+@hullcost_M2_upkeep_energy = 2.6
+@hullcost_L2_upkeep_energy = 5.2
+
+@hullreinforcebonus_S3 = 0.30
+@hullreinforcebonus_M3 = 0.45
+@hullreinforcebonus_L3 = 0.6
+
+@hullcost_S3 = 34
+@hullcost_M3 = 68
+@hullcost_L3 = 135
+
+@hullcost_S3_upkeep_alloys = 0.85
+@hullcost_M3_upkeep_alloys = 1.7
+@hullcost_L3_upkeep_alloys = 3.4
+
+@hullcost_S3_upkeep_energy = 1.7
+@hullcost_M3_upkeep_energy = 3.4
+@hullcost_L3_upkeep_energy = 6.8
+
+@hullreinforcebonus_S4 = 0.4
+@hullreinforcebonus_M4 = 0.6
+@hullreinforcebonus_L4 = 0.8
+
+@hullcost_S4 = 44
+@hullcost_M4 = 88
+@hullcost_L4 = 176
+
+@hullcost_S4_upkeep_alloys = 1.11
+@hullcost_M4_upkeep_alloys = 2.22
+@hullcost_L4_upkeep_alloys = 4.44
+
+@hullcost_S4_upkeep_energy = 2.22
+@hullcost_M4_upkeep_energy = 4.44
+@hullcost_L4_upkeep_energy = 8.88
+
+@hullreinforcebonus_S5 = 0.5
+@hullreinforcebonus_M5 = 0.75
+@hullreinforcebonus_L5 = 1
+
+@hullcost_S5 = 57
+@hullcost_M5 = 114
+@hullcost_L5 = 229
+
+@hullcost_S5_upkeep_alloys = 1.44
+@hullcost_M5_upkeep_alloys = 2.88
+@hullcost_L5_upkeep_alloys = 5.76
+
+@hullcost_S5_upkeep_energy = 2.88
+@hullcost_M5_upkeep_energy = 5.76
+@hullcost_L5_upkeep_energy = 11.52
+
+@hullreinforcebonus_S6 = 0.6
+@hullreinforcebonus_M6 = 0.9
+@hullreinforcebonus_L6 = 1.2
+
+@hullcost_S6 = 74
+@hullcost_M6 = 148
+@hullcost_L6 = 298
+
+@hullcost_S6_upkeep_alloys = 1.87
+@hullcost_M6_upkeep_alloys = 3.74
+@hullcost_L6_upkeep_alloys = 7.48
+
+@hullcost_S6_upkeep_energy = 3.74
+@hullcost_M6_upkeep_energy = 7.48
+@hullcost_L6_upkeep_energy = 14.96
+
+#############
+#	Armour	#
+#############
+
+@healthbonus1 = 0.05
+@healthbonus2 = 0.1
+@healthbonus3 = 0.15
+@healthbonus4 = 0.2
+@healthbonus5 = 0.25
+@healthbonus6 = 1
+
+@armourbonus1 = 1
+@armourbonus2 = 1
+@armourbonus3 = 2
+@armourbonus4 = 3
+@armourbonus5 = 4
+@armourbonus6 = 1
+
+@armourstrength_S1 = 150
+@armourstrength_M1 = 315
+@armourstrength_L1 = 662
+@armourstrength_St1 = 1390
+
+@armourcost_S1 = 40
+@armourcost_M1 = 80
+@armourcost_L1 = 160
+
+@armourcost_S1_upkeep_alloys = 1
+@armourcost_M1_upkeep_alloys = 2
+@armourcost_L1_upkeep_alloys = 4
+
+@armourcost_S1_upkeep_energy = 2
+@armourcost_M1_upkeep_energy = 4
+@armourcost_L1_upkeep_energy = 8
+
+@armourstrength_S2 = 225
+@armourstrength_M2 = 473
+@armourstrength_L2 = 993
+@armourstrength_St2 = 2085
+
+@armourcost_S2 = 52
+@armourcost_M2 = 104
+@armourcost_L2 = 208
+
+@armourcost_S2_upkeep_alloys = 1.3
+@armourcost_M2_upkeep_alloys = 2.6
+@armourcost_L2_upkeep_alloys = 5.2
+
+@armourcost_S2_upkeep_energy = 2.6
+@armourcost_M2_upkeep_energy = 5.2
+@armourcost_L2_upkeep_energy = 10.4
+
+@armourstrength_S3 = 338
+@armourstrength_M3 = 710
+@armourstrength_L3 = 1490
+@armourstrength_St3 = 3128
+
+@armourcost_S3 = 68
+@armourcost_M3 = 135
+@armourcost_L3 = 270
+
+@armourcost_S3_upkeep_alloys = 1.69
+@armourcost_M3_upkeep_alloys = 3.38
+@armourcost_L3_upkeep_alloys = 6.76
+
+@armourcost_S3_upkeep_energy = 3.38
+@armourcost_M3_upkeep_energy = 6.76
+@armourcost_L3_upkeep_energy = 13.52
+
+@armourstrength_S4 = 507
+@armourstrength_M4 = 1065
+@armourstrength_L4 = 2235
+@armourstrength_St4 = 4692
+
+@armourcost_S4 = 88
+@armourcost_M4 = 176
+@armourcost_L4 = 351
+
+@armourcost_S4_upkeep_alloys = 2.2
+@armourcost_M4_upkeep_alloys = 4.4
+@armourcost_L4_upkeep_alloys = 8.8
+
+@armourcost_S4_upkeep_energy = 4.4
+@armourcost_M4_upkeep_energy = 8.8
+@armourcost_L4_upkeep_energy = 17.6
+
+@armourstrength_S5 = 761
+@armourstrength_M5 = 1598
+@armourstrength_L5 = 3353
+@armourstrength_St5 = 7038
+
+@armourcost_S5 = 114
+@armourcost_M5 = 229
+@armourcost_L5 = 456
+
+@armourcost_S5_upkeep_alloys = 2.86
+@armourcost_M5_upkeep_alloys = 5.72
+@armourcost_L5_upkeep_alloys = 11.44
+
+@armourcost_S5_upkeep_energy = 5.72
+@armourcost_M5_upkeep_energy = 11.44
+@armourcost_L5_upkeep_energy = 22.88
+
+@armourstrength_S6 = 1142
+@armourstrength_M6 = 2853
+@armourstrength_L6 = 7127
+@armourstrength_St6 = 17811
+
+@armourcost_S6 = 148
+@armourcost_M6 = 298
+@armourcost_L6 = 593
+
+@armourcost_S6_upkeep_alloys = 3.72
+@armourcost_M6_upkeep_alloys = 7.44
+@armourcost_L6_upkeep_alloys = 14.88
+
+@armourcost_S6_upkeep_energy = 7.44
+@armourcost_M6_upkeep_energy = 14.88
+@armourcost_L6_upkeep_energy = 29.76
+
+#########################
+#	ARMOUR THICKNESS	#
+#########################
+
+@armourthicknesscost_s1 = 68
+@armourthicknesscost_s2 = 135
+@armourthicknesscost_s3 = 270
+@armourthicknesscost_s4 = 540
+
+@armourthicknesscost_m1 = 88
+@armourthicknesscost_m2 = 176
+@armourthicknesscost_m3 = 351
+@armourthicknesscost_m4 = 703
+@armourthicknesscost_m5 = 1406
+
+@armourthicknesscost_l1 = 114
+@armourthicknesscost_l2 = 229
+@armourthicknesscost_l3 = 456
+@armourthicknesscost_l4 = 914
+@armourthicknesscost_l5 = 1828
+
+@armourthicknesscost_st1 = 148
+@armourthicknesscost_st2 = 298
+@armourthicknesscost_st3 = 593
+@armourthicknesscost_st4 = 1188
+@armourthicknesscost_st5 = 2376
+
+#############
+#	SHIELD	#
+#############
+
+#Shield Capacitors#
+@smallshieldbonus1 = 1
+@smallshieldcappower1 = -100
+@smallcapregen = 2
+
+@mediumshieldbonus1 = 1.5
+@mediumshieldcappower1 = -130
+@mediumcapregen = 3
+
+@largeshieldbonus1 = 2.5
+@largeshieldcappower1 = -200
+@largecapregen = 5
+
+#POWER
+@shieldpower_S1 = -30
+@shieldpower_M1 = -60
+@shieldpower_L1 = -120
+@shieldpower_St1 = -240
+
+@shieldpower_S2 = -45
+@shieldpower_M2 = -90
+@shieldpower_L2 = -180
+@shieldpower_St2 = -360
+
+@shieldpower_S3 = -68
+@shieldpower_M3 = -136
+@shieldpower_L3 = -272
+@shieldpower_St3 = -544
+
+@shieldpower_S4 = -102
+@shieldpower_M4 = -204
+@shieldpower_L4 = -408
+@shieldpower_St4 = -816
+
+@shieldpower_S5 = -153
+@shieldpower_M5 = -306
+@shieldpower_L5 = -712
+@shieldpower_St5 = -1414
+
+@shieldpower_S6 = -230
+@shieldpower_M6 = -460
+@shieldpower_L6 = -920
+@shieldpower_St6 = -1840
+
+#Strength#
+
+@shieldstrength_S1 = 150
+@shieldstrength_M1 = 375
+@shieldstrength_L1 = 938
+
+@shieldregen_S1 = 5
+@shieldregen_M1 = 13
+@shieldregen_L1 = 33
+
+@shieldstrength_S2 = 450
+@shieldstrength_M2 = 1125
+@shieldstrength_L2 = 2814
+
+@shieldregen_S2 = 15
+@shieldregen_M2 = 39
+@shieldregen_L2 = 99
+
+@shieldstrength_S3 = 1350
+@shieldstrength_M3 = 3375
+@shieldstrength_L3 = 8442
+
+@shieldregen_S3 = 45
+@shieldregen_M3 = 117
+@shieldregen_L3 = 297
+
+@shieldstrength_S4 = 4050
+@shieldstrength_M4 = 10125
+@shieldstrength_L4 = 25326
+
+@shieldregen_S4 = 135
+@shieldregen_M4 = 351
+@shieldregen_L4 = 891
+
+@shieldstrength_S5 = 12150
+@shieldstrength_M5 = 30375
+@shieldstrength_L5 = 75978
+
+@shieldregen_S5 = 405
+@shieldregen_M5 = 1053
+@shieldregen_L5 = 2673
+
+@shieldstrength_S6 = 36450
+@shieldstrength_M6 = 91125
+@shieldstrength_L6 = 227934
+
+@shieldregen_S6 = 1215
+@shieldregen_M6 = 3159
+@shieldregen_L6 = 8019
+
+@shieldstrength_L7 = 683802
+@shieldregen_L7 = 24057
+
+#Cost#
+
+@shieldS1_cost = 100
+@shieldM1_cost = 150
+@shieldL1_cost = 200
+
+@shieldS1_upkeep_alloys = 2.5
+@shieldM1_upkeep_alloys = 3.75
+@shieldL1_upkeep_alloys = 5.63
+
+@shieldS1_upkeep_energy = 5.63
+@shieldM1_upkeep_energy = 7.5
+@shieldL1_upkeep_energy = 10
+
+@shieldS2_cost = 150
+@shieldM2_cost = 200
+@shieldL2_cost = 250
+
+@shieldS2_upkeep_alloys = 3.75
+@shieldM2_upkeep_alloys = 5
+@shieldL2_upkeep_alloys = 6.25
+
+@shieldS2_upkeep_energy = 7.5
+@shieldM2_upkeep_energy = 10
+@shieldL2_upkeep_energy = 12.5
+
+@shieldS3_cost = 200
+@shieldM3_cost = 250
+@shieldL3_cost = 300
+
+@shieldS3_upkeep_alloys = 5
+@shieldL3_upkeep_alloys = 7.5
+@shieldM3_upkeep_alloys = 12.5
+
+@shieldS3_upkeep_energy = 10
+@shieldM3_upkeep_energy = 12.5
+@shieldL3_upkeep_energy = 15
+
+@shieldS4_cost = 250
+@shieldM4_cost = 300
+@shieldL4_cost = 350
+
+@shieldS4_upkeep_alloys = 6.25
+@shieldM4_upkeep_alloys = 7.5
+@shieldL4_upkeep_alloys = 8.75
+
+@shieldS4_upkeep_energy = 12.5
+@shieldM4_upkeep_energy = 15
+@shieldL4_upkeep_energy = 17.5
+
+@shieldS5_cost = 300
+@shieldM5_cost = 350
+@shieldL5_cost = 400
+
+@shieldS5_upkeep_alloys = 7.5
+@shieldM5_upkeep_alloys = 8.75
+@shieldL5_upkeep_alloys = 10
+
+@shieldS5_upkeep_energy = 15
+@shieldM5_upkeep_energy = 17.5
+@shieldL5_upkeep_energy = 20
+
+@shieldS6_cost = 350
+@shieldM6_cost = 400
+@shieldL6_cost = 450
+
+@shieldS6_upkeep_alloys = 8.75
+@shieldM6_upkeep_alloys = 10
+@shieldL6_upkeep_alloys = 11.25
+
+@shieldS6_upkeep_energy = 17.5
+@shieldM6_upkeep_energy = 20
+@shieldL6_upkeep_energy = 22.5
+
+##Auxiliary Shields##
+
+@shieldpower_aux1 = -15	
+@shieldpower_aux2 = -20
+@shieldpower_aux3 = -26
+@shieldpower_aux4 = -34
+@shieldpower_aux5 = -44
+@shieldpower_aux6 = -57
+
+@shieldstrength_aux1 = 75
+@shieldstrength_aux2 = 113
+@shieldstrength_aux3 = 170
+@shieldstrength_aux4 = 255
+@shieldstrength_aux5 = 383
+@shieldstrength_aux6 = 575
+
+@shieldregen_aux1 = 5
+@shieldregen_aux2 = 8
+@shieldregen_aux3 = 12
+@shieldregen_aux4 = 18
+@shieldregen_aux5 = 27
+@shieldregen_aux6 = 41

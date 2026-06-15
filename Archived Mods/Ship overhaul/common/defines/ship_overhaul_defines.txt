@@ -1,0 +1,49 @@
+	NInterface = {
+		FLEET_SIZE						= 50	# Fleets of this size of above is displayed with the special fleet overlay
+	}
+	NGameplay = {
+		COMMAND_LIMIT_MAX = 1000
+		NAVAL_CAPACITY_MAX = 999999
+		
+		#NAVAL_CAPACITY_POP_MULT = 0.02
+		#STARBASE_CAPACITY_POP_MULT = 0.01
+	}
+	NCombat = {
+		COMBAT_BACK_OFF_RATE				= 1.5
+	}
+	
+	NShip = {
+		OUT_OF_COMBAT_SHIELD_REGEN_MULT		= 2.0		# Shields recharge this much faster outside combat
+		SHIELD_RECHARGE_TICKS				= 1	# Combat ticks before a shield that is fully depleted will start to recharge
+
+		MILITARY_POWER_HEALTH_WEIGHT		= 0.01
+		MILITARY_POWER_ARMOR_WEIGHT			= 0.02	# compared to health
+		MILITARY_POWER_SHIELD_WEIGHT		= 0.02	# compared to health
+		MILITARY_POWER_DAMAGE_WEIGHT		= 0.10
+		MILITARY_POWER_SCALE				= 0.25
+		MILITARY_POWER_EXPONENT				= 0.90	# math: power = ( ( effective_health * damage_per_day ) ^ exponent ) * scale
+
+		# below values determine how large an effect special values such as shield penetration have on the military power of a weapon
+		MILITARY_POWER_ARMOR_PENETRATION_WEIGHT = 0.1	# larger value = adds more military power
+		MILITARY_POWER_SHIELD_PENETRATION_WEIGHT = 0.1
+		MILITARY_POWER_HULL_DAMAGE_WEIGHT = 0.2
+		MILITARY_POWER_ARMOR_DAMAGE_WEIGHT = 0.2
+		MILITARY_POWER_SHIELD_DAMAGE_WEIGHT = 0.2
+		MILITARY_POWER_TRACKING_WEIGHT = -0.5	# at 0% tracking
+		MILITARY_POWER_RANGE_DIV = 100	# smaller value = adds more military power
+		MILITARY_POWER_MISSILE_MULT = 0.60		# overall military power of missiles is lowered due to being vulnerable to PD
+		MILITARY_POWER_PD_MULT = 1.20		# overall military power of PD is increased to compensate for relatively bad DPS/range
+
+		DEFAULT_ARMOR_RATIO = 0.5
+		DEFAULT_SHIELD_RATIO = 0.5
+		MIN_SPEED_FOR_UTILITIES = 1.25 # Minimum value for ship utilities with speed to be considered viable when creating designs
+
+		EXCESS_POWER_BONUS_THRESHOLD_MAX	= 1.0 	# 0.5 means 0-50% excess power linearly scales ship_excess_power modifier between 0-1.
+		EXCESS_POWER_BONUS_THRESHOLD_MIN	= 0.01 # min value for excess power to be used.
+
+		SHIP_EXP_GAIN_COMBAT			= 1.0				# Gained each day ship is in combat
+		SHIP_EXP_GAIN_PIRACY_SUP		= 0.5				# Gained each day ship suppressing piracy
+		SHIP_EXP_EXPERIENCED			= 100				# Amount of exp to reach experienced rank
+		SHIP_EXP_VETERAN				= 500				# Amount of exp to reach veteran rank
+		SHIP_EXP_ELITE					= 2500				# Amount of exp to reach elite rank
+	}

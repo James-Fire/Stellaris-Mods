@@ -1,0 +1,3118 @@
+#########################################
+# AUTOMATION OVERDRIVE PLANET MODIFIERS #
+#########################################
+
+#[0] Overdrive
+mod_ukn_automation_overdrive_normal_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_overdrive_normal_0.dds"
+	icon_frame = 4
+}
+mod_ukn_automation_overdrive_arcology_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_overdrive_arcology_0.dds"
+	icon_frame = 4
+}
+mod_ukn_automation_overdrive_rw_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_overdrive_rw_0.dds"
+	icon_frame = 4
+}
+mod_ukn_automation_overdrive_alderson_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_overdrive_alderson_0.dds"
+	icon_frame = 4
+}
+
+#[1] Overdrive
+mod_ukn_automation_overdrive_normal_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_overdrive_normal_1.dds"
+	icon_frame = 4
+	planet_districts_ukn_automation_upkeep_mult = 1.00
+}
+mod_ukn_automation_overdrive_arcology_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_overdrive_arcology_1.dds"
+	icon_frame = 4
+	planet_districts_ukn_arcology_automation_upkeep_mult = 0.75
+}
+mod_ukn_automation_overdrive_rw_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_overdrive_rw_1.dds"
+	icon_frame = 4
+	planet_buildings_ukn_automation_grid_1_upkeep_mult = 0.75
+}
+mod_ukn_automation_overdrive_alderson_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_overdrive_alderson_1.dds"
+	icon_frame = 4
+	planet_buildings_ukn_automation_grid_2_upkeep_mult = 0.60
+}
+
+#[2] Overdrive
+mod_ukn_automation_overdrive_arcology_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_overdrive_arcology_2.dds"
+	icon_frame = 4
+	planet_districts_ukn_arcology_automation_upkeep_mult = 1.50
+}
+mod_ukn_automation_overdrive_rw_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_overdrive_rw_2.dds"
+	icon_frame = 4
+	planet_buildings_ukn_automation_grid_1_upkeep_mult = 1.50
+}
+mod_ukn_automation_overdrive_alderson_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_overdrive_alderson_2.dds"
+	icon_frame = 4
+	planet_buildings_ukn_automation_grid_2_upkeep_mult = 1.20
+}
+
+#[3] Overdrive
+mod_ukn_automation_overdrive_rw_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_overdrive_rw_3.dds"
+	icon_frame = 4
+	planet_buildings_ukn_automation_grid_1_upkeep_mult = 2.25
+}
+mod_ukn_automation_overdrive_alderson_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_overdrive_alderson_3.dds"
+	icon_frame = 4
+	planet_buildings_ukn_automation_grid_2_upkeep_mult = 1.80
+}
+
+###############################
+# AUTOMATION PLANET MODIFIERS #
+###############################
+
+#[ALL] 0 DISTRICTS
+mod_ukn_automation_inactive = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_inactive.dds"
+	icon_frame = 4
+}
+
+#[NORMAL] 1-5 DISTRICTS
+mod_ukn_automation_normal_1_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_normal_1_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_1_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_1_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_normal_1_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[NORMAL] 6-10 DISTRICTS
+mod_ukn_automation_normal_2_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_normal_2_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_2_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_2_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_2_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_normal_2_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[NORMAL] 11-15 DISTRICTS
+mod_ukn_automation_normal_3_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_normal_3_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_3_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_3_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_3_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_3_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_normal_3_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[NORMAL] 16-20 DISTRICTS
+mod_ukn_automation_normal_4_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_normal_4_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_4_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_4_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_4_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_4_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_normal_4_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[NORMAL] 21-25 DISTRICTS
+mod_ukn_automation_normal_5_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_normal_5_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_5_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_5_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_5_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_5_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_normal_5_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[NORMAL] 26-30 DISTRICTS
+mod_ukn_automation_normal_6_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_normal_6_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_6_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_6_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_6_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_6_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_normal_6_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[NORMAL] 31-35 DISTRICTS
+mod_ukn_automation_normal_7_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_normal_7_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_7_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_7_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_7_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_7_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_normal_7_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[NORMAL] 36-40 DISTRICTS
+mod_ukn_automation_normal_8_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_normal_8_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_8_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_8_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_8_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_8_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_normal_8_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[NORMAL] 41-45 DISTRICTS
+mod_ukn_automation_normal_9_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_normal_9_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_9_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_9_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_9_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_9_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_normal_9_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[NORMAL] 46-50 DISTRICTS
+mod_ukn_automation_normal_10_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_normal_10_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_10_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_10_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_10_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_10_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_normal_10_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[NORMAL] 51-55 DISTRICTS
+mod_ukn_automation_normal_11_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_normal_11_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_11_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_11_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_11_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_11_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_normal_11_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[NORMAL] 56-60 DISTRICTS
+mod_ukn_automation_normal_12_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_normal_12_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_12_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_12_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_12_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_12_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_normal_12_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[NORMAL] 61-65 DISTRICTS
+mod_ukn_automation_normal_13_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_normal_13_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_13_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_13_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_13_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_13_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_normal_13_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[NORMAL] 66-70 DISTRICTS
+mod_ukn_automation_normal_14_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_normal_14_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_14_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_14_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_14_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_14_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_normal_14_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[NORMAL] 71-75 DISTRICTS
+mod_ukn_automation_normal_15_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_normal_15_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_15_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_15_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_15_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_15_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_normal_15_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[NORMAL] 76-80 DISTRICTS
+mod_ukn_automation_normal_16_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_normal_16_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_16_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_16_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_16_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_16_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_normal_16_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[NORMAL] 81-85 DISTRICTS
+mod_ukn_automation_normal_17_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_normal_17_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_17_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_17_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_17_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_17_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_normal_17_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[NORMAL] 86-90 DISTRICTS
+mod_ukn_automation_normal_18_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_normal_18_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_18_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_18_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_18_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_18_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_normal_18_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[NORMAL] 91-95 DISTRICTS
+mod_ukn_automation_normal_19_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_normal_19_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_19_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_19_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_19_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_19_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_normal_19_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[NORMAL] 96-100 DISTRICTS
+mod_ukn_automation_normal_20_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_normal_20_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_20_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_normal_20_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_20_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_normal_20_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_normal_20_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+		
+		
+		
+#[ARCOLOGY] 1-5 DISTRICTS
+mod_ukn_automation_arcology_1_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_arcology_1_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_1_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_1_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_arcology_1_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[ARCOLOGY] 6-10 DISTRICTS
+mod_ukn_automation_arcology_2_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_arcology_2_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_2_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_2_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_2_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_arcology_2_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[ARCOLOGY] 11-15 DISTRICTS
+mod_ukn_automation_arcology_3_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_arcology_3_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_3_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_3_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_3_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_3_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_arcology_3_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[ARCOLOGY] 16-20 DISTRICTS
+mod_ukn_automation_arcology_4_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_arcology_4_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_4_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_4_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_4_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_4_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_arcology_4_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[ARCOLOGY] 21-25 DISTRICTS
+mod_ukn_automation_arcology_5_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_arcology_5_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_5_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_5_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_5_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_5_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_arcology_5_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[ARCOLOGY] 26-30 DISTRICTS
+mod_ukn_automation_arcology_6_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_arcology_6_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_6_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_6_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_6_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_6_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_arcology_6_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[ARCOLOGY] 31-35 DISTRICTS
+mod_ukn_automation_arcology_7_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_arcology_7_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_7_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_7_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_7_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_7_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_arcology_7_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[ARCOLOGY] 36-40 DISTRICTS
+mod_ukn_automation_arcology_8_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_arcology_8_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_8_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_8_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_8_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_8_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_arcology_8_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[ARCOLOGY] 41-45 DISTRICTS
+mod_ukn_automation_arcology_9_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_arcology_9_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_9_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_9_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_9_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_9_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_arcology_9_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[ARCOLOGY] 46-50 DISTRICTS
+mod_ukn_automation_arcology_10_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_arcology_10_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_10_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_10_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_10_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_10_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_arcology_10_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[ARCOLOGY] 51-55 DISTRICTS
+mod_ukn_automation_arcology_11_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_arcology_11_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_11_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_11_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_11_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_11_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_arcology_11_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[ARCOLOGY] 56-60 DISTRICTS
+mod_ukn_automation_arcology_12_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_arcology_12_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_12_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_12_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_12_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_12_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_arcology_12_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[ARCOLOGY] 61-65 DISTRICTS
+mod_ukn_automation_arcology_13_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_arcology_13_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_13_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_13_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_13_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_13_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_arcology_13_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[ARCOLOGY] 66-70 DISTRICTS
+mod_ukn_automation_arcology_14_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_arcology_14_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_14_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_14_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_14_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_14_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_arcology_14_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[ARCOLOGY] 71-75 DISTRICTS
+mod_ukn_automation_arcology_15_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_arcology_15_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_15_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_15_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_15_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_15_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_arcology_15_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[ARCOLOGY] 76-80 DISTRICTS
+mod_ukn_automation_arcology_16_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_arcology_16_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_16_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_16_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_16_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_16_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_arcology_16_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[ARCOLOGY] 81-85 DISTRICTS
+mod_ukn_automation_arcology_17_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_arcology_17_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_17_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_17_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_17_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_17_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_arcology_17_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[ARCOLOGY] 86-90 DISTRICTS
+mod_ukn_automation_arcology_18_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_arcology_18_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_18_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_18_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_18_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_18_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_arcology_18_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[ARCOLOGY] 91-95 DISTRICTS
+mod_ukn_automation_arcology_19_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_arcology_19_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_19_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_19_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_19_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_19_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_arcology_19_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[ARCOLOGY] 96-100 DISTRICTS
+mod_ukn_automation_arcology_20_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_arcology_20_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_20_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_arcology_20_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_20_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_arcology_20_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_arcology_20_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+		
+		
+		
+#[RINGWORLD] 1-2 DISTRICTS
+mod_ukn_automation_rw_1_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_rw_1_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_1_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_1_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_rw_1_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[RINGWORLD] 3-4 DISTRICTS
+mod_ukn_automation_rw_2_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_rw_2_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_2_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_2_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_2_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_rw_2_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[RINGWORLD] 5-6 DISTRICTS
+mod_ukn_automation_rw_3_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_rw_3_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_3_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_3_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_3_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_3_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_rw_3_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[RINGWORLD] 7-8 DISTRICTS
+mod_ukn_automation_rw_4_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_rw_4_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_4_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_4_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_4_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_4_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_rw_4_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[RINGWORLD] 9-10 DISTRICTS
+mod_ukn_automation_rw_5_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_rw_5_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_5_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_5_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_5_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_5_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_rw_5_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[RINGWORLD] 11-12 DISTRICTS
+mod_ukn_automation_rw_6_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_rw_6_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_6_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_6_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_6_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_6_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_rw_6_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[RINGWORLD] 13-14 DISTRICTS
+mod_ukn_automation_rw_7_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_rw_7_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_7_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_7_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_7_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_7_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_rw_7_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[RINGWORLD] 15-16 DISTRICTS
+mod_ukn_automation_rw_8_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_rw_8_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_8_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_8_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_8_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_8_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_rw_8_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[RINGWORLD] 17-18 DISTRICTS
+mod_ukn_automation_rw_9_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_rw_9_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_9_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_9_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_9_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_9_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_rw_9_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[RINGWORLD] 19-20 DISTRICTS
+mod_ukn_automation_rw_10_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_rw_10_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_10_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_10_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_10_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_10_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_rw_10_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[RINGWORLD] 21-22 DISTRICTS
+mod_ukn_automation_rw_11_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_rw_11_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_11_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_11_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_11_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_11_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_rw_11_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[RINGWORLD] 23-24 DISTRICTS
+mod_ukn_automation_rw_12_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_rw_12_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_12_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_12_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_12_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_12_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_rw_12_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[RINGWORLD] 25-26 DISTRICTS
+mod_ukn_automation_rw_13_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_rw_13_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_13_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_13_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_13_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_13_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_rw_13_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[RINGWORLD] 27-28 DISTRICTS
+mod_ukn_automation_rw_14_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_rw_14_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_14_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_14_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_14_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_14_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_rw_14_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[RINGWORLD] 29-30 DISTRICTS
+mod_ukn_automation_rw_15_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_rw_15_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_15_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_15_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_15_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_15_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_rw_15_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[RINGWORLD] 31-32 DISTRICTS
+mod_ukn_automation_rw_16_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_rw_16_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_16_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_16_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_16_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_16_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_rw_16_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[RINGWORLD] 33-34 DISTRICTS
+mod_ukn_automation_rw_17_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_rw_17_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_17_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_17_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_17_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_17_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_rw_17_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[RINGWORLD] 35-36 DISTRICTS
+mod_ukn_automation_rw_18_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_rw_18_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_18_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_18_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_18_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_18_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_rw_18_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[RINGWORLD] 37-38 DISTRICTS
+mod_ukn_automation_rw_19_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_rw_19_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_19_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_19_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_19_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_19_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_rw_19_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+#[RINGWORLD] 39-40 DISTRICTS
+mod_ukn_automation_rw_20_m_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 1.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.15
+}
+mod_ukn_automation_rw_20_m_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.50
+	planet_jobs_produces_mult = -0.05
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_20_m_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_m_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.05
+}
+mod_ukn_automation_rw_20_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_20_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_rw_20_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_rw_20_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}
+
+		
+		
+		
+#[ALDERSON] ALL DISTRICTS
+mod_ukn_automation_alderson_p_0 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_0.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = 0.00
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_alderson_p_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_1.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.10
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = 0.00
+}
+mod_ukn_automation_alderson_p_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_2.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.15
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.05
+}
+mod_ukn_automation_alderson_p_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/mod_ukn_automation_p_3.dds"
+	icon_frame = 4
+	planet_districts_upkeep_mult = -0.20
+	planet_jobs_produces_mult = 0.00
+	planet_jobs_upkeep_mult = -0.10
+}

@@ -1,0 +1,19 @@
+namespace = primsub
+
+event = {
+	id = primsub.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_galaxy_planet = {
+			limit = {
+				exists = owner
+				owner = {
+					is_country_type = primitive
+				}
+			}
+			set_variable = { which = primsub_pops value = 0 }
+			#export pops to variable
+		}
+	}
+}

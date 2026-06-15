@@ -1,0 +1,1747 @@
+utility_component_template = {
+	key = "CORVETTE_HULL_1"
+	size = small
+	icon = "GFX_ship_part_hull_1"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @corvettecost1
+		}
+		upkeep = {
+			energy = @corvetteupkeepenergy1
+			alloys = @corvetteupkeepalloys1
+		}
+	}
+	modifier = {
+		ship_hull_add = @corvettehull1
+	}
+
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "ship_hull_material"
+	size_restriction = { corvette colonizer lithoid_colonizer lithoid_colonizer sponsored_colonizer constructor science transport }
+	upgrades_to = "CORVETTE_HULL_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_HULL_1"
+	size = small
+	icon = "GFX_ship_part_hull_1"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @destroyercost1
+		}
+		upkeep = {
+			energy = @destroyerupkeepenergy1
+			alloys = @destroyerupkeepalloys1
+		}
+	}
+	modifier = {
+		ship_hull_add = @destroyerhull1
+	}
+
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "ship_hull_material"
+	size_restriction = { destroyer }
+	upgrades_to = "DESTROYER_HULL_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_HULL_1"
+	size = small
+	icon = "GFX_ship_part_hull_1"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruisercost1
+		}
+		upkeep = {
+			energy = @cruiserupkeepenergy1
+			alloys = @cruiserupkeepalloys1
+		}
+	}
+	modifier = {
+		ship_hull_add = @cruiserhull1
+	}
+
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "ship_hull_material"
+	size_restriction = { cruiser ion_cannon }
+	upgrades_to = "CRUISER_HULL_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_HULL_1"
+	size = small
+	icon = "GFX_ship_part_hull_1"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @battleshipcost1
+		}
+		upkeep = {
+			energy = @battleshipupkeepenergy1
+			alloys = @battleshipupkeepalloys1
+		}
+	}
+	modifier = {
+		ship_hull_add = @battleshiphull1
+	}
+
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "ship_hull_material"
+	size_restriction = { battleship }
+	upgrades_to = "BATTLESHIP_HULL_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_HULL_1"
+	size = small
+	icon = "GFX_ship_part_hull_1"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titancost1
+		}
+		upkeep = {
+			energy = @titanupkeepenergy1
+			alloys = @titanupkeepalloys1
+		}
+	}
+	modifier = {
+		ship_hull_add = @titanhull1
+	}
+
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "ship_hull_material"
+	size_restriction = { titan }
+	upgrades_to = "TITAN_HULL_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_HULL_1"
+	size = large
+	icon = "GFX_ship_part_hull_1"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruisercost1
+		}
+		upkeep = {
+			energy = @cruiserupkeepenergy1
+		}
+	}
+	modifier = {
+		ship_hull_add = @cruiserhull1
+	}
+
+	prerequisites = { "tech_ship_armor_1" }
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+		military_station_medium
+		military_station_large
+	}
+	component_set = "ship_hull_material"
+	upgrades_to = "PLATFORM_HULL_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_HULL_1"
+	size = large
+	icon = "GFX_ship_part_hull_1"
+	icon_frame = 1
+	modifier = {
+		ship_hull_add = @starbasehull1
+	}
+
+	prerequisites = { "tech_ship_armor_1" }
+	class_restriction = { shipclass_starbase }
+	component_set = "ship_hull_material"
+	size_restriction = {
+		starbase_outpost
+		starbase_starport
+		starbase_starhold
+		starbase_starfortress
+		starbase_citadel
+		juggernaut
+	}
+	upgrades_to = "STARBASE_HULL_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "CORVETTE_HULL_2"
+	size = small
+	icon = "GFX_ship_part_hull_2"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @corvettecost2
+		}
+		upkeep = {
+			energy = @corvetteupkeepenergy2
+			alloys = @corvetteupkeepalloys2
+		}
+	}
+	modifier = {
+		ship_hull_add = @corvettehull2
+	}
+
+	prerequisites = { "tech_ship_armor_2" }
+	component_set = "ship_hull_material"
+	size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport }
+	upgrades_to = "CORVETTE_HULL_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_HULL_2"
+	size = small
+	icon = "GFX_ship_part_hull_2"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @destroyercost2
+		}
+		upkeep = {
+			energy = @destroyerupkeepenergy2
+			alloys = @destroyerupkeepalloys2
+		}
+	}
+	modifier = {
+		ship_hull_add = @destroyerhull2
+	}
+
+	prerequisites = { "tech_ship_armor_2" }
+	component_set = "ship_hull_material"
+	size_restriction = { destroyer }
+	upgrades_to = "DESTROYER_HULL_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_HULL_2"
+	size = small
+	icon = "GFX_ship_part_hull_2"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruisercost2
+		}
+		upkeep = {
+			energy = @cruiserupkeepenergy2
+			alloys = @cruiserupkeepalloys2
+		}
+	}
+	modifier = {
+		ship_hull_add = @cruiserhull2
+	}
+
+	prerequisites = { "tech_ship_armor_2" }
+	component_set = "ship_hull_material"
+	size_restriction = { cruiser ion_cannon }
+	upgrades_to = "CRUISER_HULL_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_HULL_2"
+	size = small
+	icon = "GFX_ship_part_hull_2"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @battleshipcost2
+		}
+		upkeep = {
+			energy = @battleshipupkeepenergy2
+			alloys = @battleshipupkeepalloys2
+		}
+	}
+	modifier = {
+		ship_hull_add = @battleshiphull2
+	}
+
+	prerequisites = { "tech_ship_armor_2" }
+	component_set = "ship_hull_material"
+	size_restriction = { battleship }
+	upgrades_to = "BATTLESHIP_HULL_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_HULL_2"
+	size = small
+	icon = "GFX_ship_part_hull_2"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titancost2
+		}
+		upkeep = {
+			energy = @titanupkeepenergy2
+			alloys = @titanupkeepalloys2
+		}
+	}
+	modifier = {
+		ship_hull_add = @titanhull2
+	}
+
+	prerequisites = { "tech_ship_armor_2" }
+	component_set = "ship_hull_material"
+	size_restriction = { titan }
+	upgrades_to = "TITAN_HULL_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_HULL_2"
+	size = large
+	icon = "GFX_ship_part_hull_2"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruisercost2
+		}
+		upkeep = {
+			energy = @cruiserupkeepenergy2
+		}
+	}
+	modifier = {
+		ship_hull_add = @cruiserhull2
+	}
+
+	prerequisites = { "tech_ship_armor_2" }
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+		military_station_medium
+		military_station_large
+	}
+	component_set = "ship_hull_material"
+	upgrades_to = "PLATFORM_HULL_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_HULL_2"
+	size = large
+	icon = "GFX_ship_part_hull_2"
+	icon_frame = 1
+	modifier = {
+		ship_hull_add = @starbasehull2
+	}
+
+	prerequisites = { "tech_ship_armor_2" }
+	component_set = "ship_hull_material"
+	class_restriction = { shipclass_starbase }
+	size_restriction = {
+		starbase_outpost
+		starbase_starport
+		starbase_starhold
+		starbase_starfortress
+		starbase_citadel
+		juggernaut
+	}
+	upgrades_to = "STARBASE_HULL_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "CORVETTE_HULL_3"
+	size = small
+	icon = "GFX_ship_part_hull_3"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @corvettecost3
+		}
+		upkeep = {
+			energy = @corvetteupkeepenergy3
+			alloys = @corvetteupkeepalloys3
+		}
+	}
+	modifier = {
+		ship_hull_add = @corvettehull3
+	}
+
+	prerequisites = { "tech_ship_armor_3" }
+	component_set = "ship_hull_material"
+	size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport }
+	upgrades_to = "CORVETTE_HULL_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_HULL_3"
+	size = small
+	icon = "GFX_ship_part_hull_3"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @destroyercost3
+		}
+		upkeep = {
+			energy = @destroyerupkeepenergy3
+			alloys = @destroyerupkeepalloys3
+		}
+	}
+	modifier = {
+		ship_hull_add = @destroyerhull3
+	}
+
+	prerequisites = { "tech_ship_armor_3" }
+	component_set = "ship_hull_material"
+	size_restriction = { destroyer }
+	upgrades_to = "DESTROYER_HULL_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_HULL_3"
+	size = small
+	icon = "GFX_ship_part_hull_3"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruisercost3
+		}
+		upkeep = {
+			energy = @cruiserupkeepenergy3
+			alloys = @cruiserupkeepalloys3
+		}
+	}
+	modifier = {
+		ship_hull_add = @cruiserhull3
+	}
+
+	prerequisites = { "tech_ship_armor_3" }
+	component_set = "ship_hull_material"
+	size_restriction = { cruiser ion_cannon }
+	upgrades_to = "CRUISER_HULL_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_HULL_3"
+	size = small
+	icon = "GFX_ship_part_hull_3"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @battleshipcost3
+		}
+		upkeep = {
+			energy = @battleshipupkeepenergy3
+			alloys = @battleshipupkeepalloys3
+		}
+	}
+	modifier = {
+		ship_hull_add = @battleshiphull3
+	}
+
+	prerequisites = { "tech_ship_armor_3" }
+	component_set = "ship_hull_material"
+	size_restriction = { battleship }
+	upgrades_to = "BATTLESHIP_HULL_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_HULL_3"
+	size = small
+	icon = "GFX_ship_part_hull_3"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titancost3
+		}
+		upkeep = {
+			energy = @titanupkeepenergy3
+			alloys = @titanupkeepalloys3
+		}
+	}
+	modifier = {
+		ship_hull_add = @titanhull3
+	}
+
+	prerequisites = { "tech_ship_armor_3" }
+	component_set = "ship_hull_material"
+	size_restriction = { titan }
+	upgrades_to = "TITAN_HULL_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_HULL_3"
+	size = large
+	icon = "GFX_ship_part_hull_3"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruisercost3
+		}
+		upkeep = {
+			energy = @cruiserupkeepenergy3
+		}
+	}
+	modifier = {
+		ship_hull_add = @cruiserhull3
+	}
+
+	prerequisites = { "tech_ship_armor_3" }
+	component_set = "ship_hull_material"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+		military_station_medium
+		military_station_large
+	}
+	upgrades_to = "PLATFORM_HULL_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_HULL_3"
+	size = large
+	icon = "GFX_ship_part_hull_3"
+	icon_frame = 1
+	modifier = {
+		ship_hull_add = @starbasehull3
+	}
+
+	prerequisites = { "tech_ship_armor_3" }
+	component_set = "ship_hull_material"
+	class_restriction = { shipclass_starbase }
+	size_restriction = {
+		starbase_outpost
+		starbase_starport
+		starbase_starhold
+		starbase_starfortress
+		starbase_citadel
+		juggernaut
+	}
+	upgrades_to = "STARBASE_HULL_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "CORVETTE_HULL_4"
+	size = small
+	icon = "GFX_ship_part_hull_4"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @corvettecost4
+		}
+		upkeep = {
+			energy = @corvetteupkeepenergy4
+			alloys = @corvetteupkeepalloys4
+		}
+	}
+	modifier = {
+		ship_hull_add = @corvettehull4
+	}
+
+	prerequisites = { "tech_ship_armor_4" }
+	component_set = "ship_hull_material"
+	size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport }
+	upgrades_to = "CORVETTE_HULL_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_HULL_4"
+	size = small
+	icon = "GFX_ship_part_hull_4"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @destroyercost4
+		}
+		upkeep = {
+			energy = @destroyerupkeepenergy4
+			alloys = @destroyerupkeepalloys4
+		}
+	}
+	modifier = {
+		ship_hull_add = @destroyerhull4
+	}
+
+	prerequisites = { "tech_ship_armor_4" }
+	component_set = "ship_hull_material"
+	size_restriction = { destroyer }
+	upgrades_to = "DESTROYER_HULL_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_HULL_4"
+	size = small
+	icon = "GFX_ship_part_hull_4"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruisercost4
+		}
+		upkeep = {
+			energy = @cruiserupkeepenergy4
+			alloys = @cruiserupkeepalloys4
+		}
+	}
+	modifier = {
+		ship_hull_add = @cruiserhull4
+	}
+
+	prerequisites = { "tech_ship_armor_4" }
+	component_set = "ship_hull_material"
+	size_restriction = { cruiser ion_cannon }
+	upgrades_to = "CRUISER_HULL_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_HULL_4"
+	size = small
+	icon = "GFX_ship_part_hull_4"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @battleshipcost4
+		}
+		upkeep = {
+			energy = @battleshipupkeepenergy4
+			alloys = @battleshipupkeepalloys4
+		}
+	}
+	modifier = {
+		ship_hull_add = @battleshiphull4
+	}
+
+	prerequisites = { "tech_ship_armor_4" }
+	component_set = "ship_hull_material"
+	size_restriction = { battleship }
+	upgrades_to = "BATTLESHIP_HULL_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_HULL_4"
+	size = small
+	icon = "GFX_ship_part_hull_4"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titancost4
+		}
+		upkeep = {
+			energy = @titanupkeepenergy4
+			alloys = @titanupkeepalloys4
+		}
+	}
+	modifier = {
+		ship_hull_add = @titanhull4
+	}
+
+	prerequisites = { "tech_ship_armor_4" }
+	component_set = "ship_hull_material"
+	size_restriction = { titan }
+	upgrades_to = "TITAN_HULL_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_HULL_4"
+	size = large
+	icon = "GFX_ship_part_hull_4"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruisercost4
+		}
+		upkeep = {
+			energy = @cruiserupkeepenergy4
+		}
+	}
+	modifier = {
+		ship_hull_add = @cruiserhull4
+	}
+
+	prerequisites = { "tech_ship_armor_4" }
+	component_set = "ship_hull_material"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+		military_station_medium
+		military_station_large
+	}
+	upgrades_to = "PLATFORM_HULL_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_HULL_4"
+	size = large
+	icon = "GFX_ship_part_hull_4"
+	icon_frame = 1
+	modifier = {
+		ship_hull_add = @starbasehull4
+	}
+
+	prerequisites = { "tech_ship_armor_4" }
+	component_set = "ship_hull_material"
+	class_restriction = { shipclass_starbase }
+	size_restriction = {
+		starbase_outpost
+		starbase_starport
+		starbase_starhold
+		starbase_starfortress
+		starbase_citadel
+		juggernaut
+	}
+	upgrades_to = "STARBASE_HULL_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "CORVETTE_HULL_5"
+	size = small
+	icon = "GFX_ship_part_hull_5"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @corvettecost5
+		}
+		upkeep = {
+			energy = @corvetteupkeepenergy5
+			alloys = @corvetteupkeepalloys5
+		}
+	}
+	modifier = {
+		ship_hull_add = @corvettehull6
+	}
+
+	prerequisites = { "tech_ship_armor_5" }
+	component_set = "ship_hull_material"
+	size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport }
+	upgrades_to = "CORVETTE_HULL_6"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_HULL_5"
+	size = small
+	icon = "GFX_ship_part_hull_5"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @destroyercost5
+		}
+		upkeep = {
+			energy = @destroyerupkeepenergy5
+			alloys = @destroyerupkeepalloys5
+		}
+	}
+	modifier = {
+		ship_hull_add = @destroyerhull5
+	}
+
+	prerequisites = { "tech_ship_armor_5" }
+	component_set = "ship_hull_material"
+	size_restriction = { destroyer }
+	upgrades_to = "DESTROYER_HULL_6"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_HULL_5"
+	size = small
+	icon = "GFX_ship_part_hull_5"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruisercost5
+		}
+		upkeep = {
+			energy = @cruiserupkeepenergy5
+			alloys = @cruiserupkeepalloys5
+		}
+	}
+	modifier = {
+		ship_hull_add = @cruiserhull5
+	}
+
+	prerequisites = { "tech_ship_armor_5" }
+	component_set = "ship_hull_material"
+	size_restriction = { cruiser ion_cannon }
+	upgrades_to = "CRUISER_HULL_6"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_HULL_5"
+	size = small
+	icon = "GFX_ship_part_hull_5"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @battleshipcost5
+		}
+		upkeep = {
+			energy = @battleshipupkeepenergy5
+			alloys = @battleshipupkeepalloys5
+		}
+	}
+	modifier = {
+		ship_hull_add = @battleshiphull5
+	}
+
+	prerequisites = { "tech_ship_armor_5" }
+	component_set = "ship_hull_material"
+	size_restriction = { battleship }
+	upgrades_to = "BATTLESHIP_HULL_6"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_HULL_5"
+	size = small
+	icon = "GFX_ship_part_hull_5"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titancost5
+		}
+		upkeep = {
+			energy = @titanupkeepenergy5
+			alloys = @titanupkeepalloys5
+		}
+	}
+	modifier = {
+		ship_hull_add = @titanhull5
+	}
+
+	prerequisites = { "tech_ship_armor_5" }
+	component_set = "ship_hull_material"
+	size_restriction = { titan }
+	upgrades_to = "TITAN_HULL_6"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_HULL_5"
+	size = small
+	icon = "GFX_ship_part_hull_5"
+	icon_frame = 1
+	modifier = {
+		ship_hull_add = @colossushull5
+	}
+
+	component_set = "ship_hull_material"
+	size_restriction = { colossus }
+	upgrades_to = "COLOSSUS_HULL_6"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_HULL_5"
+	size = large
+	icon = "GFX_ship_part_hull_5"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruisercost5
+		}
+		upkeep = {
+			energy = @cruiserupkeepenergy5
+		}
+	}
+	modifier = {
+		ship_hull_add = @cruiserhull5
+	}
+
+	prerequisites = { "tech_ship_armor_5" }
+	component_set = "ship_hull_material"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+		military_station_medium
+		military_station_large
+	}
+	upgrades_to = "PLATFORM_HULL_6"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_HULL_5"
+	size = large
+	icon = "GFX_ship_part_hull_5"
+	icon_frame = 1
+	modifier = {
+		ship_hull_add = @starbasehull5
+	}
+
+	prerequisites = { "tech_ship_armor_5" }
+	component_set = "ship_hull_material"
+	class_restriction = { shipclass_starbase }
+	size_restriction = {
+		starbase_outpost
+		starbase_starport
+		starbase_starhold
+		starbase_starfortress
+		starbase_citadel
+		juggernaut
+	}
+	upgrades_to = "STARBASE_HULL_6"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+####################
+# Dragonscale Hull
+####################
+
+utility_component_template = {
+	key = "CORVETTE_HULL_6"
+	size = small
+	icon = "GFX_ship_part_hull_6"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @corvettecost6
+		}
+		upkeep = {
+			energy = @corvetteupkeepenergy6
+			alloys = @corvetteupkeepalloys6
+		}
+	}
+	modifier = {
+		ship_hull_add = @corvettehull6
+	}
+
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "ship_hull_material"
+	size_restriction = { corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport }
+
+	ai_weight = {
+		weight = 6
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_HULL_6"
+	size = small
+	icon = "GFX_ship_part_hull_6"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @destroyercost6
+		}
+		upkeep = {
+			energy = @destroyerupkeepenergy6
+			alloys = @destroyerupkeepalloys6
+		}
+	}
+	modifier = {
+		ship_hull_add = @destroyerhull6
+	}
+
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "ship_hull_material"
+	size_restriction = { destroyer }
+
+	ai_weight = {
+		weight = 6
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_HULL_6"
+	size = small
+	icon = "GFX_ship_part_hull_6"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruisercost6
+		}
+		upkeep = {
+			energy = @cruiserupkeepenergy6
+			alloys = @cruiserupkeepalloys6
+		}
+	}
+	modifier = {
+		ship_hull_add = @cruiserhull6
+	}
+
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "ship_hull_material"
+	size_restriction = { cruiser ion_cannon }
+
+	ai_weight = {
+		weight = 6
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_HULL_6"
+	size = small
+	icon = "GFX_ship_part_hull_6"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @battleshipcost6
+		}
+		upkeep = {
+			energy = @battleshipupkeepenergy6
+			alloys = @battleshipupkeepalloys6
+		}
+	}
+	modifier = {
+		ship_hull_add = @battleshiphull6
+	}
+
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "ship_hull_material"
+	size_restriction = { battleship }
+
+	ai_weight = {
+		weight = 6
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_HULL_6"
+	size = small
+	icon = "GFX_ship_part_hull_6"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titancost6
+		}
+		upkeep = {
+			energy = @titanupkeepenergy6
+			alloys = @titanupkeepalloys6
+		}
+	}
+	modifier = {
+		ship_hull_add = @titanhull6
+	}
+
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "ship_hull_material"
+	size_restriction = { titan }
+
+	ai_weight = {
+		weight = 6
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_HULL_6"
+	size = small
+	icon = "GFX_ship_part_hull_6"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+	}
+	modifier = {
+		ship_hull_add = @colossushull6
+	}
+
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "ship_hull_material"
+	size_restriction = { colossus }
+
+	ai_weight = {
+		weight = 6
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_HULL_6"
+	size = large
+	icon = "GFX_ship_part_hull_6"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cruisercost6
+		}
+		upkeep = {
+			energy = @cruiserupkeepenergy6
+		}
+	}
+	modifier = {
+		ship_hull_add = @cruiserhull6
+	}
+
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "ship_hull_material"
+	class_restriction = { shipclass_military_station }
+	size_restriction = {
+		military_station_small
+		military_station_medium
+		military_station_large
+	}
+
+	ai_weight = {
+		weight = 6
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_HULL_6"
+	size = large
+	icon = "GFX_ship_part_hull_6"
+	icon_frame = 1
+	modifier = {
+		ship_hull_add = @starbasehull6
+	}
+
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "ship_hull_material"
+	class_restriction = { shipclass_starbase }
+	size_restriction = {
+		starbase_outpost
+		starbase_starport
+		starbase_starhold
+		starbase_starfortress
+		starbase_citadel
+		juggernaut
+	}
+
+	ai_weight = {
+		weight = 6
+	}
+}
+
+##Hull Reinforcement##
+
+utility_component_template = {
+	key = "SMALL_hull_reinforcement_1"
+	size = small
+	icon = "GFX_ship_part_hull_1"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @hullcost_S1
+		}
+		upkeep = {
+			energy = @hullcost_M1_upkeep_energy
+			alloys = @hullcost_M1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+		ship_hull_mult = @hullreinforcebonus_S1
+	}
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "hull_reinforcement_1"
+	upgrades_to = "SMALL_hull_reinforcement_2"
+	ai_weight = {
+		weight = 100
+	}
+}
+utility_component_template = {
+	key = "MEDIUM_hull_reinforcement_1"
+	size = medium
+	icon = "GFX_ship_part_hull_1"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @hullcost_M1
+		}
+		upkeep = {
+			energy = @hullcost_M1_upkeep_energy
+			alloys = @hullcost_M1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+		ship_hull_mult = @hullreinforcebonus_M1
+	}
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "hull_reinforcement_1"
+	upgrades_to = "MEDIUM_hull_reinforcement_2"
+	ai_weight = {
+		weight = 100
+	}
+}
+utility_component_template = {
+	key = "LARGE_hull_reinforcement_1"
+	size = large
+	icon = "GFX_ship_part_hull_1"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @hullcost_L1
+		}
+		upkeep = {
+			energy = @hullcost_M1_upkeep_energy
+			alloys = @hullcost_M1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+		ship_hull_mult = @hullreinforcebonus_L1
+	}
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "hull_reinforcement_1"
+	upgrades_to = "LARGE_hull_reinforcement_2"
+	ai_weight = {
+		weight = 100
+	}
+}
+
+utility_component_template = {
+	key = "SMALL_hull_reinforcement_2"
+	size = small
+	icon = "GFX_ship_part_hull_2"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @hullcost_S2
+		}
+		upkeep = {
+			energy = @hullcost_M2_upkeep_energy
+			alloys = @hullcost_M2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+		ship_hull_mult = @hullreinforcebonus_S2
+	}
+	prerequisites = { "tech_ship_armor_2" }
+	component_set = "hull_reinforcement_2"
+	upgrades_to = "SMALL_hull_reinforcement_3"
+	ai_weight = {
+		weight = 200
+	}
+}
+utility_component_template = {
+	key = "MEDIUM_hull_reinforcement_2"
+	size = medium
+	icon = "GFX_ship_part_hull_2"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @hullcost_M2
+		}
+		upkeep = {
+			energy = @hullcost_M2_upkeep_energy
+			alloys = @hullcost_M2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+		ship_hull_mult = @hullreinforcebonus_M2
+	}
+	prerequisites = { "tech_ship_armor_2" }
+	component_set = "hull_reinforcement_2"
+	upgrades_to = "MEDIUM_hull_reinforcement_3"
+	ai_weight = {
+		weight = 200
+	}
+}
+utility_component_template = {
+	key = "LARGE_hull_reinforcement_2"
+	size = large
+	icon = "GFX_ship_part_hull_2"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @hullcost_L2
+		}
+		upkeep = {
+			energy = @hullcost_M2_upkeep_energy
+			alloys = @hullcost_M2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+		ship_hull_mult = @hullreinforcebonus_L2
+	}
+	prerequisites = { "tech_ship_armor_2" }
+	component_set = "hull_reinforcement_2"
+	upgrades_to = "LARGE_hull_reinforcement_3"
+	ai_weight = {
+		weight = 200
+	}
+}
+
+utility_component_template = {
+	key = "SMALL_hull_reinforcement_3"
+	size = small
+	icon = "GFX_ship_part_hull_3"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @hullcost_S3
+		}
+		upkeep = {
+			energy = @hullcost_M3_upkeep_energy
+			alloys = @hullcost_M3_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+		ship_hull_mult = @hullreinforcebonus_S3
+	}
+	prerequisites = { "tech_ship_armor_3" }
+	component_set = "hull_reinforcement_3"
+	upgrades_to = "SMALL_hull_reinforcement_4"
+	ai_weight = {
+		weight = 300
+	}
+}
+utility_component_template = {
+	key = "MEDIUM_hull_reinforcement_3"
+	size = medium
+	icon = "GFX_ship_part_hull_3"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @hullcost_M3
+		}
+		upkeep = {
+			energy = @hullcost_M3_upkeep_energy
+			alloys = @hullcost_M3_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+		ship_hull_mult = @hullreinforcebonus_M3
+	}
+	prerequisites = { "tech_ship_armor_3" }
+	component_set = "hull_reinforcement_3"
+	upgrades_to = "MEDIUM_hull_reinforcement_4"
+	ai_weight = {
+		weight = 300
+	}
+}
+utility_component_template = {
+	key = "LARGE_hull_reinforcement_3"
+	size = large
+	icon = "GFX_ship_part_hull_3"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @hullcost_L3
+		}
+		upkeep = {
+			energy = @hullcost_M3_upkeep_energy
+			alloys = @hullcost_M3_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+		ship_hull_mult = @hullreinforcebonus_L3
+	}
+	prerequisites = { "tech_ship_armor_3" }
+	component_set = "hull_reinforcement_3"
+	upgrades_to = "LARGE_hull_reinforcement_4"
+	ai_weight = {
+		weight = 300
+	}
+}
+
+utility_component_template = {
+	key = "SMALL_hull_reinforcement_4"
+	size = small
+	icon = "GFX_ship_part_hull_4"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @hullcost_S4
+		}
+		upkeep = {
+			energy = @hullcost_M4_upkeep_energy
+			alloys = @hullcost_M4_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+		ship_hull_mult = @hullreinforcebonus_S4
+	}
+	prerequisites = { "tech_ship_armor_4" }
+	component_set = "hull_reinforcement_4"
+	upgrades_to = "SMALL_hull_reinforcement_5"
+
+	ai_weight = {
+		weight = 400
+	}
+}
+utility_component_template = {
+	key = "MEDIUM_hull_reinforcement_4"
+	size = medium
+	icon = "GFX_ship_part_hull_4"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @hullcost_M4
+		}
+		upkeep = {
+			energy = @hullcost_M4_upkeep_energy
+			alloys = @hullcost_M4_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+		ship_hull_mult = @hullreinforcebonus_M4
+	}
+	prerequisites = { "tech_ship_armor_4" }
+	component_set = "hull_reinforcement_4"
+	upgrades_to = "MEDIUM_hull_reinforcement_5"
+
+	ai_weight = {
+		weight = 400
+	}
+}
+utility_component_template = {
+	key = "LARGE_hull_reinforcement_4"
+	size = large
+	icon = "GFX_ship_part_hull_4"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @hullcost_L4
+		}
+		upkeep = {
+			energy = @hullcost_M4_upkeep_energy
+			alloys = @hullcost_M4_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+		ship_hull_mult = @hullreinforcebonus_L4
+	}
+	prerequisites = { "tech_ship_armor_4" }
+	component_set = "hull_reinforcement_4"
+	upgrades_to = "LARGE_hull_reinforcement_5"
+
+	ai_weight = {
+		weight = 400
+	}
+}
+
+utility_component_template = {
+	key = "SMALL_hull_reinforcement_5"
+	size = small
+	icon = "GFX_ship_part_hull_5"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @hullcost_S5
+		}
+		upkeep = {
+			energy = @hullcost_M5_upkeep_energy
+			alloys = @hullcost_M5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+		ship_hull_mult = @hullreinforcebonus_S5
+	}
+	prerequisites = { "tech_ship_armor_5" }
+	component_set = "hull_reinforcement_5"
+	upgrades_to = "SMALL_hull_reinforcement_6"
+
+	ai_weight = {
+		weight = 500
+	}
+}
+utility_component_template = {
+	key = "MEDIUM_hull_reinforcement_5"
+	size = medium
+	icon = "GFX_ship_part_hull_5"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @hullcost_M5
+		}
+		upkeep = {
+			energy = @hullcost_M5_upkeep_energy
+			alloys = @hullcost_M5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+		ship_hull_mult = @hullreinforcebonus_M5
+	}
+	prerequisites = { "tech_ship_armor_5" }
+	component_set = "hull_reinforcement_5"
+	upgrades_to = "MEDIUM_hull_reinforcement_6"
+
+	ai_weight = {
+		weight = 500
+	}
+}
+utility_component_template = {
+	key = "LARGE_hull_reinforcement_5"
+	size = large
+	icon = "GFX_ship_part_hull_5"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @hullcost_L5
+		}
+		upkeep = {
+			energy = @hullcost_M5_upkeep_energy
+			alloys = @hullcost_M5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+		ship_hull_mult = @hullreinforcebonus_L5
+	}
+	prerequisites = { "tech_ship_armor_5" }
+	component_set = "hull_reinforcement_5"
+	upgrades_to = "LARGE_hull_reinforcement_6"
+
+	ai_weight = {
+		weight = 500
+	}
+}
+
+utility_component_template = {
+	key = "SMALL_hull_reinforcement_6"
+	size = small
+	icon = "GFX_ship_part_hull_6"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @hullcost_S6
+		}
+		upkeep = {
+			energy = @hullcost_M6_upkeep_energy
+			alloys = @hullcost_M6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+		ship_hull_mult = @hullreinforcebonus_S6
+	}
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "hull_reinforcement_6"
+
+	ai_weight = {
+		weight = 600
+	}
+}
+utility_component_template = {
+	key = "MEDIUM_hull_reinforcement_6"
+	size = medium
+	icon = "GFX_ship_part_hull_6"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @hullcost_M6
+		}
+		upkeep = {
+			energy = @hullcost_M6_upkeep_energy
+			alloys = @hullcost_M6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+		ship_hull_mult = @hullreinforcebonus_M6
+	}
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "hull_reinforcement_6"
+
+	ai_weight = {
+		weight = 600
+	}
+}
+utility_component_template = {
+	key = "LARGE_hull_reinforcement_6"
+	size = large
+	icon = "GFX_ship_part_hull_6"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @hullcost_L6
+		}
+		upkeep = {
+			energy = @hullcost_M6_upkeep_energy
+			alloys = @hullcost_M6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = 1
+		ship_hull_mult = @hullreinforcebonus_L6
+	}
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "hull_reinforcement_6"
+
+	ai_weight = {
+		weight = 600
+	}
+}

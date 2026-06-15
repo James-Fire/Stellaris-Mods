@@ -1,0 +1,97 @@
+# Radioisotope Injection
+decision_ukn_planet_rare_isotopes_exotic_particles_factory_boost = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+
+	prerequisites = {
+		"tech_ukn_exotic_particles"
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			trigger = {
+				num_districts = { type = any value < 5 }
+			}
+			volatile_motes = 200
+		}
+		cost = {
+			trigger = {
+				num_districts = { type = any value >= 5 }
+				num_districts = { type = any value < 10 }
+			}
+			volatile_motes = 300
+		}
+		cost = {
+			trigger = {
+				num_districts = { type = any value >= 10 }
+				num_districts = { type = any value < 15 }
+			}
+			volatile_motes = 400
+		}
+		cost = {
+			trigger = {
+				num_districts = { type = any value >= 15 }
+				num_districts = { type = any value < 20 }
+			}
+			volatile_motes = 500
+		}
+		cost = {
+			trigger = {
+				num_districts = { type = any value >= 20 }
+				num_districts = { type = any value < 25 }
+			}
+			volatile_motes = 600
+		}
+		cost = {
+			trigger = {
+				num_districts = { type = any value >= 25 }
+				num_districts = { type = any value < 30 }
+			}
+			volatile_motes = 700
+		}
+		cost = {
+			trigger = {
+				num_districts = { type = any value >= 30 }
+				num_districts = { type = any value < 35 }
+			}
+			volatile_motes = 800
+		}
+		cost = {
+			trigger = {
+				num_districts = { type = any value >= 35 }
+				num_districts = { type = any value < 40 }
+			}
+			volatile_motes = 900
+		}
+		cost = {
+			trigger = {
+				num_districts = { type = any value >= 40 }
+				num_districts = { type = any value < 45 }
+			}
+			volatile_motes = 1000
+		}
+		cost = {
+			trigger = {
+				num_districts = { type = any value >= 45 }
+			}
+			volatile_motes = 1100
+		}
+	}
+
+	potential = {
+		always = yes
+	}
+
+	allow = {
+		NOT = { has_modifier = mod_ukn_planet_rare_isotopes_exotic_particles_factory_boost }
+	}
+
+	effect = {
+		add_modifier = { modifier = "mod_ukn_planet_rare_isotopes_exotic_particles_factory_boost" days = 7200 }
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}

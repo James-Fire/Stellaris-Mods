@@ -1,0 +1,76 @@
+namespace = lanaza
+
+country_event = {
+	id = lanaza.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_origin = origin_lanaza
+			}
+			capital_scope = {
+				set_planet_size = 30
+				add_modifier = {
+					modifier = lanaza_habitability
+				}
+				planet_event = { id = lanaza.11 days = 2 }
+				every_owned_pop = {
+					limit = {
+						has_trait = trait_lanaza_habitability
+					}
+					PREV = { change_variable = { which = lanaza_pops value = 1 } }
+				}
+				add_modifier = {
+					modifier = lanaza_pops
+					multiplier = lanaza_pops
+				}
+			}
+		}
+	}
+}
+planet_event = {
+	id = lanaza.11
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		add_deposit = b_lanaza_food
+		add_deposit = b_lanaza_minerals
+		add_deposit = b_lanaza_energy
+		add_deposit = b_lanaza_alloys
+		add_deposit = b_lanaza_crime
+		add_deposit = b_lanaza_growth
+		add_deposit = b_lanaza_research
+		add_deposit = b_lanaza_unity
+		add_deposit = b_lanaza_housing
+	}
+}
+country_event = {
+	id = lanaza.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_origin = origin_lanaza
+			}
+			every_owned_planet = {
+				remove_modifier = lanaza_pops
+				set_variable = { which = lanaza_pops value = 0 }
+				every_owned_pop = {
+					limit = {
+						has_trait = trait_lanaza_habitability
+					}
+					PREV = { change_variable = { which = lanaza_pops value = 1 } }
+				}
+				add_modifier = {
+					modifier = lanaza_pops
+					multiplier = lanaza_pops
+				}
+			}
+		}
+	}
+}

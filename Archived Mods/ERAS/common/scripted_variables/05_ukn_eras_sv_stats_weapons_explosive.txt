@@ -1,0 +1,791 @@
+#####################
+##### MISSILES ######
+#####################
+
+@ukn_missile_0b_hull_damage_mult = 1.25
+@ukn_missile_1_hull_damage_mult = 1.25
+@ukn_missile_2_hull_damage_mult = 1.25
+@ukn_missile_3_hull_damage_mult = 1.25
+@ukn_missile_4_hull_damage_mult = 1.25
+@ukn_missile_5_hull_damage_mult = 1.25
+@ukn_missile_6_hull_damage_mult = 1.35
+@ukn_missile_7_hull_damage_mult = 1.35
+@ukn_missile_8_hull_damage_mult = 1.35
+@ukn_missile_9_hull_damage_mult = 1.55
+@ukn_missile_10_hull_damage_mult = 1.55
+@ukn_missile_planck_hull_damage_mult = 1.35
+@ukn_missile_scourge_hull_damage_mult = 1.35
+
+@ukn_missile_0b_armor_penetration_mult = 0.00
+@ukn_missile_1_armor_penetration_mult = 0.00
+@ukn_missile_2_armor_penetration_mult = 0.00
+@ukn_missile_3_armor_penetration_mult = 0.00
+@ukn_missile_4_armor_penetration_mult = 0.00
+@ukn_missile_5_armor_penetration_mult = 0.00
+@ukn_missile_6_armor_penetration_mult = 0.00
+@ukn_missile_7_armor_penetration_mult = 0.00
+@ukn_missile_8_armor_penetration_mult = 0.00
+@ukn_missile_9_armor_penetration_mult = 0.00
+@ukn_missile_10_armor_penetration_mult = 0.00
+@ukn_missile_planck_armor_penetration_mult = 0.00
+@ukn_missile_scourge_armor_penetration_mult = 0.00
+
+@ukn_missile_0b_shield_penetration_mult = 1.00
+@ukn_missile_1_shield_penetration_mult = 1.00
+@ukn_missile_2_shield_penetration_mult = 1.00
+@ukn_missile_3_shield_penetration_mult = 1.00
+@ukn_missile_4_shield_penetration_mult = 1.00
+@ukn_missile_5_shield_penetration_mult = 1.00
+@ukn_missile_6_shield_penetration_mult = 1.00
+@ukn_missile_7_shield_penetration_mult = 1.00
+@ukn_missile_8_shield_penetration_mult = 1.00
+@ukn_missile_9_shield_penetration_mult = 1.00
+@ukn_missile_10_shield_penetration_mult = 1.00
+@ukn_missile_planck_shield_penetration_mult = 1.00
+@ukn_missile_scourge_shield_penetration_mult = 1.00
+
+@ukn_missile_0b_armor_damage_mult = 1.00
+@ukn_missile_1_armor_damage_mult = 1.00
+@ukn_missile_2_armor_damage_mult = 1.00
+@ukn_missile_3_armor_damage_mult = 1.00
+@ukn_missile_4_armor_damage_mult = 1.00
+@ukn_missile_5_armor_damage_mult = 1.00
+@ukn_missile_6_armor_damage_mult = 1.10
+@ukn_missile_7_armor_damage_mult = 1.10
+@ukn_missile_8_armor_damage_mult = 1.10
+@ukn_missile_9_armor_damage_mult = 1.25
+@ukn_missile_10_armor_damage_mult = 1.25
+@ukn_missile_planck_armor_damage_mult = 1.10
+@ukn_missile_scourge_armor_damage_mult = 1.10
+
+@ukn_missile_0b_shield_damage_mult = 1.00
+@ukn_missile_1_shield_damage_mult = 1.00
+@ukn_missile_2_shield_damage_mult = 1.00
+@ukn_missile_3_shield_damage_mult = 1.00
+@ukn_missile_4_shield_damage_mult = 1.00
+@ukn_missile_5_shield_damage_mult = 1.00
+@ukn_missile_6_shield_damage_mult = 1.00
+@ukn_missile_7_shield_damage_mult = 1.00
+@ukn_missile_8_shield_damage_mult = 1.00
+@ukn_missile_9_shield_damage_mult = 1.00
+@ukn_missile_10_shield_damage_mult = 1.00
+@ukn_missile_planck_shield_damage_mult = 1.00
+@ukn_missile_scourge_shield_damage_mult = 1.00
+#---
+
+@ukn_missile_0b_accuracy = 1.00
+@ukn_missile_1_accuracy = 1.00
+@ukn_missile_2_accuracy = 1.00
+@ukn_missile_3_accuracy = 1.00
+@ukn_missile_4_accuracy = 1.00
+@ukn_missile_5_accuracy = 1.00
+@ukn_missile_6_accuracy = 1.00
+@ukn_missile_7_accuracy = 1.00
+@ukn_missile_8_accuracy = 1.00
+@ukn_missile_9_accuracy = 1.00
+@ukn_missile_10_accuracy = 1.00
+@ukn_missile_planck_accuracy = 1.00
+@ukn_missile_scourge_accuracy = 1.00
+
+# MISSILE STATS #-------------------
+
+@ukn_missile_0b_missile_speed = 18
+@ukn_missile_1_missile_speed = 18
+@ukn_missile_2_missile_speed = 18
+@ukn_missile_3_missile_speed = 18
+@ukn_missile_4_missile_speed = 18
+@ukn_missile_5_missile_speed = 18
+@ukn_missile_6_missile_speed = 18
+@ukn_missile_7_missile_speed = 18
+@ukn_missile_8_missile_speed = 18
+@ukn_missile_9_missile_speed = 18
+@ukn_missile_10_missile_speed = 18
+@ukn_missile_planck_missile_speed = 18
+@ukn_missile_scourge_missile_speed = 18
+
+@ukn_missile_0b_missile_evasion = 0.60
+@ukn_missile_1_missile_evasion = 0.60
+@ukn_missile_2_missile_evasion = 0.65
+@ukn_missile_3_missile_evasion = 0.70
+@ukn_missile_4_missile_evasion = 0.75
+@ukn_missile_5_missile_evasion = 0.80
+@ukn_missile_6_missile_evasion = 0.90
+@ukn_missile_7_missile_evasion = 0.95
+@ukn_missile_8_missile_evasion = 1.00
+@ukn_missile_9_missile_evasion = 1.15
+@ukn_missile_10_missile_evasion = 1.20
+@ukn_missile_planck_missile_evasion = 1.05
+@ukn_missile_scourge_missile_evasion = 1.05
+
+@ukn_missile_0b_missile_health = 3 
+@ukn_missile_1_missile_health = 4 
+@ukn_missile_2_missile_health = 5 
+@ukn_missile_3_missile_health = 6 
+@ukn_missile_4_missile_health = 8 
+@ukn_missile_5_missile_health = 10 
+@ukn_missile_6_missile_health = 13 
+@ukn_missile_7_missile_health = 19 
+@ukn_missile_8_missile_health = 27 
+@ukn_missile_9_missile_health = 60 
+@ukn_missile_10_missile_health = 92 
+@ukn_missile_planck_missile_health = 40 
+@ukn_missile_scourge_missile_health = 40 
+
+@ukn_missile_0b_missile_retarget_range = 100
+@ukn_missile_1_missile_retarget_range = 100
+@ukn_missile_2_missile_retarget_range = 100
+@ukn_missile_3_missile_retarget_range = 100
+@ukn_missile_4_missile_retarget_range = 100
+@ukn_missile_5_missile_retarget_range = 100
+@ukn_missile_6_missile_retarget_range = 100
+@ukn_missile_7_missile_retarget_range = 100
+@ukn_missile_8_missile_retarget_range = 100
+@ukn_missile_9_missile_retarget_range = 100
+@ukn_missile_10_missile_retarget_range = 100
+@ukn_missile_planck_missile_retarget_range = 100
+@ukn_missile_scourge_missile_retarget_range = 100
+
+
+# GENERAL STATS #---------------------------
+
+@ukn_missile_0b_power = -7 
+@ukn_missile_1_power = -9 
+@ukn_missile_2_power = -12 
+@ukn_missile_3_power = -15 
+@ukn_missile_4_power = -20 
+@ukn_missile_5_power = -26 
+@ukn_missile_6_power = -35 
+@ukn_missile_7_power = -49 
+@ukn_missile_8_power = -71 
+@ukn_missile_9_power = -155 
+@ukn_missile_10_power = -240 
+@ukn_missile_planck_power = -103 
+@ukn_missile_scourge_power = -103 
+#---
+
+@ukn_missile_0b_dmg_min = 23 
+@ukn_missile_1_dmg_min = 30 
+@ukn_missile_2_dmg_min = 39 
+@ukn_missile_3_dmg_min = 51 
+@ukn_missile_4_dmg_min = 66 
+@ukn_missile_5_dmg_min = 86 
+@ukn_missile_6_dmg_min = 116 
+@ukn_missile_7_dmg_min = 162 
+@ukn_missile_8_dmg_min = 236 
+@ukn_missile_9_dmg_min = 512 
+@ukn_missile_10_dmg_min = 794 
+@ukn_missile_planck_dmg_min = 342 
+@ukn_missile_scourge_dmg_min = 342 
+
+@ukn_missile_0b_dmg_max = 31 
+@ukn_missile_1_dmg_max = 40 
+@ukn_missile_2_dmg_max = 52 
+@ukn_missile_3_dmg_max = 68 
+@ukn_missile_4_dmg_max = 88 
+@ukn_missile_5_dmg_max = 114 
+@ukn_missile_6_dmg_max = 154 
+@ukn_missile_7_dmg_max = 216 
+@ukn_missile_8_dmg_max = 313 
+@ukn_missile_9_dmg_max = 681 
+@ukn_missile_10_dmg_max = 1055 
+@ukn_missile_planck_dmg_max = 454 
+@ukn_missile_scourge_dmg_max = 454 
+#---
+
+@ukn_missile_0b_windup_min = 1
+@ukn_missile_1_windup_min = 1
+@ukn_missile_2_windup_min = 1
+@ukn_missile_3_windup_min = 1
+@ukn_missile_4_windup_min = 1
+@ukn_missile_5_windup_min = 1
+@ukn_missile_6_windup_min = 1
+@ukn_missile_7_windup_min = 1
+@ukn_missile_8_windup_min = 1
+@ukn_missile_9_windup_min = 1
+@ukn_missile_10_windup_min = 1
+@ukn_missile_planck_windup_min = 1
+@ukn_missile_scourge_windup_min = 1
+
+@ukn_missile_0b_windup_max = 15
+@ukn_missile_1_windup_max = 15
+@ukn_missile_2_windup_max = 15
+@ukn_missile_3_windup_max = 15
+@ukn_missile_4_windup_max = 15
+@ukn_missile_5_windup_max = 15
+@ukn_missile_6_windup_max = 15
+@ukn_missile_7_windup_max = 15
+@ukn_missile_8_windup_max = 15
+@ukn_missile_9_windup_max = 15
+@ukn_missile_10_windup_max = 15
+@ukn_missile_planck_windup_max = 15
+@ukn_missile_scourge_windup_max = 15
+#---
+
+@ukn_missile_0b_total_fire_time = 60
+@ukn_missile_1_total_fire_time = 60
+@ukn_missile_2_total_fire_time = 60
+@ukn_missile_3_total_fire_time = 60
+@ukn_missile_4_total_fire_time = 60
+@ukn_missile_5_total_fire_time = 60
+@ukn_missile_6_total_fire_time = 60
+@ukn_missile_7_total_fire_time = 60
+@ukn_missile_8_total_fire_time = 60
+@ukn_missile_9_total_fire_time = 60
+@ukn_missile_10_total_fire_time = 60
+@ukn_missile_planck_total_fire_time = 60
+@ukn_missile_scourge_total_fire_time = 60
+#---
+
+@ukn_missile_0b_range = 100
+@ukn_missile_1_range = 100
+@ukn_missile_2_range = 100
+@ukn_missile_3_range = 100
+@ukn_missile_4_range = 100
+@ukn_missile_5_range = 100
+@ukn_missile_6_range = 110
+@ukn_missile_7_range = 110
+@ukn_missile_8_range = 110
+@ukn_missile_9_range = 130
+@ukn_missile_10_range = 130
+@ukn_missile_planck_range = 110
+@ukn_missile_scourge_range = 110
+#---
+
+@ukn_missile_0b_tracking = 0.65
+@ukn_missile_1_tracking = 0.65
+@ukn_missile_2_tracking = 0.65
+@ukn_missile_3_tracking = 0.65
+@ukn_missile_4_tracking = 0.65
+@ukn_missile_5_tracking = 0.65
+@ukn_missile_6_tracking = 0.70
+@ukn_missile_7_tracking = 0.70
+@ukn_missile_8_tracking = 0.70
+@ukn_missile_9_tracking = 0.75
+@ukn_missile_10_tracking = 0.75
+@ukn_missile_planck_tracking = 0.70
+@ukn_missile_scourge_tracking = 0.70
+
+#############################
+##### SWARMER MISSILES ######
+#############################
+
+@ukn_swarmer_missile_1_hull_damage_mult = 1.00
+@ukn_swarmer_missile_2_hull_damage_mult = 1.00
+@ukn_swarmer_missile_3_hull_damage_mult = 1.00
+@ukn_swarmer_missile_4_hull_damage_mult = 1.00
+@ukn_swarmer_missile_5_hull_damage_mult = 1.00
+@ukn_swarmer_missile_6_hull_damage_mult = 1.10
+@ukn_swarmer_missile_7_hull_damage_mult = 1.10
+@ukn_swarmer_missile_8_hull_damage_mult = 1.10
+@ukn_swarmer_missile_9_hull_damage_mult = 1.25
+@ukn_swarmer_missile_10_hull_damage_mult = 1.25
+@ukn_swarmer_missile_planck_hull_damage_mult = 1.10
+@ukn_swarmer_missile_scourge_hull_damage_mult = 1.10
+
+@ukn_swarmer_missile_1_armor_penetration_mult = 0.00
+@ukn_swarmer_missile_2_armor_penetration_mult = 0.00
+@ukn_swarmer_missile_3_armor_penetration_mult = 0.00
+@ukn_swarmer_missile_4_armor_penetration_mult = 0.00
+@ukn_swarmer_missile_5_armor_penetration_mult = 0.00
+@ukn_swarmer_missile_6_armor_penetration_mult = 0.00
+@ukn_swarmer_missile_7_armor_penetration_mult = 0.00
+@ukn_swarmer_missile_8_armor_penetration_mult = 0.00
+@ukn_swarmer_missile_9_armor_penetration_mult = 0.00
+@ukn_swarmer_missile_10_armor_penetration_mult = 0.00
+@ukn_swarmer_missile_planck_armor_penetration_mult = 0.00
+@ukn_swarmer_missile_scourge_armor_penetration_mult = 0.00
+
+@ukn_swarmer_missile_1_shield_penetration_mult = 1.00
+@ukn_swarmer_missile_2_shield_penetration_mult = 1.00
+@ukn_swarmer_missile_3_shield_penetration_mult = 1.00
+@ukn_swarmer_missile_4_shield_penetration_mult = 1.00
+@ukn_swarmer_missile_5_shield_penetration_mult = 1.00
+@ukn_swarmer_missile_6_shield_penetration_mult = 1.00
+@ukn_swarmer_missile_7_shield_penetration_mult = 1.00
+@ukn_swarmer_missile_8_shield_penetration_mult = 1.00
+@ukn_swarmer_missile_9_shield_penetration_mult = 1.00
+@ukn_swarmer_missile_10_shield_penetration_mult = 1.00
+@ukn_swarmer_missile_planck_shield_penetration_mult = 1.00
+@ukn_swarmer_missile_scourge_shield_penetration_mult = 1.00
+
+@ukn_swarmer_missile_1_armor_damage_mult = 1.00
+@ukn_swarmer_missile_2_armor_damage_mult = 1.00
+@ukn_swarmer_missile_3_armor_damage_mult = 1.00
+@ukn_swarmer_missile_4_armor_damage_mult = 1.00
+@ukn_swarmer_missile_5_armor_damage_mult = 1.00
+@ukn_swarmer_missile_6_armor_damage_mult = 1.10
+@ukn_swarmer_missile_7_armor_damage_mult = 1.10
+@ukn_swarmer_missile_8_armor_damage_mult = 1.10
+@ukn_swarmer_missile_9_armor_damage_mult = 1.25
+@ukn_swarmer_missile_10_armor_damage_mult = 1.25
+@ukn_swarmer_missile_planck_armor_damage_mult = 1.10
+@ukn_swarmer_missile_scourge_armor_damage_mult = 1.10
+
+@ukn_swarmer_missile_1_shield_damage_mult = 1.00
+@ukn_swarmer_missile_2_shield_damage_mult = 1.00
+@ukn_swarmer_missile_3_shield_damage_mult = 1.00
+@ukn_swarmer_missile_4_shield_damage_mult = 1.00
+@ukn_swarmer_missile_5_shield_damage_mult = 1.00
+@ukn_swarmer_missile_6_shield_damage_mult = 1.00
+@ukn_swarmer_missile_7_shield_damage_mult = 1.00
+@ukn_swarmer_missile_8_shield_damage_mult = 1.00
+@ukn_swarmer_missile_9_shield_damage_mult = 1.00
+@ukn_swarmer_missile_10_shield_damage_mult = 1.00
+@ukn_swarmer_missile_planck_shield_damage_mult = 1.00
+@ukn_swarmer_missile_scourge_shield_damage_mult = 1.00
+#---
+
+@ukn_swarmer_missile_1_accuracy = 1.00
+@ukn_swarmer_missile_2_accuracy = 1.00
+@ukn_swarmer_missile_3_accuracy = 1.00
+@ukn_swarmer_missile_4_accuracy = 1.00
+@ukn_swarmer_missile_5_accuracy = 1.00
+@ukn_swarmer_missile_6_accuracy = 1.00
+@ukn_swarmer_missile_7_accuracy = 1.00
+@ukn_swarmer_missile_8_accuracy = 1.00
+@ukn_swarmer_missile_9_accuracy = 1.00
+@ukn_swarmer_missile_10_accuracy = 1.00
+@ukn_swarmer_missile_planck_accuracy = 1.00
+@ukn_swarmer_missile_scourge_accuracy = 1.00
+
+# MISSILE STATS #-------------------
+
+@ukn_swarmer_missile_1_missile_speed = 19
+@ukn_swarmer_missile_2_missile_speed = 19
+@ukn_swarmer_missile_3_missile_speed = 19
+@ukn_swarmer_missile_4_missile_speed = 19
+@ukn_swarmer_missile_5_missile_speed = 19
+@ukn_swarmer_missile_6_missile_speed = 19
+@ukn_swarmer_missile_7_missile_speed = 19
+@ukn_swarmer_missile_8_missile_speed = 19
+@ukn_swarmer_missile_9_missile_speed = 19
+@ukn_swarmer_missile_10_missile_speed = 19
+@ukn_swarmer_missile_planck_missile_speed = 19
+@ukn_swarmer_missile_scourge_missile_speed = 19
+
+@ukn_swarmer_missile_1_missile_evasion = 0.65
+@ukn_swarmer_missile_2_missile_evasion = 0.70
+@ukn_swarmer_missile_3_missile_evasion = 0.75
+@ukn_swarmer_missile_4_missile_evasion = 0.80
+@ukn_swarmer_missile_5_missile_evasion = 0.85
+@ukn_swarmer_missile_6_missile_evasion = 0.95
+@ukn_swarmer_missile_7_missile_evasion = 1.00
+@ukn_swarmer_missile_8_missile_evasion = 1.05
+@ukn_swarmer_missile_9_missile_evasion = 1.20
+@ukn_swarmer_missile_10_missile_evasion = 1.25
+@ukn_swarmer_missile_planck_missile_evasion = 1.10
+@ukn_swarmer_missile_scourge_missile_evasion = 1.10
+
+@ukn_swarmer_missile_1_missile_health = 14 
+@ukn_swarmer_missile_2_missile_health = 18 
+@ukn_swarmer_missile_3_missile_health = 24 
+@ukn_swarmer_missile_4_missile_health = 31 
+@ukn_swarmer_missile_5_missile_health = 40 
+@ukn_swarmer_missile_6_missile_health = 54 
+@ukn_swarmer_missile_7_missile_health = 76 
+@ukn_swarmer_missile_8_missile_health = 110 
+@ukn_swarmer_missile_9_missile_health = 238 
+@ukn_swarmer_missile_10_missile_health = 369 
+@ukn_swarmer_missile_planck_missile_health = 159 
+@ukn_swarmer_missile_scourge_missile_health = 159 
+
+@ukn_swarmer_missile_1_missile_retarget_range = 100
+@ukn_swarmer_missile_2_missile_retarget_range = 100
+@ukn_swarmer_missile_3_missile_retarget_range = 100
+@ukn_swarmer_missile_4_missile_retarget_range = 100
+@ukn_swarmer_missile_5_missile_retarget_range = 100
+@ukn_swarmer_missile_6_missile_retarget_range = 100
+@ukn_swarmer_missile_7_missile_retarget_range = 100
+@ukn_swarmer_missile_8_missile_retarget_range = 100
+@ukn_swarmer_missile_9_missile_retarget_range = 100
+@ukn_swarmer_missile_10_missile_retarget_range = 100
+@ukn_swarmer_missile_planck_missile_retarget_range = 100
+@ukn_swarmer_missile_scourge_missile_retarget_range = 100
+
+
+# GENERAL STATS #---------------------------
+
+@ukn_swarmer_missile_1_power = -9 
+@ukn_swarmer_missile_2_power = -12 
+@ukn_swarmer_missile_3_power = -15 
+@ukn_swarmer_missile_4_power = -20 
+@ukn_swarmer_missile_5_power = -26 
+@ukn_swarmer_missile_6_power = -35 
+@ukn_swarmer_missile_7_power = -49 
+@ukn_swarmer_missile_8_power = -71 
+@ukn_swarmer_missile_9_power = -155 
+@ukn_swarmer_missile_10_power = -240 
+@ukn_swarmer_missile_planck_power = -103 
+@ukn_swarmer_missile_scourge_power = -103 
+#---
+
+@ukn_swarmer_missile_1_dmg_min = 12 
+@ukn_swarmer_missile_2_dmg_min = 15 
+@ukn_swarmer_missile_3_dmg_min = 19 
+@ukn_swarmer_missile_4_dmg_min = 25 
+@ukn_swarmer_missile_5_dmg_min = 33 
+@ukn_swarmer_missile_6_dmg_min = 44 
+@ukn_swarmer_missile_7_dmg_min = 62 
+@ukn_swarmer_missile_8_dmg_min = 90 
+@ukn_swarmer_missile_9_dmg_min = 196 
+@ukn_swarmer_missile_10_dmg_min = 303 
+@ukn_swarmer_missile_planck_dmg_min = 131 
+@ukn_swarmer_missile_scourge_dmg_min = 131 
+
+@ukn_swarmer_missile_1_dmg_max = 17 
+@ukn_swarmer_missile_2_dmg_max = 22 
+@ukn_swarmer_missile_3_dmg_max = 28 
+@ukn_swarmer_missile_4_dmg_max = 37 
+@ukn_swarmer_missile_5_dmg_max = 48 
+@ukn_swarmer_missile_6_dmg_max = 65 
+@ukn_swarmer_missile_7_dmg_max = 91 
+@ukn_swarmer_missile_8_dmg_max = 131 
+@ukn_swarmer_missile_9_dmg_max = 286 
+@ukn_swarmer_missile_10_dmg_max = 443 
+@ukn_swarmer_missile_planck_dmg_max = 191 
+@ukn_swarmer_missile_scourge_dmg_max = 191 
+#---
+
+@ukn_swarmer_missile_1_windup_min = 1
+@ukn_swarmer_missile_2_windup_min = 1
+@ukn_swarmer_missile_3_windup_min = 1
+@ukn_swarmer_missile_4_windup_min = 1
+@ukn_swarmer_missile_5_windup_min = 1
+@ukn_swarmer_missile_6_windup_min = 1
+@ukn_swarmer_missile_7_windup_min = 1
+@ukn_swarmer_missile_8_windup_min = 1
+@ukn_swarmer_missile_9_windup_min = 1
+@ukn_swarmer_missile_10_windup_min = 1
+@ukn_swarmer_missile_planck_windup_min = 1
+@ukn_swarmer_missile_scourge_windup_min = 1
+
+@ukn_swarmer_missile_1_windup_max = 15
+@ukn_swarmer_missile_2_windup_max = 15
+@ukn_swarmer_missile_3_windup_max = 15
+@ukn_swarmer_missile_4_windup_max = 15
+@ukn_swarmer_missile_5_windup_max = 15
+@ukn_swarmer_missile_6_windup_max = 15
+@ukn_swarmer_missile_7_windup_max = 15
+@ukn_swarmer_missile_8_windup_max = 15
+@ukn_swarmer_missile_9_windup_max = 15
+@ukn_swarmer_missile_10_windup_max = 15
+@ukn_swarmer_missile_planck_windup_max = 15
+@ukn_swarmer_missile_scourge_windup_max = 15
+#---
+
+@ukn_swarmer_missile_1_total_fire_time = 30
+@ukn_swarmer_missile_2_total_fire_time = 30
+@ukn_swarmer_missile_3_total_fire_time = 30
+@ukn_swarmer_missile_4_total_fire_time = 30
+@ukn_swarmer_missile_5_total_fire_time = 30
+@ukn_swarmer_missile_6_total_fire_time = 30
+@ukn_swarmer_missile_7_total_fire_time = 30
+@ukn_swarmer_missile_8_total_fire_time = 30
+@ukn_swarmer_missile_9_total_fire_time = 30
+@ukn_swarmer_missile_10_total_fire_time = 30
+@ukn_swarmer_missile_planck_total_fire_time = 30
+@ukn_swarmer_missile_scourge_total_fire_time = 30
+#---
+
+@ukn_swarmer_missile_1_range = 100
+@ukn_swarmer_missile_2_range = 100
+@ukn_swarmer_missile_3_range = 100
+@ukn_swarmer_missile_4_range = 100
+@ukn_swarmer_missile_5_range = 100
+@ukn_swarmer_missile_6_range = 110
+@ukn_swarmer_missile_7_range = 110
+@ukn_swarmer_missile_8_range = 110
+@ukn_swarmer_missile_9_range = 130
+@ukn_swarmer_missile_10_range = 130
+@ukn_swarmer_missile_planck_range = 110
+@ukn_swarmer_missile_scourge_range = 110
+#---
+
+@ukn_swarmer_missile_1_tracking = 0.70
+@ukn_swarmer_missile_2_tracking = 0.70
+@ukn_swarmer_missile_3_tracking = 0.70
+@ukn_swarmer_missile_4_tracking = 0.70
+@ukn_swarmer_missile_5_tracking = 0.70
+@ukn_swarmer_missile_6_tracking = 0.75
+@ukn_swarmer_missile_7_tracking = 0.75
+@ukn_swarmer_missile_8_tracking = 0.75
+@ukn_swarmer_missile_9_tracking = 0.80
+@ukn_swarmer_missile_10_tracking = 0.80
+@ukn_swarmer_missile_planck_tracking = 0.75
+@ukn_swarmer_missile_scourge_tracking = 0.75
+
+
+######################
+##### TORPEDOES ######
+######################
+
+@ukn_torpedo_1_hull_damage_mult = 1.00
+@ukn_torpedo_2_hull_damage_mult = 1.00
+@ukn_torpedo_3_hull_damage_mult = 1.00
+@ukn_torpedo_4_hull_damage_mult = 1.00
+@ukn_torpedo_5_hull_damage_mult = 1.00
+@ukn_torpedo_6_hull_damage_mult = 1.10
+@ukn_torpedo_7_hull_damage_mult = 1.10
+@ukn_torpedo_8_hull_damage_mult = 1.10
+@ukn_torpedo_9_hull_damage_mult = 1.25
+@ukn_torpedo_10_hull_damage_mult = 1.25
+@ukn_torpedo_planck_hull_damage_mult = 1.10
+@ukn_torpedo_contingency_hull_damage_mult = 1.10
+
+@ukn_torpedo_1_armor_penetration_mult = 0.00
+@ukn_torpedo_2_armor_penetration_mult = 0.00
+@ukn_torpedo_3_armor_penetration_mult = 0.00
+@ukn_torpedo_4_armor_penetration_mult = 0.00
+@ukn_torpedo_5_armor_penetration_mult = 0.00
+@ukn_torpedo_6_armor_penetration_mult = 0.00
+@ukn_torpedo_7_armor_penetration_mult = 0.00
+@ukn_torpedo_8_armor_penetration_mult = 0.00
+@ukn_torpedo_9_armor_penetration_mult = 0.00
+@ukn_torpedo_10_armor_penetration_mult = 0.00
+@ukn_torpedo_planck_armor_penetration_mult = 0.00
+@ukn_torpedo_contingency_armor_penetration_mult = 0.00
+
+@ukn_torpedo_1_shield_penetration_mult = 1.00
+@ukn_torpedo_2_shield_penetration_mult = 1.00
+@ukn_torpedo_3_shield_penetration_mult = 1.00
+@ukn_torpedo_4_shield_penetration_mult = 1.00
+@ukn_torpedo_5_shield_penetration_mult = 1.00
+@ukn_torpedo_6_shield_penetration_mult = 1.00
+@ukn_torpedo_7_shield_penetration_mult = 1.00
+@ukn_torpedo_8_shield_penetration_mult = 1.00
+@ukn_torpedo_9_shield_penetration_mult = 1.00
+@ukn_torpedo_10_shield_penetration_mult = 1.00
+@ukn_torpedo_planck_shield_penetration_mult = 1.00
+@ukn_torpedo_contingency_shield_penetration_mult = 1.00
+
+@ukn_torpedo_1_armor_damage_mult = 1.50
+@ukn_torpedo_2_armor_damage_mult = 1.50
+@ukn_torpedo_3_armor_damage_mult = 1.50
+@ukn_torpedo_4_armor_damage_mult = 1.50
+@ukn_torpedo_5_armor_damage_mult = 1.50
+@ukn_torpedo_6_armor_damage_mult = 1.65
+@ukn_torpedo_7_armor_damage_mult = 1.65
+@ukn_torpedo_8_armor_damage_mult = 1.65
+@ukn_torpedo_9_armor_damage_mult = 1.90
+@ukn_torpedo_10_armor_damage_mult = 1.90
+@ukn_torpedo_planck_armor_damage_mult = 1.65
+@ukn_torpedo_contingency_armor_damage_mult = 1.65
+
+@ukn_torpedo_1_shield_damage_mult = 1.00
+@ukn_torpedo_2_shield_damage_mult = 1.00
+@ukn_torpedo_3_shield_damage_mult = 1.00
+@ukn_torpedo_4_shield_damage_mult = 1.00
+@ukn_torpedo_5_shield_damage_mult = 1.00
+@ukn_torpedo_6_shield_damage_mult = 1.00
+@ukn_torpedo_7_shield_damage_mult = 1.00
+@ukn_torpedo_8_shield_damage_mult = 1.00
+@ukn_torpedo_9_shield_damage_mult = 1.00
+@ukn_torpedo_10_shield_damage_mult = 1.00
+@ukn_torpedo_planck_shield_damage_mult = 1.00
+@ukn_torpedo_contingency_shield_damage_mult = 1.00
+#---
+
+@ukn_torpedo_1_accuracy = 1.00
+@ukn_torpedo_2_accuracy = 1.00
+@ukn_torpedo_3_accuracy = 1.00
+@ukn_torpedo_4_accuracy = 1.00
+@ukn_torpedo_5_accuracy = 1.00
+@ukn_torpedo_6_accuracy = 1.00
+@ukn_torpedo_7_accuracy = 1.00
+@ukn_torpedo_8_accuracy = 1.00
+@ukn_torpedo_9_accuracy = 1.00
+@ukn_torpedo_10_accuracy = 1.00
+@ukn_torpedo_planck_accuracy = 1.00
+@ukn_torpedo_contingency_accuracy = 1.00
+
+# MISSILE STATS #-------------------
+
+@ukn_torpedo_1_missile_speed = 16
+@ukn_torpedo_2_missile_speed = 16
+@ukn_torpedo_3_missile_speed = 16
+@ukn_torpedo_4_missile_speed = 16
+@ukn_torpedo_5_missile_speed = 16
+@ukn_torpedo_6_missile_speed = 16
+@ukn_torpedo_7_missile_speed = 16
+@ukn_torpedo_8_missile_speed = 16
+@ukn_torpedo_9_missile_speed = 16
+@ukn_torpedo_10_missile_speed = 16
+@ukn_torpedo_planck_missile_speed = 16
+@ukn_torpedo_contingency_missile_speed = 16
+
+@ukn_torpedo_1_missile_evasion = 0.35
+@ukn_torpedo_2_missile_evasion = 0.40
+@ukn_torpedo_3_missile_evasion = 0.45
+@ukn_torpedo_4_missile_evasion = 0.50
+@ukn_torpedo_5_missile_evasion = 0.55
+@ukn_torpedo_6_missile_evasion = 0.65
+@ukn_torpedo_7_missile_evasion = 0.70
+@ukn_torpedo_8_missile_evasion = 0.75
+@ukn_torpedo_9_missile_evasion = 0.90
+@ukn_torpedo_10_missile_evasion = 0.95
+@ukn_torpedo_planck_missile_evasion = 0.80
+@ukn_torpedo_contingency_missile_evasion = 0.80
+
+@ukn_torpedo_1_missile_armor = 3 
+@ukn_torpedo_2_missile_armor = 3 
+@ukn_torpedo_3_missile_armor = 4 
+@ukn_torpedo_4_missile_armor = 6 
+@ukn_torpedo_5_missile_armor = 7 
+@ukn_torpedo_6_missile_armor = 10 
+@ukn_torpedo_7_missile_armor = 14 
+@ukn_torpedo_8_missile_armor = 20 
+@ukn_torpedo_9_missile_armor = 43 
+@ukn_torpedo_10_missile_armor = 67 
+@ukn_torpedo_planck_missile_armor = 29 
+@ukn_torpedo_contingency_missile_armor = 29 
+
+@ukn_torpedo_1_missile_health = 4 
+@ukn_torpedo_2_missile_health = 5 
+@ukn_torpedo_3_missile_health = 6 
+@ukn_torpedo_4_missile_health = 8 
+@ukn_torpedo_5_missile_health = 11 
+@ukn_torpedo_6_missile_health = 15 
+@ukn_torpedo_7_missile_health = 21 
+@ukn_torpedo_8_missile_health = 30 
+@ukn_torpedo_9_missile_health = 65 
+@ukn_torpedo_10_missile_health = 101 
+@ukn_torpedo_planck_missile_health = 43 
+@ukn_torpedo_contingency_missile_health = 43 
+
+@ukn_torpedo_1_missile_armor = 3
+@ukn_torpedo_2_missile_armor = 3
+@ukn_torpedo_3_missile_armor = 4
+@ukn_torpedo_4_missile_armor = 6
+@ukn_torpedo_5_missile_armor = 7
+@ukn_torpedo_6_missile_armor = 10
+@ukn_torpedo_7_missile_armor = 14
+@ukn_torpedo_8_missile_armor = 20
+@ukn_torpedo_9_missile_armor = 43
+@ukn_torpedo_10_missile_armor = 67
+@ukn_torpedo_planck_missile_armor = 29
+@ukn_torpedo_contingency_missile_armor = 29
+
+@ukn_torpedo_1_missile_retarget_range = 100
+@ukn_torpedo_2_missile_retarget_range = 100
+@ukn_torpedo_3_missile_retarget_range = 100
+@ukn_torpedo_4_missile_retarget_range = 100
+@ukn_torpedo_5_missile_retarget_range = 100
+@ukn_torpedo_6_missile_retarget_range = 100
+@ukn_torpedo_7_missile_retarget_range = 100
+@ukn_torpedo_8_missile_retarget_range = 100
+@ukn_torpedo_9_missile_retarget_range = 100
+@ukn_torpedo_10_missile_retarget_range = 100
+@ukn_torpedo_planck_missile_retarget_range = 100
+@ukn_torpedo_contingency_missile_retarget_range = 100
+
+
+# GENERAL STATS #---------------------------
+
+@ukn_torpedo_1_power = -11 
+@ukn_torpedo_2_power = -15 
+@ukn_torpedo_3_power = -19 
+@ukn_torpedo_4_power = -25 
+@ukn_torpedo_5_power = -32 
+@ukn_torpedo_6_power = -43 
+@ukn_torpedo_7_power = -60 
+@ukn_torpedo_8_power = -88 
+@ukn_torpedo_9_power = -191 
+@ukn_torpedo_10_power = -296 
+@ukn_torpedo_planck_power = -127 
+@ukn_torpedo_contingency_power = -127 
+#---
+
+@ukn_torpedo_1_dmg_min = 96 
+@ukn_torpedo_2_dmg_min = 125 
+@ukn_torpedo_3_dmg_min = 163 
+@ukn_torpedo_4_dmg_min = 212 
+@ukn_torpedo_5_dmg_min = 275 
+@ukn_torpedo_6_dmg_min = 371 
+@ukn_torpedo_7_dmg_min = 520 
+@ukn_torpedo_8_dmg_min = 754 
+@ukn_torpedo_9_dmg_min = 1639 
+@ukn_torpedo_10_dmg_min = 2541 
+@ukn_torpedo_planck_dmg_min = 1093 
+@ukn_torpedo_contingency_dmg_min = 1093 
+
+@ukn_torpedo_1_dmg_max = 156 
+@ukn_torpedo_2_dmg_max = 203 
+@ukn_torpedo_3_dmg_max = 263 
+@ukn_torpedo_4_dmg_max = 342 
+@ukn_torpedo_5_dmg_max = 445 
+@ukn_torpedo_6_dmg_max = 601 
+@ukn_torpedo_7_dmg_max = 841 
+@ukn_torpedo_8_dmg_max = 1219 
+@ukn_torpedo_9_dmg_max = 2652 
+@ukn_torpedo_10_dmg_max = 4111 
+@ukn_torpedo_planck_dmg_max = 1768 
+@ukn_torpedo_contingency_dmg_max = 1768 
+#---
+
+@ukn_torpedo_1_windup_min = 2
+@ukn_torpedo_2_windup_min = 2
+@ukn_torpedo_3_windup_min = 2
+@ukn_torpedo_4_windup_min = 2
+@ukn_torpedo_5_windup_min = 2
+@ukn_torpedo_6_windup_min = 2
+@ukn_torpedo_7_windup_min = 2
+@ukn_torpedo_8_windup_min = 2
+@ukn_torpedo_9_windup_min = 2
+@ukn_torpedo_10_windup_min = 2
+@ukn_torpedo_planck_windup_min = 2
+@ukn_torpedo_contingency_windup_min = 2
+
+@ukn_torpedo_1_windup_max = 20
+@ukn_torpedo_2_windup_max = 20
+@ukn_torpedo_3_windup_max = 20
+@ukn_torpedo_4_windup_max = 20
+@ukn_torpedo_5_windup_max = 20
+@ukn_torpedo_6_windup_max = 20
+@ukn_torpedo_7_windup_max = 20
+@ukn_torpedo_8_windup_max = 20
+@ukn_torpedo_9_windup_max = 20
+@ukn_torpedo_10_windup_max = 20
+@ukn_torpedo_planck_windup_max = 20
+@ukn_torpedo_contingency_windup_max = 20
+#---
+
+@ukn_torpedo_1_total_fire_time = 200
+@ukn_torpedo_2_total_fire_time = 200
+@ukn_torpedo_3_total_fire_time = 200
+@ukn_torpedo_4_total_fire_time = 200
+@ukn_torpedo_5_total_fire_time = 200
+@ukn_torpedo_6_total_fire_time = 200
+@ukn_torpedo_7_total_fire_time = 200
+@ukn_torpedo_8_total_fire_time = 200
+@ukn_torpedo_9_total_fire_time = 200
+@ukn_torpedo_10_total_fire_time = 200
+@ukn_torpedo_planck_total_fire_time = 200
+@ukn_torpedo_contingency_total_fire_time = 200
+#---
+
+@ukn_torpedo_1_range = 80
+@ukn_torpedo_2_range = 80
+@ukn_torpedo_3_range = 80
+@ukn_torpedo_4_range = 80
+@ukn_torpedo_5_range = 80
+@ukn_torpedo_6_range = 90
+@ukn_torpedo_7_range = 90
+@ukn_torpedo_8_range = 90
+@ukn_torpedo_9_range = 105
+@ukn_torpedo_10_range = 105
+@ukn_torpedo_planck_range = 90
+@ukn_torpedo_contingency_range = 90
+#---
+
+@ukn_torpedo_1_tracking = 0.45
+@ukn_torpedo_2_tracking = 0.45
+@ukn_torpedo_3_tracking = 0.45
+@ukn_torpedo_4_tracking = 0.45
+@ukn_torpedo_5_tracking = 0.45
+@ukn_torpedo_6_tracking = 0.50
+@ukn_torpedo_7_tracking = 0.50
+@ukn_torpedo_8_tracking = 0.50
+@ukn_torpedo_9_tracking = 0.55
+@ukn_torpedo_10_tracking = 0.55
+@ukn_torpedo_planck_tracking = 0.50
+@ukn_torpedo_contingency_tracking = 0.50

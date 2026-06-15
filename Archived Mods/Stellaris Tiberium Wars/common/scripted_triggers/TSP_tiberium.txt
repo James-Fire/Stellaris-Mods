@@ -1,0 +1,27 @@
+# The apply to Pop JOBS and nothing else #
+
+robot_can_into_tiberium = {
+	OR = {
+		has_trait = trait_mechanical
+		has_trait = trait_machine_unit
+		has_trait = trait_cybernetic
+		species = { is_archetype = ROBOT }
+		species = { is_archetype = MACHINE }
+	}
+	NOR = { # All robots can hypothetically mine Tiberium, but Tiberium eats robots, so only reckless cost cutting would use tier one robots.
+		owner = { has_policy_flag = "tiberium_safe" }
+		owner = { has_policy_flag = "tiberium_priority_safe" }
+		owner = { has_policy_flag = "tiberium_balanced_safe" }
+	}
+}
+
+tiberium_plantation = {
+	AND = {
+		is_enslaved = yes # Why is this not already a thing, it is that obvious
+		NOT = {
+			owner = {
+				has_policy_flag = tiberium_safe # Tiberium James says: Slaves may be expendable, but that worthlessness means that they can get around Tiberium and spread it because no one cares to protect them
+			}
+		}
+	}
+}

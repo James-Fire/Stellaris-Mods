@@ -1,0 +1,71 @@
+- 
+
+
+- Administrators should produce admin cap, so it becomes a Ruler version of Bureaucrats.
+- Should punish colonies more than pops, to help smaller and tall empires.
+- Colony capitals increase sprawl from planets on empire
+- Sprawl penalties should decrease Research and Unity production, not costs. (Possible more types of penalties)
+- Influence based on percent below cap
+
+
+Modifiers -
+empire_size_systems_mult
+empire_size_colonies_mult
+empire_size_pops_mult
+empire_size_districts_mult
+empire_size_branch_office_mult
+empire_size_penalty_mult
+
+job_bureaucrat_add
+job_bureaucrat_per_pop
+
+tradition_cost_empire_size_mult
+tech_cost_empire_size_mult
+
+campaigns_cost_mult
+
+country_physics_research_produces_mult
+country_society_research_produces_mult
+country_engineering_research_produces_mult
+
+
+triggers:
+empire_sprawl_cap_fraction
+empire_sprawl_over_cap
+empire_sprawl
+empire_size
+
+can_colonize - Checks if the planet can be colonized by target country
+can_colonize = { who = <target> status = yes }
+Supported Scopes: planet
+Supported Targets: none
+
+has_ethic - Checks if a country has a certain ethos
+has_ethic = ethic_fanatic_pacifist
+Supported Scopes: country pop
+Supported Targets: none
+
+faction_approval - Checks the scoped faction's approval percentage
+faction_approval < 0.9
+Supported Scopes: pop_faction
+Supported Targets: none
+
+support - Checks the faction's support level
+ support > 0.5
+Supported Scopes: pop_faction
+Supported Targets: none
+
+num_pops - Checks the number of pops on the planet/country/pop faction
+num_pops > 12
+Supported Scopes: planet country pop_faction
+Supported Targets: none
+
+is_pop_faction_type - Checks the faction's type
+is_pop_faction_type = malcontent_slaves
+Supported Scopes: pop_faction
+Supported Targets: THIS ROOT PREV FROM OWNER CONTROLLER CAPITAL SOLAR_SYSTEM LEADER RANDOM FROMFROM PREVPREV PREVPREVPREV PREVPREVPREVPREV
+
+has_faction - Checks if the country has any instance of target faction type
+has_faction = planet_separatists
+Supported Scopes: country
+Supported Targets: none

@@ -1,0 +1,267 @@
+decision_privatise_mine = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = minerals
+	
+	enactment_time = 60
+	
+	potential = {
+		free_district_slots > 0
+		num_free_districts = { type = district_mining value > 0 }
+		exists = owner
+		owner = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness 
+			}
+		}
+		NOR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_ringworld_city
+		}
+	}
+
+	effect = {
+		custom_tooltip = "Privatize a Mine"
+		add_deposit = private_mine
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_privatise_mineral_remove = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = minerals
+	
+	enactment_time = 30
+	
+	potential = {
+		has_deposit = private_mine
+	}
+
+	effect = {
+		custom_tooltip = "Publicise a Mine"
+		remove_deposit = private_mine
+		add_district = district_mining
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_privatise_energy = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = energy
+	
+	enactment_time = 60	
+	
+	potential = {
+		free_district_slots > 0
+		num_free_districts = { type = district_generator value > 0 }
+		exists = owner
+		owner = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness 
+			}
+		}
+		NOR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_ringworld_city
+		}
+	}
+
+	effect = {
+		custom_tooltip = "Privatize a Power Plant"
+		add_deposit = private_generator
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_privatise_energy_remove = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = energy
+	
+	enactment_time = 30
+	
+	potential = {
+		has_deposit = private_generator
+	}
+
+	effect = {
+		custom_tooltip = "Publicise a Power Plant"
+		remove_deposit = private_generator
+		add_district = district_generator
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_privatise_food = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = food
+	
+	enactment_time = 60
+	
+	potential = {
+		free_district_slots > 0
+		num_free_districts = { type = district_farming value > 0 }
+		exists = owner
+		owner = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness 
+			}
+		}
+		NOR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_ringworld_city
+		}
+	}
+
+	effect = {
+		custom_tooltip = "Privatize a Farm"
+		add_deposit = private_farm
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_privatise_food_remove = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = food
+	
+	enactment_time = 30
+	
+	potential = {
+		has_deposit = private_farm
+	}
+
+	effect = {
+		custom_tooltip = "Publicise a Farm"
+		remove_deposit = private_farm
+		add_district = district_farming
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_privatise_alloys = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = alloys
+	
+	enactment_time = 120
+	
+	potential = {
+		free_district_slots > 0
+		exists = owner
+		owner = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness 
+			}
+		}
+		OR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_ringworld_city
+		}
+	}
+
+	effect = {
+		custom_tooltip = "Privatize a Foundry"
+		add_deposit = private_alloys
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_privatise_alloys_remove = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = alloys
+	
+	enactment_time = 60
+	
+	potential = {
+		has_deposit = private_alloys
+	}
+
+	effect = {
+		custom_tooltip = "Publicise a Foundry"
+		remove_deposit = private_alloys
+		add_district = district_arcology_arms_industry
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_privatise_factory = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = consumer_goods
+	
+	enactment_time = 120
+	
+	potential = {
+		free_district_slots > 0
+		exists = owner
+		owner = {
+			NOT = {
+				has_ethic = ethic_gestalt_consciousness 
+			}
+		}
+		OR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_ringworld_city
+		}
+	}
+
+	effect = {
+		custom_tooltip = "Privatize a Factory"
+		add_deposit = private_industry
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_privatise_factory_remove = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = food
+	
+	enactment_time = 60
+	
+	potential = {
+		has_deposit = private_industry
+	}
+
+	effect = {
+		custom_tooltip = "Publicise a Factory"
+		remove_deposit = private_industry
+		add_district = district_arcology_civilian_industry
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

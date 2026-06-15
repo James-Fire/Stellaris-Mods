@@ -1,0 +1,57 @@
+ship_insurance = {
+	length = 0
+	cost = { }
+	
+	allow = {
+		fleet_power > 1000
+		has_ethic = ethic_egalitarian
+		NOT = { has_valid_civic = civic_fanatic_purifiers }
+		NOT = { has_valid_civic = civic_hive_devouring_swarm }
+		NOT = { has_valid_civic = civic_machine_terminator }
+		AND = {
+			OR = {
+				is_gestalt = yes
+				has_ethic = ethic_authoritarian
+			}
+			num_communications > 0
+		}
+		
+	}
+	
+	effect = {
+		country_event = { id = insurance.1 }
+	}
+	modifier = {
+		ships_upkeep_mult = 0.10
+	}
+}
+
+country_edict = {
+	name = "ship_insurance"
+	length = 0
+	cost = { }
+	
+	allow = {
+		fleet_power > 1000
+		has_ethic = ethic_fanatic_eglitarian
+		NOT = { has_valid_civic = civic_fanatic_purifiers }
+		NOT = { has_valid_civic = civic_hive_devouring_swarm }
+		NOT = { has_valid_civic = civic_machine_terminator }
+		AND = {
+			has_ethic = ethic_gestalt_conciousness
+			num_communications > 0
+		}
+		AND = {
+			has_ethic = ethic_authoritarian
+			num_communications > 0
+		}
+		
+	}
+	
+	effect = {
+		country_event = { id = insurance.1 }
+	}
+	modifier = {
+		ship_upkeep_mult = 0.10
+	}
+}

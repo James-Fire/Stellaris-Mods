@@ -1,0 +1,19 @@
+namespace = pab_test_events
+
+event = {
+    id = pab_test_events.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = { has_global_flag = "pab_insta_build" }
+            remove_global_flag = "pab_insta_build"
+            log = "insta build toggle off"
+        }
+        else = {
+            set_global_flag = "pab_insta_build"
+            log = "insta build toggle on"
+        }
+    }
+}

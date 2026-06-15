@@ -1,0 +1,1104 @@
+    @prism_sheid_p = 10.0
+    @prism_armor_p = 10.0
+    @prism_sheid_d = 1.5
+    @prism_armor_d = 2.5
+    @prism_hull_d = 2.00
+    @prism_accu_p = 1.00
+    @prism_trac_p = 10
+
+    @prism_t_max_damage = 12000000
+    @prism_e_max_damage = 6000000
+    @prism_l_max_damage = 3000000
+    @prism_m_max_damage = 1500000
+    @prism_s_max_damage = 750000
+    @prism_p_max_damage = 150000
+    
+    @prism_t_min_damage = 8000000
+    @prism_e_min_damage = 4000000
+    @prism_l_min_damage = 2000000
+    @prism_m_min_damage = 1000000
+    @prism_s_min_damage = 500000
+    @prism_p_min_damage = 100000
+
+    @posi_sheid_p = 10.0
+    @posi_armor_p = 10.0
+    @posi_sheid_d = 2.00
+    @posi_armor_d = 2.00
+    @posi_hull_d = 2.00
+    @posi_accu_p = 1.00
+    @posi_trac_p = 10
+
+    @posi_t_max_damage = 12000000
+    @posi_e_max_damage = 6000000
+    @posi_l_max_damage = 3000000
+    @posi_m_max_damage = 1500000
+    @posi_s_max_damage = 750000
+    @posi_p_max_damage = 150000
+    
+    @posi_t_min_damage = 8000000
+    @posi_e_min_damage = 4000000
+    @posi_l_min_damage = 2000000
+    @posi_m_min_damage = 1000000
+    @posi_s_min_damage = 500000
+    @posi_p_min_damage = 100000
+
+    @negm_sheid_p = 10.0
+    @negm_armor_p = 10.0
+    @negm_sheid_d = 2.5
+    @negm_armor_d = 1.5
+    @negm_hull_d = 2.00
+    @negm_accu_p = 1.00
+    @negm_trac_p = 10
+
+    @negm_t_max_damage = 12000000
+    @negm_e_max_damage = 6000000
+    @negm_l_max_damage = 3000000
+    @negm_m_max_damage = 1500000
+    @negm_s_max_damage = 750000
+    @negm_p_max_damage = 150000
+
+    @negm_t_min_damage = 8000000
+    @negm_e_min_damage = 4000000
+    @negm_l_min_damage = 2000000
+    @negm_m_min_damage = 1000000
+    @negm_s_min_damage = 500000
+    @negm_p_min_damage = 100000
+
+#*.*.*.*.*.*.*.*.*. Player weapontype
+#    @PlayerType = { weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+
+#TITANTIC
+    @cost_ta = 32000
+    @cost_te = 32000
+#___________extra_large
+    @cost_xa = 16000
+    @cost_xe = 16000
+#...............Large
+    @cost_la = 8000
+    @cost_le = 8000
+# MEDIUM
+    @cost_ma = 4000
+    @cost_me = 4000
+#_____________Small
+    @cost_sa = 2000
+    @cost_se = 2000
+#...............Point_Defense
+    @cost_pa = 1000
+    @cost_pe = 1000
+
+
+# ## Energy Lance 2
+weapon_component_template = {
+	key = "TITAN_ENERGY_LANCE_PRISM"
+	size = titanic
+	entity = "invisible_turret_entity"
+	type = instant
+	prio_projectile = yes
+
+	icon = "GFX_ship_part_energy_lance_prism"
+	icon_frame = 1
+
+	min_range = 0.0
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_ta
+			energy = @cost_te
+		}
+	}
+	power = -500
+	damage = { min = @prism_t_min_damage  max = @prism_t_max_damage  }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 100
+	shield_penetration = @prism_sheid_p
+	armor_penetration = @prism_armor_p
+	shield_damage = @prism_sheid_d
+	armor_damage = @prism_armor_d
+	hull_damage = @prism_hull_d
+	range = 700.0
+	accuracy = @prism_accu_p
+	tracking = @prism_trac_p
+
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "ENERGY_LANCE_PRISM_SP_SET"
+	projectile_gfx = "prism_lance_large"
+	tags = { weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+	ai_tags = { weapon_role_artillery }
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_ENERGY_LANCE_PRISM"
+	size = extra_large
+	entity = "invisible_turret_entity"
+	type = instant
+
+	icon = "GFX_ship_part_energy_lance_prism"
+	icon_frame = 1
+
+	min_range = 0.0
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_xa
+			energy = @cost_xe
+		}
+	}
+	power = -150
+	damage = { min = @prism_e_min_damage  max = @prism_e_max_damage  }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 100
+	shield_penetration = @prism_sheid_p
+	armor_penetration = @prism_armor_p
+	shield_damage = @prism_sheid_d
+	armor_damage = @prism_armor_d
+	hull_damage = @prism_hull_d
+	range = 600.0
+	accuracy = @prism_accu_p
+	tracking = @prism_trac_p
+
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "ENERGY_LANCE_PRISM_SP_SET"
+	projectile_gfx = "prism_lance"
+	tags = { weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+	ai_tags = { weapon_role_artillery }
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "BIG_ENERGY_LANCE_PRISM"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+
+	icon = "GFX_ship_part_energy_lance_prism"
+	icon_frame = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_la
+			energy = @cost_le
+		}
+	}
+	power = -120
+	damage = { min = @prism_l_min_damage  max = @prism_l_max_damage  }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 100
+	shield_penetration = @prism_sheid_p
+	armor_penetration = @prism_armor_p
+	shield_damage = @prism_sheid_d
+	armor_damage = @prism_armor_d
+	hull_damage = @prism_hull_d
+	range = 500.0
+	accuracy = @prism_accu_p
+	tracking = @prism_trac_p
+
+
+	min_range = 0.0
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "ENERGY_LANCE_PRISM_SET"
+	projectile_gfx = "prism_lance"
+	tags = { weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+	ai_tags = { weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_ENERGY_LANCE_PRISM"
+	size = medium
+	entity = "medium_laser_gun_entity"
+	type = instant
+
+	icon = "GFX_ship_part_energy_lance_prism"
+	icon_frame = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_ma
+			energy = @cost_me
+		}
+	}
+	power = -60
+	damage = { min = @prism_m_min_damage  max = @prism_m_max_damage  }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 100
+	shield_penetration = @prism_sheid_p
+	armor_penetration = @prism_armor_p
+	shield_damage = @prism_sheid_d
+	armor_damage = @prism_armor_d
+	hull_damage = @prism_hull_d
+	range = 400.0
+	accuracy = @prism_accu_p
+	tracking = @prism_trac_p
+
+
+	min_range = 0.0
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "ENERGY_LANCE_PRISM_SET"
+	projectile_gfx = "prism_lance_small"
+	tags = { weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+	ai_tags = { weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SMALL_ENERGY_LANCE_PRISM"
+	size = small
+	entity = "small_laser_gun_entity"
+	type = instant
+
+	icon = "GFX_ship_part_energy_lance_prism"
+	icon_frame = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_sa
+			energy = @cost_se
+		}
+	}
+	power = -30
+	damage = { min = @prism_s_min_damage  max = @prism_s_max_damage  }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 100
+	shield_penetration = @prism_sheid_p
+	armor_penetration = @prism_armor_p
+	shield_damage = @prism_sheid_d
+	armor_damage = @prism_armor_d
+	hull_damage = @prism_hull_d
+	range = 300.0
+	accuracy = @prism_accu_p
+	tracking = @prism_trac_p
+
+
+	min_range = 0.0
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "ENERGY_LANCE_PRISM_SET"
+	projectile_gfx = "prism_lance_small"
+	tags = { weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+	ai_tags = { weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "PD_ENERGY_LANCE_PRISM"
+	size = point_defence
+	entity = "turret_point_defence_entity"
+	type = point_defence
+
+	icon = "GFX_ship_part_energy_lance_prism"
+	icon_frame = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_pa
+			energy = @cost_pe
+		}
+	}
+	power = -20
+	damage = { min = @prism_p_min_damage  max = @prism_p_max_damage  }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 20
+	shield_penetration = @prism_sheid_p
+	armor_penetration = @prism_armor_p
+	shield_damage = @prism_sheid_d
+	armor_damage = @prism_armor_d
+	hull_damage = @prism_hull_d
+	range = 200.0
+	accuracy = @prism_accu_p
+	tracking = @prism_trac_p
+
+
+	min_range = 0.0
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "ENERGY_LANCE_PRISM_SP_SET"
+	projectile_gfx = "prism_lance_tiny"
+	tags = { weapon_type_point_defense weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+	ai_tags = { weapon_role_point_defense }
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+		}
+	}
+}
+
+# POSITRON ARC EMITTER
+
+weapon_component_template = {
+	key = "TITAN_POSI_ARC_EMITTER"
+	size = titanic
+	entity = "invisible_turret_entity"
+	type = instant
+	prio_projectile = yes
+
+	icon = "GFX_ship_part_posi_arc_emitter"
+	icon_frame = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_ta
+			energy = @cost_te
+		}
+	}
+	power = -500
+	damage = { min = @posi_t_min_damage  max = @posi_t_max_damage  }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 100
+	shield_penetration = @posi_sheid_p
+	armor_penetration = @posi_armor_p
+	shield_damage = @posi_sheid_d
+	armor_damage = @posi_armor_d
+	hull_damage = @posi_hull_d
+	range = 700.0
+	accuracy = @posi_accu_p
+	tracking = @posi_trac_p
+
+	min_range = 0.0
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "POSI_ARC_EMITTER_SP_SET"
+	projectile_gfx = "posi_arc_emitter_large"
+	tags = { weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+}
+
+weapon_component_template = {
+	key = "LARGE_POSI_ARC_EMITTER"
+	size = extra_large
+	entity = "invisible_turret_entity"
+	type = instant
+
+	icon = "GFX_ship_part_posi_arc_emitter"
+	icon_frame = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_xa
+			energy = @cost_xe
+		}
+	}
+	power = -150
+	damage = { min = @posi_e_min_damage  max = @posi_e_max_damage  }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 100
+	shield_penetration = @posi_sheid_p
+	armor_penetration = @posi_armor_p
+	shield_damage = @posi_sheid_d
+	armor_damage = @posi_armor_d
+	hull_damage = @posi_hull_d
+	range = 600.0
+	accuracy = @posi_accu_p
+	tracking = @posi_trac_p
+
+	min_range = 0.0
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "POSI_ARC_EMITTER_SP_SET"
+	projectile_gfx = "posi_arc_emitter"
+	tags = { weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+}
+
+weapon_component_template = {
+	key = "BIG_POSI_ARC_EMITTER"
+	size = large
+	entity = "large_laser_gun_entity"
+	type = instant
+
+	icon = "GFX_ship_part_posi_arc_emitter"
+	icon_frame = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_la
+			energy = @cost_le
+		}
+	}
+	power = -120
+	damage = { min = @posi_l_min_damage  max = @posi_l_max_damage  }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 100
+	shield_penetration = @posi_sheid_p
+	armor_penetration = @posi_armor_p
+	shield_damage = @posi_sheid_d
+	armor_damage = @posi_armor_d
+	hull_damage = @posi_hull_d
+	range = 500.0
+	accuracy = @posi_accu_p
+	tracking = @posi_trac_p
+
+	min_range = 0.0
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "POSI_ARC_EMITTER_SET"
+	projectile_gfx = "posi_arc_emitter"
+	tags = { weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+	ai_tags = { weapon_role_anti_hull }
+	ai_tag_weight = 0
+}
+
+weapon_component_template = {
+	key = "MEDIUM_POSI_ARC_EMITTER"
+	size = medium
+	entity = "medium_laser_gun_entity"
+	type = instant
+
+	icon = "GFX_ship_part_posi_arc_emitter"
+	icon_frame = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_ma
+			energy = @cost_me
+		}
+	}
+	power = -60
+	damage = { min = @posi_m_min_damage  max = @posi_m_max_damage  }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 100
+	shield_penetration = @posi_sheid_p
+	armor_penetration = @posi_armor_p
+	shield_damage = @posi_sheid_d
+	armor_damage = @posi_armor_d
+	hull_damage = @posi_hull_d
+	range = 400.0
+	accuracy = @posi_accu_p
+	tracking = @posi_trac_p
+
+	min_range = 0.0
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "POSI_ARC_EMITTER_SET"
+	projectile_gfx = "posi_arc_emitter_small"
+	tags = { weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+	ai_tags = { weapon_role_anti_hull }
+	ai_tag_weight = 0
+}
+
+weapon_component_template = {
+	key = "SMALL_POSI_ARC_EMITTER"
+	size = small
+	entity = "small_laser_gun_entity"
+	type = instant
+
+	icon = "GFX_ship_part_posi_arc_emitter"
+	icon_frame = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_sa
+			energy = @cost_se
+		}
+	}
+	power = -30
+	damage = { min = @posi_s_min_damage  max = @posi_s_max_damage  }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 100
+	shield_penetration = @posi_sheid_p
+	armor_penetration = @posi_armor_p
+	shield_damage = @posi_sheid_d
+	armor_damage = @posi_armor_d
+	hull_damage = @posi_hull_d
+	range = 300.0
+	accuracy = @posi_accu_p
+	tracking = @posi_trac_p
+
+	min_range = 0.0
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "POSI_ARC_EMITTER_SET"
+	projectile_gfx = "posi_arc_emitter_small"
+	tags = { weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+	ai_tags = { weapon_role_anti_hull }
+	ai_tag_weight = 0
+}
+
+weapon_component_template = {
+	key = "PD_POSI_ARC_EMITTER"
+	size = point_defence
+	entity = "turret_point_defence_entity"
+	type = point_defence
+
+	icon = "GFX_ship_part_posi_arc_emitter"
+	icon_frame = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_pa
+			energy = @cost_pe
+		}
+	}
+	power = -20
+	damage = { min = @posi_p_min_damage  max = @posi_p_max_damage  }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 20
+	shield_penetration = @posi_sheid_p
+	armor_penetration = @posi_armor_p
+	shield_damage = @posi_sheid_d
+	armor_damage = @posi_armor_d
+	hull_damage = @posi_hull_d
+	range = 200.0
+	accuracy = @posi_accu_p
+	tracking = @posi_trac_p
+
+	min_range = 0.0
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "POSI_ARC_EMITTER_SP_SET"
+	projectile_gfx = "posi_arc_emitter_tiny"
+	tags = { weapon_type_point_defense weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+	ai_tags = { weapon_role_point_defense }
+	ai_tag_weight = 0
+}
+
+#Negative Mass Accelerator
+
+weapon_component_template = {
+	key = "TITAN_NEG_MASS_ACCELERATOR"
+	size = titanic
+	entity = "invisible_turret_entity"
+	type = instant
+	prio_projectile = yes
+
+	icon = "GFX_ship_part_neg_mass_accelerator"
+	icon_frame = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_ta
+			energy = @cost_te
+		}
+	}
+	power = -500
+	damage = { min = @negm_t_min_damage  max = @negm_t_max_damage  }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 100
+	shield_penetration = @negm_sheid_p
+	armor_penetration = @negm_armor_p
+	shield_damage = @negm_sheid_d
+	armor_damage = @negm_armor_d
+	hull_damage = @negm_hull_d
+	range = 700.0
+	accuracy = @negm_accu_p
+	tracking = @negm_trac_p
+
+	min_range = 0.0
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "NEG_MASS_ACCELERATOR_SP_SET"
+	projectile_gfx = "neg_mass_acc_h"
+	tags = { weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+}
+
+weapon_component_template = {
+	key = "LARGE_NEG_MASS_ACCELERATOR"
+	size = extra_large
+	entity = "invisible_turret_entity"
+	type = instant
+
+	icon = "GFX_ship_part_neg_mass_accelerator"
+	icon_frame = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_xa
+			energy = @cost_xe
+		}
+	}
+	power = -150
+	damage = { min = @negm_e_min_damage  max = @negm_e_max_damage  }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 100
+	shield_penetration = @negm_sheid_p
+	armor_penetration = @negm_armor_p
+	shield_damage = @negm_sheid_d
+	armor_damage = @negm_armor_d
+	hull_damage = @negm_hull_d
+	range = 600.0
+	accuracy = @negm_accu_p
+	tracking = @negm_trac_p
+
+	min_range = 0.0
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "NEG_MASS_ACCELERATOR_SP_SET"
+	projectile_gfx = "neg_mass_acc_e"
+	tags = { weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+}
+
+weapon_component_template = {
+	key = "BIG_NEG_MASS_ACCELERATOR"
+	size = large
+	entity = "large_kinetic_gun_entity"
+	type = instant
+
+	icon = "GFX_ship_part_neg_mass_accelerator"
+	icon_frame = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_la
+			energy = @cost_le
+		}
+	}
+	power = -120
+	damage = { min = @negm_l_min_damage  max = @negm_l_max_damage  }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 100
+	shield_penetration = @negm_sheid_p
+	armor_penetration = @negm_armor_p
+	shield_damage = @negm_sheid_d
+	armor_damage = @negm_armor_d
+	hull_damage = @negm_hull_d
+	range = 500.0
+	accuracy = @negm_accu_p
+	tracking = @negm_trac_p
+
+	min_range = 0.0
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "NEG_MASS_ACCELERATOR_SET"
+	projectile_gfx = "neg_mass_acc_l"
+	tags = { weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+	ai_tags = { weapon_role_anti_shield }
+	ai_tag_weight = 0
+}
+
+weapon_component_template = {
+	key = "MEDIUM_NEG_MASS_ACCELERATOR"
+	size = medium
+	entity = "medium_kinetic_gun_entity"
+	type = instant
+
+	icon = "GFX_ship_part_neg_mass_accelerator"
+	icon_frame = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_ma
+			energy = @cost_me
+		}
+	}
+	power = -60
+	damage = { min = @negm_m_min_damage  max = @negm_m_max_damage  }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 100
+	shield_penetration = @negm_sheid_p
+	armor_penetration = @negm_armor_p
+	shield_damage = @negm_sheid_d
+	armor_damage = @negm_armor_d
+	hull_damage = @negm_hull_d
+	range = 400.0
+	accuracy = @negm_accu_p
+	tracking = @negm_trac_p
+
+	min_range = 0.0
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "NEG_MASS_ACCELERATOR_SET"
+	projectile_gfx = "neg_mass_acc_m"
+	tags = { weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+	ai_tags = { weapon_role_anti_shield }
+	ai_tag_weight = 0
+}
+
+weapon_component_template = {
+	key = "SMALL_NEG_MASS_ACCELERATOR"
+	size = small
+	entity = "small_kinetic_gun_entity"
+	type = instant
+
+	icon = "GFX_ship_part_neg_mass_accelerator"
+	icon_frame = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_sa
+			energy = @cost_se
+		}
+	}
+	power = -30
+	damage = { min = @negm_s_min_damage  max = @negm_s_max_damage  }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 100
+	shield_penetration = @negm_sheid_p
+	armor_penetration = @negm_armor_p
+	shield_damage = @negm_sheid_d
+	armor_damage = @negm_armor_d
+	hull_damage = @negm_hull_d
+	range = 300.0
+	accuracy = @negm_accu_p
+	tracking = @negm_trac_p
+
+	min_range = 0.0
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "NEG_MASS_ACCELERATOR_SET"
+	projectile_gfx = "neg_mass_acc_s"
+	tags = { weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+	ai_tags = { weapon_role_anti_shield }
+	ai_tag_weight = 0
+}
+
+weapon_component_template = {
+	key = "PD_NEG_MASS_ACCELERATOR"
+	size = point_defence
+	entity = "small_kinetic_gun_entity"
+	type = point_defence
+
+	icon = "GFX_ship_part_neg_mass_accelerator"
+	icon_frame = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_pa
+			energy = @cost_pe
+		}
+	}
+	power = -20
+	damage = { min = @negm_p_min_damage  max = @negm_p_max_damage  }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 20
+	shield_penetration = @negm_sheid_p
+	armor_penetration = @negm_armor_p
+	shield_damage = @negm_sheid_d
+	armor_damage = @negm_armor_d
+	hull_damage = @negm_hull_d
+	range = 200.0
+	accuracy = @negm_accu_p
+	tracking = @negm_trac_p
+
+	min_range = 0.0
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "NEG_MASS_ACCELERATOR_SP_SET"
+	projectile_gfx = "neg_mass_acc_t"
+	tags = { weapon_type_point_defense weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+	ai_tags = { weapon_role_point_defense }
+	ai_tag_weight = 0
+}
+
+# ####################
+#  Titan Laser
+# ####################
+
+# ## Titan Laser
+weapon_component_template = {
+	key = "PLAYER_TITAN_LASER"
+	size = extra_large
+	entity = "invisible_turret_entity"
+	type = instant
+	prio_projectile = yes
+
+	icon = "GFX_ship_part_player_titan_laser"
+	icon_frame = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_ta
+			energy = @cost_te
+		}
+	}
+	power = -300
+	damage = { min = 16000000 max = 24000000 }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 100
+	shield_penetration = 10.0
+	armor_penetration = 10.0
+	shield_damage = 1.250
+	armor_damage = 1.250
+	hull_damage = 1.250
+	range = 600.0
+	accuracy = 1.00
+	tracking = 10.0
+
+
+	min_range = 0.0
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "PLAYER_TITAN_LASER_SET"
+	projectile_gfx = "titan_laser"
+	tags = { weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "PLAYER_ANTHELION_LASER"
+	size = extra_large
+	entity = "invisible_turret_entity"
+	type = instant
+	prio_projectile = yes
+
+	icon = "GFX_ship_part_player_anthelion_laser"
+	icon_frame = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @cost_ta
+			energy = @cost_te
+		}
+	}
+	power = -500
+	damage = { min = 30000000 max = 30000000 }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 50
+	shield_penetration = 10.0
+	armor_penetration = 10.0
+	shield_damage = 1.25
+	armor_damage = 1.25
+	hull_damage = 1.25
+	range = 600.0
+	accuracy = 1.0
+	tracking = 10.0
+
+
+	min_range = 0.0
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "PLAYER_ANTHELION_LASER_SET"
+	projectile_gfx = "anthelion_laser"
+	tags = { weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "PLAYER_ANTHELION_LASER_TITAN"
+	size = titanic
+	entity = "invisible_turret_entity"
+	type = instant
+	prio_projectile = yes
+
+	icon = "GFX_ship_part_player_anthelion_laser"
+	icon_frame = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 128000
+			energy = 128000
+		}
+	}
+	power = -800
+	damage = { min = 45000000 max = 45000000 }
+	windup = { min = 0.0 max = 0.0 }
+	total_fire_time = 10
+	shield_penetration = 10.0
+	armor_penetration = 10.0
+	shield_damage = 1.25
+	armor_damage = 1.25
+	hull_damage = 1.25
+	range = 700.0
+	accuracy = 1.0
+	tracking = 10.0
+
+	min_range = 0.0
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "PLAYER_ANTHELION_LASER_SET"
+	projectile_gfx = "anthelion_laser_titan"
+	tags = { weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+		}
+	}
+}
+
+#strike craft & missile
+
+strike_craft_component_template = {
+	key = "LARGE_PLAYER_CRAFT_HANGAR_3"
+	size = LARGE
+	entity = "player_craft_3_entity"
+	power = -100
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 100
+		}
+	}
+
+	count = 20
+	regeneration_per_day = 50
+	launch_time = 0.1
+
+	damage = { min = @posi_s_max_damage max = @posi_m_min_damage }
+	cooldown = 10
+	range = 500
+	engagement_range = 1000
+	accuracy = 1.0
+	tracking = 10.0
+
+	health = 1000000
+	armor = 10000000
+	shield = 10000000
+	evasion = 5.0
+
+	speed = 2000
+	rotation_speed = 1000.0
+	acceleration = 25000.0
+
+	shield_penetration = @posi_sheid_p
+	armor_penetration = @posi_armor_p
+	shield_damage = @posi_sheid_d
+	armor_damage = @posi_armor_d
+	hull_damage = @posi_hull_d
+
+	ship_behavior = "player_craft_3_behavior"
+
+	weapon_type = instant
+	projectile_gfx = "posi_arc_emitter_tiny"
+
+	icon = "GFX_ship_part_player_craft_3"
+	icon_frame = 1
+	component_set = "PLAYER_CRAFT_HANGAR_3"
+	prerequisites = { "tech_real_weapon" }
+	tags = { weapon_type_strike_craft weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power weapon_type_point_defense }
+}
+
+weapon_component_template = {
+	key = "TORPEDO_SGLRT"
+	size = torpedo
+	entity = "turret_torpedo_entity"
+
+	icon = "GFX_ship_part_torpedo_sing"
+	icon_frame = 1
+	type = missile
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 300
+		}
+	}
+	power = -100
+	damage = { min = 24000000 max = 36000000 }
+	windup = { min = 0 max = 0 }
+	total_fire_time = 50
+	shield_penetration = 20.0
+	armor_penetration = 0.0
+	shield_damage = 2.0
+	armor_damage = 2.0
+	hull_damage = 2.0
+	range = 700.0
+	accuracy = 1.0
+	tracking = 10.0
+
+	missile_speed = 70
+	missile_evasion = 10.8
+	missile_shield = 10000000
+	missile_armor = 10000000
+	missile_health = 10000000
+	missile_retarget_range = 200
+
+	prerequisites = { "tech_real_weapon" }
+	component_set = "TORPEDO_SGLRT"
+	projectile_gfx = "singularity_missile"
+	tags = { weapon_type_anticompound weapon_type_energy weapon_type_kinetic weapon_type_explosive weapon_type_sr_uf weapon_type_light_power }
+	ai_tags = { weapon_role_anti_shield }
+}
+
+#Planet Killer
+
+weapon_component_template = { # Hand of God
+	key = "PLAYER_PLANET_KILLER_1"
+	size = planet_killer
+	entity = "invisible_turret_entity"
+	type = planet_killer
+	static_rotation = yes
+	use_ship_kill_target = no
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 0
+		}
+	}
+	power = -7500
+	windup = { min = 1.0 max = 1.0 }
+	total_fire_time = 1.0
+
+	icon = GFX_ship_part_god_hand
+	icon_frame = 1
+
+	component_set = "PLAYER_PLANET_KILLER_1"
+
+	planet_destruction_gfx = "godhand_planet_gfx"
+}

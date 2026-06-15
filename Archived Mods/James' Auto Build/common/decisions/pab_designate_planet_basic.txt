@@ -1,0 +1,210 @@
+
+
+decision_planet_mineral = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = minerals
+	
+	potential = {
+		NOT = { has_planet_flag = "pab_mineral" }
+		#NOT = { has_planet_flag = "pab_energy" }
+		#NOT = { has_planet_flag = "pab_food" }
+		exists = owner
+		owner = { is_ai = no }
+		NOT = { is_planet_class = pc_habitat }
+		NOT = { is_planet_class = pc_city }
+		NOT = { is_planet_class = pc_ringworld_habitable }
+	}
+
+	effect = {
+		custom_tooltip = "Enable mineral focus"
+		hidden_effect = {
+			set_planet_flag = "pab_mineral"
+			set_planet_flag = "pab_focus"
+			add_modifier = {
+				modifier = "pab_mineral"
+				days = -1
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_planet_mineral_remove = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = minerals
+	
+	potential = {
+		has_planet_flag = "pab_mineral" 
+	}
+
+	effect = {
+		custom_tooltip = "Disable mineral focus"
+		hidden_effect = {
+			remove_planet_flag = "pab_mineral"
+			if = {
+				limit = { 
+					NOT = { has_planet_flag = "pab_alloy" }
+					NOT = { has_planet_flag = "pab_consumer" }
+        			NOT = { has_planet_flag = "pab_research" }
+        			NOT = { has_planet_flag = "pab_refinery" }
+					NOT = { has_planet_flag = "pab_bastion" }
+					NOT = { has_planet_flag = "pab_trade" }
+					NOT = { has_planet_flag = "pab_food" }
+					NOT = { has_planet_flag = "pab_energy" }
+				}
+				remove_planet_flag = "pab_focus"
+			}
+			
+			remove_modifier = "pab_mineral"
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_planet_energy = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = energy
+	
+	potential = {
+		#NOT = { has_planet_flag = "pab_mineral" }
+		NOT = { has_planet_flag = "pab_energy" }
+		#NOT = { has_planet_flag = "pab_food" }
+		exists = owner
+		owner = { is_ai = no }
+
+		OR = {
+			NOT = { is_planet_class = pc_habitat }
+			owner = { is_gestalt = yes }
+		}
+
+		NOT = { is_planet_class = pc_city }
+	}
+
+	effect = {
+		custom_tooltip = "Enable energy focus"
+		hidden_effect = {
+			set_planet_flag = "pab_energy"
+			set_planet_flag = "pab_focus"
+			add_modifier = {
+				modifier = "pab_energy"
+				days = -1
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_planet_energy_remove = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = energy
+	
+	potential = {
+		has_planet_flag = "pab_energy" 
+	}
+
+	effect = {
+		custom_tooltip = "Disable energy focus"
+		hidden_effect = {
+			remove_planet_flag = "pab_energy"
+			if = {
+				limit = { 
+					NOT = { has_planet_flag = "pab_alloy" }
+					NOT = { has_planet_flag = "pab_consumer" }
+        			NOT = { has_planet_flag = "pab_research" }
+        			NOT = { has_planet_flag = "pab_refinery" }
+					NOT = { has_planet_flag = "pab_bastion" }
+					NOT = { has_planet_flag = "pab_trade" }
+					NOT = { has_planet_flag = "pab_mineral" }
+					NOT = { has_planet_flag = "pab_food" }
+				}
+				remove_planet_flag = "pab_focus"
+			}
+			remove_modifier = "pab_energy"
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_planet_food = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = food
+	
+	potential = {
+		#NOT = { has_planet_flag = "pab_mineral" }
+		#NOT = { has_planet_flag = "pab_energy" }
+		NOT = { has_planet_flag = "pab_food" }
+		exists = owner
+		owner = { is_ai = no }
+		NOT = { is_planet_class = pc_habitat }
+		NOT = { is_planet_class = pc_city }
+		NOT = { is_planet_class = pc_machine }
+	}
+
+	effect = {
+		custom_tooltip = "Enable food focus"
+		hidden_effect = {
+			set_planet_flag = "pab_food"
+			set_planet_flag = "pab_focus"
+			add_modifier = {
+				modifier = "pab_food"
+				days = -1
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_planet_food_remove = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = food
+	
+	potential = {
+		has_planet_flag = "pab_food" 
+	}
+
+	effect = {
+		custom_tooltip = "Disable food focus"
+		hidden_effect = {
+			remove_planet_flag = "pab_food"
+			if = {
+				limit = { 
+					NOT = { has_planet_flag = "pab_alloy" }
+					NOT = { has_planet_flag = "pab_consumer" }
+        			NOT = { has_planet_flag = "pab_research" }
+        			NOT = { has_planet_flag = "pab_refinery" }
+					NOT = { has_planet_flag = "pab_bastion" }
+					NOT = { has_planet_flag = "pab_trade" }
+					NOT = { has_planet_flag = "pab_mineral" }
+					NOT = { has_planet_flag = "pab_energy" }
+				}
+				remove_planet_flag = "pab_focus"
+			}
+			remove_modifier = "pab_food"
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

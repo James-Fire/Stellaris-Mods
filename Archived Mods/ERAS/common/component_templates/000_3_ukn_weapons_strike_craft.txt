@@ -1,0 +1,2514 @@
+#####################
+##### FIGHTERS ######
+#####################
+
+strike_craft_component_template = {
+	key = "STRIKE_CRAFT_HANGAR_1"
+	size = LARGE
+	entity = "fighter_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_fighter_1"
+    power = @ukn_strike_craft_fighter_3_power
+	
+	damage = { min = @ukn_strike_craft_fighter_3_dmg_min max = @ukn_strike_craft_fighter_3_dmg_max }
+	cooldown = @ukn_strike_craft_fighter_3_cooldown
+    range = @ukn_strike_craft_fighter_3_range
+    accuracy = @ukn_strike_craft_fighter_3_accuracy
+	
+    hull_damage = @ukn_strike_craft_fighter_3_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_fighter_3_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_fighter_3_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_fighter_3_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_fighter_3_shield_damage_mult
+    tracking = @ukn_strike_craft_fighter_3_tracking
+	
+	engagement_range = @ukn_strike_craft_fighter_3_engagement_range
+	count = @ukn_strike_craft_fighter_3_count
+	regeneration_per_day = @ukn_strike_craft_fighter_3_regen
+	launch_time = @ukn_strike_craft_fighter_3_launch_time
+
+	health = @ukn_strike_craft_fighter_3_health
+	armor = @ukn_strike_craft_fighter_3_armor
+	shield = @ukn_strike_craft_fighter_3_shield
+	
+	evasion = @ukn_strike_craft_fighter_3_evasion
+	speed = @ukn_strike_craft_fighter_3_speed
+	rotation_speed = @ukn_strike_craft_fighter_3_rotation_speed
+	acceleration = @ukn_strike_craft_fighter_3_acceleration
+	
+	ship_behavior = "fighters_behavior"
+	prerequisites = { "tech_strike_craft_1" }
+	projectile_gfx = "projectile_ukn_strike_craft_fighter_1"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_point_defense weapon_role_ukn_strike_craft_fighter }
+	component_set = "UKN_SET_STRIKE_CRAFT_FIGHTER_HANGAR_1"
+	upgrades_to = "STRIKE_CRAFT_HANGAR_2"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_big_t3_component_cost_minerals
+			alloys = @ukn_big_t3_component_cost_alloys
+#			ukn_meta_materials = @ukn_big_t3_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t3_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t3_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t3_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t3_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t3_component_cost_exotic_gases
+			rare_crystals = @ukn_big_t3_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t3_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t3_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t3_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_big_t3_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t3_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t3_component_upkeep_energy
+#			minerals = @ukn_big_t3_component_upkeep_minerals
+#			alloys = @ukn_big_t3_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t3_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t3_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t3_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t3_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t3_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t3_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t3_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_big_t3_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t3_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t3_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_big_t3_component_upkeep_nanites
+#---
+			minerals = @ukn_big_t3_kinetics_upkeep_minerals
+			alloys = @ukn_big_t3_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t3_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 16
+	}
+}
+
+strike_craft_component_template = {
+	key = "STRIKE_CRAFT_HANGAR_2"
+	size = LARGE
+	entity = "fighter_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_fighter_2"
+    power = @ukn_strike_craft_fighter_4_power
+	
+	damage = { min = @ukn_strike_craft_fighter_4_dmg_min max = @ukn_strike_craft_fighter_4_dmg_max }
+	cooldown = @ukn_strike_craft_fighter_4_cooldown
+    range = @ukn_strike_craft_fighter_4_range
+    accuracy = @ukn_strike_craft_fighter_4_accuracy
+	
+    hull_damage = @ukn_strike_craft_fighter_4_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_fighter_4_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_fighter_4_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_fighter_4_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_fighter_4_shield_damage_mult
+    tracking = @ukn_strike_craft_fighter_4_tracking
+	
+	engagement_range = @ukn_strike_craft_fighter_4_engagement_range
+	count = @ukn_strike_craft_fighter_4_count
+	regeneration_per_day = @ukn_strike_craft_fighter_4_regen
+	launch_time = @ukn_strike_craft_fighter_4_launch_time
+
+	health = @ukn_strike_craft_fighter_4_health
+	armor = @ukn_strike_craft_fighter_4_armor
+	shield = @ukn_strike_craft_fighter_4_shield
+	
+	evasion = @ukn_strike_craft_fighter_4_evasion
+	speed = @ukn_strike_craft_fighter_4_speed
+	rotation_speed = @ukn_strike_craft_fighter_4_rotation_speed
+	acceleration = @ukn_strike_craft_fighter_4_acceleration
+	
+	ship_behavior = "fighters_behavior"
+	prerequisites = { "tech_strike_craft_2" }
+	projectile_gfx = "projectile_ukn_strike_craft_fighter_2"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_point_defense weapon_role_ukn_strike_craft_fighter }
+	component_set = "UKN_SET_STRIKE_CRAFT_FIGHTER_HANGAR_2"
+	upgrades_to = "STRIKE_CRAFT_HANGAR_3"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_big_t4_component_cost_minerals
+			alloys = @ukn_big_t4_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t4_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t4_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t4_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t4_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t4_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t4_component_cost_exotic_gases
+			rare_crystals = @ukn_big_t4_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t4_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t4_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t4_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_big_t4_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t4_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t4_component_upkeep_energy
+#			minerals = @ukn_big_t4_component_upkeep_minerals
+			alloys = @ukn_big_t4_component_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t4_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t4_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t4_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t4_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t4_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t4_component_upkeep_exotic_gases
+			rare_crystals = @ukn_big_t4_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_big_t4_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t4_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t4_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_big_t4_component_upkeep_nanites
+#---
+			minerals = @ukn_big_t4_kinetics_upkeep_minerals
+			alloys = @ukn_big_t4_kinetics_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t4_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 32
+	}
+}
+
+strike_craft_component_template = {
+	key = "STRIKE_CRAFT_HANGAR_3"
+	size = LARGE
+	entity = "fighter_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_fighter_3"
+    power = @ukn_strike_craft_fighter_5_power
+	
+	damage = { min = @ukn_strike_craft_fighter_5_dmg_min max = @ukn_strike_craft_fighter_5_dmg_max }
+	cooldown = @ukn_strike_craft_fighter_5_cooldown
+    range = @ukn_strike_craft_fighter_5_range
+    accuracy = @ukn_strike_craft_fighter_5_accuracy
+	
+    hull_damage = @ukn_strike_craft_fighter_5_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_fighter_5_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_fighter_5_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_fighter_5_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_fighter_5_shield_damage_mult
+    tracking = @ukn_strike_craft_fighter_5_tracking
+	
+	engagement_range = @ukn_strike_craft_fighter_5_engagement_range
+	count = @ukn_strike_craft_fighter_5_count
+	regeneration_per_day = @ukn_strike_craft_fighter_5_regen
+	launch_time = @ukn_strike_craft_fighter_5_launch_time
+
+	health = @ukn_strike_craft_fighter_5_health
+	armor = @ukn_strike_craft_fighter_5_armor
+	shield = @ukn_strike_craft_fighter_5_shield
+	
+	evasion = @ukn_strike_craft_fighter_5_evasion
+	speed = @ukn_strike_craft_fighter_5_speed
+	rotation_speed = @ukn_strike_craft_fighter_5_rotation_speed
+	acceleration = @ukn_strike_craft_fighter_5_acceleration
+	
+	ship_behavior = "fighters_behavior"
+	prerequisites = { "tech_strike_craft_3" }
+	projectile_gfx = "projectile_ukn_strike_craft_fighter_3"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_point_defense weapon_role_ukn_strike_craft_fighter }
+	component_set = "UKN_SET_STRIKE_CRAFT_FIGHTER_HANGAR_3"
+	upgrades_to = "UKN_STRIKE_CRAFT_FIGHTER_HANGAR_4"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_big_t5_component_cost_minerals
+#			alloys = @ukn_big_t5_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t5_component_cost_ukn_meta_materials
+			ukn_femtomatter = @ukn_big_t5_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t5_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t5_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t5_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t5_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t5_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t5_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t5_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t5_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_big_t5_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t5_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t5_component_upkeep_energy
+#			minerals = @ukn_big_t5_component_upkeep_minerals
+#			alloys = @ukn_big_t5_component_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t5_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t5_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t5_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t5_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t5_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t5_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t5_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_big_t5_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t5_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t5_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_big_t5_component_upkeep_nanites
+#---
+#			minerals = @ukn_big_t5_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t5_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t5_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 64
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_femtomatter value <= 0 }
+			}
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_FIGHTER_HANGAR_4"
+	size = LARGE
+	entity = "fighter_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_fighter_4"
+    power = @ukn_strike_craft_fighter_6_power
+	
+	damage = { min = @ukn_strike_craft_fighter_6_dmg_min max = @ukn_strike_craft_fighter_6_dmg_max }
+	cooldown = @ukn_strike_craft_fighter_6_cooldown
+    range = @ukn_strike_craft_fighter_6_range
+    accuracy = @ukn_strike_craft_fighter_6_accuracy
+	
+    hull_damage = @ukn_strike_craft_fighter_6_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_fighter_6_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_fighter_6_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_fighter_6_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_fighter_6_shield_damage_mult
+    tracking = @ukn_strike_craft_fighter_6_tracking
+	
+	engagement_range = @ukn_strike_craft_fighter_6_engagement_range
+	count = @ukn_strike_craft_fighter_6_count
+	regeneration_per_day = @ukn_strike_craft_fighter_6_regen
+	launch_time = @ukn_strike_craft_fighter_6_launch_time
+
+	health = @ukn_strike_craft_fighter_6_health
+	armor = @ukn_strike_craft_fighter_6_armor
+	shield = @ukn_strike_craft_fighter_6_shield
+	
+	evasion = @ukn_strike_craft_fighter_6_evasion
+	speed = @ukn_strike_craft_fighter_6_speed
+	rotation_speed = @ukn_strike_craft_fighter_6_rotation_speed
+	acceleration = @ukn_strike_craft_fighter_6_acceleration
+	
+	ship_behavior = "fighters_behavior"
+	prerequisites = { "tech_ukn_strike_craft_4" }
+	projectile_gfx = "projectile_ukn_strike_craft_fighter_4"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_point_defense weapon_role_ukn_strike_craft_fighter }
+	component_set = "UKN_SET_STRIKE_CRAFT_FIGHTER_HANGAR_4"
+	upgrades_to = "UKN_STRIKE_CRAFT_FIGHTER_HANGAR_5"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t6_component_cost_minerals
+#			alloys = @ukn_big_t6_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t6_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t6_component_cost_ukn_femtomatter
+			ukn_condensics = @ukn_big_t6_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t6_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t6_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t6_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t6_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t6_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t6_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t6_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_big_t6_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t6_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t6_component_upkeep_energy
+#			minerals = @ukn_big_t6_component_upkeep_minerals
+#			alloys = @ukn_big_t6_component_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t6_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t6_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t6_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t6_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t6_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t6_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t6_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_big_t6_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t6_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t6_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_big_t6_component_upkeep_nanites
+#---
+#			minerals = @ukn_big_t6_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t6_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t6_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 128
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_condensics value <= 0 }
+			}
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_FIGHTER_HANGAR_5"
+	size = LARGE
+	entity = "fighter_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_fighter_5"
+    power = @ukn_strike_craft_fighter_7_power
+	
+	damage = { min = @ukn_strike_craft_fighter_7_dmg_min max = @ukn_strike_craft_fighter_7_dmg_max }
+	cooldown = @ukn_strike_craft_fighter_7_cooldown
+    range = @ukn_strike_craft_fighter_7_range
+    accuracy = @ukn_strike_craft_fighter_7_accuracy
+	
+    hull_damage = @ukn_strike_craft_fighter_7_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_fighter_7_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_fighter_7_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_fighter_7_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_fighter_7_shield_damage_mult
+    tracking = @ukn_strike_craft_fighter_7_tracking
+	
+	engagement_range = @ukn_strike_craft_fighter_7_engagement_range
+	count = @ukn_strike_craft_fighter_7_count
+	regeneration_per_day = @ukn_strike_craft_fighter_7_regen
+	launch_time = @ukn_strike_craft_fighter_7_launch_time
+
+	health = @ukn_strike_craft_fighter_7_health
+	armor = @ukn_strike_craft_fighter_7_armor
+	shield = @ukn_strike_craft_fighter_7_shield
+	
+	evasion = @ukn_strike_craft_fighter_7_evasion
+	speed = @ukn_strike_craft_fighter_7_speed
+	rotation_speed = @ukn_strike_craft_fighter_7_rotation_speed
+	acceleration = @ukn_strike_craft_fighter_7_acceleration
+	
+	ship_behavior = "fighters_behavior"
+	prerequisites = { "tech_ukn_strike_craft_5" }
+	projectile_gfx = "projectile_ukn_strike_craft_fighter_5"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_point_defense weapon_role_ukn_strike_craft_fighter }
+	component_set = "UKN_SET_STRIKE_CRAFT_FIGHTER_HANGAR_5"
+	upgrades_to = "UKN_STRIKE_CRAFT_FIGHTER_HANGAR_6"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t7_component_cost_minerals
+#			alloys = @ukn_big_t7_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t7_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t7_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t7_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_big_t7_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t7_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t7_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t7_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t7_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t7_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_big_t7_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_big_t7_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t7_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t7_component_upkeep_energy
+#			minerals = @ukn_big_t7_component_upkeep_minerals
+#			alloys = @ukn_big_t7_component_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t7_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t7_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t7_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t7_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t7_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t7_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t7_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_big_t7_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t7_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t7_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_big_t7_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t7_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t7_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 256
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_FIGHTER_HANGAR_6"
+	size = LARGE
+	entity = "fighter_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_fighter_6"
+    power = @ukn_strike_craft_fighter_8_power
+	
+	damage = { min = @ukn_strike_craft_fighter_8_dmg_min max = @ukn_strike_craft_fighter_8_dmg_max }
+	cooldown = @ukn_strike_craft_fighter_8_cooldown
+    range = @ukn_strike_craft_fighter_8_range
+    accuracy = @ukn_strike_craft_fighter_8_accuracy
+	
+    hull_damage = @ukn_strike_craft_fighter_8_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_fighter_8_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_fighter_8_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_fighter_8_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_fighter_8_shield_damage_mult
+    tracking = @ukn_strike_craft_fighter_8_tracking
+	
+	engagement_range = @ukn_strike_craft_fighter_8_engagement_range
+	count = @ukn_strike_craft_fighter_8_count
+	regeneration_per_day = @ukn_strike_craft_fighter_8_regen
+	launch_time = @ukn_strike_craft_fighter_8_launch_time
+
+	health = @ukn_strike_craft_fighter_8_health
+	armor = @ukn_strike_craft_fighter_8_armor
+	shield = @ukn_strike_craft_fighter_8_shield
+	
+	evasion = @ukn_strike_craft_fighter_8_evasion
+	speed = @ukn_strike_craft_fighter_8_speed
+	rotation_speed = @ukn_strike_craft_fighter_8_rotation_speed
+	acceleration = @ukn_strike_craft_fighter_8_acceleration
+	
+	ship_behavior = "fighters_behavior"
+	prerequisites = { "tech_ukn_strike_craft_6" }
+	projectile_gfx = "projectile_ukn_strike_craft_fighter_6"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_point_defense weapon_role_ukn_strike_craft_fighter }
+	component_set = "UKN_SET_STRIKE_CRAFT_FIGHTER_HANGAR_6"
+	upgrades_to = "UKN_STRIKE_CRAFT_FIGHTER_HANGAR_7"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t8_component_cost_minerals
+#			alloys = @ukn_big_t8_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t8_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t8_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t8_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_big_t8_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t8_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t8_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t8_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_big_t8_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t8_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_big_t8_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_big_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t8_component_upkeep_energy
+#			minerals = @ukn_big_t8_component_upkeep_minerals
+#			alloys = @ukn_big_t8_component_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t8_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t8_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t8_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t8_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t8_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t8_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t8_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_big_t8_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t8_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t8_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_big_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t8_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 512
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_FIGHTER_HANGAR_PLANCK"
+	size = LARGE
+	entity = "fighter_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_fighter_planck"
+    power = @ukn_strike_craft_fighter_planck_power
+	
+	damage = { min = @ukn_strike_craft_fighter_planck_dmg_min max = @ukn_strike_craft_fighter_planck_dmg_max }
+	cooldown = @ukn_strike_craft_fighter_planck_cooldown
+    range = @ukn_strike_craft_fighter_planck_range
+    accuracy = @ukn_strike_craft_fighter_planck_accuracy
+	
+    hull_damage = @ukn_strike_craft_fighter_planck_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_fighter_planck_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_fighter_planck_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_fighter_planck_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_fighter_planck_shield_damage_mult
+    tracking = @ukn_strike_craft_fighter_planck_tracking
+	
+	engagement_range = @ukn_strike_craft_fighter_planck_engagement_range
+	count = @ukn_strike_craft_fighter_planck_count
+	regeneration_per_day = @ukn_strike_craft_fighter_planck_regen
+	launch_time = @ukn_strike_craft_fighter_planck_launch_time
+
+	health = @ukn_strike_craft_fighter_planck_health
+	armor = @ukn_strike_craft_fighter_planck_armor
+	shield = @ukn_strike_craft_fighter_planck_shield
+	
+	evasion = @ukn_strike_craft_fighter_planck_evasion
+	speed = @ukn_strike_craft_fighter_planck_speed
+	rotation_speed = @ukn_strike_craft_fighter_planck_rotation_speed
+	acceleration = @ukn_strike_craft_fighter_planck_acceleration
+	
+	ship_behavior = "fighters_behavior"
+	prerequisites = { "tech_ukn_strike_craft_planck" }
+	projectile_gfx = "projectile_ukn_strike_craft_fighter_planck"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_point_defense weapon_role_ukn_strike_craft_fighter }
+	component_set = "UKN_SET_STRIKE_CRAFT_FIGHTER_HANGAR_PLANCK"
+	upgrades_to = "UKN_STRIKE_CRAFT_FIGHTER_HANGAR_7"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t_p_component_cost_minerals
+#			alloys = @ukn_big_t_p_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t_p_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t_p_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t_p_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_big_t_p_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t_p_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t_p_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t_p_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_big_t_p_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t_p_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_big_t_p_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_big_t_p_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t_p_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t_p_component_upkeep_energy
+#			minerals = @ukn_big_t_p_component_upkeep_minerals
+#			alloys = @ukn_big_t_p_component_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t_p_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t_p_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t_p_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t_p_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t_p_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t_p_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t_p_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_big_t_p_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t_p_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t_p_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_big_t_p_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t_p_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t_p_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 512
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = sr_dark_matter value <= 0 }
+			}
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_FIGHTER_HANGAR_7"
+	size = LARGE
+	entity = "fighter_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_fighter_7"
+    power = @ukn_strike_craft_fighter_9_power
+	
+	damage = { min = @ukn_strike_craft_fighter_9_dmg_min max = @ukn_strike_craft_fighter_9_dmg_max }
+	cooldown = @ukn_strike_craft_fighter_9_cooldown
+    range = @ukn_strike_craft_fighter_9_range
+    accuracy = @ukn_strike_craft_fighter_9_accuracy
+	
+    hull_damage = @ukn_strike_craft_fighter_9_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_fighter_9_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_fighter_9_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_fighter_9_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_fighter_9_shield_damage_mult
+    tracking = @ukn_strike_craft_fighter_9_tracking
+	
+	engagement_range = @ukn_strike_craft_fighter_9_engagement_range
+	count = @ukn_strike_craft_fighter_9_count
+	regeneration_per_day = @ukn_strike_craft_fighter_9_regen
+	launch_time = @ukn_strike_craft_fighter_9_launch_time
+
+	health = @ukn_strike_craft_fighter_9_health
+	armor = @ukn_strike_craft_fighter_9_armor
+	shield = @ukn_strike_craft_fighter_9_shield
+	
+	evasion = @ukn_strike_craft_fighter_9_evasion
+	speed = @ukn_strike_craft_fighter_9_speed
+	rotation_speed = @ukn_strike_craft_fighter_9_rotation_speed
+	acceleration = @ukn_strike_craft_fighter_9_acceleration
+	
+	ship_behavior = "fighters_behavior"
+	prerequisites = { "tech_ukn_strike_craft_7" }
+	projectile_gfx = "projectile_ukn_strike_craft_fighter_7"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_point_defense weapon_role_ukn_strike_craft_fighter }
+	component_set = "UKN_SET_STRIKE_CRAFT_FIGHTER_HANGAR_7"
+	upgrades_to = "UKN_STRIKE_CRAFT_FIGHTER_HANGAR_8"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t9_component_cost_minerals
+#			alloys = @ukn_big_t9_component_cost_alloys
+#			ukn_meta_materials = @ukn_big_t9_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t9_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t9_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t9_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_big_t9_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t9_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t9_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t9_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t9_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t9_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_big_t9_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t9_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t9_component_upkeep_energy
+#			minerals = @ukn_big_t9_component_upkeep_minerals
+#			alloys = @ukn_big_t9_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t9_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t9_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t9_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t9_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t9_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t9_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t9_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_big_t9_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t9_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_big_t9_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_big_t9_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t9_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t9_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 1024
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+			}
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_FIGHTER_HANGAR_8"
+	size = LARGE
+	entity = "fighter_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_fighter_8"
+    power = @ukn_strike_craft_fighter_10_power
+	
+	damage = { min = @ukn_strike_craft_fighter_10_dmg_min max = @ukn_strike_craft_fighter_10_dmg_max }
+	cooldown = @ukn_strike_craft_fighter_10_cooldown
+    range = @ukn_strike_craft_fighter_10_range
+    accuracy = @ukn_strike_craft_fighter_10_accuracy
+	
+    hull_damage = @ukn_strike_craft_fighter_10_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_fighter_10_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_fighter_10_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_fighter_10_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_fighter_10_shield_damage_mult
+    tracking = @ukn_strike_craft_fighter_10_tracking
+	
+	engagement_range = @ukn_strike_craft_fighter_10_engagement_range
+	count = @ukn_strike_craft_fighter_10_count
+	regeneration_per_day = @ukn_strike_craft_fighter_10_regen
+	launch_time = @ukn_strike_craft_fighter_10_launch_time
+
+	health = @ukn_strike_craft_fighter_10_health
+	armor = @ukn_strike_craft_fighter_10_armor
+	shield = @ukn_strike_craft_fighter_10_shield
+	
+	evasion = @ukn_strike_craft_fighter_10_evasion
+	speed = @ukn_strike_craft_fighter_10_speed
+	rotation_speed = @ukn_strike_craft_fighter_10_rotation_speed
+	acceleration = @ukn_strike_craft_fighter_10_acceleration
+	
+	ship_behavior = "fighters_behavior"
+	prerequisites = { "tech_ukn_strike_craft_8" }
+	projectile_gfx = "projectile_ukn_strike_craft_fighter_8"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_point_defense weapon_role_ukn_strike_craft_fighter }
+	component_set = "UKN_SET_STRIKE_CRAFT_FIGHTER_HANGAR_8"
+#	upgrades_to = "UKN_STRIKE_CRAFT_FIGHTER_HANGAR_9"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t10_component_cost_minerals
+#			alloys = @ukn_big_t10_component_cost_alloys
+#			ukn_meta_materials = @ukn_big_t10_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t10_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t10_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t10_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_big_t10_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t10_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t10_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t10_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t10_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t10_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_big_t10_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t10_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t10_component_upkeep_energy
+#			minerals = @ukn_big_t10_component_upkeep_minerals
+#			alloys = @ukn_big_t10_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t10_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t10_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t10_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t10_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t10_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t10_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t10_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_big_t10_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t10_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_big_t10_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_big_t10_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t10_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t10_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 2048
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+			}
+		}
+	}
+}
+
+
+####################
+##### BOMBERS ######
+####################
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_BOMBER_HANGAR_1"
+	size = LARGE
+	entity = "bomber_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_bomber_1"
+    power = @ukn_strike_craft_bomber_3_power
+	
+	damage = { min = @ukn_strike_craft_bomber_3_dmg_min max = @ukn_strike_craft_bomber_3_dmg_max }
+	cooldown = @ukn_strike_craft_bomber_3_cooldown
+    range = @ukn_strike_craft_bomber_3_range
+    accuracy = @ukn_strike_craft_bomber_3_accuracy
+	
+    hull_damage = @ukn_strike_craft_bomber_3_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_bomber_3_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_bomber_3_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_bomber_3_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_bomber_3_shield_damage_mult
+    tracking = @ukn_strike_craft_bomber_3_tracking
+	
+	engagement_range = @ukn_strike_craft_bomber_3_engagement_range
+	count = @ukn_strike_craft_bomber_3_count
+	regeneration_per_day = @ukn_strike_craft_bomber_3_regen
+	launch_time = @ukn_strike_craft_bomber_3_launch_time
+
+	health = @ukn_strike_craft_bomber_3_health
+	armor = @ukn_strike_craft_bomber_3_armor
+	shield = @ukn_strike_craft_bomber_3_shield
+	
+	evasion = @ukn_strike_craft_bomber_3_evasion
+	speed = @ukn_strike_craft_bomber_3_speed
+	rotation_speed = @ukn_strike_craft_bomber_3_rotation_speed
+	acceleration = @ukn_strike_craft_bomber_3_acceleration
+	
+	ship_behavior = "bombers_behavior"
+	prerequisites = { "tech_strike_craft_1" }
+	projectile_gfx = "projectile_ukn_strike_craft_bomber_1"
+	tags = { weapon_type_strike_craft ukn_weapon_type_bomber }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_ukn_strike_craft_bomber }
+	component_set = "UKN_SET_STRIKE_CRAFT_BOMBER_HANGAR_1"
+	upgrades_to = "UKN_STRIKE_CRAFT_BOMBER_HANGAR_2"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_big_t3_component_cost_minerals
+			alloys = @ukn_big_t3_component_cost_alloys
+#			ukn_meta_materials = @ukn_big_t3_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t3_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t3_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t3_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t3_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t3_component_cost_exotic_gases
+			rare_crystals = @ukn_big_t3_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t3_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t3_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t3_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_big_t3_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t3_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t3_component_upkeep_energy
+#			minerals = @ukn_big_t3_component_upkeep_minerals
+#			alloys = @ukn_big_t3_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t3_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t3_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t3_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t3_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t3_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t3_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t3_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_big_t3_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t3_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t3_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_big_t3_component_upkeep_nanites
+#---
+			minerals = @ukn_big_t3_kinetics_upkeep_minerals
+			alloys = @ukn_big_t3_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t3_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 16
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_BOMBER_HANGAR_2"
+	size = LARGE
+	entity = "bomber_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_bomber_2"
+    power = @ukn_strike_craft_bomber_4_power
+	
+	damage = { min = @ukn_strike_craft_bomber_4_dmg_min max = @ukn_strike_craft_bomber_4_dmg_max }
+	cooldown = @ukn_strike_craft_bomber_4_cooldown
+    range = @ukn_strike_craft_bomber_4_range
+    accuracy = @ukn_strike_craft_bomber_4_accuracy
+	
+    hull_damage = @ukn_strike_craft_bomber_4_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_bomber_4_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_bomber_4_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_bomber_4_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_bomber_4_shield_damage_mult
+    tracking = @ukn_strike_craft_bomber_4_tracking
+	
+	engagement_range = @ukn_strike_craft_bomber_4_engagement_range
+	count = @ukn_strike_craft_bomber_4_count
+	regeneration_per_day = @ukn_strike_craft_bomber_4_regen
+	launch_time = @ukn_strike_craft_bomber_4_launch_time
+
+	health = @ukn_strike_craft_bomber_4_health
+	armor = @ukn_strike_craft_bomber_4_armor
+	shield = @ukn_strike_craft_bomber_4_shield
+	
+	evasion = @ukn_strike_craft_bomber_4_evasion
+	speed = @ukn_strike_craft_bomber_4_speed
+	rotation_speed = @ukn_strike_craft_bomber_4_rotation_speed
+	acceleration = @ukn_strike_craft_bomber_4_acceleration
+	
+	ship_behavior = "bombers_behavior"
+	prerequisites = { "tech_strike_craft_2" }
+	projectile_gfx = "projectile_ukn_strike_craft_bomber_2"
+	tags = { weapon_type_strike_craft ukn_weapon_type_bomber }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_ukn_strike_craft_bomber }
+	component_set = "UKN_SET_STRIKE_CRAFT_BOMBER_HANGAR_2"
+	upgrades_to = "UKN_STRIKE_CRAFT_BOMBER_HANGAR_3"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_big_t4_component_cost_minerals
+			alloys = @ukn_big_t4_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t4_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t4_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t4_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t4_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t4_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t4_component_cost_exotic_gases
+			rare_crystals = @ukn_big_t4_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t4_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t4_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t4_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_big_t4_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t4_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t4_component_upkeep_energy
+#			minerals = @ukn_big_t4_component_upkeep_minerals
+			alloys = @ukn_big_t4_component_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t4_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t4_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t4_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t4_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t4_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t4_component_upkeep_exotic_gases
+			rare_crystals = @ukn_big_t4_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_big_t4_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t4_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t4_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_big_t4_component_upkeep_nanites
+#---
+			minerals = @ukn_big_t4_kinetics_upkeep_minerals
+			alloys = @ukn_big_t4_kinetics_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t4_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 32
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_BOMBER_HANGAR_3"
+	size = LARGE
+	entity = "bomber_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_bomber_3"
+    power = @ukn_strike_craft_bomber_5_power
+	
+	damage = { min = @ukn_strike_craft_bomber_5_dmg_min max = @ukn_strike_craft_bomber_5_dmg_max }
+	cooldown = @ukn_strike_craft_bomber_5_cooldown
+    range = @ukn_strike_craft_bomber_5_range
+    accuracy = @ukn_strike_craft_bomber_5_accuracy
+	
+    hull_damage = @ukn_strike_craft_bomber_5_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_bomber_5_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_bomber_5_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_bomber_5_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_bomber_5_shield_damage_mult
+    tracking = @ukn_strike_craft_bomber_5_tracking
+	
+	engagement_range = @ukn_strike_craft_bomber_5_engagement_range
+	count = @ukn_strike_craft_bomber_5_count
+	regeneration_per_day = @ukn_strike_craft_bomber_5_regen
+	launch_time = @ukn_strike_craft_bomber_5_launch_time
+
+	health = @ukn_strike_craft_bomber_5_health
+	armor = @ukn_strike_craft_bomber_5_armor
+	shield = @ukn_strike_craft_bomber_5_shield
+	
+	evasion = @ukn_strike_craft_bomber_5_evasion
+	speed = @ukn_strike_craft_bomber_5_speed
+	rotation_speed = @ukn_strike_craft_bomber_5_rotation_speed
+	acceleration = @ukn_strike_craft_bomber_5_acceleration
+	
+	ship_behavior = "bombers_behavior"
+	prerequisites = { "tech_strike_craft_3" }
+	projectile_gfx = "projectile_ukn_strike_craft_bomber_3"
+	tags = { weapon_type_strike_craft ukn_weapon_type_bomber }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_ukn_strike_craft_bomber }
+	component_set = "UKN_SET_STRIKE_CRAFT_BOMBER_HANGAR_3"
+	upgrades_to = "UKN_STRIKE_CRAFT_BOMBER_HANGAR_4"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_big_t5_component_cost_minerals
+#			alloys = @ukn_big_t5_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t5_component_cost_ukn_meta_materials
+			ukn_femtomatter = @ukn_big_t5_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t5_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t5_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t5_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t5_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t5_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t5_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t5_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t5_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_big_t5_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t5_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t5_component_upkeep_energy
+#			minerals = @ukn_big_t5_component_upkeep_minerals
+#			alloys = @ukn_big_t5_component_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t5_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t5_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t5_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t5_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t5_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t5_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t5_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_big_t5_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t5_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t5_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_big_t5_component_upkeep_nanites
+#---
+#			minerals = @ukn_big_t5_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t5_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t5_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 64
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_femtomatter value <= 0 }
+			}
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_BOMBER_HANGAR_4"
+	size = LARGE
+	entity = "bomber_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_bomber_4"
+    power = @ukn_strike_craft_bomber_6_power
+	
+	damage = { min = @ukn_strike_craft_bomber_6_dmg_min max = @ukn_strike_craft_bomber_6_dmg_max }
+	cooldown = @ukn_strike_craft_bomber_6_cooldown
+    range = @ukn_strike_craft_bomber_6_range
+    accuracy = @ukn_strike_craft_bomber_6_accuracy
+	
+    hull_damage = @ukn_strike_craft_bomber_6_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_bomber_6_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_bomber_6_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_bomber_6_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_bomber_6_shield_damage_mult
+    tracking = @ukn_strike_craft_bomber_6_tracking
+	
+	engagement_range = @ukn_strike_craft_bomber_6_engagement_range
+	count = @ukn_strike_craft_bomber_6_count
+	regeneration_per_day = @ukn_strike_craft_bomber_6_regen
+	launch_time = @ukn_strike_craft_bomber_6_launch_time
+
+	health = @ukn_strike_craft_bomber_6_health
+	armor = @ukn_strike_craft_bomber_6_armor
+	shield = @ukn_strike_craft_bomber_6_shield
+	
+	evasion = @ukn_strike_craft_bomber_6_evasion
+	speed = @ukn_strike_craft_bomber_6_speed
+	rotation_speed = @ukn_strike_craft_bomber_6_rotation_speed
+	acceleration = @ukn_strike_craft_bomber_6_acceleration
+	
+	ship_behavior = "bombers_behavior"
+	prerequisites = { "tech_ukn_strike_craft_4" }
+	projectile_gfx = "projectile_ukn_strike_craft_bomber_4"
+	tags = { weapon_type_strike_craft ukn_weapon_type_bomber }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_ukn_strike_craft_bomber }
+	component_set = "UKN_SET_STRIKE_CRAFT_BOMBER_HANGAR_4"
+	upgrades_to = "UKN_STRIKE_CRAFT_BOMBER_HANGAR_5"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t6_component_cost_minerals
+#			alloys = @ukn_big_t6_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t6_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t6_component_cost_ukn_femtomatter
+			ukn_condensics = @ukn_big_t6_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t6_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t6_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t6_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t6_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t6_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t6_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t6_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_big_t6_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t6_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t6_component_upkeep_energy
+#			minerals = @ukn_big_t6_component_upkeep_minerals
+#			alloys = @ukn_big_t6_component_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t6_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t6_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t6_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t6_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t6_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t6_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t6_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_big_t6_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t6_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t6_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_big_t6_component_upkeep_nanites
+#---
+#			minerals = @ukn_big_t6_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t6_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t6_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 128
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_condensics value <= 0 }
+			}
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_BOMBER_HANGAR_5"
+	size = LARGE
+	entity = "bomber_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_bomber_5"
+    power = @ukn_strike_craft_bomber_7_power
+	
+	damage = { min = @ukn_strike_craft_bomber_7_dmg_min max = @ukn_strike_craft_bomber_7_dmg_max }
+	cooldown = @ukn_strike_craft_bomber_7_cooldown
+    range = @ukn_strike_craft_bomber_7_range
+    accuracy = @ukn_strike_craft_bomber_7_accuracy
+	
+    hull_damage = @ukn_strike_craft_bomber_7_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_bomber_7_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_bomber_7_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_bomber_7_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_bomber_7_shield_damage_mult
+    tracking = @ukn_strike_craft_bomber_7_tracking
+	
+	engagement_range = @ukn_strike_craft_bomber_7_engagement_range
+	count = @ukn_strike_craft_bomber_7_count
+	regeneration_per_day = @ukn_strike_craft_bomber_7_regen
+	launch_time = @ukn_strike_craft_bomber_7_launch_time
+
+	health = @ukn_strike_craft_bomber_7_health
+	armor = @ukn_strike_craft_bomber_7_armor
+	shield = @ukn_strike_craft_bomber_7_shield
+	
+	evasion = @ukn_strike_craft_bomber_7_evasion
+	speed = @ukn_strike_craft_bomber_7_speed
+	rotation_speed = @ukn_strike_craft_bomber_7_rotation_speed
+	acceleration = @ukn_strike_craft_bomber_7_acceleration
+	
+	ship_behavior = "bombers_behavior"
+	prerequisites = { "tech_ukn_strike_craft_5" }
+	projectile_gfx = "projectile_ukn_strike_craft_bomber_5"
+	tags = { weapon_type_strike_craft ukn_weapon_type_bomber }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_ukn_strike_craft_bomber }
+	component_set = "UKN_SET_STRIKE_CRAFT_BOMBER_HANGAR_5"
+	upgrades_to = "UKN_STRIKE_CRAFT_BOMBER_HANGAR_6"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t7_component_cost_minerals
+#			alloys = @ukn_big_t7_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t7_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t7_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t7_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_big_t7_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t7_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t7_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t7_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t7_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t7_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_big_t7_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_big_t7_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t7_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t7_component_upkeep_energy
+#			minerals = @ukn_big_t7_component_upkeep_minerals
+#			alloys = @ukn_big_t7_component_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t7_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t7_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t7_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t7_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t7_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t7_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t7_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_big_t7_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t7_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t7_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_big_t7_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t7_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t7_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 256
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_BOMBER_HANGAR_6"
+	size = LARGE
+	entity = "bomber_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_bomber_6"
+    power = @ukn_strike_craft_bomber_8_power
+	
+	damage = { min = @ukn_strike_craft_bomber_8_dmg_min max = @ukn_strike_craft_bomber_8_dmg_max }
+	cooldown = @ukn_strike_craft_bomber_8_cooldown
+    range = @ukn_strike_craft_bomber_8_range
+    accuracy = @ukn_strike_craft_bomber_8_accuracy
+	
+    hull_damage = @ukn_strike_craft_bomber_8_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_bomber_8_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_bomber_8_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_bomber_8_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_bomber_8_shield_damage_mult
+    tracking = @ukn_strike_craft_bomber_8_tracking
+	
+	engagement_range = @ukn_strike_craft_bomber_8_engagement_range
+	count = @ukn_strike_craft_bomber_8_count
+	regeneration_per_day = @ukn_strike_craft_bomber_8_regen
+	launch_time = @ukn_strike_craft_bomber_8_launch_time
+
+	health = @ukn_strike_craft_bomber_8_health
+	armor = @ukn_strike_craft_bomber_8_armor
+	shield = @ukn_strike_craft_bomber_8_shield
+	
+	evasion = @ukn_strike_craft_bomber_8_evasion
+	speed = @ukn_strike_craft_bomber_8_speed
+	rotation_speed = @ukn_strike_craft_bomber_8_rotation_speed
+	acceleration = @ukn_strike_craft_bomber_8_acceleration
+	
+	ship_behavior = "bombers_behavior"
+	prerequisites = { "tech_ukn_strike_craft_6" }
+	projectile_gfx = "projectile_ukn_strike_craft_bomber_6"
+	tags = { weapon_type_strike_craft ukn_weapon_type_bomber }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_ukn_strike_craft_bomber }
+	component_set = "UKN_SET_STRIKE_CRAFT_BOMBER_HANGAR_6"
+	upgrades_to = "UKN_STRIKE_CRAFT_BOMBER_HANGAR_7"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t8_component_cost_minerals
+#			alloys = @ukn_big_t8_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t8_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t8_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t8_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_big_t8_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t8_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t8_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t8_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_big_t8_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t8_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_big_t8_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_big_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t8_component_upkeep_energy
+#			minerals = @ukn_big_t8_component_upkeep_minerals
+#			alloys = @ukn_big_t8_component_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t8_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t8_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t8_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t8_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t8_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t8_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t8_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_big_t8_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t8_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t8_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_big_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t8_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 512
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_BOMBER_HANGAR_PLANCK"
+	size = LARGE
+	entity = "bomber_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_bomber_planck"
+    power = @ukn_strike_craft_bomber_planck_power
+	
+	damage = { min = @ukn_strike_craft_bomber_planck_dmg_min max = @ukn_strike_craft_bomber_planck_dmg_max }
+	cooldown = @ukn_strike_craft_bomber_planck_cooldown
+    range = @ukn_strike_craft_bomber_planck_range
+    accuracy = @ukn_strike_craft_bomber_planck_accuracy
+	
+    hull_damage = @ukn_strike_craft_bomber_planck_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_bomber_planck_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_bomber_planck_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_bomber_planck_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_bomber_planck_shield_damage_mult
+    tracking = @ukn_strike_craft_bomber_planck_tracking
+	
+	engagement_range = @ukn_strike_craft_bomber_planck_engagement_range
+	count = @ukn_strike_craft_bomber_planck_count
+	regeneration_per_day = @ukn_strike_craft_bomber_planck_regen
+	launch_time = @ukn_strike_craft_bomber_planck_launch_time
+
+	health = @ukn_strike_craft_bomber_planck_health
+	armor = @ukn_strike_craft_bomber_planck_armor
+	shield = @ukn_strike_craft_bomber_planck_shield
+	
+	evasion = @ukn_strike_craft_bomber_planck_evasion
+	speed = @ukn_strike_craft_bomber_planck_speed
+	rotation_speed = @ukn_strike_craft_bomber_planck_rotation_speed
+	acceleration = @ukn_strike_craft_bomber_planck_acceleration
+	
+	ship_behavior = "bombers_behavior"
+	prerequisites = { "tech_ukn_strike_craft_planck" }
+	projectile_gfx = "projectile_ukn_strike_craft_bomber_planck"
+	tags = { weapon_type_strike_craft ukn_weapon_type_bomber }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_ukn_strike_craft_bomber }
+	component_set = "UKN_SET_STRIKE_CRAFT_BOMBER_HANGAR_PLANCK"
+	upgrades_to = "UKN_STRIKE_CRAFT_BOMBER_HANGAR_7"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t_p_component_cost_minerals
+#			alloys = @ukn_big_t_p_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t_p_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t_p_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t_p_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_big_t_p_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t_p_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t_p_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t_p_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_big_t_p_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t_p_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_big_t_p_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_big_t_p_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t_p_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t_p_component_upkeep_energy
+#			minerals = @ukn_big_t_p_component_upkeep_minerals
+#			alloys = @ukn_big_t_p_component_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t_p_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t_p_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t_p_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t_p_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t_p_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t_p_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t_p_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_big_t_p_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t_p_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t_p_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_big_t_p_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t_p_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t_p_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 512
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = sr_dark_matter value <= 0 }
+			}
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_BOMBER_HANGAR_7"
+	size = LARGE
+	entity = "bomber_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_bomber_7"
+    power = @ukn_strike_craft_bomber_9_power
+	
+	damage = { min = @ukn_strike_craft_bomber_9_dmg_min max = @ukn_strike_craft_bomber_9_dmg_max }
+	cooldown = @ukn_strike_craft_bomber_9_cooldown
+    range = @ukn_strike_craft_bomber_9_range
+    accuracy = @ukn_strike_craft_bomber_9_accuracy
+	
+    hull_damage = @ukn_strike_craft_bomber_9_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_bomber_9_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_bomber_9_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_bomber_9_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_bomber_9_shield_damage_mult
+    tracking = @ukn_strike_craft_bomber_9_tracking
+	
+	engagement_range = @ukn_strike_craft_bomber_9_engagement_range
+	count = @ukn_strike_craft_bomber_9_count
+	regeneration_per_day = @ukn_strike_craft_bomber_9_regen
+	launch_time = @ukn_strike_craft_bomber_9_launch_time
+
+	health = @ukn_strike_craft_bomber_9_health
+	armor = @ukn_strike_craft_bomber_9_armor
+	shield = @ukn_strike_craft_bomber_9_shield
+	
+	evasion = @ukn_strike_craft_bomber_9_evasion
+	speed = @ukn_strike_craft_bomber_9_speed
+	rotation_speed = @ukn_strike_craft_bomber_9_rotation_speed
+	acceleration = @ukn_strike_craft_bomber_9_acceleration
+	
+	ship_behavior = "bombers_behavior"
+	prerequisites = { "tech_ukn_strike_craft_7" }
+	projectile_gfx = "projectile_ukn_strike_craft_bomber_7"
+	tags = { weapon_type_strike_craft ukn_weapon_type_bomber }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_ukn_strike_craft_bomber }
+	component_set = "UKN_SET_STRIKE_CRAFT_BOMBER_HANGAR_7"
+	upgrades_to = "UKN_STRIKE_CRAFT_BOMBER_HANGAR_8"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t9_component_cost_minerals
+#			alloys = @ukn_big_t9_component_cost_alloys
+#			ukn_meta_materials = @ukn_big_t9_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t9_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t9_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t9_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_big_t9_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t9_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t9_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t9_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t9_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t9_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_big_t9_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t9_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t9_component_upkeep_energy
+#			minerals = @ukn_big_t9_component_upkeep_minerals
+#			alloys = @ukn_big_t9_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t9_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t9_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t9_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t9_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t9_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t9_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t9_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_big_t9_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t9_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_big_t9_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_big_t9_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t9_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t9_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 1024
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+			}
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_BOMBER_HANGAR_8"
+	size = LARGE
+	entity = "bomber_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_bomber_8"
+    power = @ukn_strike_craft_bomber_10_power
+	
+	damage = { min = @ukn_strike_craft_bomber_10_dmg_min max = @ukn_strike_craft_bomber_10_dmg_max }
+	cooldown = @ukn_strike_craft_bomber_10_cooldown
+    range = @ukn_strike_craft_bomber_10_range
+    accuracy = @ukn_strike_craft_bomber_10_accuracy
+	
+    hull_damage = @ukn_strike_craft_bomber_10_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_bomber_10_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_bomber_10_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_bomber_10_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_bomber_10_shield_damage_mult
+    tracking = @ukn_strike_craft_bomber_10_tracking
+	
+	engagement_range = @ukn_strike_craft_bomber_10_engagement_range
+	count = @ukn_strike_craft_bomber_10_count
+	regeneration_per_day = @ukn_strike_craft_bomber_10_regen
+	launch_time = @ukn_strike_craft_bomber_10_launch_time
+
+	health = @ukn_strike_craft_bomber_10_health
+	armor = @ukn_strike_craft_bomber_10_armor
+	shield = @ukn_strike_craft_bomber_10_shield
+	
+	evasion = @ukn_strike_craft_bomber_10_evasion
+	speed = @ukn_strike_craft_bomber_10_speed
+	rotation_speed = @ukn_strike_craft_bomber_10_rotation_speed
+	acceleration = @ukn_strike_craft_bomber_10_acceleration
+	
+	ship_behavior = "bombers_behavior"
+	prerequisites = { "tech_ukn_strike_craft_8" }
+	projectile_gfx = "projectile_ukn_strike_craft_bomber_8"
+	tags = { weapon_type_strike_craft ukn_weapon_type_bomber }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_ukn_strike_craft_bomber }
+	component_set = "UKN_SET_STRIKE_CRAFT_BOMBER_HANGAR_8"
+#	upgrades_to = "UKN_STRIKE_CRAFT_BOMBER_HANGAR_9"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t10_component_cost_minerals
+#			alloys = @ukn_big_t10_component_cost_alloys
+#			ukn_meta_materials = @ukn_big_t10_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t10_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t10_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t10_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_big_t10_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t10_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t10_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t10_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t10_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t10_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_big_t10_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t10_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t10_component_upkeep_energy
+#			minerals = @ukn_big_t10_component_upkeep_minerals
+#			alloys = @ukn_big_t10_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t10_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t10_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t10_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t10_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t10_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t10_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t10_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_big_t10_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t10_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_big_t10_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_big_t10_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t10_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t10_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 2048
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+			}
+		}
+	}
+}
+
+
+##################
+##### AMOEBA #####
+##################
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_AMOEBA_HANGAR_0"
+	size = LARGE
+	entity = "space_amoeba_small_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_amoeba_0"
+    power = @ukn_strike_craft_amoeba_3_power
+	
+	damage = { min = @ukn_strike_craft_amoeba_3_dmg_min max = @ukn_strike_craft_amoeba_3_dmg_max }
+	cooldown = @ukn_strike_craft_amoeba_3_cooldown
+    range = @ukn_strike_craft_amoeba_3_range
+    accuracy = @ukn_strike_craft_amoeba_3_accuracy
+	
+    hull_damage = @ukn_strike_craft_amoeba_3_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_amoeba_3_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_amoeba_3_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_amoeba_3_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_amoeba_3_shield_damage_mult
+    tracking = @ukn_strike_craft_amoeba_3_tracking
+	
+	engagement_range = @ukn_strike_craft_amoeba_3_engagement_range
+	count = @ukn_strike_craft_amoeba_3_count
+	regeneration_per_day = @ukn_strike_craft_amoeba_3_regen
+	launch_time = @ukn_strike_craft_amoeba_3_launch_time
+
+	health = @ukn_strike_craft_amoeba_3_health
+	armor = @ukn_strike_craft_amoeba_3_armor
+	shield = @ukn_strike_craft_amoeba_3_shield
+	
+	evasion = @ukn_strike_craft_amoeba_3_evasion
+	speed = @ukn_strike_craft_amoeba_3_speed
+	rotation_speed = @ukn_strike_craft_amoeba_3_rotation_speed
+	acceleration = @ukn_strike_craft_amoeba_3_acceleration
+	
+	ship_behavior = "fighters_behavior"
+	prerequisites = { "tech_amoeba_strike_craft_1" }
+	projectile_gfx = "projectile_ukn_strike_craft_amoeba_0"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	component_set = "UKN_SET_STRIKE_CRAFT_AMOEBA_HANGAR_0"
+	upgrades_to = "UKN_STRIKE_CRAFT_AMOEBA_HANGAR_1"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ukn_big_t3_component_cost_minerals
+			alloys = @ukn_big_t3_component_cost_alloys
+#			ukn_meta_materials = @ukn_big_t3_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t3_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t3_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t3_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t3_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t3_component_cost_exotic_gases
+			rare_crystals = @ukn_big_t3_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t3_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t3_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t3_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_big_t3_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t3_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t3_component_upkeep_energy
+#			minerals = @ukn_big_t3_component_upkeep_minerals
+#			alloys = @ukn_big_t3_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t3_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t3_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t3_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t3_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t3_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t3_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t3_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_big_t3_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t3_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t3_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_big_t3_component_upkeep_nanites
+#---
+			minerals = @ukn_big_t3_kinetics_upkeep_minerals
+			alloys = @ukn_big_t3_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t3_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 32
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_AMOEBA_HANGAR_1"
+	size = LARGE
+	entity = "space_amoeba_small_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_amoeba_1"
+    power = @ukn_strike_craft_amoeba_4_power
+	
+	damage = { min = @ukn_strike_craft_amoeba_4_dmg_min max = @ukn_strike_craft_amoeba_4_dmg_max }
+	cooldown = @ukn_strike_craft_amoeba_4_cooldown
+    range = @ukn_strike_craft_amoeba_4_range
+    accuracy = @ukn_strike_craft_amoeba_4_accuracy
+	
+    hull_damage = @ukn_strike_craft_amoeba_4_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_amoeba_4_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_amoeba_4_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_amoeba_4_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_amoeba_4_shield_damage_mult
+    tracking = @ukn_strike_craft_amoeba_4_tracking
+	
+	engagement_range = @ukn_strike_craft_amoeba_4_engagement_range
+	count = @ukn_strike_craft_amoeba_4_count
+	regeneration_per_day = @ukn_strike_craft_amoeba_4_regen
+	launch_time = @ukn_strike_craft_amoeba_4_launch_time
+
+	health = @ukn_strike_craft_amoeba_4_health
+	armor = @ukn_strike_craft_amoeba_4_armor
+	shield = @ukn_strike_craft_amoeba_4_shield
+	
+	evasion = @ukn_strike_craft_amoeba_4_evasion
+	speed = @ukn_strike_craft_amoeba_4_speed
+	rotation_speed = @ukn_strike_craft_amoeba_4_rotation_speed
+	acceleration = @ukn_strike_craft_amoeba_4_acceleration
+	
+	ship_behavior = "fighters_behavior"
+	prerequisites = { "tech_ukn_strike_craft_amoeba_1" }
+	projectile_gfx = "projectile_ukn_strike_craft_amoeba_1"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	component_set = "UKN_SET_STRIKE_CRAFT_AMOEBA_HANGAR_1"
+	upgrades_to = "UKN_STRIKE_CRAFT_AMOEBA_HANGAR_2"
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ukn_big_t4_component_cost_minerals
+			alloys = @ukn_big_t4_component_cost_alloys
+#			ukn_meta_materials = @ukn_big_t4_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t4_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t4_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t4_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t4_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t4_component_cost_exotic_gases
+			rare_crystals = @ukn_big_t4_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t4_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t4_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t4_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_big_t4_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t4_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t4_component_upkeep_energy
+#			minerals = @ukn_big_t4_component_upkeep_minerals
+#			alloys = @ukn_big_t4_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t4_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t4_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t4_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t4_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t4_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t4_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t4_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_big_t4_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t4_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t4_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_big_t4_component_upkeep_nanites
+#---
+			minerals = @ukn_big_t4_kinetics_upkeep_minerals
+			alloys = @ukn_big_t4_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t4_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 32
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_AMOEBA_HANGAR_2"
+	size = LARGE
+	entity = "space_amoeba_small_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_amoeba_2"
+    power = @ukn_strike_craft_amoeba_5_power
+	
+	damage = { min = @ukn_strike_craft_amoeba_5_dmg_min max = @ukn_strike_craft_amoeba_5_dmg_max }
+	cooldown = @ukn_strike_craft_amoeba_5_cooldown
+    range = @ukn_strike_craft_amoeba_5_range
+    accuracy = @ukn_strike_craft_amoeba_5_accuracy
+	
+    hull_damage = @ukn_strike_craft_amoeba_5_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_amoeba_5_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_amoeba_5_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_amoeba_5_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_amoeba_5_shield_damage_mult
+    tracking = @ukn_strike_craft_amoeba_5_tracking
+	
+	engagement_range = @ukn_strike_craft_amoeba_5_engagement_range
+	count = @ukn_strike_craft_amoeba_5_count
+	regeneration_per_day = @ukn_strike_craft_amoeba_5_regen
+	launch_time = @ukn_strike_craft_amoeba_5_launch_time
+
+	health = @ukn_strike_craft_amoeba_5_health
+	armor = @ukn_strike_craft_amoeba_5_armor
+	shield = @ukn_strike_craft_amoeba_5_shield
+	
+	evasion = @ukn_strike_craft_amoeba_5_evasion
+	speed = @ukn_strike_craft_amoeba_5_speed
+	rotation_speed = @ukn_strike_craft_amoeba_5_rotation_speed
+	acceleration = @ukn_strike_craft_amoeba_5_acceleration
+	
+	ship_behavior = "fighters_behavior"
+	prerequisites = { "tech_ukn_strike_craft_amoeba_2" }
+	projectile_gfx = "projectile_ukn_strike_craft_amoeba_2"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	component_set = "UKN_SET_STRIKE_CRAFT_AMOEBA_HANGAR_2"
+	upgrades_to = "UKN_STRIKE_CRAFT_AMOEBA_HANGAR_3"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_big_t5_component_cost_minerals
+#			alloys = @ukn_big_t5_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t5_component_cost_ukn_meta_materials
+			ukn_femtomatter = @ukn_big_t5_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t5_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t5_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t5_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t5_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t5_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t5_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t5_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t5_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_big_t5_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t5_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t5_component_upkeep_energy
+#			minerals = @ukn_big_t5_component_upkeep_minerals
+#			alloys = @ukn_big_t5_component_upkeep_alloys
+			food = @ukn_big_t5_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t5_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t5_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t5_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t5_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t5_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t5_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_big_t5_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t5_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t5_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_big_t5_component_upkeep_nanites
+#---
+#			minerals = @ukn_big_t5_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t5_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t5_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 64
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_femtomatter value <= 0 }
+			}
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_AMOEBA_HANGAR_3"
+	size = LARGE
+	entity = "space_amoeba_small_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_amoeba_3"
+    power = @ukn_strike_craft_amoeba_6_power
+	
+	damage = { min = @ukn_strike_craft_amoeba_6_dmg_min max = @ukn_strike_craft_amoeba_6_dmg_max }
+	cooldown = @ukn_strike_craft_amoeba_6_cooldown
+    range = @ukn_strike_craft_amoeba_6_range
+    accuracy = @ukn_strike_craft_amoeba_6_accuracy
+	
+    hull_damage = @ukn_strike_craft_amoeba_6_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_amoeba_6_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_amoeba_6_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_amoeba_6_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_amoeba_6_shield_damage_mult
+    tracking = @ukn_strike_craft_amoeba_6_tracking
+	
+	engagement_range = @ukn_strike_craft_amoeba_6_engagement_range
+	count = @ukn_strike_craft_amoeba_6_count
+	regeneration_per_day = @ukn_strike_craft_amoeba_6_regen
+	launch_time = @ukn_strike_craft_amoeba_6_launch_time
+
+	health = @ukn_strike_craft_amoeba_6_health
+	armor = @ukn_strike_craft_amoeba_6_armor
+	shield = @ukn_strike_craft_amoeba_6_shield
+	
+	evasion = @ukn_strike_craft_amoeba_6_evasion
+	speed = @ukn_strike_craft_amoeba_6_speed
+	rotation_speed = @ukn_strike_craft_amoeba_6_rotation_speed
+	acceleration = @ukn_strike_craft_amoeba_6_acceleration
+	
+	ship_behavior = "fighters_behavior"
+	prerequisites = { "tech_ukn_strike_craft_amoeba_3" }
+	projectile_gfx = "projectile_ukn_strike_craft_amoeba_3"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	component_set = "UKN_SET_STRIKE_CRAFT_AMOEBA_HANGAR_3"
+	upgrades_to = "UKN_STRIKE_CRAFT_AMOEBA_HANGAR_4"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t6_component_cost_minerals
+#			alloys = @ukn_big_t6_component_cost_alloys
+			food = @ukn_big_t6_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t6_component_cost_ukn_femtomatter
+			ukn_condensics = @ukn_big_t6_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t6_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t6_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t6_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t6_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t6_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t6_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t6_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_big_t6_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t6_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t6_component_upkeep_energy
+#			minerals = @ukn_big_t6_component_upkeep_minerals
+#			alloys = @ukn_big_t6_component_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t6_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t6_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t6_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t6_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t6_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t6_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t6_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_big_t6_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t6_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t6_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_big_t6_component_upkeep_nanites
+#---
+#			minerals = @ukn_big_t6_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t6_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t6_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 128
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_condensics value <= 0 }
+			}
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_AMOEBA_HANGAR_4"
+	size = LARGE
+	entity = "space_amoeba_small_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_amoeba_4"
+    power = @ukn_strike_craft_amoeba_7_power
+	
+	damage = { min = @ukn_strike_craft_amoeba_7_dmg_min max = @ukn_strike_craft_amoeba_7_dmg_max }
+	cooldown = @ukn_strike_craft_amoeba_7_cooldown
+    range = @ukn_strike_craft_amoeba_7_range
+    accuracy = @ukn_strike_craft_amoeba_7_accuracy
+	
+    hull_damage = @ukn_strike_craft_amoeba_7_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_amoeba_7_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_amoeba_7_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_amoeba_7_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_amoeba_7_shield_damage_mult
+    tracking = @ukn_strike_craft_amoeba_7_tracking
+	
+	engagement_range = @ukn_strike_craft_amoeba_7_engagement_range
+	count = @ukn_strike_craft_amoeba_7_count
+	regeneration_per_day = @ukn_strike_craft_amoeba_7_regen
+	launch_time = @ukn_strike_craft_amoeba_7_launch_time
+
+	health = @ukn_strike_craft_amoeba_7_health
+	armor = @ukn_strike_craft_amoeba_7_armor
+	shield = @ukn_strike_craft_amoeba_7_shield
+	
+	evasion = @ukn_strike_craft_amoeba_7_evasion
+	speed = @ukn_strike_craft_amoeba_7_speed
+	rotation_speed = @ukn_strike_craft_amoeba_7_rotation_speed
+	acceleration = @ukn_strike_craft_amoeba_7_acceleration
+	
+	ship_behavior = "fighters_behavior"
+	prerequisites = { "tech_ukn_strike_craft_amoeba_4" }
+	projectile_gfx = "projectile_ukn_strike_craft_amoeba_4"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	component_set = "UKN_SET_STRIKE_CRAFT_AMOEBA_HANGAR_4"
+	upgrades_to = "UKN_STRIKE_CRAFT_SCOURGE_HANGAR_5"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t7_component_cost_minerals
+#			alloys = @ukn_big_t7_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t7_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t7_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t7_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_big_t7_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t7_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t7_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t7_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t7_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t7_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_big_t7_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_big_t7_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t7_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t7_component_upkeep_energy
+#			minerals = @ukn_big_t7_component_upkeep_minerals
+#			alloys = @ukn_big_t7_component_upkeep_alloys
+			food = @ukn_big_t7_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t7_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t7_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t7_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t7_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t7_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t7_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_big_t7_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t7_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t7_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_big_t7_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t7_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t7_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 256
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_AMOEBA_HANGAR_5"
+	size = LARGE
+	entity = "space_amoeba_small_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_amoeba_5"
+    power = @ukn_strike_craft_amoeba_8_power
+	
+	damage = { min = @ukn_strike_craft_amoeba_8_dmg_min max = @ukn_strike_craft_amoeba_8_dmg_max }
+	cooldown = @ukn_strike_craft_amoeba_8_cooldown
+    range = @ukn_strike_craft_amoeba_8_range
+    accuracy = @ukn_strike_craft_amoeba_8_accuracy
+	
+    hull_damage = @ukn_strike_craft_amoeba_8_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_amoeba_8_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_amoeba_8_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_amoeba_8_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_amoeba_8_shield_damage_mult
+    tracking = @ukn_strike_craft_amoeba_8_tracking
+	
+	engagement_range = @ukn_strike_craft_amoeba_8_engagement_range
+	count = @ukn_strike_craft_amoeba_8_count
+	regeneration_per_day = @ukn_strike_craft_amoeba_8_regen
+	launch_time = @ukn_strike_craft_amoeba_8_launch_time
+
+	health = @ukn_strike_craft_amoeba_8_health
+	armor = @ukn_strike_craft_amoeba_8_armor
+	shield = @ukn_strike_craft_amoeba_8_shield
+	
+	evasion = @ukn_strike_craft_amoeba_8_evasion
+	speed = @ukn_strike_craft_amoeba_8_speed
+	rotation_speed = @ukn_strike_craft_amoeba_8_rotation_speed
+	acceleration = @ukn_strike_craft_amoeba_8_acceleration
+	
+	ship_behavior = "fighters_behavior"
+	prerequisites = { "tech_ukn_strike_craft_amoeba_5" }
+	projectile_gfx = "projectile_ukn_strike_craft_amoeba_5"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	component_set = "UKN_SET_STRIKE_CRAFT_AMOEBA_HANGAR_4"
+	upgrades_to = "UKN_STRIKE_CRAFT_SCOURGE_HANGAR_5"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t8_component_cost_minerals
+#			alloys = @ukn_big_t8_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t8_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t8_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t8_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_big_t8_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t8_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t8_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t8_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_big_t8_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t8_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_big_t8_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_big_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t8_component_upkeep_energy
+#			minerals = @ukn_big_t8_component_upkeep_minerals
+#			alloys = @ukn_big_t8_component_upkeep_alloys
+			food = @ukn_big_t8_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t8_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t8_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t8_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t8_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t8_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t8_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_big_t8_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t8_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t8_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_big_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t8_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 256
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_AMOEBA_HANGAR_6"
+	size = LARGE
+	entity = "space_amoeba_small_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_amoeba_6"
+    power = @ukn_strike_craft_amoeba_9_power
+	
+	damage = { min = @ukn_strike_craft_amoeba_9_dmg_min max = @ukn_strike_craft_amoeba_9_dmg_max }
+	cooldown = @ukn_strike_craft_amoeba_9_cooldown
+    range = @ukn_strike_craft_amoeba_9_range
+    accuracy = @ukn_strike_craft_amoeba_9_accuracy
+	
+    hull_damage = @ukn_strike_craft_amoeba_9_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_amoeba_9_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_amoeba_9_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_amoeba_9_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_amoeba_9_shield_damage_mult
+    tracking = @ukn_strike_craft_amoeba_9_tracking
+	
+	engagement_range = @ukn_strike_craft_amoeba_9_engagement_range
+	count = @ukn_strike_craft_amoeba_9_count
+	regeneration_per_day = @ukn_strike_craft_amoeba_9_regen
+	launch_time = @ukn_strike_craft_amoeba_9_launch_time
+
+	health = @ukn_strike_craft_amoeba_9_health
+	armor = @ukn_strike_craft_amoeba_9_armor
+	shield = @ukn_strike_craft_amoeba_9_shield
+	
+	evasion = @ukn_strike_craft_amoeba_9_evasion
+	speed = @ukn_strike_craft_amoeba_9_speed
+	rotation_speed = @ukn_strike_craft_amoeba_9_rotation_speed
+	acceleration = @ukn_strike_craft_amoeba_9_acceleration
+	
+	ship_behavior = "fighters_behavior"
+	prerequisites = { "tech_ukn_strike_craft_amoeba_6" }
+	projectile_gfx = "projectile_ukn_strike_craft_amoeba_6"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	component_set = "UKN_SET_STRIKE_CRAFT_AMOEBA_HANGAR_6"
+	upgrades_to = "UKN_STRIKE_CRAFT_AMOEBA_HANGAR_7"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t9_component_cost_minerals
+#			alloys = @ukn_big_t9_component_cost_alloys
+#			ukn_meta_materials = @ukn_big_t9_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t9_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t9_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t9_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_big_t9_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t9_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t9_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t9_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t9_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t9_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_big_t9_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t9_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t9_component_upkeep_energy
+#			minerals = @ukn_big_t9_component_upkeep_minerals
+#			alloys = @ukn_big_t9_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t9_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t9_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t9_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t9_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t9_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t9_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t9_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_big_t9_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t9_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_big_t9_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_big_t9_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t9_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t9_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 1024
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+			}
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_AMOEBA_HANGAR_7"
+	size = LARGE
+	entity = "space_amoeba_small_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_amoeba_7"
+    power = @ukn_strike_craft_amoeba_10_power
+	
+	damage = { min = @ukn_strike_craft_amoeba_10_dmg_min max = @ukn_strike_craft_amoeba_10_dmg_max }
+	cooldown = @ukn_strike_craft_amoeba_10_cooldown
+    range = @ukn_strike_craft_amoeba_10_range
+    accuracy = @ukn_strike_craft_amoeba_10_accuracy
+	
+    hull_damage = @ukn_strike_craft_amoeba_10_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_amoeba_10_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_amoeba_10_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_amoeba_10_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_amoeba_10_shield_damage_mult
+    tracking = @ukn_strike_craft_amoeba_10_tracking
+	
+	engagement_range = @ukn_strike_craft_amoeba_10_engagement_range
+	count = @ukn_strike_craft_amoeba_10_count
+	regeneration_per_day = @ukn_strike_craft_amoeba_10_regen
+	launch_time = @ukn_strike_craft_amoeba_10_launch_time
+
+	health = @ukn_strike_craft_amoeba_10_health
+	armor = @ukn_strike_craft_amoeba_10_armor
+	shield = @ukn_strike_craft_amoeba_10_shield
+	
+	evasion = @ukn_strike_craft_amoeba_10_evasion
+	speed = @ukn_strike_craft_amoeba_10_speed
+	rotation_speed = @ukn_strike_craft_amoeba_10_rotation_speed
+	acceleration = @ukn_strike_craft_amoeba_10_acceleration
+	
+	ship_behavior = "fighters_behavior"
+	prerequisites = { "tech_ukn_strike_craft_amoeba_7" }
+	projectile_gfx = "projectile_ukn_strike_craft_amoeba_7"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	component_set = "UKN_SET_STRIKE_CRAFT_AMOEBA_HANGAR_7"
+#	upgrades_to = "UKN_STRIKE_CRAFT_AMOEBA_HANGAR_8"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t10_component_cost_minerals
+#			alloys = @ukn_big_t10_component_cost_alloys
+#			ukn_meta_materials = @ukn_big_t10_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t10_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t10_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t10_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_big_t10_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t10_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t10_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t10_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t10_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t10_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_big_t10_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t10_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t10_component_upkeep_energy
+#			minerals = @ukn_big_t10_component_upkeep_minerals
+#			alloys = @ukn_big_t10_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t10_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t10_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t10_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t10_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t10_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t10_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t10_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_big_t10_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t10_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_big_t10_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_big_t10_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t10_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t10_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 2048
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+			}
+		}
+	}
+}
+
+
+###################
+##### SCOURGE #####
+###################
+
+strike_craft_component_template = {
+	key = "UKN_STRIKE_CRAFT_SCOURGE_HANGAR_0"
+	size = LARGE
+	entity = "swarm_01_fighter_entity"
+	icon_frame = 1
+	weapon_type = point_defence
+	icon = "GFX_ship_part_ukn_strike_craft_scourge_0"
+    power = @ukn_strike_craft_scourge_8_power
+	
+	damage = { min = @ukn_strike_craft_scourge_8_dmg_min max = @ukn_strike_craft_scourge_8_dmg_max }
+	cooldown = @ukn_strike_craft_scourge_8_cooldown
+    range = @ukn_strike_craft_scourge_8_range
+    accuracy = @ukn_strike_craft_scourge_8_accuracy
+	
+    hull_damage = @ukn_strike_craft_scourge_8_hull_damage_mult
+    armor_penetration = @ukn_strike_craft_scourge_8_armor_penetration_mult
+    armor_damage = @ukn_strike_craft_scourge_8_armor_damage_mult
+    shield_penetration = @ukn_strike_craft_scourge_8_shield_penetration_mult
+    shield_damage = @ukn_strike_craft_scourge_8_shield_damage_mult
+    tracking = @ukn_strike_craft_scourge_8_tracking
+	
+	engagement_range = @ukn_strike_craft_scourge_8_engagement_range
+	count = @ukn_strike_craft_scourge_8_count
+	regeneration_per_day = @ukn_strike_craft_scourge_8_regen
+	launch_time = @ukn_strike_craft_scourge_8_launch_time
+
+	health = @ukn_strike_craft_scourge_8_health
+	armor = @ukn_strike_craft_scourge_8_armor
+	shield = @ukn_strike_craft_scourge_8_shield
+	
+	evasion = @ukn_strike_craft_scourge_8_evasion
+	speed = @ukn_strike_craft_scourge_8_speed
+	rotation_speed = @ukn_strike_craft_scourge_8_rotation_speed
+	acceleration = @ukn_strike_craft_scourge_8_acceleration
+	
+	ship_behavior = "fighters_behavior"
+	prerequisites = { "tech_ukn_strike_craft_scourge_8" }
+	projectile_gfx = "projectile_ukn_strike_craft_scourge_8"
+	tags = { weapon_type_strike_craft ukn_weapon_type_fighter }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	component_set = "UKN_SET_STRIKE_CRAFT_SCOURGE_HANGAR_0"
+	upgrades_to = "UKN_STRIKE_CRAFT_AMOEBA_HANGAR_4"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t8_component_cost_minerals
+#			alloys = @ukn_big_t8_component_cost_alloys
+			food = @ukn_big_t8_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t8_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t8_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_big_t8_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t8_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t8_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t8_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_big_t8_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t8_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_big_t8_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_big_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t8_component_upkeep_energy
+#			minerals = @ukn_big_t8_component_upkeep_minerals
+#			alloys = @ukn_big_t8_component_upkeep_alloys
+			food = @ukn_big_t8_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t8_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t8_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t8_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t8_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t8_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t8_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_big_t8_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t8_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t8_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_big_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t8_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 512
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+	}
+}

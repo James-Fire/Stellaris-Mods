@@ -1,0 +1,20 @@
+namespace = themascend
+
+event = {
+	id = themascend.0
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = {
+				NOT = {
+					has_country_flag = has_synthetic_evolution
+				}
+				has_ascension_perk = ap_synthetic_evolution
+			}
+			set_country_flag = has_synthetic_evolution
+			add_research_option = tech_virtual_planets
+		}
+	}
+}

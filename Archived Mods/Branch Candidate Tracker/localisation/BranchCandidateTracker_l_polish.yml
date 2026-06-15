@@ -1,0 +1,178 @@
+﻿l_polish:
+ 
+ ##########################################
+ ##########################################
+ #####                                #####
+ #####    Branch Candidate Tracker    #####
+ #####                                #####
+ #####    Localisations               #####
+ #####                                #####
+ ##########################################
+ ##########################################
+ 
+ ##########################
+ ###  Common Sentences  ###
+ ##########################
+ 
+ BctTextExitMenu.name:0 "Close Menu"
+ BctTextExitMenu.tooltip:1 ""
+ BctTextEndEventChain.name:0 "(End Marking Candidates for Branch)"
+ BctTextEndEventChain.tooltip:0 "This event chain in situation logs will be deleted. The chain will be called again 3 years later.\nIf you do not want to call again it, please disable and/or unsubscribe this mod after this option selected."
+ BctTextSeparator.name:1 "----------------------------------------------------------------"        ## '-' x64
+ BctTextSeparator.tooltip:0 "This is a separator with no effect."
+ BctTextKeepCurrent.name:0 "Keep Current Value"
+ BctTextKeepCurrent.tooltip:1 ""
+ 
+ BctTextCurrentThreshold:0 "Current Threshold: "
+ BctTextCurrentCondition:0 "Current Conditions: "
+ BctTextRecommended:0 "Recommended"
+ BctTextUnrecommended:0 "§HUnrecommended§!"
+ BctTextZero:0 "No"    ## Used as 'No World(s)', 0 (numerical zero) should be used for some language.
+ BctTextAny:0 "§GAny§!"    ## Used such as 'Minimun Planet Size: Any'
+ BctTextMarked:0 "§GMarked§!"    ## Used such as 'Worlds with Branch of Another Empire: Marked'
+ BctTextUnmarked:0 "§RNot Marked§!"    ## Used such as 'Worlds with Branch of Another Empire: Not Marked'
+ BctTextIndent:1 "      "
+ 
+ BctTextBranchValueThreshold:1 "[Root.GetText_BranchValueThreshold_Any]§Y[Root.GetValue.BctVarBranchCandidatePlanetValue]§!"
+ BctTextNumPopsThreshold:1 "[Root.GetText_NumPopsThreshold_Any]§Y[Root.GetValue.BctVarBranchCandidateNumPops]§!"
+ BctTextPlanetSizeThreshold:1 "[Root.GetText_PlanetSizeThreshold_Any]§Y[Root.GetValue.BctVarBranchCandidatePlanetSize]§!"
+ BctTextConfigurationList:1 "§W$BctTextCurrentCondition$§!\n$BctTextIndent$[From.GetText_MarkAlsoNoCommercialPact]\n$BctTextIndent$[From.GetText_NoMarkFreePlanet]\n$BctTextIndent$[From.GetText_MarkPlanetWithForeignBranch]\n$BctTextIndent$$BctEvent.0001.210.name0$: [From.GetText_BranchValueThreshold_Any]§Y[From.GetValue.BctVarBranchCandidatePlanetValue]§!\n$BctTextIndent$$BctEvent.0001.220.name0$: [From.GetText_NumPopsThreshold_Any]§Y[From.GetValue.BctVarBranchCandidateNumPops]§!\n$BctTextIndent$$BctEvent.0001.230.name0$: [From.GetText_PlanetSizeThreshold_Any]§Y[From.GetValue.BctVarBranchCandidatePlanetSize]§!"
+ 
+ ### For Debugging
+ BctTextDebugScope:1 ""
+ #BctTextDebugScope:1 "Root = [Root.GetName] / From = [From.GetName] / FromFrom = [FromFrom.GetName]\n\n"
+ 
+ ######################################
+ ###  Event Chain, Special Project  ###
+ ######################################
+ 
+ BranchCandidateTracker_chain_title:0 "Branch Office Candidates"
+ BranchCandidateTracker_chain_desc:0 "$BctTextDebugScope$It is indispensable for profit growth of our company to establish more branch offices.\n§Y[From.GetText_CountBranchCandidate_Zero][From.GetValue.BctVarCountBranchCandidate] World(s)§! are marked as candidates for the market to establish next branch office.\n\n$BctTextConfigurationList$"
+ BctOpenMenu_PROJECT:0 "Change Requirements for Marked World"
+ BctOpenMenu_PROJECT_DESC:0 "$BctTextDebugScope$Change conditions for marking worlds proposed for establishing branch office.\n\n$BctTextConfigurationList$"
+ BranchCandidateTrackerStandardPoi.name:1 "$BranchCandidateTracker_chain_title$"
+ BranchCandidateTrackerStandardPoi.desc:1 "$BranchCandidateTracker_chain_desc$"
+ 
+ 
+ 
+ ####################
+ ###  Menu Event  ###
+ ####################
+ 
+ ### Main Menu
+ BctEvent.0001.name:1 "$BctOpenMenu_PROJECT$"
+ BctEvent.0001.desc:0 "$BctEvent.0001.desc0$ §HCurrent§! criteria are shown below, and they can be modified by clicking."
+ BctEvent.0001.desc0:0 "$BctOpenMenu_PROJECT_desc$ Here you can change only condition for marking world, but not for actually establishing branch office."
+ 
+ BctEvent.0001.110.name:0 "Empire Without Commercial Pact"
+ BctEvent.0001.120.name:0 "Worlds Without Branch"
+ BctEvent.0001.130.name:0 "Worlds with Branch of Another Empire"
+ BctEvent.0001.141.name:0 "Notification Sound at Updated: §RDisabled§!"
+ BctEvent.0001.142.name:0 "Notification Sound at Updated: §GEnabled§!"
+ BctEvent.0001.210.name0:0 "Minumum $BRANCH_OFFICE_VALUE$"
+ BctEvent.0001.220.name0:0 "Minumum Pops on the Planet"
+ BctEvent.0001.230.name0:0 "Minumum $PLANET_SIZE$"
+ BctEvent.0001.110.tooltip:0 "We may form the pact in the future."
+ BctEvent.0001.120.tooltip:0 "These worlds have potential for establishing branch office."
+ BctEvent.0001.130.tooltip:0 "Perhaps, $casus_belli_cb_hostile_takeover$ may be good choice."
+ BctEvent.0001.141.tooltip:0 "Play sound if marked planets are changed.\nSound only, but not window or notification icon."
+ BctEvent.0001.142.tooltip:1 "$BctEvent.0001.141.tooltip$"
+ BctEvent.0001.210.tooltip:0 "Selection and concentration are required to efficiently use limited resources."
+ BctEvent.0001.220.tooltip:1 "$BctEvent.0001.210.tooltip$"
+ BctEvent.0001.230.tooltip:1 "$BctEvent.0001.210.tooltip$"
+ 
+ BctEvent.0001.111.name:1 "$BctEvent.0001.110.name$: $BctTextUnmarked$"
+ BctEvent.0001.112.name:1 "$BctEvent.0001.110.name$: $BctTextMarked$"
+ BctEvent.0001.121.name:1 "$BctEvent.0001.120.name$: $BctTextMarked$"
+ BctEvent.0001.122.name:1 "$BctEvent.0001.120.name$: $BctTextUnmarked$ (§H$BctTextUnrecommended$§!)"
+ BctEvent.0001.131.name:1 "$BctEvent.0001.130.name$: $BctTextUnmarked$"
+ BctEvent.0001.132.name:1 "$BctEvent.0001.130.name$: $BctTextMarked$"
+ BctEvent.0001.210.name:1 "$BctEvent.0001.210.name0$: $BctTextBranchValueThreshold$"
+ BctEvent.0001.220.name:1 "$BctEvent.0001.220.name0$: $BctTextNumPopsThreshold$"
+ BctEvent.0001.230.name:1 "$BctEvent.0001.230.name0$: $BctTextPlanetSizeThreshold$"
+ BctEvent.0001.111.tooltip:1 "$BctEvent.0001.110.tooltip$"
+ BctEvent.0001.112.tooltip:1 "$BctEvent.0001.110.tooltip$"
+ BctEvent.0001.121.tooltip:1 "$BctEvent.0001.120.tooltip$"
+ BctEvent.0001.122.tooltip:1 "$BctEvent.0001.120.tooltip$"
+ BctEvent.0001.131.tooltip:1 "$BctEvent.0001.130.tooltip$"
+ BctEvent.0001.132.tooltip:1 "$BctEvent.0001.130.tooltip$"
+ 
+ ### Other Menus
+ BctEvent.0011.name:1 "$BctEvent.0001.name$"
+ BctEvent.0011.desc:1 "$BctEvent.0001.desc0$\n\n§W$BctTextCurrentThreshold$$BctTextBranchValueThreshold$ ($BRANCH_OFFICE_VALUE$)§!"
+ BctEvent.0021.name:1 "$BctEvent.0001.name$"
+ BctEvent.0021.desc:1 "$BctEvent.0001.desc0$\n\n§W$BctTextCurrentThreshold$$BctTextNumPopsThreshold$ ($SPECIES_MODIFICATION_POPS_TOOLTIP$)§!"
+ BctEvent.0031.name:1 "$BctEvent.0001.name$"
+ BctEvent.0031.desc:1 "$BctEvent.0001.desc0$\n\n§W$BctTextCurrentThreshold$$BctTextPlanetSizeThreshold$ ($PLANET_SIZE$)§!"
+ BctEvent.0011.V0.name:1 "$BctEvent.0001.210.name0$: $BctTextAny$"
+ BctEvent.0011.V1.name:1 "$BctEvent.0001.210.name0$: §Y5§!"
+ BctEvent.0011.V2.name:1 "$BctEvent.0001.210.name0$: §Y10§!"
+ BctEvent.0011.V3.name:1 "$BctEvent.0001.210.name0$: §Y15§!"
+ BctEvent.0011.V4.name:1 "$BctEvent.0001.210.name0$: §Y20§!"
+ BctEvent.0011.V5.name:1 "$BctEvent.0001.210.name0$: §Y30§!"
+ BctEvent.0021.V0.name:1 "$BctEvent.0001.220.name0$: $BctTextAny$"
+ BctEvent.0021.V1.name:1 "$BctEvent.0001.220.name0$: §Y5§!"
+ BctEvent.0021.V2.name:1 "$BctEvent.0001.220.name0$: §Y10§!"
+ BctEvent.0021.V3.name:1 "$BctEvent.0001.220.name0$: §Y15§!"
+ BctEvent.0021.V4.name:1 "$BctEvent.0001.220.name0$: §Y25§!"
+ BctEvent.0021.V5.name:1 "$BctEvent.0001.220.name0$: §Y50§!"
+ BctEvent.0031.V0.name:1 "$BctEvent.0001.230.name0$: $BctTextAny$"
+ BctEvent.0031.V1.name:1 "$BctEvent.0001.230.name0$: §Y8§!"
+ BctEvent.0031.V2.name:1 "$BctEvent.0001.230.name0$: §Y10§!"
+ BctEvent.0031.V3.name:1 "$BctEvent.0001.230.name0$: §Y12§!"
+ BctEvent.0031.V4.name:1 "$BctEvent.0001.230.name0$: §Y15§!"
+ BctEvent.0031.V5.name:1 "$BctEvent.0001.230.name0$: §Y18§!"
+ 
+ BctEvent.0011.V0.tooltip:1 ""
+ BctEvent.0011.V1.tooltip:1 ""
+ BctEvent.0011.V2.tooltip:1 ""
+ BctEvent.0011.V3.tooltip:1 ""
+ BctEvent.0011.V4.tooltip:1 ""
+ BctEvent.0011.V5.tooltip:1 ""
+ BctEvent.0021.V0.tooltip:1 ""
+ BctEvent.0021.V1.tooltip:1 ""
+ BctEvent.0021.V2.tooltip:1 ""
+ BctEvent.0021.V3.tooltip:1 ""
+ BctEvent.0021.V4.tooltip:1 ""
+ BctEvent.0021.V5.tooltip:1 ""
+ BctEvent.0031.V0.tooltip:1 ""
+ BctEvent.0031.V1.tooltip:1 ""
+ BctEvent.0031.V2.tooltip:1 ""
+ BctEvent.0031.V3.tooltip:1 ""
+ BctEvent.0031.V4.tooltip:1 ""
+ BctEvent.0031.V5.tooltip:1 ""
+ 
+ 
+ ####################################
+ ###  Notice Events of Free Slot  ###
+ ####################################
+ 
+ BctEvent.1202.name:0 "Free Building Slot for Branch Office Found"
+ BctEvent.1202.desc:0 "A free slot for buildings of branch office is found on §Y[From.GetName]§!, owned by §Y[From.Owner.GetName]§!. You should build new bulidings for profit growth.\n\nPress a button at upper right of this window for moving camera to this planet."
+ 
+ BctEvent.1202a.name:0 "OK"
+ BctEvent.1202b1.name:0 "I do not need the notice of this world for 3 months."
+ BctEvent.1202b2.name:0 "I do not need the notice of this world for 1 year."
+ BctEvent.1202b3.name:0 "I do not need the notice of this world for 3 years."
+ BctEvent.1202b4.name:0 "I do not need the notice of this world for 10 years."
+ BctEvent.1202b9.name:0 "I do not need the notice of this world any more."
+ BctEvent.1202c1.name:0 "I do not need the notice of all worlds for 3 months."
+ BctEvent.1202c2.name:0 "I do not need the notice of all worlds for 1 year."
+ BctEvent.1202c3.name:0 "I do not need the notice of all worlds for 3 years."
+ BctEvent.1202c4.name:0 "I do not need the notice of all worlds for 10 years."
+ BctEvent.1202c9.name:0 "I do not need the notice of all worlds any more."
+ 
+ BctEvent.1202a.tooltip:1 ""
+ BctEvent.1202b1.tooltip:1 ""
+ BctEvent.1202b2.tooltip:1 ""
+ BctEvent.1202b3.tooltip:1 ""
+ BctEvent.1202b4.tooltip:1 ""
+ BctEvent.1202b9.tooltip:1 ""
+ BctEvent.1202c1.tooltip:1 ""
+ BctEvent.1202c2.tooltip:1 ""
+ BctEvent.1202c3.tooltip:1 ""
+ BctEvent.1202c4.tooltip:1 ""
+ BctEvent.1202c9.tooltip:1 ""
+  
+ 
+ 

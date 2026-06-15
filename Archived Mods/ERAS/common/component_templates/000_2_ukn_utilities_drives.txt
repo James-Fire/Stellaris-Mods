@@ -1,0 +1,1122 @@
+# Icons set here are the ones show in the actual slot. 
+
+@cost2 = 5
+@cost3 = 10
+@cost4 = 15
+@cost5 = 20
+
+@power1 = -10
+@power2 = -15
+@power3 = -20
+@power4 = -30
+
+#############
+# UTILITIES #
+#############
+
+### NON-FTL DRIVE
+utility_component_template = {
+	key = "EMPTY_DRIVE"
+	size = small
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+	should_ai_use = no
+	
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	component_set = "ftl_components"
+}
+
+### HYPER DRIVES
+utility_component_template = {
+	key = "HYPER_DRIVE_1"
+	size = small
+	icon = "GFX_ship_part_ukn_hyper_drive_1"
+	icon_frame = 1
+	power = @power1
+	
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_regularship_t1_drives_cost_minerals
+			alloys = @ukn_regularship_t1_drives_cost_alloys
+#			ukn_meta_materials = @ukn_regularship_t1_drives_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t1_drives_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t1_drives_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t1_drives_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t1_drives_cost_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t1_drives_cost_exotic_gases
+#			rare_crystals = @ukn_regularship_t1_drives_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_regularship_t1_drives_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_regularship_t1_armor_cost_ukn_meta_materials
+#			nanites = @ukn_regularship_t1_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_regularship_t1_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_regularship_t1_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_regularship_t1_drives_upkeep_energy
+			minerals = @ukn_regularship_t1_drives_upkeep_minerals
+			alloys = @ukn_regularship_t1_drives_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t1_drives_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t1_drives_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t1_drives_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t1_drives_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t1_drives_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t1_drives_upkeep_exotic_gases
+#			rare_crystals = @ukn_regularship_t1_drives_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_regularship_t1_drives_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_regularship_t1_drives_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_regularship_t1_drives_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_regularship_t1_drives_upkeep_nanites
+#---
+#			minerals = @ukn_regularship_t1_kinetics_upkeep_minerals
+#			alloys = @ukn_regularship_t1_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t1_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ftl = yes
+	
+	ai_weight = {
+		weight = 8
+	}
+	
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { "tech_hyper_drive_1" }
+	component_set = "ftl_components"
+	upgrades_to = "HYPER_DRIVE_2"
+}
+
+utility_component_template = {
+	key = "HYPER_DRIVE_2"
+	size = small
+	icon = "GFX_ship_part_ukn_hyper_drive_2"
+	icon_frame = 1
+	power = @power2
+	
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_regularship_t3_drives_cost_minerals
+			alloys = @ukn_regularship_t3_drives_cost_alloys
+#			ukn_meta_materials = @ukn_regularship_t3_drives_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t3_drives_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t3_drives_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t3_drives_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t3_drives_cost_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t3_drives_cost_exotic_gases
+			rare_crystals = @ukn_regularship_t3_drives_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_regularship_t3_drives_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_regularship_t3_armor_cost_ukn_meta_materials
+#			nanites = @ukn_regularship_t3_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_regularship_t3_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_regularship_t3_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_regularship_t3_drives_upkeep_energy
+			minerals = @ukn_regularship_t3_drives_upkeep_minerals
+			alloys = @ukn_regularship_t3_drives_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t3_drives_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t3_drives_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t3_drives_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t3_drives_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t3_drives_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t3_drives_upkeep_exotic_gases
+#			rare_crystals = @ukn_regularship_t3_drives_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_regularship_t3_drives_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_regularship_t3_drives_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_regularship_t3_drives_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_regularship_t3_drives_upkeep_nanites
+#---
+#			minerals = @ukn_regularship_t3_kinetics_upkeep_minerals
+#			alloys = @ukn_regularship_t3_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t3_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ftl = yes
+	ship_modifier = {
+		ship_windup_mult = -0.20		# 0.8
+	}
+	
+	ai_weight = {
+		weight = 32
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = rare_crystals value <= 0 }
+		}
+	}
+	
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { "tech_hyper_drive_2" }
+	component_set = "ftl_components"
+	upgrades_to = "HYPER_DRIVE_3"
+}
+
+utility_component_template = {
+	key = "HYPER_DRIVE_3"
+	size = small
+	icon = "GFX_ship_part_ukn_hyper_drive_3"
+	icon_frame = 1
+	power = @power3
+	
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_regularship_t5_drives_cost_minerals
+#			alloys = @ukn_regularship_t5_drives_cost_alloys
+			ukn_meta_materials = @ukn_regularship_t5_drives_cost_ukn_meta_materials
+			ukn_femtomatter = @ukn_regularship_t5_drives_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t5_drives_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t5_drives_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t5_drives_cost_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t5_drives_cost_exotic_gases
+#			rare_crystals = @ukn_regularship_t5_drives_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_regularship_t5_drives_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_regularship_t5_armor_cost_ukn_meta_materials
+#			nanites = @ukn_regularship_t5_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_regularship_t5_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_regularship_t5_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_regularship_t5_drives_upkeep_energy
+#			minerals = @ukn_regularship_t5_drives_upkeep_minerals
+#			alloys = @ukn_regularship_t5_drives_upkeep_alloys
+			ukn_meta_materials = @ukn_regularship_t5_drives_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t5_drives_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t5_drives_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t5_drives_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t5_drives_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t5_drives_upkeep_exotic_gases
+#			rare_crystals = @ukn_regularship_t5_drives_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_regularship_t5_drives_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_regularship_t5_drives_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_regularship_t5_drives_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_regularship_t5_drives_upkeep_nanites
+#---
+#			minerals = @ukn_regularship_t5_kinetics_upkeep_minerals
+#			alloys = @ukn_regularship_t5_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t5_kinetics_upkeep_ukn_meta_materials
+		}	
+	}
+	
+	ftl = yes
+	ship_modifier = {
+		ship_windup_mult = -0.5			# 0.5
+	}
+	
+	ai_weight = {
+		weight = 64
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = ukn_femtomatter value <= 0 }
+			}
+		}
+	}
+	
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { "tech_hyper_drive_3" }
+	component_set = "ftl_components"
+	upgrades_to = "JUMP_DRIVE_1"
+}
+
+utility_component_template = {
+	key = "JUMP_DRIVE_1"
+	size = small
+	icon = "GFX_ship_part_ukn_hyper_drive_4"
+	icon_frame = 1
+	power = @power3
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_regularship_t6_drives_cost_minerals
+#			alloys = @ukn_regularship_t6_drives_cost_alloys
+			ukn_meta_materials = @ukn_regularship_t6_drives_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t6_drives_cost_ukn_femtomatter
+			ukn_condensics = @ukn_regularship_t6_drives_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t6_drives_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t6_drives_cost_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t6_drives_cost_exotic_gases
+#			rare_crystals = @ukn_regularship_t6_drives_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_regularship_t6_drives_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_regularship_t6_armor_cost_ukn_meta_materials
+#			nanites = @ukn_regularship_t6_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_regularship_t6_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_regularship_t6_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_regularship_t6_drives_upkeep_energy
+#			minerals = @ukn_regularship_t6_drives_upkeep_minerals
+#			alloys = @ukn_regularship_t6_drives_upkeep_alloys
+			ukn_meta_materials = @ukn_regularship_t6_drives_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t6_drives_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t6_drives_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t6_drives_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t6_drives_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t6_drives_upkeep_exotic_gases
+#			rare_crystals = @ukn_regularship_t6_drives_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_regularship_t6_drives_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_regularship_t6_drives_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_regularship_t6_drives_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_regularship_t6_drives_upkeep_nanites
+#---
+#			minerals = @ukn_regularship_t6_kinetics_upkeep_minerals
+#			alloys = @ukn_regularship_t6_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t6_kinetics_upkeep_ukn_meta_materials
+		}	
+	}
+	
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_windup_mult = -0.65			# 0.35
+		ship_ftl_jumpdrive_range_mult = -0.65
+		ship_jumpdrive_cooldown_mult = 0.80
+	}
+	
+	ai_weight = {
+		weight = 128
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = ukn_condensics value <= 0 }
+			}
+		}
+	}
+	
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { "tech_jump_drive_1" }
+	component_set = "ftl_components"
+	upgrades_to = "UKN_JUMP_DRIVE_1"
+}
+
+### Jump drives
+utility_component_template = {
+	key = "UKN_JUMP_DRIVE_1"
+	size = small
+	icon = "GFX_ship_part_ukn_jump_drive_1"
+	icon_frame = 1
+	power = @power4
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_regularship_t7_drives_cost_minerals
+#			alloys = @ukn_regularship_t7_drives_cost_alloys
+			ukn_meta_materials = @ukn_regularship_t7_drives_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t7_drives_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t7_drives_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_regularship_t7_drives_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t7_drives_cost_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t7_drives_cost_exotic_gases
+#			rare_crystals = @ukn_regularship_t7_drives_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_regularship_t7_drives_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_regularship_t7_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_regularship_t7_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_regularship_t7_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_regularship_t7_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_regularship_t7_drives_upkeep_energy
+#			minerals = @ukn_regularship_t7_drives_upkeep_minerals
+#			alloys = @ukn_regularship_t7_drives_upkeep_alloys
+			ukn_meta_materials = @ukn_regularship_t7_drives_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t7_drives_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t7_drives_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t7_drives_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t7_drives_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t7_drives_upkeep_exotic_gases
+#			rare_crystals = @ukn_regularship_t7_drives_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_regularship_t7_drives_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_regularship_t7_drives_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_regularship_t7_drives_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_regularship_t7_drives_upkeep_nanites
+#---
+#			minerals = @ukn_regularship_t7_kinetics_upkeep_minerals
+#			alloys = @ukn_regularship_t7_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t7_kinetics_upkeep_ukn_meta_materials
+		}	
+	}
+	
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_windup_mult = -0.75			# 0.26
+		ship_ftl_jumpdrive_range_mult = -0.40
+		ship_jumpdrive_cooldown_mult = 0.35
+	}
+	
+	ai_weight = {
+		weight = 256
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+#				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+			}
+		}
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { "tech_ukn_jump_drive_1" }
+	component_set = "ftl_components"
+	upgrades_to = "UKN_JUMP_DRIVE_2"
+}
+
+### Jump drives
+utility_component_template = {
+	key = "UKN_JUMP_DRIVE_2"
+	size = small
+	icon = "GFX_ship_part_ukn_jump_drive_2"
+	icon_frame = 1
+	power = @power4
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_regularship_t8_drives_cost_minerals
+#			alloys = @ukn_regularship_t8_drives_cost_alloys
+			ukn_meta_materials = @ukn_regularship_t8_drives_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t8_drives_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t8_drives_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_regularship_t8_drives_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t8_drives_cost_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t8_drives_cost_exotic_gases
+#			rare_crystals = @ukn_regularship_t8_drives_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_regularship_t8_drives_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_regularship_t8_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_regularship_t8_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_regularship_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_regularship_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_regularship_t8_drives_upkeep_energy
+#			minerals = @ukn_regularship_t8_drives_upkeep_minerals
+#			alloys = @ukn_regularship_t8_drives_upkeep_alloys
+			ukn_meta_materials = @ukn_regularship_t8_drives_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t8_drives_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t8_drives_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t8_drives_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t8_drives_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t8_drives_upkeep_exotic_gases
+#			rare_crystals = @ukn_regularship_t8_drives_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_regularship_t8_drives_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_regularship_t8_drives_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_regularship_t8_drives_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_regularship_t8_drives_upkeep_nanites
+#---
+#			minerals = @ukn_regularship_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_regularship_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t8_kinetics_upkeep_ukn_meta_materials
+		}	
+	}
+	
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_windup_mult = -0.8			# 2
+	}
+	
+	ai_weight = {
+		weight = 512
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+			has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+			has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+		}
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { "tech_ukn_jump_drive_2" }
+	component_set = "ftl_components"
+	upgrades_to = "UKN_JUMP_DRIVE_3"
+}
+
+### Jump drives
+utility_component_template = {
+	key = "UKN_JUMP_DRIVE_PLANCK"
+	size = small
+	icon = "GFX_ship_part_ukn_jump_drive_planck"
+	icon_frame = 1
+	power = @power4
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_regularship_t8_drives_cost_minerals
+#			alloys = @ukn_regularship_t8_drives_cost_alloys
+			ukn_meta_materials = @ukn_regularship_t8_drives_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t8_drives_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t8_drives_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_regularship_t8_drives_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t8_drives_cost_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t8_drives_cost_exotic_gases
+#			rare_crystals = @ukn_regularship_t8_drives_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_regularship_t8_drives_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_regularship_t8_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_regularship_t8_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_regularship_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_regularship_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_regularship_t8_drives_upkeep_energy
+#			minerals = @ukn_regularship_t8_drives_upkeep_minerals
+#			alloys = @ukn_regularship_t8_drives_upkeep_alloys
+			ukn_meta_materials = @ukn_regularship_t8_drives_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t8_drives_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t8_drives_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t8_drives_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t8_drives_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t8_drives_upkeep_exotic_gases
+#			rare_crystals = @ukn_regularship_t8_drives_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_regularship_t8_drives_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_regularship_t8_drives_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_regularship_t8_drives_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_regularship_t8_drives_upkeep_nanites
+#---
+#			minerals = @ukn_regularship_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_regularship_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t8_kinetics_upkeep_ukn_meta_materials
+		}	
+	}
+	
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_windup_mult = -0.85			# 2
+		ship_ftl_jumpdrive_range_mult = 0.50
+		ship_jumpdrive_cooldown_mult = -0.25
+	}
+	
+	ai_weight = {
+		weight = 512
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+			has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+			has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+		}
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { "tech_ukn_jump_drive_planck" }
+	component_set = "ftl_components"
+	upgrades_to = "UKN_JUMP_DRIVE_3"
+}
+
+### Jump drives
+utility_component_template = {
+	key = "UKN_JUMP_DRIVE_3"
+	size = small
+	icon = "GFX_ship_part_ukn_jump_drive_3"
+	icon_frame = 1
+	power = @power4
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_regularship_t9_drives_cost_minerals
+#			alloys = @ukn_regularship_t9_drives_cost_alloys
+#			ukn_meta_materials = @ukn_regularship_t9_drives_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t9_drives_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t9_drives_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t9_drives_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_regularship_t9_drives_cost_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t9_drives_cost_exotic_gases
+#			rare_crystals = @ukn_regularship_t9_drives_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_regularship_t9_drives_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_regularship_t9_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_regularship_t9_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_regularship_t9_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_regularship_t9_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_regularship_t9_drives_upkeep_energy
+#			minerals = @ukn_regularship_t9_drives_upkeep_minerals
+#			alloys = @ukn_regularship_t9_drives_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t9_drives_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t9_drives_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t9_drives_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t9_drives_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t9_drives_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t9_drives_upkeep_exotic_gases
+#			rare_crystals = @ukn_regularship_t9_drives_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_regularship_t9_drives_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_regularship_t9_drives_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_regularship_t9_drives_upkeep_ehof_sr_negative_mass
+#			ukn_causalitons = @ukn_regularship_t9_drives_upkeep_nanites
+#---
+#			minerals = @ukn_regularship_t9_kinetics_upkeep_minerals
+#			alloys = @ukn_regularship_t9_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t9_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_windup_mult = -0.9			# 0.157142
+		ship_ftl_jumpdrive_range_mult = 1.00
+		ship_jumpdrive_cooldown_mult = -0.40
+	}
+	
+	ai_weight = {
+		weight = 1024
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = ukn_causalitons value <= 0 }
+			has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+		}
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { "tech_ukn_jump_drive_3" }
+	component_set = "ftl_components"
+	upgrades_to = "UKN_JUMP_DRIVE_4"
+}
+
+### Jump drives
+utility_component_template = {
+	key = "UKN_JUMP_DRIVE_4"
+	size = small
+	icon = "GFX_ship_part_ukn_jump_drive_4"
+	icon_frame = 1
+	power = @power4
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_regularship_t10_drives_cost_minerals
+#			alloys = @ukn_regularship_t10_drives_cost_alloys
+#			ukn_meta_materials = @ukn_regularship_t10_drives_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t10_drives_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t10_drives_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t10_drives_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_regularship_t10_drives_cost_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t10_drives_cost_exotic_gases
+#			rare_crystals = @ukn_regularship_t10_drives_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_regularship_t10_drives_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_regularship_t10_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_regularship_t10_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_regularship_t10_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_regularship_t10_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_regularship_t10_drives_upkeep_energy
+#			minerals = @ukn_regularship_t10_drives_upkeep_minerals
+#			alloys = @ukn_regularship_t10_drives_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t10_drives_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t10_drives_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t10_drives_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t10_drives_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t10_drives_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t10_drives_upkeep_exotic_gases
+#			rare_crystals = @ukn_regularship_t10_drives_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_regularship_t10_drives_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_regularship_t10_drives_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_regularship_t10_drives_upkeep_ehof_sr_negative_mass
+#			ukn_causalitons = @ukn_regularship_t10_drives_upkeep_nanites
+#---
+#			minerals = @ukn_regularship_t10_kinetics_upkeep_minerals
+#			alloys = @ukn_regularship_t10_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t10_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_windup_mult = -0.95			# 0.125
+		ship_ftl_jumpdrive_range_mult = 1.50
+		ship_jumpdrive_cooldown_mult = -0.50
+	}
+	
+	ai_weight = {
+		weight = 2048
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = ukn_causalitons value <= 0 }
+			has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+		}
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { "tech_ukn_jump_drive_4" }
+	component_set = "ftl_components"
+#	upgrades_to = "UKN_JUMP_DRIVE_5"
+}
+
+
+
+
+### Psi Jump drives
+utility_component_template = {
+	key = "PSI_JUMP_DRIVE_1"
+	size = small
+	icon = "GFX_ship_part_ukn_jump_drive_psi_1"
+	icon_frame = 1
+	power = @power4
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_regularship_t7_drives_cost_minerals
+#			alloys = @ukn_regularship_t7_drives_cost_alloys
+#			ukn_meta_materials = @ukn_regularship_t7_drives_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t7_drives_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t7_drives_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_regularship_t7_drives_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t7_drives_cost_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t7_drives_cost_exotic_gases
+#			rare_crystals = @ukn_regularship_t7_drives_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_regularship_t7_drives_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_regularship_t7_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_regularship_t7_armor_cost_ukn_quasi_matter
+#---
+			ukn_meta_materials = @ukn_regularship_t7_shields_cost_ukn_meta_materials
+			sr_zro = @ukn_regularship_t7_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_regularship_t7_drives_upkeep_energy
+#			minerals = @ukn_regularship_t7_drives_upkeep_minerals
+#			alloys = @ukn_regularship_t7_drives_upkeep_alloys
+			ukn_meta_materials = @ukn_regularship_t7_drives_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t7_drives_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t7_drives_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t7_drives_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t7_drives_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t7_drives_upkeep_exotic_gases
+#			rare_crystals = @ukn_regularship_t7_drives_upkeep_rare_crystals
+			sr_zro = @ukn_regularship_t7_drives_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_regularship_t7_drives_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_regularship_t7_drives_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_regularship_t7_drives_upkeep_nanites
+#---
+#			minerals = @ukn_regularship_t7_kinetics_upkeep_minerals
+#			alloys = @ukn_regularship_t7_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t7_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_windup_mult = -0.8
+		ship_ftl_jumpdrive_range_mult = 0.30
+		ship_jumpdrive_cooldown_mult = 0.25			# 0.25	# 0.50
+	}
+	
+	ai_weight = {
+		weight = 768
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = sr_zro value <= 0 }
+			}
+		}
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { "tech_psi_jump_drive_1" }
+	component_set = "ftl_components"
+	upgrades_to = "UKN_JUMP_DRIVE_PSI_2"
+}
+
+
+### Psi Jump drives
+utility_component_template = {
+	key = "UKN_JUMP_DRIVE_PSI_2"
+	size = small
+	icon = "GFX_ship_part_ukn_jump_drive_psi_2"
+	icon_frame = 1
+	power = @power4
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_regularship_t8_drives_cost_minerals
+#			alloys = @ukn_regularship_t8_drives_cost_alloys
+#			ukn_meta_materials = @ukn_regularship_t8_drives_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t8_drives_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t8_drives_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_regularship_t8_drives_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t8_drives_cost_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t8_drives_cost_exotic_gases
+#			rare_crystals = @ukn_regularship_t8_drives_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_regularship_t8_drives_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_regularship_t8_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_regularship_t8_armor_cost_ukn_quasi_matter
+#---
+			ukn_meta_materials = @ukn_regularship_t8_shields_cost_ukn_meta_materials
+			sr_zro = @ukn_regularship_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_regularship_t8_drives_upkeep_energy
+#			minerals = @ukn_regularship_t8_drives_upkeep_minerals
+#			alloys = @ukn_regularship_t8_drives_upkeep_alloys
+			ukn_meta_materials = @ukn_regularship_t8_drives_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t8_drives_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t8_drives_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t8_drives_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t8_drives_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t8_drives_upkeep_exotic_gases
+#			rare_crystals = @ukn_regularship_t8_drives_upkeep_rare_crystals
+			sr_zro = @ukn_regularship_t8_drives_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_regularship_t8_drives_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_regularship_t8_drives_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_regularship_t8_drives_upkeep_nanites
+#---
+#			minerals = @ukn_regularship_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_regularship_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t8_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_windup_mult = -0.85
+		ship_ftl_jumpdrive_range_mult = 0.85		# 1.25
+		ship_jumpdrive_cooldown_mult = -0.05			# -0.10	# 0.10
+	}
+	
+	ai_weight = {
+		weight = 1536
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = sr_zro value <= 0 }
+			}
+		}
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { "tech_ukn_jump_drive_psi_2" }
+	component_set = "ftl_components"
+	upgrades_to = "UKN_JUMP_DRIVE_PSI_3"
+}
+
+
+### Psi Jump drives
+utility_component_template = {
+	key = "UKN_JUMP_DRIVE_PSI_PLANCK"
+	size = small
+	icon = "GFX_ship_part_ukn_jump_drive_psi_planck"
+	icon_frame = 1
+	power = @power4
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_regularship_t_p_drives_cost_minerals
+#			alloys = @ukn_regularship_t_p_drives_cost_alloys
+#			ukn_meta_materials = @ukn_regularship_t_p_drives_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t_p_drives_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t_p_drives_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_regularship_t_p_drives_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t_p_drives_cost_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t_p_drives_cost_exotic_gases
+#			rare_crystals = @ukn_regularship_t_p_drives_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_regularship_t_p_drives_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_regularship_t_p_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_regularship_t_p_armor_cost_ukn_quasi_matter
+#---
+			ukn_meta_materials = @ukn_regularship_t_p_shields_cost_ukn_meta_materials
+			sr_zro = @ukn_regularship_t_p_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_regularship_t_p_drives_upkeep_energy
+#			minerals = @ukn_regularship_t_p_drives_upkeep_minerals
+#			alloys = @ukn_regularship_t_p_drives_upkeep_alloys
+			ukn_meta_materials = @ukn_regularship_t_p_drives_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t_p_drives_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t_p_drives_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t_p_drives_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t_p_drives_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t_p_drives_upkeep_exotic_gases
+#			rare_crystals = @ukn_regularship_t_p_drives_upkeep_rare_crystals
+			sr_zro = @ukn_regularship_t_p_drives_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_regularship_t_p_drives_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_regularship_t_p_drives_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_regularship_t_p_drives_upkeep_nanites
+#---
+#			minerals = @ukn_regularship_t_p_kinetics_upkeep_minerals
+#			alloys = @ukn_regularship_t_p_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t_p_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_windup_mult = -0.85
+		ship_ftl_jumpdrive_range_mult = 0.85		# 1.25
+		ship_jumpdrive_cooldown_mult = -0.05			# -0.10	# 0.10
+	}
+	
+	ai_weight = {
+		weight = 1536
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = sr_zro value <= 0 }
+			}
+		}
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { "tech_ukn_jump_drive_psi_planck" }
+	component_set = "ftl_components"
+	upgrades_to = "UKN_JUMP_DRIVE_PSI_3"
+}
+
+
+### Psi Jump drives
+utility_component_template = {
+	key = "UKN_JUMP_DRIVE_PSI_3"
+	size = small
+	icon = "GFX_ship_part_ukn_jump_drive_psi_3"
+	icon_frame = 1
+	power = @power4
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_regularship_t9_drives_cost_minerals
+#			alloys = @ukn_regularship_t9_drives_cost_alloys
+#			ukn_meta_materials = @ukn_regularship_t9_drives_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t9_drives_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t9_drives_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t9_drives_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_regularship_t9_drives_cost_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t9_drives_cost_exotic_gases
+#			rare_crystals = @ukn_regularship_t9_drives_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_regularship_t9_drives_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_regularship_t9_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_regularship_t9_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_regularship_t9_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_regularship_t9_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_regularship_t9_drives_upkeep_energy
+#			minerals = @ukn_regularship_t9_drives_upkeep_minerals
+#			alloys = @ukn_regularship_t9_drives_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t9_drives_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t9_drives_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t9_drives_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t9_drives_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t9_drives_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t9_drives_upkeep_exotic_gases
+#			rare_crystals = @ukn_regularship_t9_drives_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_regularship_t9_drives_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_regularship_t9_drives_upkeep_sr_dark_matter
+			sr_zro = @ukn_regularship_t9_drives_upkeep_ehof_sr_negative_mass
+#			ukn_causalitons = @ukn_regularship_t9_drives_upkeep_nanites
+#---
+#			minerals = @ukn_regularship_t9_kinetics_upkeep_minerals
+#			alloys = @ukn_regularship_t9_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t9_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_windup_mult = -0.9
+		ship_ftl_jumpdrive_range_mult = 1.50			# 2.00
+		ship_jumpdrive_cooldown_mult = -0.25			# -0.35	# -0.25
+	}
+	
+	ai_weight = {
+		weight = 1536
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = sr_zro value <= 0 }
+			}
+		}
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { "tech_ukn_jump_drive_psi_3" }
+	component_set = "ftl_components"
+	upgrades_to = "UKN_JUMP_DRIVE_PSI_4"
+}
+
+
+### Psi Jump drives
+utility_component_template = {
+	key = "UKN_JUMP_DRIVE_PSI_4"
+	size = small
+	icon = "GFX_ship_part_ukn_jump_drive_psi_4"
+	icon_frame = 1
+	power = @power4
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_regularship_t10_drives_cost_minerals
+#			alloys = @ukn_regularship_t10_drives_cost_alloys
+#			ukn_meta_materials = @ukn_regularship_t10_drives_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t10_drives_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t10_drives_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t10_drives_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_regularship_t10_drives_cost_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t10_drives_cost_exotic_gases
+#			rare_crystals = @ukn_regularship_t10_drives_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_regularship_t10_drives_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_regularship_t10_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_regularship_t10_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_regularship_t10_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_regularship_t10_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_regularship_t10_drives_upkeep_energy
+#			minerals = @ukn_regularship_t10_drives_upkeep_minerals
+#			alloys = @ukn_regularship_t10_drives_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t10_drives_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t10_drives_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t10_drives_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t10_drives_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t10_drives_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t10_drives_upkeep_exotic_gases
+#			rare_crystals = @ukn_regularship_t10_drives_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_regularship_t10_drives_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_regularship_t10_drives_upkeep_sr_dark_matter
+			sr_zro = @ukn_regularship_t10_drives_upkeep_ehof_sr_negative_mass
+#			ukn_causalitons = @ukn_regularship_t10_drives_upkeep_nanites
+#---
+#			minerals = @ukn_regularship_t10_kinetics_upkeep_minerals
+#			alloys = @ukn_regularship_t10_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t10_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_windup_mult = -0.95
+		ship_ftl_jumpdrive_range_mult = 2.10			# 2.00
+		ship_jumpdrive_cooldown_mult = -0.35			# -0.35	# -0.25
+	}
+	
+	ai_weight = {
+		weight = 3072
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = sr_zro value <= 0 }
+			}
+		}
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { "tech_ukn_jump_drive_psi_4" }
+	component_set = "ftl_components"
+#	upgrades_to = "UKN_JUMP_DRIVE_PSI_5"
+}
+
+### Jump drives
+utility_component_template = {
+	key = "UKN_HYPER_DRIVE_SCOURGE"
+	size = small
+	icon = "GFX_ship_part_ukn_hyper_drive_scourge"
+	icon_frame = 1
+	power = @power4
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_regularship_t8_drives_cost_minerals
+#			alloys = @ukn_regularship_t8_drives_cost_alloys
+			food = @ukn_regularship_t8_drives_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t8_drives_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t8_drives_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_regularship_t8_drives_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t8_drives_cost_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t8_drives_cost_exotic_gases
+#			rare_crystals = @ukn_regularship_t8_drives_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_regularship_t8_drives_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_regularship_t8_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_regularship_t8_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_regularship_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_regularship_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_regularship_t8_drives_upkeep_energy
+#			minerals = @ukn_regularship_t8_drives_upkeep_minerals
+#			alloys = @ukn_regularship_t8_drives_upkeep_alloys
+			food = @ukn_regularship_t8_drives_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_regularship_t8_drives_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_regularship_t8_drives_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_regularship_t8_drives_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_regularship_t8_drives_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_regularship_t8_drives_upkeep_exotic_gases
+#			rare_crystals = @ukn_regularship_t8_drives_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_regularship_t8_drives_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_regularship_t8_drives_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_regularship_t8_drives_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_regularship_t8_drives_upkeep_nanites
+#---
+#			minerals = @ukn_regularship_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_regularship_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_regularship_t8_kinetics_upkeep_ukn_meta_materials
+		}	
+	}
+	
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_windup_mult = -0.90			# 0.26
+		ship_interstellar_speed_mult = 2.0
+		ship_ftl_jumpdrive_range_mult = -0.50
+		ship_jumpdrive_cooldown_mult = 0.50
+	}
+	
+	ai_weight = {
+		weight = 512
+		modifier = {
+			factor = 0
+			has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+			has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+		}
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { "tech_ukn_LOCKED" }
+	component_set = "ftl_components"
+	upgrades_to = "UKN_JUMP_DRIVE_3"
+}

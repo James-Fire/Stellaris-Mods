@@ -1,0 +1,49 @@
+UKN_USES_TERRESTRIAL_SECTIONS = {
+	OR = {
+		is_machine_empire = no
+		has_valid_civic = civic_machine_servitor
+	}
+}
+UKN_USES_DESOLATE_SECTIONS = {
+	is_machine_empire = yes
+	NOT = { has_valid_civic = civic_machine_servitor }
+}
+#---
+
+UKN_CAN_BUILD_GAIA_WORLDS = {
+	always = yes
+}
+UKN_CAN_BUILD_CITY_WORLDS = {
+    OR = {
+# ARCOLOGY PROJECT TECH
+        has_technology = tech_ukn_ecumenopolis
+    }
+}
+UKN_CAN_BUILD_MACHINE_WORLDS = {
+	OR = {
+# MACHINE WORLDS AP
+		has_ascension_perk = ap_machine_worlds
+	}
+}
+UKN_CAN_BUILD_HIVE_WORLDS = {
+	OR = {
+# HIVE WORLDS AP
+		has_ascension_perk = ap_hive_worlds
+	}
+}
+UKN_CAN_BUILD_COMPUTER_WORLDS = {
+	OR = {
+# PLANETARY COMPUTING COMPLEX TECH
+		has_technology = giga_tech_planetary_computer
+	}
+}
+UKN_CAN_BUILD_MILITARY_WORLDS = {
+	OR = {
+# ARCOLOGY PROJECT AP
+		has_ascension_perk = ap_arcology_project
+# MACHINE WORLDS AP
+		has_ascension_perk = ap_machine_worlds
+# HIVE WORLDS AP
+		has_ascension_perk = ap_hive_worlds
+	}
+}

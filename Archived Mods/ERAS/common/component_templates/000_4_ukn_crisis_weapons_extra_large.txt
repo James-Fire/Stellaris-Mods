@@ -1,0 +1,75 @@
+# Icons set here are the ones show in the actual slot. 
+
+###############################
+### SCOURGE STELLAR MISSILE ###
+###############################
+
+############ TRANSLIGHT ############
+
+### False Vacuum Stellar Missile Launcher (T7)
+weapon_component_template = {
+	key = "UKN_SCOURGE_STELLAR_MISSILE_0"
+	size = extra_large
+	type = missile
+    power = @ukn_scourge_stellar_missile_8_power
+	
+	icon = "GFX_ship_part_ukn_scourge_stellar_missile_0"
+	icon_frame = 1
+#    static_rotation = yes
+	
+	damage = { min = @ukn_scourge_stellar_missile_8_dmg_min max = @ukn_scourge_stellar_missile_8_dmg_max }
+    windup = { min = @ukn_scourge_stellar_missile_8_windup_min max = @ukn_scourge_stellar_missile_8_windup_max }
+    total_fire_time = @ukn_scourge_stellar_missile_8_total_fire_time
+    range = @ukn_scourge_stellar_missile_8_range
+    accuracy = @ukn_scourge_stellar_missile_8_accuracy
+	
+    missile_speed = @ukn_scourge_stellar_missile_8_missile_speed # 18 = 700 -- apparently, the game doesn't auto-convert speed for non-vanilla components
+    missile_evasion = @ukn_scourge_stellar_missile_8_missile_evasion
+    missile_health = @ukn_scourge_stellar_missile_8_missile_health
+    missile_retarget_range = @ukn_scourge_stellar_missile_8_missile_retarget_range
+	
+    hull_damage = @ukn_scourge_stellar_missile_8_hull_damage_mult
+    armor_penetration = @ukn_scourge_stellar_missile_8_armor_penetration_mult
+    shield_penetration = @ukn_scourge_stellar_missile_8_shield_penetration_mult
+    armor_damage = @ukn_scourge_stellar_missile_8_armor_damage_mult
+    shield_damage = @ukn_scourge_stellar_missile_8_shield_damage_mult
+    tracking = @ukn_scourge_stellar_missile_8_tracking
+
+    firing_arc = @ukn_scourge_stellar_missile_8_firing_arc
+    min_range = @ukn_scourge_stellar_missile_8_min_range
+    use_ship_kill_target = no
+	
+	prerequisites = { "tech_ukn_stellar_missile_4" }
+	component_set = "UKN_SET_SCOURGE_STELLAR_MISSILE_0"
+	projectile_gfx = "projectile_ukn_stellar_missile_4"
+	tags = { weapon_type_explosive ukn_weapon_type_missile }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "UKN_SCOURGE_STELLAR_MISSILE_1"
+	
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ukn_xl_t8_cost
+			ukn_quasi_matter = @ukn_xl_t8_secondary
+			ehof_sr_negative_mass = @ukn_xl_t8_tertiary
+			ukn_exotic_particles = @ukn_xl_t8_rare
+		}		
+		upkeep = {
+			energy = @ukn_xl_t8_upkeep_energy
+			ukn_quasi_matter = @ukn_xl_t8_upkeep_cost
+		}
+	}
+
+	ai_weight = {
+		weight = @ukn_component_weight_stellar_missile_t8
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}

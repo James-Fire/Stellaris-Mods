@@ -1,0 +1,53 @@
+#########
+## Wet ##
+#########
+
+#Europa, Titan, Titania, Triton, specifically excludes Pluto and Charon
+terraform_link = {
+	from = "pc_frozen"
+	to = "pc_ocean"
+	
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 3000
+		}
+	}
+	duration = 720
+	
+	condition = {
+		from = {
+			NOR = {
+				has_planet_flag = trans_pluto
+				has_planet_flag = trans_charon
+			}
+			has_modifier = terraforming_candidate
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Luna, Ganymede, Callisto
+terraform_link = {
+	from = "pc_barren_cold"
+	to = "pc_tundra"
+	
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 1000
+		}
+	}
+	duration = 720
+	
+	condition = {
+		has_modifier = terraforming_candidate
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

@@ -1,0 +1,739 @@
+green_tiberium_harvester = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = tiberium_green_refinery
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		
+	}
+	possible_precalc = can_fill_specialist_job
+
+	possible = {
+		#OR = {
+		#	specialist_job_check_trigger = yes # Tiberium James says that Droids have protective coating, which is used OOC to justify the Specialist Trigger
+		#	tiberium_plantation = yes
+		#	robot_can_into_tiberium = yes
+		#	AND = {
+		#		worker_job_check_trigger = yes
+		#		NOR = {
+		#			owner = { has_policy_flag = "tiberium_safe" }
+		#			owner = { has_policy_flag = "tiberium_priority_safe" }
+		#			owner = { has_policy_flag = "tiberium_balanced_safe" }
+		#		}
+		#	}
+		#}
+	}
+	
+	resources = {
+		category = planet_green_tiberium_harvesters
+		produces = {
+			sr_tiberium_green = 3
+		}
+		upkeep = {
+			trigger = {
+				owner = { has_policy_flag = tiberium_safe }
+			}
+			energy = 1
+		}
+		upkeep = {
+			trigger = {
+				owner = { has_policy_flag = tiberium_priority_safe }
+			}
+			energy = 0.5
+		}
+		produces = {
+			trigger = {
+				owner = { has_policy_flag = tiberium_minimal_safe }
+			}
+			sr_tiberium_green = 0.5
+		}
+		produces = {
+			trigger = {
+				owner = { has_policy_flag = tiberium_no_safe }
+			}
+			sr_tiberium_green = 1
+		}
+		upkeep = {
+			trigger = { NOT = { is_enslaved = yes } }
+			alloys = 0.5
+			energy = 1.5
+		}
+		upkeep = {
+			trigger = {
+				is_enslaved = yes
+				is_lithoid = no
+			}
+			food = 1.5
+			energy = 1.5
+		}
+		upkeep = {
+			trigger = {
+				is_enslaved = yes
+				is_lithoid = yes
+			}
+			minerals = 1.5
+			energy = 1.5
+		}
+	}
+	
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = tiberium_safe
+			}
+		}
+		biological_pop_happiness = 0.1
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = tiberium_priority_safe
+			}
+		}
+		biological_pop_happiness = 0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_minimal_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		biological_pop_happiness = -0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_no_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		biological_pop_happiness = -0.10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_minimal_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		#planet_amenities_add = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_no_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		#planet_amenities_add = -2
+	}
+	
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = trait_robust
+				has_trait = trait_robot_efficient_processors
+			}
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_mechanical
+		}
+		modifier = {
+			factor = 4
+			has_job = green_tiberium_harvester
+		}
+		modifier = {
+			factor = 10
+			is_enslaved = yes # Slaves are expendable
+			tiberium_plantation = yes
+		}
+	}
+}
+
+blue_tiberium_harvester = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = tiberium_blue_refinery
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		
+	}
+
+	possible_precalc = can_fill_specialist_job
+
+	possible = {
+		#OR = {
+		#	specialist_job_check_trigger = yes # Tiberium James says that Droids have protective coating, which is used OOC to justify the Specialist Trigger
+		#	tiberium_plantation = yes
+		#	robot_can_into_tiberium = yes
+		#	AND = {
+		#		worker_job_check_trigger = yes
+		#		NOT = {
+		#			owner = { has_policy_flag = "tiberium_safe" }
+		#			owner = { has_policy_flag = "tiberium_priority_safe" }
+		#			owner = { has_policy_flag = "tiberium_balanced_safe" }
+		#		}
+		#	}
+		#}
+	}
+	
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = tiberium_safe
+			}
+		}
+		biological_pop_happiness = 0.1
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = tiberium_priority_safe
+			}
+		}
+		biological_pop_happiness = 0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_minimal_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		biological_pop_happiness = -0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_no_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		biological_pop_happiness = -0.10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_minimal_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		#planet_amenities_add = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_no_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		#planet_amenities_add = -2
+	}
+	
+	resources = {
+		category = planet_blue_tiberium_harvesters
+		produces = {
+			sr_tiberium_blue = 2
+		}
+		produces = {
+			trigger = {
+				is_enslaved = yes
+				owner = { has_policy_flag = tiberium_priority_safe } # Precautions are taken, even for slaves
+			}
+			sr_tiberium_blue = -1
+		}
+		produces = {
+			trigger = {
+				is_enslaved = yes
+				owner = { has_policy_flag = tiberium_no_safe }
+			}
+			sr_tiberium_blue = 1
+		}
+		upkeep = {
+			trigger = { NOT = { is_enslaved = yes } }
+			alloys = 0.5
+			energy = 1.5
+		}
+		upkeep = {
+			trigger = {
+				is_enslaved = yes
+				is_lithoid = no
+			}
+			food = 3
+			energy = 1.5
+		}
+		upkeep = {
+			trigger = {
+				is_enslaved = yes
+				is_lithoid = yes
+			}
+			minerals = 3
+			energy = 1.5
+		}
+	}
+	
+	weight = {
+		weight = @specialist_job_weight	
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = trait_robust
+				has_trait = trait_robot_efficient_processors
+			}
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_mechanical
+		}
+		modifier = {
+			factor = 4
+			has_job = blue_tiberium_harvester
+		}
+		modifier = {
+			factor = 10
+			tiberium_plantation = yes
+			is_enslaved = yes # Slaves are expendable
+		}
+		modifier = {
+			factor = 0.33
+			is_enslaved = yes
+			owner = { has_policy_flag = tiberium_priority_safe } # Slaves are not the go-to at high safety levels
+		}
+	}
+}
+
+green_tiberium_refiner = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = tiberium_green_refinery
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		
+	}
+
+	possible_precalc = can_fill_specialist_job
+	
+	possible = {
+		#OR = {
+		#	specialist_job_check_trigger = yes
+		#	AND = {
+		#		worker_job_check_trigger = yes
+		#		NOT = {
+		#			owner = { has_policy_flag = "tiberium_safe" }
+		#			owner = { has_policy_flag = "tiberium_priority_safe" }
+		#			owner = { has_policy_flag = "tiberium_balanced_safe" }
+		#		}
+		#	}
+		#}
+		#OR = {
+		#	NOT = { is_enslaved = yes }
+		#	owner = { has_policy_flag = tiberium_no_safe }
+		#}
+	}
+	
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = tiberium_safe
+			}
+		}
+		biological_pop_happiness = 0.1
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = tiberium_priority_safe
+			}
+		}
+		biological_pop_happiness = 0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_minimal_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		biological_pop_happiness = -0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_no_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		biological_pop_happiness = -0.10
+	}
+	
+	resources = {
+		category = planet_green_tiberium_refiners
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			alloys = 2
+			minerals = 8
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			sr_tiberium_green = 2
+		}
+	}
+	
+	weight = {
+		weight = @specialist_job_weight	
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+           factor = 2
+           OR = {
+               has_trait = trait_robust
+               has_trait = trait_robot_efficient_processors
+           }
+        }
+		modifier = {
+			factor = 2
+			has_job = green_tiberium_refiner
+		}
+	}
+}
+
+blue_tiberium_refiner = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = tiberium_blue_refinery
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		
+	}
+	possible_precalc = can_fill_specialist_job
+
+	possible = {
+	}
+	
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = tiberium_safe
+			}
+		}
+		biological_pop_happiness = 0.1
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = tiberium_priority_safe
+			}
+		}
+		biological_pop_happiness = 0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_minimal_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		biological_pop_happiness = -0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_no_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		biological_pop_happiness = -0.10
+	}
+	
+	resources = {
+		category = planet_blue_tiberium_refiners
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+			}
+			alloys = 10
+			minerals = 4
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+			}
+			sr_tiberium_blue = 2
+		}
+	}
+	
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+           factor = 2
+           OR = {
+               has_trait = trait_robust
+               has_trait = trait_robot_efficient_processors
+           }
+        }
+		modifier = {
+			factor = 2
+			has_job = blue_tiberium_refiner
+		}
+		modifier = {
+			factor = 0
+			years_passed < 3
+		}
+	}
+}
+
+tiberium_researcher = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_research_lab_1
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		
+	}
+
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+	
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = tiberium_safe
+			}
+		}
+		biological_pop_happiness = 0.1
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = tiberium_priority_safe
+			}
+		}
+		biological_pop_happiness = 0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_minimal_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		biological_pop_happiness = -0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_no_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		biological_pop_happiness = -0.10
+	}
+	
+	resources = {
+		category = planet_researchers
+		produces = {
+			physics_research = 6
+			engineering_research = 6
+			society_research = 4
+		}
+		produces = {
+			trigger = { 
+				owner = { has_valid_civic = civic_technocracy }
+			}
+			unity = 1
+		}
+		upkeep = {
+			consumer_goods = 2
+		}		
+	}
+	
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.9
+			has_citizenship_rights = no	
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_living_standard = { type = living_standard_academic_privilege }
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_erudite
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = trait_robot_logic_engines
+				has_trait = trait_intelligent
+			}
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_brainslug
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_natural_engineers
+				has_trait = trait_natural_physicists
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_trait = trait_latent_psionic
+		} 
+		modifier = {
+			factor = 1.5
+			has_trait = trait_psionic
+		} 
+		modifier = {
+			factor = 0.2
+			has_trait = trait_enigmatic_intelligence_failed
+		} 
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_enigmatic_intelligence_poor
+				has_trait = trait_enigmatic_intelligence
+				
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_presapient_natural_intellectuals
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_trait = trait_presapient_proles	
+			}
+		}
+		modifier = {
+			factor = 3
+			has_job = tiberium_researcher
+		}		
+	}
+}

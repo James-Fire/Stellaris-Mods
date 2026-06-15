@@ -1,0 +1,78 @@
+Play through, find bugs
+Flavour blockers:
+-Blossom Tree Forest
+-Rogue Ion storm (Reduce red/yellow zones)
+-Tiberium Wildlife
+-Mutants
+
+
+
+Easiest way to do that would probably be to apply a modifier to remember what planet it was. Have that apply it's stuff. I've already got that for the infestation with the asteroid, before it turns into a tib world.
+for cold types arctic would be slowest and alpine fastest, for dry arid the fastest and desert(?) slowest and wet it would be tropical fastest and continental slowest. unlisted worlds are the middle ground
+
+Planet modifiers affecting initial deposits, and infection rate.
+Planet modifiers interact with tib to give random events (Unstable tectonics explosion, hazardous weather ion storms)
+Liquid t explosion event
+Decision for unowned planets
+
+Decision for Branch Office Planets
+
+
+triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_safe
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_priority_safe
+			}
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_balanced_safe
+			}
+		}
+		modifier = {
+			planet_housing_add = 3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_minimal_safe
+			}
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_no_safe
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}

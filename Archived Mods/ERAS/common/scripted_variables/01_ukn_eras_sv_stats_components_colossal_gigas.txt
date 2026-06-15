@@ -1,0 +1,2778 @@
+#############################
+# POP WEAPON DAMAGE BONUSES #
+#############################
+
+# TERRESTRIAL WORLDCRAFT #-----------------
+
+@ukn_worldcraft_normal_reactor_weapon_damage_110_pop = 0.11
+@ukn_worldcraft_normal_district_weapon_damage_2_pop = -0.002
+@ukn_worldcraft_normal_aux_weapon_damage_5_pop = -0.005
+@ukn_worldcraft_normal_aux_weapon_damage_2_pop = -0.002
+@ukn_worldcraft_normal_aux_weapon_damage_1_pop = -0.001
+
+# ARCOLOGY WORLDCRAFT #-----------------
+
+@ukn_worldcraft_arcology_reactor_weapon_damage_350_pop = 0.14
+@ukn_worldcraft_arcology_district_weapon_damage_10_pop = -0.004
+@ukn_worldcraft_arcology_aux_weapon_damage_5_pop = -0.002
+@ukn_worldcraft_arcology_aux_weapon_damage_2_pop = -0.0008
+@ukn_worldcraft_arcology_aux_weapon_damage_1_pop = -0.0004
+
+# ATTACK MOON #-----------------
+
+@ukn_attack_moon_reactor_weapon_damage_2_pop = 0.05
+@ukn_attack_moon_reactor_weapon_damage_3_pop = 0.075
+@ukn_attack_moon_aux_weapon_damage_1_pop = -0.025
+@ukn_attack_moon_aux_weapon_damage_2_pop = -0.05
+
+# BEHEMOTH PLANETCRAFT #-----------------
+
+@ukn_planetcraft_reactor_weapon_damage_20_pop = 0.10
+@ukn_planetcraft_aux_weapon_damage_1_pop = -0.005
+@ukn_planetcraft_aux_weapon_damage_2_pop = -0.01
+
+# STELLAR SYSTEMCRAFT #-----------------
+
+@ukn_systemcraft_reactor_weapon_damage_120_pop = 0.15
+@ukn_systemcraft_aux_weapon_damage_1_pop = -0.00125
+@ukn_systemcraft_aux_weapon_damage_2_pop = -0.0025
+
+
+########################################
+# STABILIZERS (TERRESTRIAL WORLDCRAFT) #
+########################################
+
+@ukn_stabilizer_worldcraft_normal_hull_mult_5 = 0.0386
+
+@ukn_stabilizer_worldcraft_normal_hull_mult_6 = 0.0521     
+
+@ukn_stabilizer_worldcraft_normal_hull_mult_7 = 0.0730     
+
+@ukn_stabilizer_worldcraft_normal_hull_mult_8 = 0.1058     
+
+@ukn_stabilizer_worldcraft_normal_hull_mult_9 = 0.2302     
+
+@ukn_stabilizer_worldcraft_normal_hull_mult_10 = 0.3568     
+
+@ukn_stabilizer_worldcraft_normal_hull_mult_planck = 0.1535       
+
+#####################################
+# STABILIZERS (ARCOLOGY WORLDCRAFT) #
+#####################################
+
+@ukn_stabilizer_worldcraft_arcology_hull_mult_5 = 0.0386
+
+@ukn_stabilizer_worldcraft_arcology_hull_mult_6 = 0.0521     
+
+@ukn_stabilizer_worldcraft_arcology_hull_mult_7 = 0.0730     
+
+@ukn_stabilizer_worldcraft_arcology_hull_mult_8 = 0.1058     
+
+@ukn_stabilizer_worldcraft_arcology_hull_mult_9 = 0.2302     
+
+@ukn_stabilizer_worldcraft_arcology_hull_mult_10 = 0.3568     
+
+@ukn_stabilizer_worldcraft_arcology_hull_mult_planck = 0.1535       
+
+#############################
+# STABILIZERS (ATTACK MOON) #
+#############################
+
+@ukn_stabilizer_attack_moon_hull_mult_5 = 0.2288
+
+@ukn_stabilizer_attack_moon_hull_mult_6 = 0.3089     
+
+@ukn_stabilizer_attack_moon_hull_mult_7 = 0.4325     
+
+@ukn_stabilizer_attack_moon_hull_mult_8 = 0.6272     
+
+@ukn_stabilizer_attack_moon_hull_mult_9 = 1.3641     
+
+@ukn_stabilizer_attack_moon_hull_mult_10 = 2.1143     
+
+@ukn_stabilizer_attack_moon_hull_mult_planck = 0.9094     
+
+#############################
+# STABILIZERS (PLANETCRAFT) #
+#############################
+
+@ukn_stabilizer_planetcraft_hull_mult_5 = 0.0572
+
+@ukn_stabilizer_planetcraft_hull_mult_6 = 0.0772    
+
+@ukn_stabilizer_planetcraft_hull_mult_7 = 0.1081    
+
+@ukn_stabilizer_planetcraft_hull_mult_8 = 0.1568    
+
+@ukn_stabilizer_planetcraft_hull_mult_9 = 0.3410    
+
+@ukn_stabilizer_planetcraft_hull_mult_10 = 0.5286    
+
+@ukn_stabilizer_planetcraft_hull_mult_planck = 0.2273    
+
+#############################
+# STABILIZERS (SYSTEMCRAFT) #
+#############################
+
+@ukn_stabilizer_systemcraft_hull_mult_5 = 0.0073 
+
+@ukn_stabilizer_systemcraft_hull_mult_6 = 0.0099  
+
+@ukn_stabilizer_systemcraft_hull_mult_7 = 0.0139  
+
+@ukn_stabilizer_systemcraft_hull_mult_8 = 0.0201  
+
+@ukn_stabilizer_systemcraft_hull_mult_9 = 0.0437  
+
+@ukn_stabilizer_systemcraft_hull_mult_10 = 0.0678  
+
+@ukn_stabilizer_systemcraft_hull_mult_planck = 0.0291     
+
+
+
+
+
+#############################
+# CRUST (TERRESTRIAL WORLDCRAFT) ARMOR #
+#############################
+
+#########
+# ARMOR #
+#########
+
+@ukn_crust_armor_worldcraft_normal_armor_5 = 257451
+
+@ukn_crust_armor_worldcraft_normal_armor_6 = 347559
+
+@ukn_crust_armor_worldcraft_normal_armor_7 = 486582
+
+@ukn_crust_armor_worldcraft_normal_armor_8 = 705544
+
+@ukn_crust_armor_worldcraft_normal_armor_9 = 1534558
+
+@ukn_crust_armor_worldcraft_normal_armor_10 = 2378564
+
+@ukn_crust_armor_worldcraft_normal_armor_planck = 1023038
+
+#########
+# REGEN #
+#########
+
+# ~500d to Full Regen #---------------
+@ukn_crust_armor_worldcraft_normal_armor_regen_5 = 12.87
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_worldcraft_normal_armor_regen_6 = 23.17
+
+@ukn_crust_armor_worldcraft_normal_armor_regen_7 = 32.44
+
+@ukn_crust_armor_worldcraft_normal_armor_regen_8 = 47.04
+
+# ~250d to Full Regen #---------------
+@ukn_crust_armor_worldcraft_normal_armor_regen_9 = 153.46
+
+@ukn_crust_armor_worldcraft_normal_armor_regen_10 = 237.86
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_worldcraft_normal_armor_regen_planck = 68.20
+
+
+#######################################
+# REGENNING CRUST (TERRESTRIAL WORLDCRAFT) ARMOR #
+#######################################
+
+#########
+# ARMOR #
+#########
+
+@ukn_crust_armor_automachine_worldcraft_normal_armor_5 = 205961
+
+@ukn_crust_armor_automachine_worldcraft_normal_armor_6 = 278047
+
+@ukn_crust_armor_sentient_metal_worldcraft_normal_armor_7 = 389266
+
+@ukn_crust_armor_sentient_metal_worldcraft_normal_armor_8 = 564435
+
+@ukn_crust_armor_sentient_metal_worldcraft_normal_armor_planck = 818431
+
+@ukn_crust_armor_living_metal_worldcraft_normal_armor_9 = 1227646
+
+@ukn_crust_armor_living_metal_worldcraft_normal_armor_10 = 1902852
+
+#########
+# REGEN #
+#########
+
+# ~500d to Full Regen #---------------
+@ukn_crust_armor_automachine_worldcraft_normal_armor_regen_5 = 30.97
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_automachine_worldcraft_normal_armor_regen_6 = 55.61
+
+@ukn_crust_armor_sentient_metal_worldcraft_normal_armor_regen_7 = 77.85
+
+@ukn_crust_armor_sentient_metal_worldcraft_normal_armor_regen_8 = 112.89
+
+@ukn_crust_armor_sentient_metal_worldcraft_normal_armor_regen_planck = 163.69
+
+# ~250d to Full Regen #---------------
+@ukn_crust_armor_living_metal_worldcraft_normal_armor_regen_9 = 366.46
+
+@ukn_crust_armor_living_metal_worldcraft_normal_armor_regen_10 = 568.02
+
+
+#################################################
+# SPECIAL (RESILIENT) CRUST (TERRESTRIAL WORLDCRAFT) ARMOR #
+#################################################
+
+#########
+# ARMOR #
+#########
+
+@ukn_crust_armor_resilient_worldcraft_normal_armor_5 = 308941
+
+@ukn_crust_armor_resilient_worldcraft_normal_armor_6 = 417070
+
+@ukn_crust_armor_resilient_worldcraft_normal_armor_7 = 583898
+
+@ukn_crust_armor_resilient_worldcraft_normal_armor_8 = 846653
+
+@ukn_crust_armor_resilient_worldcraft_normal_armor_9 = 1841469
+
+@ukn_crust_armor_resilient_worldcraft_normal_armor_10 = 2854277
+
+@ukn_crust_armor_resilient_worldcraft_normal_armor_planck = 1227646
+
+#########
+# REGEN #
+#########
+
+# ~500d to Full Regen #---------------
+@ukn_crust_armor_resilient_worldcraft_normal_armor_regen_5 = 6.18
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_resilient_worldcraft_normal_armor_regen_6 = 11.12
+
+@ukn_crust_armor_resilient_worldcraft_normal_armor_regen_7 = 15.57
+
+@ukn_crust_armor_resilient_worldcraft_normal_armor_regen_8 = 22.58
+
+# ~250d to Full Regen #---------------
+@ukn_crust_armor_resilient_worldcraft_normal_armor_regen_9 = 73.66
+
+@ukn_crust_armor_resilient_worldcraft_normal_armor_regen_10 = 114.17
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_resilient_worldcraft_normal_armor_regen_planck = 32.74
+
+
+
+#############################################
+# PLANETARY (TERRESTRIAL WORLDCRAFT) SHIELD GENERATORS #
+#############################################
+
+###########
+# SHIELDS #
+###########
+
+@ukn_planetary_shield_generator_worldcraft_normal_shield_5 = 257451
+
+@ukn_planetary_shield_generator_worldcraft_normal_shield_6 = 347559
+
+@ukn_planetary_shield_generator_worldcraft_normal_shield_7 = 486582
+
+@ukn_planetary_shield_generator_worldcraft_normal_shield_8 = 705544
+
+@ukn_planetary_shield_generator_worldcraft_normal_shield_9 = 1534558
+
+@ukn_planetary_shield_generator_worldcraft_normal_shield_10 = 2378564
+
+@ukn_planetary_shield_generator_worldcraft_normal_shield_planck = 1023038
+
+#########
+# REGEN #
+#########
+
+# ~100d to Full Regen #---------------
+@ukn_planetary_shield_generator_worldcraft_normal_shield_regen_5 = 64.36
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_worldcraft_normal_shield_regen_6 = 115.85
+
+@ukn_planetary_shield_generator_worldcraft_normal_shield_regen_7 = 162.19
+
+@ukn_planetary_shield_generator_worldcraft_normal_shield_regen_8 = 235.18
+
+# ~50d to Full Regen #---------------
+@ukn_planetary_shield_generator_worldcraft_normal_shield_regen_9 = 767.28
+
+@ukn_planetary_shield_generator_worldcraft_normal_shield_regen_10 = 1189.28
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_worldcraft_normal_shield_regen_planck = 341.01
+
+#########
+# POWER #
+#########
+
+@ukn_power_planetary_shield_generator_worldcraft_normal_5 = 0
+
+@ukn_power_planetary_shield_generator_worldcraft_normal_6 = 0
+
+@ukn_power_planetary_shield_generator_worldcraft_normal_7 = 0
+
+@ukn_power_planetary_shield_generator_worldcraft_normal_8 = 0
+
+@ukn_power_planetary_shield_generator_worldcraft_normal_9 = 0
+
+@ukn_power_planetary_shield_generator_worldcraft_normal_10 = 0
+
+@ukn_power_planetary_shield_generator_worldcraft_normal_planck = 0
+
+
+#######################################################################
+# HYPERADAPTIVE (REGENNING) PLANETARY (TERRESTRIAL WORLDCRAFT) SHIELD GENERATORS #
+#######################################################################
+
+###########
+# SHIELDS #
+###########
+
+@ukn_planetary_shield_generator_regenning_worldcraft_normal_shield_7 = 389266
+
+@ukn_planetary_shield_generator_regenning_worldcraft_normal_shield_8 = 564435
+
+@ukn_planetary_shield_generator_regenning_worldcraft_normal_shield_9 = 1227646
+
+@ukn_planetary_shield_generator_regenning_worldcraft_normal_shield_10 = 1902852
+
+@ukn_planetary_shield_generator_regenning_worldcraft_normal_shield_planck = 818431
+
+#########
+# REGEN #
+#########
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_regenning_worldcraft_normal_shield_regen_7 = 389.27
+
+@ukn_planetary_shield_generator_regenning_worldcraft_normal_shield_regen_8 = 564.44
+
+# ~50d to Full Regen #---------------
+@ukn_planetary_shield_generator_regenning_worldcraft_normal_shield_regen_9 = 1846.08
+
+@ukn_planetary_shield_generator_regenning_worldcraft_normal_shield_regen_10 = 2861.43
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_regenning_worldcraft_normal_shield_regen_planck = 818.43
+
+#########
+# POWER #
+#########
+
+@ukn_power_planetary_shield_generator_regenning_worldcraft_normal_7 = 0
+
+@ukn_power_planetary_shield_generator_regenning_worldcraft_normal_8 = 0
+
+@ukn_power_planetary_shield_generator_regenning_worldcraft_normal_9 = 0
+
+@ukn_power_planetary_shield_generator_regenning_worldcraft_normal_10 = 0
+
+@ukn_power_planetary_shield_generator_regenning_worldcraft_normal_planck = 0
+
+
+#############################################################
+# PSI (RESILIENT) PLANETARY (TERRESTRIAL WORLDCRAFT) SHIELD GENERATORS #
+#############################################################
+
+###########
+# SHIELDS #
+###########
+
+@ukn_planetary_shield_generator_psi_worldcraft_normal_shield_7 = 583898
+
+@ukn_planetary_shield_generator_psi_worldcraft_normal_shield_8 = 846653
+
+@ukn_planetary_shield_generator_psi_worldcraft_normal_shield_9 = 1841469
+
+@ukn_planetary_shield_generator_psi_worldcraft_normal_shield_10 = 2854277
+
+@ukn_planetary_shield_generator_psi_worldcraft_normal_shield_planck = 1227646
+
+#########
+# REGEN #
+#########
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_psi_worldcraft_normal_shield_regen_7 = 77.85
+
+@ukn_planetary_shield_generator_psi_worldcraft_normal_shield_regen_8 = 112.89
+
+# ~50d to Full Regen #---------------
+@ukn_planetary_shield_generator_psi_worldcraft_normal_shield_regen_9 = 368.29
+
+@ukn_planetary_shield_generator_psi_worldcraft_normal_shield_regen_10 = 570.86
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_psi_worldcraft_normal_shield_regen_planck = 163.69
+
+#########
+# POWER #
+#########
+
+@ukn_power_planetary_shield_generator_psi_worldcraft_normal_7 = 0
+
+@ukn_power_planetary_shield_generator_psi_worldcraft_normal_8 = 0
+
+@ukn_power_planetary_shield_generator_psi_worldcraft_normal_9 = 0
+
+@ukn_power_planetary_shield_generator_psi_worldcraft_normal_10 = 0
+
+@ukn_power_planetary_shield_generator_psi_worldcraft_normal_unbidden = 0
+
+
+
+
+
+#############################
+# CRUST (ARCOLOGY WORLDCRAFT) ARMOR #
+#############################
+
+#########
+# ARMOR #
+#########
+
+@ukn_crust_armor_worldcraft_arcology_armor_5 = 257451
+
+@ukn_crust_armor_worldcraft_arcology_armor_6 = 347559
+
+@ukn_crust_armor_worldcraft_arcology_armor_7 = 486582
+
+@ukn_crust_armor_worldcraft_arcology_armor_8 = 705544
+
+@ukn_crust_armor_worldcraft_arcology_armor_9 = 1534558
+
+@ukn_crust_armor_worldcraft_arcology_armor_10 = 2378564
+
+@ukn_crust_armor_worldcraft_arcology_armor_planck = 1023038
+
+#########
+# REGEN #
+#########
+
+# ~500d to Full Regen #---------------
+@ukn_crust_armor_worldcraft_arcology_armor_regen_5 = 12.87
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_worldcraft_arcology_armor_regen_6 = 23.17
+
+@ukn_crust_armor_worldcraft_arcology_armor_regen_7 = 32.44
+
+@ukn_crust_armor_worldcraft_arcology_armor_regen_8 = 47.04
+
+# ~250d to Full Regen #---------------
+@ukn_crust_armor_worldcraft_arcology_armor_regen_9 = 153.46
+
+@ukn_crust_armor_worldcraft_arcology_armor_regen_10 = 237.86
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_worldcraft_arcology_armor_regen_planck = 68.20
+
+
+#######################################
+# REGENNING CRUST (ARCOLOGY WORLDCRAFT) ARMOR #
+#######################################
+
+#########
+# ARMOR #
+#########
+
+@ukn_crust_armor_automachine_worldcraft_arcology_armor_5 = 205961
+
+@ukn_crust_armor_automachine_worldcraft_arcology_armor_6 = 278047
+
+@ukn_crust_armor_sentient_metal_worldcraft_arcology_armor_7 = 389266
+
+@ukn_crust_armor_sentient_metal_worldcraft_arcology_armor_8 = 564435
+
+@ukn_crust_armor_sentient_metal_worldcraft_arcology_armor_planck = 818431
+
+@ukn_crust_armor_living_metal_worldcraft_arcology_armor_9 = 1227646
+
+@ukn_crust_armor_living_metal_worldcraft_arcology_armor_10 = 1902852
+
+#########
+# REGEN #
+#########
+
+# ~500d to Full Regen #---------------
+@ukn_crust_armor_automachine_worldcraft_arcology_armor_regen_5 = 30.97
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_automachine_worldcraft_arcology_armor_regen_6 = 55.61
+
+@ukn_crust_armor_sentient_metal_worldcraft_arcology_armor_regen_7 = 77.85
+
+@ukn_crust_armor_sentient_metal_worldcraft_arcology_armor_regen_8 = 112.89
+
+@ukn_crust_armor_sentient_metal_worldcraft_arcology_armor_regen_planck = 163.69
+
+# ~250d to Full Regen #---------------
+@ukn_crust_armor_living_metal_worldcraft_arcology_armor_regen_9 = 366.46
+
+@ukn_crust_armor_living_metal_worldcraft_arcology_armor_regen_10 = 568.02
+
+
+#################################################
+# SPECIAL (RESILIENT) CRUST (ARCOLOGY WORLDCRAFT) ARMOR #
+#################################################
+
+#########
+# ARMOR #
+#########
+
+@ukn_crust_armor_resilient_worldcraft_arcology_armor_5 = 308941
+
+@ukn_crust_armor_resilient_worldcraft_arcology_armor_6 = 417070
+
+@ukn_crust_armor_resilient_worldcraft_arcology_armor_7 = 583898
+
+@ukn_crust_armor_resilient_worldcraft_arcology_armor_8 = 846653
+
+@ukn_crust_armor_resilient_worldcraft_arcology_armor_9 = 1841469
+
+@ukn_crust_armor_resilient_worldcraft_arcology_armor_10 = 2854277
+
+@ukn_crust_armor_resilient_worldcraft_arcology_armor_planck = 1227646
+
+#########
+# REGEN #
+#########
+
+# ~500d to Full Regen #---------------
+@ukn_crust_armor_resilient_worldcraft_arcology_armor_regen_5 = 6.18
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_resilient_worldcraft_arcology_armor_regen_6 = 11.12
+
+@ukn_crust_armor_resilient_worldcraft_arcology_armor_regen_7 = 15.57
+
+@ukn_crust_armor_resilient_worldcraft_arcology_armor_regen_8 = 22.58
+
+# ~250d to Full Regen #---------------
+@ukn_crust_armor_resilient_worldcraft_arcology_armor_regen_9 = 73.66
+
+@ukn_crust_armor_resilient_worldcraft_arcology_armor_regen_10 = 114.17
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_resilient_worldcraft_arcology_armor_regen_planck = 32.74
+
+
+
+#############################################
+# PLANETARY (ARCOLOGY WORLDCRAFT) SHIELD GENERATORS #
+#############################################
+
+###########
+# SHIELDS #
+###########
+
+@ukn_planetary_shield_generator_worldcraft_arcology_shield_5 = 257451
+
+@ukn_planetary_shield_generator_worldcraft_arcology_shield_6 = 347559
+
+@ukn_planetary_shield_generator_worldcraft_arcology_shield_7 = 486582
+
+@ukn_planetary_shield_generator_worldcraft_arcology_shield_8 = 705544
+
+@ukn_planetary_shield_generator_worldcraft_arcology_shield_9 = 1534558
+
+@ukn_planetary_shield_generator_worldcraft_arcology_shield_10 = 2378564
+
+@ukn_planetary_shield_generator_worldcraft_arcology_shield_planck = 1023038
+
+#########
+# REGEN #
+#########
+
+# ~100d to Full Regen #---------------
+@ukn_planetary_shield_generator_worldcraft_arcology_shield_regen_5 = 64.36
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_worldcraft_arcology_shield_regen_6 = 115.85
+
+@ukn_planetary_shield_generator_worldcraft_arcology_shield_regen_7 = 162.19
+
+@ukn_planetary_shield_generator_worldcraft_arcology_shield_regen_8 = 235.18
+
+# ~50d to Full Regen #---------------
+@ukn_planetary_shield_generator_worldcraft_arcology_shield_regen_9 = 767.28
+
+@ukn_planetary_shield_generator_worldcraft_arcology_shield_regen_10 = 1189.28
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_worldcraft_arcology_shield_regen_planck = 341.01
+
+#########
+# POWER #
+#########
+
+@ukn_power_planetary_shield_generator_worldcraft_arcology_5 = 0
+
+@ukn_power_planetary_shield_generator_worldcraft_arcology_6 = 0
+
+@ukn_power_planetary_shield_generator_worldcraft_arcology_7 = 0
+
+@ukn_power_planetary_shield_generator_worldcraft_arcology_8 = 0
+
+@ukn_power_planetary_shield_generator_worldcraft_arcology_9 = 0
+
+@ukn_power_planetary_shield_generator_worldcraft_arcology_10 = 0
+
+@ukn_power_planetary_shield_generator_worldcraft_arcology_planck = 0
+
+
+#######################################################################
+# HYPERADAPTIVE (REGENNING) PLANETARY (ARCOLOGY WORLDCRAFT) SHIELD GENERATORS #
+#######################################################################
+
+###########
+# SHIELDS #
+###########
+
+@ukn_planetary_shield_generator_regenning_worldcraft_arcology_shield_7 = 389266
+
+@ukn_planetary_shield_generator_regenning_worldcraft_arcology_shield_8 = 564435
+
+@ukn_planetary_shield_generator_regenning_worldcraft_arcology_shield_9 = 1227646
+
+@ukn_planetary_shield_generator_regenning_worldcraft_arcology_shield_10 = 1902852
+
+@ukn_planetary_shield_generator_regenning_worldcraft_arcology_shield_planck = 818431
+
+#########
+# REGEN #
+#########
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_regenning_worldcraft_arcology_shield_regen_7 = 389.27
+
+@ukn_planetary_shield_generator_regenning_worldcraft_arcology_shield_regen_8 = 564.44
+
+# ~50d to Full Regen #---------------
+@ukn_planetary_shield_generator_regenning_worldcraft_arcology_shield_regen_9 = 1846.08
+
+@ukn_planetary_shield_generator_regenning_worldcraft_arcology_shield_regen_10 = 2861.43
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_regenning_worldcraft_arcology_shield_regen_planck = 818.43
+
+#########
+# POWER #
+#########
+
+@ukn_power_planetary_shield_generator_regenning_worldcraft_arcology_7 = 0
+
+@ukn_power_planetary_shield_generator_regenning_worldcraft_arcology_8 = 0
+
+@ukn_power_planetary_shield_generator_regenning_worldcraft_arcology_9 = 0
+
+@ukn_power_planetary_shield_generator_regenning_worldcraft_arcology_10 = 0
+
+@ukn_power_planetary_shield_generator_regenning_worldcraft_arcology_planck = 0
+
+
+#############################################################
+# PSI (RESILIENT) PLANETARY (ARCOLOGY WORLDCRAFT) SHIELD GENERATORS #
+#############################################################
+
+###########
+# SHIELDS #
+###########
+
+@ukn_planetary_shield_generator_psi_worldcraft_arcology_shield_7 = 583898
+
+@ukn_planetary_shield_generator_psi_worldcraft_arcology_shield_8 = 846653
+
+@ukn_planetary_shield_generator_psi_worldcraft_arcology_shield_9 = 1841469
+
+@ukn_planetary_shield_generator_psi_worldcraft_arcology_shield_10 = 2854277
+
+@ukn_planetary_shield_generator_psi_worldcraft_arcology_shield_planck = 1227646
+
+#########
+# REGEN #
+#########
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_psi_worldcraft_arcology_shield_regen_7 = 77.85
+
+@ukn_planetary_shield_generator_psi_worldcraft_arcology_shield_regen_8 = 112.89
+
+# ~50d to Full Regen #---------------
+@ukn_planetary_shield_generator_psi_worldcraft_arcology_shield_regen_9 = 368.29
+
+@ukn_planetary_shield_generator_psi_worldcraft_arcology_shield_regen_10 = 570.86
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_psi_worldcraft_arcology_shield_regen_planck = 163.69
+
+#########
+# POWER #
+#########
+
+@ukn_power_planetary_shield_generator_psi_worldcraft_arcology_7 = 0
+
+@ukn_power_planetary_shield_generator_psi_worldcraft_arcology_8 = 0
+
+@ukn_power_planetary_shield_generator_psi_worldcraft_arcology_9 = 0
+
+@ukn_power_planetary_shield_generator_psi_worldcraft_arcology_10 = 0
+
+@ukn_power_planetary_shield_generator_psi_worldcraft_arcology_unbidden = 0
+
+
+
+
+
+#############################
+# CRUST (ATTACK MOON) ARMOR #
+#############################
+
+#########
+# ARMOR #
+#########
+
+@ukn_crust_armor_attack_moon_armor_5 = 76282
+
+@ukn_crust_armor_attack_moon_armor_6 = 102981
+
+@ukn_crust_armor_attack_moon_armor_7 = 144173
+
+@ukn_crust_armor_attack_moon_armor_8 = 209050
+
+@ukn_crust_armor_attack_moon_armor_9 = 454685
+
+@ukn_crust_armor_attack_moon_armor_10 = 704761
+
+@ukn_crust_armor_attack_moon_armor_planck = 303123
+
+#########
+# REGEN #
+#########
+
+# ~500d to Full Regen #---------------
+@ukn_crust_armor_attack_moon_armor_regen_5 = 3.81
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_attack_moon_armor_regen_6 = 6.87
+
+@ukn_crust_armor_attack_moon_armor_regen_7 = 9.61
+
+@ukn_crust_armor_attack_moon_armor_regen_8 = 13.94
+
+# ~250d to Full Regen #---------------
+@ukn_crust_armor_attack_moon_armor_regen_9 = 45.47
+
+@ukn_crust_armor_attack_moon_armor_regen_10 = 70.48
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_attack_moon_armor_regen_planck = 20.21
+
+
+#######################################
+# REGENNING CRUST (ATTACK MOON) ARMOR #
+#######################################
+
+#########
+# ARMOR #
+#########
+
+@ukn_crust_armor_automachine_attack_moon_armor_5 = 61025
+
+@ukn_crust_armor_automachine_attack_moon_armor_6 = 82384
+
+@ukn_crust_armor_sentient_metal_attack_moon_armor_7 = 115338
+
+@ukn_crust_armor_sentient_metal_attack_moon_armor_8 = 167240
+
+@ukn_crust_armor_sentient_metal_attack_moon_armor_planck = 242498
+
+@ukn_crust_armor_living_metal_attack_moon_armor_9 = 363748
+
+@ukn_crust_armor_living_metal_attack_moon_armor_10 = 563809
+
+#########
+# REGEN #
+#########
+
+# ~500d to Full Regen #---------------
+@ukn_crust_armor_automachine_attack_moon_armor_regen_5 = 9.18
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_automachine_attack_moon_armor_regen_6 = 16.48
+
+@ukn_crust_armor_sentient_metal_attack_moon_armor_regen_7 = 23.07
+
+@ukn_crust_armor_sentient_metal_attack_moon_armor_regen_8 = 33.45
+
+@ukn_crust_armor_sentient_metal_attack_moon_armor_regen_planck = 48.50
+
+# ~250d to Full Regen #---------------
+@ukn_crust_armor_living_metal_attack_moon_armor_regen_9 = 108.58
+
+@ukn_crust_armor_living_metal_attack_moon_armor_regen_10 = 168.30
+
+
+#################################################
+# SPECIAL (RESILIENT) CRUST (ATTACK MOON) ARMOR #
+#################################################
+
+#########
+# ARMOR #
+#########
+
+@ukn_crust_armor_resilient_attack_moon_armor_5 = 91538
+
+@ukn_crust_armor_resilient_attack_moon_armor_6 = 123577
+
+@ukn_crust_armor_resilient_attack_moon_armor_7 = 173007
+
+@ukn_crust_armor_resilient_attack_moon_armor_8 = 250860
+
+@ukn_crust_armor_resilient_attack_moon_armor_9 = 545622
+
+@ukn_crust_armor_resilient_attack_moon_armor_10 = 845713
+
+@ukn_crust_armor_resilient_attack_moon_armor_planck = 363748
+
+#########
+# REGEN #
+#########
+
+# ~500d to Full Regen #---------------
+@ukn_crust_armor_resilient_attack_moon_armor_regen_5 = 1.83
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_resilient_attack_moon_armor_regen_6 = 3.30
+
+@ukn_crust_armor_resilient_attack_moon_armor_regen_7 = 4.61
+
+@ukn_crust_armor_resilient_attack_moon_armor_regen_8 = 6.69
+
+# ~250d to Full Regen #---------------
+@ukn_crust_armor_resilient_attack_moon_armor_regen_9 = 21.82
+
+@ukn_crust_armor_resilient_attack_moon_armor_regen_10 = 33.83
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_resilient_attack_moon_armor_regen_planck = 9.70
+
+
+
+#########################################
+# LUNAR (ATTACK MOON) SHIELD GENERATORS #
+#########################################
+
+###########
+# SHIELDS #
+###########
+
+@ukn_planetary_shield_generator_attack_moon_shield_5 = 76282
+
+@ukn_planetary_shield_generator_attack_moon_shield_6 = 102981
+
+@ukn_planetary_shield_generator_attack_moon_shield_7 = 144173
+
+@ukn_planetary_shield_generator_attack_moon_shield_8 = 209050
+
+@ukn_planetary_shield_generator_attack_moon_shield_9 = 454685
+
+@ukn_planetary_shield_generator_attack_moon_shield_10 = 704761
+
+@ukn_planetary_shield_generator_attack_moon_shield_planck = 303123
+
+#########
+# REGEN #
+#########
+
+# ~100d to Full Regen #---------------
+@ukn_planetary_shield_generator_attack_moon_shield_regen_5 = 19.07
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_attack_moon_shield_regen_6 = 34.33
+
+@ukn_planetary_shield_generator_attack_moon_shield_regen_7 = 48.06
+
+@ukn_planetary_shield_generator_attack_moon_shield_regen_8 = 69.68
+
+# ~50d to Full Regen #---------------
+@ukn_planetary_shield_generator_attack_moon_shield_regen_9 = 227.34
+
+@ukn_planetary_shield_generator_attack_moon_shield_regen_10 = 352.38
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_attack_moon_shield_regen_planck = 101.04
+
+#########
+# POWER #
+#########
+
+@ukn_power_planetary_shield_generator_attack_moon_5 = 0
+
+@ukn_power_planetary_shield_generator_attack_moon_6 = 0
+
+@ukn_power_planetary_shield_generator_attack_moon_7 = 0
+
+@ukn_power_planetary_shield_generator_attack_moon_8 = 0
+
+@ukn_power_planetary_shield_generator_attack_moon_9 = 0
+
+@ukn_power_planetary_shield_generator_attack_moon_10 = 0
+
+@ukn_power_planetary_shield_generator_attack_moon_planck = 0
+
+
+###################################################################
+# HYPERADAPTIVE (REGENNING) LUNAR (ATTACK MOON) SHIELD GENERATORS #
+###################################################################
+
+###########
+# SHIELDS #
+###########
+
+@ukn_planetary_shield_generator_regenning_attack_moon_shield_7 = 115338
+
+@ukn_planetary_shield_generator_regenning_attack_moon_shield_8 = 167240
+
+@ukn_planetary_shield_generator_regenning_attack_moon_shield_9 = 363748
+
+@ukn_planetary_shield_generator_regenning_attack_moon_shield_10 = 563809
+
+@ukn_planetary_shield_generator_regenning_attack_moon_shield_planck = 242498
+
+#########
+# REGEN #
+#########
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_regenning_attack_moon_shield_regen_7 = 115.34
+
+@ukn_planetary_shield_generator_regenning_attack_moon_shield_regen_8 = 167.24
+
+# ~50d to Full Regen #---------------
+@ukn_planetary_shield_generator_regenning_attack_moon_shield_regen_9 = 546.99
+
+@ukn_planetary_shield_generator_regenning_attack_moon_shield_regen_10 = 847.83
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_regenning_attack_moon_shield_regen_planck = 242.50
+
+#########
+# POWER #
+#########
+
+@ukn_power_planetary_shield_generator_regenning_attack_moon_7 = 0
+
+@ukn_power_planetary_shield_generator_regenning_attack_moon_8 = 0
+
+@ukn_power_planetary_shield_generator_regenning_attack_moon_9 = 0
+
+@ukn_power_planetary_shield_generator_regenning_attack_moon_10 = 0
+
+@ukn_power_planetary_shield_generator_regenning_attack_moon_planck = 0
+
+
+#########################################################
+# PSI (RESILIENT) LUNAR (ATTACK MOON) SHIELD GENERATORS #
+#########################################################
+
+###########
+# SHIELDS #
+###########
+
+@ukn_planetary_shield_generator_psi_attack_moon_shield_7 = 173007
+
+@ukn_planetary_shield_generator_psi_attack_moon_shield_8 = 250860
+
+@ukn_planetary_shield_generator_psi_attack_moon_shield_9 = 545622
+
+@ukn_planetary_shield_generator_psi_attack_moon_shield_10 = 845713
+
+@ukn_planetary_shield_generator_psi_attack_moon_shield_planck = 363748
+
+#########
+# REGEN #
+#########
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_psi_attack_moon_shield_regen_7 = 115.34
+
+@ukn_planetary_shield_generator_psi_attack_moon_shield_regen_8 = 167.24
+
+# ~50d to Full Regen #---------------
+@ukn_planetary_shield_generator_psi_attack_moon_shield_regen_9 = 545.62
+
+@ukn_planetary_shield_generator_psi_attack_moon_shield_regen_10 = 845.71
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_psi_attack_moon_shield_regen_planck = 242.50
+
+#########
+# POWER #
+#########
+
+@ukn_power_planetary_shield_generator_psi_attack_moon_7 = 0
+
+@ukn_power_planetary_shield_generator_psi_attack_moon_8 = 0
+
+@ukn_power_planetary_shield_generator_psi_attack_moon_9 = 0
+
+@ukn_power_planetary_shield_generator_psi_attack_moon_10 = 0
+
+@ukn_power_planetary_shield_generator_psi_attack_moon_unbidden = 0
+
+
+
+
+
+#############################
+# CRUST (PLANETCRAFT) ARMOR #
+#############################
+
+#########
+# ARMOR #
+#########
+
+@ukn_crust_armor_planetcraft_armor_5 = 381410
+
+@ukn_crust_armor_planetcraft_armor_6 = 514903
+
+@ukn_crust_armor_planetcraft_armor_7 = 720864
+
+@ukn_crust_armor_planetcraft_armor_8 = 1045253
+
+@ukn_crust_armor_planetcraft_armor_9 = 2273425
+
+@ukn_crust_armor_planetcraft_armor_10 = 3523809
+
+@ukn_crust_armor_planetcraft_armor_planck = 1515617
+
+#########
+# REGEN #
+#########
+
+# ~500d to Full Regen #---------------
+@ukn_crust_armor_planetcraft_armor_regen_5 = 19.07
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_planetcraft_armor_regen_6 = 34.33
+
+@ukn_crust_armor_planetcraft_armor_regen_7 = 48.06
+
+@ukn_crust_armor_planetcraft_armor_regen_8 = 69.68
+
+# ~250d to Full Regen #---------------
+@ukn_crust_armor_planetcraft_armor_regen_9 = 227.34
+
+@ukn_crust_armor_planetcraft_armor_regen_10 = 352.38
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_planetcraft_armor_regen_planck = 101.04
+
+
+#######################################
+# REGENNING CRUST (PLANETCRAFT) ARMOR #
+#######################################
+
+#########
+# ARMOR #
+#########
+
+@ukn_crust_armor_automachine_planetcraft_armor_5 = 305128
+
+@ukn_crust_armor_automachine_planetcraft_armor_6 = 411922
+
+@ukn_crust_armor_sentient_metal_planetcraft_armor_7 = 576691
+
+@ukn_crust_armor_sentient_metal_planetcraft_armor_8 = 836202
+
+@ukn_crust_armor_sentient_metal_planetcraft_armor_planck = 1212493
+
+@ukn_crust_armor_living_metal_planetcraft_armor_9 = 1818740
+
+@ukn_crust_armor_living_metal_planetcraft_armor_10 = 2819047
+
+#########
+# REGEN #
+#########
+
+# ~500d to Full Regen #---------------
+@ukn_crust_armor_automachine_planetcraft_armor_regen_5 = 45.88
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_automachine_planetcraft_armor_regen_6 = 82.38
+
+@ukn_crust_armor_sentient_metal_planetcraft_armor_regen_7 = 115.34
+
+@ukn_crust_armor_sentient_metal_planetcraft_armor_regen_8 = 167.24
+
+@ukn_crust_armor_sentient_metal_planetcraft_armor_regen_planck = 242.50
+
+# ~250d to Full Regen #---------------
+@ukn_crust_armor_living_metal_planetcraft_armor_regen_9 = 542.91
+
+@ukn_crust_armor_living_metal_planetcraft_armor_regen_10 = 841.51
+
+
+#################################################
+# SPECIAL (RESILIENT) CRUST (PLANETCRAFT) ARMOR #
+#################################################
+
+#########
+# ARMOR #
+#########
+
+@ukn_crust_armor_resilient_planetcraft_armor_5 = 457691
+
+@ukn_crust_armor_resilient_planetcraft_armor_6 = 617883
+
+@ukn_crust_armor_resilient_planetcraft_armor_7 = 865037
+
+@ukn_crust_armor_resilient_planetcraft_armor_8 = 1254303
+
+@ukn_crust_armor_resilient_planetcraft_armor_9 = 2728110
+
+@ukn_crust_armor_resilient_planetcraft_armor_10 = 4228571
+
+@ukn_crust_armor_resilient_planetcraft_armor_planck = 1818740
+
+#########
+# REGEN #
+#########
+
+# ~500d to Full Regen #---------------
+@ukn_crust_armor_resilient_planetcraft_armor_regen_5 = 9.15
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_resilient_planetcraft_armor_regen_6 = 16.48
+
+@ukn_crust_armor_resilient_planetcraft_armor_regen_7 = 23.07
+
+@ukn_crust_armor_resilient_planetcraft_armor_regen_8 = 33.45
+
+# ~250d to Full Regen #---------------
+@ukn_crust_armor_resilient_planetcraft_armor_regen_9 = 109.12
+
+@ukn_crust_armor_resilient_planetcraft_armor_regen_10 = 169.14
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_resilient_planetcraft_armor_regen_planck = 48.50
+
+
+
+#############################################
+# PLANETARY (PLANETCRAFT) SHIELD GENERATORS #
+#############################################
+
+###########
+# SHIELDS #
+###########
+
+@ukn_planetary_shield_generator_planetcraft_shield_5 = 381410
+
+@ukn_planetary_shield_generator_planetcraft_shield_6 = 514903
+
+@ukn_planetary_shield_generator_planetcraft_shield_7 = 720864
+
+@ukn_planetary_shield_generator_planetcraft_shield_8 = 1045253
+
+@ukn_planetary_shield_generator_planetcraft_shield_9 = 2273425
+
+@ukn_planetary_shield_generator_planetcraft_shield_10 = 3523809
+
+@ukn_planetary_shield_generator_planetcraft_shield_planck = 1515617
+
+#########
+# REGEN #
+#########
+
+# ~100d to Full Regen #---------------
+@ukn_planetary_shield_generator_planetcraft_shield_regen_5 = 95.35
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_planetcraft_shield_regen_6 = 171.63
+
+@ukn_planetary_shield_generator_planetcraft_shield_regen_7 = 240.29
+
+@ukn_planetary_shield_generator_planetcraft_shield_regen_8 = 348.42
+
+# ~50d to Full Regen #---------------
+@ukn_planetary_shield_generator_planetcraft_shield_regen_9 = 1136.71
+
+@ukn_planetary_shield_generator_planetcraft_shield_regen_10 = 1761.90
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_planetcraft_shield_regen_planck = 505.21
+
+#########
+# POWER #
+#########
+
+@ukn_power_planetary_shield_generator_planetcraft_5 = 0
+
+@ukn_power_planetary_shield_generator_planetcraft_6 = 0
+
+@ukn_power_planetary_shield_generator_planetcraft_7 = 0
+
+@ukn_power_planetary_shield_generator_planetcraft_8 = 0
+
+@ukn_power_planetary_shield_generator_planetcraft_9 = 0
+
+@ukn_power_planetary_shield_generator_planetcraft_10 = 0
+
+@ukn_power_planetary_shield_generator_planetcraft_planck = 0
+
+
+#######################################################################
+# HYPERADAPTIVE (REGENNING) PLANETARY (PLANETCRAFT) SHIELD GENERATORS #
+#######################################################################
+
+###########
+# SHIELDS #
+###########
+
+@ukn_planetary_shield_generator_regenning_planetcraft_shield_7 = 576691
+
+@ukn_planetary_shield_generator_regenning_planetcraft_shield_8 = 836202
+
+@ukn_planetary_shield_generator_regenning_planetcraft_shield_9 = 1818740
+
+@ukn_planetary_shield_generator_regenning_planetcraft_shield_10 = 2819047
+
+@ukn_planetary_shield_generator_regenning_planetcraft_shield_planck = 1212493
+
+#########
+# REGEN #
+#########
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_regenning_planetcraft_shield_regen_7 = 576.69
+
+@ukn_planetary_shield_generator_regenning_planetcraft_shield_regen_8 = 836.20
+
+# ~50d to Full Regen #---------------
+@ukn_planetary_shield_generator_regenning_planetcraft_shield_regen_9 = 2734.95
+
+@ukn_planetary_shield_generator_regenning_planetcraft_shield_regen_10 = 4239.17
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_regenning_planetcraft_shield_regen_planck = 1212.49
+
+#########
+# POWER #
+#########
+
+@ukn_power_planetary_shield_generator_regenning_planetcraft_7 = 0
+
+@ukn_power_planetary_shield_generator_regenning_planetcraft_8 = 0
+
+@ukn_power_planetary_shield_generator_regenning_planetcraft_9 = 0
+
+@ukn_power_planetary_shield_generator_regenning_planetcraft_10 = 0
+
+@ukn_power_planetary_shield_generator_regenning_planetcraft_planck = 0
+
+
+#############################################################
+# PSI (RESILIENT) PLANETARY (PLANETCRAFT) SHIELD GENERATORS #
+#############################################################
+
+###########
+# SHIELDS #
+###########
+
+@ukn_planetary_shield_generator_psi_planetcraft_shield_7 = 865037
+
+@ukn_planetary_shield_generator_psi_planetcraft_shield_8 = 1254303
+
+@ukn_planetary_shield_generator_psi_planetcraft_shield_9 = 2728110
+
+@ukn_planetary_shield_generator_psi_planetcraft_shield_10 = 4228571
+
+@ukn_planetary_shield_generator_psi_planetcraft_shield_planck = 1818740
+
+#########
+# REGEN #
+#########
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_psi_planetcraft_shield_regen_7 = 115.34
+
+@ukn_planetary_shield_generator_psi_planetcraft_shield_regen_8 = 167.24
+
+# ~50d to Full Regen #---------------
+@ukn_planetary_shield_generator_psi_planetcraft_shield_regen_9 = 545.62
+
+@ukn_planetary_shield_generator_psi_planetcraft_shield_regen_10 = 845.71
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_psi_planetcraft_shield_regen_planck = 242.50
+
+#########
+# POWER #
+#########
+
+@ukn_power_planetary_shield_generator_psi_planetcraft_7 = 0
+
+@ukn_power_planetary_shield_generator_psi_planetcraft_8 = 0
+
+@ukn_power_planetary_shield_generator_psi_planetcraft_9 = 0
+
+@ukn_power_planetary_shield_generator_psi_planetcraft_10 = 0
+
+@ukn_power_planetary_shield_generator_psi_planetcraft_unbidden = 0
+
+
+
+
+
+#############################
+# CRUST (SYSTEMCRAFT) ARMOR #
+#############################
+
+#########
+# ARMOR #
+#########
+
+@ukn_crust_armor_systemcraft_armor_5 = 635683
+
+@ukn_crust_armor_systemcraft_armor_6 = 858172
+
+@ukn_crust_armor_systemcraft_armor_7 = 1201440
+
+@ukn_crust_armor_systemcraft_armor_8 = 1742088
+
+@ukn_crust_armor_systemcraft_armor_9 = 3789042
+
+@ukn_crust_armor_systemcraft_armor_10 = 5873016
+
+@ukn_crust_armor_systemcraft_armor_planck = 2526028
+
+#########
+# REGEN #
+#########
+
+# ~500d to Full Regen #---------------
+@ukn_crust_armor_systemcraft_armor_regen_5 = 31.78
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_systemcraft_armor_regen_6 = 57.21
+
+@ukn_crust_armor_systemcraft_armor_regen_7 = 80.10
+
+@ukn_crust_armor_systemcraft_armor_regen_8 = 116.14
+
+# ~250d to Full Regen #---------------
+@ukn_crust_armor_systemcraft_armor_regen_9 = 378.90
+
+@ukn_crust_armor_systemcraft_armor_regen_10 = 587.30
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_systemcraft_armor_regen_planck = 168.40
+
+
+#######################################
+# REGENNING CRUST (SYSTEMCRAFT) ARMOR #
+#######################################
+
+#########
+# ARMOR #
+#########
+
+@ukn_crust_armor_automachine_systemcraft_armor_5 = 508546
+
+@ukn_crust_armor_automachine_systemcraft_armor_6 = 686537
+
+@ukn_crust_armor_sentient_metal_systemcraft_armor_7 = 961152
+
+@ukn_crust_armor_sentient_metal_systemcraft_armor_8 = 1393671
+
+@ukn_crust_armor_sentient_metal_systemcraft_armor_planck = 2020823
+
+@ukn_crust_armor_living_metal_systemcraft_armor_9 = 3031234
+
+@ukn_crust_armor_living_metal_systemcraft_armor_10 = 4698413
+
+#########
+# REGEN #
+#########
+
+# ~500d to Full Regen #---------------
+@ukn_crust_armor_automachine_systemcraft_armor_regen_5 = 76.47
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_automachine_systemcraft_armor_regen_6 = 137.31
+
+@ukn_crust_armor_sentient_metal_systemcraft_armor_regen_7 = 192.23
+
+@ukn_crust_armor_sentient_metal_systemcraft_armor_regen_8 = 278.73
+
+@ukn_crust_armor_sentient_metal_systemcraft_armor_regen_planck = 404.16
+
+# ~250d to Full Regen #---------------
+@ukn_crust_armor_living_metal_systemcraft_armor_regen_9 = 904.85
+
+@ukn_crust_armor_living_metal_systemcraft_armor_regen_10 = 1402.51
+
+
+#################################################
+# SPECIAL (RESILIENT) CRUST (SYSTEMCRAFT) ARMOR #
+#################################################
+
+#########
+# ARMOR #
+#########
+
+@ukn_crust_armor_resilient_systemcraft_armor_5 = 762819
+
+@ukn_crust_armor_resilient_systemcraft_armor_6 = 1029806
+
+@ukn_crust_armor_resilient_systemcraft_armor_7 = 1441728
+
+@ukn_crust_armor_resilient_systemcraft_armor_8 = 2090506
+
+@ukn_crust_armor_resilient_systemcraft_armor_9 = 4546851
+
+@ukn_crust_armor_resilient_systemcraft_armor_10 = 7047619
+
+@ukn_crust_armor_resilient_systemcraft_armor_planck = 3031234
+
+#########
+# REGEN #
+#########
+
+# ~500d to Full Regen #---------------
+@ukn_crust_armor_resilient_systemcraft_armor_regen_5 = 15.26
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_resilient_systemcraft_armor_regen_6 = 27.46
+
+@ukn_crust_armor_resilient_systemcraft_armor_regen_7 = 38.45
+
+@ukn_crust_armor_resilient_systemcraft_armor_regen_8 = 55.75
+
+# ~250d to Full Regen #---------------
+@ukn_crust_armor_resilient_systemcraft_armor_regen_9 = 181.87
+
+@ukn_crust_armor_resilient_systemcraft_armor_regen_10 = 281.90
+
+# ~375d to Full Regen #---------------
+@ukn_crust_armor_resilient_systemcraft_armor_regen_planck = 80.83
+
+
+
+###################################################
+# SUPER-PLANETARY (SYSTEMCRAFT) SHIELD GENERATORS #
+###################################################
+
+###########
+# SHIELDS #
+###########
+
+@ukn_planetary_shield_generator_systemcraft_shield_5 = 635683
+
+@ukn_planetary_shield_generator_systemcraft_shield_6 = 858172
+
+@ukn_planetary_shield_generator_systemcraft_shield_7 = 1201440
+
+@ukn_planetary_shield_generator_systemcraft_shield_8 = 1742088
+
+@ukn_planetary_shield_generator_systemcraft_shield_9 = 3789042
+
+@ukn_planetary_shield_generator_systemcraft_shield_10 = 5873016
+
+@ukn_planetary_shield_generator_systemcraft_shield_planck = 2526028
+
+#########
+# REGEN #
+#########
+
+# ~100d to Full Regen #---------------
+@ukn_planetary_shield_generator_systemcraft_shield_regen_5 = 158.92
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_systemcraft_shield_regen_6 = 286.06
+
+@ukn_planetary_shield_generator_systemcraft_shield_regen_7 = 400.48
+
+@ukn_planetary_shield_generator_systemcraft_shield_regen_8 = 580.70
+
+# ~50d to Full Regen #---------------
+@ukn_planetary_shield_generator_systemcraft_shield_regen_9 = 1894.52
+
+@ukn_planetary_shield_generator_systemcraft_shield_regen_10 = 2936.51
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_systemcraft_shield_regen_planck = 842.01
+
+#########
+# POWER #
+#########
+
+@ukn_power_planetary_shield_generator_systemcraft_5 = 0
+
+@ukn_power_planetary_shield_generator_systemcraft_6 = 0
+
+@ukn_power_planetary_shield_generator_systemcraft_7 = 0
+
+@ukn_power_planetary_shield_generator_systemcraft_8 = 0
+
+@ukn_power_planetary_shield_generator_systemcraft_9 = 0
+
+@ukn_power_planetary_shield_generator_systemcraft_10 = 0
+
+@ukn_power_planetary_shield_generator_systemcraft_planck = 0
+
+
+#############################################################################
+# HYPERADAPTIVE (REGENNING) SUPER-PLANETARY (SYSTEMCRAFT) SHIELD GENERATORS #
+#############################################################################
+
+###########
+# SHIELDS #
+###########
+
+@ukn_planetary_shield_generator_regenning_systemcraft_shield_7 = 961152
+
+@ukn_planetary_shield_generator_regenning_systemcraft_shield_8 = 1393671
+
+@ukn_planetary_shield_generator_regenning_systemcraft_shield_9 = 3031234
+
+@ukn_planetary_shield_generator_regenning_systemcraft_shield_10 = 4698413
+
+@ukn_planetary_shield_generator_regenning_systemcraft_shield_planck = 2020823
+
+#########
+# REGEN #
+#########
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_regenning_systemcraft_shield_regen_7 = 961.15
+
+@ukn_planetary_shield_generator_regenning_systemcraft_shield_regen_8 = 1393.67
+
+# ~50d to Full Regen #---------------
+@ukn_planetary_shield_generator_regenning_systemcraft_shield_regen_9 = 4558.25
+
+@ukn_planetary_shield_generator_regenning_systemcraft_shield_regen_10 = 7065.28
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_regenning_systemcraft_shield_regen_planck = 2020.82
+
+#########
+# POWER #
+#########
+
+@ukn_power_planetary_shield_generator_regenning_systemcraft_7 = 0
+
+@ukn_power_planetary_shield_generator_regenning_systemcraft_8 = 0
+
+@ukn_power_planetary_shield_generator_regenning_systemcraft_9 = 0
+
+@ukn_power_planetary_shield_generator_regenning_systemcraft_10 = 0
+
+@ukn_power_planetary_shield_generator_regenning_systemcraft_planck = 0
+
+
+###################################################################
+# PSI (RESILIENT) SUPER-PLANETARY (SYSTEMCRAFT) SHIELD GENERATORS #
+###################################################################
+
+###########
+# SHIELDS #
+###########
+
+@ukn_planetary_shield_generator_psi_systemcraft_shield_7 = 1441728
+
+@ukn_planetary_shield_generator_psi_systemcraft_shield_8 = 2090506
+
+@ukn_planetary_shield_generator_psi_systemcraft_shield_9 = 4546851
+
+@ukn_planetary_shield_generator_psi_systemcraft_shield_10 = 7047619
+
+@ukn_planetary_shield_generator_psi_systemcraft_shield_planck = 3031234
+
+#########
+# REGEN #
+#########
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_psi_systemcraft_shield_regen_7 = 192.23
+
+@ukn_planetary_shield_generator_psi_systemcraft_shield_regen_8 = 278.73
+
+# ~50d to Full Regen #---------------
+@ukn_planetary_shield_generator_psi_systemcraft_shield_regen_9 = 909.37
+
+@ukn_planetary_shield_generator_psi_systemcraft_shield_regen_10 = 1409.52
+
+# ~75d to Full Regen #---------------
+@ukn_planetary_shield_generator_psi_systemcraft_shield_regen_planck = 404.16
+
+#########
+# POWER #
+#########
+
+@ukn_power_planetary_shield_generator_psi_systemcraft_7 = 0
+
+@ukn_power_planetary_shield_generator_psi_systemcraft_8 = 0
+
+@ukn_power_planetary_shield_generator_psi_systemcraft_9 = 0
+
+@ukn_power_planetary_shield_generator_psi_systemcraft_10 = 0
+
+@ukn_power_planetary_shield_generator_psi_systemcraft_unbidden = 0
+
+
+
+####################
+### MACRA-LANCES ###
+####################
+
+@ukn_exa_lance_attack_moon_6_hull_damage_mult = 1.35
+@ukn_exa_lance_attack_moon_7_hull_damage_mult = 1.35
+@ukn_exa_lance_attack_moon_8_hull_damage_mult = 1.35
+@ukn_exa_lance_attack_moon_9_hull_damage_mult = 1.55
+@ukn_exa_lance_attack_moon_10_hull_damage_mult = 1.55
+@ukn_exa_lance_attack_moon_planck_hull_damage_mult = 1.35
+
+@ukn_exa_lance_attack_moon_6_armor_penetration_mult = 0.00
+@ukn_exa_lance_attack_moon_7_armor_penetration_mult = 0.00
+@ukn_exa_lance_attack_moon_8_armor_penetration_mult = 0.00
+@ukn_exa_lance_attack_moon_9_armor_penetration_mult = 0.00
+@ukn_exa_lance_attack_moon_10_armor_penetration_mult = 0.00
+@ukn_exa_lance_attack_moon_planck_armor_penetration_mult = 0.00
+
+@ukn_exa_lance_attack_moon_6_shield_penetration_mult = 0.00
+@ukn_exa_lance_attack_moon_7_shield_penetration_mult = 0.00
+@ukn_exa_lance_attack_moon_8_shield_penetration_mult = 0.00
+@ukn_exa_lance_attack_moon_9_shield_penetration_mult = 0.00
+@ukn_exa_lance_attack_moon_10_shield_penetration_mult = 0.00
+@ukn_exa_lance_attack_moon_planck_shield_penetration_mult = 0.00
+
+@ukn_exa_lance_attack_moon_6_armor_damage_mult = 1.65
+@ukn_exa_lance_attack_moon_7_armor_damage_mult = 1.65
+@ukn_exa_lance_attack_moon_8_armor_damage_mult = 1.65
+@ukn_exa_lance_attack_moon_9_armor_damage_mult = 1.90
+@ukn_exa_lance_attack_moon_10_armor_damage_mult = 1.90
+@ukn_exa_lance_attack_moon_planck_armor_damage_mult = 1.65
+
+@ukn_exa_lance_attack_moon_6_shield_damage_mult = 0.85
+@ukn_exa_lance_attack_moon_7_shield_damage_mult = 0.85
+@ukn_exa_lance_attack_moon_8_shield_damage_mult = 0.85
+@ukn_exa_lance_attack_moon_9_shield_damage_mult = 0.95
+@ukn_exa_lance_attack_moon_10_shield_damage_mult = 0.95
+@ukn_exa_lance_attack_moon_planck_shield_damage_mult = 0.85
+#---
+
+@ukn_exa_lance_attack_moon_6_tracking = 0.00
+@ukn_exa_lance_attack_moon_7_tracking = 0.00
+@ukn_exa_lance_attack_moon_8_tracking = 0.00
+@ukn_exa_lance_attack_moon_9_tracking = 0.00
+@ukn_exa_lance_attack_moon_10_tracking = 0.00
+@ukn_exa_lance_attack_moon_planck_tracking = 0.00
+#---
+
+@ukn_exa_lance_attack_moon_6_firing_arc = 25.0
+@ukn_exa_lance_attack_moon_7_firing_arc = 25.0
+@ukn_exa_lance_attack_moon_8_firing_arc = 25.0
+@ukn_exa_lance_attack_moon_9_firing_arc = 25.0
+@ukn_exa_lance_attack_moon_10_firing_arc = 25.0
+@ukn_exa_lance_attack_moon_planck_firing_arc = 25.0
+
+@ukn_exa_lance_attack_moon_6_min_range = 10
+@ukn_exa_lance_attack_moon_7_min_range = 10
+@ukn_exa_lance_attack_moon_8_min_range = 10
+@ukn_exa_lance_attack_moon_9_min_range = 10
+@ukn_exa_lance_attack_moon_10_min_range = 10
+@ukn_exa_lance_attack_moon_planck_min_range = 10
+
+
+# COLOSSAL (Only Slot) #---------------------------
+
+@ukn_exa_lance_attack_moon_6_power = -4048
+@ukn_exa_lance_attack_moon_7_power = -5667
+@ukn_exa_lance_attack_moon_8_power = -8218
+@ukn_exa_lance_attack_moon_9_power = -17873
+@ukn_exa_lance_attack_moon_10_power = -27703
+@ukn_exa_lance_attack_moon_planck_power = -11915
+#---
+
+@ukn_exa_lance_attack_moon_6_dmg_min = 37044
+@ukn_exa_lance_attack_moon_7_dmg_min = 51862
+@ukn_exa_lance_attack_moon_8_dmg_min = 75199
+@ukn_exa_lance_attack_moon_9_dmg_min = 163559
+@ukn_exa_lance_attack_moon_10_dmg_min = 253516
+@ukn_exa_lance_attack_moon_planck_dmg_min = 109039
+
+@ukn_exa_lance_attack_moon_6_dmg_max = 92601
+@ukn_exa_lance_attack_moon_7_dmg_max = 129642
+@ukn_exa_lance_attack_moon_8_dmg_max = 187981
+@ukn_exa_lance_attack_moon_9_dmg_max = 408858
+@ukn_exa_lance_attack_moon_10_dmg_max = 633730
+@ukn_exa_lance_attack_moon_planck_dmg_max = 272572
+#---
+
+@ukn_exa_lance_attack_moon_6_windup_min = 55
+@ukn_exa_lance_attack_moon_7_windup_min = 55
+@ukn_exa_lance_attack_moon_8_windup_min = 55
+@ukn_exa_lance_attack_moon_9_windup_min = 55
+@ukn_exa_lance_attack_moon_10_windup_min = 55
+@ukn_exa_lance_attack_moon_planck_windup_min = 55
+
+@ukn_exa_lance_attack_moon_6_windup_max = 60
+@ukn_exa_lance_attack_moon_7_windup_max = 60
+@ukn_exa_lance_attack_moon_8_windup_max = 60
+@ukn_exa_lance_attack_moon_9_windup_max = 60
+@ukn_exa_lance_attack_moon_10_windup_max = 60
+@ukn_exa_lance_attack_moon_planck_windup_max = 60
+#---
+
+@ukn_exa_lance_attack_moon_6_total_fire_time = 190
+@ukn_exa_lance_attack_moon_7_total_fire_time = 190
+@ukn_exa_lance_attack_moon_8_total_fire_time = 190
+@ukn_exa_lance_attack_moon_9_total_fire_time = 190
+@ukn_exa_lance_attack_moon_10_total_fire_time = 190
+@ukn_exa_lance_attack_moon_planck_total_fire_time = 190
+#---
+
+@ukn_exa_lance_attack_moon_6_range = 265
+@ukn_exa_lance_attack_moon_7_range = 265
+@ukn_exa_lance_attack_moon_8_range = 265
+@ukn_exa_lance_attack_moon_9_range = 315
+@ukn_exa_lance_attack_moon_10_range = 315
+@ukn_exa_lance_attack_moon_planck_range = 265
+#---
+
+@ukn_exa_lance_attack_moon_6_accuracy = 0.80
+@ukn_exa_lance_attack_moon_7_accuracy = 0.80
+@ukn_exa_lance_attack_moon_8_accuracy = 0.80
+@ukn_exa_lance_attack_moon_9_accuracy = 0.80
+@ukn_exa_lance_attack_moon_10_accuracy = 0.80
+@ukn_exa_lance_attack_moon_planck_accuracy = 0.80
+
+
+
+########################
+### CULSTER MISSILES ###
+########################
+#---
+
+@ukn_cluster_missile_attack_moon_7_hull_damage_mult = 1.35
+@ukn_cluster_missile_attack_moon_8_hull_damage_mult = 1.35
+@ukn_cluster_missile_attack_moon_9_hull_damage_mult = 1.55
+@ukn_cluster_missile_attack_moon_10_hull_damage_mult = 1.55
+@ukn_cluster_missile_attack_moon_planck_hull_damage_mult = 1.35
+
+@ukn_cluster_missile_attack_moon_7_armor_penetration_mult = 0.00
+@ukn_cluster_missile_attack_moon_8_armor_penetration_mult = 0.00
+@ukn_cluster_missile_attack_moon_9_armor_penetration_mult = 0.00
+@ukn_cluster_missile_attack_moon_10_armor_penetration_mult = 0.00
+@ukn_cluster_missile_attack_moon_planck_armor_penetration_mult = 0.00
+
+@ukn_cluster_missile_attack_moon_7_shield_penetration_mult = 1.00
+@ukn_cluster_missile_attack_moon_8_shield_penetration_mult = 1.00
+@ukn_cluster_missile_attack_moon_9_shield_penetration_mult = 1.00
+@ukn_cluster_missile_attack_moon_10_shield_penetration_mult = 1.00
+@ukn_cluster_missile_attack_moon_planck_shield_penetration_mult = 1.00
+
+@ukn_cluster_missile_attack_moon_7_armor_damage_mult = 1.35
+@ukn_cluster_missile_attack_moon_8_armor_damage_mult = 1.35
+@ukn_cluster_missile_attack_moon_9_armor_damage_mult = 1.55
+@ukn_cluster_missile_attack_moon_10_armor_damage_mult = 1.55
+@ukn_cluster_missile_attack_moon_planck_armor_damage_mult = 1.35
+
+@ukn_cluster_missile_attack_moon_7_shield_damage_mult = 1.00
+@ukn_cluster_missile_attack_moon_8_shield_damage_mult = 1.00
+@ukn_cluster_missile_attack_moon_9_shield_damage_mult = 1.00
+@ukn_cluster_missile_attack_moon_10_shield_damage_mult = 1.00
+@ukn_cluster_missile_attack_moon_planck_shield_damage_mult = 1.00
+#---
+
+@ukn_cluster_missile_attack_moon_7_tracking = 0.16
+@ukn_cluster_missile_attack_moon_8_tracking = 0.16
+@ukn_cluster_missile_attack_moon_9_tracking = 0.18
+@ukn_cluster_missile_attack_moon_10_tracking = 0.18
+@ukn_cluster_missile_attack_moon_planck_tracking = 0.16
+
+# MISSILE STATS #-------------------
+
+@ukn_cluster_missile_attack_moon_7_missile_speed = 17
+@ukn_cluster_missile_attack_moon_8_missile_speed = 17
+@ukn_cluster_missile_attack_moon_9_missile_speed = 17
+@ukn_cluster_missile_attack_moon_10_missile_speed = 17
+@ukn_cluster_missile_attack_moon_planck_missile_speed = 17
+
+@ukn_cluster_missile_attack_moon_7_missile_evasion = 0.15
+@ukn_cluster_missile_attack_moon_8_missile_evasion = 0.20
+@ukn_cluster_missile_attack_moon_9_missile_evasion = 0.25
+@ukn_cluster_missile_attack_moon_10_missile_evasion = 0.30
+@ukn_cluster_missile_attack_moon_planck_missile_evasion = 0.20
+
+@ukn_cluster_missile_attack_moon_7_missile_health = 409
+@ukn_cluster_missile_attack_moon_8_missile_health = 593
+@ukn_cluster_missile_attack_moon_9_missile_health = 1291
+@ukn_cluster_missile_attack_moon_10_missile_health = 2000
+@ukn_cluster_missile_attack_moon_planck_missile_health = 860
+
+@ukn_cluster_missile_attack_moon_7_missile_retarget_range = 100
+@ukn_cluster_missile_attack_moon_8_missile_retarget_range = 100
+@ukn_cluster_missile_attack_moon_9_missile_retarget_range = 100
+@ukn_cluster_missile_attack_moon_10_missile_retarget_range = 100
+@ukn_cluster_missile_attack_moon_planck_missile_retarget_range = 100
+
+
+# GENERAL STATS #---------------------------
+
+@ukn_cluster_missile_attack_moon_7_firing_arc = 135.0
+@ukn_cluster_missile_attack_moon_8_firing_arc = 135.0
+@ukn_cluster_missile_attack_moon_9_firing_arc = 135.0
+@ukn_cluster_missile_attack_moon_10_firing_arc = 135.0
+@ukn_cluster_missile_attack_moon_planck_firing_arc = 135.0
+
+@ukn_cluster_missile_attack_moon_7_min_range = 10
+@ukn_cluster_missile_attack_moon_8_min_range = 10
+@ukn_cluster_missile_attack_moon_9_min_range = 10
+@ukn_cluster_missile_attack_moon_10_min_range = 10
+@ukn_cluster_missile_attack_moon_planck_min_range = 10
+
+
+# COLOSSAL (Only Slot) #---------------------------
+
+@ukn_cluster_missile_attack_moon_7_power = -5667
+@ukn_cluster_missile_attack_moon_8_power = -8218
+@ukn_cluster_missile_attack_moon_9_power = -17873
+@ukn_cluster_missile_attack_moon_10_power = -27703
+@ukn_cluster_missile_attack_moon_planck_power = -11915
+#---
+
+@ukn_cluster_missile_attack_moon_7_dmg_min = 7094
+@ukn_cluster_missile_attack_moon_8_dmg_min = 10286
+@ukn_cluster_missile_attack_moon_9_dmg_min = 22372
+@ukn_cluster_missile_attack_moon_10_dmg_min = 34676
+@ukn_cluster_missile_attack_moon_planck_dmg_min = 14915
+
+@ukn_cluster_missile_attack_moon_7_dmg_max = 9429
+@ukn_cluster_missile_attack_moon_8_dmg_max = 13671
+@ukn_cluster_missile_attack_moon_9_dmg_max = 29735
+@ukn_cluster_missile_attack_moon_10_dmg_max = 46090
+@ukn_cluster_missile_attack_moon_planck_dmg_max = 19824
+#---
+
+@ukn_cluster_missile_attack_moon_7_windup_min = 15
+@ukn_cluster_missile_attack_moon_8_windup_min = 15
+@ukn_cluster_missile_attack_moon_9_windup_min = 15
+@ukn_cluster_missile_attack_moon_10_windup_min = 15
+@ukn_cluster_missile_attack_moon_planck_windup_min = 15
+
+@ukn_cluster_missile_attack_moon_7_windup_max = 20
+@ukn_cluster_missile_attack_moon_8_windup_max = 20
+@ukn_cluster_missile_attack_moon_9_windup_max = 20
+@ukn_cluster_missile_attack_moon_10_windup_max = 20
+@ukn_cluster_missile_attack_moon_planck_windup_max = 20
+#---
+
+@ukn_cluster_missile_attack_moon_7_total_fire_time = 45
+@ukn_cluster_missile_attack_moon_8_total_fire_time = 45
+@ukn_cluster_missile_attack_moon_9_total_fire_time = 45
+@ukn_cluster_missile_attack_moon_10_total_fire_time = 45
+@ukn_cluster_missile_attack_moon_planck_total_fire_time = 45
+#---
+
+@ukn_cluster_missile_attack_moon_7_range = 275
+@ukn_cluster_missile_attack_moon_8_range = 275
+@ukn_cluster_missile_attack_moon_9_range = 330
+@ukn_cluster_missile_attack_moon_10_range = 330
+@ukn_cluster_missile_attack_moon_planck_range = 275
+#---
+
+@ukn_cluster_missile_attack_moon_7_accuracy = 1.00
+@ukn_cluster_missile_attack_moon_8_accuracy = 1.00
+@ukn_cluster_missile_attack_moon_9_accuracy = 1.00
+@ukn_cluster_missile_attack_moon_10_accuracy = 1.00
+@ukn_cluster_missile_attack_moon_planck_accuracy = 1.00
+
+
+
+###########################
+### SHATTERBOLT CANNONS ###
+###########################
+
+@ukn_shatterbolt_cannon_attack_moon_7_hull_damage_mult = 1.10
+@ukn_shatterbolt_cannon_attack_moon_8_hull_damage_mult = 1.10
+@ukn_shatterbolt_cannon_attack_moon_9_hull_damage_mult = 1.25
+@ukn_shatterbolt_cannon_attack_moon_10_hull_damage_mult = 1.25
+@ukn_shatterbolt_cannon_attack_moon_planck_hull_damage_mult = 1.10
+
+@ukn_shatterbolt_cannon_attack_moon_7_armor_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_attack_moon_8_armor_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_attack_moon_9_armor_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_attack_moon_10_armor_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_attack_moon_planck_armor_penetration_mult = 0.00
+
+@ukn_shatterbolt_cannon_attack_moon_7_shield_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_attack_moon_8_shield_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_attack_moon_9_shield_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_attack_moon_10_shield_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_attack_moon_planck_shield_penetration_mult = 0.00
+
+@ukn_shatterbolt_cannon_attack_moon_7_armor_damage_mult = 0.85
+@ukn_shatterbolt_cannon_attack_moon_8_armor_damage_mult = 0.85
+@ukn_shatterbolt_cannon_attack_moon_9_armor_damage_mult = 0.95
+@ukn_shatterbolt_cannon_attack_moon_10_armor_damage_mult = 0.95
+@ukn_shatterbolt_cannon_attack_moon_planck_armor_damage_mult = 0.85
+
+@ukn_shatterbolt_cannon_attack_moon_7_shield_damage_mult = 1.65
+@ukn_shatterbolt_cannon_attack_moon_8_shield_damage_mult = 1.65
+@ukn_shatterbolt_cannon_attack_moon_9_shield_damage_mult = 1.90
+@ukn_shatterbolt_cannon_attack_moon_10_shield_damage_mult = 1.90
+@ukn_shatterbolt_cannon_attack_moon_planck_shield_damage_mult = 1.65
+#---
+
+@ukn_shatterbolt_cannon_attack_moon_7_tracking = 0.32
+@ukn_shatterbolt_cannon_attack_moon_8_tracking = 0.32
+@ukn_shatterbolt_cannon_attack_moon_9_tracking = 0.35
+@ukn_shatterbolt_cannon_attack_moon_10_tracking = 0.35
+@ukn_shatterbolt_cannon_attack_moon_planck_tracking = 0.32
+#---
+
+@ukn_shatterbolt_cannon_attack_moon_7_firing_arc = 180.0
+@ukn_shatterbolt_cannon_attack_moon_8_firing_arc = 180.0
+@ukn_shatterbolt_cannon_attack_moon_9_firing_arc = 180.0
+@ukn_shatterbolt_cannon_attack_moon_10_firing_arc = 180.0
+@ukn_shatterbolt_cannon_attack_moon_planck_firing_arc = 180.0
+
+@ukn_shatterbolt_cannon_attack_moon_7_min_range = 5
+@ukn_shatterbolt_cannon_attack_moon_8_min_range = 5
+@ukn_shatterbolt_cannon_attack_moon_9_min_range = 5
+@ukn_shatterbolt_cannon_attack_moon_10_min_range = 5
+@ukn_shatterbolt_cannon_attack_moon_planck_min_range = 5
+
+
+# COLOSSAL (Only Slot) #---------------------------
+
+@ukn_shatterbolt_cannon_attack_moon_7_power = -5667
+@ukn_shatterbolt_cannon_attack_moon_8_power = -8218
+@ukn_shatterbolt_cannon_attack_moon_9_power = -17873
+@ukn_shatterbolt_cannon_attack_moon_10_power = -27703
+@ukn_shatterbolt_cannon_attack_moon_planck_power = -11915
+#---
+
+@ukn_shatterbolt_cannon_attack_moon_7_dmg_min = 16313
+@ukn_shatterbolt_cannon_attack_moon_8_dmg_min = 23654
+@ukn_shatterbolt_cannon_attack_moon_9_dmg_min = 51447
+@ukn_shatterbolt_cannon_attack_moon_10_dmg_min = 79742
+@ukn_shatterbolt_cannon_attack_moon_planck_dmg_min = 34298
+
+@ukn_shatterbolt_cannon_attack_moon_7_dmg_max = 40778
+@ukn_shatterbolt_cannon_attack_moon_8_dmg_max = 59129
+@ukn_shatterbolt_cannon_attack_moon_9_dmg_max = 128605
+@ukn_shatterbolt_cannon_attack_moon_10_dmg_max = 199338
+@ukn_shatterbolt_cannon_attack_moon_planck_dmg_max = 85737
+#---
+
+@ukn_shatterbolt_cannon_attack_moon_7_windup_min = 10
+@ukn_shatterbolt_cannon_attack_moon_8_windup_min = 10
+@ukn_shatterbolt_cannon_attack_moon_9_windup_min = 10
+@ukn_shatterbolt_cannon_attack_moon_10_windup_min = 10
+@ukn_shatterbolt_cannon_attack_moon_planck_windup_min = 10
+
+@ukn_shatterbolt_cannon_attack_moon_7_windup_max = 30
+@ukn_shatterbolt_cannon_attack_moon_8_windup_max = 30
+@ukn_shatterbolt_cannon_attack_moon_9_windup_max = 30
+@ukn_shatterbolt_cannon_attack_moon_10_windup_max = 30
+@ukn_shatterbolt_cannon_attack_moon_planck_windup_max = 30
+#---
+
+@ukn_shatterbolt_cannon_attack_moon_7_total_fire_time = 55
+@ukn_shatterbolt_cannon_attack_moon_8_total_fire_time = 55
+@ukn_shatterbolt_cannon_attack_moon_9_total_fire_time = 55
+@ukn_shatterbolt_cannon_attack_moon_10_total_fire_time = 55
+@ukn_shatterbolt_cannon_attack_moon_planck_total_fire_time = 55
+#---
+
+@ukn_shatterbolt_cannon_attack_moon_7_range = 80
+@ukn_shatterbolt_cannon_attack_moon_8_range = 80
+@ukn_shatterbolt_cannon_attack_moon_9_range = 95
+@ukn_shatterbolt_cannon_attack_moon_10_range = 95
+@ukn_shatterbolt_cannon_attack_moon_planck_range = 80
+#---
+
+@ukn_shatterbolt_cannon_attack_moon_7_accuracy = 0.85
+@ukn_shatterbolt_cannon_attack_moon_8_accuracy = 0.85
+@ukn_shatterbolt_cannon_attack_moon_9_accuracy = 0.85
+@ukn_shatterbolt_cannon_attack_moon_10_accuracy = 0.85
+@ukn_shatterbolt_cannon_attack_moon_planck_accuracy = 0.85
+
+
+
+
+####################
+### ZETTA-LANCES ###
+####################
+
+@ukn_exa_lance_planetcraft_6_hull_damage_mult = 1.35
+@ukn_exa_lance_planetcraft_7_hull_damage_mult = 1.35
+@ukn_exa_lance_planetcraft_8_hull_damage_mult = 1.35
+@ukn_exa_lance_planetcraft_9_hull_damage_mult = 1.55
+@ukn_exa_lance_planetcraft_10_hull_damage_mult = 1.55
+@ukn_exa_lance_planetcraft_planck_hull_damage_mult = 1.35
+
+@ukn_exa_lance_planetcraft_6_armor_penetration_mult = 0.00
+@ukn_exa_lance_planetcraft_7_armor_penetration_mult = 0.00
+@ukn_exa_lance_planetcraft_8_armor_penetration_mult = 0.00
+@ukn_exa_lance_planetcraft_9_armor_penetration_mult = 0.00
+@ukn_exa_lance_planetcraft_10_armor_penetration_mult = 0.00
+@ukn_exa_lance_planetcraft_planck_armor_penetration_mult = 0.00
+
+@ukn_exa_lance_planetcraft_6_shield_penetration_mult = 0.00
+@ukn_exa_lance_planetcraft_7_shield_penetration_mult = 0.00
+@ukn_exa_lance_planetcraft_8_shield_penetration_mult = 0.00
+@ukn_exa_lance_planetcraft_9_shield_penetration_mult = 0.00
+@ukn_exa_lance_planetcraft_10_shield_penetration_mult = 0.00
+@ukn_exa_lance_planetcraft_planck_shield_penetration_mult = 0.00
+
+@ukn_exa_lance_planetcraft_6_armor_damage_mult = 1.65
+@ukn_exa_lance_planetcraft_7_armor_damage_mult = 1.65
+@ukn_exa_lance_planetcraft_8_armor_damage_mult = 1.65
+@ukn_exa_lance_planetcraft_9_armor_damage_mult = 1.90
+@ukn_exa_lance_planetcraft_10_armor_damage_mult = 1.90
+@ukn_exa_lance_planetcraft_planck_armor_damage_mult = 1.65
+
+@ukn_exa_lance_planetcraft_6_shield_damage_mult = 0.85
+@ukn_exa_lance_planetcraft_7_shield_damage_mult = 0.85
+@ukn_exa_lance_planetcraft_8_shield_damage_mult = 0.85
+@ukn_exa_lance_planetcraft_9_shield_damage_mult = 0.95
+@ukn_exa_lance_planetcraft_10_shield_damage_mult = 0.95
+@ukn_exa_lance_planetcraft_planck_shield_damage_mult = 0.85
+#---
+
+@ukn_exa_lance_planetcraft_6_tracking = 0.00
+@ukn_exa_lance_planetcraft_7_tracking = 0.00
+@ukn_exa_lance_planetcraft_8_tracking = 0.00
+@ukn_exa_lance_planetcraft_9_tracking = 0.00
+@ukn_exa_lance_planetcraft_10_tracking = 0.00
+@ukn_exa_lance_planetcraft_planck_tracking = 0.00
+#---
+
+@ukn_exa_lance_planetcraft_6_firing_arc = 25.0
+@ukn_exa_lance_planetcraft_7_firing_arc = 25.0
+@ukn_exa_lance_planetcraft_8_firing_arc = 25.0
+@ukn_exa_lance_planetcraft_9_firing_arc = 25.0
+@ukn_exa_lance_planetcraft_10_firing_arc = 25.0
+@ukn_exa_lance_planetcraft_planck_firing_arc = 25.0
+
+@ukn_exa_lance_planetcraft_6_min_range = 10
+@ukn_exa_lance_planetcraft_7_min_range = 10
+@ukn_exa_lance_planetcraft_8_min_range = 10
+@ukn_exa_lance_planetcraft_9_min_range = 10
+@ukn_exa_lance_planetcraft_10_min_range = 10
+@ukn_exa_lance_planetcraft_planck_min_range = 10
+
+
+# COLOSSAL (Only Slot) #---------------------------
+
+@ukn_exa_lance_planetcraft_6_power = -54649
+@ukn_exa_lance_planetcraft_7_power = -76508
+@ukn_exa_lance_planetcraft_8_power = -110937
+@ukn_exa_lance_planetcraft_9_power = -241288
+@ukn_exa_lance_planetcraft_10_power = -373997
+@ukn_exa_lance_planetcraft_planck_power = -160859
+#---
+
+@ukn_exa_lance_planetcraft_6_dmg_min = 500094
+@ukn_exa_lance_planetcraft_7_dmg_min = 700132
+@ukn_exa_lance_planetcraft_8_dmg_min = 1015191
+@ukn_exa_lance_planetcraft_9_dmg_min = 2208040
+@ukn_exa_lance_planetcraft_10_dmg_min = 3422462
+@ukn_exa_lance_planetcraft_planck_dmg_min = 1472027
+
+@ukn_exa_lance_planetcraft_6_dmg_max = 1250119
+@ukn_exa_lance_planetcraft_7_dmg_max = 1750167
+@ukn_exa_lance_planetcraft_8_dmg_max = 2537742
+@ukn_exa_lance_planetcraft_9_dmg_max = 5519588
+@ukn_exa_lance_planetcraft_10_dmg_max = 8555361
+@ukn_exa_lance_planetcraft_planck_dmg_max = 3679725
+#---
+
+@ukn_exa_lance_planetcraft_6_windup_min = 55
+@ukn_exa_lance_planetcraft_7_windup_min = 55
+@ukn_exa_lance_planetcraft_8_windup_min = 55
+@ukn_exa_lance_planetcraft_9_windup_min = 55
+@ukn_exa_lance_planetcraft_10_windup_min = 55
+@ukn_exa_lance_planetcraft_planck_windup_min = 55
+
+@ukn_exa_lance_planetcraft_6_windup_max = 60
+@ukn_exa_lance_planetcraft_7_windup_max = 60
+@ukn_exa_lance_planetcraft_8_windup_max = 60
+@ukn_exa_lance_planetcraft_9_windup_max = 60
+@ukn_exa_lance_planetcraft_10_windup_max = 60
+@ukn_exa_lance_planetcraft_planck_windup_max = 60
+#---
+
+@ukn_exa_lance_planetcraft_6_total_fire_time = 165
+@ukn_exa_lance_planetcraft_7_total_fire_time = 165
+@ukn_exa_lance_planetcraft_8_total_fire_time = 165
+@ukn_exa_lance_planetcraft_9_total_fire_time = 165
+@ukn_exa_lance_planetcraft_10_total_fire_time = 165
+@ukn_exa_lance_planetcraft_planck_total_fire_time = 165
+#---
+
+@ukn_exa_lance_planetcraft_6_range = 265
+@ukn_exa_lance_planetcraft_7_range = 265
+@ukn_exa_lance_planetcraft_8_range = 265
+@ukn_exa_lance_planetcraft_9_range = 315
+@ukn_exa_lance_planetcraft_10_range = 315
+@ukn_exa_lance_planetcraft_planck_range = 265
+#---
+
+@ukn_exa_lance_planetcraft_6_accuracy = 0.80
+@ukn_exa_lance_planetcraft_7_accuracy = 0.80
+@ukn_exa_lance_planetcraft_8_accuracy = 0.80
+@ukn_exa_lance_planetcraft_9_accuracy = 0.80
+@ukn_exa_lance_planetcraft_10_accuracy = 0.80
+@ukn_exa_lance_planetcraft_planck_accuracy = 0.80
+
+
+
+########################
+### CULSTER MISSILES ###
+########################
+#---
+
+@ukn_cluster_missile_planetcraft_7_hull_damage_mult = 1.35
+@ukn_cluster_missile_planetcraft_8_hull_damage_mult = 1.35
+@ukn_cluster_missile_planetcraft_9_hull_damage_mult = 1.55
+@ukn_cluster_missile_planetcraft_10_hull_damage_mult = 1.55
+@ukn_cluster_missile_planetcraft_planck_hull_damage_mult = 1.35
+
+@ukn_cluster_missile_planetcraft_7_armor_penetration_mult = 0.00
+@ukn_cluster_missile_planetcraft_8_armor_penetration_mult = 0.00
+@ukn_cluster_missile_planetcraft_9_armor_penetration_mult = 0.00
+@ukn_cluster_missile_planetcraft_10_armor_penetration_mult = 0.00
+@ukn_cluster_missile_planetcraft_planck_armor_penetration_mult = 0.00
+
+@ukn_cluster_missile_planetcraft_7_shield_penetration_mult = 1.00
+@ukn_cluster_missile_planetcraft_8_shield_penetration_mult = 1.00
+@ukn_cluster_missile_planetcraft_9_shield_penetration_mult = 1.00
+@ukn_cluster_missile_planetcraft_10_shield_penetration_mult = 1.00
+@ukn_cluster_missile_planetcraft_planck_shield_penetration_mult = 1.00
+
+@ukn_cluster_missile_planetcraft_7_armor_damage_mult = 1.35
+@ukn_cluster_missile_planetcraft_8_armor_damage_mult = 1.35
+@ukn_cluster_missile_planetcraft_9_armor_damage_mult = 1.55
+@ukn_cluster_missile_planetcraft_10_armor_damage_mult = 1.55
+@ukn_cluster_missile_planetcraft_planck_armor_damage_mult = 1.35
+
+@ukn_cluster_missile_planetcraft_7_shield_damage_mult = 1.00
+@ukn_cluster_missile_planetcraft_8_shield_damage_mult = 1.00
+@ukn_cluster_missile_planetcraft_9_shield_damage_mult = 1.00
+@ukn_cluster_missile_planetcraft_10_shield_damage_mult = 1.00
+@ukn_cluster_missile_planetcraft_planck_shield_damage_mult = 1.00
+#---
+
+@ukn_cluster_missile_planetcraft_7_tracking = 0.16
+@ukn_cluster_missile_planetcraft_8_tracking = 0.16
+@ukn_cluster_missile_planetcraft_9_tracking = 0.18
+@ukn_cluster_missile_planetcraft_10_tracking = 0.18
+@ukn_cluster_missile_planetcraft_planck_tracking = 0.16
+
+# MISSILE STATS #-------------------
+
+@ukn_cluster_missile_planetcraft_7_missile_speed = 17
+@ukn_cluster_missile_planetcraft_8_missile_speed = 17
+@ukn_cluster_missile_planetcraft_9_missile_speed = 17
+@ukn_cluster_missile_planetcraft_10_missile_speed = 17
+@ukn_cluster_missile_planetcraft_planck_missile_speed = 17
+
+@ukn_cluster_missile_planetcraft_7_missile_evasion = 0.15
+@ukn_cluster_missile_planetcraft_8_missile_evasion = 0.20
+@ukn_cluster_missile_planetcraft_9_missile_evasion = 0.25
+@ukn_cluster_missile_planetcraft_10_missile_evasion = 0.30
+@ukn_cluster_missile_planetcraft_planck_missile_evasion = 0.20
+
+@ukn_cluster_missile_planetcraft_7_missile_health = 581
+@ukn_cluster_missile_planetcraft_8_missile_health = 843
+@ukn_cluster_missile_planetcraft_9_missile_health = 1833
+@ukn_cluster_missile_planetcraft_10_missile_health = 2841
+@ukn_cluster_missile_planetcraft_planck_missile_health = 1222
+
+@ukn_cluster_missile_planetcraft_7_missile_retarget_range = 100
+@ukn_cluster_missile_planetcraft_8_missile_retarget_range = 100
+@ukn_cluster_missile_planetcraft_9_missile_retarget_range = 100
+@ukn_cluster_missile_planetcraft_10_missile_retarget_range = 100
+@ukn_cluster_missile_planetcraft_planck_missile_retarget_range = 100
+
+
+# GENERAL STATS #---------------------------
+
+@ukn_cluster_missile_planetcraft_7_firing_arc = 135.0
+@ukn_cluster_missile_planetcraft_8_firing_arc = 135.0
+@ukn_cluster_missile_planetcraft_9_firing_arc = 135.0
+@ukn_cluster_missile_planetcraft_10_firing_arc = 135.0
+@ukn_cluster_missile_planetcraft_planck_firing_arc = 135.0
+
+@ukn_cluster_missile_planetcraft_7_min_range = 10
+@ukn_cluster_missile_planetcraft_8_min_range = 10
+@ukn_cluster_missile_planetcraft_9_min_range = 10
+@ukn_cluster_missile_planetcraft_10_min_range = 10
+@ukn_cluster_missile_planetcraft_planck_min_range = 10
+
+
+# COLOSSAL (Only Slot) #---------------------------
+
+@ukn_cluster_missile_planetcraft_7_power = -76508
+@ukn_cluster_missile_planetcraft_8_power = -110937
+@ukn_cluster_missile_planetcraft_9_power = -241288
+@ukn_cluster_missile_planetcraft_10_power = -373997
+@ukn_cluster_missile_planetcraft_planck_power = -160859
+#---
+
+@ukn_cluster_missile_planetcraft_7_dmg_min = 117841
+@ukn_cluster_missile_planetcraft_8_dmg_min = 170869
+@ukn_cluster_missile_planetcraft_9_dmg_min = 371641
+@ukn_cluster_missile_planetcraft_10_dmg_min = 575928
+@ukn_cluster_missile_planetcraft_planck_dmg_min = 247761
+
+@ukn_cluster_missile_planetcraft_7_dmg_max = 156627
+@ukn_cluster_missile_planetcraft_8_dmg_max = 227109
+@ukn_cluster_missile_planetcraft_9_dmg_max = 493962
+@ukn_cluster_missile_planetcraft_10_dmg_max = 765489
+@ukn_cluster_missile_planetcraft_planck_dmg_max = 329308
+#---
+
+@ukn_cluster_missile_planetcraft_7_windup_min = 15
+@ukn_cluster_missile_planetcraft_8_windup_min = 15
+@ukn_cluster_missile_planetcraft_9_windup_min = 15
+@ukn_cluster_missile_planetcraft_10_windup_min = 15
+@ukn_cluster_missile_planetcraft_planck_windup_min = 15
+
+@ukn_cluster_missile_planetcraft_7_windup_max = 20
+@ukn_cluster_missile_planetcraft_8_windup_max = 20
+@ukn_cluster_missile_planetcraft_9_windup_max = 20
+@ukn_cluster_missile_planetcraft_10_windup_max = 20
+@ukn_cluster_missile_planetcraft_planck_windup_max = 20
+#---
+
+@ukn_cluster_missile_planetcraft_7_total_fire_time = 40
+@ukn_cluster_missile_planetcraft_8_total_fire_time = 40
+@ukn_cluster_missile_planetcraft_9_total_fire_time = 40
+@ukn_cluster_missile_planetcraft_10_total_fire_time = 40
+@ukn_cluster_missile_planetcraft_planck_total_fire_time = 40
+#---
+
+@ukn_cluster_missile_planetcraft_7_range = 275
+@ukn_cluster_missile_planetcraft_8_range = 275
+@ukn_cluster_missile_planetcraft_9_range = 330
+@ukn_cluster_missile_planetcraft_10_range = 330
+@ukn_cluster_missile_planetcraft_planck_range = 275
+#---
+
+@ukn_cluster_missile_planetcraft_7_accuracy = 1.00
+@ukn_cluster_missile_planetcraft_8_accuracy = 1.00
+@ukn_cluster_missile_planetcraft_9_accuracy = 1.00
+@ukn_cluster_missile_planetcraft_10_accuracy = 1.00
+@ukn_cluster_missile_planetcraft_planck_accuracy = 1.00
+
+
+
+###########################
+### SHATTERBOLT CANNONS ###
+###########################
+
+@ukn_shatterbolt_cannon_planetcraft_7_hull_damage_mult = 1.10
+@ukn_shatterbolt_cannon_planetcraft_8_hull_damage_mult = 1.10
+@ukn_shatterbolt_cannon_planetcraft_9_hull_damage_mult = 1.25
+@ukn_shatterbolt_cannon_planetcraft_10_hull_damage_mult = 1.25
+@ukn_shatterbolt_cannon_planetcraft_planck_hull_damage_mult = 1.10
+
+@ukn_shatterbolt_cannon_planetcraft_7_armor_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_planetcraft_8_armor_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_planetcraft_9_armor_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_planetcraft_10_armor_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_planetcraft_planck_armor_penetration_mult = 0.00
+
+@ukn_shatterbolt_cannon_planetcraft_7_shield_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_planetcraft_8_shield_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_planetcraft_9_shield_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_planetcraft_10_shield_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_planetcraft_planck_shield_penetration_mult = 0.00
+
+@ukn_shatterbolt_cannon_planetcraft_7_armor_damage_mult = 0.85
+@ukn_shatterbolt_cannon_planetcraft_8_armor_damage_mult = 0.85
+@ukn_shatterbolt_cannon_planetcraft_9_armor_damage_mult = 0.95
+@ukn_shatterbolt_cannon_planetcraft_10_armor_damage_mult = 0.95
+@ukn_shatterbolt_cannon_planetcraft_planck_armor_damage_mult = 0.85
+
+@ukn_shatterbolt_cannon_planetcraft_7_shield_damage_mult = 1.65
+@ukn_shatterbolt_cannon_planetcraft_8_shield_damage_mult = 1.65
+@ukn_shatterbolt_cannon_planetcraft_9_shield_damage_mult = 1.90
+@ukn_shatterbolt_cannon_planetcraft_10_shield_damage_mult = 1.90
+@ukn_shatterbolt_cannon_planetcraft_planck_shield_damage_mult = 1.65
+#---
+
+@ukn_shatterbolt_cannon_planetcraft_7_tracking = 0.32
+@ukn_shatterbolt_cannon_planetcraft_8_tracking = 0.32
+@ukn_shatterbolt_cannon_planetcraft_9_tracking = 0.35
+@ukn_shatterbolt_cannon_planetcraft_10_tracking = 0.35
+@ukn_shatterbolt_cannon_planetcraft_planck_tracking = 0.32
+#---
+
+@ukn_shatterbolt_cannon_planetcraft_7_firing_arc = 180.0
+@ukn_shatterbolt_cannon_planetcraft_8_firing_arc = 180.0
+@ukn_shatterbolt_cannon_planetcraft_9_firing_arc = 180.0
+@ukn_shatterbolt_cannon_planetcraft_10_firing_arc = 180.0
+@ukn_shatterbolt_cannon_planetcraft_planck_firing_arc = 180.0
+
+@ukn_shatterbolt_cannon_planetcraft_7_min_range = 5
+@ukn_shatterbolt_cannon_planetcraft_8_min_range = 5
+@ukn_shatterbolt_cannon_planetcraft_9_min_range = 5
+@ukn_shatterbolt_cannon_planetcraft_10_min_range = 5
+@ukn_shatterbolt_cannon_planetcraft_planck_min_range = 5
+
+
+# COLOSSAL (Only Slot) #---------------------------
+
+@ukn_shatterbolt_cannon_planetcraft_7_power = -76508
+@ukn_shatterbolt_cannon_planetcraft_8_power = -110937
+@ukn_shatterbolt_cannon_planetcraft_9_power = -241288
+@ukn_shatterbolt_cannon_planetcraft_10_power = -373997
+@ukn_shatterbolt_cannon_planetcraft_planck_power = -160859
+#---
+
+@ukn_shatterbolt_cannon_planetcraft_7_dmg_min = 274908
+@ukn_shatterbolt_cannon_planetcraft_8_dmg_min = 398617
+@ukn_shatterbolt_cannon_planetcraft_9_dmg_min = 866991
+@ukn_shatterbolt_cannon_planetcraft_10_dmg_min = 1343837
+@ukn_shatterbolt_cannon_planetcraft_planck_dmg_min = 577994
+
+@ukn_shatterbolt_cannon_planetcraft_7_dmg_max = 687290
+@ukn_shatterbolt_cannon_planetcraft_8_dmg_max = 996570
+@ukn_shatterbolt_cannon_planetcraft_9_dmg_max = 2167540
+@ukn_shatterbolt_cannon_planetcraft_10_dmg_max = 3359688
+@ukn_shatterbolt_cannon_planetcraft_planck_dmg_max = 1445027
+#---
+
+@ukn_shatterbolt_cannon_planetcraft_7_windup_min = 10
+@ukn_shatterbolt_cannon_planetcraft_8_windup_min = 10
+@ukn_shatterbolt_cannon_planetcraft_9_windup_min = 10
+@ukn_shatterbolt_cannon_planetcraft_10_windup_min = 10
+@ukn_shatterbolt_cannon_planetcraft_planck_windup_min = 10
+
+@ukn_shatterbolt_cannon_planetcraft_7_windup_max = 30
+@ukn_shatterbolt_cannon_planetcraft_8_windup_max = 30
+@ukn_shatterbolt_cannon_planetcraft_9_windup_max = 30
+@ukn_shatterbolt_cannon_planetcraft_10_windup_max = 30
+@ukn_shatterbolt_cannon_planetcraft_planck_windup_max = 30
+#---
+
+@ukn_shatterbolt_cannon_planetcraft_7_total_fire_time = 50
+@ukn_shatterbolt_cannon_planetcraft_8_total_fire_time = 50
+@ukn_shatterbolt_cannon_planetcraft_9_total_fire_time = 50
+@ukn_shatterbolt_cannon_planetcraft_10_total_fire_time = 50
+@ukn_shatterbolt_cannon_planetcraft_planck_total_fire_time = 50
+#---
+
+@ukn_shatterbolt_cannon_planetcraft_7_range = 80
+@ukn_shatterbolt_cannon_planetcraft_8_range = 80
+@ukn_shatterbolt_cannon_planetcraft_9_range = 95
+@ukn_shatterbolt_cannon_planetcraft_10_range = 95
+@ukn_shatterbolt_cannon_planetcraft_planck_range = 80
+#---
+
+@ukn_shatterbolt_cannon_planetcraft_7_accuracy = 0.85
+@ukn_shatterbolt_cannon_planetcraft_8_accuracy = 0.85
+@ukn_shatterbolt_cannon_planetcraft_9_accuracy = 0.85
+@ukn_shatterbolt_cannon_planetcraft_10_accuracy = 0.85
+@ukn_shatterbolt_cannon_planetcraft_planck_accuracy = 0.85
+
+
+
+
+####################
+### YOTTA-LANCES ###
+####################
+
+@ukn_exa_lance_systemcraft_6_hull_damage_mult = 1.35
+@ukn_exa_lance_systemcraft_7_hull_damage_mult = 1.35
+@ukn_exa_lance_systemcraft_8_hull_damage_mult = 1.35
+@ukn_exa_lance_systemcraft_9_hull_damage_mult = 1.55
+@ukn_exa_lance_systemcraft_10_hull_damage_mult = 1.55
+@ukn_exa_lance_systemcraft_planck_hull_damage_mult = 1.35
+
+@ukn_exa_lance_systemcraft_6_armor_penetration_mult = 0.00
+@ukn_exa_lance_systemcraft_7_armor_penetration_mult = 0.00
+@ukn_exa_lance_systemcraft_8_armor_penetration_mult = 0.00
+@ukn_exa_lance_systemcraft_9_armor_penetration_mult = 0.00
+@ukn_exa_lance_systemcraft_10_armor_penetration_mult = 0.00
+@ukn_exa_lance_systemcraft_planck_armor_penetration_mult = 0.00
+
+@ukn_exa_lance_systemcraft_6_shield_penetration_mult = 0.00
+@ukn_exa_lance_systemcraft_7_shield_penetration_mult = 0.00
+@ukn_exa_lance_systemcraft_8_shield_penetration_mult = 0.00
+@ukn_exa_lance_systemcraft_9_shield_penetration_mult = 0.00
+@ukn_exa_lance_systemcraft_10_shield_penetration_mult = 0.00
+@ukn_exa_lance_systemcraft_planck_shield_penetration_mult = 0.00
+
+@ukn_exa_lance_systemcraft_6_armor_damage_mult = 1.65
+@ukn_exa_lance_systemcraft_7_armor_damage_mult = 1.65
+@ukn_exa_lance_systemcraft_8_armor_damage_mult = 1.65
+@ukn_exa_lance_systemcraft_9_armor_damage_mult = 1.90
+@ukn_exa_lance_systemcraft_10_armor_damage_mult = 1.90
+@ukn_exa_lance_systemcraft_planck_armor_damage_mult = 1.65
+
+@ukn_exa_lance_systemcraft_6_shield_damage_mult = 0.85
+@ukn_exa_lance_systemcraft_7_shield_damage_mult = 0.85
+@ukn_exa_lance_systemcraft_8_shield_damage_mult = 0.85
+@ukn_exa_lance_systemcraft_9_shield_damage_mult = 0.95
+@ukn_exa_lance_systemcraft_10_shield_damage_mult = 0.95
+@ukn_exa_lance_systemcraft_planck_shield_damage_mult = 0.85
+#---
+
+@ukn_exa_lance_systemcraft_6_tracking = 0.00
+@ukn_exa_lance_systemcraft_7_tracking = 0.00
+@ukn_exa_lance_systemcraft_8_tracking = 0.00
+@ukn_exa_lance_systemcraft_9_tracking = 0.00
+@ukn_exa_lance_systemcraft_10_tracking = 0.00
+@ukn_exa_lance_systemcraft_planck_tracking = 0.00
+#---
+
+@ukn_exa_lance_systemcraft_6_firing_arc = 25.0
+@ukn_exa_lance_systemcraft_7_firing_arc = 25.0
+@ukn_exa_lance_systemcraft_8_firing_arc = 25.0
+@ukn_exa_lance_systemcraft_9_firing_arc = 25.0
+@ukn_exa_lance_systemcraft_10_firing_arc = 25.0
+@ukn_exa_lance_systemcraft_planck_firing_arc = 25.0
+
+@ukn_exa_lance_systemcraft_6_min_range = 45
+@ukn_exa_lance_systemcraft_7_min_range = 45
+@ukn_exa_lance_systemcraft_8_min_range = 45
+@ukn_exa_lance_systemcraft_9_min_range = 45
+@ukn_exa_lance_systemcraft_10_min_range = 45
+@ukn_exa_lance_systemcraft_planck_min_range = 45
+
+
+# COLOSSAL (Only Slot) #---------------------------
+
+@ukn_exa_lance_systemcraft_6_power = -404806
+@ukn_exa_lance_systemcraft_7_power = -566728
+@ukn_exa_lance_systemcraft_8_power = -821756
+@ukn_exa_lance_systemcraft_9_power = -1787319
+@ukn_exa_lance_systemcraft_10_power = -2770345
+@ukn_exa_lance_systemcraft_planck_power = -1191546
+#---
+
+@ukn_exa_lance_systemcraft_6_dmg_min = 5000940
+@ukn_exa_lance_systemcraft_7_dmg_min = 7001316
+@ukn_exa_lance_systemcraft_8_dmg_min = 10151909
+@ukn_exa_lance_systemcraft_9_dmg_min = 22080401
+@ukn_exa_lance_systemcraft_10_dmg_min = 34224622
+@ukn_exa_lance_systemcraft_planck_dmg_min = 14720268
+
+@ukn_exa_lance_systemcraft_6_dmg_max = 12501190
+@ukn_exa_lance_systemcraft_7_dmg_max = 17501666
+@ukn_exa_lance_systemcraft_8_dmg_max = 25377416
+@ukn_exa_lance_systemcraft_9_dmg_max = 55195880
+@ukn_exa_lance_systemcraft_10_dmg_max = 85553615
+@ukn_exa_lance_systemcraft_planck_dmg_max = 36797254
+#---
+
+@ukn_exa_lance_systemcraft_6_windup_min = 50
+@ukn_exa_lance_systemcraft_7_windup_min = 50
+@ukn_exa_lance_systemcraft_8_windup_min = 50
+@ukn_exa_lance_systemcraft_9_windup_min = 50
+@ukn_exa_lance_systemcraft_10_windup_min = 50
+@ukn_exa_lance_systemcraft_planck_windup_min = 50
+
+@ukn_exa_lance_systemcraft_6_windup_max = 60
+@ukn_exa_lance_systemcraft_7_windup_max = 60
+@ukn_exa_lance_systemcraft_8_windup_max = 60
+@ukn_exa_lance_systemcraft_9_windup_max = 60
+@ukn_exa_lance_systemcraft_10_windup_max = 60
+@ukn_exa_lance_systemcraft_planck_windup_max = 60
+#---
+
+@ukn_exa_lance_systemcraft_6_total_fire_time = 195
+@ukn_exa_lance_systemcraft_7_total_fire_time = 195
+@ukn_exa_lance_systemcraft_8_total_fire_time = 195
+@ukn_exa_lance_systemcraft_9_total_fire_time = 195
+@ukn_exa_lance_systemcraft_10_total_fire_time = 195
+@ukn_exa_lance_systemcraft_planck_total_fire_time = 195
+#---
+
+@ukn_exa_lance_systemcraft_6_range = 265
+@ukn_exa_lance_systemcraft_7_range = 265
+@ukn_exa_lance_systemcraft_8_range = 265
+@ukn_exa_lance_systemcraft_9_range = 315
+@ukn_exa_lance_systemcraft_10_range = 315
+@ukn_exa_lance_systemcraft_planck_range = 265
+#---s
+
+@ukn_exa_lance_systemcraft_6_accuracy = 0.80
+@ukn_exa_lance_systemcraft_7_accuracy = 0.80
+@ukn_exa_lance_systemcraft_8_accuracy = 0.80
+@ukn_exa_lance_systemcraft_9_accuracy = 0.80
+@ukn_exa_lance_systemcraft_10_accuracy = 0.80
+@ukn_exa_lance_systemcraft_planck_accuracy = 0.80
+
+
+
+########################
+### CULSTER MISSILES ###
+########################
+#---
+
+@ukn_cluster_missile_systemcraft_7_hull_damage_mult = 1.35
+@ukn_cluster_missile_systemcraft_8_hull_damage_mult = 1.35
+@ukn_cluster_missile_systemcraft_9_hull_damage_mult = 1.55
+@ukn_cluster_missile_systemcraft_10_hull_damage_mult = 1.55
+@ukn_cluster_missile_systemcraft_planck_hull_damage_mult = 1.35
+
+@ukn_cluster_missile_systemcraft_7_armor_penetration_mult = 0.00
+@ukn_cluster_missile_systemcraft_8_armor_penetration_mult = 0.00
+@ukn_cluster_missile_systemcraft_9_armor_penetration_mult = 0.00
+@ukn_cluster_missile_systemcraft_10_armor_penetration_mult = 0.00
+@ukn_cluster_missile_systemcraft_planck_armor_penetration_mult = 0.00
+
+@ukn_cluster_missile_systemcraft_7_shield_penetration_mult = 1.00
+@ukn_cluster_missile_systemcraft_8_shield_penetration_mult = 1.00
+@ukn_cluster_missile_systemcraft_9_shield_penetration_mult = 1.00
+@ukn_cluster_missile_systemcraft_10_shield_penetration_mult = 1.00
+@ukn_cluster_missile_systemcraft_planck_shield_penetration_mult = 1.00
+
+@ukn_cluster_missile_systemcraft_7_armor_damage_mult = 1.35
+@ukn_cluster_missile_systemcraft_8_armor_damage_mult = 1.35
+@ukn_cluster_missile_systemcraft_9_armor_damage_mult = 1.55
+@ukn_cluster_missile_systemcraft_10_armor_damage_mult = 1.55
+@ukn_cluster_missile_systemcraft_planck_armor_damage_mult = 1.35
+
+@ukn_cluster_missile_systemcraft_7_shield_damage_mult = 1.00
+@ukn_cluster_missile_systemcraft_8_shield_damage_mult = 1.00
+@ukn_cluster_missile_systemcraft_9_shield_damage_mult = 1.00
+@ukn_cluster_missile_systemcraft_10_shield_damage_mult = 1.00
+@ukn_cluster_missile_systemcraft_planck_shield_damage_mult = 1.00
+#---
+
+@ukn_cluster_missile_systemcraft_7_tracking = 0.16
+@ukn_cluster_missile_systemcraft_8_tracking = 0.16
+@ukn_cluster_missile_systemcraft_9_tracking = 0.18
+@ukn_cluster_missile_systemcraft_10_tracking = 0.18
+@ukn_cluster_missile_systemcraft_planck_tracking = 0.16
+
+# MISSILE STATS #-------------------
+
+@ukn_cluster_missile_systemcraft_7_missile_speed = 17
+@ukn_cluster_missile_systemcraft_8_missile_speed = 17
+@ukn_cluster_missile_systemcraft_9_missile_speed = 17
+@ukn_cluster_missile_systemcraft_10_missile_speed = 17
+@ukn_cluster_missile_systemcraft_planck_missile_speed = 17
+
+@ukn_cluster_missile_systemcraft_7_missile_evasion = 0.15
+@ukn_cluster_missile_systemcraft_8_missile_evasion = 0.20
+@ukn_cluster_missile_systemcraft_9_missile_evasion = 0.25
+@ukn_cluster_missile_systemcraft_10_missile_evasion = 0.30
+@ukn_cluster_missile_systemcraft_planck_missile_evasion = 0.20
+
+@ukn_cluster_missile_systemcraft_7_missile_health = 799
+@ukn_cluster_missile_systemcraft_8_missile_health = 1159
+@ukn_cluster_missile_systemcraft_9_missile_health = 2520
+@ukn_cluster_missile_systemcraft_10_missile_health = 3906
+@ukn_cluster_missile_systemcraft_planck_missile_health = 1680
+
+@ukn_cluster_missile_systemcraft_7_missile_retarget_range = 100
+@ukn_cluster_missile_systemcraft_8_missile_retarget_range = 100
+@ukn_cluster_missile_systemcraft_9_missile_retarget_range = 100
+@ukn_cluster_missile_systemcraft_10_missile_retarget_range = 100
+@ukn_cluster_missile_systemcraft_planck_missile_retarget_range = 100
+
+
+# GENERAL STATS #---------------------------
+
+@ukn_cluster_missile_systemcraft_7_firing_arc = 135.0
+@ukn_cluster_missile_systemcraft_8_firing_arc = 135.0
+@ukn_cluster_missile_systemcraft_9_firing_arc = 135.0
+@ukn_cluster_missile_systemcraft_10_firing_arc = 135.0
+@ukn_cluster_missile_systemcraft_planck_firing_arc = 135.0
+
+@ukn_cluster_missile_systemcraft_7_min_range = 10
+@ukn_cluster_missile_systemcraft_8_min_range = 10
+@ukn_cluster_missile_systemcraft_9_min_range = 10
+@ukn_cluster_missile_systemcraft_10_min_range = 10
+@ukn_cluster_missile_systemcraft_planck_min_range = 10
+
+
+# COLOSSAL (Only Slot) #---------------------------
+
+@ukn_cluster_missile_systemcraft_7_power = -566728
+@ukn_cluster_missile_systemcraft_8_power = -821756
+@ukn_cluster_missile_systemcraft_9_power = -1787319
+@ukn_cluster_missile_systemcraft_10_power = -2770345
+@ukn_cluster_missile_systemcraft_planck_power = -1191546
+#---
+
+@ukn_cluster_missile_systemcraft_7_dmg_min = 827306
+@ukn_cluster_missile_systemcraft_8_dmg_min = 1199594
+@ukn_cluster_missile_systemcraft_9_dmg_min = 2609118
+@ukn_cluster_missile_systemcraft_10_dmg_min = 4044133
+@ukn_cluster_missile_systemcraft_planck_dmg_min = 1739412
+
+@ukn_cluster_missile_systemcraft_7_dmg_max = 1099605
+@ukn_cluster_missile_systemcraft_8_dmg_max = 1594428
+@ukn_cluster_missile_systemcraft_9_dmg_max = 3467880
+@ukn_cluster_missile_systemcraft_10_dmg_max = 5375214
+@ukn_cluster_missile_systemcraft_planck_dmg_max = 2311920
+#---
+
+@ukn_cluster_missile_systemcraft_7_windup_min = 15
+@ukn_cluster_missile_systemcraft_8_windup_min = 15
+@ukn_cluster_missile_systemcraft_9_windup_min = 15
+@ukn_cluster_missile_systemcraft_10_windup_min = 15
+@ukn_cluster_missile_systemcraft_planck_windup_min = 15
+
+@ukn_cluster_missile_systemcraft_7_windup_max = 20
+@ukn_cluster_missile_systemcraft_8_windup_max = 20
+@ukn_cluster_missile_systemcraft_9_windup_max = 20
+@ukn_cluster_missile_systemcraft_10_windup_max = 20
+@ukn_cluster_missile_systemcraft_planck_windup_max = 20
+#---
+
+@ukn_cluster_missile_systemcraft_7_total_fire_time = 37
+@ukn_cluster_missile_systemcraft_8_total_fire_time = 37
+@ukn_cluster_missile_systemcraft_9_total_fire_time = 37
+@ukn_cluster_missile_systemcraft_10_total_fire_time = 37
+@ukn_cluster_missile_systemcraft_planck_total_fire_time = 37
+#---
+
+@ukn_cluster_missile_systemcraft_7_range = 275
+@ukn_cluster_missile_systemcraft_8_range = 275
+@ukn_cluster_missile_systemcraft_9_range = 330
+@ukn_cluster_missile_systemcraft_10_range = 330
+@ukn_cluster_missile_systemcraft_planck_range = 275
+#---
+
+@ukn_cluster_missile_systemcraft_7_accuracy = 1.00
+@ukn_cluster_missile_systemcraft_8_accuracy = 1.00
+@ukn_cluster_missile_systemcraft_9_accuracy = 1.00
+@ukn_cluster_missile_systemcraft_10_accuracy = 1.00
+@ukn_cluster_missile_systemcraft_planck_accuracy = 1.00
+
+
+
+###########################
+### SHATTERBOLT CANNONS ###
+###########################
+
+@ukn_shatterbolt_cannon_systemcraft_7_hull_damage_mult = 1.10
+@ukn_shatterbolt_cannon_systemcraft_8_hull_damage_mult = 1.10
+@ukn_shatterbolt_cannon_systemcraft_9_hull_damage_mult = 1.25
+@ukn_shatterbolt_cannon_systemcraft_10_hull_damage_mult = 1.25
+@ukn_shatterbolt_cannon_systemcraft_planck_hull_damage_mult = 1.10
+
+@ukn_shatterbolt_cannon_systemcraft_7_armor_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_systemcraft_8_armor_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_systemcraft_9_armor_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_systemcraft_10_armor_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_systemcraft_planck_armor_penetration_mult = 0.00
+
+@ukn_shatterbolt_cannon_systemcraft_7_shield_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_systemcraft_8_shield_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_systemcraft_9_shield_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_systemcraft_10_shield_penetration_mult = 0.00
+@ukn_shatterbolt_cannon_systemcraft_planck_shield_penetration_mult = 0.00
+
+@ukn_shatterbolt_cannon_systemcraft_7_armor_damage_mult = 0.85
+@ukn_shatterbolt_cannon_systemcraft_8_armor_damage_mult = 0.85
+@ukn_shatterbolt_cannon_systemcraft_9_armor_damage_mult = 0.95
+@ukn_shatterbolt_cannon_systemcraft_10_armor_damage_mult = 0.95
+@ukn_shatterbolt_cannon_systemcraft_planck_armor_damage_mult = 0.85
+
+@ukn_shatterbolt_cannon_systemcraft_7_shield_damage_mult = 1.65
+@ukn_shatterbolt_cannon_systemcraft_8_shield_damage_mult = 1.65
+@ukn_shatterbolt_cannon_systemcraft_9_shield_damage_mult = 1.90
+@ukn_shatterbolt_cannon_systemcraft_10_shield_damage_mult = 1.90
+@ukn_shatterbolt_cannon_systemcraft_planck_shield_damage_mult = 1.65
+#---
+
+@ukn_shatterbolt_cannon_systemcraft_7_tracking = 0.32
+@ukn_shatterbolt_cannon_systemcraft_8_tracking = 0.32
+@ukn_shatterbolt_cannon_systemcraft_9_tracking = 0.35
+@ukn_shatterbolt_cannon_systemcraft_10_tracking = 0.35
+@ukn_shatterbolt_cannon_systemcraft_planck_tracking = 0.32
+#---
+
+@ukn_shatterbolt_cannon_systemcraft_7_firing_arc = 180.0
+@ukn_shatterbolt_cannon_systemcraft_8_firing_arc = 180.0
+@ukn_shatterbolt_cannon_systemcraft_9_firing_arc = 180.0
+@ukn_shatterbolt_cannon_systemcraft_10_firing_arc = 180.0
+@ukn_shatterbolt_cannon_systemcraft_planck_firing_arc = 180.0
+
+@ukn_shatterbolt_cannon_systemcraft_7_min_range = 5
+@ukn_shatterbolt_cannon_systemcraft_8_min_range = 5
+@ukn_shatterbolt_cannon_systemcraft_9_min_range = 5
+@ukn_shatterbolt_cannon_systemcraft_10_min_range = 5
+@ukn_shatterbolt_cannon_systemcraft_planck_min_range = 5
+
+
+# COLOSSAL (Only Slot) #---------------------------
+
+@ukn_shatterbolt_cannon_systemcraft_7_power = -566728
+@ukn_shatterbolt_cannon_systemcraft_8_power = -821756
+@ukn_shatterbolt_cannon_systemcraft_9_power = -1787319
+@ukn_shatterbolt_cannon_systemcraft_10_power = -2770345
+@ukn_shatterbolt_cannon_systemcraft_planck_power = -1191546
+#---
+
+@ukn_shatterbolt_cannon_systemcraft_7_dmg_min = 1951518
+@ukn_shatterbolt_cannon_systemcraft_8_dmg_min = 2829701
+@ukn_shatterbolt_cannon_systemcraft_9_dmg_min = 6154600
+@ukn_shatterbolt_cannon_systemcraft_10_dmg_min = 9539631
+@ukn_shatterbolt_cannon_systemcraft_planck_dmg_min = 4103067
+
+@ukn_shatterbolt_cannon_systemcraft_7_dmg_max = 4878343
+@ukn_shatterbolt_cannon_systemcraft_8_dmg_max = 7073597
+@ukn_shatterbolt_cannon_systemcraft_9_dmg_max = 15385073
+@ukn_shatterbolt_cannon_systemcraft_10_dmg_max = 23846863
+@ukn_shatterbolt_cannon_systemcraft_planck_dmg_max = 10256715
+#---
+
+@ukn_shatterbolt_cannon_systemcraft_7_windup_min = 10
+@ukn_shatterbolt_cannon_systemcraft_8_windup_min = 10
+@ukn_shatterbolt_cannon_systemcraft_9_windup_min = 10
+@ukn_shatterbolt_cannon_systemcraft_10_windup_min = 10
+@ukn_shatterbolt_cannon_systemcraft_planck_windup_min = 10
+
+@ukn_shatterbolt_cannon_systemcraft_7_windup_max = 25
+@ukn_shatterbolt_cannon_systemcraft_8_windup_max = 25
+@ukn_shatterbolt_cannon_systemcraft_9_windup_max = 25
+@ukn_shatterbolt_cannon_systemcraft_10_windup_max = 25
+@ukn_shatterbolt_cannon_systemcraft_planck_windup_max = 25
+#---
+
+@ukn_shatterbolt_cannon_systemcraft_7_total_fire_time = 50
+@ukn_shatterbolt_cannon_systemcraft_8_total_fire_time = 50
+@ukn_shatterbolt_cannon_systemcraft_9_total_fire_time = 50
+@ukn_shatterbolt_cannon_systemcraft_10_total_fire_time = 50
+@ukn_shatterbolt_cannon_systemcraft_planck_total_fire_time = 50
+#---
+
+@ukn_shatterbolt_cannon_systemcraft_7_range = 80
+@ukn_shatterbolt_cannon_systemcraft_8_range = 80
+@ukn_shatterbolt_cannon_systemcraft_9_range = 95
+@ukn_shatterbolt_cannon_systemcraft_10_range = 95
+@ukn_shatterbolt_cannon_systemcraft_planck_range = 80
+#---
+
+@ukn_shatterbolt_cannon_systemcraft_7_accuracy = 0.85
+@ukn_shatterbolt_cannon_systemcraft_8_accuracy = 0.85
+@ukn_shatterbolt_cannon_systemcraft_9_accuracy = 0.85
+@ukn_shatterbolt_cannon_systemcraft_10_accuracy = 0.85

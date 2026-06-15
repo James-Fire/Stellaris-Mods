@@ -1,0 +1,331 @@
+#has_ethic = ethic_gestalt_consciousness
+
+
+primsub_subject_interaction_policy = {
+
+	potential = {
+		#has_stargate = yes
+		has_met_primitives = yes
+	}
+	
+	option = {
+		name = "Protection"
+		
+		policy_flags = {
+			primsub_subject_protection
+		}
+		
+		modifier = {
+		
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = primsub_subject_protection
+			}
+		}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+			}
+			modifier = {
+				factor = -100
+				has_ai_personality = xenophobic_isolationists
+			}
+			modifier = {
+				factor = 5
+				has_ethic = ethic_pacifist
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_fanatic_pacifist
+			}
+			modifier = {
+				factor = -10
+				has_ethic = ethic_xenophobe
+			}
+			modifier = {
+				factor = -20
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	option = {
+		name = "Worship"
+		
+		policy_flags = {
+			primsub_subject_worship
+		}
+		
+		modifier = {
+		
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = primsub_subject_worship
+			}
+		}
+		
+		valid = {
+			OR = {
+				is_spiritualist = yes
+				#Psi Ascension
+				#Ruler is Chosen One
+			}
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = -100
+				has_ai_personality = xenophobic_isolationists
+			}
+			modifier = {
+				factor = 50
+				has_ethic = ethic_spiritualist
+			}
+			modifier = {
+				factor = 100
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			modifier = {
+				factor = 20
+				has_ethic = ethic_xenophobe
+			}
+			modifier = {
+				factor = 40
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	option = {
+		name = "Tribute"
+		policy_flags = {
+			primsub_subject_tribute
+		}
+		
+		modifier = {
+		
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = primsub_subject_tribute
+			}
+		}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+			}
+			modifier = {
+				factor = 200
+				has_ai_personality = fanatic_befrienders
+			}
+			modifier = {
+				factor = -200
+				has_ai_personality = xenophobic_isolationists
+			}
+			modifier = {
+				factor = -20
+				has_ethic = ethic_pacifist
+			}
+			modifier = {
+				factor = -40
+				has_ethic = ethic_fanatic_pacifist
+			}
+			modifier = {
+				factor = -20
+				has_ethic = ethic_xenophobe
+			}
+			modifier = {
+				factor = -40
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	option = {
+		name = "Conscription"
+		policy_flags = {
+			primsub_subject_conscript
+		}
+		
+		modifier = {
+		
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = primsub_subject_conscript
+			}
+		}
+		
+		valid = {
+			always = yes
+		}
+	}
+}
+primsub_subject_advancement_policy = {
+
+	potential = {
+		#has_stargate = yes
+		has_met_primitives = yes
+	}
+	
+	option = {
+		name = "Free"
+		
+		policy_flags = {
+			primsub_subject_advance_free
+		}
+		
+		modifier = {
+		
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = primsub_subject_advance_free
+			}
+		}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+			}
+			modifier = {
+				factor = -100
+				has_ai_personality = xenophobic_isolationists
+			}
+			modifier = {
+				factor = 5
+				has_ethic = ethic_pacifist
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_fanatic_pacifist
+			}
+			modifier = {
+				factor = -10
+				has_ethic = ethic_xenophobe
+			}
+			modifier = {
+				factor = -20
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	option = {
+		name = "Limited"
+		
+		policy_flags = {
+			primsub_subject_advance_limited
+		}
+		
+		modifier = {
+		
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = primsub_subject_advance_limited
+			}
+		}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = -10
+			}
+			
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			modifier = {
+				factor = -100
+				has_ai_personality = xenophobic_isolationists
+			}
+			modifier = {
+				factor = 50
+				has_ethic = ethic_spiritualist
+			}
+			modifier = {
+				factor = 100
+				has_ethic = ethic_fanatic_spiritualist
+			}
+			modifier = {
+				factor = 20
+				has_ethic = ethic_xenophobe
+			}
+			modifier = {
+				factor = 40
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+	option = {
+		name = "Prohibited"
+		policy_flags = {
+			primsub_subject_advance_prohibited
+		}
+		
+		modifier = {
+		
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = primsub_subject_advance_prohibited
+			}
+		}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+			}
+			modifier = {
+				factor = 200
+				has_ai_personality = fanatic_befrienders
+			}
+			modifier = {
+				factor = -200
+				has_ai_personality = xenophobic_isolationists
+			}
+			modifier = {
+				factor = -20
+				has_ethic = ethic_pacifist
+			}
+			modifier = {
+				factor = -40
+				has_ethic = ethic_fanatic_pacifist
+			}
+			modifier = {
+				factor = -20
+				has_ethic = ethic_xenophobe
+			}
+			modifier = {
+				factor = -40
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+}

@@ -1,0 +1,106 @@
+namespace = ukn_automachines_production_events
+
+#[ALL] Remove Modifier If Doesn't Have Approriate Tech
+country_event = {
+	id = ukn_automachines_production_events.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					is_regular_empire = yes
+					is_gestalt = yes
+				}
+				NOT = { has_technology = tech_ship_armor_3 }
+			}
+			every_owned_planet = {
+				limit = {
+					is_colony = yes
+				}
+				if = {
+					limit = {
+						is_colony = yes
+						OR = {
+							has_modifier = mod_ukn_meta_materials_based_automachine_production
+							has_modifier = mod_ukn_femtomatter_based_automachine_production
+							has_modifier = mod_ukn_condensics_based_automachine_production
+						}
+					}
+					remove_modifier = mod_ukn_meta_materials_based_automachine_production
+					remove_modifier = mod_ukn_femtomatter_based_automachine_production
+					remove_modifier = mod_ukn_condensics_based_automachine_production
+				}
+			}
+		}
+	}
+}
+
+#[QUASI-MATTER+] Remove Modifier If Doesn't Have Approriate Tech
+country_event = {
+	id = ukn_automachines_production_events.12
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					is_regular_empire = yes
+					is_gestalt = yes
+				}
+				NOT = { has_technology = tech_ship_armor_4 }
+			}
+			every_owned_planet = {
+				limit = {
+					is_colony = yes
+				}
+				if = {
+					limit = {
+						is_colony = yes
+						OR = {
+							has_modifier = mod_ukn_femtomatter_based_automachine_production
+							has_modifier = mod_ukn_condensics_based_automachine_production
+						}
+					}
+					remove_modifier = mod_ukn_femtomatter_based_automachine_production
+					remove_modifier = mod_ukn_condensics_based_automachine_production
+				}
+			}
+		}
+	}
+}
+
+#[OSCILLYONS] Remove Modifier If Doesn't Have Approriate Tech
+country_event = {
+	id = ukn_automachines_production_events.13
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					is_regular_empire = yes
+					is_gestalt = yes
+				}
+				NOT = { has_technology = tech_ship_armor_5 }
+			}
+			every_owned_planet = {
+				limit = {
+					is_colony = yes
+				}
+				if = {
+					limit = {
+						is_colony = yes
+						OR = {
+							has_modifier = mod_ukn_condensics_based_automachine_production
+						}
+					}
+					remove_modifier = mod_ukn_condensics_based_automachine_production
+				}
+			}
+		}
+	}
+}

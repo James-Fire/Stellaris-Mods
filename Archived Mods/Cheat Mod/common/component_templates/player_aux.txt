@@ -1,0 +1,140 @@
+utility_component_template = {
+	can_recharge_shield = yes
+	key = "PLAYER_SUPER_AUX_1"
+	size = aux
+	icon = "GFX_ship_part_player_super_aux_1"
+	icon_frame = 1
+	power = 50000000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 100
+		}
+	}
+
+	prerequisites = { "tech_all_ascension" }
+	component_set = "PLAYER_SUPER_AUX_1"
+
+	modifier = {
+		ship_shield_mult = 1.0
+		ship_shield_add = 500
+		ship_armor_mult = 1.0
+		ship_armor_add = 500
+		ship_hull_mult = 1.0
+		ship_hull_add = 500
+		ship_shield_regen_add_perc = 0.01
+		ship_armor_regen_add_perc = 0.01
+		ship_hull_regen_add_perc = 0.01
+		ship_tracking_add = 30
+		ship_accuracy_add = 30
+		ship_evasion_add = 30
+		ship_fire_rate_mult = 1.0
+		weapon_type_strike_craft_weapon_fire_rate_mult = 1.50
+		ship_weapon_damage = 1.0
+		weapon_type_strike_craft_weapon_damage_mult = 1.50
+		ship_upkeep_mult = -0.50
+		ship_armor_hardening_add = 20.00
+		ship_shield_hardening_add = 20.00
+		weapon_type_explosive_speed_mult = 3.00
+		ship_disengage_opportunities_add = 300
+		ship_cloaking_strength_add = 10
+		ship_cloaking_detection_add = 10
+
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+		}
+	}
+}
+
+utility_component_template = {
+	can_recharge_shield = yes
+	key = "PLAYER_SUPER_AUX_2"
+	size = aux
+	icon = "GFX_ship_part_player_super_aux_1"
+	icon_frame = 1
+	power = 10000000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 100
+		}
+	}
+
+	prerequisites = { "tech_all_ascension" }
+	component_set = "PLAYER_SUPER_AUX_2"
+
+	modifier = {
+		ship_shield_mult = 0.05
+		ship_armor_mult = 0.05
+		ship_hull_mult = 0.05
+		ship_shield_regen_add_perc = 1.0
+		ship_armor_regen_add_perc = 1.0
+		ship_hull_regen_add_perc = 1.0
+		ship_tracking_add = 3000
+		ship_accuracy_add = 3000
+		ship_tracking_mult = 300
+		ship_accuracy_mult = 300
+		ship_evasion_add = 3000
+		ship_evasion_mult = 30
+		ship_fire_rate_mult = 1.00
+		weapon_type_strike_craft_weapon_fire_rate_mult = 1.50
+		ship_weapon_damage = 1.00
+		weapon_type_strike_craft_weapon_damage_mult = 1.50
+		ship_upkeep_mult = -0.50
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+		}
+	}
+}
+utility_component_template = {
+	can_recharge_shield = yes
+	key = "PLAYER_SUPER_AUX_3"
+	size = aux
+	icon = "GFX_ship_part_player_super_aux_1"
+	icon_frame = 1
+	power = 10000000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 100
+		}
+	}
+
+	prerequisites = { "tech_all_ascension" }
+	component_set = "PLAYER_SUPER_AUX_3"
+
+	modifier = {
+		ship_shield_mult = 0.05
+		ship_armor_mult = 0.05
+		ship_hull_mult = 0.05
+		ship_shield_regen_add_perc = 0.05
+		ship_armor_regen_add_perc = 0.05
+		ship_hull_regen_add_perc = 0.05
+		ship_tracking_add = 3000
+		ship_accuracy_add = 3000
+		ship_tracking_mult = 300
+		ship_accuracy_mult = 300
+		ship_evasion_add = 3000
+		ship_evasion_mult = 30
+		ship_fire_rate_mult = 1.00
+		weapon_type_strike_craft_weapon_fire_rate_mult = 1.50
+		ship_weapon_damage = 1.00
+		weapon_type_strike_craft_weapon_damage_mult = 1.50
+		ship_upkeep_mult = -0.50
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+		}
+	}
+}

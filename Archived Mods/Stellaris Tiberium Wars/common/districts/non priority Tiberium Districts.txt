@@ -1,0 +1,558 @@
+district_green_harvester_as = {
+	base_buildtime = 120
+	
+	min_for_deposits_on_planet = 0
+	max_for_deposits_on_planet = 999
+	
+	show_on_uncolonized = {
+		NOT = {
+			is_planet_class = pc_habitable_tiberium
+		}
+		OR = {
+			has_deposit = d_tiberium_asteroid
+			has_planet_flag = tiberium_asteroid_collision
+		}
+	}
+	
+	potential = {
+		NOT = {
+			is_planet_class = pc_habitable_tiberium
+		}
+		OR = {
+			has_deposit = d_tiberium_asteroid
+			has_planet_flag = tiberium_asteroid_collision
+		}
+	}
+	 
+	allow = {
+
+	}
+	
+	conversion_ratio = 1	
+	
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 300
+		}
+		upkeep = {
+			energy = 2
+		}
+	}	
+	
+	planet_modifier = {
+		planet_housing_add = 2
+	}
+	
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = underharvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_add = 1
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = sustainable_harvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = overharvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = underharvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_gestalt_add = 1
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = sustainable_harvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_gestalt_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = overharvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_gestalt_add = 3
+		}
+	}
+	
+	prerequisites = {
+		tech_tiberium_green
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = {
+			factor = 0
+			free_jobs > 0 
+		}
+	}
+}
+
+district_blue_harvester_as = {
+	base_buildtime = 120
+	
+	min_for_deposits_on_planet = 0
+	max_for_deposits_on_planet = 999
+	
+	show_on_uncolonized = {
+		NOT = {
+			is_planet_class = pc_habitable_tiberium
+		}
+		OR = {
+			has_deposit = d_tiberium_asteroid
+			has_planet_flag = tiberium_asteroid_collision
+			has_planet_flag = habitat_tiberium_access
+		}
+	}
+	
+	potential = {
+		NOT = {
+			is_planet_class = pc_habitable_tiberium
+		}
+		OR = {
+			has_deposit = d_tiberium_asteroid
+			has_planet_flag = tiberium_asteroid_collision
+		}
+	}
+	
+	allow = {
+
+	}
+	
+	conversion_ratio = 1	
+	
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 300
+		}
+		upkeep = {
+			energy = 2
+		}
+	}	
+	
+	planet_modifier = {
+		planet_housing_add = 2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = underharvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_blue_tiberium_harvester_add = 1
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = sustainable_harvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_blue_tiberium_harvester_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = overharvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_blue_tiberium_harvester_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = underharvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_blue_tiberium_harvester_gestalt_add = 1
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = sustainable_harvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_blue_tiberium_harvester_gestalt_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = overharvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_blue_tiberium_harvester_gestalt_add = 3
+		}
+	}
+	
+	prerequisites = {
+		tech_tiberium_green
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = {
+			factor = 0
+			free_jobs > 0 
+		}
+	}
+}
+
+district_green_harvester_habitat = {
+	base_buildtime = 120
+	
+	min_for_deposits_on_planet = 0
+	max_for_deposits_on_planet = 999
+	
+	show_on_uncolonized = {
+		NOT = {
+			is_planet_class = pc_habitable_tiberium
+		}
+		OR = {
+			has_planet_flag = habitat_tiberium_access
+		}
+	}
+	
+	potential = {
+		NOT = {
+			is_planet_class = pc_habitable_tiberium
+		}
+		OR = {
+			has_planet_flag = habitat_tiberium_access
+		}
+	}
+	 
+	allow = {
+
+	}
+	
+	conversion_ratio = 1	
+	
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 300
+		}
+		upkeep = {
+			energy = 2
+		}
+	}	
+	
+	planet_modifier = {
+		planet_housing_add = 2
+	}
+	
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = underharvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_add = 1
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = sustainable_harvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = overharvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = underharvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_gestalt_add = 1
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = sustainable_harvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_gestalt_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = overharvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_gestalt_add = 3
+		}
+	}
+	
+	prerequisites = {
+		tech_tiberium_green
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = {
+			factor = 0
+			free_jobs > 0 
+		}
+	}
+}
+
+district_blue_harvester_habitat = {
+	base_buildtime = 120
+	
+	min_for_deposits_on_planet = 0
+	max_for_deposits_on_planet = 999
+	
+	show_on_uncolonized = {
+		NOT = {
+			is_planet_class = pc_habitable_tiberium
+		}
+		OR = {
+			has_planet_flag = habitat_tiberium_access
+		}
+	}
+	
+	potential = {
+		NOT = {
+			is_planet_class = pc_habitable_tiberium
+		}
+		OR = {
+			has_planet_flag = habitat_tiberium_access
+		}
+	}
+	
+	allow = {
+
+	}
+	
+	conversion_ratio = 1	
+	
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 300
+		}
+		upkeep = {
+			energy = 2
+		}
+	}	
+	
+	planet_modifier = {
+		planet_housing_add = 2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = underharvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_blue_tiberium_harvester_add = 1
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = sustainable_harvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_blue_tiberium_harvester_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = overharvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_blue_tiberium_harvester_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = underharvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_blue_tiberium_harvester_gestalt_add = 1
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = sustainable_harvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_blue_tiberium_harvester_gestalt_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = overharvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_blue_tiberium_harvester_gestalt_add = 3
+		}
+	}
+	
+	prerequisites = {
+		tech_tiberium_green
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = {
+			factor = 0
+			free_jobs > 0 
+		}
+	}
+}

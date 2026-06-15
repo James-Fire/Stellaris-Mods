@@ -1,0 +1,272 @@
+tiberium_harvest = {
+
+	potential = {
+		has_technology = tech_tiberium_green
+	}
+	
+	option = {
+		name = "Underharvest"
+		policy_flags = {
+			underharvest_tiberium
+		}
+		
+		modifier = {
+			station_gatherers_sr_tiberium_green_produces_mult = -0.5
+			station_gatherers_sr_tiberium_blue_produces_mult = -0.5
+		}
+		
+		valid = {
+			OR = {
+				has_policy_flag = "sustainable_harvest_tiberium"
+				has_policy_flag = "underharvest_tiberium"
+			}
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = "sustainable_harvest"
+		
+		policy_flags = {
+			sustainable_harvest_tiberium
+		}
+		modifier = {
+		
+		}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+			}
+		}
+	}
+	option = {
+		name = "Overharvest"
+		
+		policy_flags = {
+			overharvest_tiberium
+		}
+		modifier = {
+			station_gatherers_sr_tiberium_green_produces_mult = 0.5
+			station_gatherers_sr_tiberium_blue_produces_mult = 0.5		
+		}
+		
+		valid = {
+			OR = {
+				has_policy_flag = "sustainable_harvest_tiberium"
+				has_policy_flag = "overharvest_tiberium"
+			}
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+}
+
+tiberium_use = {
+
+	potential = {
+		has_technology = tech_tiberium_green
+	}
+	
+	option = {
+		name = "Augmentation"
+		policy_flags = {
+			tiberium_augmentation
+		}
+		
+		modifier = {
+		
+		}
+		
+		valid = {
+			OR = {
+				has_policy_flag = "tiberium_resource"
+				has_policy_flag = "tiberium_augmentation"
+			}
+		}
+		
+		
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = "Resource"
+		
+		policy_flags = {
+			tiberium_resource
+		}
+		modifier = {
+		
+		}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+			}
+		}
+	}
+	option = {
+		name = "Banned"
+		
+		policy_flags = {
+			tiberium_banned
+		}
+		modifier = {
+		
+		}
+		
+		valid = {
+			OR = {
+				has_policy_flag = "tiberium_resource"
+				has_policy_flag = "tiberium_banned"
+			}
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+}
+
+tiberium_safety = {
+
+	potential = {
+		has_technology = tech_tiberium_green
+	}
+	
+	option = {
+		name = "Safe"
+		policy_flags = {
+			tiberium_safe
+		}
+		
+		modifier = {
+		
+		}
+		
+		valid = {
+			OR = {
+				has_policy_flag = "tiberium_priority_safe"
+				has_policy_flag = "tiberium_safe"
+			}
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = "High_Safety"
+		
+		policy_flags = {
+			tiberium_priority_safe
+		}
+		modifier = {
+		
+		}
+		
+		valid = {
+			OR ={
+				has_policy_flag = "tiberium_safe"
+				has_policy_flag = "tiberium_balanced_safe"
+				has_policy_flag = "tiberium_priority_safe"
+			}
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+			}
+		}
+	}
+	option = {
+		name = "Balance_safety_and_production"
+		
+		policy_flags = {
+			tiberium_balanced_safe
+		}
+		modifier = {
+		
+		}
+		
+		valid = {	
+			always = yes
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = "Minimal_Safety"
+		
+		policy_flags = {
+			tiberium_minimal_safe
+		}
+		modifier = {
+		
+		}
+		
+		valid = {	
+			OR = {
+				has_policy_flag = "tiberium_balanced_safe"
+				has_policy_flag = "tiberium_no_safe"
+				has_policy_flag = "tiberium_minimal_safe"
+			}
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = "No_Safety"
+		
+		policy_flags = {
+			tiberium_no_safe
+		}
+		modifier = {
+		
+		}
+		
+		valid = {
+			OR = {
+				has_policy_flag = "tiberium_minimal_safe"
+				has_policy_flag = "tiberium_no_safe"
+			}
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 0
+			}
+		}
+	}
+}

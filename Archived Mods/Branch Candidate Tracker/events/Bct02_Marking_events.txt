@@ -1,0 +1,3953 @@
+namespace = BctEvent
+
+######################################################
+######################################################
+#####                                            #####
+#####    Branch Candidate Tracker                #####
+#####                                            #####
+#####    Events to Control Point of Interests    #####
+#####                                            #####
+######################################################
+######################################################
+
+##############################################
+###  Initialization of Point of Interests  ###
+##############################################
+
+country_event = {
+    id = BctEvent.1102
+    hide_window = yes
+    is_triggered_only = yes
+    
+    immediate = {
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <    0.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0001
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <    1.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0002
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <    2.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0003
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <    3.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0004
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <    4.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0005
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <    5.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0006
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <    6.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0007
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <    7.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0008
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <    8.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0009
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <    9.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0010
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   10.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0011
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   11.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0012
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   12.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0013
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   13.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0014
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   14.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0015
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   15.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0016
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   16.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0017
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   17.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0018
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   18.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0019
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   19.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0020
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   20.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0021
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   21.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0022
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   22.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0023
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   23.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0024
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   24.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0025
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   25.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0026
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   26.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0027
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   27.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0028
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   28.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0029
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   29.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0030
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   30.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0031
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   31.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0032
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   32.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0033
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   33.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0034
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   34.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0035
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   35.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0036
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   36.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0037
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   37.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0038
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   38.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0039
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   39.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0040
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   40.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0041
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   41.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0042
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   42.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0043
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   43.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0044
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   44.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0045
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   45.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0046
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   46.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0047
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   47.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0048
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   48.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0049
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   49.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0050
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   50.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0051
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   51.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0052
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   52.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0053
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   53.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0054
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   54.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0055
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   55.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0056
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   56.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0057
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   57.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0058
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   58.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0059
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   59.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0060
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   60.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0061
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   61.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0062
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   62.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0063
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   63.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0064
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   64.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0065
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   65.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0066
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   66.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0067
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   67.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0068
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   68.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0069
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   69.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0070
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   70.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0071
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   71.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0072
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   72.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0073
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   73.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0074
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   74.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0075
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   75.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0076
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   76.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0077
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   77.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0078
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   78.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0079
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   79.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0080
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   80.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0081
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   81.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0082
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   82.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0083
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   83.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0084
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   84.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0085
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   85.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0086
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   86.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0087
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   87.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0088
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   88.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0089
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   89.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0090
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   90.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0091
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   91.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0092
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   92.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0093
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   93.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0094
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   94.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0095
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   95.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0096
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   96.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0097
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   97.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0098
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   98.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0099
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <   99.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0100
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  100.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0101
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  101.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0102
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  102.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0103
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  103.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0104
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  104.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0105
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  105.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0106
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  106.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0107
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  107.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0108
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  108.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0109
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  109.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0110
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  110.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0111
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  111.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0112
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  112.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0113
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  113.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0114
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  114.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0115
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  115.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0116
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  116.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0117
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  117.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0118
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  118.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0119
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  119.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0120
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  120.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0121
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  121.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0122
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  122.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0123
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  123.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0124
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  124.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0125
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  125.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0126
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  126.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0127
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  127.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0128
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  128.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0129
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  129.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0130
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  130.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0131
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  131.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0132
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  132.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0133
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  133.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0134
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  134.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0135
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  135.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0136
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  136.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0137
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  137.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0138
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  138.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0139
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  139.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0140
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  140.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0141
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  141.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0142
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  142.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0143
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  143.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0144
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  144.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0145
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  145.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0146
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  146.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0147
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  147.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0148
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  148.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0149
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  149.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0150
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  150.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0151
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  151.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0152
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  152.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0153
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  153.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0154
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  154.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0155
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  155.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0156
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  156.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0157
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  157.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0158
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  158.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0159
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  159.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0160
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  160.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0161
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  161.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0162
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  162.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0163
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  163.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0164
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  164.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0165
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  165.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0166
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  166.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0167
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  167.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0168
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  168.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0169
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  169.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0170
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  170.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0171
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  171.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0172
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  172.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0173
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  173.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0174
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  174.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0175
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  175.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0176
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  176.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0177
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  177.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0178
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  178.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0179
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  179.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0180
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  180.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0181
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  181.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0182
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  182.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0183
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  183.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0184
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  184.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0185
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  185.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0186
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  186.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0187
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  187.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0188
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  188.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0189
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  189.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0190
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  190.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0191
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  191.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0192
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  192.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0193
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  193.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0194
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  194.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0195
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  195.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0196
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  196.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0197
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  197.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0198
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  198.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0199
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  199.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0200
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  200.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0201
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  201.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0202
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  202.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0203
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  203.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0204
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  204.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0205
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  205.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0206
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  206.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0207
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  207.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0208
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  208.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0209
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  209.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0210
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  210.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0211
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  211.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0212
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  212.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0213
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  213.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0214
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  214.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0215
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  215.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0216
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  216.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0217
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  217.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0218
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  218.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0219
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  219.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0220
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  220.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0221
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  221.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0222
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  222.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0223
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  223.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0224
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  224.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0225
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  225.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0226
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  226.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0227
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  227.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0228
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  228.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0229
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  229.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0230
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  230.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0231
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  231.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0232
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  232.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0233
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  233.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0234
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  234.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0235
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  235.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0236
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  236.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0237
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  237.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0238
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  238.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0239
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  239.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0240
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  240.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0241
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  241.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0242
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  242.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0243
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  243.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0244
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  244.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0245
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  245.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0246
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  246.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0247
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  247.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0248
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  248.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0249
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  249.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0250
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  250.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0251
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  251.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0252
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  252.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0253
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  253.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0254
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  254.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0255
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  255.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0256
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  256.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0257
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  257.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0258
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  258.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0259
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  259.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0260
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  260.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0261
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  261.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0262
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  262.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0263
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  263.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0264
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  264.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0265
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  265.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0266
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  266.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0267
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  267.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0268
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  268.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0269
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  269.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0270
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  270.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0271
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  271.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0272
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  272.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0273
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  273.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0274
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  274.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0275
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  275.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0276
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  276.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0277
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  277.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0278
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  278.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0279
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  279.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0280
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  280.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0281
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  281.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0282
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  282.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0283
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  283.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0284
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  284.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0285
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  285.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0286
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  286.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0287
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  287.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0288
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  288.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0289
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  289.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0290
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  290.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0291
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  291.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0292
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  292.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0293
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  293.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0294
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  294.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0295
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  295.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0296
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  296.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0297
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  297.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0298
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  298.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0299
+        if = {
+            limit = { check_variable = { which = BctVarCountBranchCandidate value <  299.5 } }
+            break = yes
+        }
+        remove_point_of_interest = BranchCandidateTrackerStandardPoi_0300
+    }
+}
+ 
+ 
+ 
+################################
+###  Set Point of Insterest  ###
+################################
+#
+# scopes: from MUST be branch builder country for BranchCandidateTrackerStandardPoi.desc
+#
+ 
+planet_event = {
+    id = BctEvent.1103
+    hide_window = yes
+    is_triggered_only = yes
+    
+    immediate = {
+        from = {
+            if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <    1.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0001
+                    name = BranchCandidateTrackerStandardPoi.name
+                    desc = BranchCandidateTrackerStandardPoi.desc
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <    2.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0002
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <    3.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0003
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <    4.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0004
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <    5.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0005
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <    6.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0006
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <    7.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0007
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <    8.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0008
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <    9.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0009
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   10.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0010
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   11.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0011
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   12.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0012
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   13.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0013
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   14.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0014
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   15.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0015
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   16.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0016
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   17.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0017
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   18.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0018
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   19.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0019
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   20.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0020
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   21.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0021
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   22.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0022
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   23.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0023
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   24.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0024
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   25.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0025
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   26.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0026
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   27.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0027
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   28.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0028
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   29.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0029
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   30.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0030
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   31.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0031
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   32.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0032
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   33.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0033
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   34.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0034
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   35.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0035
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   36.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0036
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   37.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0037
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   38.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0038
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   39.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0039
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   40.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0040
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   41.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0041
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   42.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0042
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   43.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0043
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   44.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0044
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   45.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0045
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   46.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0046
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   47.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0047
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   48.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0048
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   49.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0049
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   50.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0050
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   51.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0051
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   52.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0052
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   53.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0053
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   54.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0054
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   55.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0055
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   56.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0056
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   57.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0057
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   58.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0058
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   59.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0059
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   60.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0060
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   61.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0061
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   62.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0062
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   63.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0063
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   64.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0064
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   65.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0065
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   66.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0066
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   67.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0067
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   68.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0068
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   69.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0069
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   70.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0070
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   71.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0071
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   72.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0072
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   73.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0073
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   74.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0074
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   75.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0075
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   76.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0076
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   77.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0077
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   78.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0078
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   79.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0079
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   80.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0080
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   81.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0081
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   82.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0082
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   83.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0083
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   84.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0084
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   85.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0085
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   86.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0086
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   87.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0087
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   88.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0088
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   89.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0089
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   90.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0090
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   91.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0091
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   92.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0092
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   93.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0093
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   94.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0094
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   95.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0095
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   96.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0096
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   97.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0097
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   98.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0098
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <   99.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0099
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  100.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0100
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  101.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0101
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  102.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0102
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  103.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0103
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  104.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0104
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  105.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0105
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  106.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0106
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  107.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0107
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  108.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0108
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  109.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0109
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  110.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0110
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  111.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0111
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  112.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0112
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  113.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0113
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  114.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0114
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  115.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0115
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  116.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0116
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  117.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0117
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  118.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0118
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  119.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0119
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  120.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0120
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  121.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0121
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  122.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0122
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  123.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0123
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  124.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0124
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  125.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0125
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  126.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0126
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  127.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0127
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  128.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0128
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  129.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0129
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  130.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0130
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  131.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0131
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  132.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0132
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  133.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0133
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  134.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0134
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  135.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0135
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  136.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0136
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  137.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0137
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  138.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0138
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  139.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0139
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  140.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0140
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  141.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0141
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  142.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0142
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  143.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0143
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  144.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0144
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  145.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0145
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  146.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0146
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  147.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0147
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  148.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0148
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  149.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0149
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  150.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0150
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  151.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0151
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  152.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0152
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  153.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0153
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  154.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0154
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  155.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0155
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  156.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0156
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  157.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0157
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  158.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0158
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  159.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0159
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  160.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0160
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  161.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0161
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  162.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0162
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  163.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0163
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  164.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0164
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  165.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0165
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  166.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0166
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  167.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0167
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  168.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0168
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  169.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0169
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  170.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0170
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  171.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0171
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  172.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0172
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  173.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0173
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  174.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0174
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  175.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0175
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  176.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0176
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  177.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0177
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  178.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0178
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  179.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0179
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  180.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0180
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  181.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0181
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  182.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0182
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  183.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0183
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  184.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0184
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  185.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0185
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  186.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0186
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  187.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0187
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  188.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0188
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  189.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0189
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  190.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0190
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  191.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0191
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  192.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0192
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  193.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0193
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  194.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0194
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  195.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0195
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  196.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0196
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  197.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0197
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  198.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0198
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  199.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0199
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  200.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0200
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  201.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0201
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  202.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0202
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  203.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0203
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  204.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0204
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  205.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0205
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  206.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0206
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  207.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0207
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  208.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0208
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  209.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0209
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  210.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0210
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  211.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0211
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  212.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0212
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  213.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0213
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  214.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0214
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  215.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0215
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  216.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0216
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  217.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0217
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  218.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0218
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  219.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0219
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  220.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0220
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  221.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0221
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  222.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0222
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  223.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0223
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  224.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0224
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  225.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0225
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  226.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0226
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  227.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0227
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  228.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0228
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  229.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0229
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  230.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0230
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  231.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0231
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  232.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0232
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  233.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0233
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  234.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0234
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  235.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0235
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  236.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0236
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  237.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0237
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  238.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0238
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  239.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0239
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  240.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0240
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  241.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0241
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  242.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0242
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  243.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0243
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  244.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0244
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  245.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0245
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  246.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0246
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  247.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0247
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  248.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0248
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  249.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0249
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  250.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0250
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  251.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0251
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  252.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0252
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  253.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0253
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  254.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0254
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  255.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0255
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  256.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0256
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  257.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0257
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  258.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0258
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  259.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0259
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  260.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0260
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  261.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0261
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  262.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0262
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  263.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0263
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  264.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0264
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  265.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0265
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  266.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0266
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  267.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0267
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  268.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0268
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  269.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0269
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  270.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0270
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  271.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0271
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  272.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0272
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  273.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0273
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  274.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0274
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  275.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0275
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  276.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0276
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  277.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0277
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  278.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0278
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  279.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0279
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  280.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0280
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  281.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0281
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  282.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0282
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  283.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0283
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  284.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0284
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  285.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0285
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  286.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0286
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  287.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0287
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  288.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0288
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  289.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0289
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  290.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0290
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  291.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0291
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  292.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0292
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  293.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0293
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  294.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0294
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  295.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0295
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  296.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0296
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  297.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0297
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  298.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0298
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  299.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0299
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { check_variable = { which = BctVarCountBranchCandidate value <  300.5 } }
+                create_point_of_interest = {
+                    id = BranchCandidateTrackerStandardPoi_0300
+                    event_chain = BranchCandidateTracker_chain
+                    category = BranchCandidateTrackerStandard_cat
+                    location = root
+                }
+            } else_if = {
+                limit = { always = yes }
+                log = "Marker Overflowed"
+            }
+        }
+    }
+}
+
+
+

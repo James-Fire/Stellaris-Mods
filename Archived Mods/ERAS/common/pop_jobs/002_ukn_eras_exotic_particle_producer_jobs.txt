@@ -1,0 +1,1257 @@
+##########[RINGWORLD] EXOTIC PARTICLES/VOLATILE MOTES ##########
+ukn_exotic_particles_producer = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_chemical_plant
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible_precalc = can_fill_specialist_job
+
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_ukn_exotic_particles_producers
+##########
+# NORMAL #
+##########
+#[PRODUCTION] Default Production
+		produces = {
+			trigger = {
+				planet = {
+					NOR = { 
+						has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+						has_modifier = mod_ukn_condensics_based_exotic_particles_production
+						has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+						has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					}
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 5
+		}
+#[PRODUCTION] Femtomatter-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 6.5
+		}
+#[PRODUCTION] Condensics-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_condensics_based_exotic_particles_production
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 7.5
+			energy = 32.5
+		}
+#[PRODUCTION] Quasi-Matter-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 8.5
+			energy = 34.5
+			sr_dark_matter = 0.75
+		}
+#[PRODUCTION] Causaliton-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 16.5
+			energy = 69
+			sr_dark_matter = 1.5
+			ehof_sr_negative_mass = 0.5
+		}
+#[UPKEEP] Default Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					NOR = { 
+						has_modifier = mod_ukn_alloys_based_exotic_particles_production
+						has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+						has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+						has_modifier = mod_ukn_condensics_based_exotic_particles_production
+						has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+						has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					}
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			energy = 10
+			minerals = 20
+			exotic_gases = 2
+			rare_crystals = 1
+		}
+#[UPKEEP] Alloy-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_alloys_based_exotic_particles_production
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			energy = 10
+			alloys = 10
+			exotic_gases = 2
+			rare_crystals = 1
+		}
+#[UPKEEP] Meta-Materials-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			energy = 10
+			ukn_meta_materials = 9
+			exotic_gases = 2
+			rare_crystals = 1
+		}
+#[UPKEEP] Femtomatter-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			ukn_femtomatter = 1.5
+		}
+#[UPKEEP] Condensics-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_condensics_based_exotic_particles_production
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			ukn_condensics = 0.5
+		}
+#[UPKEEP] Quasi-Matter-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			ukn_quasi_matter = 0.3
+		}
+#[UPKEEP] Causaliton-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			ukn_causalitons = 0.2
+		}
+############
+# ARCOLOGY #
+############
+#[PRODUCTION] Default Production
+		produces = {
+			trigger = {
+				planet = {
+					NOR = { 
+						has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+						has_modifier = mod_ukn_condensics_based_exotic_particles_production
+						has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+						has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					}
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 10
+		}
+#[PRODUCTION] Femtomatter-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 13
+		}
+#[PRODUCTION] Condensics-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_condensics_based_exotic_particles_production
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 15
+			energy = 65
+		}
+#[PRODUCTION] Quasi-Matter-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 17
+			energy = 69
+			sr_dark_matter = 1.5
+		}
+#[PRODUCTION] Causaliton-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 33
+			energy = 138
+			sr_dark_matter = 3
+			ehof_sr_negative_mass = 1
+		}
+#[UPKEEP] Default Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					NOR = { 
+						has_modifier = mod_ukn_alloys_based_exotic_particles_production
+						has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+						has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+						has_modifier = mod_ukn_condensics_based_exotic_particles_production
+						has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+						has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					}
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			energy = 20
+			minerals = 40
+			exotic_gases = 4
+			rare_crystals = 2
+		}
+#[UPKEEP] Alloy-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_alloys_based_exotic_particles_production
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			energy = 20
+			alloys = 20
+			exotic_gases = 4
+			rare_crystals = 2
+		}
+#[UPKEEP] Meta-Materials-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			energy = 20
+			ukn_meta_materials = 18
+			exotic_gases = 4
+			rare_crystals = 2
+		}
+#[UPKEEP] Femtomatter-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_femtomatter = 3
+		}
+#[UPKEEP] Condensics-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_condensics_based_exotic_particles_production
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_condensics = 1
+		}
+#[UPKEEP] Quasi-Matter-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_quasi_matter = 0.6
+		}
+#[UPKEEP] Causaliton-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_causalitons = 0.4
+		}
+#############
+# RINGWORLD #
+#############
+#[PRODUCTION] Default Production
+		produces = {
+			trigger = {
+				planet = {
+					NOR = { 
+						has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+						has_modifier = mod_ukn_condensics_based_exotic_particles_production
+						has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+						has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					}
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 30
+		}
+#[PRODUCTION] Femtomatter-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 39
+		}
+#[PRODUCTION] Condensics-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_condensics_based_exotic_particles_production
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 45
+			energy = 195
+		}
+#[PRODUCTION] Quasi-Matter-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 51
+			energy = 207
+			sr_dark_matter = 4.5
+		}
+#[PRODUCTION] Causaliton-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 99
+			energy = 414
+			sr_dark_matter = 9
+			ehof_sr_negative_mass = 3
+		}
+#[UPKEEP] Default Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					NOR = { 
+						has_modifier = mod_ukn_alloys_based_exotic_particles_production
+						has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+						has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+						has_modifier = mod_ukn_condensics_based_exotic_particles_production
+						has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+						has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					}
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			energy = 60
+			minerals = 120
+			exotic_gases = 12
+			rare_crystals = 6
+		}
+#[UPKEEP] Alloy-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_alloys_based_exotic_particles_production
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			energy = 60
+			alloys = 60
+			exotic_gases = 12
+			rare_crystals = 6
+		}
+#[UPKEEP] Meta-Materials-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			energy = 60
+			ukn_meta_materials = 54
+			exotic_gases = 12
+			rare_crystals = 6
+		}
+#[UPKEEP] Femtomatter-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_femtomatter = 9
+		}
+#[UPKEEP] Condensics-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_condensics_based_exotic_particles_production
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_condensics = 3
+		}
+#[UPKEEP] Quasi-Matter-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_quasi_matter = 1.8
+		}
+#[UPKEEP] Causaliton-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_causalitons = 1.2
+		}
+############
+# ALDERSON #
+############
+#[PRODUCTION] Default Production
+		produces = {
+			trigger = {
+				planet = {
+					NOR = { 
+						has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+						has_modifier = mod_ukn_condensics_based_exotic_particles_production
+						has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+						has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					}
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 300
+		}
+#[PRODUCTION] Femtomatter-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 390
+		}
+#[PRODUCTION] Condensics-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_condensics_based_exotic_particles_production
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 450
+			energy = 1950
+		}
+#[PRODUCTION] Quasi-Matter-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 510
+			energy = 2070
+			sr_dark_matter = 45
+		}
+#[PRODUCTION] Causaliton-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 990
+			energy = 4140
+			sr_dark_matter = 90
+			ehof_sr_negative_mass = 30
+		}
+#[UPKEEP] Default Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					NOR = { 
+						has_modifier = mod_ukn_alloys_based_exotic_particles_production
+						has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+						has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+						has_modifier = mod_ukn_condensics_based_exotic_particles_production
+						has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+						has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					}
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			energy = 600
+			minerals = 1200
+			exotic_gases = 120
+			rare_crystals = 60
+		}
+#[UPKEEP] Alloy-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_alloys_based_exotic_particles_production
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			energy = 600
+			alloys = 600
+			exotic_gases = 120
+			rare_crystals = 60
+		}
+#[UPKEEP] Meta-Materials-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			energy = 600
+			ukn_meta_materials = 540
+			exotic_gases = 120
+			rare_crystals = 60
+		}
+#[UPKEEP] Femtomatter-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_femtomatter = 90
+		}
+#[UPKEEP] Condensics-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_condensics_based_exotic_particles_production
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_condensics = 30
+		}
+#[UPKEEP] Quasi-Matter-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_quasi_matter = 18
+		}
+#[UPKEEP] Causaliton-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_causalitons = 12
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		mult = value:job_weights_modifier|JOB|ukn_exotic_particles_producer|RESOURCE|ukn_exotic_particles|
+	}
+}
+
+ukn_exotic_particles_production_drone = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = building_chemical_plant
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = {
+		NOT = { has_trait = trait_nerve_stapled }
+	}
+
+	resources = {
+		category = planet_ukn_exotic_particles_producers
+##########
+# NORMAL #
+##########
+#[PRODUCTION] Default Production
+		produces = {
+			trigger = {
+				planet = {
+					NOR = { 
+						has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+						has_modifier = mod_ukn_condensics_based_exotic_particles_production
+						has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+						has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					}
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 5
+		}
+#[PRODUCTION] Femtomatter-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 6.5
+		}
+#[PRODUCTION] Condensics-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_condensics_based_exotic_particles_production
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 7.5
+			energy = 32.5
+		}
+#[PRODUCTION] Quasi-Matter-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 8.5
+			energy = 34.5
+			sr_dark_matter = 0.75
+		}
+#[PRODUCTION] Causaliton-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 16.5
+			energy = 69
+			sr_dark_matter = 1.5
+			ehof_sr_negative_mass = 0.5
+		}
+#[UPKEEP] Default Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					NOR = { 
+						has_modifier = mod_ukn_alloys_based_exotic_particles_production
+						has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+						has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+						has_modifier = mod_ukn_condensics_based_exotic_particles_production
+						has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+						has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					}
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			energy = 10
+			minerals = 20
+			exotic_gases = 2
+			rare_crystals = 1
+		}
+#[UPKEEP] Alloy-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_alloys_based_exotic_particles_production
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			energy = 10
+			alloys = 10
+			exotic_gases = 2
+			rare_crystals = 1
+		}
+#[UPKEEP] Meta-Materials-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			energy = 10
+			ukn_meta_materials = 9
+			exotic_gases = 2
+			rare_crystals = 1
+		}
+#[UPKEEP] Femtomatter-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			ukn_femtomatter = 1.5
+		}
+#[UPKEEP] Condensics-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_condensics_based_exotic_particles_production
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			ukn_condensics = 0.5
+		}
+#[UPKEEP] Quasi-Matter-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			ukn_quasi_matter = 0.3
+		}
+#[UPKEEP] Causaliton-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					UKN_USES_NORMAL_DISTRICTS = yes
+				}
+			}
+			ukn_causalitons = 0.2
+		}
+############
+# ARCOLOGY #
+############
+#[PRODUCTION] Default Production
+		produces = {
+			trigger = {
+				planet = {
+					NOR = { 
+						has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+						has_modifier = mod_ukn_condensics_based_exotic_particles_production
+						has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+						has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					}
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 10
+		}
+#[PRODUCTION] Femtomatter-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 13
+		}
+#[PRODUCTION] Condensics-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_condensics_based_exotic_particles_production
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 15
+			energy = 65
+		}
+#[PRODUCTION] Quasi-Matter-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 17
+			energy = 69
+			sr_dark_matter = 1.5
+		}
+#[PRODUCTION] Causaliton-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 33
+			energy = 138
+			sr_dark_matter = 3
+			ehof_sr_negative_mass = 1
+		}
+#[UPKEEP] Default Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					NOR = { 
+						has_modifier = mod_ukn_alloys_based_exotic_particles_production
+						has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+						has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+						has_modifier = mod_ukn_condensics_based_exotic_particles_production
+						has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+						has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					}
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			energy = 20
+			minerals = 40
+			exotic_gases = 4
+			rare_crystals = 2
+		}
+#[UPKEEP] Alloy-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_alloys_based_exotic_particles_production
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			energy = 20
+			alloys = 20
+			exotic_gases = 4
+			rare_crystals = 2
+		}
+#[UPKEEP] Meta-Materials-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			energy = 20
+			ukn_meta_materials = 18
+			exotic_gases = 4
+			rare_crystals = 2
+		}
+#[UPKEEP] Femtomatter-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_femtomatter = 3
+		}
+#[UPKEEP] Condensics-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_condensics_based_exotic_particles_production
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_condensics = 1
+		}
+#[UPKEEP] Quasi-Matter-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_quasi_matter = 0.6
+		}
+#[UPKEEP] Causaliton-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_causalitons = 0.4
+		}
+#############
+# RINGWORLD #
+#############
+#[PRODUCTION] Default Production
+		produces = {
+			trigger = {
+				planet = {
+					NOR = { 
+						has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+						has_modifier = mod_ukn_condensics_based_exotic_particles_production
+						has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+						has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					}
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 30
+		}
+#[PRODUCTION] Femtomatter-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 39
+		}
+#[PRODUCTION] Condensics-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_condensics_based_exotic_particles_production
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 45
+			energy = 195
+		}
+#[PRODUCTION] Quasi-Matter-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 51
+			energy = 207
+			sr_dark_matter = 4.5
+		}
+#[PRODUCTION] Causaliton-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 99
+			energy = 414
+			sr_dark_matter = 9
+			ehof_sr_negative_mass = 3
+		}
+#[UPKEEP] Default Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					NOR = { 
+						has_modifier = mod_ukn_alloys_based_exotic_particles_production
+						has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+						has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+						has_modifier = mod_ukn_condensics_based_exotic_particles_production
+						has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+						has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					}
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			energy = 60
+			minerals = 120
+			exotic_gases = 12
+			rare_crystals = 6
+		}
+#[UPKEEP] Alloy-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_alloys_based_exotic_particles_production
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			energy = 60
+			alloys = 60
+			exotic_gases = 12
+			rare_crystals = 6
+		}
+#[UPKEEP] Meta-Materials-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			energy = 60
+			ukn_meta_materials = 54
+			exotic_gases = 12
+			rare_crystals = 6
+		}
+#[UPKEEP] Femtomatter-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_femtomatter = 9
+		}
+#[UPKEEP] Condensics-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_condensics_based_exotic_particles_production
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_condensics = 3
+		}
+#[UPKEEP] Quasi-Matter-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_quasi_matter = 1.8
+		}
+#[UPKEEP] Causaliton-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_causalitons = 1.2
+		}
+############
+# ALDERSON #
+############
+#[PRODUCTION] Default Production
+		produces = {
+			trigger = {
+				planet = {
+					NOR = { 
+						has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+						has_modifier = mod_ukn_condensics_based_exotic_particles_production
+						has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+						has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					}
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 300
+		}
+#[PRODUCTION] Femtomatter-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 390
+		}
+#[PRODUCTION] Condensics-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_condensics_based_exotic_particles_production
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 450
+			energy = 1950
+		}
+#[PRODUCTION] Quasi-Matter-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 510
+			energy = 2070
+			sr_dark_matter = 45
+		}
+#[PRODUCTION] Causaliton-Based Production
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_exotic_particles = 990
+			energy = 4140
+			sr_dark_matter = 90
+			ehof_sr_negative_mass = 30
+		}
+#[UPKEEP] Default Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					NOR = { 
+						has_modifier = mod_ukn_alloys_based_exotic_particles_production
+						has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+						has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+						has_modifier = mod_ukn_condensics_based_exotic_particles_production
+						has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+						has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					}
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			energy = 600
+			minerals = 1200
+			exotic_gases = 120
+			rare_crystals = 60
+		}
+#[UPKEEP] Alloy-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_alloys_based_exotic_particles_production
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			energy = 600
+			alloys = 600
+			exotic_gases = 120
+			rare_crystals = 60
+		}
+#[UPKEEP] Meta-Materials-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			energy = 600
+			ukn_meta_materials = 540
+			exotic_gases = 120
+			rare_crystals = 60
+		}
+#[UPKEEP] Femtomatter-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_femtomatter = 90
+		}
+#[UPKEEP] Condensics-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_condensics_based_exotic_particles_production
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_condensics = 30
+		}
+#[UPKEEP] Quasi-Matter-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_quasi_matter = 18
+		}
+#[UPKEEP] Causaliton-Based Upkeep
+		upkeep = {
+			trigger = {
+				planet = {
+					has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				}
+			}
+			ukn_causalitons = 12
+		}
+	}
+
+	weight = {
+		weight = @complex_drone_job_weight
+		mult = value:job_weights_modifier|JOB|ukn_exotic_particles_production_drone|RESOURCE|ukn_exotic_particles|
+	}
+}
+

@@ -1,0 +1,487 @@
+#[1] Automation Overdrive
+decision_ukn_automation_overdrive_1 = {
+	owned_planets_only = yes
+
+	prerequisites = {
+		"tech_basic_industry"
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+		}
+	}
+
+	potential = {
+		OR = {
+			AND = {
+				UKN_USES_NORMAL_DISTRICTS = yes
+				NOR = {
+					has_planet_flag = ukn_planet_flag_automation_overdrive_1
+					has_planet_flag = ukn_planet_flag_automation_overdrive_2
+					has_planet_flag = ukn_planet_flag_automation_overdrive_3
+				}
+			}
+			AND = {
+				OR= {
+					UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+				}
+				NOR = {
+					has_planet_flag = ukn_planet_flag_automation_overdrive_1
+					has_planet_flag = ukn_planet_flag_automation_overdrive_2
+					has_planet_flag = ukn_planet_flag_automation_overdrive_3
+				}
+			}
+			AND = {
+				OR = {
+					UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+				}
+				NOR = {
+					has_planet_flag = ukn_planet_flag_automation_overdrive_1
+					has_planet_flag = ukn_planet_flag_automation_overdrive_2
+					has_planet_flag = ukn_planet_flag_automation_overdrive_3
+				}
+			}
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			ukn_remove_all_automation_overdrive_planet_modifiers = yes
+		}
+		if = {
+			limit = {
+				UKN_USES_NORMAL_DISTRICTS = yes
+				NOT = { has_building = building_ukn_automation_grid_2 }
+			}
+			set_planet_flag = ukn_planet_flag_automation_overdrive_1
+			add_modifier = { modifier = mod_ukn_automation_overdrive_normal_1 }
+		}
+		if = {
+			limit = {
+				OR= {
+					UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+				}
+				NOT = { has_building = building_ukn_automation_grid_2 }
+			}
+			set_planet_flag = ukn_planet_flag_automation_overdrive_1
+			add_modifier = { modifier = mod_ukn_automation_overdrive_arcology_1 }
+		}
+		if = {
+			limit = {
+				OR = {
+					UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+				}
+				NOT = { has_building = building_ukn_automation_grid_2 }
+			}
+			set_planet_flag = ukn_planet_flag_automation_overdrive_1
+			add_modifier = { modifier = mod_ukn_automation_overdrive_rw_1 }
+		}
+		if = {
+			limit = {
+				OR = {
+					UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+					has_building = building_ukn_automation_grid_2
+				}
+			}
+			set_planet_flag = ukn_planet_flag_automation_overdrive_1
+			add_modifier = { modifier = mod_ukn_automation_overdrive_alderson_1 }
+		}
+		custom_tooltip = tooltip_decision_ukn_automation_overdrive_1
+		hidden_effect = {
+			planet_event = { id = ukn_automation_triggered_planet_events.1 }
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 1000000
+			is_capital = yes
+			num_districts = { type = any value >= 16 }
+		}
+		modifier = {
+			factor = 1000000
+			is_capital = no
+			num_districts = { type = any value >= 11 }
+		}
+	}
+}
+
+#[2] Automation Overdrive
+decision_ukn_automation_overdrive_2 = {
+	owned_planets_only = yes
+
+	prerequisites = {
+		"tech_basic_industry"
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+		}
+	}
+
+	potential = {
+		OR = {
+			AND = {
+				OR = {
+					UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+				}
+				NOT = { has_building = building_ukn_automation_grid_2 }
+				has_planet_flag = ukn_planet_flag_automation_overdrive_1
+			}
+			AND = {
+				OR = {
+					UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+				}
+				NOT = { has_building = building_ukn_automation_grid_2 }
+				has_planet_flag = ukn_planet_flag_automation_overdrive_1
+			}
+			AND = {
+				OR = {
+					UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+					has_building = building_ukn_automation_grid_2
+				}
+				has_planet_flag = ukn_planet_flag_automation_overdrive_1
+			}
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			ukn_remove_all_automation_overdrive_planet_modifiers = yes
+		}
+		if = {
+			limit = {
+				OR = {
+					UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+				}
+				NOT = { has_building = building_ukn_automation_grid_2 }
+			}
+			remove_planet_flag = ukn_planet_flag_automation_overdrive_1
+			set_planet_flag = ukn_planet_flag_automation_overdrive_2
+			add_modifier = { modifier = mod_ukn_automation_overdrive_arcology_2 }
+		}
+		if = {
+			limit = {
+				OR = {
+					UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+				}
+				NOT = { has_building = building_ukn_automation_grid_2 }
+			}
+			remove_planet_flag = ukn_planet_flag_automation_overdrive_1
+			set_planet_flag = ukn_planet_flag_automation_overdrive_2
+			add_modifier = { modifier = mod_ukn_automation_overdrive_rw_2 }
+		}
+		if = {
+			limit = {
+				OR = {
+					UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+					has_building = building_ukn_automation_grid_2
+				}
+			}
+			remove_planet_flag = ukn_planet_flag_automation_overdrive_1
+			set_planet_flag = ukn_planet_flag_automation_overdrive_2
+			add_modifier = { modifier = mod_ukn_automation_overdrive_alderson_2 }
+		}
+		custom_tooltip = tooltip_decision_ukn_automation_overdrive_2
+		hidden_effect = {
+			planet_event = { id = ukn_automation_triggered_planet_events.1 }
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 1000000
+			is_capital = yes
+			num_districts = { type = any value >= 21 }
+		}
+		modifier = {
+			factor = 1000000
+			is_capital = no
+			num_districts = { type = any value >= 16 }
+		}
+	}
+}
+
+#[3] Automation Overdrive
+decision_ukn_automation_overdrive_3 = {
+	owned_planets_only = yes
+
+	prerequisites = {
+		"tech_basic_industry"
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+		}
+	}
+
+	potential = {
+		OR = {
+			AND = {
+				OR = {
+					UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+				}
+				NOT = { has_building = building_ukn_automation_grid_2 }
+				has_planet_flag = ukn_planet_flag_automation_overdrive_2
+			}
+			AND = {
+				OR = {
+					UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+					has_building = building_ukn_automation_grid_2
+				}
+				has_planet_flag = ukn_planet_flag_automation_overdrive_2
+			}
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			ukn_remove_all_automation_overdrive_planet_modifiers = yes
+		}
+		if = {
+			limit = {
+				OR = {
+					UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+				}
+				NOT = { has_building = building_ukn_automation_grid_2 }
+			}
+			remove_planet_flag = ukn_planet_flag_automation_overdrive_2
+			set_planet_flag = ukn_planet_flag_automation_overdrive_3
+			add_modifier = { modifier = mod_ukn_automation_overdrive_rw_3 }
+		}
+		if = {
+			limit = {
+				OR = {
+					UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+					has_building = building_ukn_automation_grid_2
+				}
+			}
+			remove_planet_flag = ukn_planet_flag_automation_overdrive_2
+			set_planet_flag = ukn_planet_flag_automation_overdrive_3
+			add_modifier = { modifier = mod_ukn_automation_overdrive_alderson_3 }
+		}
+		custom_tooltip = tooltip_decision_ukn_automation_overdrive_3
+		hidden_effect = {
+			planet_event = { id = ukn_automation_triggered_planet_events.1 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#[0] Automation Overdrive
+decision_ukn_automation_overdrive_0 = {
+	owned_planets_only = yes
+
+	prerequisites = {
+		"tech_basic_industry"
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+		}
+	}
+
+	potential = {
+		OR = {
+			AND = {
+				UKN_USES_NORMAL_DISTRICTS = yes
+				OR = {
+					has_planet_flag = ukn_planet_flag_automation_overdrive_1
+					has_planet_flag = ukn_planet_flag_automation_overdrive_2
+					has_planet_flag = ukn_planet_flag_automation_overdrive_3
+				}
+				NOT = { has_building = building_ukn_automation_grid_2 }
+			}
+			AND = {
+				OR= {
+					UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+				}
+				OR = {
+					has_planet_flag = ukn_planet_flag_automation_overdrive_2
+					has_planet_flag = ukn_planet_flag_automation_overdrive_3
+				}
+				NOT = { has_building = building_ukn_automation_grid_2 }
+			}
+			AND = {
+				OR = {
+					UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+				}
+				NOT = { has_building = building_ukn_automation_grid_2 }
+				has_planet_flag = ukn_planet_flag_automation_overdrive_3
+			}
+			AND = {
+				OR = {
+					UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+					has_building = building_ukn_automation_grid_2
+				}
+				has_planet_flag = ukn_planet_flag_automation_overdrive_3
+			}
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			ukn_remove_all_automation_overdrive_planet_modifiers = yes
+		}
+		if = {
+			limit = {
+				UKN_USES_NORMAL_DISTRICTS = yes
+				NOT = { has_building = building_ukn_automation_grid_2 }
+			}
+			remove_planet_flag = ukn_planet_flag_automation_overdrive_1
+			remove_planet_flag = ukn_planet_flag_automation_overdrive_2
+			remove_planet_flag = ukn_planet_flag_automation_overdrive_3
+			add_modifier = { modifier = mod_ukn_automation_overdrive_normal_0 }
+		}
+		if = {
+			limit = {
+				OR= {
+					UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+				}
+				NOT = { has_building = building_ukn_automation_grid_2 }
+			}
+			remove_planet_flag = ukn_planet_flag_automation_overdrive_1
+			remove_planet_flag = ukn_planet_flag_automation_overdrive_2
+			remove_planet_flag = ukn_planet_flag_automation_overdrive_3
+			add_modifier = { modifier = mod_ukn_automation_overdrive_arcology_0 }
+		}
+		if = {
+			limit = {
+				OR = {
+					UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+				}
+				NOT = { has_building = building_ukn_automation_grid_2 }
+			}
+			remove_planet_flag = ukn_planet_flag_automation_overdrive_1
+			remove_planet_flag = ukn_planet_flag_automation_overdrive_2
+			remove_planet_flag = ukn_planet_flag_automation_overdrive_3
+			add_modifier = { modifier = mod_ukn_automation_overdrive_rw_0 }
+		}
+		if = {
+			limit = {
+				OR = {
+					UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+					UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+					has_building = building_ukn_automation_grid_2
+				}
+			}
+			remove_planet_flag = ukn_planet_flag_automation_overdrive_1
+			remove_planet_flag = ukn_planet_flag_automation_overdrive_2
+			remove_planet_flag = ukn_planet_flag_automation_overdrive_3
+			add_modifier = { modifier = mod_ukn_automation_overdrive_alderson_0 }
+		}
+		custom_tooltip = tooltip_decision_ukn_automation_overdrive_0
+		hidden_effect = {
+			planet_event = { id = ukn_automation_triggered_planet_events.1 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

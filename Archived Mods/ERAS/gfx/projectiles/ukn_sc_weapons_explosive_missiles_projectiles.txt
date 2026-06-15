@@ -1,0 +1,600 @@
+#All files in gfx/projectiles are reloadable with the "reload projectiles" console command
+#Filewatcher is also enabled for all files
+
+#################
+### MISSILES  ###
+#################
+
+#######----------------------------------
+# T0B #----------------------------------
+#######----------------------------------
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_0bS"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_0bS"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_0bS"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_0bS"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_0bS"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_0bM"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_0bM"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_0bM"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_0bM"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_0bM"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_0bL"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_0bL"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_0bL"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_0bL"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_0bL"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T1 #----------------------------------
+######----------------------------------
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_1S"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_1S"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_1S"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_1S"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_1S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_1M"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_1M"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_1M"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_1M"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_1M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_1L"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_1L"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_1L"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_1L"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_1L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T2 #----------------------------------
+######----------------------------------
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_2S"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_2S"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_2S"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_2S"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_2S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_2M"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_2M"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_2M"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_2M"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_2M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_2L"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_2L"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_2L"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_2L"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_2L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T3 #----------------------------------
+######----------------------------------
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_3S"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_3S"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_3S"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_3S"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_3S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_3M"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_3M"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_3M"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_3M"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_3M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_3L"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_3L"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_3L"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_3L"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_3L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T4 #----------------------------------
+######----------------------------------
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_4S"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_4S"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_4S"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_4S"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_4S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_4M"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_4M"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_4M"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_4M"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_4M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_4L"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_4L"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_4L"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_4L"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_4L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T5 #----------------------------------
+######----------------------------------
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_5S"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_5S"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_5S"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_5S"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_5S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_5M"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_5M"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_5M"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_5M"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_5M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_5L"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_5L"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_5L"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_5L"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_5L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T6 #----------------------------------
+######----------------------------------
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_6S"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_6S"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_6S"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_6S"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_6S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_6M"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_6M"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_6M"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_6M"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_6M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_6L"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_6L"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_6L"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_6L"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_6L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T7 #----------------------------------
+######----------------------------------
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_7S"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_7S"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_7S"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_7S"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_7S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_7M"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_7M"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_7M"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_7M"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_7M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_7L"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_7L"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_7L"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_7L"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_7L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T8 #----------------------------------
+######----------------------------------
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_8S"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_8S"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_8S"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_8S"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_8S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_8M"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_8M"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_8M"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_8M"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_8M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_8L"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_8L"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_8L"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_8L"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_8L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+######----------------------------------
+# T9 #----------------------------------
+######----------------------------------
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_9S"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_9S"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_9S"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_9S"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_9S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_9M"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_9M"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_9M"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_9M"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_9M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_9L"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_9L"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_9L"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_9L"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_9L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+#######----------------------------------
+# T10 #----------------------------------
+#######----------------------------------
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_10S"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_10S"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_10S"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_10S"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_10S"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_10M"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_10M"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_10M"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_10M"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_10M"
+	
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	#common for all types of projectiles
+	name = "projectile_ukn_missile_10L"
+	color = { 1.0 	0.5 	0.0 	1.0 }
+	hit_entity = "hit_entity_ukn_missile_10L"
+	shield_hit_entity = "shield_hit_entity_ukn_missile_10L"
+	muzzle_flash_entity = "muzzle_entity_ukn_missile_10L"
+	
+	#missile specific data
+	entity = "missile_entity_ukn_missile_10L"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}

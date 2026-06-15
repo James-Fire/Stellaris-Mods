@@ -1,0 +1,47 @@
+
+
+entity = {
+	name = "disco_penta_rays_entity"
+	pdxmesh = "penta_rays_mesh"
+	scale = 32
+
+	game_data = {
+		uv_animation_speed   = 0.02
+		uv_animation_direction  = { 0.0 3.5 }
+		emissive_recolor_crunch = 50.0
+		shader_type = ship
+		bloom_factor = 1
+	}
+
+	meshsettings = {
+		name = "polySurfaceShape7"
+		index = 0
+		texture_diffuse = "dyson_rays.dds"
+		texture_normal = "yggdrasil_emission_nrm.dds"
+		texture_specular = "yggdrasil_emission_spec.dds"
+		shader = "PdxMeshColorAlphaAdditiveAnimateUV"
+	}
+}
+
+entity = {
+	name = "disco_hexa_rays_entity"
+	pdxmesh = "hexa_rays_mesh"
+	scale = 32
+
+	game_data = {
+		uv_animation_speed   = 0.1
+		uv_animation_direction  = { 1.0 1.0 }
+		emissive_recolor_crunch = 50.0
+		shader_type = ship
+		bloom_factor = 1
+	}
+
+	meshsettings = {
+		name = "polySurface5Shape"
+		index = 0
+		texture_diffuse = "dyson_rays.dds"
+		texture_normal = "yggdrasil_emission_nrm.dds"
+		texture_specular = "yggdrasil_emission_spec.dds"
+		shader = "PdxMeshColorAlphaAdditiveAnimateUV"
+	}
+}

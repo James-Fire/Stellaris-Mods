@@ -1,0 +1,2615 @@
+###########################
+# PLANETCRAFT STABILIZERS #
+###########################
+
+utility_component_template = {
+	key = "UKN_STABILIZER_PLANETCRAFT_1"
+	size = aux
+	icon = "GFX_ship_part_ukn_stabilizer_1"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	component_set = "UKN_SET_STABILIZER_PLANETCRAFT_1"
+	upgrades_to = "UKN_STABILIZER_PLANETCRAFT_2"
+	prerequisites = { "giga_tech_war_system_hull_booster" }
+
+	resources = {
+		cost = {
+#			minerals = @ukn_planet_t6_aux_cost_minerals
+#			alloys = @ukn_planet_t6_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t6_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t6_aux_cost_ukn_femtomatter
+			ukn_condensics = @ukn_planet_t6_aux_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t6_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t6_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t6_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t6_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t6_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t6_aux_armor_cost_ukn_meta_materials
+#			nanites = @ukn_planet_t6_aux_armor_cost_nanites
+#---
+			ukn_meta_materials = @ukn_planet_t6_aux_shields_cost_ukn_meta_materials
+			ukn_exotic_particles = @ukn_planet_t6_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t6_aux_upkeep_energy
+#			minerals = @ukn_planet_t6_aux_upkeep_minerals
+#			alloys = @ukn_planet_t6_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t6_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t6_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t6_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t6_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t6_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t6_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t6_aux_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_planet_t6_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t6_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t6_aux_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_planet_t6_aux_upkeep_nanites
+#---
+#			minerals = @ukn_planet_t6_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t6_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t6_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+
+	modifier = {
+		ship_hull_mult = @ukn_stabilizer_planetcraft_hull_mult_6
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	ai_weight = {
+		weight = 1280
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+				has_monthly_income = { resource = ukn_condensics value <= 0 }
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "UKN_STABILIZER_PLANETCRAFT_2"
+	size = aux
+	icon = "GFX_ship_part_ukn_stabilizer_2"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	component_set = "UKN_SET_STABILIZER_PLANETCRAFT_2"
+	upgrades_to = "UKN_STABILIZER_PLANETCRAFT_3"
+	prerequisites = { "giga_tech_war_system_hull_booster" }
+
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t7_aux_cost_minerals
+#			alloys = @ukn_planet_t7_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t7_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t7_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t7_aux_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_planet_t7_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t7_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t7_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t7_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t7_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t7_aux_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_planet_t7_aux_armor_cost_ukn_quasi_matter
+#---
+			ukn_meta_materials = @ukn_planet_t7_aux_shields_cost_ukn_meta_materials
+			ukn_exotic_particles = @ukn_planet_t7_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t7_aux_upkeep_energy
+#			minerals = @ukn_planet_t7_aux_upkeep_minerals
+#			alloys = @ukn_planet_t7_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t7_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t7_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t7_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t7_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t7_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t7_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t7_aux_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_planet_t7_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t7_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t7_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t7_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t7_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t7_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+
+	modifier = {
+		ship_hull_mult = @ukn_stabilizer_planetcraft_hull_mult_7
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	ai_weight = {
+		weight = 2560
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "UKN_STABILIZER_PLANETCRAFT_3"
+	size = aux
+	icon = "GFX_ship_part_ukn_stabilizer_3"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	component_set = "UKN_SET_STABILIZER_PLANETCRAFT_3"
+	upgrades_to = "UKN_STABILIZER_PLANETCRAFT_4"
+	prerequisites = { "giga_tech_war_system_hull_booster" }
+
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t8_aux_cost_minerals
+#			alloys = @ukn_planet_t8_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t8_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t8_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t8_aux_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_planet_t8_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t8_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t8_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t8_aux_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_planet_t8_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t8_aux_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_planet_t8_aux_armor_cost_ukn_quasi_matter
+#---
+			ukn_meta_materials = @ukn_planet_t8_aux_shields_cost_ukn_meta_materials
+			ukn_exotic_particles = @ukn_planet_t8_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t8_aux_upkeep_energy
+#			minerals = @ukn_planet_t8_aux_upkeep_minerals
+#			alloys = @ukn_planet_t8_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t8_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t8_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t8_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t8_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t8_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t8_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t8_aux_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_planet_t8_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t8_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t8_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t8_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t8_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t8_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+
+	modifier = {
+		ship_hull_mult = @ukn_stabilizer_planetcraft_hull_mult_8
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	ai_weight = {
+		weight = 5120
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "UKN_STABILIZER_PLANETCRAFT_PLANCK"
+	size = aux
+	icon = "GFX_ship_part_ukn_stabilizer_planck"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	component_set = "UKN_SET_STABILIZER_PLANETCRAFT_PLANCK"
+	upgrades_to = "UKN_STABILIZER_PLANETCRAFT_4"
+	prerequisites = { "giga_tech_war_system_hull_booster" }
+
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t_p_aux_cost_minerals
+#			alloys = @ukn_planet_t_p_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t_p_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t_p_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t_p_aux_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_planet_t_p_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t_p_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t_p_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t_p_aux_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_planet_t_p_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t_p_aux_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_planet_t_p_aux_armor_cost_ukn_quasi_matter
+#---
+			ukn_meta_materials = @ukn_planet_t_p_aux_shields_cost_ukn_meta_materials
+			ukn_exotic_particles = @ukn_planet_t_p_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t_p_aux_upkeep_energy
+#			minerals = @ukn_planet_t_p_aux_upkeep_minerals
+#			alloys = @ukn_planet_t_p_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t_p_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t_p_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t_p_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t_p_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t_p_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t_p_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t_p_aux_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_planet_t_p_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t_p_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t_p_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t_p_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t_p_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t_p_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+
+	modifier = {
+		ship_hull_mult = @ukn_stabilizer_planetcraft_hull_mult_planck
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	ai_weight = {
+		weight = 7680
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "UKN_STABILIZER_PLANETCRAFT_4"
+	size = aux
+	icon = "GFX_ship_part_ukn_stabilizer_4"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	component_set = "UKN_SET_STABILIZER_PLANETCRAFT_4"
+	upgrades_to = "UKN_STABILIZER_PLANETCRAFT_5"
+	prerequisites = { "giga_tech_war_system_hull_booster" }
+
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t9_aux_cost_minerals
+#			alloys = @ukn_planet_t9_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t9_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t9_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t9_aux_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t9_aux_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_planet_t9_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t9_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t9_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t9_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t9_aux_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_planet_t9_aux_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_planet_t9_aux_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_planet_t9_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t9_aux_upkeep_energy
+#			minerals = @ukn_planet_t9_aux_upkeep_minerals
+#			alloys = @ukn_planet_t9_aux_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t9_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t9_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t9_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t9_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t9_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t9_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t9_aux_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_planet_t9_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t9_aux_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_planet_t9_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t9_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t9_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t9_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+
+	modifier = {
+		ship_hull_mult = @ukn_stabilizer_planetcraft_hull_mult_9
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	ai_weight = {
+		weight = 10240
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "UKN_STABILIZER_PLANETCRAFT_5"
+	size = aux
+	icon = "GFX_ship_part_ukn_stabilizer_5"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	component_set = "UKN_SET_STABILIZER_PLANETCRAFT_5"
+#	upgrades_to = "UKN_STABILIZER_PLANETCRAFT_6"
+	prerequisites = { "giga_tech_war_system_hull_booster" }
+
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t10_aux_cost_minerals
+#			alloys = @ukn_planet_t10_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t10_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t10_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t10_aux_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t10_aux_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_planet_t10_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t10_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t10_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t10_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t10_aux_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_planet_t10_aux_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_planet_t10_aux_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_planet_t10_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t10_aux_upkeep_energy
+#			minerals = @ukn_planet_t10_aux_upkeep_minerals
+#			alloys = @ukn_planet_t10_aux_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t10_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t10_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t10_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t10_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t10_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t10_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t10_aux_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_planet_t10_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t10_aux_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_planet_t10_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t10_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t10_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t10_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+
+	modifier = {
+		ship_hull_mult = @ukn_stabilizer_planetcraft_hull_mult_10
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	ai_weight = {
+		weight = 20480
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+	}
+}
+
+
+###########################
+# PLANETCRAFT CRUST ARMOR #
+###########################
+
+### Neutronium Crust Armor
+utility_component_template = {
+	key = "UKN_CRUST_ARMOR_PLANETCRAFT_1"
+	size = aux
+	icon = "GFX_ship_part_ukn_crust_armor_1"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @ukn_crust_armor_planetcraft_armor_5
+		ship_armor_regen_add_static = @ukn_crust_armor_planetcraft_armor_regen_5
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_engineering_output_4" }
+	component_set = "UKN_SET_CRUST_ARMOR_PLANETCRAFT_1"
+	upgrades_to = "UKN_CRUST_ARMOR_PLANETCRAFT_2"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_planet_t5_aux_cost_minerals
+#			alloys = @ukn_planet_t5_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t5_aux_cost_ukn_meta_materials
+			ukn_femtomatter = @ukn_planet_t5_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t5_aux_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t5_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t5_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t5_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t5_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t5_aux_cost_ehof_sr_negative_mass
+#---
+			ukn_meta_materials = @ukn_planet_t5_aux_armor_cost_ukn_meta_materials
+			nanites = @ukn_planet_t5_aux_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_planet_t5_aux_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_planet_t5_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t5_aux_upkeep_energy
+#			minerals = @ukn_planet_t5_aux_upkeep_minerals
+#			alloys = @ukn_planet_t5_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t5_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t5_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t5_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t5_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t5_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t5_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t5_aux_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_planet_t5_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t5_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t5_aux_upkeep_ehof_sr_negative_mass
+			nanites = @ukn_planet_t5_aux_upkeep_nanites
+#---
+#			minerals = @ukn_planet_t5_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t5_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t5_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 640
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = minerals value <= 0 }
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = nanites value <= 0 }
+				has_monthly_income = { resource = ukn_femtomatter value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Electroweak Crust Armor
+utility_component_template = {
+	key = "UKN_CRUST_ARMOR_PLANETCRAFT_2"
+	size = aux
+	icon = "GFX_ship_part_ukn_crust_armor_2"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = @ukn_crust_armor_planetcraft_armor_6
+		ship_armor_regen_add_static = @ukn_crust_armor_planetcraft_armor_regen_6
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_engineering_output_5" }
+	component_set = "UKN_SET_CRUST_ARMOR_PLANETCRAFT_2"
+	upgrades_to = "UKN_CRUST_ARMOR_PLANETCRAFT_3"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t6_aux_cost_minerals
+#			alloys = @ukn_planet_t6_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t6_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t6_aux_cost_ukn_femtomatter
+			ukn_condensics = @ukn_planet_t6_aux_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t6_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t6_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t6_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t6_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t6_aux_cost_ehof_sr_negative_mass
+#---
+			ukn_meta_materials = @ukn_planet_t6_aux_armor_cost_ukn_meta_materials
+			nanites = @ukn_planet_t6_aux_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_planet_t6_aux_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_planet_t6_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t6_aux_upkeep_energy
+#			minerals = @ukn_planet_t6_aux_upkeep_minerals
+#			alloys = @ukn_planet_t6_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t6_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t6_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t6_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t6_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t6_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t6_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t6_aux_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_planet_t6_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t6_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t6_aux_upkeep_ehof_sr_negative_mass
+			nanites = @ukn_planet_t6_aux_upkeep_nanites
+#---
+#			minerals = @ukn_planet_t6_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t6_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t6_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 1280
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = nanites value <= 0 }
+				has_monthly_income = { resource = ukn_condensics value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+# Quasi-Material Crust Armor
+utility_component_template = {
+	key = "UKN_CRUST_ARMOR_PLANETCRAFT_3"
+	size = aux
+	icon = "GFX_ship_part_ukn_crust_armor_3"
+	icon_frame = 1
+	power = 0
+	
+	modifier = {
+		ship_armor_add = @ukn_crust_armor_planetcraft_armor_7
+		ship_armor_regen_add_static = @ukn_crust_armor_planetcraft_armor_regen_7
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_engineering_output_6" }
+	component_set = "UKN_SET_CRUST_ARMOR_PLANETCRAFT_3"
+	upgrades_to = "UKN_CRUST_ARMOR_PLANETCRAFT_4"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t7_aux_cost_minerals
+#			alloys = @ukn_planet_t7_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t7_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t7_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t7_aux_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_planet_t7_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t7_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t7_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t7_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t7_aux_cost_ehof_sr_negative_mass
+#---
+			ukn_meta_materials = @ukn_planet_t7_aux_armor_cost_ukn_meta_materials
+			ukn_quasi_matter = @ukn_planet_t7_aux_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_planet_t7_aux_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_planet_t7_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t7_aux_upkeep_energy
+#			minerals = @ukn_planet_t7_aux_upkeep_minerals
+#			alloys = @ukn_planet_t7_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t7_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t7_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t7_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t7_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t7_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t7_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t7_aux_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_planet_t7_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t7_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t7_aux_upkeep_ehof_sr_negative_mass
+			nanites = @ukn_planet_t7_aux_upkeep_nanites
+#---
+#			minerals = @ukn_planet_t7_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t7_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t7_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 2560
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = nanites value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Supersolid Crust Armor
+utility_component_template = {
+	key = "UKN_CRUST_ARMOR_PLANETCRAFT_4"
+	size = aux
+	icon = "GFX_ship_part_ukn_crust_armor_4"
+	icon_frame = 1
+	power = 0
+	
+	modifier = {
+		ship_armor_add = @ukn_crust_armor_planetcraft_armor_8
+		ship_armor_regen_add_static = @ukn_crust_armor_planetcraft_armor_regen_8
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_engineering_output_7" }
+	component_set = "UKN_SET_CRUST_ARMOR_PLANETCRAFT_4"
+	upgrades_to = "UKN_CRUST_ARMOR_PLANETCRAFT_5"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t8_aux_cost_minerals
+#			alloys = @ukn_planet_t8_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t8_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t8_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t8_aux_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_planet_t8_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t8_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t8_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t8_aux_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_planet_t8_aux_cost_ehof_sr_negative_mass
+#---
+			ukn_meta_materials = @ukn_planet_t8_aux_armor_cost_ukn_meta_materials
+			ukn_quasi_matter = @ukn_planet_t8_aux_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_planet_t8_aux_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_planet_t8_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t8_aux_upkeep_energy
+#			minerals = @ukn_planet_t8_aux_upkeep_minerals
+#			alloys = @ukn_planet_t8_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t8_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t8_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t8_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t8_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t8_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t8_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t8_aux_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_planet_t8_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t8_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t8_aux_upkeep_ehof_sr_negative_mass
+			nanites = @ukn_planet_t8_aux_upkeep_nanites
+#---
+#			minerals = @ukn_planet_t8_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t8_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t8_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 5120
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = nanites value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Supersolid Crust Armor
+utility_component_template = {
+	key = "UKN_CRUST_ARMOR_PLANETCRAFT_PLANCK"
+	size = aux
+	icon = "GFX_ship_part_ukn_crust_armor_planck"
+	icon_frame = 1
+	power = 0
+	
+	modifier = {
+		ship_armor_add = @ukn_crust_armor_planetcraft_armor_planck
+		ship_armor_regen_add_static = @ukn_crust_armor_planetcraft_armor_regen_planck
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_engineering_output_planck" }
+	component_set = "UKN_SET_CRUST_ARMOR_PLANETCRAFT_PLANCK"
+	upgrades_to = "UKN_CRUST_ARMOR_PLANETCRAFT_5"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t_p_aux_cost_minerals
+#			alloys = @ukn_planet_t_p_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t_p_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t_p_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t_p_aux_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_planet_t_p_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t_p_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t_p_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t_p_aux_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_planet_t_p_aux_cost_ehof_sr_negative_mass
+#---
+			ukn_meta_materials = @ukn_planet_t_p_aux_armor_cost_ukn_meta_materials
+			ukn_quasi_matter = @ukn_planet_t_p_aux_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_planet_t_p_aux_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_planet_t_p_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t_p_aux_upkeep_energy
+#			minerals = @ukn_planet_t_p_aux_upkeep_minerals
+#			alloys = @ukn_planet_t_p_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t_p_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t_p_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t_p_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t_p_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t_p_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t_p_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t_p_aux_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_planet_t_p_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t_p_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t_p_aux_upkeep_ehof_sr_negative_mass
+			nanites = @ukn_planet_t_p_aux_upkeep_nanites
+#---
+#			minerals = @ukn_planet_t_p_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t_p_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t_p_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 7680
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = nanites value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Oscillative Crust Armor
+utility_component_template = {
+	key = "UKN_CRUST_ARMOR_PLANETCRAFT_5"
+	size = aux
+	icon = "GFX_ship_part_ukn_crust_armor_5"
+	icon_frame = 1
+	power = 0
+	
+	modifier = {
+		ship_armor_add = @ukn_crust_armor_planetcraft_armor_9
+		ship_armor_regen_add_static = @ukn_crust_armor_planetcraft_armor_regen_9
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_engineering_output_8" }
+	component_set = "UKN_SET_CRUST_ARMOR_PLANETCRAFT_5"
+	upgrades_to = "UKN_CRUST_ARMOR_PLANETCRAFT_6"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t9_aux_cost_minerals
+#			alloys = @ukn_planet_t9_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t9_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t9_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t9_aux_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t9_aux_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_planet_t9_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t9_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t9_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t9_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t9_aux_armor_cost_ukn_meta_materials
+			ukn_causalitons = @ukn_planet_t9_aux_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_planet_t9_aux_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_planet_t9_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t9_aux_upkeep_energy
+#			minerals = @ukn_planet_t9_aux_upkeep_minerals
+#			alloys = @ukn_planet_t9_aux_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t9_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t9_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t9_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t9_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t9_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t9_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t9_aux_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_planet_t9_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t9_aux_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_planet_t9_aux_upkeep_ehof_sr_negative_mass
+			ukn_causalitons = @ukn_planet_t9_aux_upkeep_nanites
+#---
+#			minerals = @ukn_planet_t9_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t9_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t9_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 10240
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Synchronic Crust Armor
+utility_component_template = {
+	key = "UKN_CRUST_ARMOR_PLANETCRAFT_6"
+	size = aux
+	icon = "GFX_ship_part_ukn_crust_armor_6"
+	icon_frame = 1
+	power = 0
+	
+	modifier = {
+		ship_armor_add = @ukn_crust_armor_planetcraft_armor_10
+		ship_armor_regen_add_static = @ukn_crust_armor_planetcraft_armor_regen_10
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_engineering_output_9" }
+	component_set = "UKN_SET_CRUST_ARMOR_PLANETCRAFT_6"
+#	upgrades_to = "UKN_CRUST_ARMOR_PLANETCRAFT_7"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t10_aux_cost_minerals
+#			alloys = @ukn_planet_t10_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t10_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t10_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t10_aux_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t10_aux_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_planet_t10_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t10_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t10_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t10_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t10_aux_armor_cost_ukn_meta_materials
+			ukn_causalitons = @ukn_planet_t10_aux_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_planet_t10_aux_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_planet_t10_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t10_aux_upkeep_energy
+#			minerals = @ukn_planet_t10_aux_upkeep_minerals
+#			alloys = @ukn_planet_t10_aux_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t10_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t10_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t10_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t10_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t10_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t10_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t10_aux_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_planet_t10_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t10_aux_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_planet_t10_aux_upkeep_ehof_sr_negative_mass
+			ukn_causalitons = @ukn_planet_t10_aux_upkeep_nanites
+#---
+#			minerals = @ukn_planet_t10_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t10_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t10_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 20480
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+
+
+
+#####################################
+# PLANETCRAFT REGENNING CRUST ARMOR #
+#####################################
+
+# -----------------------------------------------------------------------
+
+utility_component_template = {
+	key = "UKN_CRUST_ARMOR_SENTIENT_METAL_PLANETCRAFT_0"
+	size = aux
+	icon = "GFX_ship_part_ukn_crust_armor_sentient_metal_0"
+	icon_frame = 1
+	power = 0
+	
+	modifier = {
+		ship_armor_add = @ukn_crust_armor_sentient_metal_planetcraft_armor_7
+		ship_armor_regen_add_static = @ukn_crust_armor_sentient_metal_planetcraft_armor_regen_7
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_armor_sentient_metal_0" }
+	component_set = "UKN_SET_CRUST_ARMOR_SENTIENT_METAL_PLANETCRAFT_0"
+	upgrades_to = "UKN_CRUST_ARMOR_SENTIENT_METAL_PLANETCRAFT_1"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t7_aux_cost_minerals
+#			alloys = @ukn_planet_t7_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t7_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t7_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t7_aux_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t7_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t7_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t7_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t7_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t7_aux_cost_ehof_sr_negative_mass
+#---
+			ukn_meta_materials = @ukn_planet_t7_aux_armor_cost_ukn_meta_materials
+			ehof_sr_sentient_metal = @ukn_planet_t7_aux_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_planet_t7_aux_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_planet_t7_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t7_aux_upkeep_energy
+#			minerals = @ukn_planet_t7_aux_upkeep_minerals
+#			alloys = @ukn_planet_t7_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t7_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t7_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t7_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t7_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t7_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t7_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t7_aux_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_planet_t7_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t7_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t7_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t7_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t7_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t7_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 2560
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+				has_monthly_income = { resource = ehof_sr_sentient_metal value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+utility_component_template = {
+	key = "UKN_CRUST_ARMOR_SENTIENT_METAL_PLANETCRAFT_1"
+	size = aux
+	icon = "GFX_ship_part_ukn_crust_armor_sentient_metal_1"
+	icon_frame = 1
+	power = 0
+	
+	modifier = {
+		ship_armor_add = @ukn_crust_armor_sentient_metal_planetcraft_armor_8
+		ship_armor_regen_add_static = @ukn_crust_armor_sentient_metal_planetcraft_armor_regen_8
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_armor_sentient_metal_1" }
+	component_set = "UKN_SET_CRUST_ARMOR_SENTIENT_METAL_PLANETCRAFT_1"
+	upgrades_to = "UKN_CRUST_ARMOR_LIVING_METAL_PLANETCRAFT_1"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t8_aux_cost_minerals
+#			alloys = @ukn_planet_t8_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t8_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t8_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t8_aux_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t8_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t8_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t8_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t8_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t8_aux_cost_ehof_sr_negative_mass
+#---
+			ukn_meta_materials = @ukn_planet_t8_aux_armor_cost_ukn_meta_materials
+			ehof_sr_sentient_metal = @ukn_planet_t8_aux_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_planet_t8_aux_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_planet_t8_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t8_aux_upkeep_energy
+#			minerals = @ukn_planet_t8_aux_upkeep_minerals
+#			alloys = @ukn_planet_t8_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t8_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t8_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t8_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t8_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t8_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t8_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t8_aux_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_planet_t8_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t8_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t8_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t8_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t8_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t8_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 5120
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+				has_monthly_income = { resource = ehof_sr_sentient_metal value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+utility_component_template = {
+	key = "UKN_CRUST_ARMOR_SENTIENT_METAL_PLANETCRAFT_PLANCK"
+	size = aux
+	icon = "GFX_ship_part_ukn_crust_armor_sentient_metal_planck"
+	icon_frame = 1
+	power = 0
+	
+	modifier = {
+		ship_armor_add = @ukn_crust_armor_sentient_metal_planetcraft_armor_planck
+		ship_armor_regen_add_static = @ukn_crust_armor_sentient_metal_planetcraft_armor_regen_planck
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_armor_sentient_metal_planck" }
+	component_set = "UKN_SET_CRUST_ARMOR_SENTIENT_METAL_PLANETCRAFT_PLANCK"
+	upgrades_to = "UKN_CRUST_ARMOR_LIVING_METAL_PLANETCRAFT_1"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t_p_aux_cost_minerals
+#			alloys = @ukn_planet_t_p_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t_p_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t_p_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t_p_aux_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t_p_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t_p_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t_p_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t_p_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t_p_aux_cost_ehof_sr_negative_mass
+#---
+			ukn_meta_materials = @ukn_planet_t_p_aux_armor_cost_ukn_meta_materials
+			ehof_sr_sentient_metal = @ukn_planet_t_p_aux_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_planet_t_p_aux_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_planet_t_p_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t_p_aux_upkeep_energy
+#			minerals = @ukn_planet_t_p_aux_upkeep_minerals
+#			alloys = @ukn_planet_t_p_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t_p_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t_p_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t_p_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t_p_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t_p_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t_p_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t_p_aux_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_planet_t_p_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t_p_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t_p_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t_p_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t_p_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t_p_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 7680
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+				has_monthly_income = { resource = ehof_sr_sentient_metal value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+utility_component_template = {
+	key = "UKN_CRUST_ARMOR_LIVING_METAL_PLANETCRAFT_1"
+	size = aux
+	icon = "GFX_ship_part_ukn_crust_armor_living_metal_1"
+	icon_frame = 1
+	power = 0
+	
+	modifier = {
+		ship_armor_add = @ukn_crust_armor_living_metal_planetcraft_armor_9
+		ship_armor_regen_add_static = @ukn_crust_armor_living_metal_planetcraft_armor_regen_9
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_armor_living_metal_1" }
+	component_set = "UKN_SET_CRUST_ARMOR_LIVING_METAL_PLANETCRAFT_1"
+	upgrades_to = "UKN_CRUST_ARMOR_LIVING_METAL_PLANETCRAFT_2"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t9_aux_cost_minerals
+#			alloys = @ukn_planet_t9_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t9_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t9_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t9_aux_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t9_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t9_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t9_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t9_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t9_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t9_aux_armor_cost_ukn_meta_materials
+			sr_living_metal = @ukn_planet_t9_aux_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_planet_t9_aux_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_planet_t9_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t9_aux_upkeep_energy
+#			minerals = @ukn_planet_t9_aux_upkeep_minerals
+#			alloys = @ukn_planet_t9_aux_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t9_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t9_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t9_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t9_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t9_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t9_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t9_aux_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_planet_t9_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t9_aux_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_planet_t9_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t9_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t9_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t9_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 10240
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = sr_living_metal value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+utility_component_template = {
+	key = "UKN_CRUST_ARMOR_LIVING_METAL_PLANETCRAFT_2"
+	size = aux
+	icon = "GFX_ship_part_ukn_crust_armor_living_metal_2"
+	icon_frame = 1
+	power = 0
+	
+	modifier = {
+		ship_armor_add = @ukn_crust_armor_living_metal_planetcraft_armor_10
+		ship_armor_regen_add_static = @ukn_crust_armor_living_metal_planetcraft_armor_regen_10
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_armor_living_metal_2" }
+	component_set = "UKN_SET_CRUST_ARMOR_LIVING_METAL_PLANETCRAFT_2"
+#	upgrades_to = "UKN_CRUST_ARMOR_NANITE_8"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t10_aux_cost_minerals
+#			alloys = @ukn_planet_t10_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t10_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t10_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t10_aux_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t10_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t10_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t10_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t10_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t10_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t10_aux_armor_cost_ukn_meta_materials
+			sr_living_metal = @ukn_planet_t10_aux_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_planet_t10_aux_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_planet_t10_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t10_aux_upkeep_energy
+#			minerals = @ukn_planet_t10_aux_upkeep_minerals
+#			alloys = @ukn_planet_t10_aux_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t10_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t10_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t10_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t10_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t10_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t10_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t10_aux_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_planet_t10_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t10_aux_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_planet_t10_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t10_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t10_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t10_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 20480
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = sr_living_metal value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+########################################################
+### PLANETCRAFT LUNAR SHIELD GENERATORS (Giga-Ships) ###
+########################################################
+
+### Subspace Planetary Shield Generator [Subspace Fields/Geometry]
+utility_component_template = {
+	key = "UKN_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_1"
+	size = aux
+	icon = "GFX_ship_part_ukn_planetary_shield_generator_1"
+	icon_frame = 1
+	power = @ukn_power_planetary_shield_generator_planetcraft_5
+	
+	modifier = {
+		ship_shield_add = @ukn_planetary_shield_generator_planetcraft_shield_5
+		ship_shield_regen_add_static = @ukn_planetary_shield_generator_planetcraft_shield_regen_5 #Regeneration per day
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_planet_t5_aux_cost_minerals
+#			alloys = @ukn_planet_t5_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t5_aux_cost_ukn_meta_materials
+			ukn_femtomatter = @ukn_planet_t5_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t5_aux_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t5_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t5_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t5_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t5_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t5_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t5_aux_armor_cost_ukn_meta_materials
+#			nanites = @ukn_planet_t5_aux_armor_cost_nanites
+#---
+			ukn_meta_materials = @ukn_planet_t5_aux_shields_cost_ukn_meta_materials
+			ukn_exotic_particles = @ukn_planet_t5_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t5_aux_upkeep_energy
+#			minerals = @ukn_planet_t5_aux_upkeep_minerals
+#			alloys = @ukn_planet_t5_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t5_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t5_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t5_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t5_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t5_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t5_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t5_aux_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_planet_t5_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t5_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t5_aux_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_planet_t5_aux_upkeep_nanites
+#---
+#			minerals = @ukn_planet_t5_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t5_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t5_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_physics_output_4" }
+	component_set = "UKN_SET_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_1"
+	upgrades_to = "UKN_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_2"
+
+	ai_weight = {
+		weight = 640
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = minerals value <= 0 }
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+				has_monthly_income = { resource = ukn_femtomatter value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Multi-Fold Subspace Planetary Shield Generator [Multi-Fold Subspace Geometry]
+utility_component_template = {
+	key = "UKN_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_2"
+	size = aux
+	icon = "GFX_ship_part_ukn_planetary_shield_generator_2"
+	icon_frame = 1
+	power = @ukn_power_planetary_shield_generator_planetcraft_6
+	
+	modifier = {
+		ship_shield_add = @ukn_planetary_shield_generator_planetcraft_shield_6
+		ship_shield_regen_add_static = @ukn_planetary_shield_generator_planetcraft_shield_regen_6 #Regeneration per day
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t6_aux_cost_minerals
+#			alloys = @ukn_planet_t6_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t6_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t6_aux_cost_ukn_femtomatter
+			ukn_condensics = @ukn_planet_t6_aux_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t6_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t6_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t6_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t6_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t6_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t6_aux_armor_cost_ukn_meta_materials
+#			nanites = @ukn_planet_t6_aux_armor_cost_nanites
+#---
+			ukn_meta_materials = @ukn_planet_t6_aux_shields_cost_ukn_meta_materials
+			ukn_exotic_particles = @ukn_planet_t6_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t6_aux_upkeep_energy
+#			minerals = @ukn_planet_t6_aux_upkeep_minerals
+#			alloys = @ukn_planet_t6_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t6_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t6_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t6_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t6_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t6_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t6_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t6_aux_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_planet_t6_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t6_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t6_aux_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_planet_t6_aux_upkeep_nanites
+#---
+#			minerals = @ukn_planet_t6_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t6_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t6_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_physics_output_5" }
+	component_set = "UKN_SET_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_2"
+	upgrades_to = "UKN_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_3"
+
+	ai_weight = {
+		weight = 1280
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+				has_monthly_income = { resource = ukn_condensics value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+#~~~~~~~~~~Vanilla Overwrite End (Shields T1-T5)~~~~~~~~~~
+
+### Spatial Planetary Shield Generator [Dark Matter Geometry]
+utility_component_template = {
+	key = "UKN_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_3"
+	size = aux
+	icon = "GFX_ship_part_ukn_planetary_shield_generator_3"
+	icon_frame = 1
+	power = @ukn_power_planetary_shield_generator_planetcraft_7
+	
+	modifier = {
+		ship_shield_add = @ukn_planetary_shield_generator_planetcraft_shield_7
+		ship_shield_regen_add_static = @ukn_planetary_shield_generator_planetcraft_shield_regen_7 #Regeneration per day
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_physics_output_6" }
+	component_set = "UKN_SET_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_3"
+	upgrades_to = "UKN_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_4"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t7_aux_cost_minerals
+#			alloys = @ukn_planet_t7_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t7_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t7_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t7_aux_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_planet_t7_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t7_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t7_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t7_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t7_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t7_aux_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_planet_t7_aux_armor_cost_ukn_quasi_matter
+#---
+			ukn_meta_materials = @ukn_planet_t7_aux_shields_cost_ukn_meta_materials
+			ukn_exotic_particles = @ukn_planet_t7_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t7_aux_upkeep_energy
+#			minerals = @ukn_planet_t7_aux_upkeep_minerals
+#			alloys = @ukn_planet_t7_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t7_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t7_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t7_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t7_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t7_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t7_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t7_aux_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_planet_t7_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t7_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t7_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t7_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t7_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t7_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 2560
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Nul Field Planetary Shield Generator [Nul Field]
+utility_component_template = {
+	key = "UKN_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_4"
+	size = aux
+	icon = "GFX_ship_part_ukn_planetary_shield_generator_4"
+	icon_frame = 1
+	power = @ukn_power_planetary_shield_generator_planetcraft_8
+	
+	modifier = {
+		ship_shield_add = @ukn_planetary_shield_generator_planetcraft_shield_8
+		ship_shield_regen_add_static = @ukn_planetary_shield_generator_planetcraft_shield_regen_8 #Regeneration per day
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_physics_output_7" }
+	component_set = "UKN_SET_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_4"
+	upgrades_to = "UKN_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_5"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t8_aux_cost_minerals
+#			alloys = @ukn_planet_t8_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t8_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t8_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t8_aux_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_planet_t8_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t8_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t8_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t8_aux_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_planet_t8_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t8_aux_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_planet_t8_aux_armor_cost_ukn_quasi_matter
+#---
+			ukn_meta_materials = @ukn_planet_t8_aux_shields_cost_ukn_meta_materials
+			ukn_exotic_particles = @ukn_planet_t8_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t8_aux_upkeep_energy
+#			minerals = @ukn_planet_t8_aux_upkeep_minerals
+#			alloys = @ukn_planet_t8_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t8_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t8_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t8_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t8_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t8_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t8_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t8_aux_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_planet_t8_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t8_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t8_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t8_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t8_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t8_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 5120
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Nul Field Planetary Shield Generator [Nul Field]
+utility_component_template = {
+	key = "UKN_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_PLANCK"
+	size = aux
+	icon = "GFX_ship_part_ukn_planetary_shield_generator_planck"
+	icon_frame = 1
+	power = @ukn_power_planetary_shield_generator_planetcraft_planck
+	
+	modifier = {
+		ship_shield_add = @ukn_planetary_shield_generator_planetcraft_shield_planck
+		ship_shield_regen_add_static = @ukn_planetary_shield_generator_planetcraft_shield_regen_planck #Regeneration per day
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_physics_output_planck" }
+	component_set = "UKN_SET_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_PLANCK"
+	upgrades_to = "UKN_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_5"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t_p_aux_cost_minerals
+#			alloys = @ukn_planet_t_p_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t_p_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t_p_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t_p_aux_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_planet_t_p_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t_p_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t_p_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t_p_aux_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_planet_t_p_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t_p_aux_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_planet_t_p_aux_armor_cost_ukn_quasi_matter
+#---
+			ukn_meta_materials = @ukn_planet_t_p_aux_shields_cost_ukn_meta_materials
+			ukn_exotic_particles = @ukn_planet_t_p_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t_p_aux_upkeep_energy
+#			minerals = @ukn_planet_t_p_aux_upkeep_minerals
+#			alloys = @ukn_planet_t_p_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t_p_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t_p_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t_p_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t_p_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t_p_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t_p_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t_p_aux_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_planet_t_p_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t_p_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t_p_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t_p_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t_p_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t_p_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 7680
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Sub-Planck Planetary Barrier Generator [Sub-Planck]
+utility_component_template = {
+	key = "UKN_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_5"
+	size = aux
+	icon = "GFX_ship_part_ukn_planetary_shield_generator_5"
+	icon_frame = 1
+	power = @ukn_power_planetary_shield_generator_planetcraft_9
+	
+	modifier = {
+		ship_shield_add = @ukn_planetary_shield_generator_planetcraft_shield_9
+		ship_shield_regen_add_static = @ukn_planetary_shield_generator_planetcraft_shield_regen_9 #Regeneration per day
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_physics_output_8" }
+	component_set = "UKN_SET_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_5"
+	upgrades_to = "UKN_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_6"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t9_aux_cost_minerals
+#			alloys = @ukn_planet_t9_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t9_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t9_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t9_aux_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t9_aux_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_planet_t9_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t9_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t9_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t9_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t9_aux_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_planet_t9_aux_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_planet_t9_aux_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_planet_t9_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t9_aux_upkeep_energy
+#			minerals = @ukn_planet_t9_aux_upkeep_minerals
+#			alloys = @ukn_planet_t9_aux_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t9_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t9_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t9_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t9_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t9_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t9_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t9_aux_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_planet_t9_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t9_aux_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_planet_t9_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t9_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t9_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t9_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 10240
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Flux Planetary Barrier Generator [Flux]
+utility_component_template = {
+	key = "UKN_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_6"
+	size = aux
+	icon = "GFX_ship_part_ukn_planetary_shield_generator_6"
+	icon_frame = 1
+	power = @ukn_power_planetary_shield_generator_planetcraft_10
+	
+	modifier = {
+		ship_shield_add = @ukn_planetary_shield_generator_planetcraft_shield_10
+		ship_shield_regen_add_static = @ukn_planetary_shield_generator_planetcraft_shield_regen_10 #Regeneration per day
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_physics_output_9" }
+	component_set = "UKN_SET_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_6"
+#	upgrades_to = "UKN_PLANETARY_SHIELD_GENERATOR_PLANETCRAFT_7"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t10_aux_cost_minerals
+#			alloys = @ukn_planet_t10_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t10_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t10_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t10_aux_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t10_aux_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_planet_t10_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t10_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t10_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t10_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t10_aux_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_planet_t10_aux_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_planet_t10_aux_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_planet_t10_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t10_aux_upkeep_energy
+#			minerals = @ukn_planet_t10_aux_upkeep_minerals
+#			alloys = @ukn_planet_t10_aux_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t10_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t10_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t10_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t10_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t10_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t10_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t10_aux_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_planet_t10_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t10_aux_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_planet_t10_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t10_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t10_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t10_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 20480
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+############################################################################
+### PLANETCRAFT REGENNING SUPER-PLANETARY SHIELD GENERATORS (Giga-Ships) ###
+############################################################################
+
+### Spatial Planetary Shield Generator [Dark Matter Geometry]
+utility_component_template = {
+	key = "UKN_PLANETARY_SHIELD_GENERATOR_REGENNING_PLANETCRAFT_1"
+	size = aux
+	icon = "GFX_ship_part_ukn_planetary_shield_generator_regenning_1"
+	icon_frame = 1
+	power = @ukn_power_planetary_shield_generator_regenning_planetcraft_7
+	
+	modifier = {
+		ship_shield_add = @ukn_planetary_shield_generator_regenning_planetcraft_shield_7
+		ship_shield_regen_add_static = @ukn_planetary_shield_generator_regenning_planetcraft_shield_regen_7 #Regeneration per day
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_shields_regenning_1" }
+	component_set = "UKN_SET_PLANETARY_SHIELD_GENERATOR_REGENNING_PLANETCRAFT_1"
+	upgrades_to = "UKN_PLANETARY_SHIELD_GENERATOR_REGENNING_PLANETCRAFT_2"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t7_aux_cost_minerals
+#			alloys = @ukn_planet_t7_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t7_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t7_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t7_aux_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_planet_t7_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t7_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t7_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t7_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t7_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t7_aux_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_planet_t7_aux_armor_cost_ukn_quasi_matter
+#---
+			ukn_meta_materials = @ukn_planet_t7_aux_shields_cost_ukn_meta_materials
+			ukn_exotic_particles = @ukn_planet_t7_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t7_aux_upkeep_energy
+#			minerals = @ukn_planet_t7_aux_upkeep_minerals
+#			alloys = @ukn_planet_t7_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t7_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t7_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t7_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t7_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t7_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t7_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t7_aux_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_planet_t7_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t7_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t7_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t7_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t7_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t7_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 2560
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Nul Field Planetary Shield Generator [Nul Field]
+utility_component_template = {
+	key = "UKN_PLANETARY_SHIELD_GENERATOR_REGENNING_PLANETCRAFT_2"
+	size = aux
+	icon = "GFX_ship_part_ukn_planetary_shield_generator_regenning_2"
+	icon_frame = 1
+	power = @ukn_power_planetary_shield_generator_regenning_planetcraft_8
+	
+	modifier = {
+		ship_shield_add = @ukn_planetary_shield_generator_regenning_planetcraft_shield_8
+		ship_shield_regen_add_static = @ukn_planetary_shield_generator_regenning_planetcraft_shield_regen_8 #Regeneration per day
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_shields_regenning_2" }
+	component_set = "UKN_SET_PLANETARY_SHIELD_GENERATOR_REGENNING_PLANETCRAFT_2"
+	upgrades_to = "UKN_PLANETARY_SHIELD_GENERATOR_REGENNING_PLANETCRAFT_3"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t8_aux_cost_minerals
+#			alloys = @ukn_planet_t8_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t8_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t8_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t8_aux_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_planet_t8_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t8_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t8_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t8_aux_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_planet_t8_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t8_aux_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_planet_t8_aux_armor_cost_ukn_quasi_matter
+#---
+			ukn_meta_materials = @ukn_planet_t8_aux_shields_cost_ukn_meta_materials
+			ukn_exotic_particles = @ukn_planet_t8_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t8_aux_upkeep_energy
+#			minerals = @ukn_planet_t8_aux_upkeep_minerals
+#			alloys = @ukn_planet_t8_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t8_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t8_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t8_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t8_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t8_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t8_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t8_aux_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_planet_t8_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t8_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t8_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t8_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t8_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t8_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 5120
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Nul Field Planetary Shield Generator [Nul Field]
+utility_component_template = {
+	key = "UKN_PLANETARY_SHIELD_GENERATOR_REGENNING_PLANETCRAFT_PLANCK"
+	size = aux
+	icon = "GFX_ship_part_ukn_planetary_shield_generator_regenning_planck"
+	icon_frame = 1
+	power = @ukn_power_planetary_shield_generator_regenning_planetcraft_planck
+	
+	modifier = {
+		ship_shield_add = @ukn_planetary_shield_generator_regenning_planetcraft_shield_planck
+		ship_shield_regen_add_static = @ukn_planetary_shield_generator_regenning_planetcraft_shield_regen_planck #Regeneration per day
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_shields_regenning_planck" }
+	component_set = "UKN_SET_PLANETARY_SHIELD_GENERATOR_REGENNING_PLANETCRAFT_PLANCK"
+	upgrades_to = "UKN_PLANETARY_SHIELD_GENERATOR_REGENNING_PLANETCRAFT_3"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t_p_aux_cost_minerals
+#			alloys = @ukn_planet_t_p_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t_p_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t_p_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t_p_aux_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_planet_t_p_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t_p_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t_p_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t_p_aux_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_planet_t_p_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t_p_aux_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_planet_t_p_aux_armor_cost_ukn_quasi_matter
+#---
+			ukn_meta_materials = @ukn_planet_t_p_aux_shields_cost_ukn_meta_materials
+			ukn_exotic_particles = @ukn_planet_t_p_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t_p_aux_upkeep_energy
+#			minerals = @ukn_planet_t_p_aux_upkeep_minerals
+#			alloys = @ukn_planet_t_p_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t_p_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t_p_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t_p_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t_p_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t_p_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t_p_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t_p_aux_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_planet_t_p_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t_p_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t_p_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t_p_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t_p_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t_p_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 7680
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Sub-Planck Planetary Barrier Generator [Sub-Planck]
+utility_component_template = {
+	key = "UKN_PLANETARY_SHIELD_GENERATOR_REGENNING_PLANETCRAFT_3"
+	size = aux
+	icon = "GFX_ship_part_ukn_planetary_shield_generator_regenning_3"
+	icon_frame = 1
+	power = @ukn_power_planetary_shield_generator_regenning_planetcraft_9
+	
+	modifier = {
+		ship_shield_add = @ukn_planetary_shield_generator_regenning_planetcraft_shield_9
+		ship_shield_regen_add_static = @ukn_planetary_shield_generator_regenning_planetcraft_shield_regen_9 #Regeneration per day
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_shields_regenning_3" }
+	component_set = "UKN_SET_PLANETARY_SHIELD_GENERATOR_REGENNING_PLANETCRAFT_3"
+	upgrades_to = "UKN_PLANETARY_SHIELD_GENERATOR_REGENNING_PLANETCRAFT_4"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t9_aux_cost_minerals
+#			alloys = @ukn_planet_t9_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t9_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t9_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t9_aux_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t9_aux_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_planet_t9_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t9_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t9_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t9_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t9_aux_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_planet_t9_aux_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_planet_t9_aux_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_planet_t9_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t9_aux_upkeep_energy
+#			minerals = @ukn_planet_t9_aux_upkeep_minerals
+#			alloys = @ukn_planet_t9_aux_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t9_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t9_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t9_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t9_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t9_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t9_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t9_aux_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_planet_t9_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t9_aux_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_planet_t9_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t9_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t9_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t9_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 10240
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Flux Planetary Barrier Generator [Flux]
+utility_component_template = {
+	key = "UKN_PLANETARY_SHIELD_GENERATOR_REGENNING_PLANETCRAFT_4"
+	size = aux
+	icon = "GFX_ship_part_ukn_planetary_shield_generator_regenning_4"
+	icon_frame = 1
+	power = @ukn_power_planetary_shield_generator_regenning_planetcraft_10
+	
+	modifier = {
+		ship_shield_add = @ukn_planetary_shield_generator_regenning_planetcraft_shield_10
+		ship_shield_regen_add_static = @ukn_planetary_shield_generator_regenning_planetcraft_shield_regen_10 #Regeneration per day
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	
+	prerequisites = { "tech_ukn_shields_regenning_4" }
+	component_set = "UKN_SET_PLANETARY_SHIELD_GENERATOR_REGENNING_PLANETCRAFT_4"
+#	upgrades_to = "UKN_PLANETARY_SHIELD_GENERATOR_REGENNING_PLANETCRAFT_5"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t10_aux_cost_minerals
+#			alloys = @ukn_planet_t10_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t10_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t10_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t10_aux_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t10_aux_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_planet_t10_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t10_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t10_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t10_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t10_aux_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_planet_t10_aux_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_planet_t10_aux_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_planet_t10_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t10_aux_upkeep_energy
+#			minerals = @ukn_planet_t10_aux_upkeep_minerals
+#			alloys = @ukn_planet_t10_aux_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t10_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t10_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t10_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t10_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t10_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t10_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t10_aux_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_planet_t10_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t10_aux_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_planet_t10_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t10_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t10_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t10_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 20480
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+######################################################################
+### PLANETCRAFT PSI SUPER-PLANETARY SHIELD GENERATORS (Giga-Ships) ###
+######################################################################
+
+### Spatial Planetary Shield Generator [Dark Matter Geometry]
+utility_component_template = {
+	key = "UKN_PLANETARY_SHIELD_GENERATOR_PSI_PLANETCRAFT_1"
+	size = aux
+	icon = "GFX_ship_part_ukn_planetary_shield_generator_psi_1"
+	icon_frame = 1
+	power = @ukn_power_planetary_shield_generator_psi_attack_planet_7
+	
+	modifier = {
+		ship_shield_add = @ukn_planetary_shield_generator_psi_attack_planet_shield_7
+		ship_shield_regen_add_static = @ukn_planetary_shield_generator_psi_attack_planet_shield_regen_7 #Regeneration per day
+		ship_weapon_damage = @ukn_attack_planet_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_massive_planet giga_war_planet_fe giga_war_planet_flusion }
+	
+	prerequisites = { "tech_psionic_shield" }
+	component_set = "UKN_SET_PLANETARY_SHIELD_GENERATOR_PSI_PLANETCRAFT_1"
+	upgrades_to = "UKN_PLANETARY_SHIELD_GENERATOR_PSI_PLANETCRAFT_2"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t7_aux_cost_minerals
+#			alloys = @ukn_planet_t7_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t7_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t7_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t7_aux_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_planet_t7_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t7_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t7_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t7_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t7_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t7_aux_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_planet_t7_aux_armor_cost_ukn_quasi_matter
+#---
+			ukn_meta_materials = @ukn_planet_t7_aux_shields_cost_ukn_meta_materials
+			sr_zro = @ukn_planet_t7_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t7_aux_upkeep_energy
+#			minerals = @ukn_planet_t7_aux_upkeep_minerals
+#			alloys = @ukn_planet_t7_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t7_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t7_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t7_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t7_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t7_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t7_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t7_aux_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_planet_t7_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t7_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t7_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t7_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t7_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t7_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 5120
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = sr_zro value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Nul Field Planetary Shield Generator [Nul Field]
+utility_component_template = {
+	key = "UKN_PLANETARY_SHIELD_GENERATOR_PSI_PLANETCRAFT_2"
+	size = aux
+	icon = "GFX_ship_part_ukn_planetary_shield_generator_psi_2"
+	icon_frame = 1
+	power = @ukn_power_planetary_shield_generator_psi_attack_planet_8
+	
+	modifier = {
+		ship_shield_add = @ukn_planetary_shield_generator_psi_attack_planet_shield_8
+		ship_shield_regen_add_static = @ukn_planetary_shield_generator_psi_attack_planet_shield_regen_8 #Regeneration per day
+		ship_weapon_damage = @ukn_attack_planet_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_massive_planet giga_war_planet_fe giga_war_planet_flusion }
+	
+	prerequisites = { "tech_ukn_shields_psi_2" }
+	component_set = "UKN_SET_PLANETARY_SHIELD_GENERATOR_PSI_PLANETCRAFT_2"
+	upgrades_to = "UKN_PLANETARY_SHIELD_GENERATOR_PSI_PLANETCRAFT_3"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t8_aux_cost_minerals
+#			alloys = @ukn_planet_t8_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t8_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t8_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t8_aux_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_planet_t8_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t8_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t8_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t8_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t8_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t8_aux_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_planet_t8_aux_armor_cost_ukn_quasi_matter
+#---
+			ukn_meta_materials = @ukn_planet_t8_aux_shields_cost_ukn_meta_materials
+			sr_zro = @ukn_planet_t8_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t8_aux_upkeep_energy
+#			minerals = @ukn_planet_t8_aux_upkeep_minerals
+#			alloys = @ukn_planet_t8_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t8_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t8_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t8_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t8_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t8_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t8_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t8_aux_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_planet_t8_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t8_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t8_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t8_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t8_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t8_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 10240
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = sr_zro value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Nul Field Planetary Shield Generator [Nul Field]
+utility_component_template = {
+	key = "UKN_PLANETARY_SHIELD_GENERATOR_PSI_PLANETCRAFT_UNBIDDEN"
+	size = aux
+	icon = "GFX_ship_part_ukn_planetary_shield_generator_psi_unbidden"
+	icon_frame = 1
+	power = @ukn_power_planetary_shield_generator_psi_attack_planet_unbidden
+	
+	modifier = {
+		ship_shield_add = @ukn_planetary_shield_generator_psi_attack_planet_shield_planck
+		ship_shield_regen_add_static = @ukn_planetary_shield_generator_psi_attack_planet_shield_regen_planck #Regeneration per day
+		ship_weapon_damage = @ukn_attack_planet_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_massive_planet giga_war_planet_fe giga_war_planet_flusion }
+	
+	prerequisites = { "tech_ukn_shields_psi_unbidden" }
+	component_set = "UKN_SET_PLANETARY_SHIELD_GENERATOR_PSI_PLANETCRAFT_UNBIDDEN"
+	upgrades_to = "UKN_PLANETARY_SHIELD_GENERATOR_PSI_PLANETCRAFT_3"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t_p_aux_cost_minerals
+#			alloys = @ukn_planet_t_p_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t_p_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t_p_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t_p_aux_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_planet_t_p_aux_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t_p_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t_p_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t_p_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t_p_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t_p_aux_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_planet_t_p_aux_armor_cost_ukn_quasi_matter
+#---
+			ukn_meta_materials = @ukn_planet_t_p_aux_shields_cost_ukn_meta_materials
+			sr_zro = @ukn_planet_t_p_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t_p_aux_upkeep_energy
+#			minerals = @ukn_planet_t_p_aux_upkeep_minerals
+#			alloys = @ukn_planet_t_p_aux_upkeep_alloys
+			ukn_meta_materials = @ukn_planet_t_p_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t_p_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t_p_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t_p_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t_p_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t_p_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t_p_aux_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_planet_t_p_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t_p_aux_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_planet_t_p_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t_p_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t_p_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t_p_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 7680
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_meta_materials value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = sr_zro value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Sub-Planck Planetary Barrier Generator [Sub-Planck]
+utility_component_template = {
+	key = "UKN_PLANETARY_SHIELD_GENERATOR_PSI_PLANETCRAFT_3"
+	size = aux
+	icon = "GFX_ship_part_ukn_planetary_shield_generator_psi_3"
+	icon_frame = 1
+	power = @ukn_power_planetary_shield_generator_psi_attack_planet_9
+	
+	modifier = {
+		ship_shield_add = @ukn_planetary_shield_generator_psi_attack_planet_shield_9
+		ship_shield_regen_add_static = @ukn_planetary_shield_generator_psi_attack_planet_shield_regen_9 #Regeneration per day
+		ship_weapon_damage = @ukn_attack_planet_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_massive_planet giga_war_planet_fe giga_war_planet_flusion }
+	
+	prerequisites = { "tech_ukn_shields_psi_3" }
+	component_set = "UKN_SET_PLANETARY_SHIELD_GENERATOR_PSI_PLANETCRAFT_3"
+	upgrades_to = "UKN_PLANETARY_SHIELD_GENERATOR_PSI_PLANETCRAFT_4"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t9_aux_cost_minerals
+#			alloys = @ukn_planet_t9_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t9_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t9_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t9_aux_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t9_aux_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_planet_t9_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t9_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t9_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t9_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t9_aux_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_planet_t9_aux_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_planet_t9_aux_shields_cost_ukn_meta_materials
+			sr_zro = @ukn_planet_t9_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t9_aux_upkeep_energy
+#			minerals = @ukn_planet_t9_aux_upkeep_minerals
+#			alloys = @ukn_planet_t9_aux_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t9_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t9_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t9_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t9_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t9_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t9_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t9_aux_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_planet_t9_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t9_aux_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_planet_t9_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t9_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t9_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t9_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 20480
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = sr_zro value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Flux Planetary Barrier Generator [Flux]
+utility_component_template = {
+	key = "UKN_PLANETARY_SHIELD_GENERATOR_PSI_PLANETCRAFT_4"
+	size = aux
+	icon = "GFX_ship_part_ukn_planetary_shield_generator_psi_4"
+	icon_frame = 1
+	power = @ukn_power_planetary_shield_generator_psi_attack_planet_10
+	
+	modifier = {
+		ship_shield_add = @ukn_planetary_shield_generator_psi_attack_planet_shield_10
+		ship_shield_regen_add_static = @ukn_planetary_shield_generator_psi_attack_planet_shield_regen_10 #Regeneration per day
+		ship_weapon_damage = @ukn_attack_planet_aux_weapon_damage_1_pop
+	}
+	
+	size_restriction = { giga_massive_planet giga_war_planet_fe giga_war_planet_flusion }
+	
+	prerequisites = { "tech_ukn_shields_psi_4" }
+	component_set = "UKN_SET_PLANETARY_SHIELD_GENERATOR_PSI_PLANETCRAFT_4"
+#	upgrades_to = "UKN_PLANETARY_SHIELD_GENERATOR_PSI_PLANETCRAFT_5"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_planet_t10_aux_cost_minerals
+#			alloys = @ukn_planet_t10_aux_cost_alloys
+#			ukn_meta_materials = @ukn_planet_t10_aux_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t10_aux_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t10_aux_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t10_aux_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_planet_t10_aux_cost_ukn_causalitons
+#			exotic_gases = @ukn_planet_t10_aux_cost_exotic_gases
+#			rare_crystals = @ukn_planet_t10_aux_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_planet_t10_aux_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_planet_t10_aux_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_planet_t10_aux_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_planet_t10_aux_shields_cost_ukn_meta_materials
+			sr_zro = @ukn_planet_t10_aux_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_planet_t10_aux_upkeep_energy
+#			minerals = @ukn_planet_t10_aux_upkeep_minerals
+#			alloys = @ukn_planet_t10_aux_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t10_aux_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_planet_t10_aux_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_planet_t10_aux_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_planet_t10_aux_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_planet_t10_aux_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_planet_t10_aux_upkeep_exotic_gases
+#			rare_crystals = @ukn_planet_t10_aux_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_planet_t10_aux_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_planet_t10_aux_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_planet_t10_aux_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_planet_t10_aux_bombardment_upkeep_minerals
+#			alloys = @ukn_planet_t10_aux_bombardment_upkeep_alloys
+#			ukn_meta_materials = @ukn_planet_t10_aux_bombardment_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = 40960
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = sr_zro value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------

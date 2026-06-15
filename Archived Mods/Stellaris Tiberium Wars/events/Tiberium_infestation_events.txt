@@ -1,0 +1,1762 @@
+namespace = tiberium_infest
+
+planet_event = {
+	id = tiberium_infest.0
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			is_planet_class = pc_habitable_tiberium
+			is_planet_class = pc_uninhabitable_tiberium
+			has_deposit = d_tiberium_asteroid
+			has_planet_flag = tiberium_asteroid_collision
+		}
+		NOT = { has_planet_flag = tiberium_initial_infest_delay }
+	}
+	
+	immediate = {
+		remove_planet_flag = tiberium_grew
+		remove_planet_flag = tiberium_shrunk
+		if = {
+			limit = {
+				NOT = { has_planet_flag = tiberium_variable_setup_done }
+			}
+			set_tiberium_variables = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					ROOT = { has_planet_flag = tiberium_depleted }
+				}
+				OR = {
+					has_deposit = d_tiberium_asteroid
+					has_planet_flag = tiberium_asteroid_collision
+					is_planet_class = pc_habitable_tiberium
+					is_planet_class = pc_uninhabitable_tiberium
+				}
+			}
+			planet_event = { id = tiberium_infest.1 }
+		}
+	}
+}
+
+planet_event = {
+	id = tiberium_infest.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		remove_planet_flag = tiberium_grew
+		remove_planet_flag = tiberium_shrunk
+		set_variable = { which = tiberium_takeover_count_temp value = 0 }
+		tiberium_planet_climate_impact = yes
+		tib_count_pops_takeover = yes
+		if = {
+			limit = {
+				exists = owner
+				owner = { has_edict = tiberium_cleanup }
+				NOT = {
+					ROOT = { has_planet_flag = tiberium_depleted }
+				}
+			}
+			change_variable = { which = tiberium_takeover_count_temp value = -10 }
+		}
+		if = {
+			limit = {
+				NOT = {
+					ROOT = { has_planet_flag = tiberium_depleted }
+				}
+				has_planet_flag = tiberium_sonic_protection
+			}
+			ROOT = { change_variable = { which = tiberium_takeover_count_temp value = -10 } }
+		}
+		if = {
+			limit = {
+				is_under_colonization = yes
+			}
+			ROOT = { change_variable = { which = tiberium_takeover_count_temp value = -5 } }
+		}
+		if = {
+			limit = {
+				is_planet_class = pc_habitable_tiberium
+			}
+			every_deposit = {
+				if = {
+					limit = {
+						is_deposit_type = d_yellow_zone
+						NOT = {
+							ROOT = { has_planet_flag = tiberium_depleted }
+						}
+					}
+					ROOT = { change_variable = { which = tiberium_takeover_count value = 2 } }
+				}
+				else_if = {
+					limit = {
+						is_deposit_type = d_red_zone
+						NOT = {
+							ROOT = { has_planet_flag = tiberium_depleted }
+						}
+					}
+					ROOT = { change_variable = { which = tiberium_takeover_count value = 5 } }
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { which = tiberium_takeover_count value > 9 }
+				}
+				change_variable = { which = tiberium_total_count value = 1 }
+			}
+			change_variable = { which = tiberium_takeover_count value = tiberium_takeover_count_temp }
+			export_trigger_value_to_variable = {
+				trigger = num_districts
+				parameters = { type = district_blue_zone }
+				variable = tiberium_blue_zones
+			}
+			subtract_variable = { which = tiberium_takeover_count value = tiberium_blue_zones }
+			if = {
+				limit = {
+					check_variable = { which = tiberium_takeover_count value >= 1 }
+					num_buildings = { type = building_initial_tiberium_research_lab value = 1 }
+					NOT = {
+						ROOT = { has_planet_flag = tiberium_depleted }
+					}
+				}
+				change_variable ={ which = tiberium_takeover_count value = -3 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { which = tiberium_takeover_count value >= 1 }
+					num_buildings = { type = building_initial_tiberium_research_lab value = 2 }
+					NOT = {
+						ROOT = { has_planet_flag = tiberium_depleted }
+					}
+				}
+				change_variable ={ which = tiberium_takeover_count value = -6 }
+			}
+			set_variable = { which = tiberium_takeover_count_display value = tiberium_takeover_count }
+			random_list = {
+				10 = { #block blue
+					modifier = {
+						factor = 0
+						ROOT = { has_planet_flag = tiberium_depleted }
+					}
+					modifier = {
+						factor = 0
+						check_variable = { which = tiberium_takeover_count value <= 3 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 4 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 5 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 6 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 7 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 8 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 9 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 10 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 15 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 20 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 25 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 30 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 35 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 40 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 45 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 50 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 0 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 1 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 2 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 3 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 4 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 5 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 6 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 7 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 8 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 9 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 10 }
+					}
+					modifier = {
+						factor = 0
+						has_deposit = d_yellow_zone
+					}
+					modifier = {
+						factor = 0
+						NOT = { has_deposit = d_blue_zone }
+					}
+					modifier = {
+						factor = 0
+						num_free_districts = { type = district_blue_zone value > 0 }
+					}
+					while = {
+						count = @no_sonic_cycles
+						limit = {
+							NOT = {
+								has_planet_flag = tiberium_sonic_protection
+							}
+							check_variable = { which = tiberium_takeover_count value >= 4 }
+							free_district_slots > 0
+							has_deposit = d_blue_zone
+						}
+						tib_eat_blue_zone = yes
+						add_deposit = b_blue_zone
+						remove_deposit = d_blue_zone
+						change_variable = { which = tiberium_takeover_count value = -4 }
+					}
+					while = {
+						count = @sonic_active_cycles
+						limit = {
+							has_planet_flag = tiberium_sonic_protection
+							check_variable = { which = tiberium_takeover_count value >= 8 }
+							free_district_slots > 0
+							has_deposit = d_blue_zone
+						}
+						tib_eat_blue_zone = yes
+						add_deposit = b_blue_zone
+						remove_deposit = d_blue_zone
+						change_variable = { which = tiberium_takeover_count value = -8 }
+					}
+				}
+				10 = { #blue to yellow
+					modifier = {
+						factor = 0
+						ROOT = { has_planet_flag = tiberium_depleted }
+					}
+					modifier = {
+						factor = 0
+						check_variable = { which = tiberium_takeover_count value <= 3 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 4 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 5 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 6 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 7 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 8 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 9 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 10 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 15 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 20 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 25 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 30 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 35 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 40 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 45 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 50 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 0 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 1 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 2 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 3 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 4 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 5 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 6 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 7 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 8 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 9 }
+					}
+					modifier = {
+						factor = @blue_zone_district_weight
+						check_variable = { which = tiberium_blue_zones value > 10 }
+					}
+					modifier = {
+						factor = 0
+						has_deposit = d_yellow_zone
+					}
+					modifier = {
+						factor = 0
+						NOT = { has_deposit = d_blue_zone }
+					}
+					modifier = {
+						factor = 0
+						num_free_districts = { type = district_blue_zone value < 1 }
+					}
+					set_planet_flag = tiberium_grew
+					while = {
+						count = @no_sonic_cycles
+						limit = {
+							NOT = {
+								has_planet_flag = tiberium_sonic_protection
+							}
+							check_variable = { which = tiberium_takeover_count value >= 4 }
+							free_district_slots > 0
+							has_deposit = d_blue_zone
+						}
+						remove_deposit = d_blue_zone
+						add_deposit = d_yellow_zone
+						change_variable = { which = tiberium_takeover_count value = -4 }
+						change_variable = { which = tiberium_total_count value = 1 }
+						if = {
+							limit = {
+								has_deposit = b_blue_zone
+							}
+							remove_deposit = b_blue_zone
+							add_deposit = b_yellow_zone
+						}
+					}
+					while = {
+						count = @sonic_active_cycles
+						limit = {
+							has_planet_flag = tiberium_sonic_protection
+							check_variable = { which = tiberium_takeover_count value >= 8 }
+							free_district_slots > 0
+							has_deposit = d_blue_zone
+						}
+						remove_deposit = d_blue_zone
+						add_deposit = d_yellow_zone
+						change_variable = { which = tiberium_takeover_count value = -8 }
+						change_variable = { which = tiberium_total_count value = 1 }
+						if = {
+							limit = {
+								has_deposit = b_blue_zone
+							}
+							remove_deposit = b_blue_zone
+							add_deposit = b_yellow_zone
+						}
+					}
+				}
+				10 = { #yellow to red
+					modifier = {
+						factor = 0
+						ROOT = { has_planet_flag = tiberium_depleted }
+					}
+					modifier = {
+						factor = 0
+						check_variable = { which = tiberium_takeover_count value <= 5 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 6 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 7 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 8 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 9 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 10 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 15 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 20 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 25 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 30 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 35 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 40 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 45 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 50 }
+					}
+					modifier = {
+						factor = 0
+						NOT = { has_deposit = d_yellow_zone }
+					}
+					set_planet_flag = tiberium_grew
+					if = {
+						limit = {
+							num_free_districts = { type = district_yellow_zone value = 0 }
+						}
+						remove_district = district_yellow_zone
+					}
+					while = {
+						count = @no_sonic_cycles
+						limit = {
+							has_deposit = d_yellow_zone
+							NOT = {
+								has_planet_flag = tiberium_sonic_protection
+							}
+							check_variable = { which = tiberium_takeover_count value >= 3 }
+						}
+						remove_deposit = d_yellow_zone
+						add_deposit = d_red_zone
+						change_variable = { which = tiberium_takeover_count value = -3 }
+						change_variable = { which = tiberium_total_count value = 2 }
+						if = {
+							limit = {
+								has_deposit = b_yellow_zone
+							}
+							remove_deposit = b_yellow_zone
+							add_deposit = b_red_zone
+						}
+					}
+					while = {
+						count = @sonic_active_cycles
+						limit = {
+							has_deposit = d_yellow_zone
+							has_planet_flag = tiberium_sonic_protection
+							check_variable = { which = tiberium_takeover_count value >= 6 }
+						}
+						remove_deposit = d_yellow_zone
+						add_deposit = d_red_zone
+						change_variable = { which = tiberium_takeover_count value = -6 }
+						change_variable = { which = tiberium_total_count value = 2 }
+						if = {
+							limit = {
+								has_deposit = b_yellow_zone
+							}
+							remove_deposit = b_yellow_zone
+							add_deposit = b_red_zone
+						}
+					}
+				}
+				10 = { #red to yellow
+					modifier = {
+						factor = 0
+						check_variable = { which = tiberium_takeover_count value <= -2 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -5 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -10 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -15 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -20 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -25 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -30 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -35 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -40 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -45 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -50 }
+					}
+					modifier = {
+						factor = 0
+						has_deposit = d_yellow_zone
+					}
+					modifier = {
+						factor = 0
+						NOT = { has_deposit = d_red_zone }
+					}
+					set_planet_flag = tiberium_shrunk
+					while = {
+						count = 3
+						limit = {
+							has_deposit = d_red_zone
+							check_variable = { which = tiberium_takeover_count value <= -2 }
+						}
+						remove_deposit = d_red_zone
+						add_deposit = d_yellow_zone
+						if = {
+							limit = {
+								num_free_districts = { type = district_red_zone value = 0 }
+							}
+							remove_district = district_red_zone
+						}
+						ROOT = { change_variable = { which = tiberium_takeover_count value = 2 } }
+						if = {
+							limit = {
+								has_deposit = b_red_zone
+							}
+							remove_deposit = b_red_zone
+							add_deposit = b_yellow_zone
+						}
+					}
+				}
+				10 = { #yellow to blue
+					modifier = {
+						factor = 0
+						check_variable = { which = tiberium_takeover_count value <= -2 }
+					}
+					modifier = {
+						factor = 0
+						NOT = { has_deposit = d_yellow_zone }
+					}
+					if = {
+						limit = {
+							num_free_districts = { type = district_yellow_zone value = 0 }
+						}
+						remove_district = district_yellow_zone
+					}
+					set_planet_flag = tiberium_shrunk
+					while = {
+						count = 3
+						limit = {
+							has_deposit = d_yellow_zone
+							check_variable = { which = tiberium_takeover_count value <= -2 }
+						}
+						remove_deposit = d_yellow_zone
+						add_deposit = d_blue_zone
+						if = {
+							limit = {
+								num_free_districts = { type = district_yellow_zone value = 0 }
+							}
+							remove_district = district_yellow_zone
+						}
+						ROOT = { change_variable = { which = tiberium_takeover_count value = 2 } }
+						if = {
+							limit = {
+								has_deposit = b_yellow_zone
+							}
+							remove_deposit = b_yellow_zone
+						}
+							
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0.5
+						check_variable = { which = tiberium_takeover_count value >= 10 }
+						NOT = { has_planet_flag = tiberium_sonic_protection }
+					}
+					modifier = {
+						factor = 2
+						has_planet_flag = tiberium_sonic_protection
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_planet_class = pc_uninhabitable_tiberium
+			}
+			every_deposit = {
+				if = {
+					limit = {
+						is_deposit_type = d_green_tiberium_field
+						NOT = {
+							ROOT = { has_planet_flag = tiberium_depleted }
+						}
+					}
+					ROOT = { change_variable = { which = tiberium_takeover_count value = 2 } }
+				}
+				else_if = {
+					limit = {
+						is_deposit_type = d_blue_tiberium_field
+						NOT = {
+							ROOT = { has_planet_flag = tiberium_depleted }
+						}
+					}
+					ROOT = { change_variable = { which = tiberium_takeover_count value = 2 } }
+				}
+				else_if = {
+					limit = {
+						is_deposit_type = d_green_tiberium_glacier
+						NOT = {
+							ROOT = { has_planet_flag = tiberium_depleted }
+						}
+					}
+					ROOT = { change_variable ={ which = tiberium_takeover_count value = 6 } }
+				}
+				else_if = {
+					limit = {
+						is_deposit_type = d_blue_tiberium_glacier
+						NOT = {
+							ROOT = { has_planet_flag = tiberium_depleted }
+						}
+					}
+					ROOT = { change_variable ={ which = tiberium_takeover_count value = 6 } }
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						check_variable = { which = tiberium_takeover_count value > 9 }
+						has_mining_station = yes
+					}
+				}
+				change_variable = { which = tiberium_total_count value = 1 }
+			}
+			change_variable = { which = tiberium_takeover_count value = tiberium_takeover_count_temp }
+			if = {
+				limit = {
+					has_mining_station = yes
+				}
+				change_variable = { which = tiberium_takeover_count value = -5 }
+				owner = {
+					switch = {
+						trigger = has_policy_flag
+						underharvest_tiberium = {
+							PREV = {
+								divide_variable = { which = tiberium_takeover_count value = 2 }
+							}
+						}
+						sustainable_harvest_tiberium = {
+							PREV = {
+								set_variable = { which = tiberium_takeover_count value = 0 }
+							}
+						}
+						overharvest_tiberium = {
+							PREV = {
+								divide_variable = { which = tiberium_takeover_count value = 2 }
+								multiply_variable = { which = tiberium_takeover_count value = -1 }
+							}
+						}
+					}
+				}
+			}
+			set_variable = { which = tiberium_takeover_count_display value = tiberium_takeover_count }
+			random_list = {
+				10 = {#Green field
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 2 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 3 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 4 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 5 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 6 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 7 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 8 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 9 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 10 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 15 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 20 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 25 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 30 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 35 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 40 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 45 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 50 }
+					}
+					modifier = {
+						factor = 0
+						ROOT = { has_planet_flag = tiberium_depleted }
+					}
+					modifier = {
+						factor = 0
+						check_variable = { which = tiberium_takeover_count value <= 1 }
+					}
+					set_planet_flag = tiberium_grew
+					while = {
+						count = @no_sonic_cycles
+						limit = {
+							NOT = {
+								has_planet_flag = tiberium_sonic_protection
+							}
+							check_variable = { which = tiberium_takeover_count value >= 4 }
+						}
+						add_deposit = d_green_tiberium_field
+						change_variable ={ which = tiberium_takeover_count value = -4 }
+						change_variable ={ which = tiberium_total_count value = 1 }					
+					}
+					while = {
+						count = @sonic_active_cycles
+						limit = {
+							has_planet_flag = tiberium_sonic_protection
+							check_variable = { which = tiberium_takeover_count value >= 2 }
+						}
+						add_deposit = d_green_tiberium_field
+						change_variable ={ which = tiberium_takeover_count value = -2 }
+						change_variable ={ which = tiberium_total_count value = 1 }					
+					}
+				}
+				10 = {#Green field to glacier
+					modifier = {
+						factor = 0
+						ROOT = { has_planet_flag = tiberium_depleted }
+					}
+					modifier = {
+						factor = 0
+						check_variable = { which = tiberium_takeover_count value <= 2 }
+					}
+					modifier = {
+						factor = 0
+						NOT = { has_deposit = d_green_tiberium_field }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 3 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 4 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 5 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 6 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 7 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 8 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 9 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 10 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 15 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 20 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 25 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 30 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 35 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 40 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 45 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 50 }
+					}
+					set_planet_flag = tiberium_grew
+					if = {
+						limit = {
+							NOT = {
+								has_planet_flag = tiberium_sonic_protection
+							}
+							check_variable = { which = tiberium_takeover_count value >= 3 }
+							has_deposit = d_green_tiberium_field
+						}
+						remove_deposit = d_green_tiberium_field
+						add_deposit = d_green_tiberium_glacier
+						change_variable ={ which = tiberium_takeover_count value = -3 }
+						change_variable ={ which = tiberium_total_count value = 2 }
+					}
+					else_if = {
+						limit = {
+							has_planet_flag = tiberium_sonic_protection
+							check_variable = { which = tiberium_takeover_count value >= 6 }
+							has_deposit = d_green_tiberium_field
+						}
+						remove_deposit = d_green_tiberium_field
+						add_deposit = d_green_tiberium_glacier
+						change_variable ={ which = tiberium_takeover_count value = -6 }
+						change_variable ={ which = tiberium_total_count value = 2 }
+					}
+				}
+				10 = {#Green field to blue field
+					modifier = {
+						factor = 0
+						ROOT = { has_planet_flag = tiberium_depleted }
+					}
+					modifier = {
+						factor = 0
+						check_variable = { which = tiberium_takeover_count value <= 1 }
+					}
+					modifier = {
+						factor = 0
+						NOT = { has_deposit = d_green_tiberium_field }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 2 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 3 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 4 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 5 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 6 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 7 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 8 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 9 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 10 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 15 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 20 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 25 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 30 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 35 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 40 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 45 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 50 }
+					}
+					set_planet_flag = tiberium_grew
+					while = {
+						count = @no_sonic_cycles
+						limit = {
+							NOT = {
+								has_planet_flag = tiberium_sonic_protection
+							}
+							check_variable = { which = tiberium_takeover_count value >= 2 }
+							has_deposit = d_green_tiberium_field
+						}	
+						if = {
+							limit = {
+								num_free_districts = { type = district_green_harvester value = 0 }
+							}
+							remove_district = district_green_harvester
+						}
+						remove_deposit = d_green_tiberium_field
+						add_deposit = d_blue_tiberium_field
+						change_variable ={ which = tiberium_takeover_count value = -2 }
+						change_variable ={ which = tiberium_total_count value = 1 }
+					}
+					while = {
+						count = @sonic_active_cycles
+						limit = {
+							has_planet_flag = tiberium_sonic_protection
+							check_variable = { which = tiberium_takeover_count value >= 4 }
+							has_deposit = d_green_tiberium_field
+						}	
+						if = {
+							limit = {
+								num_free_districts = { type = district_green_harvester value = 0 }
+							}
+							remove_district = district_green_harvester
+						}
+						remove_deposit = d_green_tiberium_field
+						add_deposit = d_blue_tiberium_field
+						change_variable = { which = tiberium_takeover_count value = -4 }
+						change_variable = { which = tiberium_total_count value = 1 }
+					}
+				}
+				10 = {#Blue field to glacier
+					modifier = {
+						factor = 0
+						ROOT = { has_planet_flag = tiberium_depleted }
+					}
+					modifier = {
+						factor = 0
+						check_variable = { which = tiberium_takeover_count value <= 1 }
+					}
+					modifier = {
+						factor = 0
+						NOT = { has_deposit = d_blue_tiberium_field }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 2 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 3 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 4 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 5 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 6 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 7 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 8 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 9 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 10 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 15 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 20 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 25 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 30 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 35 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 40 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 45 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 50 }
+					}
+					set_planet_flag = tiberium_grew
+					if = {
+						limit = {
+							NOT = {
+								has_planet_flag = tiberium_sonic_protection
+							}
+							check_variable = { which = tiberium_takeover_count value >= 4 }
+							has_deposit = d_blue_tiberium_field
+						}
+						remove_deposit = d_blue_tiberium_field
+						add_deposit = d_blue_tiberium_glacier
+						change_variable = { which = tiberium_takeover_count value = -4 }
+						change_variable = { which = tiberium_total_count value = 2 }
+					}
+					else_if = {
+						limit = {
+							has_planet_flag = tiberium_sonic_protection
+							check_variable = { which = tiberium_takeover_count value >= 8 }
+							has_deposit = d_blue_tiberium_field
+						}
+						remove_deposit = d_blue_tiberium_field
+						add_deposit = d_blue_tiberium_glacier
+						change_variable = { which = tiberium_takeover_count value = -8 }
+						change_variable = { which = tiberium_total_count value = 2 }
+					}
+				}
+				10 = { #Green to blue glacier
+					modifier = {
+						factor = 0
+						ROOT = { has_planet_flag = tiberium_depleted }
+					}
+					modifier = {
+						factor = 0
+						check_variable = { which = tiberium_takeover_count value <= 2 }
+					}
+					modifier = {
+						factor = 0
+						NOT = { has_deposit = d_green_tiberium_glacier }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 3 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 4 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 5 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 6 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 7 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 8 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 9 }
+					}
+					modifier = {
+						factor = 1.1
+						check_variable = { which = tiberium_takeover_count value >= 10 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 15 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 20 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 25 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 30 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 35 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 40 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 45 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value >= 50 }
+					}
+					set_planet_flag = tiberium_grew
+					while = {
+						count = 2
+						limit = {
+							NOT = {
+								has_planet_flag = tiberium_sonic_protection
+							}
+							check_variable = { which = tiberium_takeover_count value >= 3 }
+							has_deposit = d_green_tiberium_glacier
+						}
+						if = {
+							limit = {
+								num_free_districts = { type = district_green_harvester value = 0 }
+							}
+							while = {
+								count = 3
+								remove_district = district_green_harvester
+							}
+						}
+						else_if = {
+							limit = {
+								num_free_districts = { type = district_green_harvester value = 1 }
+							}
+							while = {
+								count = 2
+								remove_district = district_green_harvester
+							}
+						}
+						else_if = {
+							limit = {
+								num_free_districts = { type = district_green_harvester value = 2 }
+							}
+							remove_district = district_green_harvester
+						}
+						remove_deposit = d_green_tiberium_glacier
+						add_deposit = d_blue_tiberium_glacier
+						change_variable ={ which = tiberium_takeover_count value = -3 }
+						change_variable ={ which = tiberium_total_count value = 3 }
+					}
+					while = {
+						count = 1
+						limit = {
+							has_planet_flag = tiberium_sonic_protection
+							check_variable = { which = tiberium_takeover_count value >= 6 }
+							has_deposit = d_green_tiberium_glacier
+						}
+						if = {
+							limit = {
+								num_free_districts = { type = district_green_harvester value = 0 }
+							}
+							while = {
+								count = 3
+								remove_district = district_green_harvester
+							}
+						}
+						else_if = {
+							limit = {
+								num_free_districts = { type = district_green_harvester value = 1 }
+							}
+							while = {
+								count = 2
+								remove_district = district_green_harvester
+							}
+						}
+						else_if = {
+							limit = {
+								num_free_districts = { type = district_green_harvester value = 2 }
+							}
+							remove_district = district_green_harvester
+						}
+						remove_deposit = d_green_tiberium_glacier
+						add_deposit = d_blue_tiberium_glacier
+						change_variable ={ which = tiberium_takeover_count value = -6 }
+						change_variable ={ which = tiberium_total_count value = 3 }
+					}
+				}
+				10 = {#Green field remove
+					modifier = {
+						factor = 0
+						ROOT = { has_planet_flag = tiberium_depleted }
+					}
+					modifier = {
+						factor = 0
+						check_variable = { which = tiberium_takeover_count value >= -2 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -5 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -10 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -15 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -20 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -25 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -30 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -35 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -40 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -45 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -50 }
+					}
+					modifier = {
+						factor = 0
+						NOT = { has_deposit = d_green_tiberium_field }
+					}
+					set_planet_flag = tiberium_shrunk
+					while = {
+						count = 1
+						limit = {
+							check_variable = { which = tiberium_takeover_count value <= -2 }
+							has_deposit = d_green_tiberium_field
+						}
+						if = {
+							limit = {
+								num_free_districts = { type = district_green_harvester value = 0 }
+							}
+							remove_district = district_green_harvester
+						}
+						remove_deposit = d_green_tiberium_field
+						change_variable ={ which = tiberium_takeover_count value = 1 }
+					}
+				}
+				10 = {#Blue field remove
+					modifier = {
+						factor = 0
+						ROOT = { has_planet_flag = tiberium_depleted }
+					}
+					modifier = {
+						factor = 0
+						check_variable = { which = tiberium_takeover_count value >= -3 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -5 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -10 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -15 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -20 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -25 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -30 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -35 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -40 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -45 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -50 }
+					}
+					modifier = {
+						factor = 0
+						NOT = { has_deposit = d_blue_tiberium_field }
+					}
+					set_planet_flag = tiberium_shrunk
+					while = {
+						count = 1
+						limit = {
+							check_variable = { which = tiberium_takeover_count value <= -3 }
+							has_deposit = d_blue_tiberium_field
+						}
+						if = {
+							limit = {
+								num_free_districts = { type = district_blue_harvester value = 0 }
+							}
+							remove_district = district_blue_harvester
+						}
+						remove_deposit = d_blue_tiberium_field
+						change_variable ={ which = tiberium_takeover_count value = 1 }
+					}
+				}
+				10 = {#Green glacier remove
+					modifier = {
+						factor = 0
+						check_variable = { which = tiberium_takeover_count value >= -6 }
+					}
+					modifier = {
+						factor = 0
+						NOT = { has_deposit = d_green_tiberium_glacier }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -10 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -15 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -20 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -25 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -30 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -35 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -40 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -45 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -50 }
+					}
+					modifier = {
+						factor = 0
+						NOT = { has_deposit = d_green_tiberium_glacier }
+					}
+					set_planet_flag = tiberium_shrunk
+					while = {
+						count = 1
+						limit = {
+							check_variable = { which = tiberium_takeover_count value <= -6 }
+							has_deposit = d_green_tiberium_glacier
+						}
+						if = {
+							limit = {
+								num_free_districts = { type = district_green_harvester value = 0 }
+							}
+							while = {
+								count = 3
+								remove_district = district_green_harvester
+							}
+						}
+						else_if = {
+							limit = {
+								num_free_districts = { type = district_green_harvester value = 1 }
+							}
+							while = {
+								count = 2
+								remove_district = district_green_harvester
+							}
+						}
+						else_if = {
+							limit = {
+								num_free_districts = { type = district_green_harvester value = 2 }
+							}
+							remove_district = district_green_harvester
+						}
+						remove_deposit = d_green_tiberium_glacier
+						change_variable ={ which = tiberium_takeover_count value = 3 }
+					}
+				}
+				10 = {#Blue Glacier remove
+					modifier = {
+						factor = 0
+						check_variable = { which = tiberium_takeover_count value >= -6 }
+					}
+					modifier = {
+						factor = 0
+						NOT = { has_deposit = d_blue_tiberium_glacier }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -10 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -15 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -20 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -25 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -30 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -35 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -40 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -45 }
+					}
+					modifier = {
+						factor = 2
+						check_variable = { which = tiberium_takeover_count value <= -50 }
+					}
+					modifier = {
+						factor = 0
+						NOT = { has_deposit = d_blue_tiberium_glacier }
+					}
+					set_planet_flag = tiberium_shrunk
+					while = {
+						count = 2
+						limit = {
+							check_variable = { which = tiberium_takeover_count value <= -6 }
+							has_deposit = d_blue_tiberium_glacier
+						}
+						if = {
+							limit = {
+								num_free_districts = { type = district_blue_harvester value = 0 }
+							}
+							while = {
+								count = 3
+								remove_district = district_blue_harvester
+							}
+						}
+						else_if = {
+							limit = {
+								num_free_districts = { type = district_blue_harvester value = 1 }
+							}
+							while = {
+								count = 2
+								remove_district = district_blue_harvester
+							}
+						}
+						else_if = {
+							limit = {
+								num_free_districts = { type = district_blue_harvester value = 2 }
+							}
+							remove_district = district_blue_harvester
+						}
+						remove_deposit = d_blue_tiberium_glacier
+						change_variable ={ which = tiberium_takeover_count value = 3 }
+					}
+				}
+				10 = {
+					modifier = {
+						factor = 0.5
+						check_variable = { which = tiberium_takeover_count value >= 10 }
+						NOT = { has_planet_flag = tiberium_sonic_protection }
+					}
+					modifier = {
+						factor = 2
+						has_planet_flag = tiberium_sonic_protection
+					}
+				}
+			}
+			every_moon = {
+				limit = {
+					is_planet_class = pc_habitat
+				}
+				set_planet_flag = habitat_tiberium_access
+			}
+		}
+		if = {
+			limit = {
+				planet_tiberium_depleted = yes
+			}
+			planet_event = { id = tiberium.10 days = 1 }
+		}
+		#check for liquid tiberium
+		set_variable = { which = liquid_tiberium_count value = 0 }
+		every_deposit = {
+			if = {
+				limit = { is_deposit_type = d_yellow_zone }
+				ROOT = { change_variable = { which = liquid_tiberium_count value = @yellow_zone_liquid } }
+			}
+			else_if = {
+				limit = { is_deposit_type = d_red_zone }
+				ROOT = { change_variable = { which = liquid_tiberium_count value = @red_zone_liquid } }
+			}
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_deposit = d_liquid_tiberium_pool
+					planet_size <= 10
+				}
+				check_variable = { which = liquid_tiberium_count value >= trigger:planet_size }
+			}
+			add_deposit = d_liquid_tiberium_pool
+			planet_event = { id = tiberium_infest.5 }
+		}
+		if = {
+			limit = {
+				has_planet_flag = tiberium_grew
+			}
+			planet_event = { id = tiberium.8 days = 1 }
+		}
+		if = {
+			limit = {
+				has_planet_flag = tiberium_shrunk
+			}
+			planet_event = { id = tiberium.12 days = 1 }			
+		}		
+	}
+}
+
+planet_event = {
+	id = tiberium_infest.5
+	title = "tiberium_infest.5.name"
+	desc = "tiberium_infest.5.desc"
+	picture = GFX_evt_atmospheric_entry
+	show_sound = event_ship_explosion
+	location = ROOT
+	
+	is_triggered_only = yes
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = Interesting
+	}
+}

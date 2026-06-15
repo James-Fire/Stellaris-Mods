@@ -1,0 +1,890 @@
+          ######################
+#---------## STRUCTURES STATS ##---------#
+          ######################
+
+###############################
+########## HABITATS ###########
+###############################
+
+#########################
+#[PART 1] BASIC HABITAT #
+#########################
+
+### BUILD TIME ###---------------------------
+
+@ukn_habitat_p1_build_time = 1800
+
+### INFLUENCE ###---------------------------
+
+@ukn_habitat_p1_cost_influence = 100
+@ukn_habitat_p1_cost_unity = 500
+
+### COST ###---------------------------
+
+# Articles
+@ukn_habitat_p1_cost_consumer_goods = 500
+
+# Polymerics
+@ukn_habitat_p1_cost_alloys = 1250
+
+# Quasi-Matter
+@ukn_habitat_p1_cost_ukn_quasi_matter = 2.5
+
+# Causalitons
+@ukn_habitat_p1_cost_ukn_causalitons = 0.75
+
+
+
+
+
+
+
+
+
+#########################################
+########## ORBITAL ARCOLOGIES ###########
+#########################################
+
+#############################
+#[PART 0] CONSTRUCTION SITE #
+#############################
+
+### BUILD TIME ###---------------------------
+
+@ukn_orbital_arcology_p0_build_time = 900
+
+### INFLUENCE ###---------------------------
+
+@ukn_orbital_arcology_p0_cost_influence = 75
+@ukn_orbital_arcology_p0_cost_unity = 750
+
+### COST ###---------------------------
+
+# Articles
+@ukn_orbital_arcology_p0_cost_consumer_goods = 150
+
+# Polymerics
+@ukn_orbital_arcology_p0_cost_alloys = 750
+
+# Quasi-Matter
+@ukn_orbital_arcology_p0_cost_ukn_quasi_matter = 1.55
+
+# Causalitons
+@ukn_orbital_arcology_p0_cost_ukn_causalitons = 0.45
+
+### UPKEEP ###---------------------------
+
+# Polymerics
+@ukn_orbital_arcology_p0_upkeep_alloys = 5
+
+# Energy
+@ukn_orbital_arcology_p0_upkeep_energy = 5
+
+
+############################
+#[PART 1] ORBITAL ARCOLOGY #
+############################
+
+### BUILD TIME ###---------------------------
+
+@ukn_orbital_arcology_p1_build_time = 1800
+
+### COST ###---------------------------
+
+# Articles
+@ukn_orbital_arcology_p1_cost_consumer_goods = 50
+
+# Polymerics
+@ukn_orbital_arcology_p1_cost_alloys = 150
+
+# Quasi-Matter
+@ukn_orbital_arcology_p1_cost_ukn_quasi_matter = 0.30
+
+# Causalitons
+@ukn_orbital_arcology_p1_cost_ukn_causalitons = 0.09
+
+### UPKEEP ###---------------------------
+
+# Polymerics
+@ukn_orbital_arcology_p1_upkeep_alloys = 5
+
+# Energy
+@ukn_orbital_arcology_p1_upkeep_energy = 15
+
+
+#################################
+#[PART 1M] ORBITAL ARCOLOGY (M) #
+#################################
+
+### BUILD TIME ###---------------------------
+
+@ukn_orbital_arcology_p1_m_build_time = 1800
+
+### COST ###---------------------------
+
+# Articles
+@ukn_orbital_arcology_p1_m_cost_consumer_goods = 1050
+
+# Polymerics
+@ukn_orbital_arcology_p1_m_cost_alloys = 3150
+
+# Quasi-Matter
+@ukn_orbital_arcology_p1_m_cost_ukn_quasi_matter = 6.30
+
+# Causalitons
+@ukn_orbital_arcology_p1_m_cost_ukn_causalitons = 1.89
+
+### UPKEEP ###---------------------------
+
+# Polymerics
+@ukn_orbital_arcology_p1_m_upkeep_alloys = 5
+
+# Energy
+@ukn_orbital_arcology_p1_m_upkeep_energy = 15
+
+
+#################################
+#[PART 1L] ORBITAL ARCOLOGY (L) #
+#################################
+
+### BUILD TIME ###---------------------------
+
+@ukn_orbital_arcology_p1_l_build_time = 1800
+
+### COST ###---------------------------
+
+# Articles
+@ukn_orbital_arcology_p1_l_cost_consumer_goods = 1250
+
+# Polymerics
+@ukn_orbital_arcology_p1_l_cost_alloys = 3750
+
+# Quasi-Matter
+@ukn_orbital_arcology_p1_l_cost_ukn_quasi_matter = 7.50
+
+# Causalitons
+@ukn_orbital_arcology_p1_l_cost_ukn_causalitons = 2.25
+
+### UPKEEP ###---------------------------
+
+# Polymerics
+@ukn_orbital_arcology_p1_l_upkeep_alloys = 5
+
+# Energy
+@ukn_orbital_arcology_p1_l_upkeep_energy = 20
+
+
+
+
+
+
+
+
+
+#################################
+########## RINGWORLDS ###########
+#################################
+
+#############################
+#[PART 0] CONSTRUCTION SITE #
+#############################
+
+### BUILD TIME ###---------------------------
+
+@ukn_ringworld_p0_build_time_default = 1800
+@ukn_ringworld_p0_build_time_titanic = 1800
+@ukn_ringworld_p0_build_time_behemoth = 1800
+@ukn_ringworld_p0_build_time_gargantuan = 1800
+
+### INFLUENCE ###---------------------------
+
+@ukn_ringworld_p0_cost_influence_default = 150
+@ukn_ringworld_p0_cost_influence_titanic = 150
+@ukn_ringworld_p0_cost_influence_behemoth = 150
+@ukn_ringworld_p0_cost_influence_gargantuan = 150
+
+@ukn_ringworld_p0_cost_unity_default = 15000
+@ukn_ringworld_p0_cost_unity_titanic = 15000
+@ukn_ringworld_p0_cost_unity_behemoth = 30000
+@ukn_ringworld_p0_cost_unity_gargantuan = 30000
+
+### COST ###---------------------------
+
+# Articles
+@ukn_ringworld_p0_cost_consumer_goods_default = 1000
+@ukn_ringworld_p0_cost_consumer_goods_titanic = 2000
+@ukn_ringworld_p0_cost_consumer_goods_behemoth = 3000
+@ukn_ringworld_p0_cost_consumer_goods_gargantuan = 4000
+
+# Meta-Materials
+@ukn_ringworld_p0_cost_ukn_meta_materials_default = 5000
+@ukn_ringworld_p0_cost_ukn_meta_materials_titanic = 10000
+@ukn_ringworld_p0_cost_ukn_meta_materials_behemoth = 15000
+@ukn_ringworld_p0_cost_ukn_meta_materials_gargantuan = 20000
+
+# Quasi-Matter
+@ukn_ringworld_p0_cost_ukn_quasi_matter_default = 10
+@ukn_ringworld_p0_cost_ukn_quasi_matter_titanic = 20
+@ukn_ringworld_p0_cost_ukn_quasi_matter_behemoth = 30
+@ukn_ringworld_p0_cost_ukn_quasi_matter_gargantuan = 40
+
+# Causalitons
+@ukn_ringworld_p0_cost_ukn_causalitons_default = 3
+@ukn_ringworld_p0_cost_ukn_causalitons_titanic = 6
+@ukn_ringworld_p0_cost_ukn_causalitons_behemoth = 9
+@ukn_ringworld_p0_cost_ukn_causalitons_gargantuan = 12
+
+### UPKEEP ###---------------------------
+
+# Energy
+@ukn_ringworld_p0_upkeep_energy_default = 5
+@ukn_ringworld_p0_upkeep_energy_titanic = 5
+@ukn_ringworld_p0_upkeep_energy_behemoth = 5
+@ukn_ringworld_p0_upkeep_energy_gargantuan = 5
+
+
+#################
+#[PART 1] FRAME #
+#################
+
+### BUILD TIME ###---------------------------
+
+@ukn_ringworld_p1_build_time_default = 9600
+@ukn_ringworld_p1_build_time_titanic = 19200
+@ukn_ringworld_p1_build_time_behemoth = 28800
+@ukn_ringworld_p1_build_time_gargantuan = 38400
+
+### INFLUENCE ###---------------------------
+
+@ukn_ringworld_p1_cost_influence_default = 0
+@ukn_ringworld_p1_cost_influence_titanic = 0
+@ukn_ringworld_p1_cost_influence_behemoth = 0
+@ukn_ringworld_p1_cost_influence_gargantuan = 0
+
+### COST ###---------------------------
+
+# Articles
+@ukn_ringworld_p1_cost_consumer_goods_default = 0
+@ukn_ringworld_p1_cost_consumer_goods_titanic = 0
+@ukn_ringworld_p1_cost_consumer_goods_behemoth = 0
+@ukn_ringworld_p1_cost_consumer_goods_gargantuan = 0
+
+# Meta-Materials
+@ukn_ringworld_p1_cost_ukn_meta_materials_default = 20000
+@ukn_ringworld_p1_cost_ukn_meta_materials_titanic = 40000
+@ukn_ringworld_p1_cost_ukn_meta_materials_behemoth = 30000
+@ukn_ringworld_p1_cost_ukn_meta_materials_gargantuan = 40000
+
+# Femtomatter
+@ukn_ringworld_p1_cost_ukn_femtomatter_default = 1000
+@ukn_ringworld_p1_cost_ukn_femtomatter_titanic = 2000
+
+# Condensics
+@ukn_ringworld_p1_cost_ukn_condensics_default = 250
+@ukn_ringworld_p1_cost_ukn_condensics_titanic = 500
+@ukn_ringworld_p1_cost_ukn_condensics_behemoth = 900
+@ukn_ringworld_p1_cost_ukn_condensics_gargantuan = 1200
+
+# Quasi-Matter
+@ukn_ringworld_p1_cost_ukn_quasi_matter_default = 100
+@ukn_ringworld_p1_cost_ukn_quasi_matter_titanic = 200
+@ukn_ringworld_p1_cost_ukn_quasi_matter_behemoth = 360
+@ukn_ringworld_p1_cost_ukn_quasi_matter_gargantuan = 480
+
+# Causalitons
+@ukn_ringworld_p1_cost_ukn_causalitons_default = 30
+@ukn_ringworld_p1_cost_ukn_causalitons_titanic = 60
+@ukn_ringworld_p1_cost_ukn_causalitons_behemoth = 108
+@ukn_ringworld_p1_cost_ukn_causalitons_gargantuan = 144
+
+### UPKEEP ###---------------------------
+
+# Energy
+@ukn_ringworld_p1_upkeep_energy_default = 15
+@ukn_ringworld_p1_upkeep_energy_titanic = 30
+@ukn_ringworld_p1_upkeep_energy_behemoth = 45
+@ukn_ringworld_p1_upkeep_energy_gargantuan = 60
+
+# Meta-Materials
+@ukn_ringworld_p1_upkeep_ukn_meta_materials_default = 5
+@ukn_ringworld_p1_upkeep_ukn_meta_materials_titanic = 5
+@ukn_ringworld_p1_upkeep_ukn_meta_materials_behemoth = 5
+@ukn_ringworld_p1_upkeep_ukn_meta_materials_gargantuan = 5
+
+
+#################################
+#[PART 2] UNINHABITABLE SECTION #
+#################################
+
+### BUILD TIME ###---------------------------
+
+@ukn_ringworld_p2_build_time_default = 7200
+@ukn_ringworld_p2_build_time_titanic = 14400
+@ukn_ringworld_p2_build_time_behemoth = 21600
+@ukn_ringworld_p2_build_time_gargantuan = 28800
+
+### INFLUENCE ###---------------------------
+
+@ukn_ringworld_p2_cost_influence_default = 0
+@ukn_ringworld_p2_cost_influence_titanic = 0
+@ukn_ringworld_p2_cost_influence_behemoth = 0
+@ukn_ringworld_p2_cost_influence_gargantuan = 0
+
+### COST ###---------------------------
+
+# Articles
+@ukn_ringworld_p2_cost_consumer_goods_default = 2500
+@ukn_ringworld_p2_cost_consumer_goods_titanic = 5000
+@ukn_ringworld_p2_cost_consumer_goods_behemoth = 7500
+@ukn_ringworld_p2_cost_consumer_goods_gargantuan = 10000
+
+# Meta-Materials
+@ukn_ringworld_p2_cost_ukn_meta_materials_default = 10000
+@ukn_ringworld_p2_cost_ukn_meta_materials_titanic = 20000
+@ukn_ringworld_p2_cost_ukn_meta_materials_behemoth = 15000
+@ukn_ringworld_p2_cost_ukn_meta_materials_gargantuan = 20000
+
+# Femtomatter
+@ukn_ringworld_p2_cost_ukn_femtomatter_default = 800
+@ukn_ringworld_p2_cost_ukn_femtomatter_titanic = 1600
+
+# Condensics
+@ukn_ringworld_p2_cost_ukn_condensics_default = 200
+@ukn_ringworld_p2_cost_ukn_condensics_titanic = 400
+@ukn_ringworld_p2_cost_ukn_condensics_behemoth = 675
+@ukn_ringworld_p2_cost_ukn_condensics_gargantuan = 900
+
+# Quasi-Matter
+@ukn_ringworld_p2_cost_ukn_quasi_matter_default = 80
+@ukn_ringworld_p2_cost_ukn_quasi_matter_titanic = 160
+@ukn_ringworld_p2_cost_ukn_quasi_matter_behemoth = 270
+@ukn_ringworld_p2_cost_ukn_quasi_matter_gargantuan = 360
+
+# Causalitons
+@ukn_ringworld_p2_cost_ukn_causalitons_default = 25
+@ukn_ringworld_p2_cost_ukn_causalitons_titanic = 50
+@ukn_ringworld_p2_cost_ukn_causalitons_behemoth = 84
+@ukn_ringworld_p2_cost_ukn_causalitons_gargantuan = 112
+
+### UPKEEP ###---------------------------
+
+# Energy
+@ukn_ringworld_p2_upkeep_energy_default = 20
+@ukn_ringworld_p2_upkeep_energy_titanic = 35
+@ukn_ringworld_p2_upkeep_energy_behemoth = 50
+@ukn_ringworld_p2_upkeep_energy_gargantuan = 70
+
+# Meta-Materials
+@ukn_ringworld_p2_upkeep_ukn_meta_materials_default = 5
+@ukn_ringworld_p2_upkeep_ukn_meta_materials_titanic = 5
+@ukn_ringworld_p2_upkeep_ukn_meta_materials_behemoth = 5
+@ukn_ringworld_p2_upkeep_ukn_meta_materials_gargantuan =  5
+
+
+################################################
+#[PART 2-TECH UPGRADE] SUPPORT SECTION UPGRADE #
+################################################
+
+### BUILD TIME ###---------------------------
+
+@ukn_ringworld_p2_tech_upgrade_build_time_default = 7200
+@ukn_ringworld_p2_tech_upgrade_build_time_titanic = 14400
+@ukn_ringworld_p2_tech_upgrade_build_time_behemoth = 21600
+@ukn_ringworld_p2_tech_upgrade_build_time_gargantuan = 28800
+
+### INFLUENCE ###---------------------------
+
+@ukn_ringworld_p2_tech_upgrade_cost_influence_default = 0
+@ukn_ringworld_p2_tech_upgrade_cost_influence_titanic = 0
+@ukn_ringworld_p2_tech_upgrade_cost_influence_behemoth = 0
+@ukn_ringworld_p2_tech_upgrade_cost_influence_gargantuan = 0
+
+### COST ###---------------------------
+
+# Articles
+@ukn_ringworld_p2_tech_upgrade_cost_consumer_goods_default = 2500
+@ukn_ringworld_p2_tech_upgrade_cost_consumer_goods_titanic = 5000
+@ukn_ringworld_p2_tech_upgrade_cost_consumer_goods_behemoth = 7500
+@ukn_ringworld_p2_tech_upgrade_cost_consumer_goods_gargantuan = 10000
+
+# Meta-Materials
+@ukn_ringworld_p2_tech_upgrade_cost_ukn_meta_materials_default = 10000
+@ukn_ringworld_p2_tech_upgrade_cost_ukn_meta_materials_titanic = 20000
+@ukn_ringworld_p2_tech_upgrade_cost_ukn_meta_materials_behemoth = 15000
+@ukn_ringworld_p2_tech_upgrade_cost_ukn_meta_materials_gargantuan = 20000
+
+# Femtomatter
+@ukn_ringworld_p2_tech_upgrade_cost_ukn_femtomatter_default = 800
+@ukn_ringworld_p2_tech_upgrade_cost_ukn_femtomatter_titanic = 1600
+
+# Condensics
+@ukn_ringworld_p2_tech_upgrade_cost_ukn_condensics_default = 200
+@ukn_ringworld_p2_tech_upgrade_cost_ukn_condensics_titanic = 400
+@ukn_ringworld_p2_tech_upgrade_cost_ukn_condensics_behemoth = 675
+@ukn_ringworld_p2_tech_upgrade_cost_ukn_condensics_gargantuan = 900
+
+# Quasi-Matter
+@ukn_ringworld_p2_tech_upgrade_cost_ukn_quasi_matter_default = 80
+@ukn_ringworld_p2_tech_upgrade_cost_ukn_quasi_matter_titanic = 160
+@ukn_ringworld_p2_tech_upgrade_cost_ukn_quasi_matter_behemoth = 270
+@ukn_ringworld_p2_tech_upgrade_cost_ukn_quasi_matter_gargantuan = 360
+
+# Causalitons
+@ukn_ringworld_p2_tech_upgrade_cost_ukn_causalitons_default = 25
+@ukn_ringworld_p2_tech_upgrade_cost_ukn_causalitons_titanic = 50
+@ukn_ringworld_p2_tech_upgrade_cost_ukn_causalitons_behemoth = 84
+@ukn_ringworld_p2_tech_upgrade_cost_ukn_causalitons_gargantuan = 112
+
+### UPKEEP ###---------------------------
+
+# Energy
+@ukn_ringworld_p2_tech_upgrade_upkeep_energy_default = 20
+@ukn_ringworld_p2_tech_upgrade_upkeep_energy_titanic = 35
+@ukn_ringworld_p2_tech_upgrade_upkeep_energy_behemoth = 50
+@ukn_ringworld_p2_tech_upgrade_upkeep_energy_gargantuan = 70
+
+# Meta-Materials
+@ukn_ringworld_p2_tech_upgrade_upkeep_ukn_meta_materials_default = 5
+@ukn_ringworld_p2_tech_upgrade_upkeep_ukn_meta_materials_titanic = 5
+@ukn_ringworld_p2_tech_upgrade_upkeep_ukn_meta_materials_behemoth = 5
+@ukn_ringworld_p2_tech_upgrade_upkeep_ukn_meta_materials_gargantuan =  5
+
+
+####################################
+#[PART 3] HABITABLE SECTION (GAIA) #
+####################################
+
+### BUILD TIME ###---------------------------
+
+@ukn_ringworld_p3_gaia_build_time_default = 1800
+@ukn_ringworld_p3_gaia_build_time_titanic = 3600
+@ukn_ringworld_p3_gaia_build_time_behemoth = 5400
+@ukn_ringworld_p3_gaia_build_time_gargantuan = 7200
+
+### INFLUENCE ###---------------------------
+
+@ukn_ringworld_p3_gaia_cost_influence_default = 0
+@ukn_ringworld_p3_gaia_cost_influence_titanic = 0
+@ukn_ringworld_p3_gaia_cost_influence_behemoth = 0
+@ukn_ringworld_p3_gaia_cost_influence_gargantuan = 0
+
+### COST ###---------------------------
+
+# Food
+@ukn_ringworld_p3_gaia_cost_food_default = 3000
+@ukn_ringworld_p3_gaia_cost_food_titanic = 6000
+@ukn_ringworld_p3_gaia_cost_food_behemoth = 9000
+@ukn_ringworld_p3_gaia_cost_food_gargantuan = 12000
+
+# Articles
+@ukn_ringworld_p3_gaia_cost_consumer_goods_default = 2000
+@ukn_ringworld_p3_gaia_cost_consumer_goods_titanic = 4000
+@ukn_ringworld_p3_gaia_cost_consumer_goods_behemoth = 6000
+@ukn_ringworld_p3_gaia_cost_consumer_goods_gargantuan = 8000
+
+# Meta-Materials
+@ukn_ringworld_p3_gaia_cost_ukn_meta_materials_default = 15000
+@ukn_ringworld_p3_gaia_cost_ukn_meta_materials_titanic = 30000
+@ukn_ringworld_p3_gaia_cost_ukn_meta_materials_behemoth = 45000
+@ukn_ringworld_p3_gaia_cost_ukn_meta_materials_gargantuan = 60000
+
+# Quasi-Matter
+@ukn_ringworld_p3_gaia_cost_ukn_quasi_matter_default = 30
+@ukn_ringworld_p3_gaia_cost_ukn_quasi_matter_titanic = 60
+@ukn_ringworld_p3_gaia_cost_ukn_quasi_matter_behemoth = 90
+@ukn_ringworld_p3_gaia_cost_ukn_quasi_matter_gargantuan = 120
+
+# Causalitons
+@ukn_ringworld_p3_gaia_cost_ukn_causalitons_default = 9
+@ukn_ringworld_p3_gaia_cost_ukn_causalitons_titanic = 18
+@ukn_ringworld_p3_gaia_cost_ukn_causalitons_behemoth = 27
+@ukn_ringworld_p3_gaia_cost_ukn_causalitons_gargantuan = 36
+
+### UPKEEP ###---------------------------
+
+# Energy
+@ukn_ringworld_p3_gaia_upkeep_energy_default = 10
+@ukn_ringworld_p3_gaia_upkeep_energy_titanic = 15
+@ukn_ringworld_p3_gaia_upkeep_energy_behemoth = 20
+@ukn_ringworld_p3_gaia_upkeep_energy_gargantuan = 25
+
+# Meta-Materials
+@ukn_ringworld_p3_gaia_upkeep_ukn_meta_materials_default = 5
+@ukn_ringworld_p3_gaia_upkeep_ukn_meta_materials_titanic = 5
+@ukn_ringworld_p3_gaia_upkeep_ukn_meta_materials_behemoth = 5
+@ukn_ringworld_p3_gaia_upkeep_ukn_meta_materials_gargantuan = 5
+
+
+###################################
+#[PART 3] HABITABLE SECTION (ECU) #
+###################################
+
+### BUILD TIME ###---------------------------
+
+@ukn_ringworld_p3_city_build_time_default = 1800
+@ukn_ringworld_p3_city_build_time_titanic = 3600
+@ukn_ringworld_p3_city_build_time_behemoth = 5400
+@ukn_ringworld_p3_city_build_time_gargantuan = 7200
+
+### INFLUENCE ###---------------------------
+
+@ukn_ringworld_p3_city_cost_influence_default = 0
+@ukn_ringworld_p3_city_cost_influence_titanic = 0
+@ukn_ringworld_p3_city_cost_influence_behemoth = 0
+@ukn_ringworld_p3_city_cost_influence_gargantuan = 0
+
+### COST ###---------------------------
+
+# Articles
+@ukn_ringworld_p3_city_cost_consumer_goods_default = 5000
+@ukn_ringworld_p3_city_cost_consumer_goods_titanic = 10000
+@ukn_ringworld_p3_city_cost_consumer_goods_behemoth = 15000
+@ukn_ringworld_p3_city_cost_consumer_goods_gargantuan = 20000
+
+# Meta-Materials
+@ukn_ringworld_p3_city_cost_ukn_meta_materials_default = 15000
+@ukn_ringworld_p3_city_cost_ukn_meta_materials_titanic = 30000
+@ukn_ringworld_p3_city_cost_ukn_meta_materials_behemoth = 45000
+@ukn_ringworld_p3_city_cost_ukn_meta_materials_gargantuan = 60000
+
+# Quasi-Matter
+@ukn_ringworld_p3_city_cost_ukn_quasi_matter_default = 30
+@ukn_ringworld_p3_city_cost_ukn_quasi_matter_titanic = 60
+@ukn_ringworld_p3_city_cost_ukn_quasi_matter_behemoth = 90
+@ukn_ringworld_p3_city_cost_ukn_quasi_matter_gargantuan = 120
+
+# Causalitons
+@ukn_ringworld_p3_city_cost_ukn_causalitons_default = 9
+@ukn_ringworld_p3_city_cost_ukn_causalitons_titanic = 18
+@ukn_ringworld_p3_city_cost_ukn_causalitons_behemoth = 27
+@ukn_ringworld_p3_city_cost_ukn_causalitons_gargantuan = 36
+
+### UPKEEP ###---------------------------
+
+# Energy
+@ukn_ringworld_p3_city_upkeep_energy_default = 10
+@ukn_ringworld_p3_city_upkeep_energy_titanic = 15
+@ukn_ringworld_p3_city_upkeep_energy_behemoth = 20
+@ukn_ringworld_p3_city_upkeep_energy_gargantuan = 25
+
+# Meta-Materials
+@ukn_ringworld_p3_city_upkeep_ukn_meta_materials_default = 5
+@ukn_ringworld_p3_city_upkeep_ukn_meta_materials_titanic = 5
+@ukn_ringworld_p3_city_upkeep_ukn_meta_materials_behemoth = 5
+@ukn_ringworld_p3_city_upkeep_ukn_meta_materials_gargantuan = 5
+
+
+#######################################
+#[PART 3] HABITABLE SECTION (MACHINE) #
+#######################################
+
+### BUILD TIME ###---------------------------
+
+@ukn_ringworld_p3_machine_build_time_default = 1800
+@ukn_ringworld_p3_machine_build_time_titanic = 3600
+@ukn_ringworld_p3_machine_build_time_behemoth = 5400
+@ukn_ringworld_p3_machine_build_time_gargantuan = 7200
+
+### INFLUENCE ###---------------------------
+
+@ukn_ringworld_p3_machine_cost_influence_default = 0
+@ukn_ringworld_p3_machine_cost_influence_titanic = 0
+@ukn_ringworld_p3_machine_cost_influence_behemoth = 0
+@ukn_ringworld_p3_machine_cost_influence_gargantuan = 0
+
+### COST ###---------------------------
+
+# Articles
+@ukn_ringworld_p3_machine_cost_consumer_goods_default = 5000
+@ukn_ringworld_p3_machine_cost_consumer_goods_titanic = 10000
+@ukn_ringworld_p3_machine_cost_consumer_goods_behemoth = 15000
+@ukn_ringworld_p3_machine_cost_consumer_goods_gargantuan = 20000
+
+# Meta-Materials
+@ukn_ringworld_p3_machine_cost_ukn_meta_materials_default = 15000
+@ukn_ringworld_p3_machine_cost_ukn_meta_materials_titanic = 30000
+@ukn_ringworld_p3_machine_cost_ukn_meta_materials_behemoth = 45000
+@ukn_ringworld_p3_machine_cost_ukn_meta_materials_gargantuan = 60000
+
+# Quasi-Matter
+@ukn_ringworld_p3_machine_cost_ukn_quasi_matter_default = 30
+@ukn_ringworld_p3_machine_cost_ukn_quasi_matter_titanic = 60
+@ukn_ringworld_p3_machine_cost_ukn_quasi_matter_behemoth = 90
+@ukn_ringworld_p3_machine_cost_ukn_quasi_matter_gargantuan = 120
+
+# Causalitons
+@ukn_ringworld_p3_machine_cost_ukn_causalitons_default = 9
+@ukn_ringworld_p3_machine_cost_ukn_causalitons_titanic = 18
+@ukn_ringworld_p3_machine_cost_ukn_causalitons_behemoth = 27
+@ukn_ringworld_p3_machine_cost_ukn_causalitons_gargantuan = 36
+
+### UPKEEP ###---------------------------
+
+# Energy
+@ukn_ringworld_p3_machine_upkeep_energy_default = 10
+@ukn_ringworld_p3_machine_upkeep_energy_titanic = 15
+@ukn_ringworld_p3_machine_upkeep_energy_behemoth = 20
+@ukn_ringworld_p3_machine_upkeep_energy_gargantuan = 25
+
+# Meta-Materials
+@ukn_ringworld_p3_machine_upkeep_ukn_meta_materials_default = 5
+@ukn_ringworld_p3_machine_upkeep_ukn_meta_materials_titanic = 5
+@ukn_ringworld_p3_machine_upkeep_ukn_meta_materials_behemoth = 5
+@ukn_ringworld_p3_machine_upkeep_ukn_meta_materials_gargantuan = 5
+
+
+####################################
+#[PART 3] HABITABLE SECTION (HIVE) #
+####################################
+
+### BUILD TIME ###---------------------------
+
+@ukn_ringworld_p3_hive_build_time_default = 1800
+@ukn_ringworld_p3_hive_build_time_titanic = 3600
+@ukn_ringworld_p3_hive_build_time_behemoth = 5400
+@ukn_ringworld_p3_hive_build_time_gargantuan = 7200
+
+### INFLUENCE ###---------------------------
+
+@ukn_ringworld_p3_hive_cost_influence_default = 0
+@ukn_ringworld_p3_hive_cost_influence_titanic = 0
+@ukn_ringworld_p3_hive_cost_influence_behemoth = 0
+@ukn_ringworld_p3_hive_cost_influence_gargantuan = 0
+
+### COST ###---------------------------
+
+# Food
+@ukn_ringworld_p3_hive_cost_food_default = 3000
+@ukn_ringworld_p3_hive_cost_food_titanic = 6000
+@ukn_ringworld_p3_hive_cost_food_behemoth = 9000
+@ukn_ringworld_p3_hive_cost_food_gargantuan = 12000
+
+# Articles
+@ukn_ringworld_p3_hive_cost_consumer_goods_default = 2000
+@ukn_ringworld_p3_hive_cost_consumer_goods_titanic = 4000
+@ukn_ringworld_p3_hive_cost_consumer_goods_behemoth = 6000
+@ukn_ringworld_p3_hive_cost_consumer_goods_gargantuan = 8000
+
+# Meta-Materials
+@ukn_ringworld_p3_hive_cost_ukn_meta_materials_default = 15000
+@ukn_ringworld_p3_hive_cost_ukn_meta_materials_titanic = 30000
+@ukn_ringworld_p3_hive_cost_ukn_meta_materials_behemoth = 45000
+@ukn_ringworld_p3_hive_cost_ukn_meta_materials_gargantuan = 60000
+
+# Quasi-Matter
+@ukn_ringworld_p3_hive_cost_ukn_quasi_matter_default = 30
+@ukn_ringworld_p3_hive_cost_ukn_quasi_matter_titanic = 60
+@ukn_ringworld_p3_hive_cost_ukn_quasi_matter_behemoth = 90
+@ukn_ringworld_p3_hive_cost_ukn_quasi_matter_gargantuan = 120
+
+# Causalitons
+@ukn_ringworld_p3_hive_cost_ukn_causalitons_default = 9
+@ukn_ringworld_p3_hive_cost_ukn_causalitons_titanic = 18
+@ukn_ringworld_p3_hive_cost_ukn_causalitons_behemoth = 27
+@ukn_ringworld_p3_hive_cost_ukn_causalitons_gargantuan = 36
+
+### UPKEEP ###---------------------------
+
+# Energy
+@ukn_ringworld_p3_hive_upkeep_energy_default = 10
+@ukn_ringworld_p3_hive_upkeep_energy_titanic = 15
+@ukn_ringworld_p3_hive_upkeep_energy_behemoth = 20
+@ukn_ringworld_p3_hive_upkeep_energy_gargantuan = 25
+
+# Meta-Materials
+@ukn_ringworld_p3_hive_upkeep_ukn_meta_materials_default = 5
+@ukn_ringworld_p3_hive_upkeep_ukn_meta_materials_titanic = 5
+@ukn_ringworld_p3_hive_upkeep_ukn_meta_materials_behemoth = 5
+@ukn_ringworld_p3_hive_upkeep_ukn_meta_materials_gargantuan = 5
+
+
+########################################
+#[PART 3] HABITABLE SECTION (COMPUTER) #
+########################################
+
+### BUILD TIME ###---------------------------
+
+@ukn_ringworld_p3_computer_build_time_default = 1800
+@ukn_ringworld_p3_computer_build_time_titanic = 3600
+@ukn_ringworld_p3_computer_build_time_behemoth = 5400
+@ukn_ringworld_p3_computer_build_time_gargantuan = 7200
+
+### INFLUENCE ###---------------------------
+
+@ukn_ringworld_p3_computer_cost_influence_default = 0
+@ukn_ringworld_p3_computer_cost_influence_titanic = 0
+@ukn_ringworld_p3_computer_cost_influence_behemoth = 0
+@ukn_ringworld_p3_computer_cost_influence_gargantuan = 0
+
+### COST ###---------------------------
+
+# Articles
+@ukn_ringworld_p3_computer_cost_consumer_goods_default = 5000
+@ukn_ringworld_p3_computer_cost_consumer_goods_titanic = 10000
+@ukn_ringworld_p3_computer_cost_consumer_goods_behemoth = 15000
+@ukn_ringworld_p3_computer_cost_consumer_goods_gargantuan = 20000
+
+# Meta-Materials
+@ukn_ringworld_p3_computer_cost_ukn_meta_materials_default = 15000
+@ukn_ringworld_p3_computer_cost_ukn_meta_materials_titanic = 30000
+@ukn_ringworld_p3_computer_cost_ukn_meta_materials_behemoth = 45000
+@ukn_ringworld_p3_computer_cost_ukn_meta_materials_gargantuan = 60000
+
+# Quasi-Matter
+@ukn_ringworld_p3_computer_cost_ukn_quasi_matter_default = 30
+@ukn_ringworld_p3_computer_cost_ukn_quasi_matter_titanic = 60
+@ukn_ringworld_p3_computer_cost_ukn_quasi_matter_behemoth = 90
+@ukn_ringworld_p3_computer_cost_ukn_quasi_matter_gargantuan = 120
+
+# Causalitons
+@ukn_ringworld_p3_computer_cost_ukn_causalitons_default = 9
+@ukn_ringworld_p3_computer_cost_ukn_causalitons_titanic = 18
+@ukn_ringworld_p3_computer_cost_ukn_causalitons_behemoth = 27
+@ukn_ringworld_p3_computer_cost_ukn_causalitons_gargantuan = 36
+
+### UPKEEP ###---------------------------
+
+# Energy
+@ukn_ringworld_p3_computer_upkeep_energy_default = 10
+@ukn_ringworld_p3_computer_upkeep_energy_titanic = 15
+@ukn_ringworld_p3_computer_upkeep_energy_behemoth = 20
+@ukn_ringworld_p3_computer_upkeep_energy_gargantuan = 25
+
+# Meta-Materials
+@ukn_ringworld_p3_computer_upkeep_ukn_meta_materials_default = 5
+@ukn_ringworld_p3_computer_upkeep_ukn_meta_materials_titanic = 5
+@ukn_ringworld_p3_computer_upkeep_ukn_meta_materials_behemoth = 5
+@ukn_ringworld_p3_computer_upkeep_ukn_meta_materials_gargantuan = 5
+
+
+########################################
+#[PART 3] HABITABLE SECTION (MILITARY) #
+########################################
+
+### BUILD TIME ###---------------------------
+
+@ukn_ringworld_p3_military_build_time_default = 1800
+@ukn_ringworld_p3_military_build_time_titanic = 3600
+@ukn_ringworld_p3_military_build_time_behemoth = 5400
+@ukn_ringworld_p3_military_build_time_gargantuan = 7200
+
+### INFLUENCE ###---------------------------
+
+@ukn_ringworld_p3_military_cost_influence_default = 0
+@ukn_ringworld_p3_military_cost_influence_titanic = 0
+@ukn_ringworld_p3_military_cost_influence_behemoth = 0
+@ukn_ringworld_p3_military_cost_influence_gargantuan = 0
+
+### COST ###---------------------------
+
+# Articles
+@ukn_ringworld_p3_military_cost_consumer_goods_default = 5000
+@ukn_ringworld_p3_military_cost_consumer_goods_titanic = 10000
+@ukn_ringworld_p3_military_cost_consumer_goods_behemoth = 15000
+@ukn_ringworld_p3_military_cost_consumer_goods_gargantuan = 20000
+
+# Meta-Materials
+@ukn_ringworld_p3_military_cost_ukn_meta_materials_default = 15000
+@ukn_ringworld_p3_military_cost_ukn_meta_materials_titanic = 30000
+@ukn_ringworld_p3_military_cost_ukn_meta_materials_behemoth = 45000
+@ukn_ringworld_p3_military_cost_ukn_meta_materials_gargantuan = 60000
+
+# Quasi-Matter
+@ukn_ringworld_p3_military_cost_ukn_quasi_matter_default = 30
+@ukn_ringworld_p3_military_cost_ukn_quasi_matter_titanic = 60
+@ukn_ringworld_p3_military_cost_ukn_quasi_matter_behemoth = 90
+@ukn_ringworld_p3_military_cost_ukn_quasi_matter_gargantuan = 120
+
+# Causalitons
+@ukn_ringworld_p3_military_cost_ukn_causalitons_default = 9
+@ukn_ringworld_p3_military_cost_ukn_causalitons_titanic = 18
+@ukn_ringworld_p3_military_cost_ukn_causalitons_behemoth = 27
+@ukn_ringworld_p3_military_cost_ukn_causalitons_gargantuan = 36
+
+### UPKEEP ###---------------------------
+
+# Energy
+@ukn_ringworld_p3_military_upkeep_energy_default = 10
+@ukn_ringworld_p3_military_upkeep_energy_titanic = 15
+@ukn_ringworld_p3_military_upkeep_energy_behemoth = 20
+@ukn_ringworld_p3_military_upkeep_energy_gargantuan = 25
+
+# Meta-Materials
+@ukn_ringworld_p3_military_upkeep_ukn_meta_materials_default = 5
+@ukn_ringworld_p3_military_upkeep_ukn_meta_materials_titanic = 5
+@ukn_ringworld_p3_military_upkeep_ukn_meta_materials_behemoth = 5
+@ukn_ringworld_p3_military_upkeep_ukn_meta_materials_gargantuan = 5
+
+
+#################################3
+#[RESTORE] UNINHABITABLE SECTION #
+##################################
+
+### BUILD TIME ###---------------------------
+
+@ukn_ringworld_restore_build_time_default = 6300
+@ukn_ringworld_restore_build_time_titanic = 12600
+@ukn_ringworld_restore_build_time_behemoth = 18900
+@ukn_ringworld_restore_build_time_gargantuan = 25200
+
+### INFLUENCE ###---------------------------
+
+@ukn_ringworld_restore_cost_influence_default = 0
+@ukn_ringworld_restore_cost_influence_titanic = 0
+@ukn_ringworld_restore_cost_influence_behemoth = 0
+@ukn_ringworld_restore_cost_influence_gargantuan = 0
+
+@ukn_ringworld_restore_cost_unity_default = 2500
+@ukn_ringworld_restore_cost_unity_titanic = 2500
+@ukn_ringworld_restore_cost_unity_behemoth = 5000
+@ukn_ringworld_restore_cost_unity_gargantuan = 5000
+
+### COST ###---------------------------
+
+# Articles
+@ukn_ringworld_restore_cost_consumer_goods_default = 2500
+@ukn_ringworld_restore_cost_consumer_goods_titanic = 5000
+@ukn_ringworld_restore_cost_consumer_goods_behemoth = 7500
+@ukn_ringworld_restore_cost_consumer_goods_gargantuan = 10000
+
+# Meta-Materials
+@ukn_ringworld_restore_cost_ukn_meta_materials_default = 10000
+@ukn_ringworld_restore_cost_ukn_meta_materials_titanic = 20000
+@ukn_ringworld_restore_cost_ukn_meta_materials_behemoth = 15000
+@ukn_ringworld_restore_cost_ukn_meta_materials_gargantuan = 20000
+
+# Femtomatter
+@ukn_ringworld_restore_cost_ukn_femtomatter_default = 800
+@ukn_ringworld_restore_cost_ukn_femtomatter_titanic = 1600
+
+# Condensics
+@ukn_ringworld_restore_cost_ukn_condensics_default = 200
+@ukn_ringworld_restore_cost_ukn_condensics_titanic = 400
+@ukn_ringworld_restore_cost_ukn_condensics_behemoth = 675
+@ukn_ringworld_restore_cost_ukn_condensics_gargantuan = 900
+
+# Quasi-Matter
+@ukn_ringworld_restore_cost_ukn_quasi_matter_default = 80
+@ukn_ringworld_restore_cost_ukn_quasi_matter_titanic = 160
+@ukn_ringworld_restore_cost_ukn_quasi_matter_behemoth = 270
+@ukn_ringworld_restore_cost_ukn_quasi_matter_gargantuan = 360
+
+# Causalitons
+@ukn_ringworld_restore_cost_ukn_causalitons_default = 25
+@ukn_ringworld_restore_cost_ukn_causalitons_titanic = 50
+@ukn_ringworld_restore_cost_ukn_causalitons_behemoth = 84
+@ukn_ringworld_restore_cost_ukn_causalitons_gargantuan = 112
+
+### UPKEEP ###---------------------------
+
+# Energy
+@ukn_ringworld_restore_upkeep_energy_default = 15
+@ukn_ringworld_restore_upkeep_energy_titanic = 30
+@ukn_ringworld_restore_upkeep_energy_behemoth = 45
+@ukn_ringworld_restore_upkeep_energy_gargantuan = 60
+
+# Meta-Materials
+@ukn_ringworld_restore_upkeep_ukn_meta_materials_default = 5
+@ukn_ringworld_restore_upkeep_ukn_meta_materials_titanic = 5
+@ukn_ringworld_restore_upkeep_ukn_meta_materials_behemoth = 5
+@ukn_ringworld_restore_upkeep_ukn_meta_materials_gargantuan =  5

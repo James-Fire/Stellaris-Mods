@@ -1,0 +1,1185 @@
+########################
+### STELLAR MISSILES ###
+########################
+
+######----------------------------------
+# T1 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "muzzle_entity_ukn_stellar_missile_1"
+	cull_radius = 0.01
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_stellar_missile_1" keep_particle = yes sound = { soundeffect = missile_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_missile_fire" } }
+	}
+}
+
+# MISSILES
+
+entity = {
+	name = "missile_entity_ukn_stellar_missile_1"
+	pdxmesh = "arthropoid_01_missile_mesh"
+	
+	default_state = idle
+	state = { name = "idle" animation = "idle"
+		start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_1" keep_particle = yes }
+		start_event = { time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_1" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_1" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_1" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss2"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_1" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_1" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss_reversed"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_1" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_1" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss2_reversed"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_1" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_1" keep_particle = yes }
+	}
+	scale = 3		# 2
+}
+
+# HIT EFFECTS
+
+entity = {
+	name = "hit_entity_ukn_stellar_missile_1"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_stellar_missile_1" sound = { soundeffect = missile_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_missile_hit" } }
+	}
+	default_state = "explode_med_hp"
+}
+
+# SHIELD HIT
+
+entity = {
+	name = "shield_hit_entity_ukn_stellar_missile_1"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_stellar_missile_1" sound = { soundeffect = shield_hit } }
+		event = { time = 0.0 particle = "shield_hit_effect_ukn_missile_L" }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+}
+
+
+# WINDUP
+
+entity = {
+	name = "windup_entity_ukn_stellar_missile_1"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "windup_effect_ukn_stellar_missile_1" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "windup_effect_ukn_stellar_missile_1" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_stellar_missile_1" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_stellar_missile_1" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_stellar_missile_1" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_stellar_missile_1" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "windup_effect_ukn_stellar_missile_1" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "windup_effect_ukn_stellar_missile_1" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_1" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "turret_windup_entity_ukn_stellar_missile_1"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_stellar_missile_1" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "humanoid_01_windup_entity_ukn_stellar_missile_1"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_1" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "avian_01_windup_entity_ukn_stellar_missile_1"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_1" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "reptilian_01_windup_entity_ukn_stellar_missile_1"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_1" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "arthropoid_01_windup_entity_ukn_stellar_missile_1"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_stellar_missile_1" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "molluscoid_01_windup_entity_ukn_stellar_missile_1"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.4
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_stellar_missile_1" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_stellar_missile_1" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_stellar_missile_1" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_stellar_missile_1" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_1" trigger_once = yes keep_particle = yes }
+	}
+}
+
+######----------------------------------
+# T2 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "muzzle_entity_ukn_stellar_missile_2"
+	cull_radius = 0.01
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_stellar_missile_2" keep_particle = yes sound = { soundeffect = missile_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_missile_fire" } }
+	}
+}
+
+# MISSILES
+
+entity = {
+	name = "missile_entity_ukn_stellar_missile_2"
+	pdxmesh = "arthropoid_01_missile_mesh"
+	
+	default_state = idle
+	state = { name = "idle" animation = "idle"
+		start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_2" keep_particle = yes }
+		start_event = { time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_2" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_2" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_2" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss2"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_2" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_2" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss_reversed"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_2" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_2" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss2_reversed"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_2" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_2" keep_particle = yes }
+	}
+	scale = 3		# 2
+}
+
+# HIT EFFECTS
+
+entity = {
+	name = "hit_entity_ukn_stellar_missile_2"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_stellar_missile_2" sound = { soundeffect = missile_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_missile_hit" } }
+	}
+	default_state = "explode_med_hp"
+}
+
+# SHIELD HIT
+
+entity = {
+	name = "shield_hit_entity_ukn_stellar_missile_2"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_stellar_missile_2" sound = { soundeffect = shield_hit } }
+		event = { time = 0.0 particle = "shield_hit_effect_ukn_missile_L" }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+}
+
+
+# WINDUP
+
+entity = {
+	name = "windup_entity_ukn_stellar_missile_2"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "windup_effect_ukn_stellar_missile_2" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "windup_effect_ukn_stellar_missile_2" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_stellar_missile_2" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_stellar_missile_2" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_stellar_missile_2" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_stellar_missile_2" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "windup_effect_ukn_stellar_missile_2" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "windup_effect_ukn_stellar_missile_2" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_2" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "turret_windup_entity_ukn_stellar_missile_2"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_stellar_missile_2" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "humanoid_01_windup_entity_ukn_stellar_missile_2"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_2" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "avian_01_windup_entity_ukn_stellar_missile_2"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_2" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "reptilian_01_windup_entity_ukn_stellar_missile_2"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_2" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "arthropoid_01_windup_entity_ukn_stellar_missile_2"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_stellar_missile_2" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "molluscoid_01_windup_entity_ukn_stellar_missile_2"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.4
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_stellar_missile_2" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_stellar_missile_2" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_stellar_missile_2" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_stellar_missile_2" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_2" trigger_once = yes keep_particle = yes }
+	}
+}
+
+######----------------------------------
+# T3 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "muzzle_entity_ukn_stellar_missile_3"
+	cull_radius = 0.01
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_stellar_missile_3" keep_particle = yes sound = { soundeffect = missile_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_missile_fire" } }
+	}
+}
+
+# MISSILES
+
+entity = {
+	name = "missile_entity_ukn_stellar_missile_3"
+	pdxmesh = "arthropoid_01_missile_mesh"
+	
+	default_state = idle
+	state = { name = "idle" animation = "idle"
+		start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_3" keep_particle = yes }
+		start_event = { time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_3" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_3" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_3" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss2"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_3" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_3" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss_reversed"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_3" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_3" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss2_reversed"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_3" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_3" keep_particle = yes }
+	}
+	scale = 3		# 2
+}
+
+# HIT EFFECTS
+
+entity = {
+	name = "hit_entity_ukn_stellar_missile_3"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_stellar_missile_3" sound = { soundeffect = missile_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_missile_hit" } }
+	}
+	default_state = "explode_med_hp"
+}
+
+# SHIELD HIT
+
+entity = {
+	name = "shield_hit_entity_ukn_stellar_missile_3"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_stellar_missile_3" sound = { soundeffect = shield_hit } }
+		event = { time = 0.0 particle = "shield_hit_effect_ukn_missile_L" }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+}
+
+
+# WINDUP
+
+entity = {
+	name = "windup_entity_ukn_stellar_missile_3"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "windup_effect_ukn_stellar_missile_3" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "windup_effect_ukn_stellar_missile_3" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_stellar_missile_3" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_stellar_missile_3" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_stellar_missile_3" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_stellar_missile_3" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "windup_effect_ukn_stellar_missile_3" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "windup_effect_ukn_stellar_missile_3" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_3" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "turret_windup_entity_ukn_stellar_missile_3"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_stellar_missile_3" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "humanoid_01_windup_entity_ukn_stellar_missile_3"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_3" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "avian_01_windup_entity_ukn_stellar_missile_3"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_3" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "reptilian_01_windup_entity_ukn_stellar_missile_3"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_3" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "arthropoid_01_windup_entity_ukn_stellar_missile_3"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_stellar_missile_3" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "molluscoid_01_windup_entity_ukn_stellar_missile_3"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.4
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_stellar_missile_3" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_stellar_missile_3" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_stellar_missile_3" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_stellar_missile_3" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_3" trigger_once = yes keep_particle = yes }
+	}
+}
+
+######----------------------------------
+# T4 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "muzzle_entity_ukn_stellar_missile_4"
+	cull_radius = 0.01
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_stellar_missile_4" keep_particle = yes sound = { soundeffect = missile_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_missile_fire" } }
+	}
+}
+
+# MISSILES
+
+entity = {
+	name = "missile_entity_ukn_stellar_missile_4"
+	pdxmesh = "arthropoid_01_missile_mesh"
+	
+	default_state = idle
+	state = { name = "idle" animation = "idle"
+		start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_4" keep_particle = yes }
+		start_event = { time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_4" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_4" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_4" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss2"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_4" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_4" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss_reversed"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_4" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_4" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss2_reversed"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_4" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_4" keep_particle = yes }
+	}
+	scale = 3		# 2
+}
+
+# HIT EFFECTS
+
+entity = {
+	name = "hit_entity_ukn_stellar_missile_4"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_stellar_missile_4" sound = { soundeffect = missile_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_missile_hit" } }
+	}
+	default_state = "explode_med_hp"
+}
+
+# SHIELD HIT
+
+entity = {
+	name = "shield_hit_entity_ukn_stellar_missile_4"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_stellar_missile_4" sound = { soundeffect = shield_hit } }
+		event = { time = 0.0 particle = "shield_hit_effect_ukn_missile_L" }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+}
+
+
+# WINDUP
+
+entity = {
+	name = "windup_entity_ukn_stellar_missile_4"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "windup_effect_ukn_stellar_missile_4" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "windup_effect_ukn_stellar_missile_4" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_stellar_missile_4" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_stellar_missile_4" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_stellar_missile_4" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_stellar_missile_4" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "windup_effect_ukn_stellar_missile_4" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "windup_effect_ukn_stellar_missile_4" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_4" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "turret_windup_entity_ukn_stellar_missile_4"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_stellar_missile_4" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "humanoid_01_windup_entity_ukn_stellar_missile_4"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_4" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "avian_01_windup_entity_ukn_stellar_missile_4"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_4" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "reptilian_01_windup_entity_ukn_stellar_missile_4"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_4" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "arthropoid_01_windup_entity_ukn_stellar_missile_4"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_stellar_missile_4" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "molluscoid_01_windup_entity_ukn_stellar_missile_4"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.4
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_stellar_missile_4" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_stellar_missile_4" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_stellar_missile_4" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_stellar_missile_4" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_4" trigger_once = yes keep_particle = yes }
+	}
+}
+
+######----------------------------------
+# T5 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "muzzle_entity_ukn_stellar_missile_5"
+	cull_radius = 0.01
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_stellar_missile_5" keep_particle = yes sound = { soundeffect = missile_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_missile_fire" } }
+	}
+}
+
+# MISSILES
+
+entity = {
+	name = "missile_entity_ukn_stellar_missile_5"
+	pdxmesh = "arthropoid_01_missile_mesh"
+	
+	default_state = idle
+	state = { name = "idle" animation = "idle"
+		start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_5" keep_particle = yes }
+		start_event = { time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_5" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_5" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_5" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss2"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_5" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_5" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss_reversed"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_5" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_5" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss2_reversed"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_5" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_5" keep_particle = yes }
+	}
+	scale = 3		# 2
+}
+
+# HIT EFFECTS
+
+entity = {
+	name = "hit_entity_ukn_stellar_missile_5"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_stellar_missile_5" sound = { soundeffect = missile_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_missile_hit" } }
+	}
+	default_state = "explode_med_hp"
+}
+
+# SHIELD HIT
+
+entity = {
+	name = "shield_hit_entity_ukn_stellar_missile_5"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_stellar_missile_5" sound = { soundeffect = shield_hit } }
+		event = { time = 0.0 particle = "shield_hit_effect_ukn_missile_L" }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+}
+
+
+# WINDUP
+
+entity = {
+	name = "windup_entity_ukn_stellar_missile_5"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "windup_effect_ukn_stellar_missile_5" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "windup_effect_ukn_stellar_missile_5" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_stellar_missile_5" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_stellar_missile_5" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_stellar_missile_5" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_stellar_missile_5" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "windup_effect_ukn_stellar_missile_5" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "windup_effect_ukn_stellar_missile_5" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_5" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "turret_windup_entity_ukn_stellar_missile_5"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_stellar_missile_5" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "humanoid_01_windup_entity_ukn_stellar_missile_5"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_5" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "avian_01_windup_entity_ukn_stellar_missile_5"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_5" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "reptilian_01_windup_entity_ukn_stellar_missile_5"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_5" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "arthropoid_01_windup_entity_ukn_stellar_missile_5"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_stellar_missile_5" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "molluscoid_01_windup_entity_ukn_stellar_missile_5"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.4
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_stellar_missile_5" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_stellar_missile_5" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_stellar_missile_5" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_stellar_missile_5" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_5" trigger_once = yes keep_particle = yes }
+	}
+}
+
+######----------------------------------
+# T6 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "muzzle_entity_ukn_stellar_missile_6"
+	cull_radius = 0.01
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_stellar_missile_6" keep_particle = yes sound = { soundeffect = missile_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_missile_fire" } }
+	}
+}
+
+# MISSILES
+
+entity = {
+	name = "missile_entity_ukn_stellar_missile_6"
+	pdxmesh = "arthropoid_01_missile_mesh"
+	
+	default_state = idle
+	state = { name = "idle" animation = "idle"
+		start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_6" keep_particle = yes }
+		start_event = { time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_6" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_6" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_6" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss2"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_6" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_6" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss_reversed"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_6" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_6" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		#state_time = 2.0
+		chance = 1
+		animation = "miss2_reversed"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		#start_event = { time = 0 node = exhaust particle = "idle_particle_ukn_stellar_missile_6" keep_particle = yes }
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "idle_flame_particle_ukn_stellar_missile_6" keep_particle = yes }
+	}
+	scale = 3		# 2
+}
+
+# HIT EFFECTS
+
+entity = {
+	name = "hit_entity_ukn_stellar_missile_6"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_stellar_missile_6" sound = { soundeffect = missile_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_missile_hit" } }
+	}
+	default_state = "explode_med_hp"
+}
+
+# SHIELD HIT
+
+entity = {
+	name = "shield_hit_entity_ukn_stellar_missile_6"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 0.8 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_stellar_missile_6" sound = { soundeffect = shield_hit } }
+		event = { time = 0.0 particle = "shield_hit_effect_ukn_missile_L" }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+}
+
+
+# WINDUP
+
+entity = {
+	name = "windup_entity_ukn_stellar_missile_6"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "windup_effect_ukn_stellar_missile_6" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "windup_effect_ukn_stellar_missile_6" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_stellar_missile_6" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_stellar_missile_6" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_stellar_missile_6" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_stellar_missile_6" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "windup_effect_ukn_stellar_missile_6" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "windup_effect_ukn_stellar_missile_6" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_6" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "turret_windup_entity_ukn_stellar_missile_6"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_stellar_missile_6" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "humanoid_01_windup_entity_ukn_stellar_missile_6"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_6" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "avian_01_windup_entity_ukn_stellar_missile_6"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_6" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "reptilian_01_windup_entity_ukn_stellar_missile_6"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_6" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "arthropoid_01_windup_entity_ukn_stellar_missile_6"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_stellar_missile_6" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "molluscoid_01_windup_entity_ukn_stellar_missile_6"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.4
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_stellar_missile_6" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_stellar_missile_6" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_stellar_missile_6" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_stellar_missile_6" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_stellar_missile_6" trigger_once = yes keep_particle = yes }
+	}
+}

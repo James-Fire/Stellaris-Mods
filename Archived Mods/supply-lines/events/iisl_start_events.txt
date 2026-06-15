@@ -1,0 +1,46 @@
+namespace = iisl_start
+#
+event = {
+	id = iisl_start.0
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		NOR = {
+			has_global_flag = iisl_initialized
+			has_global_flag = iisl_paused
+			has_global_flag = iisl_stopped
+		}
+	}
+	immediate = {
+		set_global_flag = iisl_initialized
+	}
+}
+
+country_event = {
+	id = iisl_start.10
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		iisl_can_use_supplies = yes
+		NOT = {
+			has_country_flag = iisl_initialized
+		}
+	}
+	immediate = {
+		set_country_flag = iisl_initialized
+		# TODO spawn supply country
+	}
+}
+
+# register in DMM
+event = {
+	id = iisl_start.20
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		dmm_register_mod = {
+			DMM_NAME = iisl_dmm.name
+			DMM_FLAG = interstellar_incorporated_supply_lines
+		}
+	}
+}

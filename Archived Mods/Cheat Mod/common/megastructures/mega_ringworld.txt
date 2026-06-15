@@ -1,0 +1,248 @@
+modify_ringworld = {
+  entity = ""
+  construction_entity = "construction_platform_entity"
+  portrait = "GFX_megastructure_construction_background"
+  place_entity_on_planet_plane = yes
+  entity_offset = { x = -7 y = -7 }
+  build_time = 100
+  resources = {
+		category = megastructures
+		cost = {
+			alloys = 100
+			influence = 1
+		}
+	}
+  construction_blocks_others = no
+
+  potential = {
+    is_ai=no
+    has_country_flag = use_a_mega
+  }
+
+  possible = {}
+
+  placement_rules = {
+    planet_possible = {
+      custom_tooltip = {
+        fail_text = "requires_no_anomaly"
+        NOT = { has_anomaly = yes }
+      }
+      custom_tooltip = {
+        fail_text = "requires_ringworld_not_habitable"
+        OR = {
+          is_planet_class = pc_ringworld_seam
+          is_planet_class = pc_ringworld_tech
+          is_planet_class = pc_ringworld_habitable_damaged
+          is_planet_class = pc_ringworld_habitable
+        }
+      }
+    }
+  }
+
+  ai_weight = {
+    modifier = {
+      weight = 0
+    }
+  }
+
+  on_build_start = {}
+  on_build_cancel = {}
+
+  on_build_complete = {
+    remove_megastructure = fromfrom
+    fromfrom.planet = {
+      if = {
+        limit = {
+          NOR = {
+            is_planet_class = pc_ringworld_habitable
+            is_planet_class = pc_ringworld_habitable_damaged
+          }
+        }
+        change_planet_size = 15
+      }
+      if = {
+        limit = {
+          NOT = {
+            is_planet_class = pc_ringworld_habitable
+          }
+        }
+        change_pc = pc_ringworld_habitable
+        aai_reroll_planet = yes
+      }
+      kill_all_blockers = yes
+      set_planet_flag = graphical_style_changing
+    }
+    from = {
+      country_event = { id = change_paradise_type.112 }
+      country_event = { id = change_paradise_type.103 }
+    }
+  }
+}
+
+  ring_world_extra_large = {
+  entity = ""
+  construction_entity = "construction_platform_entity"
+  portrait = "GFX_megastructure_construction_background"
+  place_entity_on_planet_plane = yes
+  entity_offset = { x = -7 y = -7 }
+  build_time = 1000
+  resources = {
+		category = megastructures
+		cost = {
+			alloys = 5000
+			influence = 50
+		}
+	}
+
+  construction_blocks_others = no
+
+  potential = {
+    is_ai=no
+    has_country_flag = use_a_mega
+  }
+
+  possible = {
+    #custom_tooltip = {
+    #  fail_text = "requires_not_colonized_system"
+    #  NOT = {
+    #    any_planet = {
+    #      has_owner = yes
+    #    }
+    #  }
+    #}
+  }
+
+  placement_rules = {
+    planet_possible = {
+      custom_tooltip = {
+        fail_text = "must_build_around_star"
+        is_star = yes
+      }
+      custom_tooltip = {
+        fail_text = "requires_no_anomaly"
+        NOT = { has_anomaly = yes }
+      }
+    }
+  }
+
+  ai_weight = {
+    modifier = {
+      weight = 0
+    }
+  }
+
+  on_build_complete = {
+    set_star_flag = ring_world_built
+    every_system_planet = {
+      limit = { is_star = no }
+      clean_the_planet = yes
+      remove_planet = yes
+    }
+    set_asteroid_belt = {
+      radius = 0
+    }
+    make_custom_ring = yes
+    fromfrom.planet = {
+      #set_planet_flag = has_megastructure
+    }
+    remove_megastructure = fromfrom
+    from = {
+      country_event = { id = change_paradise_type.112 }
+      country_event = { id = change_paradise_type.102 }
+    }
+  }
+}
+
+  ring_world_extra_tiny = {
+  entity = ""
+  construction_entity = "construction_platform_entity"
+  portrait = "GFX_megastructure_construction_background"
+  place_entity_on_planet_plane = no
+  entity_offset = { x = -7 y = -7 }
+  build_time = 500
+  resources = {
+		category = megastructures
+		cost = {
+			alloys = 1000
+			influence = 10
+		}
+	}
+  construction_blocks_others = no
+
+  potential = {
+    is_ai=no
+    has_country_flag = use_a_mega
+  }
+
+  possible = {
+    custom_tooltip = {
+        fail_text = "requires_no_existing_megastructure"
+			NOR = {
+				has_megastructure = ring_world_ruined
+				has_megastructure = dyson_sphere_ruined
+				has_megastructure = spy_orb_ruined
+				has_megastructure = think_tank_ruined
+			}
+		}
+  }
+
+  placement_rules = {
+    planet_possible = {
+      custom_tooltip = {
+        fail_text = "requires_surveyed_planet"
+        is_surveyed = {
+          who = prev.from
+          status = yes
+        }
+      }
+      #custom_tooltip = {
+      #  fail_text = "requires_no_existing_megastructure"
+      #  NOR = {
+      #    has_planet_flag = has_megastructure
+      #    has_planet_flag = special_tiny_ring
+      #  }
+      #}
+	  custom_tooltip = {
+        fail_text = "requires_no_existing_megastructure"
+        NOT = { has_planet_flag = special_tiny_ring }
+      }
+      custom_tooltip = {
+        fail_text = "requires_no_anomaly"
+        NOT = { has_anomaly = yes }
+      }
+      custom_tooltip = {
+        fail_text = "requires_not_minor_planetary_body"
+        NOR = {
+          is_asteroid = yes
+          is_moon = yes
+        }
+      }
+      custom_tooltip = {
+        fail_text = "requires_not_star"
+        is_star = no
+      }
+    }
+  }
+
+# root = system
+# from = country
+  ai_weight = {
+    factor = 0
+  }
+
+  on_build_start = {}
+  on_build_cancel = {}
+
+  on_build_complete = {
+   make_tiny_ring = yes 
+    fromfrom.planet = {
+      #set_planet_flag = has_megastructure
+      set_ring = no
+    }
+    remove_megastructure = fromfrom
+    from = {
+      country_event = { id = change_paradise_type.112 }
+      country_event = { id = change_paradise_type.103 }
+    }
+  }
+}

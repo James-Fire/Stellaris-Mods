@@ -1,0 +1,957 @@
+##############################
+### KINETIC SUPERARTILLERY ###
+##############################
+
+######----------------------------------
+# T1 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASH
+
+entity = {
+	name = "muzzle_entity_ukn_mass_accelerator_1"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_mass_accelerator_1" keep_particle = yes sound = { soundeffect = kinectic_artillery_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_kinectic_artillery_fire" } }
+	}
+}
+
+# PROJECTILE
+
+entity = {
+	name = "tracer_round_entity_ukn_mass_accelerator_1"
+	pdxmesh = "tracer_round_ukn_mass_accelerator_1_mesh"
+	
+	default_state = idle
+	state = { name = "idle"
+		#event = { time = 0 particle = "idle_particle_ukn_mass_accelerator_1" keep_particle = yes }
+	}
+	
+	scale = 2
+}
+
+# HIT EFFECT
+
+entity = {
+	name = "hit_entity_ukn_mass_accelerator_1"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5.0 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_mass_accelerator_1" sound = { soundeffect = kinectic_artillery_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_kinectic_artillery_hit" } }
+	}
+	default_state = "explode_med_hp"
+	scale = 2
+}
+
+# SHIELD HIT
+
+entity = {
+	name = "shield_hit_entity_ukn_mass_accelerator_1"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_mass_accelerator_1" }
+		event = { time = 0.0 particle = "shield_hit_effect_ukn_projectile_M" }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	scale = 2
+}
+
+
+# WINDUP
+
+entity = {
+	name = "windup_entity_ukn_mass_accelerator_1"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "windup_effect_ukn_mass_accelerator_1" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "windup_effect_ukn_mass_accelerator_1" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_mass_accelerator_1" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_mass_accelerator_1" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_mass_accelerator_1" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_mass_accelerator_1" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "windup_effect_ukn_mass_accelerator_1" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "windup_effect_ukn_mass_accelerator_1" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_1" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "turret_windup_entity_ukn_mass_accelerator_1"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_1" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "humanoid_01_windup_entity_ukn_mass_accelerator_1"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_1" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "avian_01_windup_entity_ukn_mass_accelerator_1"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_1" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "reptilian_01_windup_entity_ukn_mass_accelerator_1"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_1" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "arthropoid_01_windup_entity_ukn_mass_accelerator_1"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_1" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "molluscoid_01_windup_entity_ukn_mass_accelerator_1"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.4
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_mass_accelerator_1" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_mass_accelerator_1" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_mass_accelerator_1" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_mass_accelerator_1" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_1" trigger_once = yes keep_particle = yes }
+	}
+}
+
+######----------------------------------
+# T2 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASH
+
+entity = {
+	name = "muzzle_entity_ukn_mass_accelerator_2"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_mass_accelerator_2" keep_particle = yes sound = { soundeffect = kinectic_artillery_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_kinectic_artillery_fire" } }
+	}
+}
+
+# PROJECTILE
+
+entity = {
+	name = "tracer_round_entity_ukn_mass_accelerator_2"
+	pdxmesh = "tracer_round_ukn_mass_accelerator_2_mesh"
+	
+	default_state = idle
+	state = { name = "idle"
+		#event = { time = 0 particle = "idle_particle_ukn_mass_accelerator_2" keep_particle = yes }
+	}
+	
+	scale = 2
+}
+
+# HIT EFFECT
+
+entity = {
+	name = "hit_entity_ukn_mass_accelerator_2"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5.0 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_mass_accelerator_2" sound = { soundeffect = kinectic_artillery_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_kinectic_artillery_hit" } }
+	}
+	default_state = "explode_med_hp"
+	scale = 2
+}
+
+# SHIELD HIT
+
+entity = {
+	name = "shield_hit_entity_ukn_mass_accelerator_2"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_mass_accelerator_2" }
+		event = { time = 0.0 particle = "shield_hit_effect_ukn_projectile_M" }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	scale = 2
+}
+
+
+# WINDUP
+
+entity = {
+	name = "windup_entity_ukn_mass_accelerator_2"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "windup_effect_ukn_mass_accelerator_2" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "windup_effect_ukn_mass_accelerator_2" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_mass_accelerator_2" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_mass_accelerator_2" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_mass_accelerator_2" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_mass_accelerator_2" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "windup_effect_ukn_mass_accelerator_2" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "windup_effect_ukn_mass_accelerator_2" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_2" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "turret_windup_entity_ukn_mass_accelerator_2"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_2" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "humanoid_01_windup_entity_ukn_mass_accelerator_2"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_2" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "avian_01_windup_entity_ukn_mass_accelerator_2"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_2" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "reptilian_01_windup_entity_ukn_mass_accelerator_2"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_2" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "arthropoid_01_windup_entity_ukn_mass_accelerator_2"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_2" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "molluscoid_01_windup_entity_ukn_mass_accelerator_2"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.4
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_mass_accelerator_2" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_mass_accelerator_2" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_mass_accelerator_2" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_mass_accelerator_2" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_2" trigger_once = yes keep_particle = yes }
+	}
+}
+
+######----------------------------------
+# T3 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASH
+
+entity = {
+	name = "muzzle_entity_ukn_mass_accelerator_3"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_mass_accelerator_3" keep_particle = yes sound = { soundeffect = kinectic_artillery_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_kinectic_artillery_fire" } }
+	}
+}
+
+# PROJECTILE
+
+entity = {
+	name = "tracer_round_entity_ukn_mass_accelerator_3"
+	pdxmesh = "tracer_round_ukn_mass_accelerator_3_mesh"
+	
+	default_state = idle
+	state = { name = "idle"
+		#event = { time = 0 particle = "idle_particle_ukn_mass_accelerator_3" keep_particle = yes }
+	}
+	
+	scale = 2
+}
+
+# HIT EFFECT
+
+entity = {
+	name = "hit_entity_ukn_mass_accelerator_3"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5.0 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_mass_accelerator_3" sound = { soundeffect = kinectic_artillery_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_kinectic_artillery_hit" } }
+	}
+	default_state = "explode_med_hp"
+	scale = 2
+}
+
+# SHIELD HIT
+
+entity = {
+	name = "shield_hit_entity_ukn_mass_accelerator_3"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_mass_accelerator_3" }
+		event = { time = 0.0 particle = "shield_hit_effect_ukn_projectile_M" }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	scale = 2
+}
+
+
+# WINDUP
+
+entity = {
+	name = "windup_entity_ukn_mass_accelerator_3"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "windup_effect_ukn_mass_accelerator_3" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "windup_effect_ukn_mass_accelerator_3" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_mass_accelerator_3" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_mass_accelerator_3" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_mass_accelerator_3" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_mass_accelerator_3" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "windup_effect_ukn_mass_accelerator_3" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "windup_effect_ukn_mass_accelerator_3" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_3" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "turret_windup_entity_ukn_mass_accelerator_3"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_3" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "humanoid_01_windup_entity_ukn_mass_accelerator_3"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_3" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "avian_01_windup_entity_ukn_mass_accelerator_3"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_3" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "reptilian_01_windup_entity_ukn_mass_accelerator_3"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_3" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "arthropoid_01_windup_entity_ukn_mass_accelerator_3"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_3" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "molluscoid_01_windup_entity_ukn_mass_accelerator_3"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.4
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_mass_accelerator_3" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_mass_accelerator_3" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_mass_accelerator_3" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_mass_accelerator_3" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_3" trigger_once = yes keep_particle = yes }
+	}
+}
+
+######----------------------------------
+# T4 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASH
+
+entity = {
+	name = "muzzle_entity_ukn_mass_accelerator_4"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_mass_accelerator_4" keep_particle = yes sound = { soundeffect = kinectic_artillery_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_kinectic_artillery_fire" } }
+	}
+}
+
+# PROJECTILE
+
+entity = {
+	name = "tracer_round_entity_ukn_mass_accelerator_4"
+	pdxmesh = "tracer_round_ukn_mass_accelerator_4_mesh"
+	
+	default_state = idle
+	state = { name = "idle"
+		#event = { time = 0 particle = "idle_particle_ukn_mass_accelerator_4" keep_particle = yes }
+	}
+	
+	scale = 2
+}
+
+# HIT EFFECT
+
+entity = {
+	name = "hit_entity_ukn_mass_accelerator_4"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5.0 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_mass_accelerator_4" sound = { soundeffect = kinectic_artillery_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_kinectic_artillery_hit" } }
+	}
+	default_state = "explode_med_hp"
+	scale = 2
+}
+
+# SHIELD HIT
+
+entity = {
+	name = "shield_hit_entity_ukn_mass_accelerator_4"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_mass_accelerator_4" }
+		event = { time = 0.0 particle = "shield_hit_effect_ukn_projectile_M" }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	scale = 2
+}
+
+
+# WINDUP
+
+entity = {
+	name = "windup_entity_ukn_mass_accelerator_4"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "windup_effect_ukn_mass_accelerator_4" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "windup_effect_ukn_mass_accelerator_4" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_mass_accelerator_4" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_mass_accelerator_4" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_mass_accelerator_4" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_mass_accelerator_4" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "windup_effect_ukn_mass_accelerator_4" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "windup_effect_ukn_mass_accelerator_4" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_4" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "turret_windup_entity_ukn_mass_accelerator_4"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_4" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "humanoid_01_windup_entity_ukn_mass_accelerator_4"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_4" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "avian_01_windup_entity_ukn_mass_accelerator_4"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_4" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "reptilian_01_windup_entity_ukn_mass_accelerator_4"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_4" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "arthropoid_01_windup_entity_ukn_mass_accelerator_4"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_4" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "molluscoid_01_windup_entity_ukn_mass_accelerator_4"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.4
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_mass_accelerator_4" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_mass_accelerator_4" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_mass_accelerator_4" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_mass_accelerator_4" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_4" trigger_once = yes keep_particle = yes }
+	}
+}
+
+######----------------------------------
+# T5 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASH
+
+entity = {
+	name = "muzzle_entity_ukn_mass_accelerator_5"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_mass_accelerator_5" keep_particle = yes sound = { soundeffect = kinectic_artillery_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_kinectic_artillery_fire" } }
+	}
+}
+
+# PROJECTILE
+
+entity = {
+	name = "tracer_round_entity_ukn_mass_accelerator_5"
+	pdxmesh = "tracer_round_ukn_mass_accelerator_5_mesh"
+	
+	default_state = idle
+	state = { name = "idle"
+		#event = { time = 0 particle = "idle_particle_ukn_mass_accelerator_5" keep_particle = yes }
+	}
+	
+	scale = 2
+}
+
+# HIT EFFECT
+
+entity = {
+	name = "hit_entity_ukn_mass_accelerator_5"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5.0 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_mass_accelerator_5" sound = { soundeffect = kinectic_artillery_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_kinectic_artillery_hit" } }
+	}
+	default_state = "explode_med_hp"
+	scale = 2
+}
+
+# SHIELD HIT
+
+entity = {
+	name = "shield_hit_entity_ukn_mass_accelerator_5"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_mass_accelerator_5" }
+		event = { time = 0.0 particle = "shield_hit_effect_ukn_projectile_M" }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	scale = 2
+}
+
+
+# WINDUP
+
+entity = {
+	name = "windup_entity_ukn_mass_accelerator_5"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "windup_effect_ukn_mass_accelerator_5" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "windup_effect_ukn_mass_accelerator_5" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_mass_accelerator_5" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_mass_accelerator_5" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_mass_accelerator_5" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_mass_accelerator_5" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "windup_effect_ukn_mass_accelerator_5" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "windup_effect_ukn_mass_accelerator_5" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_5" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "turret_windup_entity_ukn_mass_accelerator_5"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_5" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "humanoid_01_windup_entity_ukn_mass_accelerator_5"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_5" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "avian_01_windup_entity_ukn_mass_accelerator_5"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_5" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "reptilian_01_windup_entity_ukn_mass_accelerator_5"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_5" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "arthropoid_01_windup_entity_ukn_mass_accelerator_5"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_5" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "molluscoid_01_windup_entity_ukn_mass_accelerator_5"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.4
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_mass_accelerator_5" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_mass_accelerator_5" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_mass_accelerator_5" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_mass_accelerator_5" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_5" trigger_once = yes keep_particle = yes }
+	}
+}
+
+######----------------------------------
+# T6 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASH
+
+entity = {
+	name = "muzzle_entity_ukn_mass_accelerator_6"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_mass_accelerator_6" keep_particle = yes sound = { soundeffect = kinectic_artillery_fire } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_kinectic_artillery_fire" } }
+	}
+}
+
+# PROJECTILE
+
+entity = {
+	name = "tracer_round_entity_ukn_mass_accelerator_6"
+	pdxmesh = "tracer_round_ukn_mass_accelerator_6_mesh"
+	
+	default_state = idle
+	state = { name = "idle"
+		#event = { time = 0 particle = "idle_particle_ukn_mass_accelerator_6" keep_particle = yes }
+	}
+	
+	scale = 2
+}
+
+# HIT EFFECT
+
+entity = {
+	name = "hit_entity_ukn_mass_accelerator_6"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5.0 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_mass_accelerator_6" sound = { soundeffect = kinectic_artillery_hit } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_kinectic_artillery_hit" } }
+	}
+	default_state = "explode_med_hp"
+	scale = 2
+}
+
+# SHIELD HIT
+
+entity = {
+	name = "shield_hit_entity_ukn_mass_accelerator_6"
+	cull_radius = 1.0
+	
+	state = { name = "explode_med_hp" state_time = 5 looping = no
+		event = { time = 0.0 particle = "hit_effect_ukn_mass_accelerator_6" }
+		event = { time = 0.0 particle = "shield_hit_effect_ukn_projectile_M" }
+		event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	default_state = "explode_med_hp"
+	scale = 2
+}
+
+
+# WINDUP
+
+entity = {
+	name = "windup_entity_ukn_mass_accelerator_6"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "windup_effect_ukn_mass_accelerator_6" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "windup_effect_ukn_mass_accelerator_6" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_mass_accelerator_6" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_mass_accelerator_6" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_mass_accelerator_6" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_mass_accelerator_6" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "windup_effect_ukn_mass_accelerator_6" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "windup_effect_ukn_mass_accelerator_6" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_6" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "turret_windup_entity_ukn_mass_accelerator_6"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_6" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "humanoid_01_windup_entity_ukn_mass_accelerator_6"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_6" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "avian_01_windup_entity_ukn_mass_accelerator_6"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_6" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "reptilian_01_windup_entity_ukn_mass_accelerator_6"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_6" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "arthropoid_01_windup_entity_ukn_mass_accelerator_6"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_6" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "molluscoid_01_windup_entity_ukn_mass_accelerator_6"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.4
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_6 particle = "windup_effect_ukn_mass_accelerator_6" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_5 particle = "windup_effect_ukn_mass_accelerator_6" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_4 particle = "windup_effect_ukn_mass_accelerator_6" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_3 particle = "windup_effect_ukn_mass_accelerator_6" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "muzzle_windup_effect_ukn_mass_accelerator_6" trigger_once = yes keep_particle = yes }
+	}
+}

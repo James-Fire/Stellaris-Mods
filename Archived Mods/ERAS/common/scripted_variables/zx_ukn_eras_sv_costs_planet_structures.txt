@@ -1,0 +1,4088 @@
+          ######################
+#---------## STRUCTURES STATS ##---------#
+          ######################
+
+################################
+########## BUILDINGS ###########
+################################
+
+#########################
+# AUTOMATION FRAMEWORKS #
+#########################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_automation_grid_1_build_time = 360
+@building_ukn_automation_grid_7_build_time = 1200
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_automation_grid_1_cost_basic_consumer_goods = 50
+@building_ukn_automation_grid_7_cost_basic_consumer_goods = 50
+
+# Minerals
+@building_ukn_automation_grid_1_cost_basic_minerals = 400
+@building_ukn_automation_grid_7_cost_basic_minerals = 1200
+
+# Exotic Gases
+@building_ukn_automation_grid_1_cost_advanced_exotic_gases = 0
+@building_ukn_automation_grid_7_cost_advanced_exotic_gases = 10
+
+# Rare Crystals
+@building_ukn_automation_grid_1_cost_advanced_rare_crystals = 0
+@building_ukn_automation_grid_7_cost_advanced_rare_crystals = 50
+
+# Meta-Materials
+@building_ukn_automation_grid_7_cost_basic_ukn_meta_materials = 700
+#--- [Basic Replace]
+@building_ukn_automation_grid_1_r_cost_basic_ukn_meta_materials = 170
+@building_ukn_automation_grid_7_r_cost_basic_ukn_meta_materials = 1200
+
+# Femtomatter
+#--- [Advanced Replace]
+@building_ukn_automation_grid_1_r_cost_advanced_ukn_femtomatter = 0
+@building_ukn_automation_grid_7_r_cost_advanced_ukn_femtomatter = 0
+
+# Condensics
+#--- [Advanced Replace]
+@building_ukn_automation_grid_1_r_cost_advanced_ukn_condensics = 0
+@building_ukn_automation_grid_7_r_cost_advanced_ukn_condensics = 0
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_automation_grid_1_r_cost_basic_ukn_quasi_matter = 0.41
+@building_ukn_automation_grid_7_r_cost_basic_ukn_quasi_matter = 1.25
+#--- [Advanced Replace]
+@building_ukn_automation_grid_1_r_cost_advanced_ukn_quasi_matter = 0
+@building_ukn_automation_grid_7_r_cost_advanced_ukn_quasi_matter = 0
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_automation_grid_1_r_cost_basic_ukn_causalitons = 0.12
+@building_ukn_automation_grid_7_r_cost_basic_ukn_causalitons = 0.38
+#--- [Advanced Replace]
+@building_ukn_automation_grid_1_r_cost_advanced_ukn_causalitons = 0
+@building_ukn_automation_grid_7_r_cost_advanced_ukn_causalitons = 0
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_automation_grid_1_normal_upkeep_energy = 5
+@building_ukn_automation_grid_1_arcology_upkeep_energy = 10
+@building_ukn_automation_grid_1_rw_upkeep_energy = 20
+@building_ukn_automation_grid_7_upkeep_energy = 25
+
+
+#######################
+# ENTERTAINMENT GRIDS #
+#######################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_holo_theatres_1_build_time = 360
+@building_ukn_holo_theatres_3_build_time = 360
+@building_ukn_holo_theatres_4_build_time = 360
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_holo_theatres_1_cost_basic_consumer_goods = 100
+@building_ukn_holo_theatres_3_cost_basic_consumer_goods = 100
+@building_ukn_holo_theatres_4_cost_basic_consumer_goods = 150
+
+# Minerals
+@building_ukn_holo_theatres_1_cost_basic_minerals = 500
+@building_ukn_holo_theatres_3_cost_basic_minerals = 500
+@building_ukn_holo_theatres_4_cost_basic_minerals = 500
+
+# Exotic Gases
+@building_ukn_holo_theatres_1_cost_advanced_exotic_gases = 0
+@building_ukn_holo_theatres_3_cost_advanced_exotic_gases = 30
+@building_ukn_holo_theatres_4_cost_advanced_exotic_gases = 30
+
+# Rare Crystals
+@building_ukn_holo_theatres_1_cost_advanced_rare_crystals = 0
+@building_ukn_holo_theatres_3_cost_advanced_rare_crystals = 30
+@building_ukn_holo_theatres_4_cost_advanced_rare_crystals = 30
+
+# Polymerics
+@building_ukn_holo_theatres_1_cost_basic_alloys = 0
+@building_ukn_holo_theatres_3_cost_basic_alloys = 0
+
+# Meta-Materials
+@building_ukn_holo_theatres_4_cost_basic_ukn_meta_materials = 200
+#--- [Basic Replace]
+@building_ukn_holo_theatres_1_r_cost_basic_ukn_meta_materials = 210
+@building_ukn_holo_theatres_3_r_cost_basic_ukn_meta_materials = 210
+@building_ukn_holo_theatres_4_r_cost_basic_ukn_meta_materials = 210
+
+# Femtomatter
+#--- [Advanced Replace]
+@building_ukn_holo_theatres_1_r_cost_advanced_ukn_femtomatter = 0
+@building_ukn_holo_theatres_3_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_holo_theatres_4_r_cost_advanced_ukn_femtomatter = 1.5
+
+# Condensics
+#--- [Advanced Replace]
+@building_ukn_holo_theatres_1_r_cost_advanced_ukn_condensics = 0
+@building_ukn_holo_theatres_3_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_holo_theatres_4_r_cost_advanced_ukn_condensics = 0.375
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_holo_theatres_1_r_cost_basic_ukn_quasi_matter = 0.5157
+@building_ukn_holo_theatres_3_r_cost_basic_ukn_quasi_matter = 0.5157
+@building_ukn_holo_theatres_4_r_cost_basic_ukn_quasi_matter = 1.0068
+#--- [Advanced Replace]
+@building_ukn_holo_theatres_1_r_cost_advanced_ukn_quasi_matter = 0
+@building_ukn_holo_theatres_3_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_holo_theatres_4_r_cost_advanced_ukn_quasi_matter = 0.1578
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_holo_theatres_1_r_cost_basic_ukn_causalitons = 0.1606
+@building_ukn_holo_theatres_3_r_cost_basic_ukn_causalitons = 0.1606
+@building_ukn_holo_theatres_4_r_cost_basic_ukn_causalitons = 0.3135
+#--- [Advanced Replace]
+@building_ukn_holo_theatres_1_r_cost_advanced_ukn_causalitons = 0
+@building_ukn_holo_theatres_3_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_holo_theatres_4_r_cost_advanced_ukn_causalitons = 0.0491
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_holo_theatres_1_upkeep_energy = 5
+@building_ukn_holo_theatres_3_upkeep_energy = 10
+@building_ukn_holo_theatres_4_upkeep_energy = 15
+
+
+#####################
+# ENFORCEMENT GRIDS #
+#####################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_precinct_house_1_build_time = 360
+@building_ukn_precinct_house_2_build_time = 360
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_precinct_house_1_cost_basic_consumer_goods = 100
+@building_ukn_precinct_house_2_cost_basic_consumer_goods = 100
+
+# Minerals
+@building_ukn_precinct_house_1_cost_basic_minerals = 500
+@building_ukn_precinct_house_2_cost_basic_minerals = 500
+
+# Exotic Gases
+@building_ukn_precinct_house_1_cost_advanced_exotic_gases = 0
+@building_ukn_precinct_house_2_cost_advanced_exotic_gases = 0
+
+# Rare Crystals
+@building_ukn_precinct_house_1_cost_advanced_rare_crystals = 0
+@building_ukn_precinct_house_2_cost_advanced_rare_crystals = 0
+
+# Polymerics
+@building_ukn_precinct_house_1_cost_basic_alloys = 0
+@building_ukn_precinct_house_2_cost_basic_alloys = 0
+
+# Meta-Materials
+#--- [Basic Replace]
+@building_ukn_precinct_house_1_r_cost_basic_ukn_meta_materials = 210
+@building_ukn_precinct_house_2_r_cost_basic_ukn_meta_materials = 210
+
+# Femtomatter
+#--- [Advanced Replace]
+@building_ukn_precinct_house_1_r_cost_advanced_ukn_femtomatter = 0
+@building_ukn_precinct_house_2_r_cost_advanced_ukn_femtomatter = 0
+
+# Condensics
+#--- [Advanced Replace]
+@building_ukn_precinct_house_1_r_cost_advanced_ukn_condensics = 0
+@building_ukn_precinct_house_2_r_cost_advanced_ukn_condensics = 0
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_precinct_house_1_r_cost_basic_ukn_quasi_matter = 0.5157
+@building_ukn_precinct_house_2_r_cost_basic_ukn_quasi_matter = 0.5157
+#--- [Advanced Replace]
+@building_ukn_precinct_house_1_r_cost_advanced_ukn_quasi_matter = 0
+@building_ukn_precinct_house_2_r_cost_advanced_ukn_quasi_matter = 0
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_precinct_house_1_r_cost_basic_ukn_causalitons = 0.1606
+@building_ukn_precinct_house_2_r_cost_basic_ukn_causalitons = 0.1606
+#--- [Advanced Replace]
+@building_ukn_precinct_house_1_r_cost_advanced_ukn_causalitons = 0
+@building_ukn_precinct_house_2_r_cost_advanced_ukn_causalitons = 0
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_precinct_house_1_upkeep_energy = 5
+@building_ukn_precinct_house_2_upkeep_energy = 10
+
+
+##################
+# SENTINEL GRIDS #
+##################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_sentinel_posts_1_build_time = 360
+@building_ukn_sentinel_posts_2_build_time = 360
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_sentinel_posts_1_cost_basic_consumer_goods = 100
+@building_ukn_sentinel_posts_2_cost_basic_consumer_goods = 100
+
+# Minerals
+@building_ukn_sentinel_posts_1_cost_basic_minerals = 500
+@building_ukn_sentinel_posts_2_cost_basic_minerals = 500
+
+# Exotic Gases
+@building_ukn_sentinel_posts_1_cost_advanced_exotic_gases = 0
+@building_ukn_sentinel_posts_2_cost_advanced_exotic_gases = 0
+
+# Rare Crystals
+@building_ukn_sentinel_posts_1_cost_advanced_rare_crystals = 0
+@building_ukn_sentinel_posts_2_cost_advanced_rare_crystals = 0
+
+# Polymerics
+@building_ukn_sentinel_posts_1_cost_basic_alloys = 0
+@building_ukn_sentinel_posts_2_cost_basic_alloys = 0
+
+# Meta-Materials
+#--- [Basic Replace]
+@building_ukn_sentinel_posts_1_r_cost_basic_ukn_meta_materials = 210
+@building_ukn_sentinel_posts_2_r_cost_basic_ukn_meta_materials = 210
+
+# Femtomatter
+#--- [Advanced Replace]
+@building_ukn_sentinel_posts_1_r_cost_advanced_ukn_femtomatter = 0
+@building_ukn_sentinel_posts_2_r_cost_advanced_ukn_femtomatter = 0
+
+# Condensics
+#--- [Advanced Replace]
+@building_ukn_sentinel_posts_1_r_cost_advanced_ukn_condensics = 0
+@building_ukn_sentinel_posts_2_r_cost_advanced_ukn_condensics = 0
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_sentinel_posts_1_r_cost_basic_ukn_quasi_matter = 0.5157
+@building_ukn_sentinel_posts_2_r_cost_basic_ukn_quasi_matter = 0.5157
+#--- [Advanced Replace]
+@building_ukn_sentinel_posts_1_r_cost_advanced_ukn_quasi_matter = 0
+@building_ukn_sentinel_posts_2_r_cost_advanced_ukn_quasi_matter = 0
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_sentinel_posts_1_r_cost_basic_ukn_causalitons = 0.1606
+@building_ukn_sentinel_posts_2_r_cost_basic_ukn_causalitons = 0.1606
+#--- [Advanced Replace]
+@building_ukn_sentinel_posts_1_r_cost_advanced_ukn_causalitons = 0
+@building_ukn_sentinel_posts_2_r_cost_advanced_ukn_causalitons = 0
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_sentinel_posts_1_upkeep_energy = 5
+@building_ukn_sentinel_posts_2_upkeep_energy = 10
+
+
+#######################
+# ENVIRONMENTAL GRIDS #
+#######################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_environmental_grid_1_build_time = 360
+@building_ukn_environmental_grid_3_build_time = 360
+@building_ukn_environmental_grid_4_build_time = 360
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_environmental_grid_1_cost_basic_consumer_goods = 50
+@building_ukn_environmental_grid_3_cost_basic_consumer_goods = 100
+@building_ukn_environmental_grid_4_cost_basic_consumer_goods = 150
+
+# Minerals
+@building_ukn_environmental_grid_1_cost_basic_minerals = 500
+@building_ukn_environmental_grid_3_cost_basic_minerals = 500
+@building_ukn_environmental_grid_4_cost_basic_minerals = 500
+
+# Exotic Gases
+@building_ukn_environmental_grid_1_cost_advanced_exotic_gases = 0
+@building_ukn_environmental_grid_3_cost_advanced_exotic_gases = 30
+@building_ukn_environmental_grid_4_cost_advanced_exotic_gases = 30
+
+# Rare Crystals
+@building_ukn_environmental_grid_1_cost_advanced_rare_crystals = 0
+@building_ukn_environmental_grid_3_cost_advanced_rare_crystals = 30
+@building_ukn_environmental_grid_4_cost_advanced_rare_crystals = 30
+
+# Polymerics
+@building_ukn_environmental_grid_1_cost_basic_alloys = 100
+@building_ukn_environmental_grid_3_cost_basic_alloys = 200
+
+# Meta-Materials
+@building_ukn_environmental_grid_4_cost_basic_ukn_meta_materials = 200
+#--- [Basic Replace]
+@building_ukn_environmental_grid_1_r_cost_basic_ukn_meta_materials = 320
+@building_ukn_environmental_grid_3_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_environmental_grid_4_r_cost_basic_ukn_meta_materials = 250
+
+# Femtomatter
+#--- [Advanced Replace]
+@building_ukn_environmental_grid_1_r_cost_advanced_ukn_femtomatter = 0
+@building_ukn_environmental_grid_3_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_environmental_grid_4_r_cost_advanced_ukn_femtomatter = 1.5
+
+# Condensics
+#--- [Advanced Replace]
+@building_ukn_environmental_grid_1_r_cost_advanced_ukn_condensics = 0
+@building_ukn_environmental_grid_3_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_environmental_grid_4_r_cost_advanced_ukn_condensics = 0.375
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_environmental_grid_1_r_cost_basic_ukn_quasi_matter = 0.7858
+@building_ukn_environmental_grid_3_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_environmental_grid_4_r_cost_basic_ukn_quasi_matter = 0.6139
+#--- [Advanced Replace]
+@building_ukn_environmental_grid_1_r_cost_advanced_ukn_quasi_matter = 0
+@building_ukn_environmental_grid_3_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_environmental_grid_4_r_cost_advanced_ukn_quasi_matter = 0.1578
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_environmental_grid_1_r_cost_basic_ukn_causalitons = 0.2447
+@building_ukn_environmental_grid_3_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_environmental_grid_4_r_cost_basic_ukn_causalitons = 0.1912
+#--- [Advanced Replace]
+@building_ukn_environmental_grid_1_r_cost_advanced_ukn_causalitons = 0
+@building_ukn_environmental_grid_3_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_environmental_grid_4_r_cost_advanced_ukn_causalitons = 0.0491
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_environmental_grid_1_upkeep_energy = 5
+@building_ukn_environmental_grid_3_upkeep_energy = 10
+@building_ukn_environmental_grid_4_upkeep_energy = 15
+
+
+####################
+# COMMERCIAL GRIDS #
+####################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_commercial_zone_2_build_time = 360
+@building_ukn_commercial_zone_3_build_time = 360
+@building_ukn_commercial_zone_4_build_time = 360
+@building_ukn_commercial_zone_6_build_time = 360
+@building_ukn_commercial_zone_7_build_time = 360
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_commercial_zone_2_cost_basic_consumer_goods = 50
+@building_ukn_commercial_zone_3_cost_basic_consumer_goods = 50
+@building_ukn_commercial_zone_4_cost_basic_consumer_goods = 50
+@building_ukn_commercial_zone_6_cost_basic_consumer_goods = 50
+@building_ukn_commercial_zone_7_cost_basic_consumer_goods = 50
+
+# Minerals
+@building_ukn_commercial_zone_2_cost_basic_minerals = 750
+@building_ukn_commercial_zone_3_cost_basic_minerals = 600
+@building_ukn_commercial_zone_4_cost_basic_minerals = 600
+@building_ukn_commercial_zone_6_cost_basic_minerals = 600
+@building_ukn_commercial_zone_7_cost_basic_minerals = 600
+
+# Exotic Gases
+@building_ukn_commercial_zone_2_cost_advanced_exotic_gases = 0
+@building_ukn_commercial_zone_3_cost_advanced_exotic_gases = 30
+@building_ukn_commercial_zone_4_cost_advanced_exotic_gases = 30
+@building_ukn_commercial_zone_6_cost_advanced_exotic_gases = 30
+@building_ukn_commercial_zone_7_cost_advanced_exotic_gases = 30
+
+# Rare Crystals
+@building_ukn_commercial_zone_2_cost_advanced_rare_crystals = 0
+@building_ukn_commercial_zone_3_cost_advanced_rare_crystals = 30
+@building_ukn_commercial_zone_4_cost_advanced_rare_crystals = 30
+@building_ukn_commercial_zone_6_cost_advanced_rare_crystals = 30
+@building_ukn_commercial_zone_7_cost_advanced_rare_crystals = 30
+
+# Meta-Materials
+#--- [Basic Replace]
+@building_ukn_commercial_zone_2_r_cost_basic_ukn_meta_materials = 320
+@building_ukn_commercial_zone_3_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_commercial_zone_4_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_commercial_zone_6_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_commercial_zone_7_r_cost_basic_ukn_meta_materials = 250
+
+# Femtomatter
+#--- [Advanced Replace]
+@building_ukn_commercial_zone_2_r_cost_advanced_ukn_femtomatter = 0
+@building_ukn_commercial_zone_3_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_commercial_zone_4_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_commercial_zone_6_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_commercial_zone_7_r_cost_advanced_ukn_femtomatter = 1.5
+
+# Condensics
+#--- [Advanced Replace]
+@building_ukn_commercial_zone_2_r_cost_advanced_ukn_condensics = 0
+@building_ukn_commercial_zone_3_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_commercial_zone_4_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_commercial_zone_6_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_commercial_zone_7_r_cost_advanced_ukn_condensics = 0.375
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_commercial_zone_2_r_cost_basic_ukn_quasi_matter = 0.7858
+@building_ukn_commercial_zone_3_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_commercial_zone_4_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_commercial_zone_6_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_commercial_zone_7_r_cost_basic_ukn_quasi_matter = 0.6139
+#--- [Advanced Replace]
+@building_ukn_commercial_zone_2_r_cost_advanced_ukn_quasi_matter = 0
+@building_ukn_commercial_zone_3_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_commercial_zone_4_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_commercial_zone_6_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_commercial_zone_7_r_cost_advanced_ukn_quasi_matter = 0.1578
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_commercial_zone_2_r_cost_basic_ukn_causalitons = 0.2447
+@building_ukn_commercial_zone_3_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_commercial_zone_4_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_commercial_zone_6_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_commercial_zone_7_r_cost_basic_ukn_causalitons = 0.1912
+#--- [Advanced Replace]
+@building_ukn_commercial_zone_2_r_cost_advanced_ukn_causalitons = 0
+@building_ukn_commercial_zone_3_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_commercial_zone_4_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_commercial_zone_6_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_commercial_zone_7_r_cost_advanced_ukn_causalitons = 0.0491
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_commercial_zone_2_upkeep_energy = 5
+@building_ukn_commercial_zone_3_upkeep_energy = 10
+@building_ukn_commercial_zone_4_upkeep_energy = 15
+@building_ukn_commercial_zone_6_upkeep_energy = 20
+@building_ukn_commercial_zone_7_upkeep_energy = 25
+
+
+##################
+# BUREAUCRATIC GRIDS #
+##################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_bureaucratic_2_build_time = 360
+@building_ukn_bureaucratic_3_build_time = 360
+@building_ukn_bureaucratic_4_build_time = 360
+@building_ukn_bureaucratic_6_build_time = 360
+@building_ukn_bureaucratic_7_build_time = 360
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_bureaucratic_2_cost_basic_consumer_goods = 50
+@building_ukn_bureaucratic_3_cost_basic_consumer_goods = 50
+@building_ukn_bureaucratic_4_cost_basic_consumer_goods = 50
+@building_ukn_bureaucratic_6_cost_basic_consumer_goods = 50
+@building_ukn_bureaucratic_7_cost_basic_consumer_goods = 50
+
+# Minerals
+@building_ukn_bureaucratic_2_cost_basic_minerals = 500
+@building_ukn_bureaucratic_3_cost_basic_minerals = 600
+@building_ukn_bureaucratic_4_cost_basic_minerals = 600
+@building_ukn_bureaucratic_6_cost_basic_minerals = 600
+@building_ukn_bureaucratic_7_cost_basic_minerals = 600
+
+# Exotic Gases
+@building_ukn_bureaucratic_2_cost_advanced_exotic_gases = 0
+@building_ukn_bureaucratic_3_cost_advanced_exotic_gases = 30
+@building_ukn_bureaucratic_4_cost_advanced_exotic_gases = 30
+@building_ukn_bureaucratic_6_cost_advanced_exotic_gases = 30
+@building_ukn_bureaucratic_7_cost_advanced_exotic_gases = 30
+
+# Rare Crystals
+@building_ukn_bureaucratic_2_cost_advanced_rare_crystals = 0
+@building_ukn_bureaucratic_3_cost_advanced_rare_crystals = 30
+@building_ukn_bureaucratic_4_cost_advanced_rare_crystals = 30
+@building_ukn_bureaucratic_6_cost_advanced_rare_crystals = 30
+@building_ukn_bureaucratic_7_cost_advanced_rare_crystals = 30
+
+# Meta-Materials
+#--- [Basic Replace]
+@building_ukn_bureaucratic_2_r_cost_basic_ukn_meta_materials = 210
+@building_ukn_bureaucratic_3_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_bureaucratic_4_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_bureaucratic_6_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_bureaucratic_7_r_cost_basic_ukn_meta_materials = 250
+
+# Femtomatter
+#--- [Advanced Replace]
+@building_ukn_bureaucratic_2_r_cost_advanced_ukn_femtomatter = 0
+@building_ukn_bureaucratic_3_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_bureaucratic_4_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_bureaucratic_6_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_bureaucratic_7_r_cost_advanced_ukn_femtomatter = 1.5
+
+# Condensics
+#--- [Advanced Replace]
+@building_ukn_bureaucratic_2_r_cost_advanced_ukn_condensics = 0
+@building_ukn_bureaucratic_3_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_bureaucratic_4_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_bureaucratic_6_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_bureaucratic_7_r_cost_advanced_ukn_condensics = 0.375
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_bureaucratic_2_r_cost_basic_ukn_quasi_matter = 0.5157
+@building_ukn_bureaucratic_3_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_bureaucratic_4_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_bureaucratic_6_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_bureaucratic_7_r_cost_basic_ukn_quasi_matter = 0.6139
+#--- [Advanced Replace]
+@building_ukn_bureaucratic_2_r_cost_advanced_ukn_quasi_matter = 0
+@building_ukn_bureaucratic_3_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_bureaucratic_4_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_bureaucratic_6_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_bureaucratic_7_r_cost_advanced_ukn_quasi_matter = 0.1578
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_bureaucratic_2_r_cost_basic_ukn_causalitons = 0.1606
+@building_ukn_bureaucratic_3_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_bureaucratic_4_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_bureaucratic_6_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_bureaucratic_7_r_cost_basic_ukn_causalitons = 0.1912
+#--- [Advanced Replace]
+@building_ukn_bureaucratic_2_r_cost_advanced_ukn_causalitons = 0
+@building_ukn_bureaucratic_3_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_bureaucratic_4_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_bureaucratic_6_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_bureaucratic_7_r_cost_advanced_ukn_causalitons = 0.0491
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_bureaucratic_2_upkeep_energy = 5
+@building_ukn_bureaucratic_3_upkeep_energy = 10
+@building_ukn_bureaucratic_4_upkeep_energy = 15
+@building_ukn_bureaucratic_6_upkeep_energy = 20
+@building_ukn_bureaucratic_7_upkeep_energy = 25
+
+
+##################
+# SYNAPTIC GRIDS #
+##################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_hive_node_2_build_time = 360
+@building_ukn_hive_node_3_build_time = 360
+@building_ukn_hive_node_4_build_time = 360
+@building_ukn_hive_node_6_build_time = 360
+@building_ukn_hive_node_7_build_time = 360
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_hive_node_2_cost_basic_consumer_goods = 50
+@building_ukn_hive_node_3_cost_basic_consumer_goods = 50
+@building_ukn_hive_node_4_cost_basic_consumer_goods = 50
+@building_ukn_hive_node_6_cost_basic_consumer_goods = 50
+@building_ukn_hive_node_7_cost_basic_consumer_goods = 50
+
+# Minerals
+@building_ukn_hive_node_2_cost_basic_minerals = 500
+@building_ukn_hive_node_3_cost_basic_minerals = 600
+@building_ukn_hive_node_4_cost_basic_minerals = 600
+@building_ukn_hive_node_6_cost_basic_minerals = 600
+@building_ukn_hive_node_7_cost_basic_minerals = 600
+
+# Exotic Gases
+@building_ukn_hive_node_2_cost_advanced_exotic_gases = 0
+@building_ukn_hive_node_3_cost_advanced_exotic_gases = 30
+@building_ukn_hive_node_4_cost_advanced_exotic_gases = 30
+@building_ukn_hive_node_6_cost_advanced_exotic_gases = 30
+@building_ukn_hive_node_7_cost_advanced_exotic_gases = 30
+
+# Rare Crystals
+@building_ukn_hive_node_2_cost_advanced_rare_crystals = 0
+@building_ukn_hive_node_3_cost_advanced_rare_crystals = 30
+@building_ukn_hive_node_4_cost_advanced_rare_crystals = 30
+@building_ukn_hive_node_6_cost_advanced_rare_crystals = 30
+@building_ukn_hive_node_7_cost_advanced_rare_crystals = 30
+
+# Meta-Materials
+#--- [Basic Replace]
+@building_ukn_hive_node_2_r_cost_basic_ukn_meta_materials = 210
+@building_ukn_hive_node_3_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_hive_node_4_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_hive_node_6_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_hive_node_7_r_cost_basic_ukn_meta_materials = 250
+
+# Femtomatter
+#--- [Advanced Replace]
+@building_ukn_hive_node_2_r_cost_advanced_ukn_femtomatter = 0
+@building_ukn_hive_node_3_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_hive_node_4_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_hive_node_6_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_hive_node_7_r_cost_advanced_ukn_femtomatter = 1.5
+
+# Condensics
+#--- [Advanced Replace]
+@building_ukn_hive_node_2_r_cost_advanced_ukn_condensics = 0
+@building_ukn_hive_node_3_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_hive_node_4_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_hive_node_6_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_hive_node_7_r_cost_advanced_ukn_condensics = 0.375
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_hive_node_2_r_cost_basic_ukn_quasi_matter = 0.5157
+@building_ukn_hive_node_3_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_hive_node_4_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_hive_node_6_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_hive_node_7_r_cost_basic_ukn_quasi_matter = 0.6139
+#--- [Advanced Replace]
+@building_ukn_hive_node_2_r_cost_advanced_ukn_quasi_matter = 0
+@building_ukn_hive_node_3_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_hive_node_4_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_hive_node_6_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_hive_node_7_r_cost_advanced_ukn_quasi_matter = 0.1578
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_hive_node_2_r_cost_basic_ukn_causalitons = 0.1606
+@building_ukn_hive_node_3_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_hive_node_4_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_hive_node_6_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_hive_node_7_r_cost_basic_ukn_causalitons = 0.1912
+#--- [Advanced Replace]
+@building_ukn_hive_node_2_r_cost_advanced_ukn_causalitons = 0
+@building_ukn_hive_node_3_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_hive_node_4_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_hive_node_6_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_hive_node_7_r_cost_advanced_ukn_causalitons = 0.0491
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_hive_node_2_upkeep_energy = 5
+@building_ukn_hive_node_3_upkeep_energy = 10
+@building_ukn_hive_node_4_upkeep_energy = 15
+@building_ukn_hive_node_6_upkeep_energy = 20
+@building_ukn_hive_node_7_upkeep_energy = 25
+
+
+####################
+# UPLINK GRIDS #
+####################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_uplink_node_2_build_time = 360
+@building_ukn_uplink_node_3_build_time = 360
+@building_ukn_uplink_node_4_build_time = 360
+@building_ukn_uplink_node_6_build_time = 360
+@building_ukn_uplink_node_7_build_time = 360
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_uplink_node_2_cost_basic_consumer_goods = 50
+@building_ukn_uplink_node_3_cost_basic_consumer_goods = 50
+@building_ukn_uplink_node_4_cost_basic_consumer_goods = 50
+@building_ukn_uplink_node_6_cost_basic_consumer_goods = 50
+@building_ukn_uplink_node_7_cost_basic_consumer_goods = 50
+
+# Minerals
+@building_ukn_uplink_node_2_cost_basic_minerals = 500
+@building_ukn_uplink_node_3_cost_basic_minerals = 600
+@building_ukn_uplink_node_4_cost_basic_minerals = 600
+@building_ukn_uplink_node_6_cost_basic_minerals = 600
+@building_ukn_uplink_node_7_cost_basic_minerals = 600
+
+# Exotic Gases
+@building_ukn_uplink_node_2_cost_advanced_exotic_gases = 0
+@building_ukn_uplink_node_3_cost_advanced_exotic_gases = 30
+@building_ukn_uplink_node_4_cost_advanced_exotic_gases = 30
+@building_ukn_uplink_node_6_cost_advanced_exotic_gases = 30
+@building_ukn_uplink_node_7_cost_advanced_exotic_gases = 30
+
+# Rare Crystals
+@building_ukn_uplink_node_2_cost_advanced_rare_crystals = 0
+@building_ukn_uplink_node_3_cost_advanced_rare_crystals = 30
+@building_ukn_uplink_node_4_cost_advanced_rare_crystals = 30
+@building_ukn_uplink_node_6_cost_advanced_rare_crystals = 30
+@building_ukn_uplink_node_7_cost_advanced_rare_crystals = 30
+
+# Meta-Materials
+#--- [Basic Replace]
+@building_ukn_uplink_node_2_r_cost_basic_ukn_meta_materials = 210
+@building_ukn_uplink_node_3_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_uplink_node_4_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_uplink_node_6_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_uplink_node_7_r_cost_basic_ukn_meta_materials = 250
+
+# Femtomatter
+#--- [Advanced Replace]
+@building_ukn_uplink_node_2_r_cost_advanced_ukn_femtomatter = 0
+@building_ukn_uplink_node_3_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_uplink_node_4_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_uplink_node_6_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_uplink_node_7_r_cost_advanced_ukn_femtomatter = 1.5
+
+# Condensics
+#--- [Advanced Replace]
+@building_ukn_uplink_node_2_r_cost_advanced_ukn_condensics = 0
+@building_ukn_uplink_node_3_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_uplink_node_4_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_uplink_node_6_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_uplink_node_7_r_cost_advanced_ukn_condensics = 0.375
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_uplink_node_2_r_cost_basic_ukn_quasi_matter = 0.5157
+@building_ukn_uplink_node_3_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_uplink_node_4_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_uplink_node_6_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_uplink_node_7_r_cost_basic_ukn_quasi_matter = 0.6139
+#--- [Advanced Replace]
+@building_ukn_uplink_node_2_r_cost_advanced_ukn_quasi_matter = 0
+@building_ukn_uplink_node_3_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_uplink_node_4_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_uplink_node_6_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_uplink_node_7_r_cost_advanced_ukn_quasi_matter = 0.1578
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_uplink_node_2_r_cost_basic_ukn_causalitons = 0.1606
+@building_ukn_uplink_node_3_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_uplink_node_4_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_uplink_node_6_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_uplink_node_7_r_cost_basic_ukn_causalitons = 0.1912
+#--- [Advanced Replace]
+@building_ukn_uplink_node_2_r_cost_advanced_ukn_causalitons = 0
+@building_ukn_uplink_node_3_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_uplink_node_4_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_uplink_node_6_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_uplink_node_7_r_cost_advanced_ukn_causalitons = 0.0491
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_uplink_node_2_upkeep_energy = 5
+@building_ukn_uplink_node_3_upkeep_energy = 10
+@building_ukn_uplink_node_4_upkeep_energy = 15
+@building_ukn_uplink_node_6_upkeep_energy = 20
+@building_ukn_uplink_node_7_upkeep_energy = 25
+
+
+#################
+# RESEARCH LABS #
+#################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_research_lab_2_build_time = 480
+@building_ukn_research_lab_3_build_time = 480
+@building_ukn_research_lab_4_build_time = 480
+@building_ukn_research_lab_6_build_time = 480
+@building_ukn_research_lab_7_build_time = 480
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_research_lab_2_cost_basic_consumer_goods = 50
+@building_ukn_research_lab_3_cost_basic_consumer_goods = 50
+@building_ukn_research_lab_4_cost_basic_consumer_goods = 50
+@building_ukn_research_lab_6_cost_basic_consumer_goods = 50
+@building_ukn_research_lab_7_cost_basic_consumer_goods = 50
+
+# Minerals
+@building_ukn_research_lab_2_cost_basic_minerals = 750
+@building_ukn_research_lab_3_cost_basic_minerals = 600
+@building_ukn_research_lab_4_cost_basic_minerals = 600
+@building_ukn_research_lab_6_cost_basic_minerals = 600
+@building_ukn_research_lab_7_cost_basic_minerals = 600
+
+# Exotic Gases
+@building_ukn_research_lab_2_cost_advanced_exotic_gases = 0
+@building_ukn_research_lab_3_cost_advanced_exotic_gases = 10
+@building_ukn_research_lab_4_cost_advanced_exotic_gases = 10
+@building_ukn_research_lab_6_cost_advanced_exotic_gases = 10
+@building_ukn_research_lab_7_cost_advanced_exotic_gases = 10
+
+# Rare Crystals
+@building_ukn_research_lab_2_cost_advanced_rare_crystals = 0
+@building_ukn_research_lab_3_cost_advanced_rare_crystals = 20
+@building_ukn_research_lab_4_cost_advanced_rare_crystals = 20
+@building_ukn_research_lab_6_cost_advanced_rare_crystals = 20
+@building_ukn_research_lab_7_cost_advanced_rare_crystals = 20
+
+# Automachines
+@building_ukn_research_lab_2_cost_basic_nanites = 0
+@building_ukn_research_lab_3_cost_basic_nanites = 5
+@building_ukn_research_lab_4_cost_basic_nanites = 5
+@building_ukn_research_lab_6_cost_basic_nanites = 5
+@building_ukn_research_lab_7_cost_basic_nanites = 5
+
+# Meta-Materials
+#--- [Basic Replace]
+@building_ukn_research_lab_2_r_cost_basic_ukn_meta_materials = 320
+@building_ukn_research_lab_3_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_research_lab_4_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_research_lab_6_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_research_lab_7_r_cost_basic_ukn_meta_materials = 250
+
+# Femtomatter
+#--- [Advanced Replace]
+@building_ukn_research_lab_2_r_cost_advanced_ukn_femtomatter = 0
+@building_ukn_research_lab_3_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_research_lab_4_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_research_lab_6_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_research_lab_7_r_cost_advanced_ukn_femtomatter = 1.5
+
+# Condensics
+#--- [Advanced Replace]
+@building_ukn_research_lab_2_r_cost_advanced_ukn_condensics = 0
+@building_ukn_research_lab_3_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_research_lab_4_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_research_lab_6_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_research_lab_7_r_cost_advanced_ukn_condensics = 0.375
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_research_lab_2_r_cost_basic_ukn_quasi_matter = 0.7858
+@building_ukn_research_lab_3_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_research_lab_4_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_research_lab_6_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_research_lab_7_r_cost_basic_ukn_quasi_matter = 0.6139
+#--- [Advanced Replace]
+@building_ukn_research_lab_2_r_cost_advanced_ukn_quasi_matter = 0
+@building_ukn_research_lab_3_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_research_lab_4_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_research_lab_6_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_research_lab_7_r_cost_advanced_ukn_quasi_matter = 0.1578
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_research_lab_2_r_cost_basic_ukn_causalitons = 0.2447
+@building_ukn_research_lab_3_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_research_lab_4_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_research_lab_6_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_research_lab_7_r_cost_basic_ukn_causalitons = 0.1912
+#--- [Advanced Replace]
+@building_ukn_research_lab_2_r_cost_advanced_ukn_causalitons = 0
+@building_ukn_research_lab_3_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_research_lab_4_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_research_lab_6_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_research_lab_7_r_cost_advanced_ukn_causalitons = 0.0491
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_research_lab_2_upkeep_energy = 5
+@building_ukn_research_lab_3_upkeep_energy = 10
+@building_ukn_research_lab_4_upkeep_energy = 15
+@building_ukn_research_lab_6_upkeep_energy = 20
+@building_ukn_research_lab_7_upkeep_energy = 25
+
+
+################
+# ENERGY GRIDS #
+################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_energy_grid_2_build_time = 360
+@building_ukn_energy_grid_3_build_time = 360
+@building_ukn_energy_grid_4_build_time = 360
+@building_ukn_energy_grid_6_build_time = 360
+@building_ukn_energy_grid_7_build_time = 360
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_energy_grid_2_cost_basic_consumer_goods = 50
+@building_ukn_energy_grid_3_cost_basic_consumer_goods = 50
+@building_ukn_energy_grid_4_cost_basic_consumer_goods = 50
+@building_ukn_energy_grid_6_cost_basic_consumer_goods = 50
+@building_ukn_energy_grid_7_cost_basic_consumer_goods = 50
+
+# Minerals
+@building_ukn_energy_grid_2_cost_basic_minerals = 500
+@building_ukn_energy_grid_3_cost_basic_minerals = 500
+@building_ukn_energy_grid_4_cost_basic_minerals = 500
+@building_ukn_energy_grid_6_cost_basic_minerals = 500
+@building_ukn_energy_grid_7_cost_basic_minerals = 500
+
+# Exotic Gases
+@building_ukn_energy_grid_2_cost_advanced_exotic_gases = 0
+@building_ukn_energy_grid_3_cost_advanced_exotic_gases = 10
+@building_ukn_energy_grid_4_cost_advanced_exotic_gases = 10
+@building_ukn_energy_grid_6_cost_advanced_exotic_gases = 10
+@building_ukn_energy_grid_7_cost_advanced_exotic_gases = 10
+
+# Rare Crystals
+@building_ukn_energy_grid_2_cost_advanced_rare_crystals = 0
+@building_ukn_energy_grid_3_cost_advanced_rare_crystals = 10
+@building_ukn_energy_grid_4_cost_advanced_rare_crystals = 10
+@building_ukn_energy_grid_6_cost_advanced_rare_crystals = 10
+@building_ukn_energy_grid_7_cost_advanced_rare_crystals = 10
+
+# Alloys
+@building_ukn_energy_grid_2_cost_basic_alloys = 100
+@building_ukn_energy_grid_3_cost_basic_alloys = 100
+@building_ukn_energy_grid_4_cost_basic_alloys = 100
+@building_ukn_energy_grid_6_cost_basic_alloys = 100
+@building_ukn_energy_grid_7_cost_basic_alloys = 100
+
+# Meta-Materials
+#--- [Basic Replace]
+@building_ukn_energy_grid_2_r_cost_basic_ukn_meta_materials = 300
+@building_ukn_energy_grid_3_r_cost_basic_ukn_meta_materials = 300
+@building_ukn_energy_grid_4_r_cost_basic_ukn_meta_materials = 300
+@building_ukn_energy_grid_6_r_cost_basic_ukn_meta_materials = 300
+@building_ukn_energy_grid_7_r_cost_basic_ukn_meta_materials = 300
+
+# Femtomatter
+#--- [Advanced Replace]
+@building_ukn_energy_grid_2_r_cost_advanced_ukn_femtomatter = 0
+@building_ukn_energy_grid_3_r_cost_advanced_ukn_femtomatter = 0.5
+@building_ukn_energy_grid_4_r_cost_advanced_ukn_femtomatter = 0.5
+@building_ukn_energy_grid_6_r_cost_advanced_ukn_femtomatter = 0.5
+@building_ukn_energy_grid_7_r_cost_advanced_ukn_femtomatter = 0.5
+
+# Condensics
+#--- [Advanced Replace]
+@building_ukn_energy_grid_2_r_cost_advanced_ukn_condensics = 0
+@building_ukn_energy_grid_3_r_cost_advanced_ukn_condensics = 0.125
+@building_ukn_energy_grid_4_r_cost_advanced_ukn_condensics = 0.125
+@building_ukn_energy_grid_6_r_cost_advanced_ukn_condensics = 0.125
+@building_ukn_energy_grid_7_r_cost_advanced_ukn_condensics = 0.125
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_energy_grid_2_r_cost_basic_ukn_quasi_matter = 0.7367
+@building_ukn_energy_grid_3_r_cost_basic_ukn_quasi_matter = 0.7367
+@building_ukn_energy_grid_4_r_cost_basic_ukn_quasi_matter = 0.7367
+@building_ukn_energy_grid_6_r_cost_basic_ukn_quasi_matter = 0.7367
+@building_ukn_energy_grid_7_r_cost_basic_ukn_quasi_matter = 0.7367
+#--- [Advanced Replace]
+@building_ukn_energy_grid_2_r_cost_advanced_ukn_quasi_matter = 0
+@building_ukn_energy_grid_3_r_cost_advanced_ukn_quasi_matter = 0.0526
+@building_ukn_energy_grid_4_r_cost_advanced_ukn_quasi_matter = 0.0526
+@building_ukn_energy_grid_6_r_cost_advanced_ukn_quasi_matter = 0.0526
+@building_ukn_energy_grid_7_r_cost_advanced_ukn_quasi_matter = 0.0526
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_energy_grid_2_r_cost_basic_ukn_causalitons = 0.2294
+@building_ukn_energy_grid_3_r_cost_basic_ukn_causalitons = 0.2294
+@building_ukn_energy_grid_4_r_cost_basic_ukn_causalitons = 0.2294
+@building_ukn_energy_grid_6_r_cost_basic_ukn_causalitons = 0.2294
+@building_ukn_energy_grid_7_r_cost_basic_ukn_causalitons = 0.2294
+#--- [Advanced Replace]
+@building_ukn_energy_grid_2_r_cost_advanced_ukn_causalitons = 0
+@building_ukn_energy_grid_3_r_cost_advanced_ukn_causalitons = 0.0163
+@building_ukn_energy_grid_4_r_cost_advanced_ukn_causalitons = 0.0163
+@building_ukn_energy_grid_6_r_cost_advanced_ukn_causalitons = 0.0163
+@building_ukn_energy_grid_7_r_cost_advanced_ukn_causalitons = 0.0163
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_energy_grid_2_upkeep_energy = 5
+@building_ukn_energy_grid_3_upkeep_energy = 10
+@building_ukn_energy_grid_4_upkeep_energy = 15
+@building_ukn_energy_grid_6_upkeep_energy = 20
+@building_ukn_energy_grid_7_upkeep_energy = 25
+
+
+##############################
+# FOOD PROCESSING FACILITIES #
+##############################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_food_processing_facility_2_build_time = 360
+@building_ukn_food_processing_facility_3_build_time = 360
+@building_ukn_food_processing_facility_4_build_time = 360
+@building_ukn_food_processing_facility_6_build_time = 360
+@building_ukn_food_processing_facility_7_build_time = 360
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_food_processing_facility_2_cost_basic_consumer_goods = 50
+@building_ukn_food_processing_facility_3_cost_basic_consumer_goods = 50
+@building_ukn_food_processing_facility_4_cost_basic_consumer_goods = 50
+@building_ukn_food_processing_facility_6_cost_basic_consumer_goods = 50
+@building_ukn_food_processing_facility_7_cost_basic_consumer_goods = 50
+
+# Minerals
+@building_ukn_food_processing_facility_2_cost_basic_minerals = 500
+@building_ukn_food_processing_facility_3_cost_basic_minerals = 600
+@building_ukn_food_processing_facility_4_cost_basic_minerals = 600
+@building_ukn_food_processing_facility_6_cost_basic_minerals = 600
+@building_ukn_food_processing_facility_7_cost_basic_minerals = 600
+
+# Exotic Gases
+@building_ukn_food_processing_facility_2_cost_advanced_exotic_gases = 0
+@building_ukn_food_processing_facility_3_cost_advanced_exotic_gases = 30
+@building_ukn_food_processing_facility_4_cost_advanced_exotic_gases = 30
+@building_ukn_food_processing_facility_6_cost_advanced_exotic_gases = 30
+@building_ukn_food_processing_facility_7_cost_advanced_exotic_gases = 30
+
+# Rare Crystals
+@building_ukn_food_processing_facility_2_cost_advanced_rare_crystals = 0
+@building_ukn_food_processing_facility_3_cost_advanced_rare_crystals = 30
+@building_ukn_food_processing_facility_4_cost_advanced_rare_crystals = 30
+@building_ukn_food_processing_facility_6_cost_advanced_rare_crystals = 30
+@building_ukn_food_processing_facility_7_cost_advanced_rare_crystals = 30
+
+# Meta-Materials
+#--- [Basic Replace]
+@building_ukn_food_processing_facility_2_r_cost_basic_ukn_meta_materials = 210
+@building_ukn_food_processing_facility_3_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_food_processing_facility_4_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_food_processing_facility_6_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_food_processing_facility_7_r_cost_basic_ukn_meta_materials = 250
+
+# Femtomatter
+#--- [Advanced Replace]
+@building_ukn_food_processing_facility_2_r_cost_advanced_ukn_femtomatter = 0
+@building_ukn_food_processing_facility_3_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_food_processing_facility_4_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_food_processing_facility_6_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_food_processing_facility_7_r_cost_advanced_ukn_femtomatter = 1.5
+
+# Condensics
+#--- [Advanced Replace]
+@building_ukn_food_processing_facility_2_r_cost_advanced_ukn_condensics = 0
+@building_ukn_food_processing_facility_3_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_food_processing_facility_4_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_food_processing_facility_6_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_food_processing_facility_7_r_cost_advanced_ukn_condensics = 0.375
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_food_processing_facility_2_r_cost_basic_ukn_quasi_matter = 0.5157
+@building_ukn_food_processing_facility_3_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_food_processing_facility_4_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_food_processing_facility_6_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_food_processing_facility_7_r_cost_basic_ukn_quasi_matter = 0.6139
+#--- [Advanced Replace]
+@building_ukn_food_processing_facility_2_r_cost_advanced_ukn_quasi_matter = 0
+@building_ukn_food_processing_facility_3_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_food_processing_facility_4_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_food_processing_facility_6_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_food_processing_facility_7_r_cost_advanced_ukn_quasi_matter = 0.1578
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_food_processing_facility_2_r_cost_basic_ukn_causalitons = 0.1606
+@building_ukn_food_processing_facility_3_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_food_processing_facility_4_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_food_processing_facility_6_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_food_processing_facility_7_r_cost_basic_ukn_causalitons = 0.1912
+#--- [Advanced Replace]
+@building_ukn_food_processing_facility_2_r_cost_advanced_ukn_causalitons = 0
+@building_ukn_food_processing_facility_3_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_food_processing_facility_4_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_food_processing_facility_6_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_food_processing_facility_7_r_cost_advanced_ukn_causalitons = 0.0491
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_food_processing_facility_2_upkeep_energy = 5
+@building_ukn_food_processing_facility_3_upkeep_energy = 10
+@building_ukn_food_processing_facility_4_upkeep_energy = 15
+@building_ukn_food_processing_facility_6_upkeep_energy = 20
+@building_ukn_food_processing_facility_7_upkeep_energy = 25
+
+
+###############################
+# MINERAL PURIFICATION PLANTS #
+###############################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_mineral_purification_plant_2_build_time = 360
+@building_ukn_mineral_purification_plant_3_build_time = 360
+@building_ukn_mineral_purification_plant_4_build_time = 360
+@building_ukn_mineral_purification_plant_6_build_time = 360
+@building_ukn_mineral_purification_plant_7_build_time = 360
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_mineral_purification_plant_2_cost_basic_consumer_goods = 50
+@building_ukn_mineral_purification_plant_3_cost_basic_consumer_goods = 50
+@building_ukn_mineral_purification_plant_4_cost_basic_consumer_goods = 50
+@building_ukn_mineral_purification_plant_6_cost_basic_consumer_goods = 50
+@building_ukn_mineral_purification_plant_7_cost_basic_consumer_goods = 50
+
+# Minerals
+@building_ukn_mineral_purification_plant_2_cost_basic_minerals = 500
+@building_ukn_mineral_purification_plant_3_cost_basic_minerals = 600
+@building_ukn_mineral_purification_plant_4_cost_basic_minerals = 600
+@building_ukn_mineral_purification_plant_6_cost_basic_minerals = 600
+@building_ukn_mineral_purification_plant_7_cost_basic_minerals = 600
+
+# Exotic Gases
+@building_ukn_mineral_purification_plant_2_cost_advanced_exotic_gases = 0
+@building_ukn_mineral_purification_plant_3_cost_advanced_exotic_gases = 30
+@building_ukn_mineral_purification_plant_4_cost_advanced_exotic_gases = 30
+@building_ukn_mineral_purification_plant_6_cost_advanced_exotic_gases = 30
+@building_ukn_mineral_purification_plant_7_cost_advanced_exotic_gases = 30
+
+# Rare Crystals
+@building_ukn_mineral_purification_plant_2_cost_advanced_rare_crystals = 0
+@building_ukn_mineral_purification_plant_3_cost_advanced_rare_crystals = 30
+@building_ukn_mineral_purification_plant_4_cost_advanced_rare_crystals = 30
+@building_ukn_mineral_purification_plant_6_cost_advanced_rare_crystals = 30
+@building_ukn_mineral_purification_plant_7_cost_advanced_rare_crystals = 30
+
+# Alloys
+@building_ukn_mineral_purification_plant_2_r_cost_basic_alloys = 100
+@building_ukn_mineral_purification_plant_3_r_cost_basic_alloys = 70
+@building_ukn_mineral_purification_plant_4_r_cost_basic_alloys = 70
+@building_ukn_mineral_purification_plant_6_r_cost_basic_alloys = 70
+@building_ukn_mineral_purification_plant_7_r_cost_basic_alloys = 70
+
+# Meta-Materials
+#--- [Basic Replace]
+@building_ukn_mineral_purification_plant_2_r_cost_basic_ukn_meta_materials = 210
+@building_ukn_mineral_purification_plant_3_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_mineral_purification_plant_4_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_mineral_purification_plant_6_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_mineral_purification_plant_7_r_cost_basic_ukn_meta_materials = 250
+
+# Femtomatter
+#--- [Advanced Replace]
+@building_ukn_mineral_purification_plant_2_r_cost_advanced_ukn_femtomatter = 0
+@building_ukn_mineral_purification_plant_3_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_mineral_purification_plant_4_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_mineral_purification_plant_6_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_mineral_purification_plant_7_r_cost_advanced_ukn_femtomatter = 1.5
+
+# Condensics
+#--- [Advanced Replace]
+@building_ukn_mineral_purification_plant_2_r_cost_advanced_ukn_condensics = 0
+@building_ukn_mineral_purification_plant_3_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_mineral_purification_plant_4_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_mineral_purification_plant_6_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_mineral_purification_plant_7_r_cost_advanced_ukn_condensics = 0.375
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_mineral_purification_plant_2_r_cost_basic_ukn_quasi_matter = 0.5157
+@building_ukn_mineral_purification_plant_3_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_mineral_purification_plant_4_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_mineral_purification_plant_6_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_mineral_purification_plant_7_r_cost_basic_ukn_quasi_matter = 0.6139
+#--- [Advanced Replace]
+@building_ukn_mineral_purification_plant_2_r_cost_advanced_ukn_quasi_matter = 0
+@building_ukn_mineral_purification_plant_3_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_mineral_purification_plant_4_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_mineral_purification_plant_6_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_mineral_purification_plant_7_r_cost_advanced_ukn_quasi_matter = 0.1578
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_mineral_purification_plant_2_r_cost_basic_ukn_causalitons = 0.1606
+@building_ukn_mineral_purification_plant_3_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_mineral_purification_plant_4_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_mineral_purification_plant_6_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_mineral_purification_plant_7_r_cost_basic_ukn_causalitons = 0.1912
+#--- [Advanced Replace]
+@building_ukn_mineral_purification_plant_2_r_cost_advanced_ukn_causalitons = 0
+@building_ukn_mineral_purification_plant_3_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_mineral_purification_plant_4_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_mineral_purification_plant_6_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_mineral_purification_plant_7_r_cost_advanced_ukn_causalitons = 0.0491
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_mineral_purification_plant_2_upkeep_energy = 5
+@building_ukn_mineral_purification_plant_3_upkeep_energy = 10
+@building_ukn_mineral_purification_plant_4_upkeep_energy = 15
+@building_ukn_mineral_purification_plant_6_upkeep_energy = 20
+@building_ukn_mineral_purification_plant_7_upkeep_energy = 25
+
+
+#############
+# FACTORIES #
+#############
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_factory_2_build_time = 480
+@building_ukn_factory_3_build_time = 480
+@building_ukn_factory_4_build_time = 480
+@building_ukn_factory_6_build_time = 480
+@building_ukn_factory_7_build_time = 480
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_factory_2_cost_basic_consumer_goods = 50
+@building_ukn_factory_3_cost_basic_consumer_goods = 50
+@building_ukn_factory_4_cost_basic_consumer_goods = 50
+@building_ukn_factory_6_cost_basic_consumer_goods = 50
+@building_ukn_factory_7_cost_basic_consumer_goods = 50
+
+# Minerals
+@building_ukn_factory_2_cost_basic_minerals = 750
+@building_ukn_factory_3_cost_basic_minerals = 600
+@building_ukn_factory_4_cost_basic_minerals = 600
+@building_ukn_factory_6_cost_basic_minerals = 600
+@building_ukn_factory_7_cost_basic_minerals = 600
+
+# Exotic Gases
+@building_ukn_factory_2_cost_advanced_exotic_gases = 0
+@building_ukn_factory_3_cost_advanced_exotic_gases = 30
+@building_ukn_factory_4_cost_advanced_exotic_gases = 30
+@building_ukn_factory_6_cost_advanced_exotic_gases = 30
+@building_ukn_factory_7_cost_advanced_exotic_gases = 30
+
+# Rare Crystals
+@building_ukn_factory_2_cost_advanced_rare_crystals = 0
+@building_ukn_factory_3_cost_advanced_rare_crystals = 30
+@building_ukn_factory_4_cost_advanced_rare_crystals = 30
+@building_ukn_factory_6_cost_advanced_rare_crystals = 30
+@building_ukn_factory_7_cost_advanced_rare_crystals = 30
+
+# Automachines
+@building_ukn_factory_2_cost_basic_nanites = 0
+@building_ukn_factory_3_cost_basic_nanites = 5
+@building_ukn_factory_4_cost_basic_nanites = 5
+@building_ukn_factory_6_cost_basic_nanites = 5
+@building_ukn_factory_7_cost_basic_nanites = 5
+
+# Meta-Materials
+#--- [Basic Replace]
+@building_ukn_factory_2_r_cost_basic_ukn_meta_materials = 320
+@building_ukn_factory_3_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_factory_4_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_factory_6_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_factory_7_r_cost_basic_ukn_meta_materials = 250
+
+# Femtomatter
+#--- [Advanced Replace]
+@building_ukn_factory_2_r_cost_advanced_ukn_femtomatter = 0
+@building_ukn_factory_3_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_factory_4_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_factory_6_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_factory_7_r_cost_advanced_ukn_femtomatter = 1.5
+
+# Condensics
+#--- [Advanced Replace]
+@building_ukn_factory_2_r_cost_advanced_ukn_condensics = 0
+@building_ukn_factory_3_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_factory_4_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_factory_6_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_factory_7_r_cost_advanced_ukn_condensics = 0.375
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_factory_2_r_cost_basic_ukn_quasi_matter = 0.7858
+@building_ukn_factory_3_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_factory_4_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_factory_6_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_factory_7_r_cost_basic_ukn_quasi_matter = 0.6139
+#--- [Advanced Replace]
+@building_ukn_factory_2_r_cost_advanced_ukn_quasi_matter = 0
+@building_ukn_factory_3_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_factory_4_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_factory_6_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_factory_7_r_cost_advanced_ukn_quasi_matter = 0.1578
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_factory_2_r_cost_basic_ukn_causalitons = 0.2447
+@building_ukn_factory_3_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_factory_4_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_factory_6_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_factory_7_r_cost_basic_ukn_causalitons = 0.1912
+#--- [Advanced Replace]
+@building_ukn_factory_2_r_cost_advanced_ukn_causalitons = 0
+@building_ukn_factory_3_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_factory_4_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_factory_6_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_factory_7_r_cost_advanced_ukn_causalitons = 0.0491
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_factory_2_upkeep_energy = 5
+@building_ukn_factory_3_upkeep_energy = 10
+@building_ukn_factory_4_upkeep_energy = 15
+@building_ukn_factory_6_upkeep_energy = 20
+@building_ukn_factory_7_upkeep_energy = 25
+
+
+#############
+# FOUNDRIES #
+#############
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_foundry_2_build_time = 480
+@building_ukn_foundry_3_build_time = 480
+@building_ukn_foundry_4_build_time = 480
+@building_ukn_foundry_6_build_time = 480
+@building_ukn_foundry_7_build_time = 480
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_foundry_2_cost_basic_consumer_goods = 50
+@building_ukn_foundry_3_cost_basic_consumer_goods = 50
+@building_ukn_foundry_4_cost_basic_consumer_goods = 50
+@building_ukn_foundry_6_cost_basic_consumer_goods = 50
+@building_ukn_foundry_7_cost_basic_consumer_goods = 50
+
+# Minerals
+@building_ukn_foundry_2_cost_basic_minerals = 750
+@building_ukn_foundry_3_cost_basic_minerals = 600
+@building_ukn_foundry_4_cost_basic_minerals = 600
+@building_ukn_foundry_6_cost_basic_minerals = 600
+@building_ukn_foundry_7_cost_basic_minerals = 600
+
+# Exotic Gases
+@building_ukn_foundry_2_cost_advanced_exotic_gases = 0
+@building_ukn_foundry_3_cost_advanced_exotic_gases = 30
+@building_ukn_foundry_4_cost_advanced_exotic_gases = 30
+@building_ukn_foundry_6_cost_advanced_exotic_gases = 30
+@building_ukn_foundry_7_cost_advanced_exotic_gases = 30
+
+# Rare Crystals
+@building_ukn_foundry_2_cost_advanced_rare_crystals = 0
+@building_ukn_foundry_3_cost_advanced_rare_crystals = 30
+@building_ukn_foundry_4_cost_advanced_rare_crystals = 30
+@building_ukn_foundry_6_cost_advanced_rare_crystals = 30
+@building_ukn_foundry_7_cost_advanced_rare_crystals = 30
+
+# Automachines
+@building_ukn_foundry_2_cost_basic_nanites = 0
+@building_ukn_foundry_3_cost_basic_nanites = 5
+@building_ukn_foundry_4_cost_basic_nanites = 5
+@building_ukn_foundry_6_cost_basic_nanites = 5
+@building_ukn_foundry_7_cost_basic_nanites = 5
+
+# Meta-Materials
+#--- [Basic Replace]
+@building_ukn_foundry_2_r_cost_basic_ukn_meta_materials = 320
+@building_ukn_foundry_3_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_foundry_4_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_foundry_6_r_cost_basic_ukn_meta_materials = 250
+@building_ukn_foundry_7_r_cost_basic_ukn_meta_materials = 250
+
+# Femtomatter
+#--- [Advanced Replace]
+@building_ukn_foundry_2_r_cost_advanced_ukn_femtomatter = 0
+@building_ukn_foundry_3_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_foundry_4_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_foundry_6_r_cost_advanced_ukn_femtomatter = 1.5
+@building_ukn_foundry_7_r_cost_advanced_ukn_femtomatter = 1.5
+
+# Condensics
+#--- [Advanced Replace]
+@building_ukn_foundry_2_r_cost_advanced_ukn_condensics = 0
+@building_ukn_foundry_3_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_foundry_4_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_foundry_6_r_cost_advanced_ukn_condensics = 0.375
+@building_ukn_foundry_7_r_cost_advanced_ukn_condensics = 0.375
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_foundry_2_r_cost_basic_ukn_quasi_matter = 0.7858
+@building_ukn_foundry_3_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_foundry_4_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_foundry_6_r_cost_basic_ukn_quasi_matter = 0.6139
+@building_ukn_foundry_7_r_cost_basic_ukn_quasi_matter = 0.6139
+#--- [Advanced Replace]
+@building_ukn_foundry_2_r_cost_advanced_ukn_quasi_matter = 0
+@building_ukn_foundry_3_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_foundry_4_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_foundry_6_r_cost_advanced_ukn_quasi_matter = 0.1578
+@building_ukn_foundry_7_r_cost_advanced_ukn_quasi_matter = 0.1578
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_foundry_2_r_cost_basic_ukn_causalitons = 0.2447
+@building_ukn_foundry_3_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_foundry_4_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_foundry_6_r_cost_basic_ukn_causalitons = 0.1912
+@building_ukn_foundry_7_r_cost_basic_ukn_causalitons = 0.1912
+#--- [Advanced Replace]
+@building_ukn_foundry_2_r_cost_advanced_ukn_causalitons = 0
+@building_ukn_foundry_3_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_foundry_4_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_foundry_6_r_cost_advanced_ukn_causalitons = 0.0491
+@building_ukn_foundry_7_r_cost_advanced_ukn_causalitons = 0.0491
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_foundry_2_upkeep_energy = 5
+@building_ukn_foundry_3_upkeep_energy = 10
+@building_ukn_foundry_4_upkeep_energy = 15
+@building_ukn_foundry_6_upkeep_energy = 20
+@building_ukn_foundry_7_upkeep_energy = 25
+
+
+##################
+# GAS REFINERIES #
+##################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_refinery_3_build_time = 720
+@building_ukn_refinery_4_build_time = 720
+@building_ukn_refinery_6_build_time = 720
+@building_ukn_refinery_7_build_time = 720
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_refinery_3_cost_basic_consumer_goods = 50
+@building_ukn_refinery_4_cost_basic_consumer_goods = 50
+@building_ukn_refinery_6_cost_basic_consumer_goods = 50
+@building_ukn_refinery_7_cost_basic_consumer_goods = 50
+
+# Minerals
+@building_ukn_refinery_3_cost_basic_minerals = 900
+@building_ukn_refinery_4_cost_basic_minerals = 900
+@building_ukn_refinery_6_cost_basic_minerals = 900
+@building_ukn_refinery_7_cost_basic_minerals = 900
+
+# Polymerics
+@building_ukn_refinery_3_cost_basic_alloys = 200
+@building_ukn_refinery_4_cost_basic_alloys = 200
+@building_ukn_refinery_6_cost_basic_alloys = 200
+@building_ukn_refinery_7_cost_basic_alloys = 200
+
+# Rare Crystals
+@building_ukn_refinery_3_cost_advanced_rare_crystals = 0
+@building_ukn_refinery_4_cost_advanced_rare_crystals = 0
+@building_ukn_refinery_6_cost_advanced_rare_crystals = 0
+@building_ukn_refinery_7_cost_advanced_rare_crystals = 0
+
+# Automachines
+@building_ukn_refinery_3_cost_basic_nanites = 0
+@building_ukn_refinery_4_cost_basic_nanites = 0
+@building_ukn_refinery_6_cost_basic_nanites = 0
+@building_ukn_refinery_7_cost_basic_nanites = 0
+
+# Meta-Materials
+#--- [Basic Replace]
+@building_ukn_refinery_3_r_cost_basic_alloys = 200
+@building_ukn_refinery_4_r_cost_basic_alloys = 200
+@building_ukn_refinery_6_r_cost_basic_alloys = 200
+@building_ukn_refinery_7_r_cost_basic_alloys = 200
+
+# Meta-Materials
+#--- [Basic Replace]
+@building_ukn_refinery_3_r_cost_basic_ukn_meta_materials = 550
+@building_ukn_refinery_4_r_cost_basic_ukn_meta_materials = 550
+@building_ukn_refinery_6_r_cost_basic_ukn_meta_materials = 550
+@building_ukn_refinery_7_r_cost_basic_ukn_meta_materials = 550
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_refinery_3_r_cost_basic_ukn_quasi_matter = 1.3506
+@building_ukn_refinery_4_r_cost_basic_ukn_quasi_matter = 1.3506
+@building_ukn_refinery_6_r_cost_basic_ukn_quasi_matter = 1.3506
+@building_ukn_refinery_7_r_cost_basic_ukn_quasi_matter = 1.3506
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_refinery_3_r_cost_basic_ukn_causalitons = 0.4207
+@building_ukn_refinery_4_r_cost_basic_ukn_causalitons = 0.4207
+@building_ukn_refinery_6_r_cost_basic_ukn_causalitons = 0.4207
+@building_ukn_refinery_7_r_cost_basic_ukn_causalitons = 0.4207
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_refinery_3_upkeep_energy = 1
+@building_ukn_refinery_4_upkeep_energy = 3
+@building_ukn_refinery_6_upkeep_energy = 8
+@building_ukn_refinery_7_upkeep_energy = 15
+
+
+#########################
+# CRYSTAL MANUFACTORING #
+#########################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_crystal_plant_3_build_time = 720
+@building_ukn_crystal_plant_4_build_time = 720
+@building_ukn_crystal_plant_6_build_time = 720
+@building_ukn_crystal_plant_7_build_time = 720
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_crystal_plant_3_cost_basic_consumer_goods = 50
+@building_ukn_crystal_plant_4_cost_basic_consumer_goods = 50
+@building_ukn_crystal_plant_6_cost_basic_consumer_goods = 50
+@building_ukn_crystal_plant_7_cost_basic_consumer_goods = 50
+
+# Minerals
+@building_ukn_crystal_plant_3_cost_basic_minerals = 900
+@building_ukn_crystal_plant_4_cost_basic_minerals = 900
+@building_ukn_crystal_plant_6_cost_basic_minerals = 900
+@building_ukn_crystal_plant_7_cost_basic_minerals = 900
+
+# Polymerics
+@building_ukn_crystal_plant_3_cost_basic_alloys = 200
+@building_ukn_crystal_plant_4_cost_basic_alloys = 200
+@building_ukn_crystal_plant_6_cost_basic_alloys = 200
+@building_ukn_crystal_plant_7_cost_basic_alloys = 200
+
+# Rare Crystals
+@building_ukn_crystal_plant_3_cost_advanced_rare_crystals = 0
+@building_ukn_crystal_plant_4_cost_advanced_rare_crystals = 0
+@building_ukn_crystal_plant_6_cost_advanced_rare_crystals = 0
+@building_ukn_crystal_plant_7_cost_advanced_rare_crystals = 0
+
+# Automachines
+@building_ukn_crystal_plant_3_cost_basic_nanites = 0
+@building_ukn_crystal_plant_4_cost_basic_nanites = 0
+@building_ukn_crystal_plant_6_cost_basic_nanites = 0
+@building_ukn_crystal_plant_7_cost_basic_nanites = 0
+
+# Meta-Materials
+#--- [Basic Replace]
+@building_ukn_crystal_plant_3_r_cost_basic_alloys = 200
+@building_ukn_crystal_plant_4_r_cost_basic_alloys = 200
+@building_ukn_crystal_plant_6_r_cost_basic_alloys = 200
+@building_ukn_crystal_plant_7_r_cost_basic_alloys = 200
+
+# Meta-Materials
+#--- [Basic Replace]
+@building_ukn_crystal_plant_3_r_cost_basic_ukn_meta_materials = 550
+@building_ukn_crystal_plant_4_r_cost_basic_ukn_meta_materials = 550
+@building_ukn_crystal_plant_6_r_cost_basic_ukn_meta_materials = 550
+@building_ukn_crystal_plant_7_r_cost_basic_ukn_meta_materials = 550
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_crystal_plant_3_r_cost_basic_ukn_quasi_matter = 1.3506
+@building_ukn_crystal_plant_4_r_cost_basic_ukn_quasi_matter = 1.3506
+@building_ukn_crystal_plant_6_r_cost_basic_ukn_quasi_matter = 1.3506
+@building_ukn_crystal_plant_7_r_cost_basic_ukn_quasi_matter = 1.3506
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_crystal_plant_3_r_cost_basic_ukn_causalitons = 0.4207
+@building_ukn_crystal_plant_4_r_cost_basic_ukn_causalitons = 0.4207
+@building_ukn_crystal_plant_6_r_cost_basic_ukn_causalitons = 0.4207
+@building_ukn_crystal_plant_7_r_cost_basic_ukn_causalitons = 0.4207
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_crystal_plant_3_upkeep_energy = 1
+@building_ukn_crystal_plant_4_upkeep_energy = 3
+@building_ukn_crystal_plant_6_upkeep_energy = 8
+@building_ukn_crystal_plant_7_upkeep_energy = 15
+
+
+##########################
+# MINISTRY OF PRODUCTION #
+##########################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_ministry_production_1_build_time = 360
+@building_ukn_ministry_production_2_build_time = 480
+@building_ukn_ministry_production_3_build_time = 600
+@building_ukn_ministry_production_4_build_time = 900
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_ministry_production_1_cost_basic_consumer_goods = 50
+@building_ukn_ministry_production_2_cost_basic_consumer_goods = 100
+@building_ukn_ministry_production_3_cost_basic_consumer_goods = 50
+@building_ukn_ministry_production_4_cost_basic_consumer_goods = 50
+
+# Minerals
+@building_ukn_ministry_production_1_cost_basic_minerals = 400
+@building_ukn_ministry_production_2_cost_basic_minerals = 200
+@building_ukn_ministry_production_3_cost_basic_minerals = 400
+@building_ukn_ministry_production_4_cost_basic_minerals = 800
+
+# Rare Crystals
+@building_ukn_ministry_production_1_cost_advanced_rare_crystals = 0
+@building_ukn_ministry_production_2_cost_advanced_rare_crystals = 0
+@building_ukn_ministry_production_3_cost_advanced_rare_crystals = 0
+@building_ukn_ministry_production_4_cost_advanced_rare_crystals = 0
+
+# Automachines
+@building_ukn_ministry_production_1_cost_basic_nanites = 0
+@building_ukn_ministry_production_2_cost_basic_nanites = 20
+@building_ukn_ministry_production_3_cost_basic_nanites = 25
+@building_ukn_ministry_production_4_cost_basic_nanites = 30
+
+# Meta-Materials
+#--- [Basic Replace]
+@building_ukn_ministry_production_1_cost_basic_ukn_meta_materials = 170
+@building_ukn_ministry_production_2_cost_basic_ukn_meta_materials = 250
+@building_ukn_ministry_production_3_cost_basic_ukn_meta_materials = 340
+@building_ukn_ministry_production_4_cost_basic_ukn_meta_materials = 510
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_ministry_production_1_cost_basic_ukn_quasi_matter = 0.3
+@building_ukn_ministry_production_2_cost_basic_ukn_quasi_matter = 0.5
+@building_ukn_ministry_production_3_cost_basic_ukn_quasi_matter = 0.7
+@building_ukn_ministry_production_4_cost_basic_ukn_quasi_matter = 1.12
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_ministry_production_1_cost_basic_ukn_causalitons = 0.1
+@building_ukn_ministry_production_2_cost_basic_ukn_causalitons = 0.16
+@building_ukn_ministry_production_3_cost_basic_ukn_causalitons = 0.23
+@building_ukn_ministry_production_4_cost_basic_ukn_causalitons = 0.36
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_ministry_production_1_upkeep_energy = 5
+@building_ukn_ministry_production_2_upkeep_energy = 2
+@building_ukn_ministry_production_3_upkeep_energy = 5
+@building_ukn_ministry_production_4_upkeep_energy = 10
+
+# Automachines
+@building_ukn_ministry_production_1_upkeep_nanites = 0
+@building_ukn_ministry_production_2_upkeep_nanites = 1
+@building_ukn_ministry_production_3_upkeep_nanites = 1
+@building_ukn_ministry_production_4_upkeep_nanites = 1
+
+### JOBS ###---------------------------
+
+@building_ukn_ministry_production_1_jobs = 1
+@building_ukn_ministry_production_2_jobs = 1
+@building_ukn_ministry_production_3_jobs = 1
+@building_ukn_ministry_production_4_jobs = 1
+
+
+#####################
+# PRODUCTION CENTER #
+#####################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_production_center_1_build_time = 360
+@building_ukn_production_center_2_build_time = 480
+@building_ukn_production_center_3_build_time = 600
+@building_ukn_production_center_4_build_time = 900
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_production_center_1_cost_basic_consumer_goods = 50
+@building_ukn_production_center_2_cost_basic_consumer_goods = 100
+@building_ukn_production_center_3_cost_basic_consumer_goods = 50
+@building_ukn_production_center_4_cost_basic_consumer_goods = 50
+
+# Minerals
+@building_ukn_production_center_1_cost_basic_minerals = 400
+@building_ukn_production_center_2_cost_basic_minerals = 200
+@building_ukn_production_center_3_cost_basic_minerals = 400
+@building_ukn_production_center_4_cost_basic_minerals = 800
+
+# Rare Crystals
+@building_ukn_production_center_1_cost_advanced_rare_crystals = 0
+@building_ukn_production_center_2_cost_advanced_rare_crystals = 0
+@building_ukn_production_center_3_cost_advanced_rare_crystals = 0
+@building_ukn_production_center_4_cost_advanced_rare_crystals = 0
+
+# Automachines
+@building_ukn_production_center_1_cost_basic_nanites = 0
+@building_ukn_production_center_2_cost_basic_nanites = 20
+@building_ukn_production_center_3_cost_basic_nanites = 25
+@building_ukn_production_center_4_cost_basic_nanites = 30
+
+# Meta-Materials
+#--- [Basic Replace]
+@building_ukn_production_center_1_cost_basic_ukn_meta_materials = 170
+@building_ukn_production_center_2_cost_basic_ukn_meta_materials = 250
+@building_ukn_production_center_3_cost_basic_ukn_meta_materials = 340
+@building_ukn_production_center_4_cost_basic_ukn_meta_materials = 510
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_production_center_1_cost_basic_ukn_quasi_matter = 0.3
+@building_ukn_production_center_2_cost_basic_ukn_quasi_matter = 0.5
+@building_ukn_production_center_3_cost_basic_ukn_quasi_matter = 0.7
+@building_ukn_production_center_4_cost_basic_ukn_quasi_matter = 1.12
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_production_center_1_cost_basic_ukn_causalitons = 0.1
+@building_ukn_production_center_2_cost_basic_ukn_causalitons = 0.16
+@building_ukn_production_center_3_cost_basic_ukn_causalitons = 0.23
+@building_ukn_production_center_4_cost_basic_ukn_causalitons = 0.36
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_production_center_1_upkeep_energy = 5
+@building_ukn_production_center_2_upkeep_energy = 2
+@building_ukn_production_center_3_upkeep_energy = 5
+@building_ukn_production_center_4_upkeep_energy = 10
+
+# Automachines
+@building_ukn_production_center_1_upkeep_nanites = 0
+@building_ukn_production_center_2_upkeep_nanites = 1
+@building_ukn_production_center_3_upkeep_nanites = 1
+@building_ukn_production_center_4_upkeep_nanites = 1
+
+### JOBS ###---------------------------
+
+# Machine
+@building_ukn_production_center_1_jobs_machine = 1
+@building_ukn_production_center_2_jobs_machine = 1
+@building_ukn_production_center_3_jobs_machine = 1
+@building_ukn_production_center_4_jobs_machine = 1
+
+# Hive
+@building_ukn_production_center_1_jobs_hive = 2
+@building_ukn_production_center_2_jobs_hive = 2
+@building_ukn_production_center_3_jobs_hive = 2
+@building_ukn_production_center_4_jobs_hive = 2
+
+
+######################
+# PARTICLE FACTORIES #
+######################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_particle_factory_grid_4_build_time = 1080
+@building_ukn_particle_factory_grid_6_build_time = 1080
+@building_ukn_particle_factory_grid_7_build_time = 1080
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_particle_factory_grid_4_cost_basic_consumer_goods = 50
+@building_ukn_particle_factory_grid_6_cost_basic_consumer_goods = 50
+@building_ukn_particle_factory_grid_7_cost_basic_consumer_goods = 50
+
+# Minerals
+@building_ukn_particle_factory_grid_4_cost_basic_minerals = 800
+@building_ukn_particle_factory_grid_6_cost_basic_minerals = 800
+@building_ukn_particle_factory_grid_7_cost_basic_minerals = 800
+
+# Rare Crystals
+@building_ukn_particle_factory_grid_4_cost_advanced_rare_crystals = 50
+@building_ukn_particle_factory_grid_6_cost_advanced_rare_crystals = 60
+@building_ukn_particle_factory_grid_7_cost_advanced_rare_crystals = 60
+
+# Exotic Gases
+@building_ukn_particle_factory_grid_4_cost_advanced_exotic_gases = 30
+@building_ukn_particle_factory_grid_6_cost_advanced_exotic_gases = 40
+@building_ukn_particle_factory_grid_7_cost_advanced_exotic_gases = 40
+
+# Meta-Materials
+@building_ukn_particle_factory_grid_4_cost_basic_ukn_meta_materials = 750
+@building_ukn_particle_factory_grid_6_cost_basic_ukn_meta_materials = 700
+@building_ukn_particle_factory_grid_7_cost_basic_ukn_meta_materials = 700
+#--- [Basic Replace]
+@building_ukn_particle_factory_grid_4_r_cost_basic_ukn_meta_materials = 1090
+@building_ukn_particle_factory_grid_6_r_cost_basic_ukn_meta_materials = 1040
+@building_ukn_particle_factory_grid_7_r_cost_basic_ukn_meta_materials = 1040
+
+# Femtomatter
+#--- [Advanced Replace]
+@building_ukn_particle_factory_grid_4_r_cost_advanced_ukn_femtomatter = 4
+@building_ukn_particle_factory_grid_6_r_cost_advanced_ukn_femtomatter = 5
+@building_ukn_particle_factory_grid_7_r_cost_advanced_ukn_femtomatter = 5
+
+# Condensics
+#--- [Advanced Replace]
+@building_ukn_particle_factory_grid_4_r_cost_advanced_ukn_condensics = 1
+@building_ukn_particle_factory_grid_6_r_cost_advanced_ukn_condensics = 1.25
+@building_ukn_particle_factory_grid_7_r_cost_advanced_ukn_condensics = 1.25
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_particle_factory_grid_4_r_cost_basic_ukn_quasi_matter = 2.6768
+@building_ukn_particle_factory_grid_6_r_cost_basic_ukn_quasi_matter = 2.5540
+@building_ukn_particle_factory_grid_7_r_cost_basic_ukn_quasi_matter = 2.5540
+#--- [Advanced Replace]
+@building_ukn_particle_factory_grid_4_r_cost_advanced_ukn_quasi_matter = 0.421
+@building_ukn_particle_factory_grid_6_r_cost_advanced_ukn_quasi_matter = 0.5263
+@building_ukn_particle_factory_grid_7_r_cost_advanced_ukn_quasi_matter = 0.5263
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_particle_factory_grid_4_r_cost_basic_ukn_causalitons = 0.8337
+@building_ukn_particle_factory_grid_6_r_cost_basic_ukn_causalitons = 0.7955
+@building_ukn_particle_factory_grid_7_r_cost_basic_ukn_causalitons = 0.7955
+#--- [Advanced Replace]
+@building_ukn_particle_factory_grid_4_r_cost_advanced_ukn_causalitons = 0.1311
+@building_ukn_particle_factory_grid_6_r_cost_advanced_ukn_causalitons = 0.1639
+@building_ukn_particle_factory_grid_7_r_cost_advanced_ukn_causalitons = 0.1639
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_particle_factory_grid_4_upkeep_energy = 5
+@building_ukn_particle_factory_grid_6_upkeep_energy = 8
+@building_ukn_particle_factory_grid_7_upkeep_energy = 10
+
+
+#############################
+# AUTOMACHINE ASSEMBLY GRID #
+#############################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_automachine_assembly_grid_2_build_time = 720
+@building_ukn_automachine_assembly_grid_3_build_time = 720
+@building_ukn_automachine_assembly_grid_4_build_time = 720
+@building_ukn_automachine_assembly_grid_6_build_time = 720
+@building_ukn_automachine_assembly_grid_7_build_time = 720
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_automachine_assembly_grid_2_cost_basic_consumer_goods = 100
+@building_ukn_automachine_assembly_grid_3_cost_basic_consumer_goods = 100
+@building_ukn_automachine_assembly_grid_4_cost_basic_consumer_goods = 100
+@building_ukn_automachine_assembly_grid_6_cost_basic_consumer_goods = 100
+@building_ukn_automachine_assembly_grid_7_cost_basic_consumer_goods = 100
+
+# Minerals
+@building_ukn_automachine_assembly_grid_2_cost_basic_minerals = 1300
+@building_ukn_automachine_assembly_grid_3_cost_basic_minerals = 800
+@building_ukn_automachine_assembly_grid_4_cost_basic_minerals = 800
+@building_ukn_automachine_assembly_grid_6_cost_basic_minerals = 800
+@building_ukn_automachine_assembly_grid_7_cost_basic_minerals = 800
+
+# Rare Crystals
+@building_ukn_automachine_assembly_grid_2_cost_advanced_rare_crystals = 0
+@building_ukn_automachine_assembly_grid_3_cost_advanced_rare_crystals = 60
+@building_ukn_automachine_assembly_grid_4_cost_advanced_rare_crystals = 60
+@building_ukn_automachine_assembly_grid_6_cost_advanced_rare_crystals = 60
+@building_ukn_automachine_assembly_grid_7_cost_advanced_rare_crystals = 60
+
+# Exotic Gases
+@building_ukn_automachine_assembly_grid_2_cost_advanced_exotic_gases = 0
+@building_ukn_automachine_assembly_grid_3_cost_advanced_exotic_gases = 40
+@building_ukn_automachine_assembly_grid_4_cost_advanced_exotic_gases = 40
+@building_ukn_automachine_assembly_grid_6_cost_advanced_exotic_gases = 40
+@building_ukn_automachine_assembly_grid_7_cost_advanced_exotic_gases = 40
+
+# Meta-Materials
+#--- [Basic Replace]
+@building_ukn_automachine_assembly_grid_2_r_cost_basic_ukn_meta_materials = 550
+@building_ukn_automachine_assembly_grid_3_r_cost_basic_ukn_meta_materials = 340
+@building_ukn_automachine_assembly_grid_4_r_cost_basic_ukn_meta_materials = 340
+@building_ukn_automachine_assembly_grid_6_r_cost_basic_ukn_meta_materials = 340
+@building_ukn_automachine_assembly_grid_7_r_cost_basic_ukn_meta_materials = 340
+
+# Femtomatter
+#--- [Advanced Replace]
+@building_ukn_automachine_assembly_grid_2_r_cost_advanced_ukn_femtomatter = 0
+@building_ukn_automachine_assembly_grid_3_r_cost_advanced_ukn_femtomatter = 5
+@building_ukn_automachine_assembly_grid_4_r_cost_advanced_ukn_femtomatter = 5
+@building_ukn_automachine_assembly_grid_6_r_cost_advanced_ukn_femtomatter = 5
+@building_ukn_automachine_assembly_grid_7_r_cost_advanced_ukn_femtomatter = 5
+
+# Condensics
+#--- [Advanced Replace]
+@building_ukn_automachine_assembly_grid_2_r_cost_advanced_ukn_condensics = 0
+@building_ukn_automachine_assembly_grid_3_r_cost_advanced_ukn_condensics = 1.25
+@building_ukn_automachine_assembly_grid_4_r_cost_advanced_ukn_condensics = 1.25
+@building_ukn_automachine_assembly_grid_6_r_cost_advanced_ukn_condensics = 1.25
+@building_ukn_automachine_assembly_grid_7_r_cost_advanced_ukn_condensics = 1.25
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_automachine_assembly_grid_2_r_cost_basic_ukn_quasi_matter = 1.3506
+@building_ukn_automachine_assembly_grid_3_r_cost_basic_ukn_quasi_matter = 0.8349
+@building_ukn_automachine_assembly_grid_4_r_cost_basic_ukn_quasi_matter = 0.8349
+@building_ukn_automachine_assembly_grid_6_r_cost_basic_ukn_quasi_matter = 0.8349
+@building_ukn_automachine_assembly_grid_7_r_cost_basic_ukn_quasi_matter = 0.8349
+#--- [Advanced Replace]
+@building_ukn_automachine_assembly_grid_2_r_cost_advanced_ukn_quasi_matter = 0
+@building_ukn_automachine_assembly_grid_3_r_cost_advanced_ukn_quasi_matter = 0.5263
+@building_ukn_automachine_assembly_grid_4_r_cost_advanced_ukn_quasi_matter = 0.5263
+@building_ukn_automachine_assembly_grid_6_r_cost_advanced_ukn_quasi_matter = 0.5263
+@building_ukn_automachine_assembly_grid_7_r_cost_advanced_ukn_quasi_matter = 0.5263
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_automachine_assembly_grid_2_r_cost_basic_ukn_causalitons = 0.4207
+@building_ukn_automachine_assembly_grid_3_r_cost_basic_ukn_causalitons = 0.2600
+@building_ukn_automachine_assembly_grid_4_r_cost_basic_ukn_causalitons = 0.2600
+@building_ukn_automachine_assembly_grid_6_r_cost_basic_ukn_causalitons = 0.2600
+@building_ukn_automachine_assembly_grid_7_r_cost_basic_ukn_causalitons = 0.2600
+#--- [Advanced Replace]
+@building_ukn_automachine_assembly_grid_2_r_cost_advanced_ukn_causalitons = 0
+@building_ukn_automachine_assembly_grid_3_r_cost_advanced_ukn_causalitons = 0.1639
+@building_ukn_automachine_assembly_grid_4_r_cost_advanced_ukn_causalitons = 0.1639
+@building_ukn_automachine_assembly_grid_6_r_cost_advanced_ukn_causalitons = 0.1639
+@building_ukn_automachine_assembly_grid_7_r_cost_advanced_ukn_causalitons = 0.1639
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_automachine_assembly_grid_2_upkeep_energy = 5
+@building_ukn_automachine_assembly_grid_3_upkeep_energy = 5
+@building_ukn_automachine_assembly_grid_4_upkeep_energy = 5
+@building_ukn_automachine_assembly_grid_6_upkeep_energy = 5
+@building_ukn_automachine_assembly_grid_7_upkeep_energy = 5
+
+
+################################
+# FEMTOMATTER REPLICATION GRID #
+################################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_femtomatter_replication_grid_5_build_time = 1920
+@building_ukn_femtomatter_replication_grid_6_build_time = 1920
+@building_ukn_femtomatter_replication_grid_7_build_time = 1920
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_femtomatter_replication_grid_4_cost_basic_consumer_goods = 150
+@building_ukn_femtomatter_replication_grid_5_cost_basic_consumer_goods = 150
+@building_ukn_femtomatter_replication_grid_6_cost_basic_consumer_goods = 150
+@building_ukn_femtomatter_replication_grid_7_cost_basic_consumer_goods = 150
+
+# Minerals
+@building_ukn_femtomatter_replication_grid_5_cost_basic_minerals = 2500
+@building_ukn_femtomatter_replication_grid_6_arcology_cost_basic_minerals = 2500
+@building_ukn_femtomatter_replication_grid_7_arcology_cost_basic_minerals = 2500
+@building_ukn_femtomatter_replication_grid_6_rw_cost_basic_minerals = 2100
+@building_ukn_femtomatter_replication_grid_7_rw_cost_basic_minerals = 2100
+
+# Rare Crystals
+@building_ukn_femtomatter_replication_grid_5_cost_advanced_rare_crystals = 30
+@building_ukn_femtomatter_replication_grid_6_cost_advanced_rare_crystals = 30
+@building_ukn_femtomatter_replication_grid_7_cost_advanced_rare_crystals = 30
+
+# Exotic Gases
+@building_ukn_femtomatter_replication_grid_5_cost_advanced_exotic_gases = 60
+@building_ukn_femtomatter_replication_grid_6_cost_advanced_exotic_gases = 60
+@building_ukn_femtomatter_replication_grid_7_cost_advanced_exotic_gases = 60
+
+# Meta-Materials
+@building_ukn_femtomatter_replication_grid_5_cost_basic_ukn_meta_materials = 3000
+@building_ukn_femtomatter_replication_grid_6_arcology_cost_basic_ukn_meta_materials = 3000
+@building_ukn_femtomatter_replication_grid_7_arcology_cost_basic_ukn_meta_materials = 3000
+@building_ukn_femtomatter_replication_grid_6_rw_cost_basic_ukn_meta_materials = 2300
+@building_ukn_femtomatter_replication_grid_7_rw_cost_basic_ukn_meta_materials = 2300
+#--- [Basic Replace]
+@building_ukn_femtomatter_replication_grid_5_r_cost_basic_ukn_meta_materials = 4050
+@building_ukn_femtomatter_replication_grid_6_arcology_r_cost_basic_ukn_meta_materials = 4050
+@building_ukn_femtomatter_replication_grid_7_arcology_r_cost_basic_ukn_meta_materials = 4050
+@building_ukn_femtomatter_replication_grid_6_rw_r_cost_basic_ukn_meta_materials = 3200
+@building_ukn_femtomatter_replication_grid_7_rw_r_cost_basic_ukn_meta_materials = 3200
+
+# Femtomatter
+@building_ukn_femtomatter_replication_grid_6_rw_cost_advanced_ukn_femtomatter = 20
+@building_ukn_femtomatter_replication_grid_7_rw_cost_advanced_ukn_femtomatter = 20
+#--- [Advanced Replace]
+@building_ukn_femtomatter_replication_grid_5_r_cost_advanced_ukn_femtomatter = 4.5
+@building_ukn_femtomatter_replication_grid_6_arcology_r_cost_advanced_ukn_femtomatter = 4.5
+@building_ukn_femtomatter_replication_grid_7_arcology_r_cost_advanced_ukn_femtomatter = 4.5
+@building_ukn_femtomatter_replication_grid_6_rw_r_cost_advanced_ukn_femtomatter = 24.5
+@building_ukn_femtomatter_replication_grid_7_rw_r_cost_advanced_ukn_femtomatter = 24.5
+
+# Condensics
+#--- [Advanced Replace]
+@building_ukn_femtomatter_replication_grid_5_r_cost_advanced_ukn_condensics = 1.125
+@building_ukn_femtomatter_replication_grid_6_arcology_r_cost_advanced_ukn_condensics = 1.125
+@building_ukn_femtomatter_replication_grid_7_arcology_r_cost_advanced_ukn_condensics = 1.125
+@building_ukn_femtomatter_replication_grid_6_rw_r_cost_advanced_ukn_condensics = 6.125
+@building_ukn_femtomatter_replication_grid_7_rw_r_cost_advanced_ukn_condensics = 6.125
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_femtomatter_replication_grid_5_r_cost_basic_ukn_quasi_matter = 9.9459
+@building_ukn_femtomatter_replication_grid_6_arcology_r_cost_basic_ukn_quasi_matter = 9.9459
+@building_ukn_femtomatter_replication_grid_7_arcology_r_cost_basic_ukn_quasi_matter = 9.9459
+@building_ukn_femtomatter_replication_grid_6_rw_r_cost_basic_ukn_quasi_matter = 7.8585
+@building_ukn_femtomatter_replication_grid_7_rw_r_cost_basic_ukn_quasi_matter = 7.8585
+#--- [Advanced Replace]
+@building_ukn_femtomatter_replication_grid_5_r_cost_advanced_ukn_quasi_matter = 0.4736
+@building_ukn_femtomatter_replication_grid_6_arcology_r_cost_advanced_ukn_quasi_matter = 0.4736
+@building_ukn_femtomatter_replication_grid_7_arcology_r_cost_advanced_ukn_quasi_matter = 0.4736
+@building_ukn_femtomatter_replication_grid_6_rw_r_cost_advanced_ukn_quasi_matter = 2.5789
+@building_ukn_femtomatter_replication_grid_7_rw_r_cost_advanced_ukn_quasi_matter = 2.5789
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_femtomatter_replication_grid_5_r_cost_basic_ukn_causalitons = 3.0979
+@building_ukn_femtomatter_replication_grid_6_arcology_r_cost_basic_ukn_causalitons = 3.0979
+@building_ukn_femtomatter_replication_grid_7_arcology_r_cost_basic_ukn_causalitons = 3.0979
+@building_ukn_femtomatter_replication_grid_6_rw_r_cost_basic_ukn_causalitons = 2.4477
+@building_ukn_femtomatter_replication_grid_7_rw_r_cost_basic_ukn_causalitons = 2.4477
+#--- [Advanced Replace]
+@building_ukn_femtomatter_replication_grid_5_r_cost_advanced_ukn_causalitons = 0.1475
+@building_ukn_femtomatter_replication_grid_6_arcology_r_cost_advanced_ukn_causalitons = 0.1475
+@building_ukn_femtomatter_replication_grid_7_arcology_r_cost_advanced_ukn_causalitons = 0.1475
+@building_ukn_femtomatter_replication_grid_6_rw_r_cost_advanced_ukn_causalitons = 0.8032
+@building_ukn_femtomatter_replication_grid_7_rw_r_cost_advanced_ukn_causalitons = 0.8032
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_femtomatter_replication_grid_5_upkeep_energy = 5
+@building_ukn_femtomatter_replication_grid_6_upkeep_energy = 0
+@building_ukn_femtomatter_replication_grid_7_upkeep_energy = 10
+
+
+#################################
+# CONDENSICS COMPOSITATION GRID #
+#################################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_condensics_compositation_grid_6_build_time = 3360
+@building_ukn_condensics_compositation_grid_7_build_time = 3360
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_condensics_compositation_grid_6_cost_basic_consumer_goods = 150
+@building_ukn_condensics_compositation_grid_7_cost_basic_consumer_goods = 150
+
+# Meta-Materials
+@building_ukn_condensics_compositation_grid_6_cost_basic_ukn_meta_materials = 4500
+@building_ukn_condensics_compositation_grid_7_arcology_cost_basic_ukn_meta_materials = 4500
+@building_ukn_condensics_compositation_grid_7_rw_cost_basic_ukn_meta_materials = 2500
+
+# Femtomatter
+@building_ukn_condensics_compositation_grid_6_cost_advanced_ukn_femtomatter = 115
+@building_ukn_condensics_compositation_grid_7_arcology_cost_advanced_ukn_femtomatter = 115
+@building_ukn_condensics_compositation_grid_7_rw_cost_advanced_ukn_femtomatter = 160
+
+# Condensics
+#--- [Advanced Replace]
+@building_ukn_condensics_compositation_grid_6_r_cost_advanced_ukn_condensics = 28.75
+@building_ukn_condensics_compositation_grid_7_arcology_r_cost_advanced_ukn_condensics = 28.75
+@building_ukn_condensics_compositation_grid_7_rw_r_cost_advanced_ukn_condensics = 40.00
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_condensics_compositation_grid_6_r_cost_basic_ukn_quasi_matter = 11.0510
+@building_ukn_condensics_compositation_grid_7_arcology_r_cost_basic_ukn_quasi_matter = 11.0510
+@building_ukn_condensics_compositation_grid_7_rw_r_cost_basic_ukn_quasi_matter = 6.1394
+#--- [Advanced Replace]
+@building_ukn_condensics_compositation_grid_6_r_cost_advanced_ukn_quasi_matter = 12.1052
+@building_ukn_condensics_compositation_grid_7_arcology_r_cost_advanced_ukn_quasi_matter = 12.1052
+@building_ukn_condensics_compositation_grid_7_rw_r_cost_advanced_ukn_quasi_matter = 16.8421
+
+# Quasi-Matter
+#--- [Basic Replace]
+@building_ukn_condensics_compositation_grid_6_r_cost_basic_ukn_causalitons = 3.4421
+@building_ukn_condensics_compositation_grid_7_arcology_r_cost_basic_ukn_causalitons = 3.4421
+@building_ukn_condensics_compositation_grid_7_rw_r_cost_basic_ukn_causalitons = 1.9122
+#--- [Advanced Replace]
+@building_ukn_condensics_compositation_grid_6_r_cost_advanced_ukn_causalitons = 3.7704
+@building_ukn_condensics_compositation_grid_7_arcology_r_cost_advanced_ukn_causalitons = 3.7704
+@building_ukn_condensics_compositation_grid_7_rw_r_cost_advanced_ukn_causalitons = 5.2459
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_condensics_compositation_grid_6_upkeep_energy = 5
+@building_ukn_condensics_compositation_grid_7_upkeep_energy = 10
+
+# Minerals
+@building_ukn_condensics_compositation_grid_6_upkeep_minerals = 10
+@building_ukn_condensics_compositation_grid_7_upkeep_minerals = 20
+
+
+#################################
+# QUASI-MATTER MICRO ARRAY GRID #
+#################################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_quasi_matter_micro_array_grid_7_build_time = 18240
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_quasi_matter_micro_array_grid_7_cost_basic_consumer_goods = 500
+
+# Meta-Materials
+@building_ukn_quasi_matter_micro_array_grid_7_cost_basic_ukn_meta_materials = 8500
+
+# Quasi-Matter
+@building_ukn_quasi_matter_micro_array_grid_7_cost_advanced_ukn_quasi_matter = 400
+#--- [Basic Replace]
+@building_ukn_quasi_matter_micro_array_grid_7_r_cost_basic_ukn_quasi_matter = 20.85
+
+# Causalitons
+#--- [Basic Replace]
+@building_ukn_quasi_matter_micro_array_grid_7_r_cost_advanced_ukn_causalitons = 6.50
+#--- [Advanced Replace]
+@building_ukn_quasi_matter_micro_array_grid_7_r_cost_basic_ukn_causalitons = 124.50
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_quasi_matter_micro_array_grid_7_upkeep_energy = 15
+
+
+##################################
+# OSCILLYON MICRO SYNTHESIS GRID #
+##################################
+
+### BUILD TIME ###---------------------------
+
+@building_ukn_causaliton_micro_synthesizer_grid_9_build_time = 22800
+
+### COST ###---------------------------
+
+# Articles
+@building_ukn_causaliton_micro_synthesizer_grid_9_cost_basic_consumer_goods = 500
+
+# Causalitons
+@building_ukn_causaliton_micro_synthesizer_grid_9_cost_advanced_ukn_causalitons = 250
+
+# Negative Mass
+@building_ukn_causaliton_micro_synthesizer_grid_9_cost_advanced_ehof_sr_negative_mass = 3000
+
+### UPKEEP ###---------------------------
+
+# Energy
+@building_ukn_causaliton_micro_synthesizer_grid_9_upkeep_energy = 15
+
+
+
+################################
+########## DISTRICTS ###########
+################################
+
+##################
+# CITY DISTRICTS #
+##################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_city_1_build_time = 360
+@district_ukn_hab_housing_2_build_time = 360
+@district_ukn_arcology_housing_4_build_time = 720
+@district_ukn_rw_city_5_build_time = 2040
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_city_1_cost_basic_consumer_goods = 50
+@district_ukn_hab_housing_2_cost_basic_consumer_goods = 100
+@district_ukn_arcology_housing_4_cost_basic_consumer_goods = 150
+@district_ukn_rw_city_5_cost_basic_consumer_goods = 500
+
+# Minerals
+@district_ukn_city_1_cost_basic_minerals = 500
+@district_ukn_hab_housing_2_cost_basic_minerals = 400
+@district_ukn_arcology_housing_4_cost_basic_minerals = 1500
+@district_ukn_rw_city_5_cost_basic_minerals = 4000
+
+# Rare Crystals
+@district_ukn_city_1_cost_advanced_rare_crystals = 0
+@district_ukn_hab_housing_2_cost_advanced_rare_crystals = 0
+@district_ukn_arcology_housing_4_cost_advanced_rare_crystals = 0
+@district_ukn_rw_city_5_cost_advanced_rare_crystals = 0
+
+# Automachines
+@district_ukn_city_1_cost_basic_nanites = 0
+@district_ukn_hab_housing_2_cost_basic_nanites = 0
+@district_ukn_arcology_housing_4_cost_basic_nanites = 0
+@district_ukn_rw_city_5_cost_basic_nanites = 0
+
+# Polymerics
+@district_ukn_hab_housing_2_cost_basic_alloys = 50
+@district_ukn_arcology_housing_4_cost_basic_alloys = 200
+
+# Meta-Materials
+@district_ukn_rw_city_5_cost_basic_ukn_meta_materials = 1000
+#--- [Basic Replace]
+@district_ukn_city_1_r_cost_basic_ukn_meta_materials = 210
+@district_ukn_hab_housing_2_r_cost_basic_ukn_meta_materials = 210
+@district_ukn_arcology_housing_4_r_cost_basic_ukn_meta_materials = 810
+@district_ukn_rw_city_5_r_cost_basic_ukn_meta_materials = 2700
+
+# Quasi-Matter
+#--- [Basic Replace]
+@district_ukn_city_1_r_cost_basic_ukn_quasi_matter = 0.51
+@district_ukn_hab_housing_2_r_cost_basic_ukn_quasi_matter = 0.51
+@district_ukn_arcology_housing_4_r_cost_basic_ukn_quasi_matter = 2.00
+@district_ukn_rw_city_5_r_cost_basic_ukn_quasi_matter = 6.62
+
+# Causalitons
+#--- [Basic Replace]
+@district_ukn_city_1_r_cost_basic_ukn_causalitons = 0.15
+@district_ukn_hab_housing_2_r_cost_basic_ukn_causalitons = 0.15
+@district_ukn_arcology_housing_4_r_cost_basic_ukn_causalitons = 0.62
+@district_ukn_rw_city_5_r_cost_basic_ukn_causalitons = 2.05
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_city_1_upkeep_energy = 2
+@district_ukn_hab_housing_2_upkeep_energy = 2
+@district_ukn_arcology_housing_4_upkeep_energy = 5
+@district_ukn_rw_city_5_upkeep_energy = 5
+
+###################
+# NEXUS DISTRICTS #
+###################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_nexus_1_build_time = 360
+@district_ukn_hab_nexus_2_build_time = 360
+@district_ukn_arcology_nexus_4_build_time = 720
+@district_ukn_rw_nexus_5_build_time = 2040
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_nexus_1_cost_basic_consumer_goods = 50
+@district_ukn_hab_nexus_2_cost_basic_consumer_goods = 100
+@district_ukn_arcology_nexus_4_cost_basic_consumer_goods = 150
+@district_ukn_rw_nexus_5_cost_basic_consumer_goods = 500
+
+# Minerals
+@district_ukn_nexus_1_cost_basic_minerals = 500
+@district_ukn_hab_nexus_2_cost_basic_minerals = 400
+@district_ukn_arcology_nexus_4_cost_basic_minerals = 1500
+@district_ukn_rw_nexus_5_cost_basic_minerals = 4000
+
+# Rare Crystals
+@district_ukn_nexus_1_cost_advanced_rare_crystals = 0
+@district_ukn_hab_nexus_2_cost_advanced_rare_crystals = 0
+@district_ukn_arcology_nexus_4_cost_advanced_rare_crystals = 0
+@district_ukn_rw_nexus_5_cost_advanced_rare_crystals = 0
+
+# Automachines
+@district_ukn_nexus_1_cost_basic_nanites = 0
+@district_ukn_hab_nexus_2_cost_basic_nanites = 0
+@district_ukn_arcology_nexus_4_cost_basic_nanites = 0
+@district_ukn_rw_nexus_nexus_5_cost_basic_nanites = 0
+
+# Polymerics
+@district_ukn_hab_nexus_2_cost_basic_alloys = 50
+@district_ukn_arcology_nexus_4_cost_basic_alloys = 200
+
+# Meta-Materials
+@district_ukn_rw_nexus_5_cost_basic_ukn_meta_materials = 1000
+#--- [Basic Replace]
+@district_ukn_nexus_1_r_cost_basic_ukn_meta_materials = 210
+@district_ukn_hab_nexus_2_r_cost_basic_ukn_meta_materials = 210
+@district_ukn_arcology_nexus_4_r_cost_basic_ukn_meta_materials = 810
+@district_ukn_rw_nexus_5_r_cost_basic_ukn_meta_materials = 2700
+
+# Quasi-Matter
+#--- [Basic Replace]
+@district_ukn_nexus_1_r_cost_basic_ukn_quasi_matter = 0.51
+@district_ukn_hab_nexus_2_r_cost_basic_ukn_quasi_matter = 0.51
+@district_ukn_arcology_nexus_4_r_cost_basic_ukn_quasi_matter = 2.00
+@district_ukn_rw_nexus_5_r_cost_basic_ukn_quasi_matter = 6.62
+
+# Causalitons
+#--- [Basic Replace]
+@district_ukn_nexus_1_r_cost_basic_ukn_causalitons = 0.15
+@district_ukn_hab_nexus_2_r_cost_basic_ukn_causalitons = 0.15
+@district_ukn_arcology_nexus_4_r_cost_basic_ukn_causalitons = 0.62
+@district_ukn_rw_nexus_5_r_cost_basic_ukn_causalitons = 2.05
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_nexus_1_upkeep_energy = 2
+@district_ukn_hab_nexus_2_upkeep_energy = 2
+@district_ukn_arcology_nexus_4_upkeep_energy = 5
+@district_ukn_rw_nexus_5_upkeep_energy = 5
+
+##################
+# HIVE DISTRICTS #
+##################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_hive_1_build_time = 360
+@district_ukn_hab_hive_2_build_time = 360
+@district_ukn_arcology_hive_4_build_time = 720
+@district_ukn_rw_hive_5_build_time = 2040
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_hive_1_cost_basic_consumer_goods = 50
+@district_ukn_hab_hive_2_cost_basic_consumer_goods = 100
+@district_ukn_arcology_hive_4_cost_basic_consumer_goods = 150
+@district_ukn_rw_hive_5_cost_basic_consumer_goods = 500
+
+# Minerals
+@district_ukn_hive_1_cost_basic_minerals = 500
+@district_ukn_hab_hive_2_cost_basic_minerals = 400
+@district_ukn_arcology_hive_4_cost_basic_minerals = 1500
+@district_ukn_rw_hive_5_cost_basic_minerals = 4000
+
+# Rare Crystals
+@district_ukn_hive_1_cost_advanced_rare_crystals = 0
+@district_ukn_hab_hive_2_cost_advanced_rare_crystals = 0
+@district_ukn_arcology_hive_4_cost_advanced_rare_crystals = 0
+@district_ukn_rw_hive_5_cost_advanced_rare_crystals = 0
+
+# Automachines
+@district_ukn_hive_1_cost_basic_nanites = 0
+@district_ukn_hab_hive_2_cost_basic_nanites = 0
+@district_ukn_arcology_hive_4_cost_basic_nanites = 0
+@district_ukn_rw_hive_5_cost_basic_nanites = 0
+
+# Polymerics
+@district_ukn_hab_hive_2_cost_basic_alloys = 50
+@district_ukn_arcology_hive_4_cost_basic_alloys = 200
+
+# Meta-Materials
+@district_ukn_rw_hive_5_cost_basic_ukn_meta_materials = 1000
+#--- [Basic Replace]
+@district_ukn_hive_1_r_cost_basic_ukn_meta_materials = 210
+@district_ukn_hab_hive_2_r_cost_basic_ukn_meta_materials = 210
+@district_ukn_arcology_hive_4_r_cost_basic_ukn_meta_materials = 810
+@district_ukn_rw_hive_5_r_cost_basic_ukn_meta_materials = 2700
+
+# Quasi-Matter
+#--- [Basic Replace]
+@district_ukn_hive_1_r_cost_basic_ukn_quasi_matter = 0.51
+@district_ukn_hab_hive_2_r_cost_basic_ukn_quasi_matter = 0.51
+@district_ukn_arcology_hive_4_r_cost_basic_ukn_quasi_matter = 2.00
+@district_ukn_rw_hive_5_r_cost_basic_ukn_quasi_matter = 6.62
+
+# Causalitons
+#--- [Basic Replace]
+@district_ukn_hive_1_r_cost_basic_ukn_causalitons = 0.15
+@district_ukn_hab_hive_2_r_cost_basic_ukn_causalitons = 0.15
+@district_ukn_arcology_hive_4_r_cost_basic_ukn_causalitons = 0.62
+@district_ukn_rw_hive_5_r_cost_basic_ukn_causalitons = 2.05
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_hive_1_upkeep_energy = 2
+@district_ukn_hab_hive_2_upkeep_energy = 2
+@district_ukn_arcology_hive_4_upkeep_energy = 5
+@district_ukn_rw_hive_5_upkeep_energy = 5
+
+####################################
+# AUTOMATION MAINTENANCE DISTRICTS #
+####################################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_automation_1_build_time = 480
+@district_ukn_hab_automation_maintenance_2_build_time = 480
+@district_ukn_arcology_automation_4_build_time = 960
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_automation_1_cost_basic_consumer_goods = 50
+@district_ukn_hab_automation_maintenance_2_cost_basic_consumer_goods = 50
+@district_ukn_arcology_automation_4_cost_basic_consumer_goods = 150
+
+# Minerals
+@district_ukn_automation_1_cost_basic_minerals = 500
+@district_ukn_hab_automation_maintenance_2_cost_basic_minerals = 650
+@district_ukn_arcology_automation_4_cost_basic_minerals = 1500
+
+# Rare Crystals
+@district_ukn_automation_1_cost_advanced_rare_crystals = 0
+@district_ukn_hab_automation_maintenance_2_cost_advanced_rare_crystals = 0
+@district_ukn_arcology_automation_4_cost_advanced_rare_crystals = 0
+
+# Automachines
+@district_ukn_automation_1_cost_basic_nanites = 0
+@district_ukn_hab_automation_maintenance_2_cost_basic_nanites = 0
+@district_ukn_arcology_automation_4_cost_basic_nanites = 0
+
+# Polymerics
+@district_ukn_hab_automation_maintenance_2_cost_basic_alloys = 50
+@district_ukn_arcology_automation_4_cost_basic_alloys = 200
+
+# Meta-Materials
+#--- [Basic Replace]
+@district_ukn_automation_1_r_cost_basic_ukn_meta_materials = 210
+@district_ukn_hab_automation_maintenance_2_r_cost_basic_ukn_meta_materials = 320
+@district_ukn_arcology_automation_4_r_cost_basic_ukn_meta_materials = 810
+
+# Quasi-Matter
+#--- [Basic Replace]
+@district_ukn_automation_1_r_cost_basic_ukn_quasi_matter = 0.51
+@district_ukn_hab_automation_maintenance_2_r_cost_basic_ukn_quasi_matter = 0.78
+@district_ukn_arcology_automation_4_r_cost_basic_ukn_quasi_matter = 2.00
+
+# Causalitons
+#--- [Basic Replace]
+@district_ukn_automation_1_r_cost_basic_ukn_causalitons = 0.15
+@district_ukn_hab_automation_maintenance_2_r_cost_basic_ukn_causalitons = 0.24
+@district_ukn_arcology_automation_4_r_cost_basic_ukn_causalitons = 0.62
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_automation_1_upkeep_energy = 5
+@district_ukn_hab_automation_maintenance_2_upkeep_energy = 5
+@district_ukn_arcology_automation_4_upkeep_energy = 10
+
+########################
+# INDUSTRIAL DISTRICTS #
+########################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_industrial_1_build_time = 480
+@district_ukn_hab_industrial_2_build_time = 480
+@district_ukn_arcology_arms_industry_4_build_time = 960
+@district_ukn_rw_industrial_5_build_time = 2880
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_industrial_1_cost_basic_consumer_goods = 50
+@district_ukn_hab_industrial_2_cost_basic_consumer_goods = 50
+@district_ukn_arcology_arms_industry_4_cost_basic_consumer_goods = 150
+@district_ukn_rw_industrial_5_cost_basic_consumer_goods = 500
+
+# Minerals
+@district_ukn_industrial_1_cost_basic_minerals = 750
+@district_ukn_hab_industrial_2_cost_basic_minerals = 1000
+@district_ukn_arcology_arms_industry_4_cost_basic_minerals = 1500
+@district_ukn_rw_industrial_5_cost_basic_minerals = 4000
+
+# Rare Crystals
+@district_ukn_industrial_1_cost_advanced_rare_crystals = 0
+@district_ukn_hab_industrial_2_cost_advanced_rare_crystals = 0
+@district_ukn_arcology_arms_industry_4_cost_advanced_rare_crystals = 70
+@district_ukn_rw_industrial_5_cost_advanced_rare_crystals = 250
+
+# Automachines
+@district_ukn_industrial_1_cost_basic_nanites = 0
+@district_ukn_hab_industrial_2_cost_basic_nanites = 0
+@district_ukn_arcology_arms_industry_4_cost_basic_nanites = 5
+@district_ukn_rw_industrial_5_cost_basic_nanites = 30
+
+# Polymerics
+@district_ukn_hab_industrial_2_cost_basic_alloys = 50
+@district_ukn_arcology_arms_industry_4_cost_basic_alloys = 200
+
+# Meta-Materials
+@district_ukn_rw_industrial_5_cost_basic_ukn_meta_materials = 1000
+#--- [Basic Replacement]
+@district_ukn_industrial_1_r_cost_basic_ukn_meta_materials = 320
+@district_ukn_hab_industrial_2_r_cost_basic_ukn_meta_materials = 470
+@district_ukn_arcology_arms_industry_4_r_cost_basic_ukn_meta_materials = 810
+@district_ukn_rw_industrial_5_r_cost_basic_ukn_meta_materials = 2700
+
+# Femtomatter 
+#--- [Advanced Replacement]
+@district_ukn_industrial_1_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_hab_industrial_2_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_arcology_arms_industry_4_r_cost_advanced_ukn_femtomatter = 3.5
+@district_ukn_rw_industrial_5_r_cost_advanced_ukn_femtomatter = 12.5
+
+# Condensics 
+#--- [Advanced Replacement]
+@district_ukn_industrial_1_r_cost_advanced_ukn_condensics = 0
+@district_ukn_hab_industrial_2_r_cost_advanced_ukn_condensics = 0
+@district_ukn_arcology_arms_industry_4_r_cost_advanced_ukn_condensics = 0.87
+@district_ukn_rw_industrial_5_r_cost_advanced_ukn_condensics = 3.12
+
+# Quasi-Matter
+#--- [Basic Replacement]
+@district_ukn_industrial_1_r_cost_basic_ukn_quasi_matter = 0.78
+@district_ukn_hab_industrial_2_r_cost_basic_ukn_quasi_matter = 1.15
+@district_ukn_arcology_arms_industry_4_r_cost_basic_ukn_quasi_matter = 2.00
+@district_ukn_rw_industrial_5_r_cost_basic_ukn_quasi_matter = 6.62
+#--- [Advanced Replacement]
+@district_ukn_industrial_1_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_hab_industrial_2_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_arcology_arms_industry_4_r_cost_advanced_ukn_quasi_matter = 0.36
+@district_ukn_rw_industrial_5_r_cost_advanced_ukn_quasi_matter = 1.30
+
+# Causalitons
+#--- [Basic Replacement]
+@district_ukn_industrial_1_r_cost_basic_ukn_causalitons = 0.24
+@district_ukn_hab_industrial_2_r_cost_basic_ukn_causalitons = 0.35
+@district_ukn_arcology_arms_industry_4_r_cost_basic_ukn_causalitons = 0.62
+@district_ukn_rw_industrial_5_r_cost_basic_ukn_causalitons = 2.05
+#--- [Advanced Replacement]
+@district_ukn_industrial_1_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_hab_industrial_2_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_arcology_arms_industry_4_r_cost_advanced_ukn_causalitons = 0.11
+@district_ukn_rw_industrial_5_r_cost_advanced_ukn_causalitons = 0.40
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_industrial_1_upkeep_energy = 2
+@district_ukn_hab_industrial_2_upkeep_energy = 2
+@district_ukn_arcology_arms_industry_4_upkeep_energy = 15
+@district_ukn_arcology_machine_industrial_4_upkeep_energy = 15
+@district_ukn_arcology_hive_industrial_4_upkeep_energy = 15
+@district_ukn_rw_industrial_5_upkeep_energy = 15
+
+#####################
+# SCIENCE DISTRICTS #
+#####################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_science_1_build_time = 480
+@district_ukn_hab_science_2_build_time = 480
+@district_ukn_arcology_civilian_industry_4_build_time = 960
+@district_ukn_rw_science_5_build_time = 2880
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_science_1_cost_basic_consumer_goods = 50
+@district_ukn_hab_science_2_cost_basic_consumer_goods = 50
+@district_ukn_arcology_civilian_industry_4_cost_basic_consumer_goods = 150
+@district_ukn_rw_science_5_cost_basic_consumer_goods = 500
+
+# Minerals
+@district_ukn_science_1_cost_basic_minerals = 750
+@district_ukn_hab_science_2_cost_basic_minerals = 1000
+@district_ukn_arcology_civilian_industry_4_cost_basic_minerals = 1500
+@district_ukn_rw_science_5_cost_basic_minerals = 4000
+
+# Rare Crystals
+@district_ukn_science_1_cost_advanced_rare_crystals = 0
+@district_ukn_hab_science_2_cost_advanced_rare_crystals = 0
+@district_ukn_arcology_civilian_industry_4_cost_advanced_rare_crystals = 40
+@district_ukn_rw_science_5_cost_advanced_rare_crystals = 100
+
+# Exotic Gases
+@district_ukn_science_1_cost_advanced_exotic_gases = 0
+@district_ukn_hab_science_2_cost_advanced_exotic_gases = 0
+@district_ukn_arcology_civilian_industry_4_cost_advanced_exotic_gases = 30
+@district_ukn_rw_science_5_cost_advanced_exotic_gases = 150
+
+# Automachines
+@district_ukn_science_1_cost_basic_nanites = 0
+@district_ukn_hab_science_2_cost_basic_nanites = 0
+@district_ukn_arcology_civilian_industry_4_cost_basic_nanites = 5
+@district_ukn_rw_science_5_cost_basic_nanites = 30
+
+# Polymerics
+@district_ukn_hab_science_2_cost_basic_alloys = 50
+@district_ukn_arcology_civilian_industry_4_cost_basic_alloys = 200
+
+# Meta-Materials
+@district_ukn_rw_science_5_cost_basic_ukn_meta_materials = 1000
+#--- [Basic Replacement]
+@district_ukn_science_1_r_cost_basic_ukn_meta_materials = 320
+@district_ukn_hab_science_2_r_cost_basic_ukn_meta_materials = 470
+@district_ukn_arcology_civilian_industry_4_r_cost_basic_ukn_meta_materials = 810
+@district_ukn_rw_science_5_r_cost_basic_ukn_meta_materials = 2700
+
+# Femtomatter 
+#--- [Advanced Replacement]
+@district_ukn_science_1_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_hab_science_2_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_arcology_civilian_industry_4_r_cost_advanced_ukn_femtomatter = 3.5
+@district_ukn_rw_science_5_r_cost_advanced_ukn_femtomatter = 12.5
+
+# Condensics 
+#--- [Advanced Replacement]
+@district_ukn_science_1_r_cost_advanced_ukn_condensics = 0
+@district_ukn_hab_science_2_r_cost_advanced_ukn_condensics = 0
+@district_ukn_arcology_civilian_industry_4_r_cost_advanced_ukn_condensics = 0.87
+@district_ukn_rw_science_5_r_cost_advanced_ukn_condensics = 3.12
+
+# Quasi-Matter
+#--- [Basic Replacement]
+@district_ukn_science_1_r_cost_basic_ukn_quasi_matter = 0.78
+@district_ukn_hab_science_2_r_cost_basic_ukn_quasi_matter = 1.15
+@district_ukn_arcology_civilian_industry_4_r_cost_basic_ukn_quasi_matter = 2.00
+@district_ukn_rw_science_5_r_cost_basic_ukn_quasi_matter = 6.62
+#--- [Advanced Replacement]
+@district_ukn_science_1_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_hab_science_2_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_arcology_civilian_industry_4_r_cost_advanced_ukn_quasi_matter = 0.36
+@district_ukn_rw_science_5_r_cost_advanced_ukn_quasi_matter = 1.30
+
+# Causalitons
+#--- [Basic Replacement]
+@district_ukn_science_1_r_cost_basic_ukn_causalitons = 0.24
+@district_ukn_hab_science_2_r_cost_basic_ukn_causalitons = 0.35
+@district_ukn_arcology_civilian_industry_4_r_cost_basic_ukn_causalitons = 0.62
+@district_ukn_rw_science_5_r_cost_basic_ukn_causalitons = 2.05
+#--- [Advanced Replacement]
+@district_ukn_science_1_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_hab_science_2_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_arcology_civilian_industry_4_r_cost_advanced_ukn_causalitons = 0.11
+@district_ukn_rw_science_5_r_cost_advanced_ukn_causalitons = 0.40
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_science_1_upkeep_energy = 1
+@district_ukn_hab_science_2_upkeep_energy = 2
+@district_ukn_arcology_civilian_industry_4_upkeep_energy = 15
+@district_ukn_arcology_machine_science_4_upkeep_energy = 15
+@district_ukn_arcology_hive_science_4_upkeep_energy = 15
+@district_ukn_rw_science_5_upkeep_energy = 15
+
+########################
+# COMMERCIAL DISTRICTS #
+########################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_commercial_1_build_time = 360
+@district_ukn_hab_commercial_2_build_time = 360
+@district_ukn_arcology_commercial_4_build_time = 960
+@district_ukn_rw_commercial_5_build_time = 2880
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_commercial_1_cost_basic_consumer_goods = 50
+@district_ukn_hab_commercial_2_cost_basic_consumer_goods = 50
+@district_ukn_arcology_commercial_4_cost_basic_consumer_goods = 150
+@district_ukn_rw_commercial_5_cost_basic_consumer_goods = 500
+
+# Minerals
+@district_ukn_commercial_1_cost_basic_minerals = 500
+@district_ukn_hab_commercial_2_cost_basic_minerals = 650
+@district_ukn_arcology_commercial_4_cost_basic_minerals = 1500
+@district_ukn_rw_commercial_5_cost_basic_minerals = 4000
+
+# Rare Crystals
+@district_ukn_commercial_1_cost_advanced_rare_crystals = 0
+@district_ukn_hab_commercial_2_cost_advanced_rare_crystals = 0
+@district_ukn_arcology_commercial_4_cost_advanced_rare_crystals = 70
+@district_ukn_rw_commercial_5_cost_advanced_rare_crystals = 250
+
+# Automachines
+@district_ukn_commercial_1_cost_basic_nanites = 0
+@district_ukn_hab_commercial_2_cost_basic_nanites = 0
+@district_ukn_arcology_commercial_4_cost_basic_nanites = 0
+@district_ukn_rw_commercial_5_cost_basic_nanites = 0
+
+# Polymerics
+@district_ukn_hab_commercial_2_cost_basic_alloys = 50
+@district_ukn_arcology_commercial_4_cost_basic_alloys = 200
+
+# Meta-Materials
+@district_ukn_rw_commercial_5_cost_basic_ukn_meta_materials = 1000
+#--- [Basic Replacement]
+@district_ukn_commercial_1_r_cost_basic_ukn_meta_materials = 210
+@district_ukn_hab_commercial_2_r_cost_basic_ukn_meta_materials = 320
+@district_ukn_arcology_commercial_4_r_cost_basic_ukn_meta_materials = 810
+@district_ukn_rw_commercial_5_r_cost_basic_ukn_meta_materials = 2700
+
+# Femtomatter 
+#--- [Advanced Replacement]
+@district_ukn_commercial_1_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_hab_commercial_2_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_arcology_commercial_4_r_cost_advanced_ukn_femtomatter = 3.5
+@district_ukn_rw_commercial_5_r_cost_advanced_ukn_femtomatter = 12.5
+
+# Condensics 
+#--- [Advanced Replacement]
+@district_ukn_commercial_1_r_cost_advanced_ukn_condensics = 0
+@district_ukn_hab_commercial_2_r_cost_advanced_ukn_condensics = 0
+@district_ukn_arcology_commercial_4_r_cost_advanced_ukn_condensics = 0.87
+@district_ukn_rw_commercial_5_r_cost_advanced_ukn_condensics = 3.12
+
+# Quasi-Matter
+#--- [Basic Replacement]
+@district_ukn_commercial_1_r_cost_basic_ukn_quasi_matter = 0.50
+@district_ukn_hab_commercial_2_r_cost_basic_ukn_quasi_matter = 0.50
+@district_ukn_arcology_commercial_4_r_cost_basic_ukn_quasi_matter = 2.00
+@district_ukn_rw_commercial_5_r_cost_basic_ukn_quasi_matter = 6.62
+#--- [Advanced Replacement]
+@district_ukn_commercial_1_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_hab_commercial_2_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_arcology_commercial_4_r_cost_advanced_ukn_quasi_matter = 0.36
+@district_ukn_rw_commercial_5_r_cost_advanced_ukn_quasi_matter = 1.30
+
+# Causalitons
+#--- [Basic Replacement]
+@district_ukn_commercial_1_r_cost_basic_ukn_causalitons = 0.15
+@district_ukn_hab_commercial_2_r_cost_basic_ukn_causalitons = 0.24
+@district_ukn_arcology_commercial_4_r_cost_basic_ukn_causalitons = 0.62
+@district_ukn_rw_commercial_5_r_cost_basic_ukn_causalitons = 2.05
+#--- [Advanced Replacement]
+@district_ukn_commercial_1_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_hab_commercial_2_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_arcology_commercial_4_r_cost_advanced_ukn_causalitons = 0.11
+@district_ukn_rw_commercial_5_r_cost_advanced_ukn_causalitons = 0.40
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_commercial_1_upkeep_energy = 1
+@district_ukn_hab_commercial_2_upkeep_energy = 2
+@district_ukn_arcology_commercial_4_upkeep_energy = 15
+@district_ukn_rw_commercial_5_upkeep_energy = 15
+
+######################
+# BUREAUCRATIC DISTRICTS #
+######################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_bureaucratic_1_build_time = 360
+@district_ukn_hab_cultural_2_build_time = 360
+@district_ukn_arcology_administrative_4_build_time = 960
+@district_ukn_rw_bureaucratic_5_build_time = 2880
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_bureaucratic_1_cost_basic_consumer_goods = 50
+@district_ukn_hab_cultural_2_cost_basic_consumer_goods = 50
+@district_ukn_arcology_administrative_4_cost_basic_consumer_goods = 150
+@district_ukn_rw_bureaucratic_5_cost_basic_consumer_goods = 500
+
+# Minerals
+@district_ukn_bureaucratic_1_cost_basic_minerals = 500
+@district_ukn_hab_cultural_2_cost_basic_minerals = 650
+@district_ukn_arcology_administrative_4_cost_basic_minerals = 1500
+@district_ukn_rw_bureaucratic_5_cost_basic_minerals = 4000
+
+# Rare Crystals
+@district_ukn_bureaucratic_1_cost_advanced_rare_crystals = 0
+@district_ukn_hab_cultural_2_cost_advanced_rare_crystals = 0
+@district_ukn_arcology_administrative_4_cost_advanced_rare_crystals = 70
+@district_ukn_rw_bureaucratic_5_cost_advanced_rare_crystals = 250
+
+# Automachines
+@district_ukn_bureaucratic_1_cost_basic_nanites = 0
+@district_ukn_hab_cultural_2_cost_basic_nanites = 0
+@district_ukn_arcology_administrative_4_cost_basic_nanites = 0
+@district_ukn_rw_bureaucratic_5_cost_basic_nanites = 0
+
+# Polymerics
+@district_ukn_hab_cultural_2_cost_basic_alloys = 50
+@district_ukn_arcology_administrative_4_cost_basic_alloys = 200
+
+# Meta-Materials
+@district_ukn_rw_bureaucratic_5_cost_basic_ukn_meta_materials = 1000
+#--- [Basic Replacement]
+@district_ukn_bureaucratic_1_r_cost_basic_ukn_meta_materials = 210
+@district_ukn_hab_cultural_2_r_cost_basic_ukn_meta_materials = 320
+@district_ukn_arcology_administrative_4_r_cost_basic_ukn_meta_materials = 810
+@district_ukn_rw_bureaucratic_5_r_cost_basic_ukn_meta_materials = 2700
+
+# Femtomatter 
+#--- [Advanced Replacement]
+@district_ukn_bureaucratic_1_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_hab_cultural_2_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_arcology_administrative_4_r_cost_advanced_ukn_femtomatter = 3.5
+@district_ukn_rw_bureaucratic_5_r_cost_advanced_ukn_femtomatter = 12.5
+
+# Condensics 
+#--- [Advanced Replacement]
+@district_ukn_bureaucratic_1_r_cost_advanced_ukn_condensics = 0
+@district_ukn_hab_cultural_2_r_cost_advanced_ukn_condensics = 0
+@district_ukn_arcology_administrative_4_r_cost_advanced_ukn_condensics = 0.87
+@district_ukn_rw_bureaucratic_5_r_cost_advanced_ukn_condensics = 3.12
+
+# Quasi-Matter
+#--- [Basic Replacement]
+@district_ukn_bureaucratic_1_r_cost_basic_ukn_quasi_matter = 0.50
+@district_ukn_hab_cultural_2_r_cost_basic_ukn_quasi_matter = 0.50
+@district_ukn_arcology_administrative_4_r_cost_basic_ukn_quasi_matter = 2.00
+@district_ukn_rw_bureaucratic_5_r_cost_basic_ukn_quasi_matter = 6.62
+#--- [Advanced Replacement]
+@district_ukn_bureaucratic_1_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_hab_cultural_2_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_arcology_administrative_4_r_cost_advanced_ukn_quasi_matter = 0.36
+@district_ukn_rw_bureaucratic_5_r_cost_advanced_ukn_quasi_matter = 1.30
+
+# Causalitons
+#--- [Basic Replacement]
+@district_ukn_bureaucratic_1_r_cost_basic_ukn_causalitons = 0.15
+@district_ukn_hab_cultural_2_r_cost_basic_ukn_causalitons = 0.24
+@district_ukn_arcology_administrative_4_r_cost_basic_ukn_causalitons = 0.62
+@district_ukn_rw_bureaucratic_5_r_cost_basic_ukn_causalitons = 2.05
+#--- [Advanced Replacement]
+@district_ukn_bureaucratic_1_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_hab_cultural_2_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_arcology_administrative_4_r_cost_advanced_ukn_causalitons = 0.11
+@district_ukn_rw_bureaucratic_5_r_cost_advanced_ukn_causalitons = 0.40
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_bureaucratic_1_upkeep_energy = 1
+@district_ukn_hab_cultural_2_upkeep_energy = 2
+@district_ukn_arcology_administrative_4_upkeep_energy = 15
+@district_ukn_rw_bureaucratic_5_upkeep_energy = 15
+
+##############################
+# CORPORO-BUREAUCRATIC DISTRICTS #
+##############################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_corporate_bureaucratic_1_build_time = 360
+@district_ukn_hab_corporate_bureaucratic_2_build_time = 360
+@district_ukn_arcology_leisure_4_build_time = 960
+@district_ukn_rw_corporate_bureaucratic_5_build_time = 2880
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_corporate_bureaucratic_1_cost_basic_consumer_goods = 50
+@district_ukn_hab_corporate_bureaucratic_2_cost_basic_consumer_goods = 50
+@district_ukn_arcology_leisure_4_cost_basic_consumer_goods = 150
+@district_ukn_rw_corporate_bureaucratic_5_cost_basic_consumer_goods = 500
+
+# Minerals
+@district_ukn_corporate_bureaucratic_1_cost_basic_minerals = 500
+@district_ukn_hab_corporate_bureaucratic_2_cost_basic_minerals = 650
+@district_ukn_arcology_leisure_4_cost_basic_minerals = 1500
+@district_ukn_rw_corporate_bureaucratic_5_cost_basic_minerals = 4000
+
+# Rare Crystals
+@district_ukn_corporate_bureaucratic_1_cost_advanced_rare_crystals = 0
+@district_ukn_hab_corporate_bureaucratic_2_cost_advanced_rare_crystals = 0
+@district_ukn_arcology_leisure_4_cost_advanced_rare_crystals = 70
+@district_ukn_rw_corporate_bureaucratic_5_cost_advanced_rare_crystals = 250
+
+# Automachines
+@district_ukn_corporate_bureaucratic_1_cost_basic_nanites = 0
+@district_ukn_hab_corporate_bureaucratic_2_cost_basic_nanites = 0
+@district_ukn_arcology_leisure_4_cost_basic_nanites = 0
+@district_ukn_rw_corporate_bureaucratic_5_cost_basic_nanites = 0
+
+# Polymerics
+@district_ukn_hab_corporate_bureaucratic_2_cost_basic_alloys = 50
+@district_ukn_arcology_leisure_4_cost_basic_alloys = 200
+
+# Meta-Materials
+@district_ukn_rw_corporate_bureaucratic_5_cost_basic_ukn_meta_materials = 1000
+#--- [Basic Replacement]
+@district_ukn_corporate_bureaucratic_1_r_cost_basic_ukn_meta_materials = 210
+@district_ukn_hab_corporate_bureaucratic_2_r_cost_basic_ukn_meta_materials = 320
+@district_ukn_arcology_leisure_4_r_cost_basic_ukn_meta_materials = 810
+@district_ukn_rw_corporate_bureaucratic_5_r_cost_basic_ukn_meta_materials = 2700
+
+# Femtomatter 
+#--- [Advanced Replacement]
+@district_ukn_corporate_bureaucratic_1_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_hab_corporate_bureaucratic_2_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_arcology_leisure_4_r_cost_advanced_ukn_femtomatter = 3.5
+@district_ukn_rw_corporate_bureaucratic_5_r_cost_advanced_ukn_femtomatter = 12.5
+
+# Condensics 
+#--- [Advanced Replacement]
+@district_ukn_corporate_bureaucratic_1_r_cost_advanced_ukn_condensics = 0
+@district_ukn_hab_corporate_bureaucratic_2_r_cost_advanced_ukn_condensics = 0
+@district_ukn_arcology_leisure_4_r_cost_advanced_ukn_condensics = 0.87
+@district_ukn_rw_corporate_bureaucratic_5_r_cost_advanced_ukn_condensics = 3.12
+
+# Quasi-Matter
+#--- [Basic Replacement]
+@district_ukn_corporate_bureaucratic_1_r_cost_basic_ukn_quasi_matter = 0.50
+@district_ukn_hab_corporate_bureaucratic_2_r_cost_basic_ukn_quasi_matter = 0.50
+@district_ukn_arcology_leisure_4_r_cost_basic_ukn_quasi_matter = 2.00
+@district_ukn_rw_corporate_bureaucratic_5_r_cost_basic_ukn_quasi_matter = 6.62
+#--- [Advanced Replacement]
+@district_ukn_corporate_bureaucratic_1_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_hab_corporate_bureaucratic_2_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_arcology_leisure_4_r_cost_advanced_ukn_quasi_matter = 0.36
+@district_ukn_rw_corporate_bureaucratic_5_r_cost_advanced_ukn_quasi_matter = 1.30
+
+# Causalitons
+#--- [Basic Replacement]
+@district_ukn_corporate_bureaucratic_1_r_cost_basic_ukn_causalitons = 0.15
+@district_ukn_hab_corporate_bureaucratic_2_r_cost_basic_ukn_causalitons = 0.24
+@district_ukn_arcology_leisure_4_r_cost_basic_ukn_causalitons = 0.62
+@district_ukn_rw_corporate_bureaucratic_5_r_cost_basic_ukn_causalitons = 2.05
+#--- [Advanced Replacement]
+@district_ukn_corporate_bureaucratic_1_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_hab_corporate_bureaucratic_2_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_arcology_leisure_4_r_cost_advanced_ukn_causalitons = 0.11
+@district_ukn_rw_corporate_bureaucratic_5_r_cost_advanced_ukn_causalitons = 0.40
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_corporate_bureaucratic_1_upkeep_energy = 1
+@district_ukn_hab_corporate_bureaucratic_2_upkeep_energy = 2
+@district_ukn_arcology_leisure_4_upkeep_energy = 15
+@district_ukn_rw_corporate_bureaucratic_5_upkeep_energy = 15
+
+####################
+# TEMPLE DISTRICTS #
+####################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_temple_1_build_time = 360
+@district_ukn_hab_temple_2_build_time = 360
+@district_ukn_arcology_religious_4_build_time = 960
+@district_ukn_rw_temple_5_build_time = 2880
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_temple_1_cost_basic_consumer_goods = 50
+@district_ukn_hab_temple_2_cost_basic_consumer_goods = 50
+@district_ukn_arcology_religious_4_cost_basic_consumer_goods = 150
+@district_ukn_rw_temple_5_cost_basic_consumer_goods = 500
+
+# Minerals
+@district_ukn_temple_1_cost_basic_minerals = 500
+@district_ukn_hab_temple_2_cost_basic_minerals = 650
+@district_ukn_arcology_religious_4_cost_basic_minerals = 1500
+@district_ukn_rw_temple_5_cost_basic_minerals = 4000
+
+# Rare Crystals
+@district_ukn_temple_1_cost_advanced_rare_crystals = 0
+@district_ukn_hab_temple_2_cost_advanced_rare_crystals = 0
+@district_ukn_arcology_religious_4_cost_advanced_rare_crystals = 70
+@district_ukn_rw_temple_5_cost_advanced_rare_crystals = 250
+
+# Automachines
+@district_ukn_temple_1_cost_basic_nanites = 0
+@district_ukn_hab_temple_2_cost_basic_nanites = 0
+@district_ukn_arcology_religious_4_cost_basic_nanites = 0
+@district_ukn_rw_temple_5_cost_basic_nanites = 0
+
+# Polymerics
+@district_ukn_hab_temple_2_cost_basic_alloys = 50
+@district_ukn_arcology_religious_4_cost_basic_alloys = 200
+
+# Meta-Materials
+@district_ukn_rw_temple_5_cost_basic_ukn_meta_materials = 1000
+#--- [Basic Replacement]
+@district_ukn_temple_1_r_cost_basic_ukn_meta_materials = 210
+@district_ukn_hab_temple_2_r_cost_basic_ukn_meta_materials = 320
+@district_ukn_arcology_religious_4_r_cost_basic_ukn_meta_materials = 810
+@district_ukn_rw_temple_5_r_cost_basic_ukn_meta_materials = 2700
+
+# Femtomatter 
+#--- [Advanced Replacement]
+@district_ukn_temple_1_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_hab_temple_2_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_arcology_religious_4_r_cost_advanced_ukn_femtomatter = 3.5
+@district_ukn_rw_temple_5_r_cost_advanced_ukn_femtomatter = 12.5
+
+# Condensics 
+#--- [Advanced Replacement]
+@district_ukn_temple_1_r_cost_advanced_ukn_condensics = 0
+@district_ukn_hab_temple_2_r_cost_advanced_ukn_condensics = 0
+@district_ukn_arcology_religious_4_r_cost_advanced_ukn_condensics = 0.87
+@district_ukn_rw_temple_5_r_cost_advanced_ukn_condensics = 3.12
+
+# Quasi-Matter
+#--- [Basic Replacement]
+@district_ukn_temple_1_r_cost_basic_ukn_quasi_matter = 0.50
+@district_ukn_hab_temple_2_r_cost_basic_ukn_quasi_matter = 0.50
+@district_ukn_arcology_religious_4_r_cost_basic_ukn_quasi_matter = 2.00
+@district_ukn_rw_temple_5_r_cost_basic_ukn_quasi_matter = 6.62
+#--- [Advanced Replacement]
+@district_ukn_temple_1_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_hab_temple_2_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_arcology_religious_4_r_cost_advanced_ukn_quasi_matter = 0.36
+@district_ukn_rw_temple_5_r_cost_advanced_ukn_quasi_matter = 1.30
+
+# Causalitons
+#--- [Basic Replacement]
+@district_ukn_temple_1_r_cost_basic_ukn_causalitons = 0.15
+@district_ukn_hab_temple_2_r_cost_basic_ukn_causalitons = 0.24
+@district_ukn_arcology_religious_4_r_cost_basic_ukn_causalitons = 0.62
+@district_ukn_rw_temple_5_r_cost_basic_ukn_causalitons = 2.05
+#--- [Advanced Replacement]
+@district_ukn_temple_1_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_hab_temple_2_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_arcology_religious_4_r_cost_advanced_ukn_causalitons = 0.11
+@district_ukn_rw_temple_5_r_cost_advanced_ukn_causalitons = 0.40
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_temple_1_upkeep_energy = 1
+@district_ukn_hab_temple_2_upkeep_energy = 2
+@district_ukn_arcology_religious_4_upkeep_energy = 15
+@district_ukn_rw_temple_5_upkeep_energy = 15
+
+######################
+# MEMORIAL DISTRICTS #
+######################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_memorial_1_build_time = 360
+@district_ukn_hab_memorial_2_build_time = 360
+@district_ukn_arcology_memorial_4_build_time = 960
+@district_ukn_rw_memorial_5_build_time = 2880
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_memorial_1_cost_basic_consumer_goods = 50
+@district_ukn_hab_memorial_2_cost_basic_consumer_goods = 50
+@district_ukn_arcology_memorial_4_cost_basic_consumer_goods = 150
+@district_ukn_rw_memorial_5_cost_basic_consumer_goods = 500
+
+# Minerals
+@district_ukn_memorial_1_cost_basic_minerals = 500
+@district_ukn_hab_memorial_2_cost_basic_minerals = 650
+@district_ukn_arcology_memorial_4_cost_basic_minerals = 1500
+@district_ukn_rw_memorial_5_cost_basic_minerals = 4000
+
+# Rare Crystals
+@district_ukn_memorial_1_cost_advanced_rare_crystals = 0
+@district_ukn_hab_memorial_2_cost_advanced_rare_crystals = 0
+@district_ukn_arcology_memorial_4_cost_advanced_rare_crystals = 70
+@district_ukn_rw_memorial_5_cost_advanced_rare_crystals = 250
+
+# Automachines
+@district_ukn_memorial_1_cost_basic_nanites = 0
+@district_ukn_hab_memorial_2_cost_basic_nanites = 0
+@district_ukn_arcology_memorial_4_cost_basic_nanites = 0
+@district_ukn_rw_memorial_5_cost_basic_nanites = 0
+
+# Polymerics
+@district_ukn_hab_memorial_2_cost_basic_alloys = 50
+@district_ukn_arcology_memorial_4_cost_basic_alloys = 200
+
+# Meta-Materials
+@district_ukn_rw_memorial_5_cost_basic_ukn_meta_materials = 1000
+#--- [Basic Replacement]
+@district_ukn_memorial_1_r_cost_basic_ukn_meta_materials = 210
+@district_ukn_hab_memorial_2_r_cost_basic_ukn_meta_materials = 320
+@district_ukn_arcology_memorial_4_r_cost_basic_ukn_meta_materials = 810
+@district_ukn_rw_memorial_5_r_cost_basic_ukn_meta_materials = 2700
+
+# Femtomatter 
+#--- [Advanced Replacement]
+@district_ukn_memorial_1_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_hab_memorial_2_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_arcology_memorial_4_r_cost_advanced_ukn_femtomatter = 3.5
+@district_ukn_rw_memorial_5_r_cost_advanced_ukn_femtomatter = 12.5
+
+# Condensics 
+#--- [Advanced Replacement]
+@district_ukn_memorial_1_r_cost_advanced_ukn_condensics = 0
+@district_ukn_hab_memorial_2_r_cost_advanced_ukn_condensics = 0
+@district_ukn_arcology_memorial_4_r_cost_advanced_ukn_condensics = 0.87
+@district_ukn_rw_memorial_5_r_cost_advanced_ukn_condensics = 3.12
+
+# Quasi-Matter
+#--- [Basic Replacement]
+@district_ukn_memorial_1_r_cost_basic_ukn_quasi_matter = 0.50
+@district_ukn_hab_memorial_2_r_cost_basic_ukn_quasi_matter = 0.50
+@district_ukn_arcology_memorial_4_r_cost_basic_ukn_quasi_matter = 2.00
+@district_ukn_rw_memorial_5_r_cost_basic_ukn_quasi_matter = 6.62
+#--- [Advanced Replacement]
+@district_ukn_memorial_1_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_hab_memorial_2_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_arcology_memorial_4_r_cost_advanced_ukn_quasi_matter = 0.36
+@district_ukn_rw_memorial_5_r_cost_advanced_ukn_quasi_matter = 1.30
+
+# Causalitons
+#--- [Basic Replacement]
+@district_ukn_memorial_1_r_cost_basic_ukn_causalitons = 0.15
+@district_ukn_hab_memorial_2_r_cost_basic_ukn_causalitons = 0.24
+@district_ukn_arcology_memorial_4_r_cost_basic_ukn_causalitons = 0.62
+@district_ukn_rw_memorial_5_r_cost_basic_ukn_causalitons = 2.05
+#--- [Advanced Replacement]
+@district_ukn_memorial_1_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_hab_memorial_2_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_arcology_memorial_4_r_cost_advanced_ukn_causalitons = 0.11
+@district_ukn_rw_memorial_5_r_cost_advanced_ukn_causalitons = 0.40
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_memorial_1_upkeep_energy = 1
+@district_ukn_hab_memorial_2_upkeep_energy = 2
+@district_ukn_arcology_memorial_4_upkeep_energy = 15
+@district_ukn_rw_memorial_5_upkeep_energy = 15
+
+######################
+# SYNAPTIC DISTRICTS #
+######################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_hive_node_1_build_time = 360
+@district_ukn_hab_hive_node_2_build_time = 360
+@district_ukn_arcology_hive_node_4_build_time = 960
+@district_ukn_rw_hive_node_5_build_time = 2880
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_hive_node_1_cost_basic_consumer_goods = 50
+@district_ukn_hab_hive_node_2_cost_basic_consumer_goods = 50
+@district_ukn_arcology_hive_node_4_cost_basic_consumer_goods = 150
+@district_ukn_rw_hive_node_5_cost_basic_consumer_goods = 500
+
+# Minerals
+@district_ukn_hive_node_1_cost_basic_minerals = 500
+@district_ukn_hab_hive_node_2_cost_basic_minerals = 650
+@district_ukn_arcology_hive_node_4_cost_basic_minerals = 1500
+@district_ukn_rw_hive_node_5_cost_basic_minerals = 4000
+
+# Rare Crystals
+@district_ukn_hive_node_1_cost_advanced_rare_crystals = 0
+@district_ukn_hab_hive_node_2_cost_advanced_rare_crystals = 0
+@district_ukn_arcology_hive_node_4_cost_advanced_rare_crystals = 70
+@district_ukn_rw_hive_node_5_cost_advanced_rare_crystals = 250
+
+# Automachines
+@district_ukn_hive_node_1_cost_basic_nanites = 0
+@district_ukn_hab_hive_node_2_cost_basic_nanites = 0
+@district_ukn_arcology_hive_node_4_cost_basic_nanites = 0
+@district_ukn_rw_hive_node_5_cost_basic_nanites = 0
+
+# Polymerics
+@district_ukn_hab_hive_node_2_cost_basic_alloys = 50
+@district_ukn_arcology_hive_node_4_cost_basic_alloys = 200
+
+# Meta-Materials
+@district_ukn_rw_hive_node_5_cost_basic_ukn_meta_materials = 1000
+#--- [Basic Replacement]
+@district_ukn_hive_node_1_r_cost_basic_ukn_meta_materials = 210
+@district_ukn_hab_hive_node_2_r_cost_basic_ukn_meta_materials = 320
+@district_ukn_arcology_hive_node_4_r_cost_basic_ukn_meta_materials = 810
+@district_ukn_rw_hive_node_5_r_cost_basic_ukn_meta_materials = 2700
+
+# Femtomatter 
+#--- [Advanced Replacement]
+@district_ukn_hive_node_1_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_hab_hive_node_2_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_arcology_hive_node_4_r_cost_advanced_ukn_femtomatter = 3.5
+@district_ukn_rw_hive_node_5_r_cost_advanced_ukn_femtomatter = 12.5
+
+# Condensics 
+#--- [Advanced Replacement]
+@district_ukn_hive_node_1_r_cost_advanced_ukn_condensics = 0
+@district_ukn_hab_hive_node_2_r_cost_advanced_ukn_condensics = 0
+@district_ukn_arcology_hive_node_4_r_cost_advanced_ukn_condensics = 0.87
+@district_ukn_rw_hive_node_5_r_cost_advanced_ukn_condensics = 3.12
+
+# Quasi-Matter
+#--- [Basic Replacement]
+@district_ukn_hive_node_1_r_cost_basic_ukn_quasi_matter = 0.50
+@district_ukn_hab_hive_node_2_r_cost_basic_ukn_quasi_matter = 0.50
+@district_ukn_arcology_hive_node_4_r_cost_basic_ukn_quasi_matter = 2.00
+@district_ukn_rw_hive_node_5_r_cost_basic_ukn_quasi_matter = 6.62
+#--- [Advanced Replacement]
+@district_ukn_hive_node_1_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_hab_hive_node_2_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_arcology_hive_node_4_r_cost_advanced_ukn_quasi_matter = 0.36
+@district_ukn_rw_hive_node_5_r_cost_advanced_ukn_quasi_matter = 1.30
+
+# Causalitons
+#--- [Basic Replacement]
+@district_ukn_hive_node_1_r_cost_basic_ukn_causalitons = 0.15
+@district_ukn_hab_hive_node_2_r_cost_basic_ukn_causalitons = 0.24
+@district_ukn_arcology_hive_node_4_r_cost_basic_ukn_causalitons = 0.62
+@district_ukn_rw_hive_node_5_r_cost_basic_ukn_causalitons = 2.05
+#--- [Advanced Replacement]
+@district_ukn_hive_node_1_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_hab_hive_node_2_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_arcology_hive_node_4_r_cost_advanced_ukn_causalitons = 0.11
+@district_ukn_rw_hive_node_5_r_cost_advanced_ukn_causalitons = 0.40
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_hive_node_1_upkeep_energy = 1
+@district_ukn_hab_hive_node_2_upkeep_energy = 2
+@district_ukn_arcology_hive_node_4_upkeep_energy = 15
+@district_ukn_rw_hive_node_5_upkeep_energy = 15
+
+########################
+# UPLINK DISTRICTS #
+########################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_uplink_1_build_time = 360
+@district_ukn_hab_uplink_2_build_time = 360
+@district_ukn_arcology_uplink_4_build_time = 960
+@district_ukn_rw_uplink_5_build_time = 2880
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_uplink_1_cost_basic_consumer_goods = 50
+@district_ukn_hab_uplink_2_cost_basic_consumer_goods = 50
+@district_ukn_arcology_uplink_4_cost_basic_consumer_goods = 150
+@district_ukn_rw_uplink_5_cost_basic_consumer_goods = 500
+
+# Minerals
+@district_ukn_uplink_1_cost_basic_minerals = 500
+@district_ukn_hab_uplink_2_cost_basic_minerals = 650
+@district_ukn_arcology_uplink_4_cost_basic_minerals = 1500
+@district_ukn_rw_uplink_5_cost_basic_minerals = 4000
+
+# Rare Crystals
+@district_ukn_uplink_1_cost_advanced_rare_crystals = 0
+@district_ukn_hab_uplink_2_cost_advanced_rare_crystals = 0
+@district_ukn_arcology_uplink_4_cost_advanced_rare_crystals = 70
+@district_ukn_rw_uplink_5_cost_advanced_rare_crystals = 250
+
+# Automachines
+@district_ukn_uplink_1_cost_basic_nanites = 0
+@district_ukn_hab_uplink_2_cost_basic_nanites = 0
+@district_ukn_arcology_uplink_4_cost_basic_nanites = 0
+@district_ukn_rw_uplink_5_cost_basic_nanites = 0
+
+# Polymerics
+@district_ukn_hab_uplink_2_cost_basic_alloys = 50
+@district_ukn_arcology_uplink_4_cost_basic_alloys = 200
+
+# Meta-Materials
+@district_ukn_rw_uplink_5_cost_basic_ukn_meta_materials = 1000
+#--- [Basic Replacement]
+@district_ukn_uplink_1_r_cost_basic_ukn_meta_materials = 210
+@district_ukn_hab_uplink_2_r_cost_basic_ukn_meta_materials = 320
+@district_ukn_arcology_uplink_4_r_cost_basic_ukn_meta_materials = 810
+@district_ukn_rw_uplink_5_r_cost_basic_ukn_meta_materials = 2700
+
+# Femtomatter 
+#--- [Advanced Replacement]
+@district_ukn_uplink_1_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_hab_uplink_2_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_arcology_uplink_4_r_cost_advanced_ukn_femtomatter = 3.5
+@district_ukn_rw_uplink_5_r_cost_advanced_ukn_femtomatter = 12.5
+
+# Condensics 
+#--- [Advanced Replacement]
+@district_ukn_uplink_1_r_cost_advanced_ukn_condensics = 0
+@district_ukn_hab_uplink_2_r_cost_advanced_ukn_condensics = 0
+@district_ukn_arcology_uplink_4_r_cost_advanced_ukn_condensics = 0.87
+@district_ukn_rw_uplink_5_r_cost_advanced_ukn_condensics = 3.12
+
+# Quasi-Matter
+#--- [Basic Replacement]
+@district_ukn_uplink_1_r_cost_basic_ukn_quasi_matter = 0.50
+@district_ukn_hab_uplink_2_r_cost_basic_ukn_quasi_matter = 0.50
+@district_ukn_arcology_uplink_4_r_cost_basic_ukn_quasi_matter = 2.00
+@district_ukn_rw_uplink_5_r_cost_basic_ukn_quasi_matter = 6.62
+#--- [Advanced Replacement]
+@district_ukn_uplink_1_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_hab_uplink_2_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_arcology_uplink_4_r_cost_advanced_ukn_quasi_matter = 0.36
+@district_ukn_rw_uplink_5_r_cost_advanced_ukn_quasi_matter = 1.30
+
+# Causalitons
+#--- [Basic Replacement]
+@district_ukn_uplink_1_r_cost_basic_ukn_causalitons = 0.15
+@district_ukn_hab_uplink_2_r_cost_basic_ukn_causalitons = 0.24
+@district_ukn_arcology_uplink_4_r_cost_basic_ukn_causalitons = 0.62
+@district_ukn_rw_uplink_5_r_cost_basic_ukn_causalitons = 2.05
+#--- [Advanced Replacement]
+@district_ukn_uplink_1_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_hab_uplink_2_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_arcology_uplink_4_r_cost_advanced_ukn_causalitons = 0.11
+@district_ukn_rw_uplink_5_r_cost_advanced_ukn_causalitons = 0.40
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_uplink_1_upkeep_energy = 1
+@district_ukn_hab_uplink_2_upkeep_energy = 2
+@district_ukn_arcology_uplink_4_upkeep_energy = 15
+@district_ukn_rw_uplink_5_upkeep_energy = 15
+
+#####################
+# REACTOR DISTRICTS #
+#####################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_generator_1_build_time = 360
+@district_ukn_hab_energy_2_build_time = 360
+@district_ukn_arcology_generator_4_build_time = 960
+@district_ukn_rw_generator_5_build_time = 2880
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_generator_1_cost_basic_consumer_goods = 50
+@district_ukn_hab_energy_2_cost_basic_consumer_goods = 50
+@district_ukn_arcology_generator_4_cost_basic_consumer_goods = 150
+@district_ukn_rw_generator_5_cost_basic_consumer_goods = 500
+
+# Minerals
+@district_ukn_generator_1_cost_basic_minerals = 500
+@district_ukn_hab_energy_2_cost_basic_minerals = 650
+@district_ukn_arcology_generator_4_cost_basic_minerals = 1500
+@district_ukn_rw_generator_5_cost_basic_minerals = 4000
+
+# Rare Crystals
+@district_ukn_generator_1_cost_advanced_rare_crystals = 0
+@district_ukn_hab_energy_2_cost_advanced_rare_crystals = 0
+@district_ukn_arcology_generator_4_cost_advanced_rare_crystals = 70
+@district_ukn_rw_generator_5_cost_advanced_rare_crystals = 250
+
+# Automachines
+@district_ukn_generator_1_cost_basic_nanites = 0
+@district_ukn_hab_energy_2_cost_basic_nanites = 0
+@district_ukn_arcology_generator_4_cost_basic_nanites = 0
+@district_ukn_rw_generator_5_cost_basic_nanites = 0
+
+# Polymerics
+@district_ukn_generator_1_cost_basic_alloys = 50
+@district_ukn_hab_energy_2_cost_basic_alloys = 100
+@district_ukn_arcology_generator_4_cost_basic_alloys = 200
+
+# Meta-Materials
+@district_ukn_rw_generator_5_cost_basic_ukn_meta_materials = 1000
+#--- [Basic Replacement]
+@district_ukn_generator_1_r_cost_basic_ukn_meta_materials = 250
+@district_ukn_hab_energy_2_r_cost_basic_ukn_meta_materials = 360
+@district_ukn_arcology_generator_4_r_cost_basic_ukn_meta_materials = 810
+@district_ukn_rw_generator_5_r_cost_basic_ukn_meta_materials = 2700
+
+# Femtomatter 
+#--- [Advanced Replacement]
+@district_ukn_generator_1_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_hab_energy_2_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_arcology_generator_4_r_cost_advanced_ukn_femtomatter = 3.5
+@district_ukn_rw_generator_5_r_cost_advanced_ukn_femtomatter = 12.5
+
+# Condensics 
+#--- [Advanced Replacement]
+@district_ukn_generator_1_r_cost_advanced_ukn_condensics = 0
+@district_ukn_hab_energy_2_r_cost_advanced_ukn_condensics = 0
+@district_ukn_arcology_generator_4_r_cost_advanced_ukn_condensics = 0.87
+@district_ukn_rw_generator_5_r_cost_advanced_ukn_condensics = 3.12
+
+# Quasi-Matter
+#--- [Basic Replacement]
+@district_ukn_generator_1_r_cost_basic_ukn_quasi_matter = 0.61
+@district_ukn_hab_energy_2_r_cost_basic_ukn_quasi_matter = 0.88
+@district_ukn_arcology_generator_4_r_cost_basic_ukn_quasi_matter = 2.00
+@district_ukn_rw_generator_5_r_cost_basic_ukn_quasi_matter = 6.62
+#--- [Advanced Replacement]
+@district_ukn_generator_1_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_hab_energy_2_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_arcology_generator_4_r_cost_advanced_ukn_quasi_matter = 0.36
+@district_ukn_rw_generator_5_r_cost_advanced_ukn_quasi_matter = 1.30
+
+# Causalitons
+#--- [Basic Replacement]
+@district_ukn_generator_1_r_cost_basic_ukn_causalitons = 0.19
+@district_ukn_hab_energy_2_r_cost_basic_ukn_causalitons = 0.27
+@district_ukn_arcology_generator_4_r_cost_basic_ukn_causalitons = 0.62
+@district_ukn_rw_generator_5_r_cost_basic_ukn_causalitons = 2.05
+#--- [Advanced Replacement]
+@district_ukn_generator_1_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_hab_energy_2_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_arcology_generator_4_r_cost_advanced_ukn_causalitons = 0.11
+@district_ukn_rw_generator_5_r_cost_advanced_ukn_causalitons = 0.40
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_generator_1_upkeep_energy = 1
+@district_ukn_hab_energy_2_upkeep_energy = 2
+@district_ukn_arcology_generator_4_upkeep_energy = 15
+@district_ukn_rw_generator_5_upkeep_energy = 15
+
+####################
+# MINING DISTRICTS #
+####################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_mining_1_build_time = 360
+@district_ukn_hab_mining_2_build_time = 360
+@district_ukn_arcology_mining_4_build_time = 960
+@district_ukn_rw_mining_5_build_time = 2880
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_mining_1_cost_basic_consumer_goods = 50
+@district_ukn_hab_mining_2_cost_basic_consumer_goods = 50
+@district_ukn_arcology_mining_4_cost_basic_consumer_goods = 150
+@district_ukn_rw_mining_5_cost_basic_consumer_goods = 500
+
+# Minerals
+@district_ukn_mining_1_cost_basic_minerals = 500
+@district_ukn_hab_mining_2_cost_basic_minerals = 650
+@district_ukn_arcology_mining_4_cost_basic_minerals = 1500
+@district_ukn_rw_mining_5_cost_basic_minerals = 4000
+
+# Rare Crystals
+@district_ukn_mining_1_cost_advanced_rare_crystals = 0
+@district_ukn_hab_mining_2_cost_advanced_rare_crystals = 0
+@district_ukn_arcology_mining_4_cost_advanced_rare_crystals = 70
+@district_ukn_rw_mining_5_cost_advanced_rare_crystals = 250
+
+# Automachines
+@district_ukn_mining_1_cost_basic_nanites = 0
+@district_ukn_hab_mining_2_cost_basic_nanites = 0
+@district_ukn_arcology_mining_4_cost_basic_nanites = 0
+@district_ukn_rw_mining_5_cost_basic_nanites = 0
+
+# Polymerics
+@district_ukn_hab_mining_2_cost_basic_alloys = 50
+@district_ukn_arcology_mining_4_cost_basic_alloys = 200
+
+# Meta-Materials
+@district_ukn_rw_mining_5_cost_basic_ukn_meta_materials = 1000
+#--- [Basic Replacement]
+@district_ukn_mining_1_r_cost_basic_ukn_meta_materials = 210
+@district_ukn_hab_mining_2_r_cost_basic_ukn_meta_materials = 320
+@district_ukn_arcology_mining_4_r_cost_basic_ukn_meta_materials = 810
+@district_ukn_rw_mining_5_r_cost_basic_ukn_meta_materials = 2700
+
+# Femtomatter 
+#--- [Advanced Replacement]
+@district_ukn_mining_1_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_hab_mining_2_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_arcology_mining_4_r_cost_advanced_ukn_femtomatter = 3.5
+@district_ukn_rw_mining_5_r_cost_advanced_ukn_femtomatter = 12.5
+
+# Condensics 
+#--- [Advanced Replacement]
+@district_ukn_mining_1_r_cost_advanced_ukn_condensics = 0
+@district_ukn_hab_mining_2_r_cost_advanced_ukn_condensics = 0
+@district_ukn_arcology_mining_4_r_cost_advanced_ukn_condensics = 0.87
+@district_ukn_rw_mining_5_r_cost_advanced_ukn_condensics = 3.12
+
+# Quasi-Matter
+#--- [Basic Replacement]
+@district_ukn_mining_1_r_cost_basic_ukn_quasi_matter = 0.50
+@district_ukn_hab_mining_2_r_cost_basic_ukn_quasi_matter = 0.50
+@district_ukn_arcology_mining_4_r_cost_basic_ukn_quasi_matter = 2.00
+@district_ukn_rw_mining_5_r_cost_basic_ukn_quasi_matter = 6.62
+#--- [Advanced Replacement]
+@district_ukn_mining_1_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_hab_mining_2_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_arcology_mining_4_r_cost_advanced_ukn_quasi_matter = 0.36
+@district_ukn_rw_mining_5_r_cost_advanced_ukn_quasi_matter = 1.30
+
+# Causalitons
+#--- [Basic Replacement]
+@district_ukn_mining_1_r_cost_basic_ukn_causalitons = 0.15
+@district_ukn_hab_mining_2_r_cost_basic_ukn_causalitons = 0.24
+@district_ukn_arcology_mining_4_r_cost_basic_ukn_causalitons = 0.62
+@district_ukn_rw_mining_5_r_cost_basic_ukn_causalitons = 2.05
+#--- [Advanced Replacement]
+@district_ukn_mining_1_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_hab_mining_2_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_arcology_mining_4_r_cost_advanced_ukn_causalitons = 0.11
+@district_ukn_rw_mining_5_r_cost_advanced_ukn_causalitons = 0.40
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_mining_1_upkeep_energy = 1
+@district_ukn_hab_mining_2_upkeep_energy = 2
+@district_ukn_arcology_mining_4_upkeep_energy = 15
+@district_ukn_rw_mining_5_upkeep_energy = 15
+
+#####################
+# FARMING DISTRICTS #
+#####################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_farming_1_build_time = 360
+@district_ukn_hab_farming_2_build_time = 360
+@district_ukn_arcology_farming_4_build_time = 960
+@district_ukn_rw_farming_5_build_time = 2880
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_farming_1_cost_basic_consumer_goods = 50
+@district_ukn_hab_farming_2_cost_basic_consumer_goods = 50
+@district_ukn_arcology_farming_4_cost_basic_consumer_goods = 150
+@district_ukn_rw_farming_5_cost_basic_consumer_goods = 500
+
+# Minerals
+@district_ukn_farming_1_cost_basic_minerals = 500
+@district_ukn_hab_farming_2_cost_basic_minerals = 650
+@district_ukn_arcology_farming_4_cost_basic_minerals = 1500
+@district_ukn_rw_farming_5_cost_basic_minerals = 4000
+
+# Rare Crystals
+@district_ukn_farming_1_cost_advanced_exotic_gases = 0
+@district_ukn_hab_farming_2_cost_advanced_exotic_gases = 0
+@district_ukn_arcology_farming_4_cost_advanced_exotic_gases = 70
+@district_ukn_rw_farming_5_cost_advanced_exotic_gases = 250
+
+# Automachines
+@district_ukn_farming_1_cost_basic_nanites = 0
+@district_ukn_hab_farming_2_cost_basic_nanites = 0
+@district_ukn_arcology_farming_4_cost_basic_nanites = 0
+@district_ukn_rw_farming_5_cost_basic_nanites = 0
+
+# Polymerics
+@district_ukn_hab_farming_2_cost_basic_alloys = 50
+@district_ukn_arcology_farming_4_cost_basic_alloys = 200
+
+# Meta-Materials
+@district_ukn_rw_farming_5_cost_basic_ukn_meta_materials = 1000
+#--- [Basic Replacement]
+@district_ukn_farming_1_r_cost_basic_ukn_meta_materials = 210
+@district_ukn_hab_farming_2_r_cost_basic_ukn_meta_materials = 320
+@district_ukn_arcology_farming_4_r_cost_basic_ukn_meta_materials = 810
+@district_ukn_rw_farming_5_r_cost_basic_ukn_meta_materials = 2700
+
+# Femtomatter 
+#--- [Advanced Replacement]
+@district_ukn_farming_1_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_hab_farming_2_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_arcology_farming_4_r_cost_advanced_ukn_femtomatter = 3.5
+@district_ukn_rw_farming_5_r_cost_advanced_ukn_femtomatter = 12.5
+
+# Condensics 
+#--- [Advanced Replacement]
+@district_ukn_farming_1_r_cost_advanced_ukn_condensics = 0
+@district_ukn_hab_farming_2_r_cost_advanced_ukn_condensics = 0
+@district_ukn_arcology_farming_4_r_cost_advanced_ukn_condensics = 0.87
+@district_ukn_rw_farming_5_r_cost_advanced_ukn_condensics = 3.12
+
+# Quasi-Matter
+#--- [Basic Replacement]
+@district_ukn_farming_1_r_cost_basic_ukn_quasi_matter = 0.50
+@district_ukn_hab_farming_2_r_cost_basic_ukn_quasi_matter = 0.50
+@district_ukn_arcology_farming_4_r_cost_basic_ukn_quasi_matter = 2.00
+@district_ukn_rw_farming_5_r_cost_basic_ukn_quasi_matter = 6.62
+#--- [Advanced Replacement]
+@district_ukn_farming_1_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_hab_farming_2_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_arcology_farming_4_r_cost_advanced_ukn_quasi_matter = 0.36
+@district_ukn_rw_farming_5_r_cost_advanced_ukn_quasi_matter = 1.30
+
+# Causalitons
+#--- [Basic Replacement]
+@district_ukn_farming_1_r_cost_basic_ukn_causalitons = 0.15
+@district_ukn_hab_farming_2_r_cost_basic_ukn_causalitons = 0.24
+@district_ukn_arcology_farming_4_r_cost_basic_ukn_causalitons = 0.62
+@district_ukn_rw_farming_5_r_cost_basic_ukn_causalitons = 2.05
+#--- [Advanced Replacement]
+@district_ukn_farming_1_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_hab_farming_2_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_arcology_farming_4_r_cost_advanced_ukn_causalitons = 0.11
+@district_ukn_rw_farming_5_r_cost_advanced_ukn_causalitons = 0.40
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_farming_1_upkeep_energy = 1
+@district_ukn_hab_farming_2_upkeep_energy = 2
+@district_ukn_arcology_farming_4_upkeep_energy = 15
+@district_ukn_rw_farming_5_upkeep_energy = 15
+
+
+######################
+# REFINERY DISTRICTS #
+######################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_refinery_3_build_time = 720
+@district_ukn_hab_refinery_3_build_time = 720
+@district_ukn_arcology_refinery_4_build_time = 960
+@district_ukn_rw_refinery_5_build_time = 4080
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_refinery_3_cost_basic_consumer_goods = 50
+@district_ukn_hab_refinery_3_cost_basic_consumer_goods = 50
+@district_ukn_arcology_refinery_4_cost_basic_consumer_goods = 150
+@district_ukn_rw_refinery_5_cost_basic_consumer_goods = 500
+
+# Minerals
+@district_ukn_refinery_3_cost_basic_minerals = 900
+@district_ukn_hab_refinery_3_cost_basic_minerals = 800
+@district_ukn_arcology_refinery_4_cost_basic_minerals = 1900
+@district_ukn_rw_refinery_5_cost_basic_minerals = 8000
+
+# Rare Crystals
+@district_ukn_refinery_3_cost_advanced_rare_crystals = 0
+@district_ukn_hab_refinery_3_cost_advanced_rare_crystals = 0
+@district_ukn_arcology_refinery_4_cost_advanced_rare_crystals = 0
+@district_ukn_rw_refinery_5_cost_advanced_rare_crystals = 0
+
+# Exotic Gases
+@district_ukn_refinery_3_cost_advanced_exotic_gases = 0
+@district_ukn_hab_refinery_3_cost_advanced_exotic_gases = 0
+@district_ukn_arcology_refinery_4_cost_advanced_exotic_gases = 0
+@district_ukn_rw_refinery_5_cost_advanced_exotic_gases = 0
+
+# Polymerics
+@district_ukn_refinery_3_cost_basic_alloys = 200
+@district_ukn_hab_refinery_3_cost_basic_alloys = 250
+@district_ukn_arcology_refinery_4_cost_basic_alloys = 400
+@district_ukn_rw_refinery_5_cost_basic_alloys = 2500
+
+# Meta-Materials
+@district_ukn_rw_refinery_3_cost_basic_ukn_meta_materials = 1000
+#--- [Basic Replace]
+@district_ukn_refinery_3_r_cost_basic_ukn_meta_materials = 550
+@district_ukn_hab_refinery_3_r_cost_basic_ukn_meta_materials = 550
+@district_ukn_arcology_refinery_4_r_cost_basic_ukn_meta_materials = 1150
+@district_ukn_rw_refinery_5_r_cost_basic_ukn_meta_materials = 6570
+
+# Femtomatter
+#--- [Advanced Replace]
+@district_ukn_refinery_3_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_hab_refinery_3_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_arcology_refinery_4_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_rw_refinery_5_r_cost_advanced_ukn_femtomatter = 0
+
+# Condensics
+#--- [Advanced Replace]
+@district_ukn_refinery_3_r_cost_advanced_ukn_condensics = 0
+@district_ukn_hab_refinery_3_r_cost_advanced_ukn_condensics = 0
+@district_ukn_arcology_refinery_4_r_cost_advanced_ukn_condensics = 0
+@district_ukn_rw_refinery_5_r_cost_advanced_ukn_condensics = 0
+
+# Quasi-Matter
+#--- [Basic Replace]
+@district_ukn_refinery_3_r_cost_basic_ukn_quasi_matter = 1.35
+@district_ukn_hab_refinery_3_r_cost_basic_ukn_quasi_matter = 1.35
+@district_ukn_arcology_refinery_4_r_cost_basic_ukn_quasi_matter = 2.82
+@district_ukn_rw_refinery_5_r_cost_basic_ukn_quasi_matter = 16.13
+#--- [Advanced Replace]
+@district_ukn_refinery_3_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_hab_refinery_3_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_arcology_refinery_4_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_rw_refinery_5_r_cost_advanced_ukn_quasi_matter = 0
+
+# Causalitons
+#--- [Basic Replace]
+@district_ukn_refinery_3_r_cost_basic_ukn_causalitons = 0.42
+@district_ukn_hab_refinery_3_r_cost_basic_ukn_causalitons = 0.42
+@district_ukn_arcology_refinery_4_r_cost_basic_ukn_causalitons = 0.87
+@district_ukn_rw_refinery_5_r_cost_basic_ukn_causalitons = 5.00
+#--- [Advanced Replace]
+@district_ukn_refinery_3_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_hab_refinery_3_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_arcology_refinery_4_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_rw_refinery_5_r_cost_advanced_ukn_causalitons = 0
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_refinery_2_upkeep_energy = 5
+@district_ukn_hab_refinery_2_upkeep_energy = 5
+@district_ukn_arcology_refinery_4_upkeep_energy = 15
+@district_ukn_rw_refinery_5_upkeep_energy = 15
+
+
+##################################
+# AUTOMACHINE ASSEMBLY DISTRICTS #
+##################################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_automachine_assembly_2_build_time = 720
+@district_ukn_hab_automachine_assembly_2_build_time = 720
+@district_ukn_arcology_automachine_assembly_4_build_time = 1560
+@district_ukn_rw_automachine_assembly_5_build_time = 5760
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_automachine_assembly_2_cost_basic_consumer_goods = 100
+@district_ukn_hab_automachine_assembly_2_cost_basic_consumer_goods = 100
+@district_ukn_arcology_automachine_assembly_4_cost_basic_consumer_goods = 300
+@district_ukn_rw_automachine_assembly_5_cost_basic_consumer_goods = 1000
+
+# Minerals
+@district_ukn_automachine_assembly_2_cost_basic_minerals = 1300
+@district_ukn_hab_automachine_assembly_2_cost_basic_minerals = 1200
+@district_ukn_arcology_automachine_assembly_4_cost_basic_minerals = 2100
+@district_ukn_rw_automachine_assembly_5_cost_basic_minerals = 14500
+
+# Rare Crystals
+@district_ukn_automachine_assembly_2_cost_advanced_rare_crystals = 0
+@district_ukn_hab_automachine_assembly_2_cost_advanced_rare_crystals = 0
+@district_ukn_arcology_automachine_assembly_4_cost_advanced_rare_crystals = 150
+@district_ukn_rw_automachine_assembly_5_cost_advanced_rare_crystals = 500
+
+# Exotic Gases
+@district_ukn_automachine_assembly_2_cost_advanced_exotic_gases = 0
+@district_ukn_hab_automachine_assembly_2_cost_advanced_exotic_gases = 0
+@district_ukn_arcology_automachine_assembly_4_cost_advanced_exotic_gases = 90
+@district_ukn_rw_automachine_assembly_5_cost_advanced_exotic_gases = 300
+
+# Polymerics
+@district_ukn_hab_automachine_assembly_2_cost_basic_alloys = 50
+@district_ukn_arcology_automachine_assembly_4_cost_basic_alloys = 200
+
+# Meta-Materials
+@district_ukn_rw_automachine_assembly_5_cost_basic_ukn_meta_materials = 1000
+#--- [Basic Replace]
+@district_ukn_automachine_assembly_2_r_cost_basic_ukn_meta_materials = 550
+@district_ukn_hab_automachine_assembly_2_r_cost_basic_ukn_meta_materials = 550
+@district_ukn_arcology_automachine_assembly_4_r_cost_basic_ukn_meta_materials = 1070
+@district_ukn_rw_automachine_assembly_5_r_cost_basic_ukn_meta_materials = 7210
+
+# Femtomatter
+#--- [Advanced Replace]
+@district_ukn_automachine_assembly_2_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_hab_automachine_assembly_2_r_cost_advanced_ukn_femtomatter = 0
+@district_ukn_arcology_automachine_assembly_4_r_cost_advanced_ukn_femtomatter = 12
+@district_ukn_rw_automachine_assembly_5_r_cost_advanced_ukn_femtomatter = 40
+
+# Condensics
+#--- [Advanced Replace]
+@district_ukn_automachine_assembly_2_r_cost_advanced_ukn_condensics = 0
+@district_ukn_hab_automachine_assembly_2_r_cost_advanced_ukn_condensics = 0
+@district_ukn_arcology_automachine_assembly_4_r_cost_advanced_ukn_condensics = 3
+@district_ukn_rw_automachine_assembly_5_r_cost_advanced_ukn_condensics = 10
+
+# Quasi-Matter
+#--- [Basic Replace]
+@district_ukn_automachine_assembly_2_r_cost_basic_ukn_quasi_matter = 1.35
+@district_ukn_hab_automachine_assembly_2_r_cost_basic_ukn_quasi_matter = 1.35
+@district_ukn_arcology_automachine_assembly_4_r_cost_basic_ukn_quasi_matter = 2.62
+@district_ukn_rw_automachine_assembly_5_r_cost_basic_ukn_quasi_matter = 17.70
+#--- [Advanced Replace]
+@district_ukn_automachine_assembly_2_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_hab_automachine_assembly_2_r_cost_advanced_ukn_quasi_matter = 0
+@district_ukn_arcology_automachine_assembly_4_r_cost_advanced_ukn_quasi_matter = 1.26
+@district_ukn_rw_automachine_assembly_5_r_cost_advanced_ukn_quasi_matter = 4.20
+
+# Causalitons
+#--- [Basic Replace]
+@district_ukn_automachine_assembly_2_r_cost_basic_ukn_causalitons = 0.42
+@district_ukn_hab_automachine_assembly_2_r_cost_basic_ukn_causalitons = 0.42
+@district_ukn_arcology_automachine_assembly_4_r_cost_basic_ukn_causalitons = 0.81
+@district_ukn_rw_automachine_assembly_5_r_cost_basic_ukn_causalitons = 5.50
+#--- [Advanced Replace]
+@district_ukn_automachine_assembly_2_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_hab_automachine_assembly_2_r_cost_advanced_ukn_causalitons = 0
+@district_ukn_arcology_automachine_assembly_4_r_cost_advanced_ukn_causalitons = 0.39
+@district_ukn_rw_automachine_assembly_5_r_cost_advanced_ukn_causalitons = 1.30
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_automachine_assembly_2_upkeep_energy = 5
+@district_ukn_hab_automachine_assembly_2_upkeep_energy = 5
+@district_ukn_arcology_automachine_assembly_4_upkeep_energy = 15
+@district_ukn_rw_automachine_assembly_5_upkeep_energy = 15
+
+
+##############################
+# PARTICLE FACTORY DISTRICTS #
+##############################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_exotic_particles_factory_4_build_time = 1080
+@district_ukn_hab_exotic_particles_factory_4_build_time = 1080
+@district_ukn_arcology_exotic_particles_factory_4_build_time = 1920
+@district_ukn_rw_exotic_particles_factory_5_build_time = 6240
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_exotic_particles_factory_4_cost_basic_consumer_goods = 50
+@district_ukn_hab_exotic_particles_factory_4_cost_basic_consumer_goods = 50
+@district_ukn_arcology_exotic_particles_factory_4_cost_basic_consumer_goods = 150
+@district_ukn_rw_exotic_particles_factory_5_cost_basic_consumer_goods = 500
+
+# Minerals
+@district_ukn_exotic_particles_factory_4_cost_basic_minerals = 800
+@district_ukn_hab_exotic_particles_factory_4_cost_basic_minerals = 800
+@district_ukn_arcology_exotic_particles_factory_4_cost_basic_minerals = 2000
+@district_ukn_rw_exotic_particles_factory_5_cost_basic_minerals = 9500
+
+# Rare Crystals
+@district_ukn_exotic_particles_factory_4_cost_advanced_rare_crystals = 50
+@district_ukn_hab_exotic_particles_factory_4_cost_advanced_rare_crystals = 50
+@district_ukn_arcology_exotic_particles_factory_4_cost_advanced_rare_crystals = 150
+@district_ukn_rw_exotic_particles_factory_5_cost_advanced_rare_crystals = 700
+
+# Exotic Gases
+@district_ukn_exotic_particles_factory_4_cost_advanced_exotic_gases = 30
+@district_ukn_hab_exotic_particles_factory_4_cost_advanced_exotic_gases = 30
+@district_ukn_arcology_exotic_particles_factory_4_cost_advanced_exotic_gases = 90
+@district_ukn_rw_exotic_particles_factory_5_cost_advanced_exotic_gases = 400
+
+# Meta-Materials
+@district_ukn_exotic_particles_factory_4_cost_basic_ukn_meta_materials = 750
+@district_ukn_hab_exotic_particles_factory_4_cost_basic_ukn_meta_materials = 750
+@district_ukn_arcology_exotic_particles_factory_4_cost_basic_ukn_meta_materials = 1700
+@district_ukn_rw_exotic_particles_factory_5_cost_basic_ukn_meta_materials = 8000
+#--- [Basic Replace]
+@district_ukn_exotic_particles_factory_4_r_cost_basic_ukn_meta_materials = 1090
+@district_ukn_hab_exotic_particles_factory_4_r_cost_basic_ukn_meta_materials = 1090
+@district_ukn_arcology_exotic_particles_factory_4_r_cost_basic_ukn_meta_materials = 2550
+@district_ukn_rw_exotic_particles_factory_5_r_cost_basic_ukn_meta_materials = 12070
+
+# Femtomatter
+#--- [Advanced Replace]
+@district_ukn_exotic_particles_factory_4_r_cost_advanced_ukn_femtomatter = 4
+@district_ukn_hab_exotic_particles_factory_4_r_cost_advanced_ukn_femtomatter = 4
+@district_ukn_arcology_exotic_particles_factory_4_r_cost_advanced_ukn_femtomatter = 12
+@district_ukn_rw_exotic_particles_factory_5_r_cost_advanced_ukn_femtomatter = 55
+
+# Condensics
+#--- [Advanced Replace]
+@district_ukn_exotic_particles_factory_4_r_cost_advanced_ukn_condensics = 1
+@district_ukn_hab_exotic_particles_factory_4_r_cost_advanced_ukn_condensics = 1
+@district_ukn_arcology_exotic_particles_factory_4_r_cost_advanced_ukn_condensics = 3
+@district_ukn_rw_exotic_particles_factory_5_r_cost_advanced_ukn_condensics = 13.75
+
+# Quasi-Matter
+#--- [Basic Replace]
+@district_ukn_exotic_particles_factory_4_r_cost_basic_ukn_quasi_matter = 2.67
+@district_ukn_hab_exotic_particles_factory_4_r_cost_basic_ukn_quasi_matter = 2.67
+@district_ukn_arcology_exotic_particles_factory_4_r_cost_basic_ukn_quasi_matter = 6.26
+@district_ukn_rw_exotic_particles_factory_5_r_cost_basic_ukn_quasi_matter = 29.60
+#--- [Advanced Replace]
+@district_ukn_exotic_particles_factory_4_r_cost_advanced_ukn_quasi_matter = 0.42
+@district_ukn_hab_exotic_particles_factory_4_r_cost_advanced_ukn_quasi_matter = 0.42
+@district_ukn_arcology_exotic_particles_factory_4_r_cost_advanced_ukn_quasi_matter = 1.26
+@district_ukn_rw_exotic_particles_factory_5_r_cost_advanced_ukn_quasi_matter = 5.78
+
+# Causalitons
+#--- [Basic Replace]
+@district_ukn_exotic_particles_factory_4_r_cost_basic_ukn_causalitons = 0.83
+@district_ukn_hab_exotic_particles_factory_4_r_cost_basic_ukn_causalitons = 0.83
+@district_ukn_arcology_exotic_particles_factory_4_r_cost_basic_ukn_causalitons = 1.94
+@district_ukn_rw_exotic_particles_factory_5_r_cost_basic_ukn_causalitons = 9.20
+#--- [Advanced Replace]
+@district_ukn_exotic_particles_factory_4_r_cost_advanced_ukn_causalitons = 0.13
+@district_ukn_hab_exotic_particles_factory_4_r_cost_advanced_ukn_causalitons = 0.13
+@district_ukn_arcology_exotic_particles_factory_4_r_cost_advanced_ukn_causalitons = 0.39
+@district_ukn_rw_exotic_particles_factory_5_r_cost_advanced_ukn_causalitons = 1.80
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_exotic_particles_factory_4_upkeep_energy = 5
+@district_ukn_hab_exotic_particles_factory_4_upkeep_energy = 5
+@district_ukn_arcology_exotic_particles_factory_4_upkeep_energy = 5
+@district_ukn_rw_exotic_particles_factory_5_upkeep_energy = 5
+
+
+#####################################
+# FEMTOMATTER REPLICATION DISTRICTS #
+#####################################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_arcology_femtomatter_replication_5_build_time = 1920
+@district_ukn_rw_femtomatter_replication_5_build_time = 7920
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_arcology_femtomatter_replication_5_cost_basic_consumer_goods = 150
+@district_ukn_rw_femtomatter_replication_5_cost_basic_consumer_goods = 500
+
+# Minerals
+@district_ukn_arcology_femtomatter_replication_5_cost_basic_minerals = 2500
+@district_ukn_rw_femtomatter_replication_5_cost_basic_minerals = 9000
+
+# Rare Crystals
+@district_ukn_arcology_femtomatter_replication_5_cost_advanced_rare_crystals = 30
+@district_ukn_rw_femtomatter_replication_5_cost_advanced_rare_crystals = 400
+
+# Exotic Gases
+@district_ukn_arcology_femtomatter_replication_5_cost_advanced_exotic_gases = 60
+@district_ukn_rw_femtomatter_replication_5_cost_advanced_exotic_gases = 800
+
+# Meta-Materials
+@district_ukn_arcology_femtomatter_replication_5_cost_basic_ukn_meta_materials = 3000
+@district_ukn_rw_femtomatter_replication_5_cost_basic_ukn_meta_materials = 11000
+#--- [Basic Replace]
+@district_ukn_arcology_femtomatter_replication_5_r_cost_basic_ukn_meta_materials = 4050
+@district_ukn_rw_femtomatter_replication_5_r_cost_basic_ukn_meta_materials = 14850
+
+# Femtomatter
+@district_ukn_rw_femtomatter_replication_5_cost_advanced_ukn_femtomatter = 100
+#--- [Advanced Replace]
+@district_ukn_arcology_femtomatter_replication_5_r_cost_advanced_ukn_femtomatter = 4.5
+@district_ukn_rw_femtomatter_replication_5_r_cost_advanced_ukn_femtomatter = 160.0
+
+# Condensics
+#--- [Advanced Replace]
+@district_ukn_arcology_femtomatter_replication_5_r_cost_advanced_ukn_condensics = 1.12
+@district_ukn_rw_femtomatter_replication_5_r_cost_advanced_ukn_condensics = 40.0
+
+# Quasi-Matter
+#--- [Basic Replace]
+@district_ukn_arcology_femtomatter_replication_5_r_cost_basic_ukn_quasi_matter = 9.90
+@district_ukn_rw_femtomatter_replication_5_r_cost_basic_ukn_quasi_matter = 36.40
+#--- [Advanced Replace]
+@district_ukn_arcology_femtomatter_replication_5_r_cost_advanced_ukn_quasi_matter = 0.47
+@district_ukn_rw_femtomatter_replication_5_r_cost_advanced_ukn_quasi_matter = 16.84
+
+# Causalitons
+#--- [Basic Replace]
+@district_ukn_arcology_femtomatter_replication_5_r_cost_basic_ukn_causalitons = 3.05
+@district_ukn_rw_femtomatter_replication_5_r_cost_basic_ukn_causalitons = 11.30
+#--- [Advanced Replace]
+@district_ukn_arcology_femtomatter_replication_5_r_cost_advanced_ukn_causalitons = 0.14
+@district_ukn_rw_femtomatter_replication_5_r_cost_advanced_ukn_causalitons = 5.24
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_arcology_femtomatter_replication_5_upkeep_energy = 5
+@district_ukn_rw_femtomatter_replication_5_upkeep_energy = 5
+
+
+######################################
+# CONDENSICS COMPOSITATION DISTRICTS #
+######################################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_arcology_condensics_compositation_6_build_time = 3360
+@district_ukn_rw_condensics_compositation_6_build_time = 14400
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_arcology_condensics_compositation_6_cost_basic_consumer_goods = 150
+@district_ukn_rw_condensics_compositation_6_cost_basic_consumer_goods = 500
+
+# Meta-Materials
+@district_ukn_arcology_condensics_compositation_6_cost_basic_ukn_meta_materials = 4500
+@district_ukn_rw_condensics_compositation_6_cost_basic_ukn_meta_materials = 15000
+
+# Femtomatter
+@district_ukn_arcology_condensics_compositation_6_cost_advanced_ukn_femtomatter = 115
+@district_ukn_rw_condensics_compositation_6_cost_advanced_ukn_femtomatter = 950
+
+# Condensics
+#--- [Advanced Replace]
+@district_ukn_arcology_condensics_compositation_6_r_cost_advanced_ukn_condensics = 28.75
+@district_ukn_rw_condensics_compositation_6_r_cost_advanced_ukn_condensics = 237.5
+
+# Quasi-Matter
+#--- [Basic Replace]
+@district_ukn_arcology_condensics_compositation_6_r_cost_basic_ukn_quasi_matter = 11.05
+@district_ukn_rw_condensics_compositation_6_r_cost_basic_ukn_quasi_matter = 36.80
+#--- [Advanced Replace]
+@district_ukn_arcology_condensics_compositation_6_r_cost_advanced_ukn_quasi_matter = 12.10
+@district_ukn_rw_condensics_compositation_6_r_cost_advanced_ukn_quasi_matter = 100.00
+
+# Quasi-Matter
+#--- [Basic Replace]
+@district_ukn_arcology_condensics_compositation_6_r_cost_basic_ukn_causalitons = 3.43
+@district_ukn_rw_condensics_compositation_6_r_cost_basic_ukn_causalitons = 11.45
+#--- [Advanced Replace]
+@district_ukn_arcology_condensics_compositation_6_r_cost_advanced_ukn_causalitons = 3.77
+@district_ukn_rw_condensics_compositation_6_r_cost_advanced_ukn_causalitons = 31.10
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_arcology_condensics_compositation_6_upkeep_energy = 5
+@district_ukn_rw_condensics_compositation_6_upkeep_energy = 5
+
+# Minerals
+@district_ukn_arcology_condensics_compositation_6_upkeep_minerals = 10
+@district_ukn_rw_condensics_compositation_6_upkeep_minerals = 10
+
+
+######################################
+# QUASI-MATTER MICRO ARRAY DISTRICTS #
+######################################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_rw_quasi_matter_micro_array_7_build_time = 18240
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_rw_quasi_matter_micro_array_7_cost_basic_consumer_goods = 500
+
+# Meta-Materials
+@district_ukn_rw_quasi_matter_micro_array_7_cost_basic_ukn_meta_materials = 8500
+
+# Quasi-Matter
+@district_ukn_rw_quasi_matter_micro_array_7_cost_advanced_ukn_quasi_matter = 400
+#--- [Basic Replace]
+@district_ukn_rw_quasi_matter_micro_array_7_r_cost_basic_ukn_quasi_matter = 20.85
+
+# Causalitons
+#--- [Basic Replace]
+@district_ukn_rw_quasi_matter_micro_array_7_r_cost_advanced_ukn_causalitons = 6.50
+#--- [Advanced Replace]
+@district_ukn_rw_quasi_matter_micro_array_7_r_cost_basic_ukn_causalitons = 124.50
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_rw_quasi_matter_micro_array_7_upkeep_energy = 15
+
+
+#######################################
+# OSCILLYON MICRO SYNTHESIS DISTRICTS #
+#######################################
+
+### BUILD TIME ###---------------------------
+
+@district_ukn_rw_causaliton_micro_synthesizer_9_build_time = 22800
+
+### COST ###---------------------------
+
+# Articles
+@district_ukn_rw_causaliton_micro_synthesizer_9_cost_basic_consumer_goods = 500
+
+# Causalitons
+@district_ukn_rw_causaliton_micro_synthesizer_9_cost_advanced_ukn_causalitons = 250
+
+# Negative Mass
+@district_ukn_rw_causaliton_micro_synthesizer_9_cost_advanced_ehof_sr_negative_mass = 3000
+
+### UPKEEP ###---------------------------
+
+# Energy
+@district_ukn_rw_causaliton_micro_synthesizer_9_upkeep_energy = 15

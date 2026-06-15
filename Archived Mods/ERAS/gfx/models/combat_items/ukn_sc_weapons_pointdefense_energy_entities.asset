@@ -1,0 +1,273 @@
+################
+### LASER PD ###
+################
+
+######----------------------------------
+# T1 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "muzzle_entity_ukn_laser_pd_1"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.1 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_laser_pd_1" keep_particle = yes }
+		event = { trigger_once = yes sound = { soundeffect = "point_defense_fire" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_point_defense_fire" } }	
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "hit_entity_ukn_laser_pd_1"
+	cull_radius = 50.0
+	default_state = "idle"
+	state = { name = "idle" 
+		event = { time = 0.0 particle = "hit_effect_ukn_laser_pd_1" }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+######----------------------------------
+# T2 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "muzzle_entity_ukn_laser_pd_2"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.1 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_laser_pd_2" keep_particle = yes }
+		event = { trigger_once = yes sound = { soundeffect = "point_defense_fire" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_point_defense_fire" } }	
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "hit_entity_ukn_laser_pd_2"
+	cull_radius = 50.0
+	default_state = "idle"
+	state = { name = "idle" 
+		event = { time = 0.0 particle = "hit_effect_ukn_laser_pd_2" }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+######----------------------------------
+# T3 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "muzzle_entity_ukn_laser_pd_3"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.1 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_laser_pd_3" keep_particle = yes }
+		event = { trigger_once = yes sound = { soundeffect = "point_defense_fire" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_point_defense_fire" } }	
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "hit_entity_ukn_laser_pd_3"
+	cull_radius = 50.0
+	default_state = "idle"
+	state = { name = "idle" 
+		event = { time = 0.0 particle = "hit_effect_ukn_laser_pd_3" }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+######----------------------------------
+# T4 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "muzzle_entity_ukn_laser_pd_4"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.1 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_laser_pd_4" keep_particle = yes }
+		event = { trigger_once = yes sound = { soundeffect = "point_defense_fire" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_point_defense_fire" } }	
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "hit_entity_ukn_laser_pd_4"
+	cull_radius = 50.0
+	default_state = "idle"
+	state = { name = "idle" 
+		event = { time = 0.0 particle = "hit_effect_ukn_laser_pd_4" }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+######----------------------------------
+# T5 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "muzzle_entity_ukn_laser_pd_5"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.1 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_laser_pd_5" keep_particle = yes }
+		event = { trigger_once = yes sound = { soundeffect = "point_defense_fire" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_point_defense_fire" } }	
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "hit_entity_ukn_laser_pd_5"
+	cull_radius = 50.0
+	default_state = "idle"
+	state = { name = "idle" 
+		event = { time = 0.0 particle = "hit_effect_ukn_laser_pd_5" }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+######----------------------------------
+# T6 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "muzzle_entity_ukn_laser_pd_6"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.1 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_laser_pd_6" keep_particle = yes }
+		event = { trigger_once = yes sound = { soundeffect = "point_defense_fire" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_point_defense_fire" } }	
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "hit_entity_ukn_laser_pd_6"
+	cull_radius = 50.0
+	default_state = "idle"
+	state = { name = "idle" 
+		event = { time = 0.0 particle = "hit_effect_ukn_laser_pd_6" }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+######----------------------------------
+# T7 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "muzzle_entity_ukn_laser_pd_7"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.1 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_laser_pd_7" keep_particle = yes }
+		event = { trigger_once = yes sound = { soundeffect = "point_defense_fire" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_point_defense_fire" } }	
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "hit_entity_ukn_laser_pd_7"
+	cull_radius = 50.0
+	default_state = "idle"
+	state = { name = "idle" 
+		event = { time = 0.0 particle = "hit_effect_ukn_laser_pd_7" }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+######----------------------------------
+# T8 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "muzzle_entity_ukn_laser_pd_8"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.1 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_laser_pd_8" keep_particle = yes }
+		event = { trigger_once = yes sound = { soundeffect = "point_defense_fire" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_point_defense_fire" } }	
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "hit_entity_ukn_laser_pd_8"
+	cull_radius = 50.0
+	default_state = "idle"
+	state = { name = "idle" 
+		event = { time = 0.0 particle = "hit_effect_ukn_laser_pd_8" }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+######----------------------------------
+# T9 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "muzzle_entity_ukn_laser_pd_9"
+	pdxmesh = "locator_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.1 looping = no
+		event = { time = 0 particle = "muzzle_particle_ukn_laser_pd_9" keep_particle = yes }
+		event = { trigger_once = yes sound = { soundeffect = "point_defense_fire" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_point_defense_fire" } }	
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "hit_entity_ukn_laser_pd_9"
+	cull_radius = 50.0
+	default_state = "idle"
+	state = { name = "idle" 
+		event = { time = 0.0 particle = "hit_effect_ukn_laser_pd_9" }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}

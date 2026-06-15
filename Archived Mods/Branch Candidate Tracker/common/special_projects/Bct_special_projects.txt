@@ -1,0 +1,34 @@
+
+##########################################
+##########################################
+#####                                #####
+#####    Branch Candidate Tracker    #####
+#####                                #####
+#####    special_projects            #####
+#####                                #####
+##########################################
+##########################################
+
+special_project = {
+	key = BctOpenMenu_PROJECT
+	event_chain = BranchCandidateTracker_chain
+	picture = @BctConstMenuPicture
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = planet_event
+	days_to_research = 1
+	location = no
+	
+	on_success = {
+		every_planet = {
+			limit = { has_planet_flag = BctFlagBranchCandidatePlanet@root.owner }
+			remove_planet_flag = BctFlagBranchCandidatePlanet@root.owner
+		}
+		owner = {
+			country_event = { id = BctEvent.1102 }		## Remove All Points of Interest
+			end_event_chain = BranchCandidateTracker_chain
+			country_event = { id = BctEvent.0001 }
+		}
+	}
+}
+

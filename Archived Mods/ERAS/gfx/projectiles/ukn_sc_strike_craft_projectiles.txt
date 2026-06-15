@@ -1,0 +1,746 @@
+#All files in gfx/projectiles are reloadable with the "reload projectiles" console command
+#Filewatcher is also enabled for all files
+
+############################
+### FIGHTER STRIKE CRAFT ###
+############################
+
+######----------------------------------
+# T1 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_strike_craft_fighter_1"
+	color = { 1.0 	0.59 	0.20 	0.2 }
+	hit_entity = "hit_entity_ukn_autocannon_1"
+	shield_hit_entity = "shield_hit_entity_ukn_autocannon_1"
+	muzzle_flash_entity = "muzzle_entity_ukn_autocannon_1"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 5.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/ukn_laser_2_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+######----------------------------------
+# T2 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_strike_craft_fighter_2"
+	color = { 1.0 	0.36 	0.2 	0.2 }
+	hit_entity = "hit_entity_ukn_autocannon_2"
+	shield_hit_entity = "shield_hit_entity_ukn_autocannon_2"
+	muzzle_flash_entity = "muzzle_entity_ukn_autocannon_2"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 5.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/ukn_laser_2_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+######----------------------------------
+# T3 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_strike_craft_fighter_3"
+	color = { 0.02 	1.0 	0.75 	0.2 }
+	hit_entity = "hit_entity_ukn_autocannon_3"
+	shield_hit_entity = "shield_hit_entity_ukn_autocannon_3"
+	muzzle_flash_entity = "muzzle_entity_ukn_autocannon_3"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 5.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/ukn_laser_3_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+######----------------------------------
+# T4 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_strike_craft_fighter_4"
+	color = { 0.46 	0.20 	1.0 	0.2 }
+	hit_entity = "hit_entity_ukn_autocannon_4"
+	shield_hit_entity = "shield_hit_entity_ukn_autocannon_4"
+	muzzle_flash_entity = "muzzle_entity_ukn_autocannon_4"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 5.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/ukn_laser_4_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+######----------------------------------
+# T5 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_strike_craft_fighter_5"
+	color = { 0.75 	0.30 	1.0 	0.2 }
+	hit_entity = "hit_entity_ukn_autocannon_5"
+	shield_hit_entity = "shield_hit_entity_ukn_autocannon_5"
+	muzzle_flash_entity = "muzzle_entity_ukn_autocannon_5"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 5.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/ukn_laser_5_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+######----------------------------------
+# T6 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_strike_craft_fighter_6"
+	color = { 0.4 	0.72 	1.0 	0.2 }
+	hit_entity = "hit_entity_ukn_autocannon_6"
+	shield_hit_entity = "shield_hit_entity_ukn_autocannon_6"
+	muzzle_flash_entity = "muzzle_entity_ukn_autocannon_6"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 5.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/ukn_laser_6_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+######----------------------------------
+# T7 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_strike_craft_fighter_7"
+	color = { 1.0 	0.5 	0.68 	0.2 }
+	hit_entity = "hit_entity_ukn_autocannon_7"
+	shield_hit_entity = "shield_hit_entity_ukn_autocannon_7"
+	muzzle_flash_entity = "muzzle_entity_ukn_autocannon_7"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 5.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/ukn_laser_7_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+######----------------------------------
+# T8 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_strike_craft_fighter_8"
+	color = { 0.5 	0.94 	1.0 	0.2 }
+	hit_entity = "hit_entity_ukn_autocannon_8"
+	shield_hit_entity = "shield_hit_entity_ukn_autocannon_8"
+	muzzle_flash_entity = "muzzle_entity_ukn_autocannon_8"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 5.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/ukn_laser_8_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+###########################
+### BOMBER STRIKE CRAFT ###
+###########################
+
+######----------------------------------
+# T1 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_strike_craft_bomber_1"
+	color = { 1.0 	0.59 	0.20 	0.2 }
+	hit_entity = "hit_entity_ukn_autocannon_1"
+	shield_hit_entity = "shield_hit_entity_ukn_autocannon_1"
+	muzzle_flash_entity = "muzzle_entity_ukn_autocannon_1"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 5.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/ukn_laser_2_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+######----------------------------------
+# T2 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_strike_craft_bomber_2"
+	color = { 1.0 	0.36 	0.2 	0.2 }
+	hit_entity = "hit_entity_ukn_autocannon_2"
+	shield_hit_entity = "shield_hit_entity_ukn_autocannon_2"
+	muzzle_flash_entity = "muzzle_entity_ukn_autocannon_2"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 5.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/ukn_laser_2_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+######----------------------------------
+# T3 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_strike_craft_bomber_3"
+	color = { 0.02 	1.0 	0.75 	0.2 }
+	hit_entity = "hit_entity_ukn_autocannon_3"
+	shield_hit_entity = "shield_hit_entity_ukn_autocannon_3"
+	muzzle_flash_entity = "muzzle_entity_ukn_autocannon_3"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 5.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/ukn_laser_3_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+######----------------------------------
+# T4 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_strike_craft_bomber_4"
+	color = { 0.46 	0.20 	1.0 	0.2 }
+	hit_entity = "hit_entity_ukn_autocannon_4"
+	shield_hit_entity = "shield_hit_entity_ukn_autocannon_4"
+	muzzle_flash_entity = "muzzle_entity_ukn_autocannon_4"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 5.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/ukn_laser_4_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+######----------------------------------
+# T5 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_strike_craft_bomber_5"
+	color = { 0.75 	0.30 	1.0 	0.2 }
+	hit_entity = "hit_entity_ukn_autocannon_5"
+	shield_hit_entity = "shield_hit_entity_ukn_autocannon_5"
+	muzzle_flash_entity = "muzzle_entity_ukn_autocannon_5"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 5.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/ukn_laser_5_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+######----------------------------------
+# T6 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_strike_craft_bomber_6"
+	color = { 0.4 	0.72 	1.0 	0.2 }
+	hit_entity = "hit_entity_ukn_autocannon_6"
+	shield_hit_entity = "shield_hit_entity_ukn_autocannon_6"
+	muzzle_flash_entity = "muzzle_entity_ukn_autocannon_6"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 5.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/ukn_laser_6_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+######----------------------------------
+# T7 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_strike_craft_bomber_7"
+	color = { 1.0 	0.5 	0.68 	0.2 }
+	hit_entity = "hit_entity_ukn_autocannon_7"
+	shield_hit_entity = "shield_hit_entity_ukn_autocannon_7"
+	muzzle_flash_entity = "muzzle_entity_ukn_autocannon_7"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 5.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/ukn_laser_7_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+######----------------------------------
+# T8 #----------------------------------
+######----------------------------------
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "projectile_ukn_strike_craft_bomber_8"
+	color = { 0.5 	0.94 	1.0 	0.2 }
+	hit_entity = "hit_entity_ukn_autocannon_8"
+	shield_hit_entity = "shield_hit_entity_ukn_autocannon_8"
+	muzzle_flash_entity = "muzzle_entity_ukn_autocannon_8"
+	
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 5.5
+	texture_tiling = 10.0
+	
+	
+	hit = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = { 
+			0.0 0.0
+			0.05	0.0
+			0.2 5.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/ukn_laser_8_diffuse.dds"
+	
+	shield_impact = {
+		size = small
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}

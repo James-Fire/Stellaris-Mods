@@ -1,0 +1,29 @@
+
+#############################################
+#############################################
+#####                                   #####
+#####    Branch Candidate Tracker       #####
+#####                                   #####
+#####    Global Constants (Template)    #####
+#####    Template                       #####
+#####                                   #####
+#############################################
+#############################################
+#
+#	Warning!!
+#		ONLY specified value can be inputted. Never input unspecified value, for example, 13 for Minumum Planet Size.
+#		This template will be applied for ONLY NEW GAME, but not saved game.
+#
+
+@BctConstTemplateActivate                    = no		## no: this template will be ignored, yes: this template will be applied,
+
+@BctConstTemplateMarkAlsoNoCommercialPact    = no		## Empire Without Commercial Pact (yes or no)
+@BctConstTemplateMarkFreePlanet              = yes		## Worlds Without Branch (yes or no)
+@BctConstTemplateMarkPlanetWithForeignBranch = no		## Worlds with Branch of Another Empire (yes or no)
+@BctConstTemplatePlayNotificationSound       = no		## Notification Sound at Updated
+
+@BctConstTemplateBranchCandidatePlanetValue  = 0		## Minumum Branch Office Value (0, 5, 10, 15, 20 or 30)
+@BctConstTemplateBranchCandidatePlanetSize   = 0		## Minumum Planet Size (0, 8, 10, 12, 15 or 18)
+@BctConstTemplateBranchCandidateNumPops      = 0		## Minumum Number of Pops (0, 5, 10, 15, 25 or 50)
+
+@BctConstNotificationSound = diplomatic_notification		## Sound Code for 'Notification Sound at Updated'

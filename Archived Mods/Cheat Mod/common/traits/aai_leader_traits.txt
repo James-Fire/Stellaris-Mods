@@ -1,0 +1,113 @@
+leader_trait_aai_inf_admiral = {
+	cost = 0
+	modification = no
+	immortal_leaders = yes
+	icon = "gfx/interface/icons/traits/leader_trait_aai_inf.dds"
+	modifier = {
+		ship_fire_rate_mult = 0.5
+		ship_speed_mult = 0.5
+		ship_weapon_damage = 0.5
+		ship_evasion_mult = 0.5
+        ship_emergency_ftl_mult = -0.5
+		ship_disengage_chance_mult = 0.5
+		ship_sensor_range_add = 3
+		ship_hyperlane_range_add = 5
+		ship_hull_mult = 0.5
+		ship_hull_regen_add_perc = 1.0
+		ship_armor_regen_add_perc = 1.0
+		ship_weapon_range_mult = 0.2
+        ships_upkeep_mult = -0.5
+		damage_vs_country_type_swarm_mult = 0.5
+		damage_vs_country_type_ai_empire_mult = 0.5
+	}
+	leader_trait = yes
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+}
+
+leader_trait_aai_inf_general = {
+    cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_trait_aai_inf.dds"
+	immortal_leaders = yes
+	modifier = {
+		army_morale = 0.5
+		army_morale_damage_mult = 0.5
+		army_damage_mult = 0.5
+		army_disengage_chance_mult = 0.5
+		army_collateral_damage_mult = -0.8
+		armies_upkeep_mult = -0.5
+	}
+	leader_trait = yes
+	leader_class = { general }
+	initial = no
+	randomized = no
+}
+
+leader_trait_aai_inf_scientist = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_trait_aai_inf.dds"
+	immortal_leaders = yes
+	modifier = {
+		all_technology_research_speed = 1.2
+		science_ship_survey_speed = 6.0
+        ship_anomaly_generation_chance_mult = 1.0
+        ship_anomaly_research_speed_mult = 9.0
+		ship_archaeological_site_excavation_speed_mult = 9.0
+		ship_archeaological_site_clues_add = 5
+	}
+	leader_trait = yes
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+	
+	ai_categories = {
+		survey
+		physics
+		society
+		engineering
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_aai_inf_governor = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_trait_aai_inf.dds"
+	immortal_leaders = yes
+	modifier = {
+		starbase_shipyard_build_speed_mult = 0.5
+		starbase_shipyard_build_cost_mult = -0.5
+        planet_stability_add = 200
+		planet_crime_add = -200
+		planet_buildings_cost_mult = -0.5
+		planet_districts_cost_mult = -0.5
+		planet_building_build_speed_mult = 0.5
+		planet_army_build_speed_mult = 0.5
+		armies_cost_mult = -0.5
+		army_defense_damage_mult = 0.5
+        deposit_blockers_cost_mult = -0.5
+		planet_clear_blocker_time_mult = -0.5
+		planet_jobs_produces_mult = 0.5
+	}
+	leader_trait = yes
+	leader_class = { governor }
+	initial = no
+	randomized = no
+}
+
+leader_trait_one_more_second = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_one_more_second.dds"
+	immortal_leaders = yes
+	leader_trait = yes
+	leader_class = { ruler governor scientist general admiral }
+	initial = no
+	randomized = no
+}

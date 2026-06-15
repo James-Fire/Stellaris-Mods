@@ -1,0 +1,629 @@
+green_tiberium_harvester_gestalt = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = tiberium_green_refinery
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		
+	}
+
+         possible_precalc = can_fill_drone_job
+	
+	resources = {
+		category = planet_green_tiberium_harvesters
+		produces = {
+			sr_tiberium_green = 3
+		}
+		upkeep = {
+			alloys = 0.5
+			energy = 1.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_minimal_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		#planet_amenities_no_happiness_add = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_no_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		#planet_amenities_no_happiness_add = -2
+	}
+	
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = tiberium_safe
+			}
+		}
+		biological_pop_happiness = 0.1
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = tiberium_priority_safe
+			}
+		}
+		biological_pop_happiness = 0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_minimal_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		biological_pop_happiness = -0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_no_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		biological_pop_happiness = -0.10
+	}
+	
+	weight = {
+		weight = @complex_drone_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no	
+			NOT = { has_trait = trait_mechanical }	
+		}		
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+           factor = 2
+           OR = {
+               has_trait = trait_robust
+               has_trait = trait_robot_efficient_processors
+           }
+        }
+		modifier = {
+			factor = 1.5
+			has_job = green_tiberium_harvester
+		}		
+	}
+}
+
+blue_tiberium_harvester_gestalt = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = tiberium_blue_refinery
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		
+	}
+
+         possible_precalc = can_fill_drone_job
+	
+	resources = {
+		category = planet_blue_tiberium_harvesters
+		produces = {
+			sr_tiberium_blue = 2
+		}
+		upkeep = {
+			alloys = 0.5
+			energy = 1.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_minimal_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		#planet_amenities_no_happiness_add = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_no_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		#planet_amenities_no_happiness_add = -2
+	}
+	
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = tiberium_safe
+			}
+		}
+		biological_pop_happiness = 0.1
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = tiberium_priority_safe
+			}
+		}
+		biological_pop_happiness = 0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_minimal_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		biological_pop_happiness = -0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_no_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		biological_pop_happiness = -0.10
+	}
+	
+	weight = {
+		weight = @complex_drone_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no	
+			NOT = { has_trait = trait_mechanical }	
+		}		
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+           factor = 2
+           OR = {
+               has_trait = trait_robust
+               has_trait = trait_robot_efficient_processors
+           }
+        }
+		modifier = {
+			factor = 1.5
+			has_job = blue_tiberium_harvester
+		}		
+	}
+}
+
+green_tiberium_refiner_gestalt = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = tiberium_green_refinery
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		
+	}
+
+         possible_precalc = can_fill_drone_job
+	
+	resources = {
+		category = planet_green_tiberium_refiners
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			alloys = 2
+			minerals = 8
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			sr_tiberium_green = 2
+		}
+	}
+	
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = tiberium_safe
+			}
+		}
+		biological_pop_happiness = 0.1
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = tiberium_priority_safe
+			}
+		}
+		biological_pop_happiness = 0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_minimal_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		biological_pop_happiness = -0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_no_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		biological_pop_happiness = -0.10
+	}
+	
+	weight = {
+		weight = @complex_drone_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no	
+			NOT = { has_trait = trait_mechanical }	
+		}		
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+           factor = 2
+           OR = {
+               has_trait = trait_robust
+               has_trait = trait_robot_efficient_processors
+           }
+        }
+		modifier = {
+			factor = 1.5
+			has_job = green_tiberium_refiner
+		}
+		#modifier = {
+		#	factor = 0
+		#	years_passed < 2
+		#}
+	}
+}
+
+blue_tiberium_refiner_gestalt = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = tiberium_blue_refinery
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		
+	}
+
+         possible_precalc = can_fill_drone_job
+	
+	resources = {
+		category = planet_blue_tiberium_refiners
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+			}
+			alloys = 10
+			minerals = 4
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+			}
+			sr_tiberium_blue = 2
+		}
+	}
+	
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = tiberium_safe
+			}
+		}
+		biological_pop_happiness = 0.1
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = tiberium_priority_safe
+			}
+		}
+		biological_pop_happiness = 0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_minimal_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		biological_pop_happiness = -0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_no_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		biological_pop_happiness = -0.10
+	}
+	
+	weight = {
+		weight = @complex_drone_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no	
+			NOT = { has_trait = trait_mechanical }	
+		}		
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+           factor = 2
+           OR = {
+               has_trait = trait_robust
+               has_trait = trait_robot_efficient_processors
+           }
+        }
+		modifier = {
+			factor = 1.5
+			has_job = blue_tiberium_refiner
+		}
+		modifier = {
+			factor = 0
+			years_passed < 2
+		}
+	}
+}
+
+tiberium_researcher_gestalt = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = building_research_lab_1
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		
+	}
+
+         possible_precalc = can_fill_drone_job
+	
+	resources = {
+		category = planet_researchers
+		produces = {
+			physics_research = 6
+			engineering_research = 6
+			society_research = 4
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_machine_empire = yes }
+			}
+			energy = 4
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_hive_empire = yes }
+			}
+			minerals = 6
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_edict = research_subsidies
+				}
+			}
+			energy = 1
+		}
+	}
+	
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = tiberium_safe
+			}
+		}
+		biological_pop_happiness = 0.1
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_policy_flag = tiberium_priority_safe
+			}
+		}
+		biological_pop_happiness = 0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_minimal_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		biological_pop_happiness = -0.05
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			owner = { has_policy_flag = tiberium_no_safe }
+			NOT = {
+				has_trait = trait_mechanical
+				has_trait = trait_machine_unit
+				species = { is_archetype = ROBOT }
+				species = { is_archetype = MACHINE }
+			}
+		}
+		biological_pop_happiness = -0.10
+	}
+	
+	weight = {
+		weight = @complex_drone_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no	
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_living_standard = { type = living_standard_academic_privilege }
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_erudite
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = trait_robot_logic_engines
+				has_trait = trait_intelligent
+			}
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_brainslug
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_natural_engineers
+				has_trait = trait_natural_physicists
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_trait = trait_latent_psionic
+		} 
+		modifier = {
+			factor = 1.5
+			has_trait = trait_psionic
+		} 
+		modifier = {
+			factor = 0.2
+			has_trait = trait_enigmatic_intelligence_failed
+		} 
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_enigmatic_intelligence_poor
+				has_trait = trait_enigmatic_intelligence
+				
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_presapient_natural_intellectuals
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.65
+			OR = {
+				has_trait = trait_presapient_proles	
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_job = tiberium_researcher
+		}		
+	}
+}

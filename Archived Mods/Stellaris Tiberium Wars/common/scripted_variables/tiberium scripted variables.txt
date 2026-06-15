@@ -1,0 +1,20 @@
+@yellow_zone_weight = 1.1 #applied for every 2
+@red_zone_weight = 1.2 #applied for every red zone
+@blue_zone_district_weight = 0.9 #applied for every blue zone district up to 10. Only affects whether it removes blue zones instead of yellow.
+@yellow_zone_liquid = 1 #how much to add for yellow zones
+@red_zone_liquid = 2 #how much to add for red zones
+@blue_field_liquid = 1 #how much to add for blue fields
+@green_glacier_liquid = 1 #how much to add for green glaciers
+@blue_glacier_liquid = 2 #how much to add for blue glaciers
+
+@blue_zone_infest = -1 #How much to take away for blue zones
+@yellow_zone_infest = 1 #how much to add for yellow zones
+@red_zone_infest = 3 #how much to add for red zones
+@green_field_infest = 1 #How much to add for green fields
+@blue_field_infest = 2 #how much to add for blue fields
+@green_glacier_infest = 2 #how much to add for green glaciers
+@blue_glacier_infest = 3 #how much to add for blue glaciers
+@harvester_infest = -1 #how much to take away for each harvester job
+
+@no_sonic_cycles = 3
+@sonic_active_cycles = 2

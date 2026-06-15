@@ -1,0 +1,419 @@
+#TODO ecu and habitat allow multiple???
+
+decision_planet_alloy = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = alloys
+	
+	potential = {
+		NOT = { has_planet_flag = "pab_alloy" }
+		NOT = { has_planet_flag = "pab_consumer" }
+        NOT = { has_planet_flag = "pab_research" }
+        NOT = { has_planet_flag = "pab_refinery" }
+		NOT = { has_planet_flag = "pab_bastion" }
+		NOT = { has_planet_flag = "pab_trade" }
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		exists = owner
+		owner = { is_ai = no }
+		NOT = { is_planet_class = pc_habitat }
+	}
+
+	effect = {
+		custom_tooltip = "Enable alloy focus"
+		hidden_effect = {
+			set_planet_flag = "pab_alloy"
+			set_planet_flag = "pab_focus"
+			add_modifier = {
+				modifier = "pab_alloy"
+				days = -1
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_planet_alloy_remove = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = alloys
+	
+	potential = {
+		has_planet_flag = "pab_alloy" 
+		exists = owner
+		owner = { is_ai = no }
+		NOT = { is_planet_class = pc_habitat }
+	}
+
+	effect = {
+		custom_tooltip = "Disable alloy focus"
+		hidden_effect = {
+			remove_planet_flag = "pab_alloy"
+			if = {
+				limit = { 
+					NOT = { has_planet_flag = "pab_mineral" }
+					NOT = { has_planet_flag = "pab_energy" }
+					NOT = { has_planet_flag = "pab_food" }
+				}
+				remove_planet_flag = "pab_focus"
+			}
+			remove_modifier = "pab_alloy"
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_planet_consumer = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = consumer_goods
+	
+	potential = {
+		NOT = { has_planet_flag = "pab_alloy" }
+		NOT = { has_planet_flag = "pab_consumer" }
+        NOT = { has_planet_flag = "pab_research" }
+        NOT = { has_planet_flag = "pab_refinery" }
+		NOT = { has_planet_flag = "pab_bastion" }
+		NOT = { has_planet_flag = "pab_trade" }
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		exists = owner
+		owner = { 
+			is_ai = no 
+			OR = {
+				is_gestalt = no
+				has_valid_civic = civic_machine_servitor
+			}
+		}
+		NOT = { is_planet_class = pc_habitat }
+	}
+
+	effect = {
+		custom_tooltip = "Enable consumer goods focus"
+		hidden_effect = {
+			set_planet_flag = "pab_consumer"
+			set_planet_flag = "pab_focus"
+			add_modifier = {
+				modifier = "pab_consumer"
+				days = -1
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_planet_consumer_remove = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = consumer_goods
+	
+	potential = {
+		has_planet_flag = "pab_consumer" 
+		exists = owner
+		owner = { is_ai = no }
+		NOT = { is_planet_class = pc_habitat }
+	}
+
+	effect = {
+		custom_tooltip = "Disable consumer goods focus"
+		hidden_effect = {
+			remove_planet_flag = "pab_consumer"
+			if = {
+				limit = { 
+					NOT = { has_planet_flag = "pab_mineral" }
+					NOT = { has_planet_flag = "pab_energy" }
+					NOT = { has_planet_flag = "pab_food" }
+				}
+				remove_planet_flag = "pab_focus"
+			}
+			remove_modifier = "pab_consumer"
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_planet_research = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = research
+	
+	potential = {
+		NOT = { has_planet_flag = "pab_alloy" }
+		NOT = { has_planet_flag = "pab_consumer" }
+        NOT = { has_planet_flag = "pab_research" }
+        NOT = { has_planet_flag = "pab_refinery" }
+		NOT = { has_planet_flag = "pab_bastion" }
+		NOT = { has_planet_flag = "pab_trade" }
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		exists = owner
+		owner = { is_ai = no }
+	}
+
+	effect = {
+		custom_tooltip = "Enable research focus"
+		hidden_effect = {
+			set_planet_flag = "pab_research"
+			set_planet_flag = "pab_focus"
+			add_modifier = {
+				modifier = "pab_research"
+				days = -1
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_planet_research_remove = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = research
+	
+	potential = {
+		has_planet_flag = "pab_research" 
+		exists = owner
+		owner = { is_ai = no }
+		NOT = { is_planet_class = pc_habitat }
+	}
+
+	effect = {
+		custom_tooltip = "Disable research focus"
+		hidden_effect = {
+			remove_planet_flag = "pab_research"
+			if = {
+				limit = { 
+					NOT = { has_planet_flag = "pab_mineral" }
+					NOT = { has_planet_flag = "pab_energy" }
+					NOT = { has_planet_flag = "pab_food" }
+				}
+				remove_planet_flag = "pab_focus"
+			}
+			remove_modifier = "pab_research"
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_planet_refinery = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = refinery
+	
+	potential = {
+		NOT = { has_planet_flag = "pab_alloy" }
+		NOT = { has_planet_flag = "pab_consumer" }
+        NOT = { has_planet_flag = "pab_research" }
+        NOT = { has_planet_flag = "pab_refinery" }
+		NOT = { has_planet_flag = "pab_bastion" }
+		NOT = { has_planet_flag = "pab_trade" }
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		exists = owner
+		owner = { is_ai = no }
+		NOT = { is_planet_class = pc_habitat }
+	}
+
+	effect = {
+		custom_tooltip = "Enable refinery focus"
+		hidden_effect = {
+			set_planet_flag = "pab_refinery"
+			set_planet_flag = "pab_focus"
+			add_modifier = {
+				modifier = "pab_refinery"
+				days = -1
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_planet_refinery_remove = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = refinery
+	
+	potential = {
+		has_planet_flag = "pab_refinery" 
+		exists = owner
+		owner = { is_ai = no }
+		NOT = { is_planet_class = pc_habitat }
+	}
+
+	effect = {
+		custom_tooltip = "Disable refinery focus"
+		hidden_effect = {
+			remove_planet_flag = "pab_refinery"
+			if = {
+				limit = { 
+					NOT = { has_planet_flag = "pab_mineral" }
+					NOT = { has_planet_flag = "pab_energy" }
+					NOT = { has_planet_flag = "pab_food" }
+				}
+				remove_planet_flag = "pab_focus"
+			}
+			remove_modifier = "pab_refinery"
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_planet_bastion = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = bastion
+	
+	potential = {
+		NOT = { has_planet_flag = "pab_alloy" }
+		NOT = { has_planet_flag = "pab_consumer" }
+        NOT = { has_planet_flag = "pab_research" }
+        NOT = { has_planet_flag = "pab_refinery" }
+		NOT = { has_planet_flag = "pab_bastion" }
+		NOT = { has_planet_flag = "pab_trade" }
+		exists = owner
+		owner = { is_ai = no }
+		NOT = { is_planet_class = pc_habitat }
+	}
+
+	effect = {
+		custom_tooltip = "Enable fortress focus"
+		hidden_effect = {
+			set_planet_flag = "pab_bastion"
+			set_planet_flag = "pab_focus"
+			add_modifier = {
+				modifier = "pab_bastion"
+				days = -1
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_planet_bastion_remove = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = bastion
+	
+	potential = {
+		has_planet_flag = "pab_bastion" 
+		exists = owner
+		owner = { is_ai = no }
+		NOT = { is_planet_class = pc_habitat }
+	}
+
+	effect = {
+		custom_tooltip = "Disable fortress focus"
+		hidden_effect = {
+			remove_planet_flag = "pab_bastion"
+			if = {
+				limit = { 
+					NOT = { has_planet_flag = "pab_mineral" }
+					NOT = { has_planet_flag = "pab_energy" }
+					NOT = { has_planet_flag = "pab_food" }
+				}
+				remove_planet_flag = "pab_focus"
+			}
+			remove_modifier = "pab_bastion"
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_planet_trade = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = trade
+	
+	potential = {
+		NOT = { has_planet_flag = "pab_alloy" }
+		NOT = { has_planet_flag = "pab_consumer" }
+        NOT = { has_planet_flag = "pab_research" }
+        NOT = { has_planet_flag = "pab_refinery" }
+		NOT = { has_planet_flag = "pab_bastion" }
+		NOT = { has_planet_flag = "pab_trade" }
+		NOT = { has_modifier = slave_colony }
+		exists = owner
+		owner = { 
+			is_ai = no 
+			is_gestalt = no
+		}
+	}
+
+	effect = {
+		custom_tooltip = "Enable trade focus"
+		hidden_effect = {
+			set_planet_flag = "pab_trade"
+			set_planet_flag = "pab_focus"
+			add_modifier = {
+				modifier = "pab_trade"
+				days = -1
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_planet_trade_remove = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = trade
+	
+	potential = {
+		has_planet_flag = "pab_trade" 
+		exists = owner
+		owner = { is_ai = no }
+		NOT = { is_planet_class = pc_habitat }
+	}
+
+	effect = {
+		custom_tooltip = "Disable trade focus"
+		hidden_effect = {
+			remove_planet_flag = "pab_trade"
+			if = {
+				limit = { 
+					NOT = { has_planet_flag = "pab_mineral" }
+					NOT = { has_planet_flag = "pab_energy" }
+					NOT = { has_planet_flag = "pab_food" }
+				}
+				remove_planet_flag = "pab_focus"
+			}
+			remove_modifier = "pab_trade"
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

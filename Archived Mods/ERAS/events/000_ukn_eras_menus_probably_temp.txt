@@ -1,0 +1,29 @@
+namespace = eras_menu
+
+country_event = { ###Country Terminal
+	id = eras_menu.1
+	title = "eras_menu.1.name"
+	desc = "eras_menu.1.desc"
+	diplomatic = yes
+	custom_gui = "eras_country_window"
+	is_triggered_only = yes
+	
+	picture_event_data = {
+		portrait = ROOT.ruler
+		room = ethic_spaceship_room
+	}
+	
+	immediate = {
+	}
+	
+	# Confirm
+	#option = {
+	#	name = "eras_menu.1.refresh"
+	#	#custom_tooltip = "eras_menu.1.refresh.tooltip"
+	#	custom_gui = "eras_main_menu_confirm"
+	#}
+	
+	after = {
+		#fire_on_action = { on_action = eras_apply_queue }
+	}
+}

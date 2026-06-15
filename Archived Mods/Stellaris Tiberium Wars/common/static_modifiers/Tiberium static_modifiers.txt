@@ -1,0 +1,35 @@
+green_tiberium_deficit = {
+	planet_green_tiberium_harvesters_sr_tiberium_green_produces_add = 0.1
+	planet_green_tiberium_refiners_minerals_produces_mult = -1
+	planet_green_tiberium_refiners_alloys_produces_mult = -1
+	planet_green_tiberium_refining_minerals_produces_mult = -1
+	planet_green_tiberium_refining_alloys_produces_mult = -1
+	planet_green_tiberium_refining_sr_liquid_tiberium_produces_mult = -1
+}
+
+blue_tiberium_deficit = {
+	planet_blue_tiberium_harvesters_sr_tiberium_blue_produces_add = 0.1
+	planet_blue_tiberium_refiners_minerals_produces_mult = -1
+	planet_blue_tiberium_refiners_alloys_produces_mult = -1
+	planet_blue_tiberium_refining_minerals_produces_mult = -1
+	planet_blue_tiberium_refining_alloys_produces_mult = -1
+	planet_blue_tiberium_refining_sr_liquid_tiberium_produces_mult = -1
+}
+
+liquid_tiberium_deficit = {
+	planet_tiberium_harvesters_sr_tiberium_green_produces_add = 0.01
+	tiberium_reactors_energy_produces_mult = -1
+}
+
+tiberium_depleted = {
+	planet_miners_minerals_produces_mult = -1.00
+	district_mining_max = -100
+	planet_jobs_food_produces_mult = -0.25
+	district_farming_max = -10
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_hazardous_weather.dds"
+	icon_frame = 2
+}
+tiberium_infestation_status = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_hazardous_weather.dds"
+}

@@ -1,0 +1,367 @@
+namespace = insurance
+
+@baseinsurance1 = 0
+@baseinsurance2 = 0
+@baseinsurance3 = 0
+@baseinsurance4 = 0
+@baseinsurance5 = 0
+@baseinsurance6 = 0
+@baseinsurance7 = 0
+@baseinsurance8 = 0
+@baseinsurance9 = 0
+@baseinsurance10 = 0
+@baseinsurance11 = 0
+@baseinsurance12 = 0
+@baseinsurance13 = 0
+@baseinsurance14 = 0
+@baseinsurance15 = 0
+@baseinsurance16 = 0
+@baseinsurance17 = 0
+@baseinsurance18 = 0
+@baseinsurance19 = 0
+@baseinsurance20 = 0
+
+#Give insurance payout
+country_event = {
+	id = insurance.1
+	#hide_window = yes
+	
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_edict = edict_insurance
+	}
+	
+	immediate = {
+		add_minerals = @baseinsurance1
+		FROMFROM = {
+			switch = {
+				trigger = is_ship_class
+				
+				corvette = { ROOT = { add_minerals = 100 } }
+				
+				destroyer = { ROOT = { add_minerals = 200 } }
+				
+				cruiser = { ROOT = { add_minerals = 300 } }
+				
+				battleship = { ROOT = { add_minerals = 300 } }
+			}
+			limit = { years_past < 10 }
+			
+			switch = {
+				trigger = is_ship_class
+				
+				add_minerals = @baseinsurance2
+				
+				corvette = { ROOT = { add_minerals = 100 } }
+				
+				destroyer = { ROOT = { add_minerals = 200 } }
+				
+				cruiser = { ROOT = { add_minerals = 300 } }
+				
+				battleship = { ROOT = { add_minerals = 300 } }
+				
+				limit = { years_past > 10 }
+			
+			switch = {
+				trigger = is_ship_class
+				
+				add_minerals = @baseinsurance3
+				
+				corvette = { ROOT = { add_minerals = 100 } }
+				
+				destroyer = { ROOT = { add_minerals = 200 } }
+				
+				cruiser = { ROOT = { add_minerals = 300 } }
+				
+				battleship = { ROOT = { add_minerals = 300 } }
+				
+				limit = { years_past > 15 }
+				
+			switch = {
+				trigger = is_ship_class
+				
+				add_minerals = @baseinsurance4
+				
+				corvette = { ROOT = { add_minerals = 100 } }
+				
+				destroyer = { ROOT = { add_minerals = 200 } }
+				
+				cruiser = { ROOT = { add_minerals = 300 } }
+				
+				battleship = { ROOT = { add_minerals = 300 } }
+				
+				limit = { years_past > 20 }
+			}
+			
+			switch = {
+				trigger = is_ship_class
+				
+				add_minerals = @baseinsurance5
+				
+				corvette = { ROOT = { add_minerals = 100 } }
+				
+				destroyer = { ROOT = { add_minerals = 200 } }
+				
+				cruiser = { ROOT = { add_minerals = 300 } }
+				
+				battleship = { ROOT = { add_minerals = 300 } }
+				
+				limit = { years_past > 25 }
+			}
+			
+			switch = {
+				trigger = is_ship_class
+				
+				add_minerals = @baseinsurance6
+				
+				corvette = { ROOT = { add_minerals = 100 } }
+				
+				destroyer = { ROOT = { add_minerals = 200 } }
+				
+				cruiser = { ROOT = { add_minerals = 300 } }
+				
+				battleship = { ROOT = { add_minerals = 300 } }
+				
+				limit = { years_past > 30 }
+			}
+			
+			switch = {
+				trigger = is_ship_class
+				
+				add_minerals = @baseinsurance7
+				
+				corvette = { ROOT = { add_minerals = 100 } }
+				
+				destroyer = { ROOT = { add_minerals = 200 } }
+				
+				cruiser = { ROOT = { add_minerals = 300 } }
+				
+				battleship = { ROOT = { add_minerals = 300 } }
+				
+				limit = { years_past > 35 }
+			}
+			
+			switch = {
+				trigger = is_ship_class
+				
+				add_minerals = @baseinsurance8
+				
+				corvette = { ROOT = { add_minerals = 100 } }
+				
+				destroyer = { ROOT = { add_minerals = 200 } }
+				
+				cruiser = { ROOT = { add_minerals = 300 } }
+				
+				battleship = { ROOT = { add_minerals = 300 } }
+				
+				limit = { years_past > 40 }
+			}
+			
+			switch = {
+				trigger = is_ship_class
+				
+				add_minerals = @baseinsurance9
+				
+				corvette = { ROOT = { add_minerals = 100 } }
+				
+				destroyer = { ROOT = { add_minerals = 200 } }
+				
+				cruiser = { ROOT = { add_minerals = 300 } }
+				
+				battleship = { ROOT = { add_minerals = 300 } }
+				
+				limit = { years_past > 45 }
+			}
+			
+			switch = {
+				trigger = is_ship_class
+				
+				add_minerals = @baseinsurance10
+				
+				corvette = { ROOT = { add_minerals = 100 } }
+				
+				destroyer = { ROOT = { add_minerals = 200 } }
+				
+				cruiser = { ROOT = { add_minerals = 300 } }
+				
+				battleship = { ROOT = { add_minerals = 300 } }
+				
+				limit = { years_past > 50 }
+			}
+			
+			switch = {
+				trigger = is_ship_class
+				
+				add_minerals = @baseinsurance11
+				
+				corvette = { ROOT = { add_minerals = 100 } }
+				
+				destroyer = { ROOT = { add_minerals = 200 } }
+				
+				cruiser = { ROOT = { add_minerals = 300 } }
+				
+				battleship = { ROOT = { add_minerals = 300 } }
+				
+				limit = { years_past > 55 }
+			}
+			
+			switch = {
+				trigger = is_ship_class
+				
+				add_minerals = @baseinsurance12
+				
+				corvette = { ROOT = { add_minerals = 100 } }
+				
+				destroyer = { ROOT = { add_minerals = 200 } }
+				
+				cruiser = { ROOT = { add_minerals = 300 } }
+				
+				battleship = { ROOT = { add_minerals = 300 } }
+				
+				limit = { years_past > 60 }
+			}
+			
+			switch = {
+				trigger = is_ship_class
+				
+				add_minerals = @baseinsurance13
+				
+				corvette = { ROOT = { add_minerals = 100 } }
+				
+				destroyer = { ROOT = { add_minerals = 200 } }
+				
+				cruiser = { ROOT = { add_minerals = 300 } }
+				
+				battleship = { ROOT = { add_minerals = 300 } }
+				
+				limit = { years_past > 65 }
+			}
+			
+			switch = {
+				trigger = is_ship_class
+				
+				add_minerals = @baseinsurance14
+				
+				corvette = { ROOT = { add_minerals = 100 } }
+				
+				destroyer = { ROOT = { add_minerals = 200 } }
+				
+				cruiser = { ROOT = { add_minerals = 300 } }
+				
+				battleship = { ROOT = { add_minerals = 300 } }
+				
+				limit = { years_past > 70 }
+			}
+			
+			switch = {
+				trigger = is_ship_class
+				
+				add_minerals = @baseinsurance15
+				
+				corvette = { ROOT = { add_minerals = 100 } }
+				
+				destroyer = { ROOT = { add_minerals = 200 } }
+				
+				cruiser = { ROOT = { add_minerals = 300 } }
+				
+				battleship = { ROOT = { add_minerals = 300 } }
+				
+				limit = { years_past > 75 }
+			}
+			
+			switch = {
+				trigger = is_ship_class
+				
+				add_minerals = @baseinsurance16
+				
+				corvette = { ROOT = { add_minerals = 100 } }
+				
+				destroyer = { ROOT = { add_minerals = 200 } }
+				
+				cruiser = { ROOT = { add_minerals = 300 } }
+				
+				battleship = { ROOT = { add_minerals = 300 } }
+				
+				limit = { years_past > 80 }
+			}
+			
+			switch = {
+				trigger = is_ship_class
+				
+				add_minerals = @baseinsurance17
+				
+				corvette = { ROOT = { add_minerals = 100 } }
+				
+				destroyer = { ROOT = { add_minerals = 200 } }
+				
+				cruiser = { ROOT = { add_minerals = 300 } }
+				
+				battleship = { ROOT = { add_minerals = 300 } }
+				
+				limit = { years_past > 85 }
+			}
+			
+			switch = {
+				trigger = is_ship_class
+				
+				add_minerals = @baseinsurance18
+				
+				corvette = { ROOT = { add_minerals = 100 } }
+				
+				destroyer = { ROOT = { add_minerals = 200 } }
+				
+				cruiser = { ROOT = { add_minerals = 300 } }
+				
+				battleship = { ROOT = { add_minerals = 300 } }
+				
+				limit = { years_past > 90 }
+			}
+			
+			switch = {
+				trigger = is_ship_class
+				
+				add_minerals = @baseinsurance19
+				
+				corvette = { ROOT = { add_minerals = 100 } }
+				
+				destroyer = { ROOT = { add_minerals = 200 } }
+				
+				cruiser = { ROOT = { add_minerals = 300 } }
+				
+				battleship = { ROOT = { add_minerals = 300 } }
+				
+				limit = { years_past > 95 }
+			}
+			
+			switch = {
+				trigger = is_ship_class
+				
+				add_minerals = @baseinsurance20
+				
+				corvette = { ROOT = { add_minerals = 100 } }
+				
+				destroyer = { ROOT = { add_minerals = 200 } }
+				
+				cruiser = { ROOT = { add_minerals = 300 } }
+				
+				battleship = { ROOT = { add_minerals = 300 } }
+				
+				limit = { years_past > 100 }
+			}
+		}
+	}
+}
+
+
+#Manage insurance Modifiers
+country_event = {
+	id = insurance.2
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_edict = edict_insurance
+	}
+	immediate = {}
+}

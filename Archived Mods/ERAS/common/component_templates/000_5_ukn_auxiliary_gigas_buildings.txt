@@ -1,0 +1,1140 @@
+#######################################
+##### NORMAL WORLDCRAFT BUILDINGS #####
+#######################################
+
+utility_component_template = {
+	key = "UKN_FORGES_WORLDCRAFT_NORMAL"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_alloy_foundries_worldcraft"
+	icon_frame = 1
+	power = -100
+	size_restriction = { giga_worldcraft_normal }
+	component_set = "UKN_SET_FORGES_WORLDCRAFT_NORMAL"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 750
+		}	
+		produces = { alloys = 45 }
+		upkeep = { 
+			minerals = 60
+			ukn_exotic_particles = 2
+		}
+	}
+
+	modifier = {
+		ship_weapon_damage = @ukn_worldcraft_normal_aux_weapon_damage_5_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_GENERATOR_ARRAY_WORLDCRAFT_NORMAL"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_generator_array_worldcraft"
+	icon_frame = 1
+	power = -1000
+	size_restriction = { giga_worldcraft_normal }
+	component_set = "UKN_SET_GENERATOR_ARRAY_WORLDCRAFT_NORMAL"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 750
+		}	
+		produces = { energy = 115 }
+	}
+
+	modifier = {
+		ship_weapon_damage = @ukn_worldcraft_normal_aux_weapon_damage_5_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_FACTORIES_WORLDCRAFT_NORMAL"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_factories_worldcraft"
+	icon_frame = 1
+	power = -1000
+	size_restriction = { giga_worldcraft_normal }
+	component_set = "UKN_SET_FACTORIES_WORLDCRAFT_NORMAL"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 750
+		}	
+		produces = { consumer_goods = 90 }
+		upkeep = { 
+			minerals = 60
+			rare_crystals = 2
+		}
+	}
+
+	modifier = {
+		ship_weapon_damage = @ukn_worldcraft_normal_aux_weapon_damage_5_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_HYDROPONIC_FARMS_WORLDCRAFT_NORMAL"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_hydroponic_farms_worldcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_worldcraft_normal }
+	component_set = "UKN_SET_HYDROPONIC_FARMS_WORLDCRAFT_NORMAL"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 750
+		}	
+		produces = { food = 90 }
+		upkeep = { energy = 7 }
+	}
+
+	modifier = {
+		ship_weapon_damage = @ukn_worldcraft_normal_aux_weapon_damage_5_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_SCIENCE_LABS_WORLDCRAFT_NORMAL_DEFAULT"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_science_labs_worldcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_worldcraft_normal }
+	component_set = "UKN_SET_SCIENCE_LABS_WORLDCRAFT_NORMAL_DEFAULT"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		produces = {
+			physics_research = 40
+			engineering_research = 40
+			society_research = 40
+		}
+		upkeep = {
+			consumer_goods = 10
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_worldcraft_normal_aux_weapon_damage_5_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_SCIENCE_LABS_WORLDCRAFT_NORMAL_MACHINE"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_science_labs_worldcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_worldcraft_normal }
+	component_set = "UKN_SET_SCIENCE_LABS_WORLDCRAFT_NORMAL_MACHINE"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		produces = {
+			physics_research = 40
+			engineering_research = 40
+			society_research = 40
+		}
+		upkeep = {
+			energy = 20
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_worldcraft_normal_aux_weapon_damage_5_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_SCIENCE_LABS_WORLDCRAFT_NORMAL_HIVE"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_science_labs_worldcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_worldcraft_normal }
+	component_set = "UKN_SET_SCIENCE_LABS_WORLDCRAFT_NORMAL_HIVE"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		produces = {
+			physics_research = 40
+			engineering_research = 40
+			society_research = 40
+		}
+		upkeep = {
+			minerals = 30
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_worldcraft_normal_aux_weapon_damage_5_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_PHYSICS_FACILITY_WORLDCRAFT_NORMAL"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_physics_facility_worldcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_worldcraft_normal }
+	component_set = "UKN_SET_PHYSICS_FACILITY_WORLDCRAFT_NORMAL"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		produces = {
+			physics_research = 120
+		}
+		upkeep = {
+			energy = 15
+			exotic_gases = 1
+			rare_crystals = 1
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_worldcraft_normal_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_SOCIETY_FACILITY_WORLDCRAFT_NORMAL"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_society_facility_worldcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_worldcraft_normal }
+	component_set = "UKN_SET_SOCIETY_FACILITY_WORLDCRAFT_NORMAL"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		produces = {
+			society_research = 120
+		}
+		upkeep = {
+			energy = 15
+			exotic_gases = 2
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_worldcraft_normal_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_ENGINEERING_FACILITY_WORLDCRAFT_NORMAL"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_engineering_facility_worldcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_worldcraft_normal }
+	component_set = "UKN_SET_ENGINEERING_FACILITY_WORLDCRAFT_NORMAL"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		produces = {
+			physics_research = 40
+			engineering_research = 40
+			society_research = 40
+		}
+		upkeep = {
+			energy = 15
+			ukn_exotic_particles = 2
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_worldcraft_normal_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_MUNITIONS_SUPERCOMPUTER_WORLDCRAFT_NORMAL"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_munitions_supercomputer_worldcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_worldcraft_normal }
+	component_set = "UKN_SET_MUNITIONS_SUPERCOMPUTER_WORLDCRAFT_NORMAL"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		upkeep = {
+			alloys = 15
+			ukn_exotic_particles = 1
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_worldcraft_normal_aux_weapon_damage_2_pop
+	}
+}
+
+
+#########################################
+##### ARCOLOGY WORLDCRAFT BUILDINGS #####
+#########################################
+
+utility_component_template = {
+	key = "UKN_FORGES_WORLDCRAFT_ARCOLOGY"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_alloy_foundries_worldcraft"
+	icon_frame = 1
+	power = -100
+	size_restriction = { giga_worldcraft_ecumenopolis giga_worldcraft_machine giga_worldcraft_hive }
+	component_set = "UKN_SET_FORGES_WORLDCRAFT_ARCOLOGY"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 750
+		}	
+		produces = { alloys = 45 }
+		upkeep = { 
+			minerals = 60
+			ukn_exotic_particles = 2
+		}
+	}
+
+	modifier = {
+		ship_weapon_damage = @ukn_worldcraft_arcology_aux_weapon_damage_5_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_GENERATOR_ARRAY_WORLDCRAFT_ARCOLOGY"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_generator_array_worldcraft"
+	icon_frame = 1
+	power = -1000
+	size_restriction = { giga_worldcraft_ecumenopolis giga_worldcraft_machine giga_worldcraft_hive }
+	component_set = "UKN_SET_GENERATOR_ARRAY_WORLDCRAFT_ARCOLOGY"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 750
+		}	
+		produces = { energy = 115 }
+	}
+
+	modifier = {
+		ship_weapon_damage = @ukn_worldcraft_arcology_aux_weapon_damage_5_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_FACTORIES_WORLDCRAFT_ARCOLOGY"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_factories_worldcraft"
+	icon_frame = 1
+	power = -1000
+	size_restriction = { giga_worldcraft_ecumenopolis giga_worldcraft_machine giga_worldcraft_hive }
+	component_set = "UKN_SET_FACTORIES_WORLDCRAFT_ARCOLOGY"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 750
+		}	
+		produces = { consumer_goods = 90 }
+		upkeep = { 
+			minerals = 60
+			rare_crystals = 2
+		}
+	}
+
+	modifier = {
+		ship_weapon_damage = @ukn_worldcraft_arcology_aux_weapon_damage_5_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_HYDROPONIC_FARMS_WORLDCRAFT_ARCOLOGY"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_hydroponic_farms_worldcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_worldcraft_ecumenopolis giga_worldcraft_machine giga_worldcraft_hive }
+	component_set = "UKN_SET_HYDROPONIC_FARMS_WORLDCRAFT_ARCOLOGY"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 750
+		}	
+		produces = { food = 90 }
+		upkeep = { energy = 7 }
+	}
+
+	modifier = {
+		ship_weapon_damage = @ukn_worldcraft_arcology_aux_weapon_damage_5_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_SCIENCE_LABS_WORLDCRAFT_ARCOLOGY_DEFAULT"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_science_labs_worldcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_worldcraft_ecumenopolis }
+	component_set = "UKN_SET_SCIENCE_LABS_WORLDCRAFT_ARCOLOGY_DEFAULT"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		produces = {
+			physics_research = 40
+			engineering_research = 40
+			society_research = 40
+		}
+		upkeep = {
+			consumer_goods = 10
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_worldcraft_normal_aux_weapon_damage_5_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_SCIENCE_LABS_WORLDCRAFT_ARCOLOGY_MACHINE"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_science_labs_worldcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_worldcraft_machine }
+	component_set = "UKN_SET_SCIENCE_LABS_WORLDCRAFT_ARCOLOGY_MACHINE"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		produces = {
+			physics_research = 40
+			engineering_research = 40
+			society_research = 40
+		}
+		upkeep = {
+			energy = 20
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_worldcraft_normal_aux_weapon_damage_5_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_SCIENCE_LABS_WORLDCRAFT_ARCOLOGY_HIVE"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_science_labs_worldcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_worldcraft_hive }
+	component_set = "UKN_SET_SCIENCE_LABS_WORLDCRAFT_ARCOLOGY_HIVE"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		produces = {
+			physics_research = 40
+			engineering_research = 40
+			society_research = 40
+		}
+		upkeep = {
+			minerals = 30
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_worldcraft_normal_aux_weapon_damage_5_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_PHYSICS_FACILITY_WORLDCRAFT_ARCOLOGY"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_physics_facility_worldcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_worldcraft_ecumenopolis giga_worldcraft_machine giga_worldcraft_hive }
+	component_set = "UKN_SET_PHYSICS_FACILITY_WORLDCRAFT_ARCOLOGY"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		produces = {
+			physics_research = 120
+		}
+		upkeep = {
+			energy = 15
+			exotic_gases = 1
+			rare_crystals = 1
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_worldcraft_arcology_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_SOCIETY_FACILITY_WORLDCRAFT_ARCOLOGY"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_society_facility_worldcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_worldcraft_ecumenopolis giga_worldcraft_machine giga_worldcraft_hive }
+	component_set = "UKN_SET_SOCIETY_FACILITY_WORLDCRAFT_ARCOLOGY"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		produces = {
+			society_research = 120
+		}
+		upkeep = {
+			energy = 15
+			exotic_gases = 2
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_worldcraft_arcology_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_ENGINEERING_FACILITY_WORLDCRAFT_ARCOLOGY"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_engineering_facility_worldcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_worldcraft_ecumenopolis giga_worldcraft_machine giga_worldcraft_hive }
+	component_set = "UKN_SET_ENGINEERING_FACILITY_WORLDCRAFT_ARCOLOGY"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		produces = {
+			physics_research = 40
+			engineering_research = 40
+			society_research = 40
+		}
+		upkeep = {
+			energy = 15
+			ukn_exotic_particles = 2
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_worldcraft_arcology_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_MUNITIONS_SUPERCOMPUTER_WORLDCRAFT_ARCOLOGY"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_munitions_supercomputer_worldcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_worldcraft_ecumenopolis giga_worldcraft_machine giga_worldcraft_hive }
+	component_set = "UKN_SET_MUNITIONS_SUPERCOMPUTER_WORLDCRAFT_ARCOLOGY"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		upkeep = {
+			alloys = 15
+			ukn_exotic_particles = 1
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_worldcraft_arcology_aux_weapon_damage_2_pop
+	}
+}
+
+
+#################################
+##### PLANETCRAFT BUILDINGS #####
+#################################
+
+utility_component_template = {
+	key = "UKN_AUTO_FORGES_PLANETCRAFT"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_alloy_foundries_planetcraft"
+	icon_frame = 1
+	power = -100
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	component_set = "UKN_SET_AUTO_FORGES_PLANETCRAFT"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 750
+		}	
+		produces = { alloys = 45 }
+		upkeep = { 
+			minerals = 60
+			ukn_exotic_particles = 2
+		}
+	}
+
+	modifier = {
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_GENERATOR_ARRAY_PLANETCRAFT"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_generator_array_planetcraft"
+	icon_frame = 1
+	power = -1000
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	component_set = "UKN_SET_GENERATOR_ARRAY_PLANETCRAFT"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 750
+		}	
+		produces = { energy = 115 }
+	}
+
+	modifier = {
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_AUTO_FACTORIES_PLANETCRAFT"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_factories_planetcraft"
+	icon_frame = 1
+	power = -1000
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	component_set = "UKN_SET_AUTO_FACTORIES_PLANETCRAFT"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 750
+		}	
+		produces = { consumer_goods = 90 }
+		upkeep = { 
+			minerals = 60
+			rare_crystals = 2
+		}
+	}
+
+	modifier = {
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_AUTO_HYDROPONIC_FARMS_PLANETCRAFT"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_hydroponic_farms_planetcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	component_set = "UKN_SET_AUTO_HYDROPONIC_FARMS_PLANETCRAFT"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 750
+		}	
+		produces = { food = 90 }
+		upkeep = { energy = 7 }
+	}
+
+	modifier = {
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_PHYSICS_FACILITY_PLANETCRAFT"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_physics_facility_planetcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	component_set = "UKN_SET_PHYSICS_FACILITY_PLANETCRAFT"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		upkeep = {
+			alloys = 15
+			ukn_exotic_particles = 1
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_SOCIETY_FACILITY_PLANETCRAFT"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_society_facility_planetcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	component_set = "UKN_SET_SOCIETY_FACILITY_PLANETCRAFT"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		upkeep = {
+			alloys = 15
+			ukn_exotic_particles = 1
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_ENGINEERING_FACILITY_PLANETCRAFT"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_engineering_facility_planetcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	component_set = "UKN_SET_ENGINEERING_FACILITY_PLANETCRAFT"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		upkeep = {
+			alloys = 15
+			ukn_exotic_particles = 1
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_MUNITIONS_SUPERCOMPUTER_PLANETCRAFT"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_munitions_supercomputer_planetcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_planet_behemoth giga_planet_behemoth_fe }
+	component_set = "UKN_SET_MUNITIONS_SUPERCOMPUTER_PLANETCRAFT"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		upkeep = {
+			alloys = 15
+			ukn_exotic_particles = 1
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_AUXILIARY_SHIPYARD_PLANETCRAFT"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_auxiliary_shipyard_planetcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_planetcraft }
+	component_set = "UKN_SET_AUXILIARY_SHIPYARD_PLANETCRAFT"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		upkeep = {
+			alloys = 15
+			ukn_exotic_particles = 1
+		}
+	}
+
+	modifier = {
+		starbase_shipyard_capacity_add = 1
+		ship_weapon_damage = @ukn_planetcraft_aux_weapon_damage_2_pop
+	}
+}
+
+
+#################################
+##### SYSTEMCRAFT BUILDINGS #####
+#################################
+
+utility_component_template = {
+	key = "UKN_AUTO_FORGES_SYSTEMCRAFT"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_alloy_foundries_systemcraft"
+	icon_frame = 1
+	power = -100
+	size_restriction = { giga_systemcraft }
+	component_set = "UKN_SET_AUTO_FORGES_SYSTEMCRAFT"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 750
+		}	
+		produces = { alloys = 45 }
+		upkeep = { 
+			minerals = 60
+			ukn_exotic_particles = 2
+		}
+	}
+
+	modifier = {
+		ship_weapon_damage = @ukn_systemcraft_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_DYSON_CONDUIT_SYSTEMCRAFT"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_dyson_conduit_systemcraft"
+	icon_frame = 1
+	power = -1000
+	size_restriction = { giga_systemcraft }
+	component_set = "UKN_SET_DYSON_CONDUIT_SYSTEMCRAFT"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 750
+		}	
+		produces = { energy = 115 }
+	}
+
+	modifier = {
+		ship_weapon_damage = @ukn_systemcraft_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_AUTO_FACTORIES_SYSTEMCRAFT"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_factories_systemcraft"
+	icon_frame = 1
+	power = -1000
+	size_restriction = { giga_systemcraft }
+	component_set = "UKN_SET_AUTO_FACTORIES_SYSTEMCRAFT"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 750
+		}	
+		produces = { consumer_goods = 90 }
+		upkeep = { 
+			minerals = 60
+			rare_crystals = 2
+		}
+	}
+
+	modifier = {
+		ship_weapon_damage = @ukn_systemcraft_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_AUTO_CONTINENTAL_FARMS_SYSTEMCRAFT"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_continental_farms_systemcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_systemcraft }
+	component_set = "UKN_SET_AUTO_CONTINENTAL_FARMS_SYSTEMCRAFT"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 750
+		}	
+		produces = { food = 90 }
+		upkeep = { energy = 7 }
+	}
+
+	modifier = {
+		ship_weapon_damage = @ukn_systemcraft_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_PHYSICS_FACILITY_SYSTEMCRAFT"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_physics_facility_systemcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_systemcraft }
+	component_set = "UKN_SET_PHYSICS_FACILITY_SYSTEMCRAFT"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		upkeep = {
+			alloys = 15
+			ukn_exotic_particles = 1
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_systemcraft_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_SOCIETY_FACILITY_SYSTEMCRAFT"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_society_facility_systemcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_systemcraft }
+	component_set = "UKN_SET_SOCIETY_FACILITY_SYSTEMCRAFT"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		upkeep = {
+			alloys = 15
+			ukn_exotic_particles = 1
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_systemcraft_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_ENGINEERING_FACILITY_SYSTEMCRAFT"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_engineering_facility_systemcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_systemcraft }
+	component_set = "UKN_SET_ENGINEERING_FACILITY_SYSTEMCRAFT"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		upkeep = {
+			alloys = 15
+			ukn_exotic_particles = 1
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_systemcraft_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_MUNITIONS_SUPERCOMPUTER_SYSTEMCRAFT"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_munitions_supercomputer_systemcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_systemcraft }
+	component_set = "UKN_SET_MUNITIONS_SUPERCOMPUTER_SYSTEMCRAFT"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		upkeep = {
+			alloys = 15
+			ukn_exotic_particles = 1
+		}
+	}
+
+	modifier = {
+		ship_orbital_bombardment_mult = 0.15
+		ship_fire_rate_mult = 0.01
+		ship_weapon_damage = @ukn_systemcraft_aux_weapon_damage_2_pop
+	}
+}
+
+utility_component_template = {
+	key = "UKN_AUXILIARY_SHIPYARD_SYSTEMCRAFT"
+	size = aux
+	icon = "GFX_ship_part_ukn_building_auxiliary_shipyard_systemcraft"
+	icon_frame = 1
+	power = -750
+	size_restriction = { giga_systemcraft }
+	component_set = "UKN_SET_AUXILIARY_SHIPYARD_SYSTEMCRAFT"
+	prerequisites = { "giga_tech_war_system_6" }
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = 1000
+		}	
+		upkeep = {
+			alloys = 15
+			ukn_exotic_particles = 1
+		}
+	}
+
+	modifier = {
+		starbase_shipyard_capacity_add = 1
+		ship_weapon_damage = @ukn_systemcraft_aux_weapon_damage_2_pop
+	}
+}

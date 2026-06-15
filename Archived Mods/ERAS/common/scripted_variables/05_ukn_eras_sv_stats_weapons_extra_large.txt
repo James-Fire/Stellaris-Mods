@@ -1,0 +1,754 @@
+##################################
+##### ARCED MACRODISRUPTORS ######
+##################################
+
+@ukn_arc_emitter_5_hull_damage_mult = 1.00
+@ukn_arc_emitter_6_hull_damage_mult = 1.10
+@ukn_arc_emitter_7_hull_damage_mult = 1.10
+@ukn_arc_emitter_8_hull_damage_mult = 1.10
+@ukn_arc_emitter_9_hull_damage_mult = 1.25
+@ukn_arc_emitter_10_hull_damage_mult = 1.25
+@ukn_arc_emitter_planck_hull_damage_mult = 1.10
+
+@ukn_arc_emitter_5_armor_penetration_mult = 1.00
+@ukn_arc_emitter_6_armor_penetration_mult = 1.00
+@ukn_arc_emitter_7_armor_penetration_mult = 1.00
+@ukn_arc_emitter_8_armor_penetration_mult = 1.00
+@ukn_arc_emitter_9_armor_penetration_mult = 1.00
+@ukn_arc_emitter_10_armor_penetration_mult = 1.00
+@ukn_arc_emitter_planck_armor_penetration_mult = 1.00
+
+@ukn_arc_emitter_5_shield_penetration_mult = 1.00
+@ukn_arc_emitter_6_shield_penetration_mult = 1.00
+@ukn_arc_emitter_7_shield_penetration_mult = 1.00
+@ukn_arc_emitter_8_shield_penetration_mult = 1.00
+@ukn_arc_emitter_9_shield_penetration_mult = 1.00
+@ukn_arc_emitter_10_shield_penetration_mult = 1.00
+@ukn_arc_emitter_planck_shield_penetration_mult = 1.00
+
+@ukn_arc_emitter_5_armor_damage_mult = 1.00
+@ukn_arc_emitter_6_armor_damage_mult = 1.00
+@ukn_arc_emitter_7_armor_damage_mult = 1.00
+@ukn_arc_emitter_8_armor_damage_mult = 1.00
+@ukn_arc_emitter_9_armor_damage_mult = 1.00
+@ukn_arc_emitter_10_armor_damage_mult = 1.00s
+@ukn_arc_emitter_planck_armor_damage_mult = 1.00
+
+@ukn_arc_emitter_5_shield_damage_mult = 1.00
+@ukn_arc_emitter_6_shield_damage_mult = 1.00
+@ukn_arc_emitter_7_shield_damage_mult = 1.00
+@ukn_arc_emitter_8_shield_damage_mult = 1.00
+@ukn_arc_emitter_9_shield_damage_mult = 1.00
+@ukn_arc_emitter_10_shield_damage_mult = 1.00
+@ukn_arc_emitter_planck_shield_damage_mult = 1.00
+#---
+
+@ukn_arc_emitter_5_accuracy = 1.00
+@ukn_arc_emitter_6_accuracy = 1.00
+@ukn_arc_emitter_7_accuracy = 1.00
+@ukn_arc_emitter_8_accuracy = 1.00
+@ukn_arc_emitter_9_accuracy = 1.00
+@ukn_arc_emitter_10_accuracy = 1.00
+@ukn_arc_emitter_planck_accuracy = 1.00
+#---
+
+@ukn_arc_emitter_5_firing_arc = 35.0
+@ukn_arc_emitter_6_firing_arc = 35.0
+@ukn_arc_emitter_7_firing_arc = 35.0
+@ukn_arc_emitter_8_firing_arc = 35.0
+@ukn_arc_emitter_9_firing_arc = 35.0
+@ukn_arc_emitter_10_firing_arc = 35.0
+@ukn_arc_emitter_planck_firing_arc = 35.0
+
+@ukn_arc_emitter_5_min_range = 10
+@ukn_arc_emitter_6_min_range = 10
+@ukn_arc_emitter_7_min_range = 10
+@ukn_arc_emitter_8_min_range = 10
+@ukn_arc_emitter_9_min_range = 10
+@ukn_arc_emitter_10_min_range = 10
+@ukn_arc_emitter_planck_min_range = 10
+
+
+# XL (Only Slot) #---------------------------
+
+@ukn_arc_emitter_5_power = -192 
+@ukn_arc_emitter_6_power = -259 
+@ukn_arc_emitter_7_power = -363 
+@ukn_arc_emitter_8_power = -527 
+@ukn_arc_emitter_9_power = -1146 
+@ukn_arc_emitter_10_power = -1776 
+@ukn_arc_emitter_planck_power = -764 
+#---
+
+@ukn_arc_emitter_5_dmg_min = 1
+@ukn_arc_emitter_6_dmg_min = 1
+@ukn_arc_emitter_7_dmg_min = 1
+@ukn_arc_emitter_8_dmg_min = 1
+@ukn_arc_emitter_9_dmg_min = 1
+@ukn_arc_emitter_10_dmg_min = 1
+@ukn_arc_emitter_planck_dmg_min = 1
+
+@ukn_arc_emitter_5_dmg_max = 981 
+@ukn_arc_emitter_6_dmg_max = 1324 
+@ukn_arc_emitter_7_dmg_max = 1854 
+@ukn_arc_emitter_8_dmg_max = 2688 
+@ukn_arc_emitter_9_dmg_max = 5846 
+@ukn_arc_emitter_10_dmg_max = 9062 
+@ukn_arc_emitter_planck_dmg_max = 3898 
+#---
+
+@ukn_arc_emitter_5_windup_min = 1
+@ukn_arc_emitter_6_windup_min = 1
+@ukn_arc_emitter_7_windup_min = 1
+@ukn_arc_emitter_8_windup_min = 1
+@ukn_arc_emitter_9_windup_min = 1
+@ukn_arc_emitter_10_windup_min = 1
+@ukn_arc_emitter_planck_windup_min = 1
+
+@ukn_arc_emitter_5_windup_max = 19
+@ukn_arc_emitter_6_windup_max = 19
+@ukn_arc_emitter_7_windup_max = 19
+@ukn_arc_emitter_8_windup_max = 19
+@ukn_arc_emitter_9_windup_max = 19
+@ukn_arc_emitter_10_windup_max = 19
+@ukn_arc_emitter_planck_windup_max = 19
+#---
+
+@ukn_arc_emitter_5_total_fire_time = 71
+@ukn_arc_emitter_6_total_fire_time = 71
+@ukn_arc_emitter_7_total_fire_time = 71
+@ukn_arc_emitter_8_total_fire_time = 71
+@ukn_arc_emitter_9_total_fire_time = 71
+@ukn_arc_emitter_10_total_fire_time = 71
+@ukn_arc_emitter_planck_total_fire_time = 71
+#---
+
+@ukn_arc_emitter_5_range = 150
+@ukn_arc_emitter_6_range = 165
+@ukn_arc_emitter_7_range = 165
+@ukn_arc_emitter_8_range = 165
+@ukn_arc_emitter_9_range = 195
+@ukn_arc_emitter_10_range = 195
+@ukn_arc_emitter_planck_range = 165
+#---
+
+@ukn_arc_emitter_5_tracking = 0.00
+@ukn_arc_emitter_6_tracking = 0.00
+@ukn_arc_emitter_7_tracking = 0.00
+@ukn_arc_emitter_8_tracking = 0.00
+@ukn_arc_emitter_9_tracking = 0.00
+@ukn_arc_emitter_10_tracking = 0.00
+@ukn_arc_emitter_planck_tracking = 0.00
+
+
+
+#################################
+##### SUPERBEAM PROJECTORS ######
+#################################
+
+@ukn_energy_lance_5_hull_damage_mult = 1.50
+@ukn_energy_lance_6_hull_damage_mult = 1.65
+@ukn_energy_lance_7_hull_damage_mult = 1.65
+@ukn_energy_lance_8_hull_damage_mult = 1.65
+@ukn_energy_lance_9_hull_damage_mult = 1.90
+@ukn_energy_lance_10_hull_damage_mult = 1.90
+@ukn_energy_lance_planck_hull_damage_mult = 1.65
+
+@ukn_energy_lance_5_armor_penetration_mult = 0.00
+@ukn_energy_lance_6_armor_penetration_mult = 0.00
+@ukn_energy_lance_7_armor_penetration_mult = 0.00
+@ukn_energy_lance_8_armor_penetration_mult = 0.00
+@ukn_energy_lance_9_armor_penetration_mult = 0.00
+@ukn_energy_lance_10_armor_penetration_mult = 0.00
+@ukn_energy_lance_planck_armor_penetration_mult = 0.00
+
+@ukn_energy_lance_5_shield_penetration_mult = 0.00
+@ukn_energy_lance_6_shield_penetration_mult = 0.00
+@ukn_energy_lance_7_shield_penetration_mult = 0.00
+@ukn_energy_lance_8_shield_penetration_mult = 0.00
+@ukn_energy_lance_9_shield_penetration_mult = 0.00
+@ukn_energy_lance_10_shield_penetration_mult = 0.00
+@ukn_energy_lance_planck_shield_penetration_mult = 0.00
+
+@ukn_energy_lance_5_armor_damage_mult = 1.50
+@ukn_energy_lance_6_armor_damage_mult = 1.65
+@ukn_energy_lance_7_armor_damage_mult = 1.65
+@ukn_energy_lance_8_armor_damage_mult = 1.65
+@ukn_energy_lance_9_armor_damage_mult = 1.90
+@ukn_energy_lance_10_armor_damage_mult = 1.90
+@ukn_energy_lance_planck_armor_damage_mult = 1.65
+
+@ukn_energy_lance_5_shield_damage_mult = 0.75
+@ukn_energy_lance_6_shield_damage_mult = 0.85
+@ukn_energy_lance_7_shield_damage_mult = 0.85
+@ukn_energy_lance_8_shield_damage_mult = 0.85
+@ukn_energy_lance_9_shield_damage_mult = 0.95
+@ukn_energy_lance_10_shield_damage_mult = 0.95
+@ukn_energy_lance_planck_shield_damage_mult = 0.85
+#---
+
+@ukn_energy_lance_5_accuracy = 0.85
+@ukn_energy_lance_6_accuracy = 0.85
+@ukn_energy_lance_7_accuracy = 0.85
+@ukn_energy_lance_8_accuracy = 0.85
+@ukn_energy_lance_9_accuracy = 0.85
+@ukn_energy_lance_10_accuracy = 0.85
+@ukn_energy_lance_planck_accuracy = 0.85
+#---
+
+@ukn_energy_lance_5_firing_arc = 25.0
+@ukn_energy_lance_6_firing_arc = 25.0
+@ukn_energy_lance_7_firing_arc = 25.0
+@ukn_energy_lance_8_firing_arc = 25.0
+@ukn_energy_lance_9_firing_arc = 25.0
+@ukn_energy_lance_10_firing_arc = 25.0
+@ukn_energy_lance_planck_firing_arc = 25.0
+
+@ukn_energy_lance_5_min_range = 10
+@ukn_energy_lance_6_min_range = 10
+@ukn_energy_lance_7_min_range = 10
+@ukn_energy_lance_8_min_range = 10
+@ukn_energy_lance_9_min_range = 10
+@ukn_energy_lance_10_min_range = 10
+@ukn_energy_lance_planck_min_range = 10
+
+
+# XL (Only Slot) #---------------------------
+
+@ukn_energy_lance_5_power = -192 
+@ukn_energy_lance_6_power = -259 
+@ukn_energy_lance_7_power = -363 
+@ukn_energy_lance_8_power = -527 
+@ukn_energy_lance_9_power = -1146 
+@ukn_energy_lance_10_power = -1776 
+@ukn_energy_lance_planck_power = -764 
+#---
+
+@ukn_energy_lance_5_dmg_min = 462 
+@ukn_energy_lance_6_dmg_min = 623 
+@ukn_energy_lance_7_dmg_min = 872 
+@ukn_energy_lance_8_dmg_min = 1265 
+@ukn_energy_lance_9_dmg_min = 2752 
+@ukn_energy_lance_10_dmg_min = 4265 
+@ukn_energy_lance_planck_dmg_min = 1834 
+
+@ukn_energy_lance_5_dmg_max = 1154 
+@ukn_energy_lance_6_dmg_max = 1558 
+@ukn_energy_lance_7_dmg_max = 2181 
+@ukn_energy_lance_8_dmg_max = 3162 
+@ukn_energy_lance_9_dmg_max = 6878 
+@ukn_energy_lance_10_dmg_max = 10661 
+@ukn_energy_lance_planck_dmg_max = 4585 
+#---
+
+@ukn_energy_lance_5_windup_min = 1
+@ukn_energy_lance_6_windup_min = 1
+@ukn_energy_lance_7_windup_min = 1
+@ukn_energy_lance_8_windup_min = 1
+@ukn_energy_lance_9_windup_min = 1
+@ukn_energy_lance_10_windup_min = 1
+@ukn_energy_lance_planck_windup_min = 1
+
+@ukn_energy_lance_5_windup_max = 19
+@ukn_energy_lance_6_windup_max = 19
+@ukn_energy_lance_7_windup_max = 19
+@ukn_energy_lance_8_windup_max = 19
+@ukn_energy_lance_9_windup_max = 19
+@ukn_energy_lance_10_windup_max = 19
+@ukn_energy_lance_planck_windup_max = 19
+#---
+
+@ukn_energy_lance_5_total_fire_time = 50
+@ukn_energy_lance_6_total_fire_time = 50
+@ukn_energy_lance_7_total_fire_time = 50
+@ukn_energy_lance_8_total_fire_time = 50
+@ukn_energy_lance_9_total_fire_time = 50
+@ukn_energy_lance_10_total_fire_time = 50
+@ukn_energy_lance_planck_total_fire_time = 50
+#---
+
+@ukn_energy_lance_5_range = 150
+@ukn_energy_lance_6_range = 165
+@ukn_energy_lance_7_range = 165
+@ukn_energy_lance_8_range = 165
+@ukn_energy_lance_9_range = 195
+@ukn_energy_lance_10_range = 195
+@ukn_energy_lance_planck_range = 165
+#---
+
+@ukn_energy_lance_5_tracking = 0.00
+@ukn_energy_lance_6_tracking = 0.00
+@ukn_energy_lance_7_tracking = 0.00
+@ukn_energy_lance_8_tracking = 0.00
+@ukn_energy_lance_9_tracking = 0.00
+@ukn_energy_lance_10_tracking = 0.00
+@ukn_energy_lance_planck_tracking = 0.00
+
+
+
+##########################
+##### PLASMA LANCES ######
+##########################
+
+@ukn_plasma_lance_5_hull_damage_mult = 1.25
+@ukn_plasma_lance_6_hull_damage_mult = 1.35
+@ukn_plasma_lance_7_hull_damage_mult = 1.35
+@ukn_plasma_lance_8_hull_damage_mult = 1.35
+@ukn_plasma_lance_9_hull_damage_mult = 1.55
+@ukn_plasma_lance_10_hull_damage_mult = 1.55
+@ukn_plasma_lance_planck_hull_damage_mult = 1.35
+
+@ukn_plasma_lance_5_armor_penetration_mult = 0.00
+@ukn_plasma_lance_6_armor_penetration_mult = 0.00
+@ukn_plasma_lance_7_armor_penetration_mult = 0.00
+@ukn_plasma_lance_8_armor_penetration_mult = 0.00
+@ukn_plasma_lance_9_armor_penetration_mult = 0.00
+@ukn_plasma_lance_10_armor_penetration_mult = 0.00
+@ukn_plasma_lance_planck_armor_penetration_mult = 0.00
+
+@ukn_plasma_lance_5_shield_penetration_mult = 0.00
+@ukn_plasma_lance_6_shield_penetration_mult = 0.00
+@ukn_plasma_lance_7_shield_penetration_mult = 0.00
+@ukn_plasma_lance_8_shield_penetration_mult = 0.00
+@ukn_plasma_lance_9_shield_penetration_mult = 0.00
+@ukn_plasma_lance_10_shield_penetration_mult = 0.00
+@ukn_plasma_lance_planck_shield_penetration_mult = 0.00
+
+@ukn_plasma_lance_5_armor_damage_mult = 2.00
+@ukn_plasma_lance_6_armor_damage_mult = 2.20
+@ukn_plasma_lance_7_armor_damage_mult = 2.20
+@ukn_plasma_lance_8_armor_damage_mult = 2.20
+@ukn_plasma_lance_9_armor_damage_mult = 2.50
+@ukn_plasma_lance_10_armor_damage_mult = 2.50
+@ukn_plasma_lance_planck_armor_damage_mult = 2.20
+
+@ukn_plasma_lance_5_shield_damage_mult = 0.50
+@ukn_plasma_lance_6_shield_damage_mult = 0.55
+@ukn_plasma_lance_7_shield_damage_mult = 0.55
+@ukn_plasma_lance_8_shield_damage_mult = 0.55
+@ukn_plasma_lance_9_shield_damage_mult = 0.65
+@ukn_plasma_lance_10_shield_damage_mult = 0.65
+@ukn_plasma_lance_planck_shield_damage_mult = 0.55
+#---
+
+@ukn_plasma_lance_5_accuracy = 0.80
+@ukn_plasma_lance_6_accuracy = 0.80
+@ukn_plasma_lance_7_accuracy = 0.80
+@ukn_plasma_lance_8_accuracy = 0.80
+@ukn_plasma_lance_9_accuracy = 0.80
+@ukn_plasma_lance_10_accuracy = 0.80
+@ukn_plasma_lance_planck_accuracy = 0.80
+#---
+
+@ukn_plasma_lance_5_firing_arc = 25.0
+@ukn_plasma_lance_6_firing_arc = 25.0
+@ukn_plasma_lance_7_firing_arc = 25.0
+@ukn_plasma_lance_8_firing_arc = 25.0
+@ukn_plasma_lance_9_firing_arc = 25.0
+@ukn_plasma_lance_10_firing_arc = 25.0
+@ukn_plasma_lance_planck_firing_arc = 25.0
+
+@ukn_plasma_lance_5_min_range = 10
+@ukn_plasma_lance_6_min_range = 10
+@ukn_plasma_lance_7_min_range = 10
+@ukn_plasma_lance_8_min_range = 10
+@ukn_plasma_lance_9_min_range = 10
+@ukn_plasma_lance_10_min_range = 10
+@ukn_plasma_lance_planck_min_range = 10
+
+
+# XL (Only Slot) #---------------------------
+
+@ukn_plasma_lance_5_power = -192
+@ukn_plasma_lance_6_power = -259
+@ukn_plasma_lance_7_power = -363
+@ukn_plasma_lance_8_power = -527
+@ukn_plasma_lance_9_power = -1146
+@ukn_plasma_lance_10_power = -1776
+@ukn_plasma_lance_planck_power = -764
+#---
+
+@ukn_plasma_lance_5_dmg_min = 2031
+@ukn_plasma_lance_6_dmg_min = 2742
+@ukn_plasma_lance_7_dmg_min = 3839
+@ukn_plasma_lance_8_dmg_min = 5566
+@ukn_plasma_lance_9_dmg_min = 12107
+@ukn_plasma_lance_10_dmg_min = 18765
+@ukn_plasma_lance_planck_dmg_min = 8071
+
+@ukn_plasma_lance_5_dmg_max = 5077
+@ukn_plasma_lance_6_dmg_max = 6854
+@ukn_plasma_lance_7_dmg_max = 9596
+@ukn_plasma_lance_8_dmg_max = 13914
+@ukn_plasma_lance_9_dmg_max = 30264
+@ukn_plasma_lance_10_dmg_max = 46909
+@ukn_plasma_lance_planck_dmg_max = 20176
+#---
+
+@ukn_plasma_lance_5_windup_min = 3
+@ukn_plasma_lance_6_windup_min = 3
+@ukn_plasma_lance_7_windup_min = 3
+@ukn_plasma_lance_8_windup_min = 3
+@ukn_plasma_lance_9_windup_min = 3
+@ukn_plasma_lance_10_windup_min = 3
+@ukn_plasma_lance_planck_windup_min = 3
+
+@ukn_plasma_lance_5_windup_max = 25
+@ukn_plasma_lance_6_windup_max = 25
+@ukn_plasma_lance_7_windup_max = 25
+@ukn_plasma_lance_8_windup_max = 25
+@ukn_plasma_lance_9_windup_max = 25
+@ukn_plasma_lance_10_windup_max = 25
+@ukn_plasma_lance_planck_windup_max = 25
+#---
+
+@ukn_plasma_lance_5_total_fire_time = 210
+@ukn_plasma_lance_6_total_fire_time = 210
+@ukn_plasma_lance_7_total_fire_time = 210
+@ukn_plasma_lance_8_total_fire_time = 210
+@ukn_plasma_lance_9_total_fire_time = 210
+@ukn_plasma_lance_10_total_fire_time = 210
+@ukn_plasma_lance_planck_total_fire_time = 210
+#---
+
+@ukn_plasma_lance_5_range = 120
+@ukn_plasma_lance_6_range = 135
+@ukn_plasma_lance_7_range = 135
+@ukn_plasma_lance_8_range = 135
+@ukn_plasma_lance_9_range = 155
+@ukn_plasma_lance_10_range = 155
+@ukn_plasma_lance_planck_range = 135
+#---
+
+@ukn_plasma_lance_5_tracking = 0.00
+@ukn_plasma_lance_6_tracking = 0.00
+@ukn_plasma_lance_7_tracking = 0.00
+@ukn_plasma_lance_8_tracking = 0.00
+@ukn_plasma_lance_9_tracking = 0.00
+@ukn_plasma_lance_10_tracking = 0.00
+@ukn_plasma_lance_planck_tracking = 0.00
+
+
+
+#############################
+##### STELLAR MISSILES ######
+#############################
+#---
+
+@ukn_stellar_missile_5_hull_damage_mult = 1.25
+@ukn_stellar_missile_6_hull_damage_mult = 1.35
+@ukn_stellar_missile_7_hull_damage_mult = 1.35
+@ukn_stellar_missile_8_hull_damage_mult = 1.35
+@ukn_stellar_missile_9_hull_damage_mult = 1.55
+@ukn_stellar_missile_10_hull_damage_mult = 1.55
+@ukn_stellar_missile_planck_hull_damage_mult = 1.35
+
+@ukn_stellar_missile_5_armor_penetration_mult = 0.00
+@ukn_stellar_missile_6_armor_penetration_mult = 0.00
+@ukn_stellar_missile_7_armor_penetration_mult = 0.00
+@ukn_stellar_missile_8_armor_penetration_mult = 0.00
+@ukn_stellar_missile_9_armor_penetration_mult = 0.00
+@ukn_stellar_missile_10_armor_penetration_mult = 0.00
+@ukn_stellar_missile_planck_armor_penetration_mult = 0.00
+
+@ukn_stellar_missile_5_shield_penetration_mult = 1.00
+@ukn_stellar_missile_6_shield_penetration_mult = 1.00
+@ukn_stellar_missile_7_shield_penetration_mult = 1.00
+@ukn_stellar_missile_8_shield_penetration_mult = 1.00
+@ukn_stellar_missile_9_shield_penetration_mult = 1.00
+@ukn_stellar_missile_10_shield_penetration_mult = 1.00
+@ukn_stellar_missile_planck_shield_penetration_mult = 1.00
+
+@ukn_stellar_missile_5_armor_damage_mult = 1.25
+@ukn_stellar_missile_6_armor_damage_mult = 1.35
+@ukn_stellar_missile_7_armor_damage_mult = 1.35
+@ukn_stellar_missile_8_armor_damage_mult = 1.35
+@ukn_stellar_missile_9_armor_damage_mult = 1.55
+@ukn_stellar_missile_10_armor_damage_mult = 1.55
+@ukn_stellar_missile_planck_armor_damage_mult = 1.35
+
+@ukn_stellar_missile_5_shield_damage_mult = 1.00
+@ukn_stellar_missile_6_shield_damage_mult = 1.00
+@ukn_stellar_missile_7_shield_damage_mult = 1.00
+@ukn_stellar_missile_8_shield_damage_mult = 1.00
+@ukn_stellar_missile_9_shield_damage_mult = 1.00
+@ukn_stellar_missile_10_shield_damage_mult = 1.00
+@ukn_stellar_missile_planck_shield_damage_mult = 1.00
+#---
+
+@ukn_stellar_missile_5_accuracy = 1.00
+@ukn_stellar_missile_6_accuracy = 1.00
+@ukn_stellar_missile_7_accuracy = 1.00
+@ukn_stellar_missile_8_accuracy = 1.00
+@ukn_stellar_missile_9_accuracy = 1.00
+@ukn_stellar_missile_10_accuracy = 1.00
+@ukn_stellar_missile_planck_accuracy = 1.00
+
+# MISSILE STATS #-------------------
+
+@ukn_stellar_missile_5_missile_speed = 17
+@ukn_stellar_missile_6_missile_speed = 17
+@ukn_stellar_missile_7_missile_speed = 17
+@ukn_stellar_missile_8_missile_speed = 17
+@ukn_stellar_missile_9_missile_speed = 17
+@ukn_stellar_missile_10_missile_speed = 17
+@ukn_stellar_missile_planck_missile_speed = 17
+
+@ukn_stellar_missile_5_missile_evasion = 0.55
+@ukn_stellar_missile_6_missile_evasion = 0.65
+@ukn_stellar_missile_7_missile_evasion = 0.70
+@ukn_stellar_missile_8_missile_evasion = 0.75
+@ukn_stellar_missile_9_missile_evasion = 0.90
+@ukn_stellar_missile_10_missile_evasion = 0.95
+@ukn_stellar_missile_planck_missile_evasion = 0.80
+
+@ukn_stellar_missile_5_missile_health = 72
+@ukn_stellar_missile_6_missile_health = 97 
+@ukn_stellar_missile_7_missile_health = 136 
+@ukn_stellar_missile_8_missile_health = 197 
+@ukn_stellar_missile_9_missile_health = 429 
+@ukn_stellar_missile_10_missile_health = 665 
+@ukn_stellar_missile_planck_missile_health = 286 
+
+@ukn_stellar_missile_5_missile_retarget_range = 100
+@ukn_stellar_missile_6_missile_retarget_range = 100
+@ukn_stellar_missile_7_missile_retarget_range = 100
+@ukn_stellar_missile_8_missile_retarget_range = 100
+@ukn_stellar_missile_9_missile_retarget_range = 100
+@ukn_stellar_missile_10_missile_retarget_range = 100
+@ukn_stellar_missile_planck_missile_retarget_range = 100
+
+
+# GENERAL STATS #---------------------------
+
+@ukn_stellar_missile_5_firing_arc = 135.0
+@ukn_stellar_missile_6_firing_arc = 135.0
+@ukn_stellar_missile_7_firing_arc = 135.0
+@ukn_stellar_missile_8_firing_arc = 135.0
+@ukn_stellar_missile_9_firing_arc = 135.0
+@ukn_stellar_missile_10_firing_arc = 135.0
+@ukn_stellar_missile_planck_firing_arc = 135.0
+
+@ukn_stellar_missile_5_min_range = 10
+@ukn_stellar_missile_6_min_range = 10
+@ukn_stellar_missile_7_min_range = 10
+@ukn_stellar_missile_8_min_range = 10
+@ukn_stellar_missile_9_min_range = 10
+@ukn_stellar_missile_10_min_range = 10
+@ukn_stellar_missile_planck_min_range = 10
+
+
+# XL (Only Slot) #---------------------------
+
+@ukn_stellar_missile_5_power = -192 
+@ukn_stellar_missile_6_power = -259 
+@ukn_stellar_missile_7_power = -363 
+@ukn_stellar_missile_8_power = -527 
+@ukn_stellar_missile_9_power = -1146 
+@ukn_stellar_missile_10_power = -1776 
+@ukn_stellar_missile_planck_power = -764 
+#---
+
+@ukn_stellar_missile_5_dmg_min = 903 
+@ukn_stellar_missile_6_dmg_min = 1219 
+@ukn_stellar_missile_7_dmg_min = 1706 
+@ukn_stellar_missile_8_dmg_min = 2474 
+@ukn_stellar_missile_9_dmg_min = 5380 
+@ukn_stellar_missile_10_dmg_min = 8340 
+@ukn_stellar_missile_planck_dmg_min = 3587 
+
+@ukn_stellar_missile_5_dmg_max = 1200 
+@ukn_stellar_missile_6_dmg_max = 1619 
+@ukn_stellar_missile_7_dmg_max = 2267 
+@ukn_stellar_missile_8_dmg_max = 3287 
+@ukn_stellar_missile_9_dmg_max = 7150 
+@ukn_stellar_missile_10_dmg_max = 11083 
+@ukn_stellar_missile_planck_dmg_max = 4767 
+#---
+
+@ukn_stellar_missile_5_windup_min = 4
+@ukn_stellar_missile_6_windup_min = 4
+@ukn_stellar_missile_7_windup_min = 4
+@ukn_stellar_missile_8_windup_min = 4
+@ukn_stellar_missile_9_windup_min = 4
+@ukn_stellar_missile_10_windup_min = 4
+@ukn_stellar_missile_planck_windup_min = 4
+
+@ukn_stellar_missile_5_windup_max = 16
+@ukn_stellar_missile_6_windup_max = 16
+@ukn_stellar_missile_7_windup_max = 16
+@ukn_stellar_missile_8_windup_max = 16
+@ukn_stellar_missile_9_windup_max = 16
+@ukn_stellar_missile_10_windup_max = 16
+@ukn_stellar_missile_planck_windup_max = 16
+#---
+
+@ukn_stellar_missile_5_total_fire_time = 95
+@ukn_stellar_missile_6_total_fire_time = 95
+@ukn_stellar_missile_7_total_fire_time = 95
+@ukn_stellar_missile_8_total_fire_time = 95
+@ukn_stellar_missile_9_total_fire_time = 95
+@ukn_stellar_missile_10_total_fire_time = 95
+@ukn_stellar_missile_planck_total_fire_time = 95
+#---
+
+@ukn_stellar_missile_5_range = 160
+@ukn_stellar_missile_6_range = 175
+@ukn_stellar_missile_7_range = 175
+@ukn_stellar_missile_8_range = 175
+@ukn_stellar_missile_9_range = 205
+@ukn_stellar_missile_10_range = 205
+@ukn_stellar_missile_planck_range = 175
+#---
+
+@ukn_stellar_missile_5_tracking = 0.10
+@ukn_stellar_missile_6_tracking = 0.11
+@ukn_stellar_missile_7_tracking = 0.11
+@ukn_stellar_missile_8_tracking = 0.11
+@ukn_stellar_missile_9_tracking = 0.12
+@ukn_stellar_missile_10_tracking = 0.12
+@ukn_stellar_missile_planck_tracking = 0.11
+
+
+
+######################################################
+### KINETIC SUPERARTILLERY / KINETIC SUPERMISSILES ###
+######################################################
+
+@ukn_mass_accelerator_5_hull_damage_mult = 1.25
+@ukn_mass_accelerator_6_hull_damage_mult = 1.35
+@ukn_mass_accelerator_7_hull_damage_mult = 1.35
+@ukn_mass_accelerator_8_hull_damage_mult = 1.35
+@ukn_mass_accelerator_9_hull_damage_mult = 1.55
+@ukn_mass_accelerator_10_hull_damage_mult = 1.55
+@ukn_mass_accelerator_planck_hull_damage_mult = 1.35
+
+@ukn_mass_accelerator_5_armor_penetration_mult = 0.00
+@ukn_mass_accelerator_6_armor_penetration_mult = 0.00
+@ukn_mass_accelerator_7_armor_penetration_mult = 0.00
+@ukn_mass_accelerator_8_armor_penetration_mult = 0.00
+@ukn_mass_accelerator_9_armor_penetration_mult = 0.00
+@ukn_mass_accelerator_10_armor_penetration_mult = 0.00
+@ukn_mass_accelerator_planck_armor_penetration_mult = 0.00
+
+@ukn_mass_accelerator_5_shield_penetration_mult = 0.00
+@ukn_mass_accelerator_6_shield_penetration_mult = 0.00
+@ukn_mass_accelerator_7_shield_penetration_mult = 0.00
+@ukn_mass_accelerator_8_shield_penetration_mult = 0.00
+@ukn_mass_accelerator_9_shield_penetration_mult = 0.00
+@ukn_mass_accelerator_10_shield_penetration_mult = 0.00
+@ukn_mass_accelerator_planck_shield_penetration_mult = 0.00
+
+@ukn_mass_accelerator_5_armor_damage_mult = 0.75
+@ukn_mass_accelerator_6_armor_damage_mult = 0.85
+@ukn_mass_accelerator_7_armor_damage_mult = 0.85
+@ukn_mass_accelerator_8_armor_damage_mult = 0.85
+@ukn_mass_accelerator_9_armor_damage_mult = 0.95
+@ukn_mass_accelerator_10_armor_damage_mult = 0.95
+@ukn_mass_accelerator_planck_armor_damage_mult = 0.85
+
+@ukn_mass_accelerator_5_shield_damage_mult = 1.50
+@ukn_mass_accelerator_6_shield_damage_mult = 1.65
+@ukn_mass_accelerator_7_shield_damage_mult = 1.65
+@ukn_mass_accelerator_8_shield_damage_mult = 1.65
+@ukn_mass_accelerator_9_shield_damage_mult = 1.90
+@ukn_mass_accelerator_10_shield_damage_mult = 1.90
+@ukn_mass_accelerator_planck_shield_damage_mult = 1.65
+#---
+
+@ukn_mass_accelerator_5_accuracy = 0.75
+@ukn_mass_accelerator_6_accuracy = 0.75
+@ukn_mass_accelerator_7_accuracy = 0.75
+@ukn_mass_accelerator_8_accuracy = 0.75
+@ukn_mass_accelerator_9_accuracy = 0.75
+@ukn_mass_accelerator_10_accuracy = 0.75
+@ukn_mass_accelerator_planck_accuracy = 0.75
+#---
+
+@ukn_mass_accelerator_5_firing_arc = 25.0
+@ukn_mass_accelerator_6_firing_arc = 25.0
+@ukn_mass_accelerator_7_firing_arc = 25.0
+@ukn_mass_accelerator_8_firing_arc = 25.0
+@ukn_mass_accelerator_9_firing_arc = 25.0
+@ukn_mass_accelerator_10_firing_arc = 25.0
+@ukn_mass_accelerator_planck_firing_arc = 25.0
+
+@ukn_mass_accelerator_5_min_range = 10
+@ukn_mass_accelerator_6_min_range = 10
+@ukn_mass_accelerator_7_min_range = 10
+@ukn_mass_accelerator_8_min_range = 10
+@ukn_mass_accelerator_9_min_range = 10
+@ukn_mass_accelerator_10_min_range = 10
+@ukn_mass_accelerator_planck_min_range = 10
+
+
+# XL (Only Slot) #---------------------------
+
+@ukn_mass_accelerator_5_power = -192
+@ukn_mass_accelerator_6_power = -259
+@ukn_mass_accelerator_7_power = -363
+@ukn_mass_accelerator_8_power = -527
+@ukn_mass_accelerator_9_power = -1146
+@ukn_mass_accelerator_10_power = -1776
+@ukn_mass_accelerator_planck_power = -764
+#---
+
+@ukn_mass_accelerator_5_dmg_min = 613
+@ukn_mass_accelerator_6_dmg_min = 827
+@ukn_mass_accelerator_7_dmg_min = 1158
+@ukn_mass_accelerator_8_dmg_min = 1679
+@ukn_mass_accelerator_9_dmg_min = 3652
+@ukn_mass_accelerator_10_dmg_min = 5661
+@ukn_mass_accelerator_planck_dmg_min = 2435
+
+@ukn_mass_accelerator_5_dmg_max = 1770
+@ukn_mass_accelerator_6_dmg_max = 2389
+@ukn_mass_accelerator_7_dmg_max = 3345
+@ukn_mass_accelerator_8_dmg_max = 4851
+@ukn_mass_accelerator_9_dmg_max = 10550
+@ukn_mass_accelerator_10_dmg_max = 16353
+@ukn_mass_accelerator_planck_dmg_max = 7033
+#---
+
+@ukn_mass_accelerator_5_windup_min = 1
+@ukn_mass_accelerator_6_windup_min = 1
+@ukn_mass_accelerator_7_windup_min = 1
+@ukn_mass_accelerator_8_windup_min = 1
+@ukn_mass_accelerator_9_windup_min = 1
+@ukn_mass_accelerator_10_windup_min = 1
+@ukn_mass_accelerator_planck_windup_min = 1
+
+@ukn_mass_accelerator_5_windup_max = 19
+@ukn_mass_accelerator_6_windup_max = 19
+@ukn_mass_accelerator_7_windup_max = 19
+@ukn_mass_accelerator_8_windup_max = 19
+@ukn_mass_accelerator_9_windup_max = 19
+@ukn_mass_accelerator_10_windup_max = 19
+@ukn_mass_accelerator_planck_windup_max = 19
+#---
+
+@ukn_mass_accelerator_5_total_fire_time = 65
+@ukn_mass_accelerator_6_total_fire_time = 65
+@ukn_mass_accelerator_7_total_fire_time = 65
+@ukn_mass_accelerator_8_total_fire_time = 65
+@ukn_mass_accelerator_9_total_fire_time = 65
+@ukn_mass_accelerator_10_total_fire_time = 65
+@ukn_mass_accelerator_planck_total_fire_time = 65
+#---
+
+@ukn_mass_accelerator_5_range = 150
+@ukn_mass_accelerator_6_range = 165
+@ukn_mass_accelerator_7_range = 165
+@ukn_mass_accelerator_8_range = 165
+@ukn_mass_accelerator_9_range = 195
+@ukn_mass_accelerator_10_range = 195
+@ukn_mass_accelerator_planck_range = 165
+#---
+
+@ukn_mass_accelerator_5_tracking = 0.00
+@ukn_mass_accelerator_6_tracking = 0.00
+@ukn_mass_accelerator_7_tracking = 0.00
+@ukn_mass_accelerator_8_tracking = 0.00
+@ukn_mass_accelerator_9_tracking = 0.00
+@ukn_mass_accelerator_10_tracking = 0.00
+@ukn_mass_accelerator_planck_tracking = 0.00

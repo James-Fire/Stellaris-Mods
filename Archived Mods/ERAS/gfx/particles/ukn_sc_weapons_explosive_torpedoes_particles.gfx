@@ -1,0 +1,762 @@
+objectTypes = {
+
+##################
+### TORPEDOES  ###
+##################
+
+######----------------------------------
+# T1 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_1S"
+		type = "muzzle_file_ukn_torpedo_1"
+		
+		scale = 2.0
+	}
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_1M"
+		type = "muzzle_file_ukn_torpedo_1"
+		
+		scale = 2.5
+	}
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_1L"
+		type = "muzzle_file_ukn_torpedo_1"
+		
+		scale = 3.0
+	}
+	
+# FLYING EFFECTS
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_1S"
+		type = "idle_file_ukn_torpedo_1S"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_1M"
+		type = "idle_file_ukn_torpedo_1M"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_1L"
+		type = "idle_file_ukn_torpedo_1L"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_1S"
+		type = "idle_flame_file_ukn_torpedo_1"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_1M"
+		type = "idle_flame_file_ukn_torpedo_1"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_1L"
+		type = "idle_flame_file_ukn_torpedo_1"
+		
+		scale = 1.25
+	}
+	
+# HIT EFFECTS
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_1S"
+		type = "hit_effect_ukn_torpedo_1"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_1M"
+		type = "hit_effect_ukn_torpedo_1"
+		
+		scale = 0.65
+	}
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_1L"
+		type = "hit_effect_ukn_torpedo_1"
+		
+		scale = 0.75
+	}
+
+######----------------------------------
+# T2 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_2S"
+		type = "muzzle_file_ukn_torpedo_2"
+		
+		scale = 2.0
+	}
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_2M"
+		type = "muzzle_file_ukn_torpedo_2"
+		
+		scale = 2.5
+	}
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_2L"
+		type = "muzzle_file_ukn_torpedo_2"
+		
+		scale = 3.0
+	}
+	
+# FLYING EFFECTS
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_2S"
+		type = "idle_file_ukn_torpedo_2S"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_2M"
+		type = "idle_file_ukn_torpedo_2M"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_2L"
+		type = "idle_file_ukn_torpedo_2L"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_2S"
+		type = "idle_flame_file_ukn_torpedo_2"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_2M"
+		type = "idle_flame_file_ukn_torpedo_2"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_2L"
+		type = "idle_flame_file_ukn_torpedo_2"
+		
+		scale = 1.25
+	}
+	
+# HIT EFFECTS
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_2S"
+		type = "hit_effect_ukn_torpedo_2"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_2M"
+		type = "hit_effect_ukn_torpedo_2"
+		
+		scale = 0.65
+	}
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_2L"
+		type = "hit_effect_ukn_torpedo_2"
+		
+		scale = 0.75
+	}
+
+######----------------------------------
+# T3 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_3S"
+		type = "muzzle_file_ukn_torpedo_3"
+		
+		scale = 2.0
+	}
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_3M"
+		type = "muzzle_file_ukn_torpedo_3"
+		
+		scale = 2.5
+	}
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_3L"
+		type = "muzzle_file_ukn_torpedo_3"
+		
+		scale = 3.0
+	}
+	
+# FLYING EFFECTS
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_3S"
+		type = "idle_file_ukn_torpedo_3S"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_3M"
+		type = "idle_file_ukn_torpedo_3M"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_3L"
+		type = "idle_file_ukn_torpedo_3L"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_3S"
+		type = "idle_flame_file_ukn_torpedo_3"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_3M"
+		type = "idle_flame_file_ukn_torpedo_3"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_3L"
+		type = "idle_flame_file_ukn_torpedo_3"
+		
+		scale = 1.25
+	}
+	
+# HIT EFFECTS
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_3S"
+		type = "hit_effect_ukn_torpedo_3"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_3M"
+		type = "hit_effect_ukn_torpedo_3"
+		
+		scale = 0.65
+	}
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_3L"
+		type = "hit_effect_ukn_torpedo_3"
+		
+		scale = 0.75
+	}
+
+######----------------------------------
+# T4 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_4S"
+		type = "muzzle_file_ukn_torpedo_4"
+		
+		scale = 2.0
+	}
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_4M"
+		type = "muzzle_file_ukn_torpedo_4"
+		
+		scale = 2.5
+	}
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_4L"
+		type = "muzzle_file_ukn_torpedo_4"
+		
+		scale = 3.0
+	}
+	
+# FLYING EFFECTS
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_4S"
+		type = "idle_file_ukn_torpedo_4S"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_4M"
+		type = "idle_file_ukn_torpedo_4M"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_4L"
+		type = "idle_file_ukn_torpedo_4L"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_4S"
+		type = "idle_flame_file_ukn_torpedo_4"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_4M"
+		type = "idle_flame_file_ukn_torpedo_4"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_4L"
+		type = "idle_flame_file_ukn_torpedo_4"
+		
+		scale = 1.25
+	}
+	
+# HIT EFFECTS
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_4S"
+		type = "hit_effect_ukn_torpedo_4"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_4M"
+		type = "hit_effect_ukn_torpedo_4"
+		
+		scale = 0.65
+	}
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_4L"
+		type = "hit_effect_ukn_torpedo_4"
+		
+		scale = 0.75
+	}
+
+######----------------------------------
+# T5 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_5S"
+		type = "muzzle_file_ukn_torpedo_5"
+		
+		scale = 2.0
+	}
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_5M"
+		type = "muzzle_file_ukn_torpedo_5"
+		
+		scale = 2.5
+	}
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_5L"
+		type = "muzzle_file_ukn_torpedo_5"
+		
+		scale = 3.0
+	}
+	
+# FLYING EFFECTS
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_5S"
+		type = "idle_file_ukn_torpedo_5S"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_5M"
+		type = "idle_file_ukn_torpedo_5M"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_5L"
+		type = "idle_file_ukn_torpedo_5L"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_5S"
+		type = "idle_flame_file_ukn_torpedo_5"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_5M"
+		type = "idle_flame_file_ukn_torpedo_5"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_5L"
+		type = "idle_flame_file_ukn_torpedo_5"
+		
+		scale = 1.25
+	}
+	
+# HIT EFFECTS
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_5S"
+		type = "hit_effect_ukn_torpedo_5"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_5M"
+		type = "hit_effect_ukn_torpedo_5"
+		
+		scale = 0.65
+	}
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_5L"
+		type = "hit_effect_ukn_torpedo_5"
+		
+		scale = 0.75
+	}
+
+######----------------------------------
+# T6 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_6S"
+		type = "muzzle_file_ukn_torpedo_6"
+		
+		scale = 2.0
+	}
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_6M"
+		type = "muzzle_file_ukn_torpedo_6"
+		
+		scale = 2.5
+	}
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_6L"
+		type = "muzzle_file_ukn_torpedo_6"
+		
+		scale = 3.0
+	}
+	
+# FLYING EFFECTS
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_6S"
+		type = "idle_file_ukn_torpedo_6S"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_6M"
+		type = "idle_file_ukn_torpedo_6M"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_6L"
+		type = "idle_file_ukn_torpedo_6L"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_6S"
+		type = "idle_flame_file_ukn_torpedo_6"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_6M"
+		type = "idle_flame_file_ukn_torpedo_6"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_6L"
+		type = "idle_flame_file_ukn_torpedo_6"
+		
+		scale = 1.25
+	}
+	
+# HIT EFFECTS
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_6S"
+		type = "hit_effect_ukn_torpedo_6"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_6M"
+		type = "hit_effect_ukn_torpedo_6"
+		
+		scale = 0.65
+	}
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_6L"
+		type = "hit_effect_ukn_torpedo_6"
+		
+		scale = 0.75
+	}
+
+######----------------------------------
+# T7 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_7S"
+		type = "muzzle_file_ukn_torpedo_7"
+		
+		scale = 2.0
+	}
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_7M"
+		type = "muzzle_file_ukn_torpedo_7"
+		
+		scale = 2.5
+	}
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_7L"
+		type = "muzzle_file_ukn_torpedo_7"
+		
+		scale = 3.0
+	}
+	
+# FLYING EFFECTS
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_7S"
+		type = "idle_file_ukn_torpedo_7S"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_7M"
+		type = "idle_file_ukn_torpedo_7M"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_7L"
+		type = "idle_file_ukn_torpedo_7L"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_7S"
+		type = "idle_flame_file_ukn_torpedo_7"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_7M"
+		type = "idle_flame_file_ukn_torpedo_7"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_7L"
+		type = "idle_flame_file_ukn_torpedo_7"
+		
+		scale = 1.25
+	}
+	
+# HIT EFFECTS
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_7S"
+		type = "hit_effect_ukn_torpedo_7"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_7M"
+		type = "hit_effect_ukn_torpedo_7"
+		
+		scale = 0.65
+	}
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_7L"
+		type = "hit_effect_ukn_torpedo_7"
+		
+		scale = 0.75
+	}
+
+######----------------------------------
+# T8 #----------------------------------
+######----------------------------------
+
+# MUZZLE FLASHES
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_8S"
+		type = "muzzle_file_ukn_torpedo_8"
+		
+		scale = 2.0
+	}
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_8M"
+		type = "muzzle_file_ukn_torpedo_8"
+		
+		scale = 2.5
+	}
+	
+	pdxparticle = {
+		name = "muzzle_particle_ukn_torpedo_8L"
+		type = "muzzle_file_ukn_torpedo_8"
+		
+		scale = 3.0
+	}
+	
+# FLYING EFFECTS
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_8S"
+		type = "idle_file_ukn_torpedo_8S"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_8M"
+		type = "idle_file_ukn_torpedo_8M"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_particle_ukn_torpedo_8L"
+		type = "idle_file_ukn_torpedo_8L"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_8S"
+		type = "idle_flame_file_ukn_torpedo_8"
+		
+		scale = 0.75
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_8M"
+		type = "idle_flame_file_ukn_torpedo_8"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "idle_flame_particle_ukn_torpedo_8L"
+		type = "idle_flame_file_ukn_torpedo_8"
+		
+		scale = 1.25
+	}
+	
+# HIT EFFECTS
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_8S"
+		type = "hit_effect_ukn_torpedo_8"
+		
+		scale = 0.5
+	}
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_8M"
+		type = "hit_effect_ukn_torpedo_8"
+		
+		scale = 0.65
+	}
+	
+	pdxparticle = {
+		name = "hit_effect_ukn_torpedo_8L"
+		type = "hit_effect_ukn_torpedo_8"
+		
+		scale = 0.75
+	}
+	
+	
+	
+	
+}

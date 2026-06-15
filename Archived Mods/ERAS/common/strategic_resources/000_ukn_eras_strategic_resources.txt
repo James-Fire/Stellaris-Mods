@@ -1,0 +1,548 @@
+###########################
+### Advanced Resources  ###
+###########################
+
+helium = {
+	tradable = yes
+	market_amount = 1
+	market_price = 32		# 80
+	max = 10000
+
+	prerequisites = { "tech_ship_armor_3" }
+	
+	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+ukn_meta_materials = {
+	tradable = yes
+	market_amount = 1
+	market_price = 32		# 80
+	max = 10000
+
+	prerequisites = { "tech_ship_armor_3" }
+	
+	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+ukn_exotic_particles = {
+	tradable = yes
+	market_amount = 10
+	market_price = 100
+	max = 15000
+
+	prerequisites = { "tech_mine_ukn_exotic_particles" }
+	visibility_prerequisite = { always = yes }
+	
+	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+ukn_femtomatter = {
+	tradable = yes
+	market_amount = 1
+	market_price = 100		# 80
+	max = 10000
+
+	prerequisites = { "tech_ship_armor_4" }
+	visibility_prerequisite = { always = yes }
+	
+	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+ukn_condensics = {
+	tradable = yes
+	market_amount = 1
+	market_price = 64		# 400
+	max = 10000
+
+	prerequisites = { "tech_ship_armor_5" }
+	visibility_prerequisite = { always = yes }
+	
+	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+ukn_quasi_matter = {
+	tradable = yes
+	market_amount = 1
+	market_price = 192		# 2000
+	max = 10000
+
+	prerequisites = { "tech_ukn_materials_6" }
+	visibility_prerequisite = { always = yes }
+	
+	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+# Quasi-negative Mass
+ehof_sr_negative_mass = {
+	tradable = no
+	max = 1000000
+
+	prerequisites = { "tech_ukn_negative_energy_production" }
+	visibility_prerequisite = { always = yes }
+	deficit_situation = situation_energy_deficit
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+ukn_causalitons = {
+	tradable = yes
+	market_amount = 1
+	market_price = 384		# 4000
+	max = 10000
+	
+	prerequisites = { "tech_ukn_causaliton_synthesiser" }
+	visibility_prerequisite = { always = yes }
+	
+	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+ukn_temporal_threads = {
+	tradable = yes
+	market_amount = 1
+	market_price = 384		# 4000
+	max = 10000
+	
+	prerequisites = { "tech_ukn_materials_9" }
+	visibility_prerequisite = { always = yes }
+	
+	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+ukn_discontinuons = {
+	tradable = yes
+	market_amount = 1
+	market_price = 384		# 4000
+	max = 10000
+	
+	prerequisites = { "tech_ukn_materials_10" }
+	visibility_prerequisite = { always = yes }
+	
+	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+# Sentient Metal
+ehof_sr_sentient_metal = {
+	tradable = yes
+	market_amount = 25
+	market_price = 100
+	max = 15000
+
+	ai_weight = { weight = 100 }
+	ai_wants = { base = 500 }
+
+	prerequisites = { "tech_ehof_sentient_tier_1" }
+	visibility_prerequisite = { always = yes }
+	deficit_situation = situation_energy_deficit
+}
+
+#ukn_exions = {
+#	tradable = yes
+#	market_amount = 1
+#	market_price = 16000	#16 000
+#	max = 10000
+#
+#	prerequisites = { "tech_mine_dark_matter" }
+#	visibility_prerequisite = { always = yes }
+#	
+#	deficit_situation = situation_energy_deficit
+#	
+#	ai_weight = {
+#		weight = 10
+#	}
+#}
+
+#### DO NOT ADD RESOURCES BELOW THIS POINT TO THE UI LIST ###
+
+ukn_icon_automation_job_resource = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ukn_icon_automation_job_service = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ukn_icon_automation_type_1 = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ukn_icon_automation_type_2 = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ukn_icon_automation_type_3 = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ukn_icon_automation_type_4 = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ukn_icon_automation_type_5 = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ukn_icon_automation_type_6 = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ukn_icon_automation_integrity = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 100000000
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ukn_icon_resources_physical = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ukn_icon_resources_abstract = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ukn_icon_armor = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ukn_icon_hit_points = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ukn_icon_planet_blue = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ukn_icon_power = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ukn_icon_shield = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ukn_icon_speed = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+
+ukn_icon_megastructure = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+
+ukn_icon_tech_milestone = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ukn_icon_tech_chance_increase = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ukn_icon_tech_automation = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+ukn_icon_text_exponent_0 = {
+	tradable = no
+	market_amount = 0
+	market_price = 0
+	max = 1
+
+	prerequisites = { "tech_ukn_locked" }
+	visibility_prerequisite = { always = no }
+	
+#	deficit_situation = situation_energy_deficit
+	
+	ai_weight = {
+		weight = 0
+	}
+}

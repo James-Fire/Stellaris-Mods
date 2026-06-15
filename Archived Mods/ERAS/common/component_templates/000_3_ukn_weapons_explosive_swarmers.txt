@@ -1,0 +1,843 @@
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+
+#Updated Range on these
+
+# DEFAULT VALUES:
+# is_missile = no
+# is_beam = no
+# is_point_defence = no
+
+@missile_speed = 5
+
+########################
+### SWARMER MISSILES ###
+########################
+
+############ TRANSLIGHT ############
+
+### Swarmer Missiles [Collapsic] (T2)
+weapon_component_template = {
+	key = "SWARMER_MISSILE_1"
+	size = torpedo
+	#entity = "turret_missile_medium_entity"
+	type = missile
+	icon = "GFX_ship_part_ukn_swarmer_missile_1"
+	icon_frame = 1
+#	static_rotation = no
+    power = @ukn_swarmer_missile_3_power
+	
+	damage = { min = @ukn_swarmer_missile_3_dmg_min max = @ukn_swarmer_missile_3_dmg_max }
+    windup = { min = @ukn_swarmer_missile_3_windup_min max = @ukn_swarmer_missile_3_windup_max }
+    total_fire_time = @ukn_swarmer_missile_3_total_fire_time
+    range = @ukn_swarmer_missile_3_range
+    accuracy = @ukn_swarmer_missile_3_accuracy
+	
+    missile_speed = @ukn_swarmer_missile_3_missile_speed # 18 = 400 -- apparently, the game doesn't auto-convert speed for non-vanilla components
+    missile_evasion = @ukn_swarmer_missile_3_missile_evasion
+    missile_health = @ukn_swarmer_missile_3_missile_health
+    missile_retarget_range = @ukn_swarmer_missile_3_missile_retarget_range
+	
+    hull_damage = @ukn_swarmer_missile_3_hull_damage_mult
+    armor_damage = @ukn_swarmer_missile_3_armor_damage_mult
+    armor_penetration = @ukn_swarmer_missile_3_armor_penetration_mult
+    shield_damage = @ukn_swarmer_missile_3_shield_damage_mult
+    shield_penetration = @ukn_swarmer_missile_3_shield_penetration_mult
+    tracking = @ukn_swarmer_missile_3_tracking
+	
+	prerequisites = { "tech_swarmer_missiles_1" }
+	component_set = "UKN_SET_SWARMER_MISSILE_1"
+	projectile_gfx = "projectile_ukn_swarmer_missile_1"
+	tags = { weapon_type_explosive ukn_weapon_type_swarming }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "SWARMER_MISSILE_2"
+	
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_medium_t3_component_cost_minerals
+			alloys = @ukn_medium_t3_component_cost_alloys
+#			ukn_meta_materials = @ukn_medium_t3_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t3_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t3_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t3_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t3_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t3_component_cost_exotic_gases
+			rare_crystals = @ukn_medium_t3_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t3_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t3_armor_cost_ukn_meta_materials
+#			nanites = @ukn_medium_t3_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_medium_t3_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t3_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t3_component_upkeep_energy
+			minerals = @ukn_medium_t3_component_upkeep_minerals
+			alloys = @ukn_medium_t3_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t3_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t3_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t3_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t3_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t3_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t3_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t3_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_medium_t3_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t3_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t3_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_medium_t3_component_upkeep_nanites
+#---
+#			minerals = @ukn_medium_t3_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t3_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t3_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_swarmer_missile_t3
+	}
+}
+
+# -----------------------------------------------------------------------
+
+#~~~~~~~~~~Vanilla T1-T2 Swarmer Missiles Overwritten~~~~~~~~~~ (Vanilla File Nullified)
+
+### Whirlwind Missiles [Antimatter] (T3)
+weapon_component_template = {
+	key = "SWARMER_MISSILE_2"
+	size = torpedo
+	#entity = "turret_missile_medium_entity"
+    power = @ukn_swarmer_missile_4_power
+	
+	icon = "GFX_ship_part_ukn_swarmer_missile_2"
+	icon_frame = 1
+#	static_rotation = no
+	type = missile
+	
+	damage = { min = @ukn_swarmer_missile_4_dmg_min max = @ukn_swarmer_missile_4_dmg_max }
+    windup = { min = @ukn_swarmer_missile_4_windup_min max = @ukn_swarmer_missile_4_windup_max }
+    total_fire_time = @ukn_swarmer_missile_4_total_fire_time
+    range = @ukn_swarmer_missile_4_range
+    accuracy = @ukn_swarmer_missile_4_accuracy
+	
+    missile_speed = @ukn_swarmer_missile_4_missile_speed # 18 = 400 -- apparently, the game doesn't auto-convert speed for non-vanilla components
+    missile_evasion = @ukn_swarmer_missile_4_missile_evasion
+    missile_health = @ukn_swarmer_missile_4_missile_health
+    missile_retarget_range = @ukn_swarmer_missile_4_missile_retarget_range
+	
+    hull_damage = @ukn_swarmer_missile_4_hull_damage_mult
+    armor_damage = @ukn_swarmer_missile_4_armor_damage_mult
+    armor_penetration = @ukn_swarmer_missile_4_armor_penetration_mult
+    shield_damage = @ukn_swarmer_missile_4_shield_damage_mult
+    shield_penetration = @ukn_swarmer_missile_4_shield_penetration_mult
+    tracking = @ukn_swarmer_missile_4_tracking
+	
+	prerequisites = { "tech_swarmer_missiles_2" }
+	component_set = "UKN_SET_SWARMER_MISSILE_2"
+	projectile_gfx = "projectile_ukn_swarmer_missile_2"
+	tags = { weapon_type_explosive ukn_weapon_type_swarming }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "UKN_SWARMER_MISSILE_3"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_medium_t4_component_cost_minerals
+			alloys = @ukn_medium_t4_component_cost_alloys
+			ukn_meta_materials = @ukn_medium_t4_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t4_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t4_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t4_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t4_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t4_component_cost_exotic_gases
+			rare_crystals = @ukn_medium_t4_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t4_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t4_armor_cost_ukn_meta_materials
+#			nanites = @ukn_medium_t4_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_medium_t4_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t4_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t4_component_upkeep_energy
+#			minerals = @ukn_medium_t4_component_upkeep_minerals
+			alloys = @ukn_medium_t4_component_upkeep_alloys
+			ukn_meta_materials = @ukn_medium_t4_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t4_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t4_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t4_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t4_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t4_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t4_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_medium_t4_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t4_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t4_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_medium_t4_component_upkeep_nanites
+#---
+			minerals = @ukn_medium_t4_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t4_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t4_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_swarmer_missile_t4
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+#~~~~~~~~~~Vanilla Overwrite End (Sarmer Missiles T1, T2 Follows Below)~~~~~~~~~~
+
+### Cloudburst Missiles [Subspace] (T4)
+weapon_component_template = {
+	key = "UKN_SWARMER_MISSILE_3"
+	size = torpedo
+	#entity = "turret_missile_medium_entity"
+	type = missile
+	icon = "GFX_ship_part_ukn_swarmer_missile_3"
+	icon_frame = 1
+#	static_rotation = no
+    power = @ukn_swarmer_missile_5_power
+	
+	damage = { min = @ukn_swarmer_missile_5_dmg_min max = @ukn_swarmer_missile_5_dmg_max }
+    windup = { min = @ukn_swarmer_missile_5_windup_min max = @ukn_swarmer_missile_5_windup_max }
+    total_fire_time = @ukn_swarmer_missile_5_total_fire_time
+    range = @ukn_swarmer_missile_5_range
+    accuracy = @ukn_swarmer_missile_5_accuracy
+	
+    missile_speed = @ukn_swarmer_missile_5_missile_speed # 18 = 400 -- apparently, the game doesn't auto-convert speed for non-vanilla components
+    missile_evasion = @ukn_swarmer_missile_5_missile_evasion
+    missile_health = @ukn_swarmer_missile_5_missile_health
+    missile_retarget_range = @ukn_swarmer_missile_5_missile_retarget_range
+	
+    hull_damage = @ukn_swarmer_missile_5_hull_damage_mult
+    armor_damage = @ukn_swarmer_missile_5_armor_damage_mult
+    armor_penetration = @ukn_swarmer_missile_5_armor_penetration_mult
+    shield_damage = @ukn_swarmer_missile_5_shield_damage_mult
+    shield_penetration = @ukn_swarmer_missile_5_shield_penetration_mult
+    tracking = @ukn_swarmer_missile_5_tracking
+	
+	prerequisites = { "tech_ukn_swarmer_missile_3" }
+	component_set = "UKN_SET_SWARMER_MISSILE_3"
+	projectile_gfx = "projectile_ukn_swarmer_missile_3"
+	tags = { weapon_type_explosive ukn_weapon_type_swarming }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "UKN_SWARMER_MISSILE_4"
+	
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_medium_t5_component_cost_minerals
+#			alloys = @ukn_medium_t5_component_cost_alloys
+			ukn_meta_materials = @ukn_medium_t5_component_cost_ukn_meta_materials
+			ukn_femtomatter = @ukn_medium_t5_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t5_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t5_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t5_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t5_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t5_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t5_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t5_armor_cost_ukn_meta_materials
+#			nanites = @ukn_medium_t5_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_medium_t5_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t5_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t5_component_upkeep_energy
+#			minerals = @ukn_medium_t5_component_upkeep_minerals
+#			alloys = @ukn_medium_t5_component_upkeep_alloys
+			ukn_meta_materials = @ukn_medium_t5_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t5_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t5_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t5_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t5_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t5_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t5_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_medium_t5_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t5_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t5_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_medium_t5_component_upkeep_nanites
+#---
+#			minerals = @ukn_medium_t5_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t5_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t5_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_swarmer_missile_t5
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_femtomatter value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+#~~~~~~~~~~Vanilla T2 Swarmer Missiles Overwritten~~~~~~~~~~ (Vanilla File Nullified)
+
+### Tempest Missiles [Multi-Fold] (T5)
+weapon_component_template = {
+	key = "UKN_SWARMER_MISSILE_4"
+	size = torpedo
+	#entity = "turret_missile_medium_entity"
+    power = @ukn_swarmer_missile_6_power
+	
+	icon = "GFX_ship_part_ukn_swarmer_missile_4"
+	icon_frame = 1
+#	static_rotation = no
+	type = missile
+	
+	damage = { min = @ukn_swarmer_missile_6_dmg_min max = @ukn_swarmer_missile_6_dmg_max }
+    windup = { min = @ukn_swarmer_missile_6_windup_min max = @ukn_swarmer_missile_6_windup_max }
+    total_fire_time = @ukn_swarmer_missile_6_total_fire_time
+    range = @ukn_swarmer_missile_6_range
+    accuracy = @ukn_swarmer_missile_6_accuracy
+	
+    missile_speed = @ukn_swarmer_missile_6_missile_speed # 18 = 400 -- apparently, the game doesn't auto-convert speed for non-vanilla components
+    missile_evasion = @ukn_swarmer_missile_6_missile_evasion
+    missile_health = @ukn_swarmer_missile_6_missile_health
+    missile_retarget_range = @ukn_swarmer_missile_6_missile_retarget_range
+	
+    hull_damage = @ukn_swarmer_missile_6_hull_damage_mult
+    armor_damage = @ukn_swarmer_missile_6_armor_damage_mult
+    armor_penetration = @ukn_swarmer_missile_6_armor_penetration_mult
+    shield_damage = @ukn_swarmer_missile_6_shield_damage_mult
+    shield_penetration = @ukn_swarmer_missile_6_shield_penetration_mult
+    tracking = @ukn_swarmer_missile_6_tracking
+	
+	prerequisites = { "tech_ukn_swarmer_missile_4" }
+	component_set = "UKN_SET_SWARMER_MISSILE_4"
+	projectile_gfx = "projectile_ukn_swarmer_missile_4"
+	tags = { weapon_type_explosive ukn_weapon_type_swarming }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "UKN_SWARMER_MISSILE_5"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_medium_t6_component_cost_minerals
+#			alloys = @ukn_medium_t6_component_cost_alloys
+			ukn_meta_materials = @ukn_medium_t6_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t6_component_cost_ukn_femtomatter
+			ukn_condensics = @ukn_medium_t6_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t6_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t6_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t6_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t6_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t6_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t6_armor_cost_ukn_meta_materials
+#			nanites = @ukn_medium_t6_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_medium_t6_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t6_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t6_component_upkeep_energy
+#			minerals = @ukn_medium_t6_component_upkeep_minerals
+#			alloys = @ukn_medium_t6_component_upkeep_alloys
+			ukn_meta_materials = @ukn_medium_t6_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t6_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t6_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t6_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t6_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t6_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t6_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_medium_t6_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t6_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t6_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_medium_t6_component_upkeep_nanites
+#---
+#			minerals = @ukn_medium_t6_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t6_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t6_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+
+	ai_weight = {
+		weight = @ukn_component_weight_swarmer_missile_t6
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_condensics value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+#~~~~~~~~~~Vanilla Overwrite End (Sarmer Missiles T2, T1 Above)~~~~~~~~~~
+
+### Hurricane Missiles [Spatial] (T6)
+weapon_component_template = {
+	key = "UKN_SWARMER_MISSILE_5"
+	size = torpedo
+	#entity = "turret_missile_medium_entity"
+	type = missile
+	icon = "GFX_ship_part_ukn_swarmer_missile_5"
+	icon_frame = 1
+#	static_rotation = no
+    power = @ukn_swarmer_missile_7_power
+	
+	damage = { min = @ukn_swarmer_missile_7_dmg_min max = @ukn_swarmer_missile_7_dmg_max }
+    windup = { min = @ukn_swarmer_missile_7_windup_min max = @ukn_swarmer_missile_7_windup_max }
+    total_fire_time = @ukn_swarmer_missile_7_total_fire_time
+    range = @ukn_swarmer_missile_7_range
+    accuracy = @ukn_swarmer_missile_7_accuracy
+	
+    missile_speed = @ukn_swarmer_missile_7_missile_speed # 18 = 600 -- apparently, the game doesn't auto-convert speed for non-vanilla components
+    missile_evasion = @ukn_swarmer_missile_7_missile_evasion
+    missile_health = @ukn_swarmer_missile_7_missile_health
+    missile_retarget_range = @ukn_swarmer_missile_7_missile_retarget_range
+	
+    hull_damage = @ukn_swarmer_missile_7_hull_damage_mult
+    armor_damage = @ukn_swarmer_missile_7_armor_damage_mult
+    armor_penetration = @ukn_swarmer_missile_7_armor_penetration_mult
+    shield_damage = @ukn_swarmer_missile_7_shield_damage_mult
+    shield_penetration = @ukn_swarmer_missile_7_shield_penetration_mult
+    tracking = @ukn_swarmer_missile_7_tracking
+	
+	prerequisites = { "tech_ukn_swarmer_missile_5" }
+	component_set = "UKN_SET_SWARMER_MISSILE_5"
+	projectile_gfx = "projectile_ukn_swarmer_missile_5"
+	tags = { weapon_type_explosive ukn_weapon_type_swarming }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "UKN_SWARMER_MISSILE_6"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_medium_t7_component_cost_minerals
+#			alloys = @ukn_medium_t7_component_cost_alloys
+			ukn_meta_materials = @ukn_medium_t7_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t7_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t7_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_medium_t7_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t7_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t7_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t7_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t7_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t7_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_medium_t7_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_medium_t7_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t7_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t7_component_upkeep_energy
+#			minerals = @ukn_medium_t7_component_upkeep_minerals
+#			alloys = @ukn_medium_t7_component_upkeep_alloys
+			ukn_meta_materials = @ukn_medium_t7_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t7_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t7_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t7_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t7_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t7_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t7_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_medium_t7_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t7_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t7_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_medium_t7_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t7_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t7_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_swarmer_missile_t7
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Cyclone Missiles [False Vacuum] (T7)
+weapon_component_template = {
+	key = "UKN_SWARMER_MISSILE_6"
+	size = torpedo
+	#entity = "turret_missile_medium_entity"
+	type = missile
+	icon = "GFX_ship_part_ukn_swarmer_missile_6"
+	icon_frame = 1
+#	static_rotation = no
+    power = @ukn_swarmer_missile_8_power
+	
+	damage = { min = @ukn_swarmer_missile_8_dmg_min max = @ukn_swarmer_missile_8_dmg_max }
+    windup = { min = @ukn_swarmer_missile_8_windup_min max = @ukn_swarmer_missile_8_windup_max }
+    total_fire_time = @ukn_swarmer_missile_8_total_fire_time
+    range = @ukn_swarmer_missile_8_range
+    accuracy = @ukn_swarmer_missile_8_accuracy
+	
+    missile_speed = @ukn_swarmer_missile_8_missile_speed # 18 = 700 -- apparently, the game doesn't auto-convert speed for non-vanilla components
+    missile_evasion = @ukn_swarmer_missile_8_missile_evasion
+    missile_health = @ukn_swarmer_missile_8_missile_health
+    missile_retarget_range = @ukn_swarmer_missile_8_missile_retarget_range
+	
+    hull_damage = @ukn_swarmer_missile_8_hull_damage_mult
+    armor_damage = @ukn_swarmer_missile_8_armor_damage_mult
+    armor_penetration = @ukn_swarmer_missile_8_armor_penetration_mult
+    shield_damage = @ukn_swarmer_missile_8_shield_damage_mult
+    shield_penetration = @ukn_swarmer_missile_8_shield_penetration_mult
+    tracking = @ukn_swarmer_missile_8_tracking
+	
+	prerequisites = { "tech_ukn_swarmer_missile_6" }
+	component_set = "UKN_SET_SWARMER_MISSILE_6"
+	projectile_gfx = "projectile_ukn_swarmer_missile_6"
+	tags = { weapon_type_explosive ukn_weapon_type_swarming }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "UKN_SWARMER_MISSILE_7"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_medium_t8_component_cost_minerals
+#			alloys = @ukn_medium_t8_component_cost_alloys
+			ukn_meta_materials = @ukn_medium_t8_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t8_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t8_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_medium_t8_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t8_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t8_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t8_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_medium_t8_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t8_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_medium_t8_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_medium_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t8_component_upkeep_energy
+#			minerals = @ukn_medium_t8_component_upkeep_minerals
+#			alloys = @ukn_medium_t8_component_upkeep_alloys
+			ukn_meta_materials = @ukn_medium_t8_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t8_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t8_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t8_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t8_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t8_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t8_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_medium_t8_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t8_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t8_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_medium_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t8_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_swarmer_missile_t8
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Cyclone Missiles [False Vacuum] (T7)
+weapon_component_template = {
+	key = "UKN_SWARMER_MISSILE_PLANCK"
+	size = torpedo
+	#entity = "turret_missile_medium_entity"
+	type = missile
+	icon = "GFX_ship_part_ukn_swarmer_missile_planck"
+	icon_frame = 1
+#	static_rotation = no
+    power = @ukn_swarmer_missile_planck_power
+	
+	damage = { min = @ukn_swarmer_missile_planck_dmg_min max = @ukn_swarmer_missile_planck_dmg_max }
+    windup = { min = @ukn_swarmer_missile_planck_windup_min max = @ukn_swarmer_missile_planck_windup_max }
+    total_fire_time = @ukn_swarmer_missile_planck_total_fire_time
+    range = @ukn_swarmer_missile_planck_range
+    accuracy = @ukn_swarmer_missile_planck_accuracy
+	
+    missile_speed = @ukn_swarmer_missile_planck_missile_speed # 18 = 700 -- apparently, the game doesn't auto-convert speed for non-vanilla components
+    missile_evasion = @ukn_swarmer_missile_planck_missile_evasion
+    missile_health = @ukn_swarmer_missile_planck_missile_health
+    missile_retarget_range = @ukn_swarmer_missile_planck_missile_retarget_range
+	
+    hull_damage = @ukn_swarmer_missile_planck_hull_damage_mult
+    armor_damage = @ukn_swarmer_missile_planck_armor_damage_mult
+    armor_penetration = @ukn_swarmer_missile_planck_armor_penetration_mult
+    shield_damage = @ukn_swarmer_missile_planck_shield_damage_mult
+    shield_penetration = @ukn_swarmer_missile_planck_shield_penetration_mult
+    tracking = @ukn_swarmer_missile_planck_tracking
+	
+	prerequisites = { "tech_ukn_swarmer_missile_planck" }
+	component_set = "UKN_SET_SWARMER_MISSILE_PLANCK"
+	projectile_gfx = "projectile_ukn_swarmer_missile_planck"
+	tags = { weapon_type_explosive ukn_weapon_type_swarming }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "UKN_SWARMER_MISSILE_7"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_medium_t_p_component_cost_minerals
+#			alloys = @ukn_medium_t_p_component_cost_alloys
+			ukn_meta_materials = @ukn_medium_t_p_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t_p_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t_p_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_medium_t_p_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t_p_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t_p_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t_p_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_medium_t_p_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t_p_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_medium_t_p_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_medium_t_p_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t_p_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t_p_component_upkeep_energy
+#			minerals = @ukn_medium_t_p_component_upkeep_minerals
+#			alloys = @ukn_medium_t_p_component_upkeep_alloys
+			ukn_meta_materials = @ukn_medium_t_p_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t_p_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t_p_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t_p_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t_p_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t_p_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t_p_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_medium_t_p_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t_p_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_medium_t_p_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_medium_t_p_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t_p_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t_p_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_swarmer_missile_t_d
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = sr_dark_matter value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Blizzard Missiles [Sub-Planck] (T8)
+weapon_component_template = {
+	key = "UKN_SWARMER_MISSILE_7"
+	size = torpedo
+	#entity = "turret_missile_medium_entity"
+	type = missile
+	icon = "GFX_ship_part_ukn_swarmer_missile_7"
+	icon_frame = 1
+#	static_rotation = no
+    power = @ukn_swarmer_missile_9_power
+	
+	damage = { min = @ukn_swarmer_missile_9_dmg_min max = @ukn_swarmer_missile_9_dmg_max }
+    windup = { min = @ukn_swarmer_missile_9_windup_min max = @ukn_swarmer_missile_9_windup_max }
+    total_fire_time = @ukn_swarmer_missile_9_total_fire_time
+    range = @ukn_swarmer_missile_9_range
+    accuracy = @ukn_swarmer_missile_9_accuracy
+	
+    missile_speed = @ukn_swarmer_missile_9_missile_speed # 19 = 800 -- apparently, the game doesn't auto-convert speed for non-vanilla components
+    missile_evasion = @ukn_swarmer_missile_9_missile_evasion
+    missile_health = @ukn_swarmer_missile_9_missile_health
+    missile_retarget_range = @ukn_swarmer_missile_9_missile_retarget_range
+	
+    hull_damage = @ukn_swarmer_missile_9_hull_damage_mult
+    armor_damage = @ukn_swarmer_missile_9_armor_damage_mult
+    armor_penetration = @ukn_swarmer_missile_9_armor_penetration_mult
+    shield_damage = @ukn_swarmer_missile_9_shield_damage_mult
+    shield_penetration = @ukn_swarmer_missile_9_shield_penetration_mult
+    tracking = @ukn_swarmer_missile_9_tracking
+	
+	prerequisites = { "tech_ukn_swarmer_missile_7" }
+	component_set = "UKN_SET_SWARMER_MISSILE_7"
+	projectile_gfx = "projectile_ukn_swarmer_missile_7"
+	tags = { weapon_type_explosive ukn_weapon_type_swarming }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "UKN_SWARMER_MISSILE_8"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_medium_t9_component_cost_minerals
+#			alloys = @ukn_medium_t9_component_cost_alloys
+#			ukn_meta_materials = @ukn_medium_t9_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t9_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t9_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t9_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_medium_t9_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t9_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t9_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t9_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t9_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_medium_t9_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_medium_t9_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t9_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t9_component_upkeep_energy
+#			minerals = @ukn_medium_t9_component_upkeep_minerals
+#			alloys = @ukn_medium_t9_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t9_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t9_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t9_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t9_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t9_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t9_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t9_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_medium_t9_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t9_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_medium_t9_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_medium_t9_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t9_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t9_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_swarmer_missile_t9
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Zephyr Missiles [Synchronic] (T9)
+weapon_component_template = {
+	key = "UKN_SWARMER_MISSILE_8"
+	size = torpedo
+	#entity = "turret_missile_medium_entity"
+	type = missile
+	icon = "GFX_ship_part_ukn_swarmer_missile_8"
+	icon_frame = 1
+#	static_rotation = no
+    power = @ukn_swarmer_missile_10_power
+	
+	damage = { min = @ukn_swarmer_missile_10_dmg_min max = @ukn_swarmer_missile_10_dmg_max }
+    windup = { min = @ukn_swarmer_missile_10_windup_min max = @ukn_swarmer_missile_10_windup_max }
+    total_fire_time = @ukn_swarmer_missile_10_total_fire_time
+    range = @ukn_swarmer_missile_10_range
+    accuracy = @ukn_swarmer_missile_10_accuracy
+	
+    missile_speed = @ukn_swarmer_missile_10_missile_speed # 110 = 900 -- apparently, the game doesn't auto-convert speed for non-vanilla components
+    missile_evasion = @ukn_swarmer_missile_10_missile_evasion
+    missile_health = @ukn_swarmer_missile_10_missile_health
+    missile_retarget_range = @ukn_swarmer_missile_10_missile_retarget_range
+	
+    hull_damage = @ukn_swarmer_missile_10_hull_damage_mult
+    armor_damage = @ukn_swarmer_missile_10_armor_damage_mult
+    armor_penetration = @ukn_swarmer_missile_10_armor_penetration_mult
+    shield_damage = @ukn_swarmer_missile_10_shield_damage_mult
+    shield_penetration = @ukn_swarmer_missile_10_shield_penetration_mult
+    tracking = @ukn_swarmer_missile_10_tracking
+	
+	prerequisites = { "tech_ukn_swarmer_missile_8" }
+	component_set = "UKN_SET_SWARMER_MISSILE_8"
+	projectile_gfx = "projectile_ukn_swarmer_missile_8"
+	tags = { weapon_type_explosive ukn_weapon_type_swarming }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+#	upgrades_to = "UKN_SWARMER_MISSILE_9"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_medium_t10_component_cost_minerals
+#			alloys = @ukn_medium_t10_component_cost_alloys
+#			ukn_meta_materials = @ukn_medium_t10_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t10_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t10_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t10_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_medium_t10_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_medium_t10_component_cost_exotic_gases
+#			rare_crystals = @ukn_medium_t10_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_medium_t10_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_medium_t10_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_medium_t10_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_medium_t10_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_medium_t10_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_medium_t10_component_upkeep_energy
+#			minerals = @ukn_medium_t10_component_upkeep_minerals
+#			alloys = @ukn_medium_t10_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t10_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_medium_t10_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_medium_t10_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_medium_t10_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_medium_t10_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_medium_t10_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_medium_t10_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_medium_t10_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_medium_t10_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_medium_t10_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_medium_t10_kinetics_upkeep_minerals
+#			alloys = @ukn_medium_t10_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_medium_t10_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_swarmer_missile_t10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------

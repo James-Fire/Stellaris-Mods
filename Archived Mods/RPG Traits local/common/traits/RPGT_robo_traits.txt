@@ -1,0 +1,76 @@
+trait_rapid_breeders1 = {
+	cost = 1
+	randomized = no
+	potential_crossbreeding_chance = 1.0
+	icon = "gfx/interface/icons/traits/trait_rapid_breeders1.dds"
+	allowed_archetypes = { BIOLOGICAL }
+	
+	modifier = {
+		pop_growth_speed = 1
+	}
+}
+
+###############################################
+# Initial traits - These are varied, powerful, and not available early-game
+###############################################
+
+trait_robodesign_geth = {		# only capable in large groups
+	cost = 4
+	sorting_priority = 20
+	initial = yes
+	randomized = no
+	modification = yes
+	prerequisites = { }
+	icon = "gfx/interface/icons/traits/trait_robodesign_geth.dds"
+	allowed_archetypes = { MACHINE }
+	opposites = { trait_robodesign_nanoswarm }
+	modifier = {
+		# set as planetary modifiers instead
+		
+		army_health = 0.5
+		army_damage_mult = 0.5
+	}
+}
+
+#####################
+# Tier 3
+#####################
+
+trait_robodesign_nanoswarm = {		# grey goo
+	cost = 4
+	sorting_priority = 20
+	initial = yes
+	randomized = no
+	modification = yes
+	icon = "gfx/interface/icons/traits/trait_robodesign_nanoswarm.dds"
+	allowed_archetypes = { MACHINE }
+	opposites = { trait_robodesign_geth }
+	prerequisites = { }
+
+	modifier = {
+		planet_jobs_produces_mult = 1.5
+		
+		pop_assembly_speed = 5				# almost instantaneously
+		planet_pops_consumer_goods_upkeep_mult = -10
+		planet_pops_robotics_upkeep_mult = -10
+		pop_housing_usage_mult = -0.90
+		pop_amenities_usage_no_happiness_mult = -0.90
+		
+		army_damage_mult = 1						#
+		#army_health = -0.25						# encourage army spam
+		armies_upkeep_mult = -10						# grey goo spam!
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

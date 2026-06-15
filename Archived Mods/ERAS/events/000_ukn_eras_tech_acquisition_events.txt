@@ -1,0 +1,1053 @@
+namespace = ukn_automation_tech_acquisition_events
+
+# On researching Type-2 Automation
+country_event = {
+	id = ukn_automation_tech_acquisition_events.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_capital_productivity_1
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				last_increased_tech = tech_capital_productivity_1
+			}
+			add_research_option = tech_basic_science_lab_2
+			add_research_option = tech_power_hub_1
+			add_research_option = tech_food_processing_1
+			add_research_option = tech_mineral_purification_1
+			add_research_option = tech_alloys_1
+		}
+		if = {
+			limit = {
+				last_increased_tech = tech_capital_productivity_1
+				country_uses_consumer_goods = yes
+			}
+			add_research_option = tech_luxuries_1
+		}
+		if = {
+			limit = {
+				last_increased_tech = tech_capital_productivity_1
+				is_gestalt = no
+			}
+			add_research_option = tech_space_trading
+		}
+		if = {
+			limit = {
+				last_increased_tech = tech_capital_productivity_1
+				NOR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+					has_authority = auth_hive_mind
+				}
+			}
+			add_research_option = tech_planetary_infrastructure_1
+		}
+		if = {
+			limit = {
+				last_increased_tech = tech_capital_productivity_1
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+			add_research_option = tech_holographic_rituals
+		}
+		if = {
+			limit = {
+				last_increased_tech = tech_capital_productivity_1
+				is_hive_empire = yes
+			}
+			add_research_option = tech_hive_cluster
+		}
+	}
+}
+#Converted Spiritualist Fix
+country_event = {
+	id = ukn_automation_tech_acquisition_events.12
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				is_spiritualist = yes
+				has_technology = tech_capital_productivity_1
+				NOR = {
+					has_tech_option = tech_holographic_rituals
+					has_technology = tech_holographic_rituals
+				}
+			}
+			AND = {
+				is_spiritualist = no
+				has_technology = tech_capital_productivity_1
+				NOR = {
+					has_tech_option = tech_planetary_infrastructure_1
+					has_technology = tech_planetary_infrastructure_1
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				is_spiritualist = yes
+				has_technology = tech_capital_productivity_1
+				NOR = {
+					has_tech_option = tech_holographic_rituals
+					has_technology = tech_holographic_rituals
+				}
+			}
+			add_research_option = tech_holographic_rituals
+		}
+		if = {
+			limit = {
+				is_spiritualist = no
+				has_technology = tech_capital_productivity_1
+				NOR = {
+					has_tech_option = tech_planetary_infrastructure_1
+					has_technology = tech_planetary_infrastructure_1
+				}
+			}
+			add_research_option = tech_planetary_infrastructure_1
+		}
+	}
+}
+
+namespace = ukn_critter_tech_acquisition_events
+
+# On researching cloning
+country_event = {
+	id = ukn_critter_tech_acquisition_events.11
+#	hide_window = yes
+	title = ukn_critter_tech_acquisition_events.11.name
+	desc = ukn_critter_tech_acquisition_events.11.desc
+	picture = GFX_evt_fleet_neutral
+	show_sound = event_space_amoeba
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_ukn_crystal_entity_components_1
+		NOR = { 
+			OR = { 
+				has_tech_option = tech_crystal_armor_1
+				has_technology = tech_crystal_armor_1
+			}
+			OR = {
+				has_tech_option = tech_ukn_crystalline_tracer_0 
+				has_technology = tech_ukn_crystalline_tracer_0
+			}
+		}
+	}
+
+#	immediate = {
+#		limit = {
+#			OR = {
+#				NOT = { has_tech_option = tech_crystal_armor_1 }
+#				NOT = { has_tech_option = tech_ukn_crystalline_tracer_0 }
+#			}
+#		}
+#		add_research_option = tech_crystal_armor_1
+#		add_research_option = tech_ukn_crystalline_tracer_0
+#		}
+#	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.11.a
+		custom_tooltip = ukn_critter_tech_acquisition_events.11.a.tooltip
+		trigger = {
+			NOR = { 
+				OR = { 
+					has_tech_option = tech_crystal_armor_1
+					has_technology = tech_crystal_armor_1
+				}
+				OR = {
+					has_tech_option = tech_ukn_crystalline_tracer_0 
+					has_technology = tech_ukn_crystalline_tracer_0
+				}
+			}
+		}
+		add_research_option = tech_crystal_armor_1
+		add_research_option = tech_ukn_crystalline_tracer_0
+	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.11.b
+		custom_tooltip = ukn_critter_tech_acquisition_events.11.b.tooltip
+		trigger = {
+			NOR = { 
+				has_tech_option = tech_crystal_armor_1
+				has_technology = tech_crystal_armor_1
+			}
+			OR = {
+				has_tech_option = tech_ukn_crystalline_tracer_0 
+				has_technology = tech_ukn_crystalline_tracer_0
+			}
+		}
+		add_research_option = tech_crystal_armor_1
+	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.11.c
+		custom_tooltip = ukn_critter_tech_acquisition_events.11.c.tooltip
+		trigger = {
+			OR = { 
+				has_tech_option = tech_crystal_armor_1
+				has_technology = tech_crystal_armor_1
+			}
+			NOR = {
+				has_tech_option = tech_ukn_crystalline_tracer_0 
+				has_technology = tech_ukn_crystalline_tracer_0
+			}
+		}
+		add_research_option = tech_ukn_crystalline_tracer_0
+	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.11.d
+		custom_tooltip = ukn_critter_tech_acquisition_events.11.d.tooltip
+		trigger = {
+			OR = { 
+				AND = { 
+					has_tech_option = tech_crystal_armor_1
+					has_tech_option = tech_ukn_crystalline_tracer_0
+				}
+				AND = { 
+					has_tech_option = tech_crystal_armor_1
+					has_technology = tech_ukn_crystalline_tracer_0
+				}
+				AND = { 
+					has_technology = tech_crystal_armor_1
+					has_tech_option = tech_ukn_crystalline_tracer_0
+				}
+				AND = { 
+					has_technology = tech_crystal_armor_1
+					has_technology = tech_ukn_crystalline_tracer_0
+				}
+			}
+		}
+	}
+}
+
+# On researching cloning
+country_event = {
+	id = ukn_critter_tech_acquisition_events.12
+#	hide_window = yes
+	title = ukn_critter_tech_acquisition_events.12.name
+	desc = ukn_critter_tech_acquisition_events.12.desc
+	picture = GFX_evt_fleet_neutral
+	show_sound = event_space_amoeba
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_ukn_crystal_entity_components_2
+		NOR = { 
+			OR = { 
+				has_tech_option = tech_crystal_armor_2
+				has_technology = tech_crystal_armor_2
+			}
+			OR = {
+				has_tech_option = tech_ukn_crystalline_tracer_1 
+				has_technology = tech_ukn_crystalline_tracer_1
+			}
+		}
+	}
+
+#	immediate = {
+#		limit = {
+#			OR = {
+#				NOT = { has_tech_option = tech_crystal_armor_2 }
+#				NOT = { has_tech_option = tech_ukn_crystalline_tracer_1 }
+#			}
+#		}
+#		add_research_option = tech_crystal_armor_2
+#		add_research_option = tech_ukn_crystalline_tracer_1
+#		}
+#	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.12.a
+		custom_tooltip = ukn_critter_tech_acquisition_events.12.a.tooltip
+		trigger = {
+			NOR = { 
+				OR = { 
+					has_tech_option = tech_crystal_armor_2
+					has_technology = tech_crystal_armor_2
+				}
+				OR = {
+					has_tech_option = tech_ukn_crystalline_tracer_1 
+					has_technology = tech_ukn_crystalline_tracer_1
+				}
+			}
+		}
+		add_research_option = tech_crystal_armor_2
+		add_research_option = tech_ukn_crystalline_tracer_1
+	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.12.b
+		custom_tooltip = ukn_critter_tech_acquisition_events.12.b.tooltip
+		trigger = {
+			NOR = { 
+				has_tech_option = tech_crystal_armor_2
+				has_technology = tech_crystal_armor_2
+			}
+			OR = {
+				has_tech_option = tech_ukn_crystalline_tracer_1 
+				has_technology = tech_ukn_crystalline_tracer_1
+			}
+		}
+		add_research_option = tech_crystal_armor_2
+	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.12.c
+		custom_tooltip = ukn_critter_tech_acquisition_events.12.c.tooltip
+		trigger = {
+			OR = { 
+				has_tech_option = tech_crystal_armor_2
+				has_technology = tech_crystal_armor_2
+			}
+			NOR = {
+				has_tech_option = tech_ukn_crystalline_tracer_1 
+				has_technology = tech_ukn_crystalline_tracer_1
+			}
+		}
+		add_research_option = tech_ukn_crystalline_tracer_1
+	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.12.d
+		custom_tooltip = ukn_critter_tech_acquisition_events.12.d.tooltip
+		trigger = {
+			OR = { 
+				AND = { 
+					has_tech_option = tech_crystal_armor_2
+					has_tech_option = tech_ukn_crystalline_tracer_1
+				}
+				AND = { 
+					has_tech_option = tech_crystal_armor_2
+					has_technology = tech_ukn_crystalline_tracer_1
+				}
+				AND = { 
+					has_technology = tech_crystal_armor_2
+					has_tech_option = tech_ukn_crystalline_tracer_1
+				}
+				AND = { 
+					has_technology = tech_crystal_armor_2
+					has_technology = tech_ukn_crystalline_tracer_1
+				}
+			}
+		}
+	}
+}
+
+# On researching cloning
+country_event = {
+	id = ukn_critter_tech_acquisition_events.21
+#	hide_window = yes
+	title = ukn_critter_tech_acquisition_events.21.name
+	desc = ukn_critter_tech_acquisition_events.21.desc
+	picture = GFX_evt_fleet_neutral
+	show_sound = event_space_amoeba
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_ukn_mining_drone_components_1
+		NOR = { 
+			OR = { 
+				has_tech_option = tech_mining_drone_weapon_1
+				has_technology = tech_mining_drone_weapon_1
+			}
+			OR = {
+				has_tech_option = tech_ukn_jump_mine_0 
+				has_technology = tech_ukn_jump_mine_0
+			}
+		}
+	}
+
+#	immediate = {
+#		limit = {
+#			OR = {
+#				NOT = { has_tech_option = tech_mining_drone_weapon_1 }
+#				NOT = { has_tech_option = tech_ukn_jump_mine_0 }
+#			}
+#		}
+#		add_research_option = tech_mining_drone_weapon_1
+#		add_research_option = tech_ukn_jump_mine_0
+#		}
+#	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.21.a
+		custom_tooltip = ukn_critter_tech_acquisition_events.21.a.tooltip
+		trigger = {
+			NOR = { 
+				OR = { 
+					has_tech_option = tech_mining_drone_weapon_1
+					has_technology = tech_mining_drone_weapon_1
+				}
+				OR = {
+					has_tech_option = tech_ukn_jump_mine_0 
+					has_technology = tech_ukn_jump_mine_0
+				}
+			}
+		}
+		add_research_option = tech_mining_drone_weapon_1
+		add_research_option = tech_ukn_jump_mine_0
+	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.21.b
+		custom_tooltip = ukn_critter_tech_acquisition_events.21.b.tooltip
+		trigger = {
+			NOR = { 
+				has_tech_option = tech_mining_drone_weapon_1
+				has_technology = tech_mining_drone_weapon_1
+			}
+			OR = {
+				has_tech_option = tech_ukn_jump_mine_0 
+				has_technology = tech_ukn_jump_mine_0
+			}
+		}
+		add_research_option = tech_mining_drone_weapon_1
+	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.21.c
+		custom_tooltip = ukn_critter_tech_acquisition_events.21.c.tooltip
+		trigger = {
+			OR = { 
+				has_tech_option = tech_mining_drone_weapon_1
+				has_technology = tech_mining_drone_weapon_1
+			}
+			NOR = {
+				has_tech_option = tech_ukn_jump_mine_0 
+				has_technology = tech_ukn_jump_mine_0
+			}
+		}
+		add_research_option = tech_ukn_jump_mine_0
+	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.21.d
+		custom_tooltip = ukn_critter_tech_acquisition_events.21.d.tooltip
+		trigger = {
+			OR = { 
+				AND = { 
+					has_tech_option = tech_mining_drone_weapon_1
+					has_tech_option = tech_ukn_jump_mine_0
+				}
+				AND = { 
+					has_tech_option = tech_mining_drone_weapon_1
+					has_technology = tech_ukn_jump_mine_0
+				}
+				AND = { 
+					has_technology = tech_mining_drone_weapon_1
+					has_tech_option = tech_ukn_jump_mine_0
+				}
+				AND = { 
+					has_technology = tech_mining_drone_weapon_1
+					has_technology = tech_ukn_jump_mine_0
+				}
+			}
+		}
+	}
+}
+
+# On researching cloning
+country_event = {
+	id = ukn_critter_tech_acquisition_events.31
+#	hide_window = yes
+	title = ukn_critter_tech_acquisition_events.31.name
+	desc = ukn_critter_tech_acquisition_events.31.desc
+	picture = GFX_evt_fleet_neutral
+	show_sound = event_space_amoeba
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_ukn_space_whale_components_1
+		NOR = { 
+			OR = { 
+				has_tech_option = tech_regenerative_hull_tissue
+				has_technology = tech_regenerative_hull_tissue
+			}
+			OR = {
+				has_tech_option = tech_space_whale_weapon_1 
+				has_technology = tech_space_whale_weapon_1
+			}
+		}
+	}
+
+#	immediate = {
+#		limit = {
+#			OR = {
+#				NOT = { has_tech_option = tech_regenerative_hull_tissue }
+#				NOT = { has_tech_option = tech_space_whale_weapon_1 }
+#			}
+#		}
+#		add_research_option = tech_regenerative_hull_tissue
+#		add_research_option = tech_space_whale_weapon_1
+#		}
+#	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.31.a
+		custom_tooltip = ukn_critter_tech_acquisition_events.31.a.tooltip
+		trigger = {
+			NOR = { 
+				OR = { 
+					has_tech_option = tech_regenerative_hull_tissue
+					has_technology = tech_regenerative_hull_tissue
+				}
+				OR = {
+					has_tech_option = tech_space_whale_weapon_1 
+					has_technology = tech_space_whale_weapon_1
+				}
+			}
+		}
+		add_research_option = tech_regenerative_hull_tissue
+		add_research_option = tech_space_whale_weapon_1
+	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.31.b
+		custom_tooltip = ukn_critter_tech_acquisition_events.31.b.tooltip
+		trigger = {
+			NOR = { 
+				has_tech_option = tech_regenerative_hull_tissue
+				has_technology = tech_regenerative_hull_tissue
+			}
+			OR = {
+				has_tech_option = tech_space_whale_weapon_1 
+				has_technology = tech_space_whale_weapon_1
+			}
+		}
+		add_research_option = tech_regenerative_hull_tissue
+	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.31.c
+		custom_tooltip = ukn_critter_tech_acquisition_events.31.c.tooltip
+		trigger = {
+			OR = { 
+				has_tech_option = tech_regenerative_hull_tissue
+				has_technology = tech_regenerative_hull_tissue
+			}
+			NOR = {
+				has_tech_option = tech_space_whale_weapon_1 
+				has_technology = tech_space_whale_weapon_1
+			}
+		}
+		add_research_option = tech_space_whale_weapon_1
+	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.31.d
+		custom_tooltip = ukn_critter_tech_acquisition_events.31.d.tooltip
+		trigger = {
+			OR = { 
+				AND = { 
+					has_tech_option = tech_regenerative_hull_tissue
+					has_tech_option = tech_space_whale_weapon_1
+				}
+				AND = { 
+					has_tech_option = tech_regenerative_hull_tissue
+					has_technology = tech_space_whale_weapon_1
+				}
+				AND = { 
+					has_technology = tech_regenerative_hull_tissue
+					has_tech_option = tech_space_whale_weapon_1
+				}
+				AND = { 
+					has_technology = tech_regenerative_hull_tissue
+					has_technology = tech_space_whale_weapon_1
+				}
+			}
+		}
+	}
+}
+
+# On researching cloning
+country_event = {
+	id = ukn_critter_tech_acquisition_events.41
+#	hide_window = yes
+	title = ukn_critter_tech_acquisition_events.41.name
+	desc = ukn_critter_tech_acquisition_events.41.desc
+	picture = GFX_evt_fleet_neutral
+	show_sound = event_space_amoeba
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_ukn_space_amoeba_components_1
+		NOR = { 
+			OR = { 
+				has_tech_option = tech_regenerative_hull_tissue
+				has_technology = tech_regenerative_hull_tissue
+			}
+			OR = {
+				has_tech_option = tech_amoeba_strike_craft_1 
+				has_technology = tech_amoeba_strike_craft_1
+			}
+		}
+	}
+
+#	immediate = {
+#		limit = {
+#			OR = {
+#				NOT = { has_tech_option = tech_regenerative_hull_tissue }
+#				NOT = { has_tech_option = tech_amoeba_strike_craft_1 }
+#			}
+#		}
+#		add_research_option = tech_regenerative_hull_tissue
+#		add_research_option = tech_amoeba_strike_craft_1
+#		}
+#	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.41.a
+		custom_tooltip = ukn_critter_tech_acquisition_events.41.a.tooltip
+		trigger = {
+			NOR = { 
+				OR = { 
+					has_tech_option = tech_regenerative_hull_tissue
+					has_technology = tech_regenerative_hull_tissue
+				}
+				OR = {
+					has_tech_option = tech_amoeba_strike_craft_1 
+					has_technology = tech_amoeba_strike_craft_1
+				}
+			}
+		}
+		add_research_option = tech_regenerative_hull_tissue
+		add_research_option = tech_amoeba_strike_craft_1
+	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.41.b
+		custom_tooltip = ukn_critter_tech_acquisition_events.41.b.tooltip
+		trigger = {
+			NOR = { 
+				has_tech_option = tech_regenerative_hull_tissue
+				has_technology = tech_regenerative_hull_tissue
+			}
+			OR = {
+				has_tech_option = tech_amoeba_strike_craft_1 
+				has_technology = tech_amoeba_strike_craft_1
+			}
+		}
+		add_research_option = tech_regenerative_hull_tissue
+	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.41.c
+		custom_tooltip = ukn_critter_tech_acquisition_events.41.c.tooltip
+		trigger = {
+			OR = { 
+				has_tech_option = tech_regenerative_hull_tissue
+				has_technology = tech_regenerative_hull_tissue
+			}
+			NOR = {
+				has_tech_option = tech_amoeba_strike_craft_1 
+				has_technology = tech_amoeba_strike_craft_1
+			}
+		}
+		add_research_option = tech_amoeba_strike_craft_1
+	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.41.d
+		custom_tooltip = ukn_critter_tech_acquisition_events.41.d.tooltip
+		trigger = {
+			OR = { 
+				AND = { 
+					has_tech_option = tech_regenerative_hull_tissue
+					has_tech_option = tech_amoeba_strike_craft_1
+				}
+				AND = { 
+					has_tech_option = tech_regenerative_hull_tissue
+					has_technology = tech_amoeba_strike_craft_1
+				}
+				AND = { 
+					has_technology = tech_regenerative_hull_tissue
+					has_tech_option = tech_amoeba_strike_craft_1
+				}
+				AND = { 
+					has_technology = tech_regenerative_hull_tissue
+					has_technology = tech_amoeba_strike_craft_1
+				}
+			}
+		}
+	}
+}
+
+# On researching cloning
+country_event = {
+	id = ukn_critter_tech_acquisition_events.51
+#	hide_window = yes
+	title = ukn_critter_tech_acquisition_events.51.name
+	desc = ukn_critter_tech_acquisition_events.51.desc
+	picture = GFX_evt_fleet_neutral
+	show_sound = event_space_amoeba
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_ukn_void_cloud_components_1
+		OR = {
+			NOT = { has_tech_option = tech_space_cloud_weapon_1 }
+			NOT = { has_technology = tech_space_cloud_weapon_1 }
+		}
+	}
+
+#	immediate = {
+#		limit = {
+#			OR = {
+#				NOT = { has_tech_option = tech_space_cloud_weapon_1 }
+#				NOT = { has_tech_option = tech_amoeba_strike_craft_1 }
+#			}
+#		}
+#		add_research_option = tech_space_cloud_weapon_1
+#		add_research_option = tech_amoeba_strike_craft_1
+#		}
+#	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.51.a
+		custom_tooltip = ukn_critter_tech_acquisition_events.51.a.tooltip
+		trigger = {
+			NOR = { 
+				OR = { 
+					has_tech_option = tech_space_cloud_weapon_1
+					has_technology = tech_space_cloud_weapon_1
+				}
+				OR = {
+					has_tech_option = tech_amoeba_strike_craft_1 
+					has_technology = tech_amoeba_strike_craft_1
+				}
+			}
+		}
+		add_research_option = tech_space_cloud_weapon_1
+		add_research_option = tech_amoeba_strike_craft_1
+	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.51.b
+		custom_tooltip = ukn_critter_tech_acquisition_events.51.b.tooltip
+		trigger = {
+			NOR = { 
+				has_tech_option = tech_space_cloud_weapon_1
+				has_technology = tech_space_cloud_weapon_1
+			}
+			OR = {
+				has_tech_option = tech_amoeba_strike_craft_1 
+				has_technology = tech_amoeba_strike_craft_1
+			}
+		}
+		add_research_option = tech_space_cloud_weapon_1
+	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.51.c
+		custom_tooltip = ukn_critter_tech_acquisition_events.51.c.tooltip
+		trigger = {
+			OR = { 
+				has_tech_option = tech_space_cloud_weapon_1
+				has_technology = tech_space_cloud_weapon_1
+			}
+			NOR = {
+				has_tech_option = tech_amoeba_strike_craft_1 
+				has_technology = tech_amoeba_strike_craft_1
+			}
+		}
+		add_research_option = tech_amoeba_strike_craft_1
+	}
+
+	option = {
+		name = ukn_critter_tech_acquisition_events.51.d
+		custom_tooltip = ukn_critter_tech_acquisition_events.51.d.tooltip
+		trigger = {
+			OR = { 
+				AND = { 
+					has_tech_option = tech_space_cloud_weapon_1
+					has_tech_option = tech_amoeba_strike_craft_1
+				}
+				AND = { 
+					has_tech_option = tech_space_cloud_weapon_1
+					has_technology = tech_amoeba_strike_craft_1
+				}
+				AND = { 
+					has_technology = tech_space_cloud_weapon_1
+					has_tech_option = tech_amoeba_strike_craft_1
+				}
+				AND = { 
+					has_technology = tech_space_cloud_weapon_1
+					has_technology = tech_amoeba_strike_craft_1
+				}
+			}
+		}
+	}
+}
+
+namespace = ukn_megastructure_tech_acquisition_events
+
+# On researching Femtomatter
+country_event = {
+	id = ukn_megastructure_tech_acquisition_events.11
+	hide_window = yes
+	title = ukn_megastructure_tech_acquisition_events.11.name
+	desc = ukn_megastructure_tech_acquisition_events.11.desc
+	picture = GFX_evt_fleet_neutral
+	show_sound = event_space_amoeba
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_ship_armor_4
+		NOR = { 
+			has_tech_option = tech_ukn_femtomatter_replicator
+			has_technology = tech_ukn_femtomatter_replicator
+		}
+	}
+
+	option = {
+		name = ukn_megastructure_tech_acquisition_events.11.a
+		custom_tooltip = ukn_megastructure_tech_acquisition_events.11.a.tooltip
+		trigger = {
+			NOR = { 
+				has_tech_option = tech_ukn_femtomatter_replicator
+				has_technology = tech_ukn_femtomatter_replicator
+				has_technology = tech_starbase_5
+			}
+		}
+#		add_research_option = tech_ukn_femtomatter_replicator
+	}
+
+	option = {
+		name = ukn_megastructure_tech_acquisition_events.11.b
+		custom_tooltip = ukn_megastructure_tech_acquisition_events.11.b.tooltip
+		trigger = {
+			NOR = { 
+				has_tech_option = tech_ukn_femtomatter_replicator
+				has_technology = tech_ukn_femtomatter_replicator
+			}
+			OR = {
+				has_technology = tech_starbase_5
+			}
+		}
+		add_research_option = tech_ukn_femtomatter_replicator
+	}
+}
+
+# On researching Kilostructural Engineering
+country_event = {
+	id = ukn_megastructure_tech_acquisition_events.12
+#	hide_window = yes
+	title = ukn_megastructure_tech_acquisition_events.12.name
+	desc = ukn_megastructure_tech_acquisition_events.12.desc
+	picture = GFX_evt_fleet_neutral
+	show_sound = event_space_amoeba
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_starbase_5
+		has_technology = tech_ship_armor_4
+		NOR = { 
+			has_tech_option = tech_ukn_femtomatter_replicator
+			has_technology = tech_ukn_femtomatter_replicator
+		}
+	}
+
+	option = {
+		name = ukn_megastructure_tech_acquisition_events.12.a
+		custom_tooltip = ukn_megastructure_tech_acquisition_events.12.a.tooltip
+		trigger = {
+			has_technology = tech_starbase_5
+			has_technology = tech_ship_armor_4
+		}
+		add_research_option = tech_ukn_femtomatter_replicator
+	}
+}
+
+# On researching Condensics
+country_event = {
+	id = ukn_megastructure_tech_acquisition_events.21
+#	hide_window = yes
+	title = ukn_megastructure_tech_acquisition_events.21.name
+	desc = ukn_megastructure_tech_acquisition_events.21.desc
+	picture = GFX_evt_fleet_neutral
+	show_sound = event_space_amoeba
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_ship_armor_5
+		NOR = { 
+			has_tech_option = tech_ukn_condensics_macro_compositor
+			has_technology = tech_ukn_condensics_macro_compositor
+		}
+	}
+
+	option = {
+		name = ukn_megastructure_tech_acquisition_events.21.a
+		custom_tooltip = ukn_megastructure_tech_acquisition_events.21.a.tooltip
+		trigger = {
+			NOR = { 
+				has_tech_option = tech_ukn_condensics_macro_compositor
+				has_technology = tech_ukn_condensics_macro_compositor
+				has_galactic_wonders = yes
+			}
+		}
+#		add_research_option = tech_ukn_condensics_macro_compositor
+	}
+
+	option = {
+		name = ukn_megastructure_tech_acquisition_events.21.b
+		custom_tooltip = ukn_megastructure_tech_acquisition_events.21.b.tooltip
+		trigger = {
+			NOR = { 
+				has_tech_option = tech_ukn_condensics_macro_compositor
+				has_technology = tech_ukn_condensics_macro_compositor
+			}
+			has_galactic_wonders = yes
+		}
+		add_research_option = tech_ukn_condensics_macro_compositor
+	}
+}
+
+# On researching Megaengineering
+country_event = {
+	id = ukn_megastructure_tech_acquisition_events.22
+#	hide_window = yes
+	title = ukn_megastructure_tech_acquisition_events.22.name
+	desc = ukn_megastructure_tech_acquisition_events.22.desc
+	picture = GFX_evt_fleet_neutral
+	show_sound = event_space_amoeba
+	is_triggered_only = yes
+
+	trigger = {
+		has_galactic_wonders = yes
+		has_technology = tech_ship_armor_5
+		NOR = { 
+			has_tech_option = tech_ukn_condensics_macro_compositor
+			has_technology = tech_ukn_condensics_macro_compositor
+		}
+	}
+
+	option = {
+		name = ukn_megastructure_tech_acquisition_events.22.a
+		custom_tooltip = ukn_megastructure_tech_acquisition_events.22.a.tooltip
+		trigger = {
+			has_galactic_wonders = yes
+			has_technology = tech_ship_armor_5
+		}
+		add_research_option = tech_ukn_condensics_macro_compositor
+	}
+}
+
+# On researching Quasi-Matter
+country_event = {
+	id = ukn_megastructure_tech_acquisition_events.31
+#	hide_window = yes
+	title = ukn_megastructure_tech_acquisition_events.31.name
+	desc = ukn_megastructure_tech_acquisition_events.31.desc
+	picture = GFX_evt_fleet_neutral
+	show_sound = event_space_amoeba
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_ukn_materials_6
+		NOR = { 
+			has_tech_option = tech_ukn_quasi_matter_array
+			has_technology = tech_ukn_quasi_matter_array
+		}
+	}
+
+	option = {
+		name = ukn_megastructure_tech_acquisition_events.31.a
+		custom_tooltip = ukn_megastructure_tech_acquisition_events.31.a.tooltip
+		trigger = {
+			NOR = { 
+				has_tech_option = tech_ukn_quasi_matter_array
+				has_technology = tech_ukn_quasi_matter_array
+				has_ascension_perk = ap_master_builders
+			}
+		}
+#		add_research_option = tech_ukn_quasi_matter_array
+	}
+
+	option = {
+		name = ukn_megastructure_tech_acquisition_events.31.b
+		custom_tooltip = ukn_megastructure_tech_acquisition_events.31.b.tooltip
+		trigger = {
+			NOR = { 
+				has_tech_option = tech_ukn_quasi_matter_array
+				has_technology = tech_ukn_quasi_matter_array
+			}
+			has_ascension_perk = ap_master_builders
+		}
+		add_research_option = tech_ukn_quasi_matter_array
+	}
+}
+
+# On acquiring Gigastructural Constructs/Master Builders
+country_event = {
+	id = ukn_megastructure_tech_acquisition_events.32
+#	hide_window = yes
+	title = ukn_megastructure_tech_acquisition_events.32.name
+	desc = ukn_megastructure_tech_acquisition_events.32.desc
+	picture = GFX_evt_fleet_neutral
+	show_sound = event_space_amoeba
+	is_triggered_only = yes
+
+	trigger = {
+		has_ascension_perk = ap_master_builders
+		has_technology = tech_ukn_materials_6
+		NOR = { 
+			has_tech_option = tech_ukn_quasi_matter_array
+			has_technology = tech_ukn_quasi_matter_array
+		}
+	}
+
+	option = {
+		name = ukn_megastructure_tech_acquisition_events.32.a
+		custom_tooltip = ukn_megastructure_tech_acquisition_events.32.a.tooltip
+		trigger = {
+			has_ascension_perk = ap_master_builders
+			has_technology = tech_ukn_materials_6
+		}
+		add_research_option = tech_ukn_quasi_matter_array
+	}
+}
+
+# On researching Planckeryons
+country_event = {
+	id = ukn_megastructure_tech_acquisition_events.41
+#	hide_window = yes
+	title = ukn_megastructure_tech_acquisition_events.41.name
+	desc = ukn_megastructure_tech_acquisition_events.41.desc
+	picture = GFX_evt_fleet_neutral
+	show_sound = event_space_amoeba
+	is_triggered_only = yes
+
+	trigger = {
+		last_increased_tech = tech_ukn_materials_8
+		NOR = { 
+			has_tech_option = tech_ukn_materials_8
+			has_technology = tech_ukn_materials_8
+		}
+	}
+
+	option = {
+		name = ukn_megastructure_tech_acquisition_events.41.b
+		custom_tooltip = ukn_megastructure_tech_acquisition_events.41.b.tooltip
+		trigger = {
+			NOR = { 
+				has_tech_option = tech_ukn_materials_8
+				has_technology = tech_ukn_materials_8
+			}
+		}
+		add_research_option = tech_ukn_femtomatter_replicator
+	}
+}

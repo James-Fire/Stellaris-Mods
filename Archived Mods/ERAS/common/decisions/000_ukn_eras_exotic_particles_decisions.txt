@@ -1,0 +1,351 @@
+#[ALLOYS] Exotic Particles Output
+decision_ukn_alloys_based_exotic_particles_production = {
+	owned_planets_only = yes
+
+	prerequisites = {
+		"tech_mine_ukn_exotic_particles"
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+		}
+	}
+
+	potential = {
+		NOR = {
+			has_modifier = mod_ukn_alloys_based_exotic_particles_production
+			has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+			has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+			has_modifier = mod_ukn_condensics_based_exotic_particles_production
+			has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+			has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+#		custom_tooltip = tooltip_decision_ukn_alloys_based_exotic_particles_production
+		add_modifier = { modifier = mod_ukn_alloys_based_exotic_particles_production }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#[META-MATERIALS] Exotic Particles Output
+decision_ukn_meta_materials_based_exotic_particles_production = {
+	owned_planets_only = yes
+
+	prerequisites = {
+		"tech_mine_ukn_exotic_particles"
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+		}
+	}
+
+	potential = {
+		has_modifier = mod_ukn_alloys_based_exotic_particles_production
+		NOR = {
+			has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+			has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+			has_modifier = mod_ukn_condensics_based_exotic_particles_production
+			has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+			has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			remove_modifier = mod_ukn_alloys_based_exotic_particles_production
+			remove_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+			remove_modifier = mod_ukn_condensics_based_exotic_particles_production
+			remove_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+			remove_modifier = mod_ukn_causalitons_based_exotic_particles_production
+		}
+		add_modifier = { modifier = mod_ukn_meta_materials_based_exotic_particles_production }
+		custom_tooltip = tooltip_decision_ukn_meta_materials_based_exotic_particles_production
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#[FEMTOMMATER] Exotic Particles Output
+decision_ukn_femtomatter_based_exotic_particles_production = {
+	owned_planets_only = yes
+
+	prerequisites = {
+		"tech_ship_armor_4"
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+		}
+	}
+
+	potential = {
+		has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+		NOR = {
+			has_modifier = mod_ukn_alloys_based_exotic_particles_production
+			has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+			has_modifier = mod_ukn_condensics_based_exotic_particles_production
+			has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+			has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			remove_modifier = mod_ukn_alloys_based_exotic_particles_production
+			remove_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+			remove_modifier = mod_ukn_condensics_based_exotic_particles_production
+			remove_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+			remove_modifier = mod_ukn_causalitons_based_exotic_particles_production
+		}
+		add_modifier = { modifier = mod_ukn_femtomatter_based_exotic_particles_production }
+		custom_tooltip = tooltip_decision_ukn_femtomatter_based_exotic_particles_production
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#[CONDENSICS] Exotic Particles Output
+decision_ukn_condensics_based_exotic_particles_production = {
+	owned_planets_only = yes
+
+	prerequisites = {
+		"tech_ship_armor_5"
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+		}
+	}
+
+	potential = {
+		has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+		NOR = {
+			has_modifier = mod_ukn_alloys_based_exotic_particles_production
+			has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+			has_modifier = mod_ukn_condensics_based_exotic_particles_production
+			has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+			has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			remove_modifier = mod_ukn_alloys_based_exotic_particles_production
+			remove_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+			remove_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+			remove_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+			remove_modifier = mod_ukn_causalitons_based_exotic_particles_production
+		}
+		add_modifier = { modifier = mod_ukn_condensics_based_exotic_particles_production }
+		custom_tooltip = tooltip_decision_ukn_condensics_based_exotic_particles_production
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#[QUASI-MATTER] Exotic Particles Output
+decision_ukn_quasi_matter_based_exotic_particles_production = {
+	owned_planets_only = yes
+
+	prerequisites = {
+		"tech_ukn_quasi_matter_array"
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+		}
+	}
+
+	potential = {
+		has_modifier = mod_ukn_condensics_based_exotic_particles_production
+		NOR = {
+			has_modifier = mod_ukn_alloys_based_exotic_particles_production
+			has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+			has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+			has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+			has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			remove_modifier = mod_ukn_alloys_based_exotic_particles_production
+			remove_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+			remove_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+			remove_modifier = mod_ukn_condensics_based_exotic_particles_production
+			remove_modifier = mod_ukn_causalitons_based_exotic_particles_production
+		}
+		add_modifier = { modifier = mod_ukn_quasi_matter_based_exotic_particles_production }
+		custom_tooltip = tooltip_decision_ukn_quasi_matter_based_exotic_particles_production
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#[OSCILLYONS] Exotic Particles Output
+decision_ukn_causalitons_based_exotic_particles_production = {
+	owned_planets_only = yes
+
+	prerequisites = {
+		"tech_ukn_materials_8"
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+		}
+	}
+
+	potential = {
+		has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+		NOR = {
+			has_modifier = mod_ukn_alloys_based_exotic_particles_production
+			has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+			has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+			has_modifier = mod_ukn_condensics_based_exotic_particles_production
+			has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			remove_modifier = mod_ukn_alloys_based_exotic_particles_production
+			remove_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+			remove_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+			remove_modifier = mod_ukn_condensics_based_exotic_particles_production
+			remove_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+		}
+		add_modifier = { modifier = mod_ukn_causalitons_based_exotic_particles_production }
+		custom_tooltip = tooltip_decision_ukn_causalitons_based_exotic_particles_production
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#[BASIC/MINERALS] Exotic Particles Output
+decision_ukn_minerals_based_exotic_particles_production = {
+	owned_planets_only = yes
+
+	prerequisites = {
+		"tech_mine_ukn_exotic_particles"
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+		}
+	}
+
+	potential = {
+		OR = {
+			AND = {
+				has_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+				exists = owner
+				owner = { 
+					NOR = {
+						has_technology = tech_ship_armor_4
+						has_technology = tech_ship_armor_5
+						has_technology = tech_ukn_materials_6
+						has_technology = tech_ukn_materials_8
+					}
+				}
+			}
+			AND = {
+				has_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+				exists = owner
+				owner = { 
+					NOR = {
+						has_technology = tech_ship_armor_5
+						has_technology = tech_ukn_materials_6
+						has_technology = tech_ukn_materials_8
+					}
+				}
+			}
+			AND = {
+				has_modifier = mod_ukn_condensics_based_exotic_particles_production
+				exists = owner
+				owner = { 
+					NOR = {
+						has_technology = tech_ukn_materials_6
+						has_technology = tech_ukn_materials_8
+					}
+				}
+			}
+			AND = {
+				has_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+				exists = owner
+				owner = { 
+					NOR = {
+						has_technology = tech_ukn_materials_8
+					}
+				}
+			}
+			has_modifier = mod_ukn_causalitons_based_exotic_particles_production
+		}
+	}
+
+	allow = {
+		always = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			remove_modifier = mod_ukn_alloys_based_exotic_particles_production
+			remove_modifier = mod_ukn_meta_materials_based_exotic_particles_production
+			remove_modifier = mod_ukn_femtomatter_based_exotic_particles_production
+			remove_modifier = mod_ukn_condensics_based_exotic_particles_production
+			remove_modifier = mod_ukn_quasi_matter_based_exotic_particles_production
+			remove_modifier = mod_ukn_causalitons_based_exotic_particles_production
+		}
+		custom_tooltip = tooltip_decision_ukn_minerals_based_exotic_particles_production
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

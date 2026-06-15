@@ -1,0 +1,119 @@
+# Icons set here are the ones show in the actual slot.
+
+#####################
+#  XL Weapon
+#####################
+
+# ## Mass Accelerator 0
+weapon_component_template = {
+	type = instant
+	
+	key = "MASS_ACCELERATOR_0"
+	size = extra_large
+	entity = "invisible_turret_entity"
+	
+	icon = "GFX_ship_part_mass_accelerator_1"
+	icon_frame = 1
+	
+	firing_arc = 25.0
+	min_range = 10.0
+	use_ship_kill_target = no
+	
+	prerequisites = { "tech_starbase_1" }
+	component_set = "MASS_ACCELERATOR_1"
+	projectile_gfx = "kinetic_artillery"
+	size_restriction = { starbase_citadel starbase_bastion juggernaut }
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "MASS_ACCELERATOR_1"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t5_cost
+		}		
+		upkeep = {
+			energy = @l_t5_upkeep_energy
+		}
+	}
+	
+	damage = { min = 700.0 max = 2000.0 }
+	windup = { min = 1 max = 19 }
+	
+	total_fire_time = 80.00
+	
+	range = 150.0
+	accuracy = 0.75
+	tracking = 0.0
+	
+	hull_damage = 1.00
+	shield_damage = 1.50
+	shield_penetration = 0
+	armor_damage = 0.5
+	armor_penetration = 0
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			OR = {
+				AND = {
+					has_technology = tech_energy_lance_1
+					has_monthly_income = { resource = rare_crystals value > 0 }
+				}
+				AND = {
+					has_technology = tech_arc_emitter_1
+					has_monthly_income = { resource = rare_crystals value > 0 }
+				}
+				AND = {
+					has_technology = tech_mass_accelerator_1
+					has_monthly_income = { resource = volatile_motes value > 0 }
+				}
+			}
+		}
+	}
+}
+
+#####################
+# Titan Laser
+#####################
+
+# ## Perdition Beam
+weapon_component_template = {
+	key = "PERDITION_BEAM_ION"
+	size = titanic
+	entity = "invisible_turret_entity"
+	type = instant
+	prio_projectile = yes
+		
+	icon = "GFX_ship_part_perdition_beam"
+	icon_frame = 1
+	
+	firing_arc = 10.0
+	min_range = 30.0
+	use_ship_kill_target = no
+	
+	prerequisites = { "tech_titans" }
+	component_set = "PERDITION_BEAM"
+	projectile_gfx = "ion_cannon"
+	size_restriction = { ion_cannon starbase_bastion juggernaut }
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titanic_t6_cost
+			rare_crystals = @titanic_t6_rare
+		}		
+		upkeep = {
+			energy = @titanic_t6_upkeep_energy
+			alloys = @titanic_t6_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		#modifier = {
+		#	factor = 0.0
+		#	has_monthly_income = { resource = rare_crystals value <= 0 }
+		#}
+	}
+}

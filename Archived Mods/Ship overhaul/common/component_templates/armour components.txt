@@ -1,0 +1,1015 @@
+##Armour Thickness Components##
+
+##Small Armour thickness
+
+utility_component_template = {
+	key = "SMALL_ARMOUR_THICKNESS_1"
+	size = small
+	icon = "GFX_ship_part_armour_layer_1"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourthicknesscost_s1
+		}	
+		upkeep = {
+			#energy = @armourcost_S1_upkeep_energy
+			#alloys = @armourcost_S1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_hull_mult = @healthbonus1
+	}
+	size_restriction = { corvette destroyer }
+	class_restriction = { shipclass_starbase shipclass_military }
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "armour_thickness"
+	upgrades_to = "SMALL_ARMOUR_THICKNESS_2"
+}
+
+utility_component_template = {
+	key = "SMALL_ARMOUR_THICKNESS_2"
+	size = small
+	icon = "GFX_ship_part_armour_layer_2"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourthicknesscost_s2
+		}
+		upkeep = {
+			#energy = @armourcost_M1_upkeep_energy
+			#alloys = @armourcost_M1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_mult = @armourbonus2
+		ship_hull_mult = @healthbonus2
+		ship_evasion_mult = -0.05
+		ship_speed_mult = -0.05
+	}
+	size_restriction = { corvette destroyer }
+	class_restriction = { shipclass_starbase shipclass_military }
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "armour_thickness"
+	upgrades_to = "SMALL_ARMOUR_THICKNESS_3"
+}
+
+utility_component_template = {
+	key = "SMALL_ARMOUR_THICKNESS_3"
+	size = small
+	icon = "GFX_ship_part_armour_layer_3"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourthicknesscost_s3
+		}
+		upkeep = {
+			#energy = @armourcost_L1_upkeep_energy
+			#alloys = @armourcost_L1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_mult = @armourbonus3
+		ship_hull_mult = @healthbonus3
+		ship_evasion_mult = -0.1
+		ship_speed_mult = -0.1
+	}
+	size_restriction = { corvette destroyer }
+	class_restriction = { shipclass_starbase shipclass_military }
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "armour_thickness"
+	upgrades_to = "SMALL_ARMOUR_THICKNESS_4"
+}
+
+utility_component_template = {
+	key = "SMALL_ARMOUR_THICKNESS_4"
+	size = small
+	icon = "GFX_ship_part_armour_layer_4"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourthicknesscost_s4
+		}
+		upkeep = {
+			#energy = @armourcost_L1_upkeep_energy
+			#alloys = @armourcost_L1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_mult = @armourbonus4
+		ship_hull_mult = @healthbonus4
+		ship_evasion_mult = -0.15
+		ship_speed_mult = -0.15
+	}
+	size_restriction = { destroyer }
+	class_restriction = { shipclass_starbase shipclass_military }
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "armour_thickness"
+}
+
+##Medium Armour Thickness
+
+utility_component_template = {
+	key = "MEDIUM_ARMOUR_THICKNESS_2"
+	size = small
+	icon = "GFX_ship_part_armour_layer_2"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourthicknesscost_m2
+		}
+		upkeep = {
+			#energy = @armourcost_M1_upkeep_energy
+			#alloys = @armourcost_M1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_mult = @armourbonus2
+		ship_hull_mult = @healthbonus2
+		ship_evasion_mult = -0.05
+		ship_speed_mult = -0.05
+	}
+	size_restriction = { cruiser ion_cannon military_station_small }
+	class_restriction = { shipclass_starbase shipclass_military }
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "armour_thickness"
+	upgrades_to = "MEDIUM_ARMOUR_THICKNESS_3"
+}
+
+utility_component_template = {
+	key = "MEDIUM_ARMOUR_THICKNESS_3"
+	size = small
+	icon = "GFX_ship_part_armour_layer_3"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourthicknesscost_m3
+		}
+		upkeep = {
+			#energy = @armourcost_L1_upkeep_energy
+			#alloys = @armourcost_L1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_mult = @armourbonus3
+		ship_hull_mult = @healthbonus3
+		ship_evasion_mult = -0.1
+		ship_speed_mult = -0.1
+	}
+	size_restriction = { cruiser ion_cannon military_station_small }
+	class_restriction = { shipclass_starbase shipclass_military }
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "armour_thickness"
+	upgrades_to = "MEDIUM_ARMOUR_THICKNESS_4"
+}
+
+utility_component_template = {
+	key = "MEDIUM_ARMOUR_THICKNESS_4"
+	size = small
+	icon = "GFX_ship_part_armour_layer_4"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourthicknesscost_m4
+		}
+		upkeep = {
+		}
+	}
+	modifier = {
+		ship_armor_mult = @armourbonus4
+		ship_hull_mult = @healthbonus4
+		ship_evasion_mult = -0.15
+		ship_speed_mult = -0.15
+	}
+	size_restriction = { cruiser ion_cannon military_station_small }
+	class_restriction = { shipclass_starbase shipclass_military }
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "armour_thickness"
+	upgrades_to = "MEDIUM_ARMOUR_THICKNESS_5"
+}
+
+utility_component_template = {
+	key = "MEDIUM_ARMOUR_THICKNESS_5"
+	size = small
+	icon = "GFX_ship_part_armour_layer_5"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourthicknesscost_m5
+		}
+		upkeep = {
+		}
+	}
+	modifier = {
+		ship_armor_mult = @armourbonus5
+		ship_hull_mult = @healthbonus5
+		ship_evasion_mult = -0.2
+		ship_speed_mult = -0.2
+	}
+	size_restriction = { cruiser ion_cannon military_station_small }
+	class_restriction = { shipclass_starbase shipclass_military }
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "armour_thickness"
+}
+
+##Large Armour Thickness
+
+utility_component_template = {
+	key = "LARGE_ARMOUR_THICKNESS_3"
+	size = small
+	icon = "GFX_ship_part_armour_layer_3"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourthicknesscost_l3
+		}
+		upkeep = {
+			#energy = @armourcost_L1_upkeep_energy
+			#alloys = @armourcost_L1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_mult = @armourbonus3
+		ship_hull_mult = @healthbonus3
+		ship_evasion_mult = -0.1
+		ship_speed_mult = -0.1
+	}
+	size_restriction = { battleship titan }
+	class_restriction = { shipclass_starbase shipclass_military }
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "armour_thickness"
+	upgrades_to = "LARGE_ARMOUR_THICKNESS_4"
+}
+
+utility_component_template = {
+	key = "LARGE_ARMOUR_THICKNESS_4"
+	size = small
+	icon = "GFX_ship_part_armour_layer_4"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourthicknesscost_l4
+		}
+		upkeep = {
+		}
+	}
+	modifier = {
+		ship_armor_mult = @armourbonus4
+		ship_hull_mult = @healthbonus4
+		ship_evasion_mult = -0.15
+		ship_speed_mult = -0.15
+	}
+	size_restriction = { battleship titan }
+	class_restriction = { shipclass_starbase shipclass_military }
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "armour_thickness"
+	upgrades_to = "LARGE_ARMOUR_THICKNESS_5"
+}
+
+utility_component_template = {
+	key = "LARGE_ARMOUR_THICKNESS_5"
+	size = small
+	icon = "GFX_ship_part_armour_layer_5"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourthicknesscost_l5
+		}
+		upkeep = {
+		}
+	}
+	modifier = {
+		ship_armor_mult = @armourbonus5
+		ship_hull_mult = @healthbonus5
+		ship_evasion_mult = -0.2
+		ship_speed_mult = -0.2
+	}
+	size_restriction = { battleship titan }
+	class_restriction = { shipclass_starbase shipclass_military }
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "armour_thickness"
+}
+
+##Starbase Armour Thickness.
+
+utility_component_template = {
+	key = "STARBASE_ARMOUR_THICKNESS_5"
+	size = small
+	icon = "GFX_ship_part_armour_layer_5"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourthicknesscost_st5
+		}
+		upkeep = {
+		}
+	}
+	modifier = {
+		ship_armor_mult = @armourbonus5
+		ship_hull_mult = @healthbonus5
+		ship_evasion_mult = -0.2
+		ship_speed_mult = -0.2
+	}
+	class_restriction = { shipclass_starbase }
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "armour_thickness"
+}
+
+##Base Armour Components##
+# Deflectors
+utility_component_template = {
+	key = "SIZE_1_ARMOUR_1"
+	size = small
+	icon = "GFX_ship_part_armor_1"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourcost_S1
+		}	
+		upkeep = {
+			energy = @armourcost_S1_upkeep_energy
+			alloys = @armourcost_S1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_S1
+	}
+	size_restriction = { corvette destroyer colonizer lithoid_colonizer sponsored_colonizer constructor science transport }
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "ship_armour_plating"
+	upgrades_to = "SIZE_1_ARMOUR_2"
+}
+
+utility_component_template = {
+	key = "SIZE_2_ARMOUR_1"
+	size = medium
+	icon = "GFX_ship_part_armor_1"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourcost_M1
+		}
+		upkeep = {
+			energy = @armourcost_M1_upkeep_energy
+			alloys = @armourcost_M1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_M1
+	}
+	size_restriction = { cruiser ion_cannon military_station_small }
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "ship_armour_plating"
+	upgrades_to = "SIZE_2_ARMOUR_2"
+}
+
+utility_component_template = {
+	key = "SIZE_3_ARMOUR_1"
+	size = large
+	icon = "GFX_ship_part_armor_1"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourcost_L1
+		}
+		upkeep = {
+			energy = @armourcost_L1_upkeep_energy
+			alloys = @armourcost_L1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_L1
+	}
+	size_restriction = { battleship titan }
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "ship_armour_plating"
+	upgrades_to = "SIZE_3_ARMOUR_2"
+}
+
+utility_component_template = {
+	key = "STARBASE_ARMOUR_1"
+	size = large
+	icon = "GFX_ship_part_armor_1"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+		}
+		upkeep = {
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_St1
+	}
+	class_restriction = { shipclass_starbase }
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "ship_armour_plating"
+	upgrades_to = "STARBASE_ARMOUR_2"
+}
+
+# Advanced Deflectors
+utility_component_template = {
+	key = "SIZE_1_ARMOUR_2"
+	size = small
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourcost_S2
+		}
+		upkeep = {
+			energy = @armourcost_S2_upkeep_energy
+			alloys = @armourcost_S2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_S2
+	}
+	size_restriction = { corvette destroyer colonizer lithoid_colonizer sponsored_colonizer constructor science transport }
+	prerequisites = { "tech_ship_armor_2" }
+	component_set = "ship_armour_plating"
+	upgrades_to = "SIZE_1_ARMOUR_3"
+}
+
+utility_component_template = {
+	key = "SIZE_2_ARMOUR_2"
+	size = medium
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourcost_M2
+		}
+		upkeep = {
+			energy = @armourcost_M2_upkeep_energy
+			alloys = @armourcost_M2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_M2
+	}
+	size_restriction = { cruiser ion_cannon military_station_small }
+	prerequisites = { "tech_ship_armor_2" }
+	component_set = "ship_armour_plating"
+	upgrades_to = "SIZE_2_ARMOUR_3"
+}
+
+utility_component_template = {
+	key = "SIZE_3_ARMOUR_2"
+	size = large
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourcost_L2
+		}
+		upkeep = {
+			energy = @armourcost_L2_upkeep_energy
+			alloys = @armourcost_L2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_L2
+	}
+	size_restriction = { battleship titan }
+	prerequisites = { "tech_ship_armor_2" }
+	component_set = "ship_armour_plating"
+	upgrades_to = "SIZE_3_ARMOUR_3"
+}
+
+utility_component_template = {
+	key = "STARBASE_ARMOUR_2"
+	size = large
+	icon = "GFX_ship_part_armor_2"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+		}
+		upkeep = {
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_St2
+	}
+	class_restriction = { shipclass_starbase }
+	prerequisites = { "tech_ship_armor_2" }
+	component_set = "ship_armour_plating"
+	upgrades_to = "STARBASE_ARMOUR_3"
+}
+
+# armourcost_S
+utility_component_template = {
+	key = "SIZE_1_ARMOUR_3"
+	size = small
+	icon = "GFX_ship_part_armor_3"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourcost_S3
+		}
+		upkeep = {
+			energy = @armourcost_S3_upkeep_energy
+			alloys = @armourcost_S3_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_S3
+	}
+	size_restriction = { corvette destroyer colonizer lithoid_colonizer sponsored_colonizer constructor science transport }
+	prerequisites = { "tech_ship_armor_3" }
+	component_set = "ship_armour_plating"
+	upgrades_to = "SIZE_1_ARMOUR_4"
+}
+
+utility_component_template = {
+	key = "SIZE_2_ARMOUR_3"
+	size = medium
+	icon = "GFX_ship_part_armor_3"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourcost_M3
+		}
+		upkeep = {
+			energy = @armourcost_M3_upkeep_energy
+			alloys = @armourcost_M3_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_M3
+	}
+	size_restriction = { cruiser ion_cannon military_station_small }
+	prerequisites = { "tech_ship_armor_3" }
+	component_set = "ship_armour_plating"
+	upgrades_to = "SIZE_2_ARMOUR_4"
+}
+
+utility_component_template = {
+	key = "SIZE_3_ARMOUR_3"
+	size = large
+	icon = "GFX_ship_part_armor_3"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourcost_L3
+		}
+		upkeep = {
+			energy = @armourcost_L3_upkeep_energy
+			alloys = @armourcost_L3_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_L3
+	}
+	size_restriction = { battleship titan }
+	prerequisites = { "tech_ship_armor_3" }
+	component_set = "ship_armour_plating"
+	upgrades_to = "SIZE_3_ARMOUR_4"
+}
+
+utility_component_template = {
+	key = "STARBASE_ARMOUR_3"
+	size = large
+	icon = "GFX_ship_part_armor_3"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+		}
+		upkeep = {
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_St3
+	}
+	class_restriction = { shipclass_starbase }
+	prerequisites = { "tech_ship_armor_3" }
+	component_set = "ship_armour_plating"
+	upgrades_to = "STARBASE_ARMOUR_4"
+}
+
+# Advanced armourcost_S
+utility_component_template = {
+	key = "SIZE_1_ARMOUR_4"
+	size = small
+	icon = "GFX_ship_part_armor_4"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourcost_S4
+		}
+		upkeep = {
+			energy = @armourcost_S4_upkeep_energy
+			alloys = @armourcost_S4_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_S4
+	}
+	size_restriction = { corvette destroyer colonizer lithoid_colonizer sponsored_colonizer constructor science transport }
+	prerequisites = { "tech_ship_armor_4" }
+	component_set = "ship_armour_plating"
+	upgrades_to = "SIZE_1_ARMOUR_5"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "SIZE_2_ARMOUR_4"
+	size = medium
+	icon = "GFX_ship_part_armor_4"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourcost_M4
+		}
+		upkeep = {
+			energy = @armourcost_M4_upkeep_energy
+			alloys = @armourcost_M4_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_M4
+	}
+	size_restriction = { cruiser ion_cannon military_station_small }
+	prerequisites = { "tech_ship_armor_4" }
+	component_set = "ship_armour_plating"
+	upgrades_to = "SIZE_2_ARMOUR_5"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "SIZE_3_ARMOUR_4"
+	size = large
+	icon = "GFX_ship_part_armor_4"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourcost_L4
+		}
+		upkeep = {
+			energy = @armourcost_L4_upkeep_energy
+			alloys = @armourcost_L4_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_L4
+	}
+	size_restriction = { battleship titan }
+	prerequisites = { "tech_ship_armor_4" }
+	component_set = "ship_armour_plating"
+	upgrades_to = "SIZE_3_ARMOUR_5"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_ARMOUR_4"
+	size = large
+	icon = "GFX_ship_part_armor_4"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+		}
+		upkeep = {
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_St4
+	}
+	class_restriction = { shipclass_starbase }
+	prerequisites = { "tech_ship_armor_4" }
+	component_set = "ship_armour_plating"
+	upgrades_to = "STARBASE_ARMOUR_5"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+# Hyper armourcost_S
+utility_component_template = {
+	key = "SIZE_1_ARMOUR_5"
+	size = small
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourcost_S5
+		}
+		upkeep = {
+			energy = @armourcost_S5_upkeep_energy
+			alloys = @armourcost_S5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_S5
+	}
+	size_restriction = { corvette destroyer colonizer lithoid_colonizer sponsored_colonizer constructor science transport }
+	prerequisites = { "tech_ship_armor_5" }
+	upgrades_to = "SIZE_1_DRAGONSCALE"
+	component_set = "ship_armour_plating"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "SIZE_2_ARMOUR_5"
+	size = medium
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourcost_M5
+		}
+		upkeep = {
+			energy = @armourcost_M5_upkeep_energy
+			alloys = @armourcost_M5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_M5
+	}
+	size_restriction = { cruiser ion_cannon military_station_small }
+	prerequisites = { "tech_ship_armor_5" }
+	upgrades_to = "SIZE_2_DRAGONSCALE"
+	component_set = "ship_armour_plating"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "SIZE_3_ARMOUR_5"
+	size = large
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourcost_L5
+		}
+		upkeep = {
+			energy = @armourcost_L5_upkeep_energy
+			alloys = @armourcost_L5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_L5
+	}
+	size_restriction = { battleship titan }
+	prerequisites = { "tech_ship_armor_5" }
+	upgrades_to = "SIZE_3_DRAGONSCALE"
+	component_set = "ship_armour_plating"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_ARMOUR_5"
+	size = large
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+		}
+		upkeep = {
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_St5
+	}
+	class_restriction = { shipclass_starbase }
+	prerequisites = { "tech_ship_armor_5" }
+	upgrades_to = "STARBASE_DRAGONSCALE"
+	component_set = "ship_armour_plating"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_ARMOUR_5"
+	size = large
+	icon = "GFX_ship_part_armor_5"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourcost_L5
+		}
+		upkeep = {
+			energy = @armourcost_L5_upkeep_energy
+			alloys = @armourcost_L5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_L6
+	}
+	size_restriction = { colossus }
+	prerequisites = { "tech_ship_armor_5" }
+	upgrades_to = "STARBASE_DRAGONSCALE"
+	component_set = "ship_armour_plating"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+####################
+# Engimatic armourcost_S
+####################
+
+# Enigmatic Deflectors
+utility_component_template = {
+	key = "SIZE_1_DRAGONSCALE"
+	size = small
+	icon = "GFX_ship_part_dragon_armor"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourcost_S6
+		}
+		upkeep = {
+			energy = @armourcost_S6_upkeep_energy
+			alloys = @armourcost_S6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_S6
+	}
+	size_restriction = { corvette destroyer colonizer lithoid_colonizer sponsored_colonizer constructor science transport }
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "ship_armour_plating"
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			is_country_type = default
+			has_monthly_income = { resource = sr_dark_matter value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SIZE_2_DRAGONSCALE"
+	size = medium
+	icon = "GFX_ship_part_dragon_armor"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourcost_M6
+		}
+		upkeep = {
+			energy = @armourcost_M6_upkeep_energy
+			alloys = @armourcost_M6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_M6
+	}
+	size_restriction = { cruiser ion_cannon military_station_small }
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "ship_armour_plating"
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = sr_dark_matter value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "SIZE_3_DRAGONSCALE"
+	size = large
+	icon = "GFX_ship_part_dragon_armor"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourcost_L6
+		}
+		upkeep = {
+			energy = @armourcost_L6_upkeep_energy
+			alloys = @armourcost_L6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_L6
+	}
+	size_restriction = { battleship titan }
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "ship_armour_plating"
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = sr_dark_matter value <= 0 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_DRAGONSCALE"
+	size = large
+	icon = "GFX_ship_part_dragon_armor"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+		}
+		upkeep = {
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_St6
+	}
+	class_restriction = { shipclass_starbase }
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "ship_armour_plating"
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_DRAGONSCALE"
+	size = large
+	icon = "GFX_ship_part_dragon_armor"
+	icon_frame = 1
+	resources = {
+		category = ship_armour
+		cost = {
+			alloys = @armourcost_L6
+		}
+		upkeep = {
+			energy = @armourcost_L6_upkeep_energy
+			alloys = @armourcost_L6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_armor_add = @armourstrength_St6
+	}
+	size_restriction = { colossus }
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "ship_armour_plating"
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = sr_dark_matter value <= 0 }
+		}
+	}
+}

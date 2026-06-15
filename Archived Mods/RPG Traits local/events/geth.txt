@@ -1,0 +1,202 @@
+# AI Geth empires do not fare well. I compensated a bit for the AI's bad priorities but it's better to keep the trait solely for human players
+
+
+namespace = geth
+
+event = {
+	id = geth.0
+	hide_window = yes
+    is_triggered_only = yes	
+    immediate = {
+		every_country = {
+			limit = {
+				has_trait = trait_robodesign_geth
+			}
+			every_owned_planet = {
+				limit = {
+					NOT = { has_deposit = d_geth_1 }
+					any_pop = {
+						pop_has_trait = trait_robodesign_geth
+						#is_being_purged =# no
+						
+					}
+					num_pops < 10
+				}
+				planet_event = { id = geth.1 days = -1 }
+				planet_event = { id = geth.1 days = 180 }
+			}
+			every_owned_planet = {
+				limit = {
+					NOT = { has_deposit = d_geth_2 }
+					any_pop = {
+						pop_has_trait = trait_robodesign_geth
+						#is_being_purged =# no	
+					}
+					AND = { num_pops > 9 num_pops < 20 }
+				}	
+				planet_event = { id = geth.2 days = -1 }
+				planet_event = { id = geth.2 days = 180 }
+			}
+			every_owned_planet = {
+				limit = {
+					AND = { num_pops > 21 num_pops < 35 }
+					any_pop = {
+						pop_has_trait = trait_robodesign_geth
+						#is_being_purged =# no
+						
+					}
+					NOT = { has_deposit = d_geth_3 }
+				}				
+				planet_event = { id = geth.3 days = -1 }
+				planet_event = { id = geth.3 days = 180 }
+			}
+			every_owned_planet = {
+				limit = {	
+					NOT = { has_deposit = d_geth_4 }
+					any_pop = {
+						pop_has_trait = trait_robodesign_geth
+						#is_being_purged =# no
+						
+					}
+					AND = { num_pops > 36 num_pops < 49 }		# no more AI cheats for final tier, because that would make it too overpowered
+				}							
+				planet_event = { id = geth.4 days = -1 }
+				planet_event = { id = geth.4 days = 180 }
+			}
+			every_owned_planet = {
+				limit = {
+					NOT = { has_deposit = d_geth_5 }
+					any_pop = {
+						pop_has_trait = trait_robodesign_geth
+						#is_being_purged =# no
+					}
+					num_pops > 50		# no more AI cheats for final tier, because that would make it too overpowered
+				}							
+				planet_event = { id = geth.4 days = -1 }
+				planet_event = { id = geth.4 days = 180 }
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = geth.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if =  {
+			limit = {
+				any_pop = {
+					pop_has_trait = trait_robodesign_geth
+					#is_being_purged =# no
+				}
+			}
+			ROOT = {
+				#remove_deposit = d_geth_1
+				remove_deposit = d_geth_2
+				remove_deposit = d_geth_3
+				remove_deposit = d_geth_4
+				remove_deposit = d_geth_5
+				add_deposit = d_geth_1
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = geth.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if =  {
+			limit = {
+				any_pop = {
+					pop_has_trait = trait_robodesign_geth
+					#is_being_purged =# no
+				}
+			}
+			ROOT = {
+				remove_deposit = d_geth_1
+				#remove_deposit = d_geth_2
+				remove_deposit = d_geth_3
+				remove_deposit = d_geth_4
+				remove_deposit = d_geth_5
+				add_deposit = d_geth_2
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = geth.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if =  {
+			limit = {
+				any_pop = {
+					pop_has_trait = trait_robodesign_geth
+					#is_being_purged =# no
+				}
+			}
+			ROOT = {
+				remove_deposit = d_geth_1
+				remove_deposit = d_geth_2
+				#remove_deposit = d_geth_3
+				remove_deposit = d_geth_4
+				remove_deposit = d_geth_5
+				add_deposit = d_geth_3
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = geth.4
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if =  {
+			limit = {
+				any_pop = {
+					pop_has_trait = trait_robodesign_geth
+					#is_being_purged =# no
+				}
+			}
+			ROOT = {
+				remove_deposit = d_geth_1
+				remove_deposit = d_geth_2
+				remove_deposit = d_geth_3
+				#remove_deposit = d_geth_4
+				remove_deposit = d_geth_5
+				add_deposit = d_geth_4
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = geth.5
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if =  {
+			limit = {
+				any_pop = {
+					pop_has_trait = trait_robodesign_geth
+					#is_being_purged =# no
+				}
+			}
+			ROOT = {
+				remove_deposit = d_geth_1
+				remove_deposit = d_geth_2
+				remove_deposit = d_geth_3
+				remove_deposit = d_geth_4
+				#remove_deposit = d_geth_5
+				add_deposit = d_geth_5
+			}
+		}
+	}
+}

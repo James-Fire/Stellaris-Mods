@@ -1,0 +1,430 @@
+interstellar_assembly_0 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	prerequisites = { "tech_interstellar_assembly" }
+	country_modifier = {
+		diplo_weight_mult = @ukn_interstellar_assembly_p0_diplo_weight_mult
+		envoys_add = @ukn_interstellar_assembly_p0_envoys_add
+	}
+	
+
+	build_time = @ukn_interstellar_assembly_p0_build_time
+	resources = {
+		category = ukn_kilostructure_site
+		cost = {
+			influence = @ukn_interstellar_assembly_p0_cost_influence
+			unity = @ukn_interstellar_assembly_p0_cost_unity
+####
+			consumer_goods = @ukn_interstellar_assembly_p0_cost_consumer_goods
+			alloys = @ukn_interstellar_assembly_p0_cost_alloys
+#			ukn_meta_materials = @ukn_interstellar_assembly_p0_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_interstellar_assembly_p0_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_interstellar_assembly_p0_cost_ukn_causalitons
+		}
+		upkeep = {
+			energy = @ukn_interstellar_assembly_p0_upkeep_energy
+		}
+	}
+#######################
+
+	potential = {
+		OR = {
+			AND = {
+				NOT = { has_global_flag = gigastructures_enabled }
+			}
+			AND = {
+				has_global_flag = gigastructures_enabled
+				NOT = { has_global_flag = vanilla_interstellar_disabled }
+				OR = {
+					check_variable = { which = giga_vanilla_interstellar_cap value = 0 }						# No Cap
+					check_variable = { which = giga_current_vanilla_interstellar value < giga_vanilla_interstellar_cap }
+				}
+			}
+		}
+	}
+
+	possible = {
+		exists = starbase
+		from = { has_technology = tech_interstellar_assembly }
+		custom_tooltip = { fail_text = "requires_inside_border"								is_inside_border = from }
+		custom_tooltip = { fail_text = "requires_surveyed_system"							giga_system_is_surveyed = yes }
+		custom_tooltip = {
+			fail_text = "requires_not_capped"
+			from = {
+				OR = {
+					check_variable = { which = giga_vanilla_interstellar_cap value = 0 }						# No Cap
+					check_variable = { which = giga_current_vanilla_interstellar value < giga_vanilla_interstellar_cap }
+				}
+			}
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = { fail_text = "requires_survey_not_habitable"		is_surveyed = { who = prev.from status = yes } is_planet_habitable = no }
+			custom_tooltip = { fail_text = "requires_no_anomaly"				has_anomaly = no }
+			custom_tooltip = { fail_text = "requires_not_minor_planetary_body"	is_asteroid = no is_moon = no }
+			custom_tooltip = { fail_text = "requires_no_existing_megastructure"	planet_has_no_megastructure = yes }
+			custom_tooltip = { fail_text = "requires_not_star"					is_star = no }
+			custom_tooltip = { fail_text = "requires_not_ring_world"			is_ringworld = no }
+		}
+	}
+
+	ai_weight = {
+		weight = 100	# Default = 100
+
+		# Can we afford the upkeep
+
+		# Do we want the production
+
+		# Is this system a good location?
+		modifier = { factor = 0.1	any_neighbor_system = { exists = owner NOT = { owner = { is_same_value = from } } } }
+		modifier = { factor = 0.5	any_neighbor_system = { any_neighbor_system = { exists = owner NOT = { owner = { is_same_value = from } } } } }
+
+		# Do we lean towards this from federation/ethic/civic?
+		modifier = { factor = 3		from = { has_ethic = ethic_fanatic_xenophile } }
+		modifier = { factor = 1.5	from = { has_ethic = ethic_xenophile } }
+		modifier = { factor = 1.5	from = { has_civic = civic_diplomatic_corps } }
+
+		# How many of this megastructure can the AI build?
+		modifier = { factor = 0.00	from = { has_country_flag = has_recently_built_interstellar_assembly } }
+		modifier = { factor = 0.00	from = { count_owned_megastructure = { limit = { is_megastructure_type = interstellar_assembly_4 } count > 1 } } }
+		modifier = { factor = 0.50	from = { count_owned_megastructure = { limit = { is_megastructure_type = interstellar_assembly_4 } count = 1 } } }
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					has_megastructure = interstellar_assembly_0
+					has_megastructure = interstellar_assembly_1
+					has_megastructure = interstellar_assembly_2
+					has_megastructure = interstellar_assembly_3
+					has_megastructure = interstellar_assembly_ruined
+				}
+			}
+		}
+	}
+
+	on_build_complete = {
+		from = {
+			set_timed_country_flag = { flag = has_recently_built_interstellar_assembly years = 20 }
+			set_country_flag = built_interstellar_assembly_site
+			change_variable = { which = giga_current_vanilla_interstellar value = 1 }
+		}
+		fromfrom.planet = {
+			set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+			set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+		}
+	}
+}
+
+interstellar_assembly_1 = {
+	entity = "interstellar_assembly_stage_1_entity"
+	construction_entity = "interstellar_assembly_stage_1_entity"
+	portrait = GFX_megastructure_construction_background
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	upgrade_from = { interstellar_assembly_0 }
+	prerequisites = { "tech_interstellar_assembly" }
+	country_modifier = {
+		diplo_weight_mult = @ukn_interstellar_assembly_p1_diplo_weight_mult
+		envoys_add = @ukn_interstellar_assembly_p1_envoys_add
+	}
+
+	build_time = @ukn_interstellar_assembly_p1_build_time
+	resources = {
+		category = ukn_kilostructure_frame
+		cost = {
+			consumer_goods = @ukn_interstellar_assembly_p1_cost_consumer_goods
+			alloys = @ukn_interstellar_assembly_p1_cost_alloys
+			ukn_meta_materials = @ukn_interstellar_assembly_p1_cost_ukn_meta_materials
+####
+			rare_crystals = @ukn_interstellar_assembly_p1_cost_rare_crystals
+			exotic_gases = @ukn_interstellar_assembly_p1_cost_exotic_gases
+#			ukn_femtomatter = @ukn_interstellar_assembly_p1_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_interstellar_assembly_p1_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_interstellar_assembly_p1_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_interstellar_assembly_p1_cost_ukn_causalitons
+		}
+		upkeep = {
+			energy = @ukn_interstellar_assembly_p1_upkeep_energy
+			alloys = @ukn_interstellar_assembly_p1_upkeep_alloys
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = { from = { country_event = { id = mega.9006 } } }
+}
+
+interstellar_assembly_2 = {
+	entity = "interstellar_assembly_stage_2_entity"
+	construction_entity = "interstellar_assembly_stage_2_entity"
+	portrait = GFX_megastructure_construction_background
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	upgrade_from = { interstellar_assembly_1 }
+	prerequisites = { "tech_interstellar_assembly" }
+	country_modifier = {
+		diplo_weight_mult = @ukn_interstellar_assembly_p2_diplo_weight_mult
+		envoys_add = @ukn_interstellar_assembly_p2_envoys_add
+	}
+
+	build_time = @ukn_interstellar_assembly_p2_build_time
+	resources = {
+		category = ukn_kilostructure_main
+		cost = {
+			consumer_goods = @ukn_interstellar_assembly_p2_cost_consumer_goods
+			alloys = @ukn_interstellar_assembly_p2_cost_alloys
+			ukn_meta_materials = @ukn_interstellar_assembly_p2_cost_ukn_meta_materials
+####
+			rare_crystals = @ukn_interstellar_assembly_p2_cost_rare_crystals
+			exotic_gases = @ukn_interstellar_assembly_p2_cost_exotic_gases
+#			ukn_femtomatter = @ukn_interstellar_assembly_p2_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_interstellar_assembly_p2_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_interstellar_assembly_p2_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_interstellar_assembly_p2_cost_ukn_causalitons
+		}
+		upkeep = {
+			energy = @ukn_interstellar_assembly_p2_upkeep_energy
+			alloys = @ukn_interstellar_assembly_p2_upkeep_alloys
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = { from = { country_event = { id = mega.9007 } } }
+}
+
+interstellar_assembly_3 = {
+	entity = "interstellar_assembly_stage_3_entity"
+	construction_entity = "interstellar_assembly_stage_3_entity"
+	portrait = GFX_megastructure_construction_background
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	upgrade_from = { interstellar_assembly_2 }
+	prerequisites = { "tech_interstellar_assembly" }
+	country_modifier = {
+		diplo_weight_mult = @ukn_interstellar_assembly_p3_diplo_weight_mult
+		envoys_add = @ukn_interstellar_assembly_p3_envoys_add
+	}
+
+	build_time = @ukn_interstellar_assembly_p3_build_time
+	resources = {
+		category = ukn_kilostructure_main
+		cost = {
+			consumer_goods = @ukn_interstellar_assembly_p3_cost_consumer_goods
+			alloys = @ukn_interstellar_assembly_p3_cost_alloys
+			ukn_meta_materials = @ukn_interstellar_assembly_p3_cost_ukn_meta_materials
+####
+			rare_crystals = @ukn_interstellar_assembly_p3_cost_rare_crystals
+			exotic_gases = @ukn_interstellar_assembly_p3_cost_exotic_gases
+#			ukn_femtomatter = @ukn_interstellar_assembly_p3_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_interstellar_assembly_p3_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_interstellar_assembly_p3_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_interstellar_assembly_p3_cost_ukn_causalitons
+		}
+		upkeep = {
+			energy = @ukn_interstellar_assembly_p3_upkeep_energy
+			alloys = @ukn_interstellar_assembly_p3_upkeep_alloys
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = { from = { country_event = { id = mega.9008 } } }
+}
+
+interstellar_assembly_4 = {
+	entity = "interstellar_assembly_stage_4_entity"
+	construction_entity = "interstellar_assembly_stage_4_entity"
+	portrait = "GFX_megastructure_interstellar_assembly_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	upgrade_from = { interstellar_assembly_3 }
+	prerequisites = { "tech_interstellar_assembly" }
+#	show_prereqs = yes
+	country_modifier = {
+		diplo_weight_mult = @ukn_interstellar_assembly_p4_diplo_weight_mult
+		envoys_add = @ukn_interstellar_assembly_p4_envoys_add
+	}
+
+	build_time = @ukn_interstellar_assembly_p4_build_time
+	resources = {
+		category = ukn_kilostructure_main
+		cost = {
+			consumer_goods = @ukn_interstellar_assembly_p4_cost_consumer_goods
+			alloys = @ukn_interstellar_assembly_p4_cost_alloys
+			ukn_meta_materials = @ukn_interstellar_assembly_p4_cost_ukn_meta_materials
+####
+			rare_crystals = @ukn_interstellar_assembly_p4_cost_rare_crystals
+			exotic_gases = @ukn_interstellar_assembly_p4_cost_exotic_gases
+#			ukn_femtomatter = @ukn_interstellar_assembly_p4_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_interstellar_assembly_p4_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_interstellar_assembly_p4_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_interstellar_assembly_p4_cost_ukn_causalitons
+		}
+		upkeep = {
+			energy = @ukn_interstellar_assembly_p4_upkeep_energy
+			alloys = @ukn_interstellar_assembly_p4_upkeep_alloys
+		}
+	}
+#######################
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_complete = {
+		set_star_flag = interstellar_assembly_built
+		from = {
+			set_country_flag = ukn_has_built_kilostructure 	# Triggers Galactic Wonders
+			country_event = { id = mega.9009 }
+		}
+	}
+}
+
+# Ruined Interstellar Assembly
+interstellar_assembly_ruined = {
+	entity = "interstellar_assembly_01_destroyed_entity"
+	construction_entity = "interstellar_assembly_01_destroyed_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	potential = { always = no }
+}
+
+# Restored Interstellar Assembly
+interstellar_assembly_restored = {
+	entity = "interstellar_assembly_stage_4_entity"
+	construction_entity = "interstellar_assembly_stage_4_entity"
+	portrait = "GFX_megastructure_interstellar_assembly_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	upgrade_from = { interstellar_assembly_ruined }
+	country_modifier = {
+		diplo_weight_mult = @ukn_interstellar_assembly_r_diplo_weight_mult
+		envoys_add = @ukn_interstellar_assembly_r_envoys_add
+	}
+
+	build_time = @ukn_interstellar_assembly_r_build_time
+	resources = {
+		category = ukn_kilostructure_main
+		cost = {
+			consumer_goods = @ukn_interstellar_assembly_r_cost_consumer_goods
+			alloys = @ukn_interstellar_assembly_r_cost_alloys
+			ukn_meta_materials = @ukn_interstellar_assembly_r_cost_ukn_meta_materials
+####
+			rare_crystals = @ukn_interstellar_assembly_r_cost_rare_crystals
+			exotic_gases = @ukn_interstellar_assembly_r_cost_exotic_gases
+#			ukn_femtomatter = @ukn_interstellar_assembly_r_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_interstellar_assembly_r_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_interstellar_assembly_r_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_interstellar_assembly_r_cost_ukn_causalitons
+		}
+		upkeep = {
+			energy = @ukn_interstellar_assembly_r_upkeep_energy
+			alloys = @ukn_interstellar_assembly_r_upkeep_alloys
+		}
+	}
+#######################
+
+	possible = {
+		exists = from
+		from = { has_technology = tech_starbase_5 }
+	}
+
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+	on_build_start = { fromfrom = { set_graphical_culture = root.from } }
+	on_build_complete = {
+		set_star_flag = interstellar_assembly_built
+		giga_remove_system_debris = yes
+		from = {
+			country_event = { id = mega.9131 }
+		}
+		fromfrom.planet = {
+			set_planet_flag = megastructure			# Vanilla uses to check if a megastrucure can be built here
+			set_planet_flag = has_megastructure		# Vanilla uses to check if an orbital station can be built here
+		}
+	}
+}
+
+interstellar_assembly_4_dummy_text = {
+	entity = "interstellar_assembly_stage_4_entity"
+	construction_entity = "interstellar_assembly_stage_4_entity"
+	portrait = "GFX_megastructure_interstellar_assembly_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	upgrade_from = { interstellar_assembly_4 }
+	prerequisites = { "tech_interstellar_assembly" }
+	show_prereqs = yes
+
+	build_time = 5400
+	resources = {
+		category = megastructures
+		cost = {
+			influence = @ukn_interstellar_assembly_p0_cost_influence
+			unity = @ukn_interstellar_assembly_p0_cost_unity
+####
+			consumer_goods = @ukn_interstellar_assembly_p0_cost_consumer_goods
+			alloys = @ukn_interstellar_assembly_p0_cost_alloys
+#			ukn_meta_materials = @ukn_interstellar_assembly_p0_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_interstellar_assembly_p0_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_interstellar_assembly_p0_cost_ukn_causalitons
+		}
+		cost = {
+			consumer_goods = @ukn_interstellar_assembly_p1_cost_consumer_goods
+			alloys = @ukn_interstellar_assembly_p1_cost_alloys
+			ukn_meta_materials = @ukn_interstellar_assembly_p1_cost_ukn_meta_materials
+####
+			rare_crystals = @ukn_interstellar_assembly_p1_cost_rare_crystals
+			exotic_gases = @ukn_interstellar_assembly_p1_cost_exotic_gases
+#			ukn_femtomatter = @ukn_interstellar_assembly_p1_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_interstellar_assembly_p1_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_interstellar_assembly_p1_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_interstellar_assembly_p1_cost_ukn_causalitons
+		}
+		cost = {
+			consumer_goods = @ukn_interstellar_assembly_p2_cost_consumer_goods
+			alloys = @ukn_interstellar_assembly_p2_cost_alloys
+			ukn_meta_materials = @ukn_interstellar_assembly_p2_cost_ukn_meta_materials
+####
+			rare_crystals = @ukn_interstellar_assembly_p2_cost_rare_crystals
+			exotic_gases = @ukn_interstellar_assembly_p2_cost_exotic_gases
+#			ukn_femtomatter = @ukn_interstellar_assembly_p2_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_interstellar_assembly_p2_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_interstellar_assembly_p2_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_interstellar_assembly_p2_cost_ukn_causalitons
+		}
+		cost = {
+			consumer_goods = @ukn_interstellar_assembly_p3_cost_consumer_goods
+			alloys = @ukn_interstellar_assembly_p3_cost_alloys
+			ukn_meta_materials = @ukn_interstellar_assembly_p3_cost_ukn_meta_materials
+####
+			rare_crystals = @ukn_interstellar_assembly_p3_cost_rare_crystals
+			exotic_gases = @ukn_interstellar_assembly_p3_cost_exotic_gases
+#			ukn_femtomatter = @ukn_interstellar_assembly_p3_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_interstellar_assembly_p3_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_interstellar_assembly_p3_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_interstellar_assembly_p3_cost_ukn_causalitons
+		}
+		cost = {
+			consumer_goods = @ukn_interstellar_assembly_p4_cost_consumer_goods
+			alloys = @ukn_interstellar_assembly_p4_cost_alloys
+			ukn_meta_materials = @ukn_interstellar_assembly_p4_cost_ukn_meta_materials
+####
+			rare_crystals = @ukn_interstellar_assembly_p4_cost_rare_crystals
+			exotic_gases = @ukn_interstellar_assembly_p4_cost_exotic_gases
+#			ukn_femtomatter = @ukn_interstellar_assembly_p4_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_interstellar_assembly_p4_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_interstellar_assembly_p4_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_interstellar_assembly_p4_cost_ukn_causalitons
+		}
+	}
+#######################
+
+	potential = {
+		NOT = { has_technology = tech_interstellar_assembly }
+	}
+
+	ai_weight = { factor = 0 } # Never
+}

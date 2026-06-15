@@ -1,0 +1,7227 @@
+########################
+#[ALL] TRADE BUILDINGS #
+########################
+
+building_ukn_commercial_zone_3 = {
+	base_buildtime = @building_ukn_commercial_zone_4_build_time
+	can_build = no
+	position_priority = 101
+	category = trade
+
+	potential = {
+		UKN_CAN_BUILD_COMMERCIAL_GRID = yes
+		UKN_USES_SUB_RW_ARCOLOGY_DISTRICTS = yes
+		UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_CANNOT_BUILD_COMMERCIAL_GRID = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+		}
+	}
+	
+	
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+			}
+			NOT = { has_building = building_ukn_commercial_zone_3 }
+		}
+		modifier = {
+			job_merchant_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_ukn_commercial_zone_3
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_commercial_zone_4_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_commercial_zone_4_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_commercial_zone_4_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_commercial_zone_4_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_commercial_zone_4_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_commercial_zone_4_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_commercial_zone_4_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_commercial_zone_4_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_commercial_zone_4_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_commercial_zone_4_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_commercial_zone_4_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_commercial_zone_4_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_capital_productivity_3"
+	}
+
+	upgrades = {
+		building_ukn_commercial_zone_4
+		building_ukn_commercial_zone_5
+	}
+
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+#----------------------------------------------------
+
+#[NORMAL] Capital Planet Extra Trader Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		modifier = {
+			job_bugged_trader_add = 2
+		}
+	}
+
+#[ADVANCED] Capital Planet Extra Trader Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		modifier = {
+			job_bugged_trader_add = 2
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_commercial
+#		text = district_ukn_commercial_job_per_pop_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_commercial
+#		text = district_ukn_hab_commercial_job_per_pop_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_arcology_commercial
+#		text = district_ukn_arcology_commercial_job_per_pop_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_rw_commercial
+#		text = district_rw_commercial_job_per_pop_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_alderson_commercial
+#		text = district_ukn_alderson_commercial_job_per_pop_effect_desc
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_4_default_normal_effect_desc
+			trade_value_mult = @building_ukn_commercial_zone_4_default_normal_trade_value_mult
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[ARCOLOGY] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_4_default_arcology_effect_desc
+			trade_value_mult = @building_ukn_commercial_zone_4_default_arcology_trade_value_mult
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 35 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_BASIC_DISTRICTS = yes
+					num_districts = { type = district_ukn_commercial value >= 2 }
+					num_districts = { type = district_ukn_commercial value < 5 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_4_default_all_merchant_1_per_35_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_4_default_all_merchant_1_per_35_add
+		}
+	}
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 15 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_BASIC_DISTRICTS = yes
+					num_districts = { type = district_ukn_commercial value >= 5 }
+					num_districts = { type = district_ukn_commercial value < 8 }
+				}
+				AND = {
+					UKN_USES_HABITAT_DISTRICTS = yes
+					num_districts = { type = district_hab_commercial value >= 2 }
+					num_districts = { type = district_hab_commercial value < 4 }
+				}
+				AND = {
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_arcology_commercial value >= 3 }
+					num_districts = { type = district_ukn_arcology_commercial value < 5 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_4_default_all_merchant_1_per_15_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_4_default_all_merchant_1_per_15_add
+		}
+	}
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 10 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_BASIC_DISTRICTS = yes
+					num_districts = { type = district_ukn_commercial value >= 8 }
+					num_districts = { type = district_ukn_commercial value < 15 }
+				}
+				AND = {
+					UKN_USES_HABITAT_DISTRICTS = yes
+					num_districts = { type = district_hab_commercial value >= 4 }
+					num_districts = { type = district_hab_commercial value < 8 }
+				}
+				AND = {
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_arcology_commercial value >= 5 }
+					num_districts = { type = district_ukn_arcology_commercial value < 10 }
+				}
+				AND = {
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_rw_commercial value = 2 }
+				}
+				AND = {
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_alderson_commercial value = 1 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_4_default_all_merchant_1_per_10_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_4_default_all_merchant_1_per_10_add
+		}
+	}
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 5 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_BASIC_DISTRICTS = yes
+					num_districts = { type = district_ukn_commercial value >= 15 }
+					num_districts = { type = district_ukn_commercial value < 20 }
+				}
+				AND = {
+					UKN_USES_HABITAT_DISTRICTS = yes
+					num_districts = { type = district_hab_commercial value >= 8 }
+					num_districts = { type = district_hab_commercial value < 10 }
+				}
+				AND = {
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_arcology_commercial value >= 10 }
+					num_districts = { type = district_ukn_arcology_commercial value < 13 }
+				}
+				AND = {
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_rw_commercial value = 3 }
+				}
+				AND = {
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_alderson_commercial value = 2 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_4_default_all_merchant_1_per_5_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_4_default_all_merchant_1_per_5_add
+		}
+	}
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 4 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_BASIC_DISTRICTS = yes
+					num_districts = { type = district_ukn_commercial value >= 20 }
+					num_districts = { type = district_ukn_commercial value < 25 }
+				}
+				AND = {
+					UKN_USES_HABITAT_DISTRICTS = yes
+					num_districts = { type = district_hab_commercial value >= 10 }
+				}
+				AND = {
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_arcology_commercial value >= 13 }
+					num_districts = { type = district_ukn_arcology_commercial value < 17 }
+				}
+				AND = {
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_rw_commercial value = 4 }
+				}
+				AND = {
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_alderson_commercial value = 3 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_4_default_all_merchant_1_per_4_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_4_default_all_merchant_1_per_4_add
+		}
+	}
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 3 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_BASIC_DISTRICTS = yes
+					num_districts = { type = district_ukn_commercial value >= 25 }
+				}
+				AND = {
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_arcology_commercial value >= 17 }
+					num_districts = { type = district_ukn_arcology_commercial value < 25 }
+				}
+				AND = {
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_rw_commercial value >= 5 }
+					num_districts = { type = district_rw_commercial value < 8 }
+				}
+				AND = {
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_alderson_commercial value = 4 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_4_default_all_merchant_1_per_3_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_4_default_all_merchant_1_per_3_add
+		}
+	}
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 2 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_arcology_commercial value >= 25 }
+				}
+				AND = {
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_rw_commercial value >= 8 }
+				}
+				AND = {
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_alderson_commercial value >= 5 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_4_default_all_merchant_1_per_2_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_4_default_all_merchant_1_per_2_add
+		}
+	}
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_bugged_trader_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		text = job_ukn_clerk_bugged_trader_capital_normal_provide
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		text = job_ukn_clerk_bugged_trader_capital_advanced_provide
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		energy = 4
+		trigger = {
+			always = yes
+		}
+	}
+	ai_resource_production = {
+		energy = 6
+		trigger = {
+			OR = {
+				num_unemployed >= 10
+				num_assigned_jobs = {
+					job = servant
+					value >= 10
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+building_ukn_commercial_zone_4 = {
+	base_buildtime = @building_ukn_commercial_zone_6_build_time
+	can_build = no
+	position_priority = 101
+	category = trade
+
+	potential = {
+		UKN_CAN_BUILD_COMMERCIAL_GRID = yes
+		UKN_USES_SUB_ALDERSON_ARCOLOGY_DISTRICTS = yes
+		UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_CANNOT_BUILD_COMMERCIAL_GRID = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+		}
+	}
+	
+	
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+			}
+			NOT = { has_building = building_ukn_commercial_zone_4 }
+		}
+		modifier = {
+			job_merchant_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_ukn_commercial_zone_4
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_commercial_zone_6_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_commercial_zone_6_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_commercial_zone_6_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_commercial_zone_6_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_commercial_zone_6_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_commercial_zone_6_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_commercial_zone_6_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_commercial_zone_6_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_commercial_zone_6_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_commercial_zone_6_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_commercial_zone_6_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_commercial_zone_6_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_ukn_automation_4"
+	}
+
+	upgrades = {
+		building_ukn_commercial_zone_5
+	}
+
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+#----------------------------------------------------
+
+#[NORMAL] Capital Planet Extra Trader Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		modifier = {
+			job_bugged_trader_add = 2
+		}
+	}
+
+#[ADVANCED] Capital Planet Extra Trader Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		modifier = {
+			job_bugged_trader_add = 2
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_commercial
+#		text = district_ukn_commercial_job_per_pop_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_commercial
+#		text = district_ukn_hab_commercial_job_per_pop_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_arcology_commercial
+#		text = district_ukn_arcology_commercial_job_per_pop_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_rw_commercial
+#		text = district_rw_commercial_job_per_pop_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_alderson_commercial
+#		text = district_ukn_alderson_commercial_job_per_pop_effect_desc
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_6_default_normal_effect_desc
+			trade_value_mult = @building_ukn_commercial_zone_6_default_normal_trade_value_mult
+		}
+	}
+	
+#[ARCOLOGY] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_6_default_arcology_effect_desc
+			trade_value_mult = @building_ukn_commercial_zone_6_default_arcology_trade_value_mult
+		}
+	}
+	
+#[RINGWORLD] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_6_default_rw_effect_desc
+			trade_value_mult = @building_ukn_commercial_zone_6_default_rw_trade_value_mult
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 35 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_BASIC_DISTRICTS = yes
+					num_districts = { type = district_ukn_commercial value >= 2 }
+					num_districts = { type = district_ukn_commercial value < 5 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_6_default_all_merchant_1_per_35_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_6_default_all_merchant_1_per_35_add
+		}
+	}
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 15 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_BASIC_DISTRICTS = yes
+					num_districts = { type = district_ukn_commercial value >= 5 }
+					num_districts = { type = district_ukn_commercial value < 8 }
+				}
+				AND = {
+					UKN_USES_HABITAT_DISTRICTS = yes
+					num_districts = { type = district_hab_commercial value >= 2 }
+					num_districts = { type = district_hab_commercial value < 4 }
+				}
+				AND = {
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_arcology_commercial value >= 3 }
+					num_districts = { type = district_ukn_arcology_commercial value < 5 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_6_default_all_merchant_1_per_15_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_6_default_all_merchant_1_per_15_add
+		}
+	}
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 10 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_BASIC_DISTRICTS = yes
+					num_districts = { type = district_ukn_commercial value >= 8 }
+					num_districts = { type = district_ukn_commercial value < 15 }
+				}
+				AND = {
+					UKN_USES_HABITAT_DISTRICTS = yes
+					num_districts = { type = district_hab_commercial value >= 4 }
+					num_districts = { type = district_hab_commercial value < 8 }
+				}
+				AND = {
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_arcology_commercial value >= 5 }
+					num_districts = { type = district_ukn_arcology_commercial value < 10 }
+				}
+				AND = {
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_rw_commercial value = 2 }
+				}
+				AND = {
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_alderson_commercial value = 1 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_6_default_all_merchant_1_per_10_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_6_default_all_merchant_1_per_10_add
+		}
+	}
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 5 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_BASIC_DISTRICTS = yes
+					num_districts = { type = district_ukn_commercial value >= 15 }
+					num_districts = { type = district_ukn_commercial value < 20 }
+				}
+				AND = {
+					UKN_USES_HABITAT_DISTRICTS = yes
+					num_districts = { type = district_hab_commercial value >= 8 }
+					num_districts = { type = district_hab_commercial value < 10 }
+				}
+				AND = {
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_arcology_commercial value >= 10 }
+					num_districts = { type = district_ukn_arcology_commercial value < 13 }
+				}
+				AND = {
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_rw_commercial value = 3 }
+				}
+				AND = {
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_alderson_commercial value = 2 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_6_default_all_merchant_1_per_5_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_6_default_all_merchant_1_per_5_add
+		}
+	}
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 4 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_BASIC_DISTRICTS = yes
+					num_districts = { type = district_ukn_commercial value >= 20 }
+					num_districts = { type = district_ukn_commercial value < 25 }
+				}
+				AND = {
+					UKN_USES_HABITAT_DISTRICTS = yes
+					num_districts = { type = district_hab_commercial value >= 10 }
+				}
+				AND = {
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_arcology_commercial value >= 13 }
+					num_districts = { type = district_ukn_arcology_commercial value < 17 }
+				}
+				AND = {
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_rw_commercial value = 4 }
+				}
+				AND = {
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_alderson_commercial value = 3 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_6_default_all_merchant_1_per_4_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_6_default_all_merchant_1_per_4_add
+		}
+	}
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 3 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_BASIC_DISTRICTS = yes
+					num_districts = { type = district_ukn_commercial value >= 25 }
+				}
+				AND = {
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_arcology_commercial value >= 17 }
+					num_districts = { type = district_ukn_arcology_commercial value < 25 }
+				}
+				AND = {
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_rw_commercial value >= 5 }
+					num_districts = { type = district_rw_commercial value < 8 }
+				}
+				AND = {
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_alderson_commercial value = 4 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_6_default_all_merchant_1_per_3_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_6_default_all_merchant_1_per_3_add
+		}
+	}
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 2 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_arcology_commercial value >= 25 }
+				}
+				AND = {
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_rw_commercial value >= 8 }
+				}
+				AND = {
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_alderson_commercial value >= 5 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_6_default_all_merchant_1_per_2_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_6_default_all_merchant_1_per_2_add
+		}
+	}
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_bugged_trader_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		text = job_ukn_clerk_bugged_trader_capital_normal_provide
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		text = job_ukn_clerk_bugged_trader_capital_advanced_provide
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		energy = 4
+		trigger = {
+			always = yes
+		}
+	}
+	ai_resource_production = {
+		energy = 6
+		trigger = {
+			OR = {
+				num_unemployed >= 10
+				num_assigned_jobs = {
+					job = servant
+					value >= 10
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+building_ukn_commercial_zone_5 = {
+	base_buildtime = @building_ukn_commercial_zone_7_build_time
+	can_build = no
+	position_priority = 101
+	category = trade
+
+	potential = {
+		UKN_CAN_BUILD_COMMERCIAL_GRID = yes
+		UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_CANNOT_BUILD_COMMERCIAL_GRID = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+		}
+	}
+	
+	
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+			}
+			NOT = { has_building = building_ukn_commercial_zone_5 }
+		}
+		modifier = {
+			job_merchant_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_ukn_commercial_zone_5
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_commercial_zone_7_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_commercial_zone_7_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_commercial_zone_7_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_commercial_zone_7_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_commercial_zone_7_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_commercial_zone_7_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_commercial_zone_7_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_commercial_zone_7_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_commercial_zone_7_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_commercial_zone_7_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_commercial_zone_7_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_commercial_zone_7_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_ukn_automation_5"
+	}
+
+#	upgrades = {
+#		building_ukn_commercial_zone_6
+#	}
+
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+#----------------------------------------------------
+
+#[NORMAL] Capital Planet Extra Trader Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		modifier = {
+			job_bugged_trader_add = 2
+		}
+	}
+
+#[ADVANCED] Capital Planet Extra Trader Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		modifier = {
+			job_bugged_trader_add = 2
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_commercial
+#		text = district_ukn_commercial_job_per_pop_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_commercial
+#		text = district_ukn_hab_commercial_job_per_pop_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_arcology_commercial
+#		text = district_ukn_arcology_commercial_job_per_pop_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_rw_commercial
+#		text = district_rw_commercial_job_per_pop_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_alderson_commercial
+#		text = district_ukn_alderson_commercial_job_per_pop_effect_desc
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_7_default_normal_effect_desc
+			trade_value_mult = @building_ukn_commercial_zone_7_default_normal_trade_value_mult
+		}
+	}
+	
+#[ARCOLOGY] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_7_default_arcology_effect_desc
+			trade_value_mult = @building_ukn_commercial_zone_7_default_arcology_trade_value_mult
+		}
+	}
+	
+#[RINGWORLD] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_7_default_rw_effect_desc
+			trade_value_mult = @building_ukn_commercial_zone_7_default_rw_trade_value_mult
+		}
+	}
+	
+#[ALDERSON] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_7_default_alderson_effect_desc
+			trade_value_mult = @building_ukn_commercial_zone_7_default_alderson_trade_value_mult
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 35 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_BASIC_DISTRICTS = yes
+					num_districts = { type = district_ukn_commercial value >= 2 }
+					num_districts = { type = district_ukn_commercial value < 5 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_7_default_all_merchant_1_per_35_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_7_default_all_merchant_1_per_35_add
+		}
+	}
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 15 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_BASIC_DISTRICTS = yes
+					num_districts = { type = district_ukn_commercial value >= 5 }
+					num_districts = { type = district_ukn_commercial value < 8 }
+				}
+				AND = {
+					UKN_USES_HABITAT_DISTRICTS = yes
+					num_districts = { type = district_hab_commercial value >= 2 }
+					num_districts = { type = district_hab_commercial value < 4 }
+				}
+				AND = {
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_arcology_commercial value >= 3 }
+					num_districts = { type = district_ukn_arcology_commercial value < 5 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_7_default_all_merchant_1_per_15_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_7_default_all_merchant_1_per_15_add
+		}
+	}
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 10 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_BASIC_DISTRICTS = yes
+					num_districts = { type = district_ukn_commercial value >= 8 }
+					num_districts = { type = district_ukn_commercial value < 15 }
+				}
+				AND = {
+					UKN_USES_HABITAT_DISTRICTS = yes
+					num_districts = { type = district_hab_commercial value >= 4 }
+					num_districts = { type = district_hab_commercial value < 8 }
+				}
+				AND = {
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_arcology_commercial value >= 5 }
+					num_districts = { type = district_ukn_arcology_commercial value < 10 }
+				}
+				AND = {
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_rw_commercial value = 2 }
+				}
+				AND = {
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_alderson_commercial value = 1 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_7_default_all_merchant_1_per_10_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_7_default_all_merchant_1_per_10_add
+		}
+	}
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 5 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_BASIC_DISTRICTS = yes
+					num_districts = { type = district_ukn_commercial value >= 15 }
+					num_districts = { type = district_ukn_commercial value < 20 }
+				}
+				AND = {
+					UKN_USES_HABITAT_DISTRICTS = yes
+					num_districts = { type = district_hab_commercial value >= 8 }
+					num_districts = { type = district_hab_commercial value < 10 }
+				}
+				AND = {
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_arcology_commercial value >= 10 }
+					num_districts = { type = district_ukn_arcology_commercial value < 13 }
+				}
+				AND = {
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_rw_commercial value = 3 }
+				}
+				AND = {
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_alderson_commercial value = 2 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_7_default_all_merchant_1_per_5_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_7_default_all_merchant_1_per_5_add
+		}
+	}
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 4 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_BASIC_DISTRICTS = yes
+					num_districts = { type = district_ukn_commercial value >= 20 }
+					num_districts = { type = district_ukn_commercial value < 25 }
+				}
+				AND = {
+					UKN_USES_HABITAT_DISTRICTS = yes
+					num_districts = { type = district_hab_commercial value >= 10 }
+				}
+				AND = {
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_arcology_commercial value >= 13 }
+					num_districts = { type = district_ukn_arcology_commercial value < 17 }
+				}
+				AND = {
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_rw_commercial value = 4 }
+				}
+				AND = {
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_alderson_commercial value = 3 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_7_default_all_merchant_1_per_4_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_7_default_all_merchant_1_per_4_add
+		}
+	}
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 3 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_BASIC_DISTRICTS = yes
+					num_districts = { type = district_ukn_commercial value >= 25 }
+				}
+				AND = {
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_arcology_commercial value >= 17 }
+					num_districts = { type = district_ukn_arcology_commercial value < 25 }
+				}
+				AND = {
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_rw_commercial value >= 5 }
+					num_districts = { type = district_rw_commercial value < 8 }
+				}
+				AND = {
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_alderson_commercial value = 4 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_7_default_all_merchant_1_per_3_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_7_default_all_merchant_1_per_3_add
+		}
+	}
+#----------------------------------------------------
+	
+#[ALL] Default Empire - Building Job Per Pop Add (Per 2 Pops)
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				AND = {
+					UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_arcology_commercial value >= 25 }
+				}
+				AND = {
+					UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_rw_commercial value >= 8 }
+				}
+				AND = {
+					UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+					num_districts = { type = district_ukn_alderson_commercial value >= 5 }
+				}
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_commercial_zone_7_default_all_merchant_1_per_2_effect_desc
+			job_bugged_trader_per_pop = @building_ukn_commercial_zone_7_default_all_merchant_1_per_2_add
+		}
+	}
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_bugged_trader_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		text = job_ukn_clerk_bugged_trader_capital_normal_provide
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		text = job_ukn_clerk_bugged_trader_capital_advanced_provide
+	}
+#----------------------------------------------------
+
+	ai_resource_production = {
+		energy = 4
+		trigger = {
+			always = yes
+		}
+	}
+	ai_resource_production = {
+		energy = 6
+		trigger = {
+			OR = {
+				num_unemployed >= 10
+				num_assigned_jobs = {
+					job = servant
+					value >= 10
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+##########################
+#[BASIC] UNITY BUILDINGS #
+##########################
+
+building_ukn_bureaucratic_4 = {
+	base_buildtime = @building_ukn_bureaucratic_6_build_time
+	can_build = no
+	position_priority = 106
+	category = unity
+
+	potential = {
+		UKN_CAN_BUILD_BUREAUCRATIC_GRID = yes
+		UKN_USES_SUB_ALDERSON_ARCOLOGY_DISTRICTS = yes
+		UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_CANNOT_BUILD_BUREAUCRATIC_GRID = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+		}
+	}
+
+	convert_to = {
+#		building_ukn_bureaucratic_4
+		building_ukn_temple_4
+		building_ukn_sacrificial_temple_4
+		building_ukn_hive_node_4
+		building_ukn_uplink_node_4
+		building_ukn_corporate_bureaucratic_4
+	}
+	
+	
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+			}
+			NOT = { has_building = building_ukn_bureaucratic_4 }
+		}
+		modifier = {
+			job_bureaucrat_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_ukn_bureaucratic_4
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_bureaucratic_6_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_bureaucratic_6_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_bureaucratic_6_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_bureaucratic_6_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_bureaucratic_6_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_bureaucratic_6_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_bureaucratic_6_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_bureaucratic_6_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_bureaucratic_6_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_bureaucratic_6_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_bureaucratic_6_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_bureaucratic_6_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_ukn_automation_4"
+	}
+
+	upgrades = {
+		building_ukn_bureaucratic_5
+	}
+
+	show_tech_unlock_if = {
+		is_gestalt = no
+		is_spiritualist = no
+		is_megacorp = no
+	}
+#----------------------------------------------------
+
+#[NORMAL] Capital Planet Extra Bureaucrat Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		modifier = {
+			job_bureaucrat_add = 2
+		}
+	}
+
+#[ADVANCED] Capital Planet Extra Bureaucrat Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		modifier = {
+			job_bureaucrat_add = 2
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_bureaucratic
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_cultural
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_arcology_administrative
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_rw_bureaucratic
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_alderson_bureaucratic
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_BUREAUCRATIC_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_bureaucratic_6_normal_effect_desc
+			planet_administrators_unity_produces_add = @building_ukn_bureaucratic_6_normal_unity_add
+			planet_administrators_consumer_goods_upkeep_add = @building_ukn_bureaucratic_6_normal_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[ARCOLOGY] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_BUREAUCRATIC_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_bureaucratic_6_arcology_effect_desc
+			planet_administrators_unity_produces_add = @building_ukn_bureaucratic_6_arcology_unity_add
+			planet_administrators_consumer_goods_upkeep_add = @building_ukn_bureaucratic_6_arcology_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[RINGWORLD] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_BUREAUCRATIC_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_bureaucratic_6_rw_effect_desc
+			planet_administrators_unity_produces_add = @building_ukn_bureaucratic_6_rw_unity_add
+			planet_administrators_consumer_goods_upkeep_add = @building_ukn_bureaucratic_6_rw_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+		}
+		text = job_bureaucrat_effect_desc
+	}
+	
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_bureaucratic_cost_mult = 0.80
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_hab_cultural_cost_mult = 0.80
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_arcology_administrative_cost_mult = 0.65
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_rw_bureaucratic_cost_mult = 0.30
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		text = job_ukn_bureaucrat_capital_normal_provide
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		text = job_ukn_bureaucrat_capital_advanced_provide
+	}
+#----------------------------------------------------
+}
+
+
+
+
+
+
+
+
+building_ukn_bureaucratic_5 = {
+	base_buildtime = @building_ukn_bureaucratic_7_build_time
+	can_build = no
+	position_priority = 106
+	category = unity
+
+	potential = {
+		UKN_CAN_BUILD_BUREAUCRATIC_GRID = yes
+		UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_CANNOT_BUILD_BUREAUCRATIC_GRID = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+		}
+	}
+
+	convert_to = {
+#		building_ukn_bureaucratic_5
+		building_ukn_temple_5
+		building_ukn_sacrificial_temple_5
+		building_ukn_hive_node_5
+		building_ukn_uplink_node_5
+		building_ukn_corporate_bureaucratic_5
+	}
+	
+	
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+			}
+			NOT = { has_building = building_ukn_bureaucratic_5 }
+		}
+		modifier = {
+			job_bureaucrat_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_ukn_bureaucratic_5
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_bureaucratic_7_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_bureaucratic_7_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_bureaucratic_7_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_bureaucratic_7_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_bureaucratic_7_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_bureaucratic_7_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_bureaucratic_7_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_bureaucratic_7_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_bureaucratic_7_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_bureaucratic_7_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_bureaucratic_7_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_bureaucratic_7_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_ukn_automation_5"
+	}
+
+#	upgrades = {
+#		building_ukn_bureaucratic_6
+#	}
+
+	show_tech_unlock_if = {
+		is_gestalt = no
+		is_spiritualist = no
+		is_megacorp = no
+	}
+#----------------------------------------------------
+
+#[NORMAL] Capital Planet Extra Bureaucrat Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		modifier = {
+			job_bureaucrat_add = 2
+		}
+	}
+
+#[ADVANCED] Capital Planet Extra Bureaucrat Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		modifier = {
+			job_bureaucrat_add = 2
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_bureaucratic
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_cultural
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_arcology_administrative
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_rw_bureaucratic
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_alderson_bureaucratic
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_BUREAUCRATIC_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_bureaucratic_7_normal_effect_desc
+			planet_administrators_unity_produces_add = @building_ukn_bureaucratic_7_normal_unity_add
+			planet_administrators_consumer_goods_upkeep_add = @building_ukn_bureaucratic_7_normal_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[ARCOLOGY] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_BUREAUCRATIC_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_bureaucratic_7_arcology_effect_desc
+			planet_administrators_unity_produces_add = @building_ukn_bureaucratic_7_arcology_unity_add
+			planet_administrators_consumer_goods_upkeep_add = @building_ukn_bureaucratic_7_arcology_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[RINGWORLD] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_BUREAUCRATIC_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_bureaucratic_7_rw_effect_desc
+			planet_administrators_unity_produces_add = @building_ukn_bureaucratic_7_rw_unity_add
+			planet_administrators_consumer_goods_upkeep_add = @building_ukn_bureaucratic_7_rw_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+		}
+		text = job_bureaucrat_effect_desc
+	}
+	
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_bureaucratic_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_hab_cultural_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_arcology_administrative_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_rw_bureaucratic_cost_mult = 0.65
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		text = job_ukn_bureaucrat_capital_normal_provide
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		text = job_ukn_bureaucrat_capital_advanced_provide
+	}
+#----------------------------------------------------
+}
+
+
+
+
+
+
+
+
+#############################
+#[MEGACORP] UNITY BUILDINGS #
+#############################
+
+building_ukn_corporate_bureaucratic_4 = {
+	base_buildtime = @building_ukn_bureaucratic_6_build_time
+	can_build = no
+	position_priority = 106
+	category = unity
+
+	potential = {
+		UKN_CAN_BUILD_CORPORATE_BUREAUCRATIC_GRID = yes
+		UKN_USES_SUB_ALDERSON_ARCOLOGY_DISTRICTS = yes
+		UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_CANNOT_BUILD_CORPORATE_BUREAUCRATIC_GRID = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+		}
+	}
+
+	convert_to = {
+#		building_ukn_corporate_bureaucratic_4
+		building_ukn_bureaucratic_4
+		building_ukn_temple_4
+		building_ukn_sacrificial_temple_4
+		building_ukn_hive_node_4
+		building_ukn_uplink_node_4
+	}
+	
+	
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+			}
+			NOT = { has_building = building_ukn_corporate_bureaucratic_4 }
+		}
+		modifier = {
+			job_manager_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_ukn_corporate_bureaucratic_4
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_bureaucratic_6_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_bureaucratic_6_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_bureaucratic_6_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_bureaucratic_6_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_bureaucratic_6_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_bureaucratic_6_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_bureaucratic_6_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_bureaucratic_6_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_bureaucratic_6_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_bureaucratic_6_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_bureaucratic_6_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_bureaucratic_6_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_ukn_automation_4"
+	}
+
+	upgrades = {
+		building_ukn_corporate_bureaucratic_5
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_spiritualist = no
+	}
+#----------------------------------------------------
+
+#[NORMAL] Capital Planet Extra Manager Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_spiritualist = no
+			}
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		modifier = {
+			job_manager_add = 2
+		}
+	}
+
+#[ADVANCED] Capital Planet Extra Manager Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_spiritualist = no
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		modifier = {
+			job_manager_add = 2
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_corporate_bureaucratic
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_corporate_bureaucratic
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = unlock_district_ukn_arcology_leisure
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = unlock_district_ukn_rw_corporate_bureaucratic
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = unlock_district_ukn_alderson_corporate_bureaucratic
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_CORPORATE_BUREAUCRATIC_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_corporate_bureaucratic_6_normal_effect_desc
+			planet_managers_unity_produces_add = @building_ukn_corporate_bureaucratic_6_normal_unity_add
+			planet_managers_consumer_goods_upkeep_add = @building_ukn_corporate_bureaucratic_6_normal_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[ARCOLOGY] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_CORPORATE_BUREAUCRATIC_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_corporate_bureaucratic_6_arcology_effect_desc
+			planet_managers_unity_produces_add = @building_ukn_corporate_bureaucratic_6_arcology_unity_add
+			planet_managers_consumer_goods_upkeep_add = @building_ukn_corporate_bureaucratic_6_arcology_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[RINGWORLD] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_CORPORATE_BUREAUCRATIC_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_corporate_bureaucratic_6_rw_effect_desc
+			planet_managers_unity_produces_add = @building_ukn_corporate_bureaucratic_6_rw_unity_add
+			planet_managers_consumer_goods_upkeep_add = @building_ukn_corporate_bureaucratic_6_rw_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_spiritualist = no
+			}
+		}
+		text = job_manager_effect_desc
+	}
+	
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_corporate_bureaucratic_cost_mult = 0.80
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_hab_corporate_bureaucratic_cost_mult = 0.80
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_arcology_leisure_cost_mult = 0.65
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_rw_corporate_bureaucratic_cost_mult = 0.30
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		text = job_ukn_manager_capital_normal_provide
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		text = job_ukn_manager_capital_advanced_provide
+	}
+#----------------------------------------------------
+}
+
+
+
+
+
+
+
+
+
+building_ukn_corporate_bureaucratic_5 = {
+	base_buildtime = @building_ukn_bureaucratic_7_build_time
+	can_build = no
+	position_priority = 106
+	category = unity
+
+	potential = {
+		UKN_CAN_BUILD_CORPORATE_BUREAUCRATIC_GRID = yes
+		UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_CANNOT_BUILD_CORPORATE_BUREAUCRATIC_GRID = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+		}
+	}
+
+	convert_to = {
+#		building_ukn_bureaucratic_5
+		building_ukn_temple_5
+		building_ukn_sacrificial_temple_5
+		building_ukn_hive_node_5
+		building_ukn_uplink_node_5
+		building_ukn_corporate_bureaucratic_5
+	}
+	
+	
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+			}
+			NOT = { has_building = building_ukn_corporate_bureaucratic_5 }
+		}
+		modifier = {
+			job_manager_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_ukn_corporate_bureaucratic_5
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_bureaucratic_7_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_bureaucratic_7_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_bureaucratic_7_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_bureaucratic_7_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_bureaucratic_7_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_bureaucratic_7_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_bureaucratic_7_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_bureaucratic_7_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_bureaucratic_7_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_bureaucratic_7_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_bureaucratic_7_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_bureaucratic_7_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_ukn_automation_5"
+	}
+
+#	upgrades = {
+#		building_ukn_corporate_bureaucratic_6
+#	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_spiritualist = no
+	}
+#----------------------------------------------------
+
+#[NORMAL] Capital Planet Extra Manager Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_spiritualist = no
+			}
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		modifier = {
+			job_manager_add = 2
+		}
+	}
+
+#[ADVANCED] Capital Planet Extra Manager Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_spiritualist = no
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		modifier = {
+			job_manager_add = 2
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_corporate_bureaucratic
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_corporate_bureaucratic
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = unlock_district_ukn_arcology_leisure
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = unlock_district_ukn_rw_corporate_bureaucratic
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = unlock_district_ukn_alderson_corporate_bureaucratic
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_CORPORATE_BUREAUCRATIC_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_corporate_bureaucratic_7_normal_effect_desc
+			planet_managers_unity_produces_add = @building_ukn_corporate_bureaucratic_7_normal_unity_add
+			planet_managers_consumer_goods_upkeep_add = @building_ukn_corporate_bureaucratic_7_normal_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[ARCOLOGY] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_CORPORATE_BUREAUCRATIC_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_corporate_bureaucratic_7_arcology_effect_desc
+			planet_managers_unity_produces_add = @building_ukn_corporate_bureaucratic_7_arcology_unity_add
+			planet_managers_consumer_goods_upkeep_add = @building_ukn_corporate_bureaucratic_7_arcology_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[RINGWORLD] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_CORPORATE_BUREAUCRATIC_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_corporate_bureaucratic_7_rw_effect_desc
+			planet_managers_unity_produces_add = @building_ukn_corporate_bureaucratic_7_rw_unity_add
+			planet_managers_consumer_goods_upkeep_add = @building_ukn_corporate_bureaucratic_7_rw_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_spiritualist = no
+			}
+		}
+		text = job_manager_effect_desc
+	}
+	
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_corporate_bureaucratic_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_hab_corporate_bureaucratic_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_arcology_leisure_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_rw_corporate_bureaucratic_cost_mult = 0.65
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		text = job_ukn_manager_capital_normal_provide
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		text = job_ukn_manager_capital_advanced_provide
+	}
+#----------------------------------------------------
+}
+
+
+
+
+
+
+
+
+#################################
+#[SPIRITUALIST] UNITY BUILDINGS #
+#################################
+
+building_ukn_temple_4 = {
+	base_buildtime = @building_ukn_bureaucratic_6_build_time
+	can_build = no
+	position_priority = 106
+	category = unity
+
+	potential = {
+		UKN_CAN_BUILD_TEMPLE_GRID = yes
+		UKN_USES_SUB_ALDERSON_ARCOLOGY_DISTRICTS = yes
+		UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_CANNOT_BUILD_TEMPLE_GRID = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+		}
+	}
+
+	convert_to = {
+#		building_ukn_temple_4
+		building_ukn_sacrificial_temple_4
+		building_ukn_bureaucratic_4
+		building_ukn_hive_node_4
+		building_ukn_uplink_node_4
+		building_ukn_corporate_bureaucratic_4
+	}
+	
+	
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+			}
+			NOT = { has_building = building_ukn_temple_4 }
+		}
+		modifier = {
+			job_priest_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_ukn_temple_4
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_bureaucratic_6_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_bureaucratic_6_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_bureaucratic_6_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_bureaucratic_6_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_bureaucratic_6_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_bureaucratic_6_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_bureaucratic_6_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_bureaucratic_6_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_bureaucratic_6_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_bureaucratic_6_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_bureaucratic_6_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_bureaucratic_6_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_ukn_automation_4"
+	}
+
+	upgrades = {
+		building_ukn_temple_5
+	}
+
+	show_tech_unlock_if = {
+		is_spiritualist = yes
+		NOR = {
+			has_valid_civic = civic_death_cult
+			has_valid_civic = civic_death_cult_corporate
+		}
+	}
+#----------------------------------------------------
+
+#[NORMAL] Capital Planet Extra Priest Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				NOR = {
+					has_valid_civic = civic_death_cult
+					has_valid_civic = civic_death_cult_corporate
+				}
+			}
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		modifier = {
+			job_priest_add = 2
+		}
+	}
+
+#[ADVANCED] Capital Planet Extra Priest Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				NOR = {
+					has_valid_civic = civic_death_cult
+					has_valid_civic = civic_death_cult_corporate
+				}
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		modifier = {
+			job_priest_add = 2
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_temple
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_temple
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_arcology_religious
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_rw_temple
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_alderson_temple
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_TEMPLE_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_temple_6_normal_effect_desc
+			planet_priests_unity_produces_add = @building_ukn_temple_6_normal_unity_add
+			planet_priests_consumer_goods_upkeep_add = @building_ukn_temple_6_normal_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[ARCOLOGY] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_TEMPLE_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_temple_6_arcology_effect_desc
+			planet_priests_unity_produces_add = @building_ukn_temple_6_arcology_unity_add
+			planet_priests_consumer_goods_upkeep_add = @building_ukn_temple_6_arcology_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[RINGWORLD] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_TEMPLE_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_temple_6_rw_effect_desc
+			planet_priests_unity_produces_add = @building_ukn_temple_6_rw_unity_add
+			planet_priests_consumer_goods_upkeep_add = @building_ukn_temple_6_rw_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				NOR = {
+					has_valid_civic = civic_death_cult
+					has_valid_civic = civic_death_cult_corporate
+				}
+			}
+		}
+		text = job_priest_effect_desc
+	}
+	
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_temple_cost_mult = 0.80
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_hab_temple_cost_mult = 0.80
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_arcology_religious_cost_mult = 0.65
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_rw_temple_cost_mult = 0.30
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		text = job_ukn_priest_capital_normal_provide
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		text = job_ukn_priest_capital_advanced_provide
+	}
+#----------------------------------------------------
+}
+
+
+
+
+
+
+
+
+
+building_ukn_temple_5 = {
+	base_buildtime = @building_ukn_bureaucratic_7_build_time
+	can_build = no
+	position_priority = 106
+	category = unity
+
+	potential = {
+		UKN_CAN_BUILD_TEMPLE_GRID = yes
+		UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_CANNOT_BUILD_TEMPLE_GRID = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+		}
+	}
+
+	convert_to = {
+#		building_ukn_temple_5
+		building_ukn_sacrificial_temple_5
+		building_ukn_bureaucratic_5
+		building_ukn_hive_node_5
+		building_ukn_uplink_node_5
+		building_ukn_corporate_bureaucratic_5
+	}
+	
+	
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+			}
+			NOT = { has_building = building_ukn_temple_5 }
+		}
+		modifier = {
+			job_priest_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_ukn_temple_5
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_bureaucratic_7_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_bureaucratic_7_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_bureaucratic_7_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_bureaucratic_7_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_bureaucratic_7_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_bureaucratic_7_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_bureaucratic_7_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_bureaucratic_7_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_bureaucratic_7_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_bureaucratic_7_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_bureaucratic_7_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_bureaucratic_7_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_ukn_automation_5"
+	}
+
+#	upgrades = {
+#		building_ukn_temple_6
+#	}
+
+	show_tech_unlock_if = {
+		is_spiritualist = yes
+		NOR = {
+			has_valid_civic = civic_death_cult
+			has_valid_civic = civic_death_cult_corporate
+		}
+	}
+#----------------------------------------------------
+
+#[NORMAL] Capital Planet Extra Priest Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				NOR = {
+					has_valid_civic = civic_death_cult
+					has_valid_civic = civic_death_cult_corporate
+				}
+			}
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		modifier = {
+			job_priest_add = 2
+		}
+	}
+
+#[ADVANCED] Capital Planet Extra Priest Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				NOR = {
+					has_valid_civic = civic_death_cult
+					has_valid_civic = civic_death_cult_corporate
+				}
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		modifier = {
+			job_priest_add = 2
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_temple
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_temple
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_arcology_religious
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_rw_temple
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_alderson_temple
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_TEMPLE_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_temple_7_normal_effect_desc
+			planet_priests_unity_produces_add = @building_ukn_temple_7_normal_unity_add
+			planet_priests_consumer_goods_upkeep_add = @building_ukn_temple_7_normal_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[ARCOLOGY] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_TEMPLE_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_temple_7_arcology_effect_desc
+			planet_priests_unity_produces_add = @building_ukn_temple_7_arcology_unity_add
+			planet_priests_consumer_goods_upkeep_add = @building_ukn_temple_7_arcology_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[RINGWORLD] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_TEMPLE_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_temple_7_rw_effect_desc
+			planet_priests_unity_produces_add = @building_ukn_temple_7_rw_unity_add
+			planet_priests_consumer_goods_upkeep_add = @building_ukn_temple_7_rw_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				NOR = {
+					has_valid_civic = civic_death_cult
+					has_valid_civic = civic_death_cult_corporate
+				}
+			}
+		}
+		text = job_priest_effect_desc
+	}
+	
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_temple_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_hab_temple_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_arcology_religious_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_rw_temple_cost_mult = 0.65
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		text = job_ukn_priest_capital_normal_provide
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		text = job_ukn_priest_capital_advanced_provide
+	}
+#----------------------------------------------------
+}
+
+
+
+
+
+
+
+
+###############################
+#[DEATH-CULT] UNITY BUILDINGS #
+###############################
+
+building_ukn_sacrificial_temple_4 = {
+	base_buildtime = @building_ukn_bureaucratic_6_build_time
+	can_build = no
+	position_priority = 106
+	category = unity
+
+	potential = {
+		UKN_CAN_BUILD_SACRIFICIAL_TEMPLE_GRID = yes
+		UKN_USES_SUB_ALDERSON_ARCOLOGY_DISTRICTS = yes
+		UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_CANNOT_BUILD_SACRIFICIAL_TEMPLE_GRID = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+		}
+	}
+
+	convert_to = {
+#		building_ukn_sacrificial_temple_4
+		building_ukn_temple_4
+		building_ukn_bureaucratic_4
+		building_ukn_hive_node_4
+		building_ukn_uplink_node_4
+		building_ukn_corporate_bureaucratic_4
+	}
+	
+	
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+			}
+			NOT = { has_building = building_ukn_sacrificial_temple_4 }
+		}
+		modifier = {
+			job_death_priest_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_ukn_temple_4
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_bureaucratic_6_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_bureaucratic_6_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_bureaucratic_6_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_bureaucratic_6_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_bureaucratic_6_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_bureaucratic_6_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_bureaucratic_6_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_bureaucratic_6_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_bureaucratic_6_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_bureaucratic_6_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_bureaucratic_6_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_bureaucratic_6_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_ukn_automation_4"
+	}
+
+	upgrades = {
+		building_ukn_sacrificial_temple_5
+	}
+
+	show_tech_unlock_if = {
+		is_spiritualist = yes
+		OR = {
+			has_valid_civic = civic_death_cult
+			has_valid_civic = civic_death_cult_corporate
+		}
+	}
+#----------------------------------------------------
+
+#[NORMAL] Capital Planet Extra Priest Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				OR = {
+					has_valid_civic = civic_death_cult
+					has_valid_civic = civic_death_cult_corporate
+				}
+			}
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		modifier = {
+			job_death_priest_add = 1
+			job_mortal_initiate_add = 1
+		}
+	}
+
+#[ADVANCED] Capital Planet Extra Priest Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				OR = {
+					has_valid_civic = civic_death_cult
+					has_valid_civic = civic_death_cult_corporate
+				}
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		modifier = {
+			job_death_priest_add = 1
+			job_mortal_initiate_add = 1
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_temple
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_temple
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_arcology_religious
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_rw_temple
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_alderson_temple
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_SACRIFICIAL_TEMPLE_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_sacrificial_temple_6_normal_effect_desc
+			planet_priests_unity_produces_add = @building_ukn_sacrificial_temple_6_normal_unity_add
+			planet_priests_society_research_produces_add = @building_ukn_sacrificial_temple_6_normal_society_research_add
+			planet_priests_consumer_goods_upkeep_add = @building_ukn_sacrificial_temple_6_normal_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[ARCOLOGY] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_SACRIFICIAL_TEMPLE_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_sacrificial_temple_6_arcology_effect_desc
+			planet_priests_unity_produces_add = @building_ukn_sacrificial_temple_6_arcology_unity_add
+			planet_priests_society_research_produces_add = @building_ukn_sacrificial_temple_6_arcology_society_research_add
+			planet_priests_consumer_goods_upkeep_add = @building_ukn_sacrificial_temple_6_arcology_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[RINGWORLD] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_SACRIFICIAL_TEMPLE_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_sacrificial_temple_6_rw_effect_desc
+			planet_priests_unity_produces_add = @building_ukn_sacrificial_temple_6_rw_unity_add
+			planet_priests_society_research_produces_add = @building_ukn_sacrificial_temple_6_rw_society_research_add
+			planet_priests_consumer_goods_upkeep_add = @building_ukn_sacrificial_temple_6_rw_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				OR = {
+					has_valid_civic = civic_death_cult
+					has_valid_civic = civic_death_cult_corporate
+				}
+			}
+		}
+		text = job_death_priest_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				OR = {
+					has_valid_civic = civic_death_cult
+					has_valid_civic = civic_death_cult_corporate
+				}
+			}
+		}
+		text = job_mortal_initiate_effect_desc
+	}
+	
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_temple_cost_mult = 0.80
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_hab_temple_cost_mult = 0.80
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_arcology_religious_cost_mult = 0.65
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_rw_temple_cost_mult = 0.30
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		text = job_ukn_death_priest_mortal_initiate_capital_normal_provide
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		text = job_ukn_death_priest_mortal_initiate_capital_advanced_provide
+	}
+#----------------------------------------------------
+}
+
+
+
+
+
+
+
+
+
+building_ukn_sacrificial_temple_5 = {
+	base_buildtime = @building_ukn_bureaucratic_7_build_time
+	can_build = no
+	position_priority = 106
+	category = unity
+
+	potential = {
+		UKN_CAN_BUILD_SACRIFICIAL_TEMPLE_GRID = yes
+		UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_CANNOT_BUILD_SACRIFICIAL_TEMPLE_GRID = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+		}
+	}
+
+	convert_to = {
+#		building_ukn_sacrificial_temple_5
+		building_ukn_temple_5
+		building_ukn_bureaucratic_5
+		building_ukn_hive_node_5
+		building_ukn_uplink_node_5
+		building_ukn_corporate_bureaucratic_5
+	}
+	
+	
+#[AI-DEFAULT] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+			}
+			NOT = { has_building = building_ukn_sacrificial_temple_5 }
+		}
+		modifier = {
+			job_death_priest_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_ukn_temple_5
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_bureaucratic_7_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_bureaucratic_7_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_bureaucratic_7_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_bureaucratic_7_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_bureaucratic_7_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_bureaucratic_7_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_bureaucratic_7_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_bureaucratic_7_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_bureaucratic_7_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_bureaucratic_7_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_bureaucratic_7_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_bureaucratic_7_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_ukn_automation_5"
+	}
+
+#	upgrades = {
+#		building_ukn_sacrificial_temple_6
+#	}
+
+	show_tech_unlock_if = {
+		is_spiritualist = yes
+		OR = {
+			has_valid_civic = civic_death_cult
+			has_valid_civic = civic_death_cult_corporate
+		}
+	}
+#----------------------------------------------------
+
+#[NORMAL] Capital Planet Extra Priest Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				OR = {
+					has_valid_civic = civic_death_cult
+					has_valid_civic = civic_death_cult_corporate
+				}
+			}
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		modifier = {
+			job_death_priest_add = 1
+			job_mortal_initiate_add = 1
+		}
+	}
+
+#[ADVANCED] Capital Planet Extra Priest Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				OR = {
+					has_valid_civic = civic_death_cult
+					has_valid_civic = civic_death_cult_corporate
+				}
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		modifier = {
+			job_death_priest_add = 1
+			job_mortal_initiate_add = 1
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_temple
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_temple
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_arcology_religious
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_rw_temple
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_alderson_temple
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_SACRIFICIAL_TEMPLE_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_sacrificial_temple_7_normal_effect_desc
+			planet_priests_unity_produces_add = @building_ukn_sacrificial_temple_7_normal_unity_add
+			planet_priests_society_research_produces_add = @building_ukn_sacrificial_temple_7_normal_society_research_add
+			planet_priests_consumer_goods_upkeep_add = @building_ukn_sacrificial_temple_7_normal_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[ARCOLOGY] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_SACRIFICIAL_TEMPLE_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_sacrificial_temple_7_arcology_effect_desc
+			planet_priests_unity_produces_add = @building_ukn_sacrificial_temple_7_arcology_unity_add
+			planet_priests_society_research_produces_add = @building_ukn_sacrificial_temple_7_arcology_society_research_add
+			planet_priests_consumer_goods_upkeep_add = @building_ukn_sacrificial_temple_7_arcology_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[RINGWORLD] Default Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_SACRIFICIAL_TEMPLE_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_sacrificial_temple_7_rw_effect_desc
+			planet_priests_unity_produces_add = @building_ukn_sacrificial_temple_7_rw_unity_add
+			planet_priests_society_research_produces_add = @building_ukn_sacrificial_temple_7_rw_society_research_add
+			planet_priests_consumer_goods_upkeep_add = @building_ukn_sacrificial_temple_7_rw_consumer_goods_add
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				OR = {
+					has_valid_civic = civic_death_cult
+					has_valid_civic = civic_death_cult_corporate
+				}
+			}
+		}
+		text = job_death_priest_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+				OR = {
+					has_valid_civic = civic_death_cult
+					has_valid_civic = civic_death_cult_corporate
+				}
+			}
+		}
+		text = job_mortal_initiate_effect_desc
+	}
+	
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_temple_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_hab_temple_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_arcology_religious_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_rw_temple_cost_mult = 0.65
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		text = job_ukn_death_priest_mortal_initiate_capital_normal_provide
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		text = job_ukn_death_priest_mortal_initiate_capital_advanced_provide
+	}
+#----------------------------------------------------
+}
+
+
+
+
+
+
+
+
+#########################
+#[HIVE] UNITY BUILDINGS #
+#########################
+
+building_ukn_hive_node_4 = {
+	base_buildtime = @building_ukn_hive_node_6_build_time
+	can_build = no
+	position_priority = 106
+	category = unity
+
+	potential = {
+		UKN_CAN_BUILD_SYNAPTIC_GRID = yes
+		UKN_USES_SUB_ALDERSON_ARCOLOGY_DISTRICTS = yes
+		UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_CANNOT_BUILD_SYNAPTIC_GRID = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+		}
+	}
+
+	convert_to = {
+#		building_ukn_hive_node_4
+		building_ukn_bureaucratic_4
+		building_ukn_temple_4
+		building_ukn_sacrificial_temple_4
+		building_ukn_uplink_node_4
+		building_ukn_corporate_bureaucratic_4
+	}
+	
+	
+#[AI-HIVE] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+			}
+			NOT = { has_building = building_ukn_hive_node_4 }
+		}
+		modifier = {
+			job_synapse_drone_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_ukn_hive_node_4
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_hive_node_6_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_hive_node_6_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_hive_node_6_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_hive_node_6_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_hive_node_6_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_hive_node_6_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_hive_node_6_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_hive_node_6_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_hive_node_6_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_hive_node_6_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_hive_node_6_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_hive_node_6_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_ukn_automation_4"
+	}
+
+	upgrades = {
+		building_ukn_hive_node_5
+	}
+
+	show_tech_unlock_if = {
+		is_hive_empire = yes
+	}
+#----------------------------------------------------
+
+#[NORMAL] Capital Planet Extra Synapse Drone Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		modifier = {
+			job_synapse_drone_add = 2
+		}
+	}
+
+#[ADVANCED] Capital Planet Extra Synapse Drone Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		modifier = {
+			job_synapse_drone_add = 2
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hive_node
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_hive_node
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_arcology_hive_node
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_rw_hive_node
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_alderson_hive_node
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_SYNAPTIC_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_hive_node_6_normal_effect_desc
+			planet_administrators_unity_produces_add = @building_ukn_hive_node_6_normal_unity_add
+			planet_administrators_energy_upkeep_add = @building_ukn_hive_node_6_normal_energy_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[ARCOLOGY] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_SYNAPTIC_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_hive_node_6_arcology_effect_desc
+			planet_administrators_unity_produces_add = @building_ukn_hive_node_6_arcology_unity_add
+			planet_administrators_energy_upkeep_add = @building_ukn_hive_node_6_arcology_energy_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[RINGWORLD] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_SYNAPTIC_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_hive_node_6_rw_effect_desc
+			planet_administrators_unity_produces_add = @building_ukn_hive_node_6_rw_unity_add
+			planet_administrators_energy_upkeep_add = @building_ukn_hive_node_6_rw_energy_add
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		text = job_synapse_drone_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_hive_node_cost_mult = 0.80
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_hab_hive_node_cost_mult = 0.80
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_ukn_arcology_hive_node_cost_mult = 0.65
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_rw_hive_node_cost_mult = 0.30
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		text = job_ukn_synapse_drone_capital_normal_provide
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		text = job_ukn_synapse_drone_capital_advanced_provide
+	}
+#----------------------------------------------------
+}
+
+
+
+
+
+
+
+
+building_ukn_hive_node_5 = {
+	base_buildtime = @building_ukn_hive_node_7_build_time
+	can_build = no
+	position_priority = 106
+	category = unity
+
+	potential = {
+		UKN_CAN_BUILD_SYNAPTIC_GRID = yes
+		UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_CANNOT_BUILD_SYNAPTIC_GRID = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+		}
+	}
+
+	convert_to = {
+#		building_ukn_hive_node_5
+		building_ukn_bureaucratic_5
+		building_ukn_temple_5
+		building_ukn_sacrificial_temple_5
+		building_ukn_uplink_node_5
+		building_ukn_corporate_bureaucratic_5
+	}
+	
+	
+#[AI-HIVE] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+			}
+			NOT = { has_building = building_ukn_hive_node_5 }
+		}
+		modifier = {
+			job_synapse_drone_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_ukn_hive_node_5
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_hive_node_7_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_hive_node_7_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_hive_node_7_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_hive_node_7_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_hive_node_7_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_hive_node_7_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_hive_node_7_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_hive_node_7_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_hive_node_7_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_hive_node_7_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_hive_node_7_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_hive_node_7_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_ukn_automation_5"
+	}
+
+#	upgrades = {
+#		building_ukn_hive_node_6
+#	}
+
+	show_tech_unlock_if = {
+		is_hive_empire = yes
+	}
+#----------------------------------------------------
+
+#[NORMAL] Capital Planet Extra Synapse Drone Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		modifier = {
+			job_synapse_drone_add = 2
+		}
+	}
+
+#[ADVANCED] Capital Planet Extra Synapse Drone Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		modifier = {
+			job_synapse_drone_add = 2
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hive_node
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_hive_node
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_arcology_hive_node
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_rw_hive_node
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_alderson_hive_node
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_SYNAPTIC_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_hive_node_7_normal_effect_desc
+			planet_administrators_unity_produces_add = @building_ukn_hive_node_7_normal_unity_add
+			planet_administrators_energy_upkeep_add = @building_ukn_hive_node_7_normal_energy_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[ARCOLOGY] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_SYNAPTIC_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_hive_node_7_arcology_effect_desc
+			planet_administrators_unity_produces_add = @building_ukn_hive_node_7_arcology_unity_add
+			planet_administrators_energy_upkeep_add = @building_ukn_hive_node_7_arcology_energy_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[RINGWORLD] Hive Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_SYNAPTIC_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_hive_node_7_rw_effect_desc
+			planet_administrators_unity_produces_add = @building_ukn_hive_node_7_rw_unity_add
+			planet_administrators_energy_upkeep_add = @building_ukn_hive_node_7_rw_energy_add
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		text = job_synapse_drone_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_hive_node_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_hab_hive_node_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_ukn_arcology_hive_node_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_rw_hive_node_cost_mult = 0.65
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		text = job_ukn_synapse_drone_capital_normal_provide
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		text = job_ukn_synapse_drone_capital_advanced_provide
+	}
+#----------------------------------------------------
+}
+
+
+
+
+
+
+
+
+############################
+#[MACHINE] UNITY BUILDINGS #
+############################
+
+building_ukn_uplink_node_4 = {
+	base_buildtime = @building_ukn_uplink_node_6_build_time
+	can_build = no
+	position_priority = 106
+	category = unity
+
+	potential = {
+		UKN_CAN_BUILD_UPLINK_GRID = yes
+		UKN_USES_SUB_ALDERSON_ARCOLOGY_DISTRICTS = yes
+		UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_CANNOT_BUILD_UPLINK_GRID = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+		}
+	}
+
+	convert_to = {
+#		building_ukn_uplink_node_4
+		building_ukn_bureaucratic_4
+		building_ukn_temple_4
+		building_ukn_sacrificial_temple_4
+		building_ukn_hive_node_4
+		building_ukn_corporate_bureaucratic_4
+	}
+	
+	
+#[AI-MACHINE] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+			}
+			NOT = { has_building = building_ukn_uplink_node_4 }
+		}
+		modifier = {
+			job_coordinator_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_ukn_uplink_4
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_uplink_node_6_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_uplink_node_6_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_uplink_node_6_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_uplink_node_6_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_uplink_node_6_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_uplink_node_6_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_uplink_node_6_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_uplink_node_6_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_uplink_node_6_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_uplink_node_6_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_uplink_node_6_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_uplink_node_6_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_ukn_automation_4"
+	}
+
+	upgrades = {
+		building_ukn_uplink_node_5
+	}
+
+	show_tech_unlock_if = {
+		is_machine_empire = yes
+	}
+#----------------------------------------------------
+
+#[NORMAL] Capital Planet Extra Evaluator Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		modifier = {
+			job_coordinator_add = 2
+		}
+	}
+
+#[ADVANCED] Capital Planet Extra Evaluator Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		modifier = {
+			job_coordinator_add = 2
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_uplink
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_uplink
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_arcology_uplink
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_rw_uplink
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_alderson_uplink
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Machine Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_UPLINK_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_uplink_node_6_normal_effect_desc
+			planet_administrators_unity_produces_add = @building_ukn_uplink_node_6_normal_unity_add
+			planet_administrators_energy_upkeep_add = @building_ukn_uplink_node_6_normal_energy_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[ARCOLOGY] Machine Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_UPLINK_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_uplink_node_6_arcology_effect_desc
+			planet_administrators_unity_produces_add = @building_ukn_uplink_node_6_arcology_unity_add
+			planet_administrators_energy_upkeep_add = @building_ukn_uplink_node_6_arcology_energy_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[RINGWORLD] Machine Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_UPLINK_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_uplink_node_6_rw_effect_desc
+			planet_administrators_unity_produces_add = @building_ukn_uplink_node_6_rw_unity_add
+			planet_administrators_energy_upkeep_add = @building_ukn_uplink_node_6_rw_energy_add
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		text = job_coordinator_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_uplink_cost_mult = 0.80
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_hab_uplink_cost_mult = 0.80
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_ukn_arcology_uplink_cost_mult = 0.65
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_rw_uplink_cost_mult = 0.30
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		text = job_ukn_coordinator_capital_normal_provide
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		text = job_ukn_coordinator_capital_advanced_provide
+	}
+#----------------------------------------------------
+}
+
+
+
+
+
+
+
+
+building_ukn_uplink_node_5 = {
+	base_buildtime = @building_ukn_uplink_node_7_build_time
+	can_build = no
+	position_priority = 106
+	category = unity
+
+	potential = {
+		UKN_CAN_BUILD_UPLINK_GRID = yes
+		UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = no
+		UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			UKN_CANNOT_BUILD_UPLINK_GRID = yes
+			UKN_USES_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_EXTRACTION_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_RW_MILITARY_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_SCIENCE_ARCOLOGY_DISTRICTS = yes
+			UKN_USES_ALDERSON_MILITARY_ARCOLOGY_DISTRICTS = yes
+		}
+	}
+
+	convert_to = {
+#		building_ukn_uplink_node_5
+		building_ukn_bureaucratic_5
+		building_ukn_temple_5
+		building_ukn_sacrificial_temple_5
+		building_ukn_hive_node_5
+		building_ukn_corporate_bureaucratic_5
+	}
+	
+	
+#[AI-MACHINE] ==Force Build
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+			}
+			NOT = { has_building = building_ukn_uplink_node_5 }
+		}
+		modifier = {
+			job_coordinator_add = 1000
+		}
+	}
+#----------------------------------------------------
+
+	resources = {
+		category = planet_buildings_ukn_uplink_5
+#########
+# COSTS #
+#########
+#[BASIC] ARTICLES
+		cost = {
+			trigger = {
+				owner = {
+					is_ai = no
+				}
+			}
+			consumer_goods = @building_ukn_uplink_node_7_cost_basic_consumer_goods
+		}
+
+#[BASIC] MINERALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+					}
+				}
+			}
+			minerals = @building_ukn_uplink_node_7_cost_basic_minerals
+		}
+#[BASIC] META-MATERIALS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_meta_materials_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_meta_materials = @building_ukn_uplink_node_7_r_cost_basic_ukn_meta_materials
+		}
+#[BASIC] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_uplink_node_7_r_cost_basic_ukn_quasi_matter
+		}
+#[BASIC] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_basic_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_uplink_node_7_r_cost_basic_ukn_causalitons
+		}
+		
+		
+#[ADVANCED] CRYSTALS/GASES
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOR = {
+						has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+						has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+					}
+				}
+			}
+			exotic_gases = @building_ukn_uplink_node_7_cost_advanced_exotic_gases
+			rare_crystals = @building_ukn_uplink_node_7_cost_advanced_rare_crystals
+		}
+#[ADVANCED] FEMTOMATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_femtomatter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_femtomatter = @building_ukn_uplink_node_7_r_cost_advanced_ukn_femtomatter
+		}
+#[ADVANCED] CONDENSICS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_condensics_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_condensics = @building_ukn_uplink_node_7_r_cost_advanced_ukn_condensics
+		}
+#[ADVANCED] QUASI-MATTER
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_quasi_matter_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_quasi_matter = @building_ukn_uplink_node_7_r_cost_advanced_ukn_quasi_matter
+		}
+#[ADVANCED] OSCILLYONS
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = policy_ukn_causalitons_replace_planet_structure_advanced_cost
+				}
+			}
+			ukn_causalitons = @building_ukn_uplink_node_7_r_cost_advanced_ukn_causalitons
+		}
+##########
+# UPKEEP #
+##########
+		upkeep = {
+			energy = @building_ukn_uplink_node_7_upkeep_energy
+		}
+	}
+
+	prerequisites = {
+		"tech_ukn_automation_5"
+	}
+
+#	upgrades = {
+#		building_ukn_uplink_node_6
+#	}
+
+	show_tech_unlock_if = {
+		is_machine_empire = yes
+	}
+#----------------------------------------------------
+
+#[NORMAL] Capital Planet Extra Evaluator Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		modifier = {
+			job_coordinator_add = 2
+		}
+	}
+
+#[ADVANCED] Capital Planet Extra Evaluator Provision
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		modifier = {
+			job_coordinator_add = 2
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_uplink
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		text = upgrade_district_ukn_hab_uplink
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_arcology_uplink
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_rw_uplink
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		text = upgrade_district_ukn_alderson_uplink
+	}
+#----------------------------------------------------
+	
+#[NORMAL] Machine Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			UKN_USES_NORMAL_DISTRICTS = yes
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_UPLINK_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_uplink_node_7_normal_effect_desc
+			planet_administrators_unity_produces_add = @building_ukn_uplink_node_7_normal_unity_add
+			planet_administrators_energy_upkeep_add = @building_ukn_uplink_node_7_normal_energy_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[ARCOLOGY] Machine Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_UPLINK_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_uplink_node_7_arcology_effect_desc
+			planet_administrators_unity_produces_add = @building_ukn_uplink_node_7_arcology_unity_add
+			planet_administrators_energy_upkeep_add = @building_ukn_uplink_node_7_arcology_energy_add
+		}
+	}
+	
+#----------------------------------------------------
+	
+#[RINGWORLD] Machine Empire - Building Base Resource Add
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			exists = owner
+			owner = {
+				UKN_CAN_BUILD_UPLINK_GRID = yes
+			}
+		}
+		modifier = {
+#			custom_tooltip = building_ukn_uplink_node_7_rw_effect_desc
+			planet_administrators_unity_produces_add = @building_ukn_uplink_node_7_rw_unity_add
+			planet_administrators_energy_upkeep_add = @building_ukn_uplink_node_7_rw_energy_add
+		}
+	}
+	
+#----------------------------------------------------
+
+#[NORMAL] Jobs
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		text = job_coordinator_effect_desc
+	}
+#----------------------------------------------------
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_BASIC_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_uplink_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			UKN_USES_HABITAT_DISTRICTS = yes
+		}
+		modifier = {
+			planet_districts_ukn_hab_uplink_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_ukn_arcology_uplink_cost_mult = 1.00
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+		}
+		modifier = {
+			planet_districts_rw_uplink_cost_mult = 0.65
+		}
+	}
+#----------------------------------------------------
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			UKN_USES_NORMAL_DISTRICTS = yes
+			is_capital = yes
+		}
+		text = job_ukn_coordinator_capital_normal_provide
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			OR = {
+				UKN_USES_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_RW_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_GAIA_ARCOLOGY_DISTRICTS = yes
+				UKN_USES_ALDERSON_PRODUCTION_ARCOLOGY_DISTRICTS = yes
+			}
+			is_capital = yes
+		}
+		text = job_ukn_coordinator_capital_advanced_provide
+	}
+#----------------------------------------------------
+}
+
+
+#------------------------------------------------------------------------------------------------------------------------#

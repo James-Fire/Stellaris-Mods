@@ -1,0 +1,356 @@
+namespace = pab_events
+
+planet_event = {
+    id = pab_events.1
+    hide_window = yes
+
+    trigger = {
+        is_colony = yes
+        has_planet_flag = "pab_build_progress_flag"
+        NOT = { has_modifier = "pab_build_in_progress_modifier" }
+    }
+
+    immediate = {
+        add_building_by_flag = yes
+        add_upgraded_building_by_flag = yes
+        add_disctrict_by_flag = yes
+        remove_blocker_by_flag = yes
+        clear_building_planet_modifiers = yes
+        remove_planet_flag = "pab_build_progress_flag"
+    }
+} #build building when build time over
+
+planet_event = {
+    id = pab_events.2
+    hide_window = yes
+
+    trigger = {
+        is_colony = yes
+        has_planet_flag = "pab_refund"
+    }
+    immediate = {
+        refund_money_by_flag = yes
+        clear_building_flags = yes
+        clear_building_planet_modifiers = yes
+        remove_planet_flag = "pab_refund"
+    }
+
+}#refund money
+planet_event = {
+    id = pab_events.3
+    hide_window = yes
+
+    trigger = {
+        is_colony = yes
+        has_planet_flag = "pab_build_progress_flag"
+        OR = {
+            NOT = { has_planet_flag =  "pab_focus" }
+            has_building_construction = yes
+        }
+    }
+
+    immediate = {
+        refund_money_by_flag = yes
+        clear_building_flags = yes
+        clear_building_planet_modifiers = yes
+        remove_planet_flag = "pab_build_progress_flag"
+        remove_modifier = "pab_build_in_progress_modifier"
+    }
+} #player removed focus when building #TODO CALL THIS IF PLANET LOST
+
+planet_event = {
+    id = pab_events.4
+    hide_window = yes
+
+    trigger = {
+        is_colony = yes
+        has_planet_flag = "pab_focus"
+        NOT = { has_planet_flag = "pab_build_progress_flag" }
+        NOT = { has_planet_flag = "pab_building_delay" }
+        NOT = { has_modifier = "pab_not_enough_money" }
+        has_building_construction = no
+    }
+
+    immediate = {
+        set_planet_flag = "pab_building_delay"
+
+        if = {
+            limit = { NOT = { has_planet_flag = "pab_desposit_calculated" } }
+            root = {
+                planet_event = {
+                    id = pab_events.6
+                    days = 1
+                }
+            }
+        }
+
+        root = {
+            planet_event = {
+                id = pab_events.5
+                days = 4 #need delay after building finished because the game need to update jobs
+            }
+        }
+    }
+}
+
+planet_event = {
+    id = pab_events.5
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        remove_planet_flag = "pab_building_delay"
+        if = {
+            limit = {
+                has_building_construction = no
+                owner = {
+                    OR = {
+                        AND = {
+                            has_policy_flag = pab_2000_mineral
+                            has_resource = { type = minerals amount >= 2000 }
+                        }
+                        AND = {
+                            has_policy_flag = pab_5000_mineral
+                            has_resource = { type = minerals amount >= 5000 }
+                        }
+                        AND = {
+                            has_policy_flag = pab_10000_mineral
+                            has_resource = { type = minerals amount >= 10000 }
+                        }
+                    }
+                }
+            }
+            #set building flag
+            if = {
+                limit = { pab_can_build_housing = yes }
+                pab_build_housing = yes
+            }
+            else_if = {
+                limit = { pab_can_build_capital = yes }
+                pab_build_capital = yes
+            }
+            else_if = {
+                limit = { pab_can_build_growth = yes }
+                pab_build_growth = yes
+            }
+            else_if = {
+                limit = { 
+                    count_owned_pops = { 
+                        limit = { 
+                            OR = { 
+                                is_unemployed = yes 
+                                has_job = servant 
+                            }
+                        }
+                        count > 0
+                    }
+                }
+                if = {
+                    limit = { pab_can_build_amenities = yes }
+                    pab_build_amenities = yes
+                }
+                else_if = {
+                    limit = { pab_can_build_crime = yes }
+                    pab_build_crime = yes
+                }
+                else_if = {
+                    limit = { pab_can_build_desposit = yes }
+                    pab_build_desposit = yes
+                }
+                else_if = { 
+                    limit = { pab_can_build_unity = yes }
+                    pab_build_unity = yes
+                }
+                else_if = {
+                    limit = { pab_can_build_resource_focus = yes }
+                    pab_build_resource_focus = yes
+                }
+                else_if = {
+                    limit = { pab_can_build_manufacture_focus = yes }
+                    pab_build_manufacture_focus = yes
+                }
+                else_if = {
+                    limit = { pab_can_build_focus_buildings = yes }
+                    pab_build_focus_buildings = yes
+                }
+                else_if = {
+                    limit = { pab_can_build_disctrict_focus = yes }
+                    pab_build_disctrict_focus = yes
+                }
+                else_if = {
+                    limit = { pab_can_replace_buildings = yes }
+                    pab_replace_building = yes
+                }
+                else_if = {
+                    limit = { pab_can_upgrade_tier2 = yes }
+                    log = "pab_can_upgrade_tier2 = yes"
+                    pab_upgrade_tier2 = yes
+                }
+                else_if = {
+                    limit = { pab_can_upgrade_tier3 = yes }
+                    pab_upgrade_tier3 = yes
+                }
+                else_if = {
+                    limit = { pab_can_upgrade_tier4 = yes }
+                    pab_upgrade_tier4 = yes
+                }
+                else_if = {
+                    limit = { pab_can_remove_blocker = yes }
+                    pab_remove_blocker = yes
+                }               
+                else_if = {
+                    limit = { pab_can_replace_districts = yes }
+                    pab_replace_districts = yes
+                }
+                else_if = {
+                    limit = { pab_can_delete_wrong_focus_buildings = yes }
+                    pab_delete_wrong_focus_buidlings = yes
+                }
+                else_if = {
+                    limit = { pab_can_delete_wrong_focus_district = yes }
+                    pab_delete_wrong_focus_districts = yes
+                }
+                else = {
+                    log = "else_if END"
+                }
+            }
+            #we do this even if there are no unemployement
+            else_if = {
+                limit = { pab_can_remove_blocker = yes }
+                pab_remove_blocker = yes
+            }
+            else_if = {
+                limit = { pab_can_replace_buildings = yes }
+                pab_replace_building = yes
+            }
+            else_if = {
+                limit = { pab_can_replace_districts = yes }
+                pab_replace_districts = yes
+            }
+            else_if = {
+                limit = { pab_can_delete_wrong_focus_buildings = yes }
+                pab_delete_wrong_focus_buidlings = yes
+            }
+            else_if = {
+                limit = { pab_can_delete_wrong_focus_district = yes }
+                pab_delete_wrong_focus_districts = yes
+            }
+        }
+        #remove cost
+        remove_money_by_flag = yes
+        #add pab_build_in_progress_modifier modifier with correct days
+        if = {
+            limit = { NOT = { has_planet_flag = "pab_not_enough_money" } }
+            add_building_planet_modifier = yes
+            #add building modifier with correct days
+            add_current_construction_modifier = yes        
+            #add pab_build_progress_flag flag
+            set_planet_flag = "pab_build_progress_flag"
+        }
+        else = { add_modifier = { modifier = "pab_not_enough_money"  days = 30 } }
+    }        
+}
+
+planet_event = {
+    id = pab_events.6
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+
+        set_planet_flag = "pab_desposit_calculated"
+
+        set_variable = {
+            which = "mote_count"
+            value = 0
+        }
+        set_variable = {
+            which = "gas_count"
+            value = 0
+        }
+        set_variable = {
+            which = "crystal_count"
+            value = 0
+        }
+
+        if = {
+            limit = { has_deposit = d_dust_caverns }
+            change_variable = { which = "mote_count" value = 1 }
+        }
+        if = {
+            limit = { has_deposit = d_dust_desert }
+            change_variable = { which = "mote_count" value = 2 }
+        }
+        if = {
+            limit = { has_deposit = d_bubbling_swamp }
+            change_variable = { which = "gas_count" value = 1 }
+        }
+        if = {
+            limit = { has_deposit = d_fuming_bog }
+            change_variable = { which = "gas_count" value = 2 }
+        }
+        if = {
+            limit = { has_deposit = d_crystalline_caverns }
+            change_variable = { which = "crystal_count" value = 1 }
+        }
+        if = {
+            limit = { has_deposit = d_crystal_forest }
+            change_variable = { which = "crystal_count" value = 2 }
+        }
+        if = {
+            limit = { has_deposit = d_crystal_reef }
+            change_variable = { which = "crystal_count" value = 2 }
+        }
+
+        if = {
+            limit = { check_variable = { which = "mote_count" value = 0 } }
+            set_planet_flag = "mote_count_0"
+        }
+        else_if = {
+            limit = { check_variable = { which = "mote_count" value = 1 } }
+            set_planet_flag = "mote_count_1"
+        }
+        else_if = {
+            limit = { check_variable = { which = "mote_count" value = 2 } }
+            set_planet_flag = "mote_count_2"
+        }
+        else_if = {
+            limit = { check_variable = { which = "mote_count" value > 2 } }
+            set_planet_flag = "mote_count_3"
+        }
+
+        if = {
+            limit = { check_variable = { which = "gas_count" value = 0 } }
+            set_planet_flag = "gas_count_0"
+        }
+        else_if = {
+            limit = { check_variable = { which = "gas_count" value = 1 } }
+            set_planet_flag = "gas_count_1"
+        }
+        else_if = {
+            limit = { check_variable = { which = "gas_count" value = 2 } }
+            set_planet_flag = "gas_count_2"
+        }
+        else_if = {
+            limit = { check_variable = { which = "gas_count" value > 2 } }
+            set_planet_flag = "gas_count_3"
+        }
+
+        if = {
+            limit = { check_variable = { which = "crystal_count" value = 0 } }
+            set_planet_flag = "crystal_count_0"
+        }
+        else_if = {
+            limit = { check_variable = { which = "crystal_count" value = 1 } }
+            set_planet_flag = "crystal_count_1"
+        }
+        else_if = {
+            limit = { check_variable = { which = "crystal_count" value = 2 } }
+            set_planet_flag = "crystal_count_2"
+        }
+        else_if = {
+            limit = { check_variable = { which = "crystal_count" value > 2 } }
+            set_planet_flag = "crystal_count_3"
+        }
+    }
+}

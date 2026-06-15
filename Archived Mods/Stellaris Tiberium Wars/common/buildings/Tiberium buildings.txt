@@ -1,0 +1,1222 @@
+#Green Refineries
+
+tiberium_green_refinery = {
+	icon = "building_tiberium_refinery_green"
+	base_buildtime = 210
+	
+	category = manufacturing
+	
+	country_modifier = {
+		country_resource_max_sr_tiberium_green_add = 100
+		country_resource_max_sr_tiberium_liquid_add = 10
+	}
+
+	potential = {
+		NOT = { has_modifier = resort_colony }	
+	}
+
+	resources = {
+		category = planet_green_tiberium_refining
+		cost = {
+			minerals = 300
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			minerals = 8
+			alloys = 2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			sr_tiberium_green = 2
+			energy = 3
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_technology = tech_tiberium_refining }
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			minerals = 4
+			alloys = 1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_technology = tech_tiberium_refining }
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			sr_tiberium_green = 1
+			energy = 1
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_technology = tech_tiberium_refining_2 }
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			minerals = 4
+			alloys = 1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_technology = tech_tiberium_refining_2 }
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			sr_tiberium_green = 1
+			energy = 1
+		}
+	}
+	
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_regular_empire = yes } 
+		}
+		text = job_green_refinery_effect_desc
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_refiner_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_refiner_gestalt_add = 1
+		}
+	}
+
+	prerequisites = {
+		"tech_tiberium_green"
+	}
+	
+	upgrades = {
+		"tiberium_green_refinery_2"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			owner = {
+				AND = {
+					has_monthly_income = {
+						resource = sr_tiberium_green
+						value > 5
+					}
+					OR = {
+						has_monthly_income = {
+							resource = alloys
+							value < 20
+						}
+						has_monthly_income = {
+							resource = minerals
+							value < 20
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+tiberium_green_refinery_2 = {
+	icon = "building_tiberium_refinery_green"
+	base_buildtime = 210
+	can_build = no
+	
+	category = manufacturing
+	
+	country_modifier = {
+		country_resource_max_sr_tiberium_green_add = 200
+		country_resource_max_sr_tiberium_liquid_add = 20
+	}
+
+	potential = {
+		NOT = { has_modifier = resort_colony }	
+	}
+
+	resources = {
+		category = planet_green_tiberium_refining
+		cost = {
+			minerals = 300
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			minerals = 16
+			alloys = 4
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			sr_tiberium_green = 4
+			energy = 3
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+				owner = { has_technology = tech_tiberium_refining_2 }
+			}
+			minerals = 4
+			alloys = 1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+				owner = { has_technology = tech_tiberium_refining_2 }
+			}
+			sr_tiberium_green = 1
+			energy = 1
+		}
+	}
+	
+	
+	planet_modifier = {
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_refiner_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_refiner_gestalt_add = 2
+		}
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_regular_empire = yes } 
+		}
+		text = job_green_refinery_effect_desc
+	}
+
+	prerequisites = {
+		"tech_tiberium_refining"
+	}
+	
+	upgrades = {
+		"tiberium_green_refinery_3"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			owner = {
+				AND = {
+					has_monthly_income = {
+						resource = sr_tiberium_green
+						value > 5
+					}
+					OR = {
+						has_monthly_income = {
+							resource = alloys
+							value < 20
+						}
+						has_monthly_income = {
+							resource = minerals
+							value < 20
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+tiberium_green_refinery_3 = {
+	icon = "building_tiberium_refinery_green"
+	base_buildtime = 210
+	can_build = no
+	
+	category = manufacturing
+	
+	country_modifier = {
+		country_resource_max_sr_tiberium_green_add = 300
+		country_resource_max_sr_tiberium_liquid_add = 30
+	}
+
+	potential = {
+		NOT = { has_modifier = resort_colony }	
+	}
+
+	resources = {
+		category = planet_green_tiberium_refining
+		cost = {
+			minerals = 300
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			minerals = 24
+			alloys = 6
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			sr_tiberium_green = 6
+			energy = 3
+		}
+	}
+	
+	
+	planet_modifier = {
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_refiner_add = 4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_refiner_gestalt_add = 4
+		}
+	}
+
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_regular_empire = yes } 
+		}
+		text = job_green_refinery_effect_desc
+	}
+
+	prerequisites = {
+		"tech_tiberium_refining_2"
+	}
+	
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 7
+			owner = {
+				AND = {
+					has_monthly_income = {
+						resource = sr_tiberium_green
+						value > 5
+					}
+					OR = {
+						has_monthly_income = {
+							resource = alloys
+							value < 20
+						}
+						has_monthly_income = {
+							resource = minerals
+							value < 20
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Blue Refineries
+
+tiberium_blue_refinery = {
+	icon = "building_tiberium_refinery_blue"
+	base_buildtime = 210
+	
+	category = manufacturing
+	
+	country_modifier = {
+		country_resource_max_sr_tiberium_blue_add = 100
+		country_resource_max_sr_tiberium_liquid_add = 10
+	}
+
+	potential = {
+		NOT = { has_modifier = resort_colony }	
+	}
+
+	resources = {
+		category = planet_blue_tiberium_refining
+		cost = {
+			minerals = 350
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+			}
+			minerals = 4
+			alloys = 10
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+			}
+			sr_tiberium_blue = 2
+			energy = 3
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+				owner = { has_technology = tech_tiberium_refining }
+			}
+			minerals = 2
+			alloys = 5
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+				owner = { has_technology = tech_tiberium_refining }
+			}
+			sr_tiberium_blue = 1
+			energy = 1
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+				owner = { has_technology = tech_tiberium_refining_2 }
+			}
+			minerals = 2
+			alloys = 5
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+				owner = { has_technology = tech_tiberium_refining_2 }
+			}
+			sr_tiberium_blue = 1
+			energy = 1
+		}
+	}
+	
+	planet_modifier = {
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+			}
+			years_passed > 1
+		}
+		modifier = {
+			job_blue_tiberium_refiner_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = yes
+			}
+			years_passed > 1
+		}
+		modifier = {
+			job_blue_tiberium_refiner_gestalt_add = 1
+		}
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_regular_empire = yes } 
+		}
+		text = job_blue_refinery_effect_desc
+	}
+
+	prerequisites = {
+		"tech_tiberium_blue"
+	}
+	
+	upgrades = {
+		"tiberium_blue_refinery_2"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			owner = {
+				AND = {
+					has_monthly_income = {
+						resource = sr_tiberium_blue
+						value > 5
+					}
+					OR = {
+						has_monthly_income = {
+							resource = alloys
+							value < 20
+						}
+						has_monthly_income = {
+							resource = minerals
+							value < 20
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+tiberium_blue_refinery_2 = {
+	icon = "building_tiberium_refinery_blue"
+	base_buildtime = 210
+	can_build = no
+	
+	category = manufacturing
+	
+	country_modifier = {
+		country_resource_max_sr_tiberium_blue_add = 200
+		country_resource_max_sr_tiberium_liquid_add = 20
+	}
+	potential = {
+		NOT = { has_modifier = resort_colony }	
+	}
+
+	resources = {
+		category = planet_blue_tiberium_refining
+		cost = {
+			minerals = 300
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+			}
+			minerals = 16
+			alloys = 4
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+			}
+			sr_tiberium_blue = 4
+			energy = 3
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+				owner = { has_technology = tech_tiberium_refining_2 }
+			}
+			minerals = 2
+			alloys = 5
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+				owner = { has_technology = tech_tiberium_refining_2 }
+			}
+			sr_tiberium_blue = 1
+			energy = 1
+		}
+	}
+	
+	
+	planet_modifier = {
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_blue_tiberium_refiner_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_blue_tiberium_refiner_gestalt_add = 2
+		}
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_regular_empire = yes } 
+		}
+		text = job_blue_refinery_effect_desc
+	}
+
+	prerequisites = {
+		"tech_tiberium_refining"
+	}
+	
+	upgrades = {
+		"tiberium_blue_refinery_3"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			owner = {
+				AND = {
+					has_monthly_income = {
+						resource = sr_tiberium_blue
+						value > 5
+					}
+					OR = {
+						has_monthly_income = {
+							resource = alloys
+							value < 20
+						}
+						has_monthly_income = {
+							resource = minerals
+							value < 20
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+tiberium_blue_refinery_3 = {
+	icon = "building_tiberium_refinery_blue"
+	base_buildtime = 210
+	can_build = no
+	
+	category = manufacturing
+	
+	country_modifier = {
+		country_resource_max_sr_tiberium_blue_add = 300
+		country_resource_max_sr_tiberium_liquid_add = 30
+	}
+
+	potential = {
+		NOT = { has_modifier = resort_colony }	
+	}
+
+	resources = {
+		category = planet_blue_tiberium_refining
+		cost = {
+			minerals = 300
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+			}
+			minerals = 24
+			alloys = 6
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+			}
+			sr_tiberium_blue = 6
+			energy = 3
+		}
+	}
+	
+	
+	planet_modifier = {
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_blue_tiberium_refiner_add = 4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_blue_tiberium_refiner_gestalt_add = 4
+		}
+	}
+
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_regular_empire = yes } 
+		}
+		text = job_blue_refinery_effect_desc
+	}
+
+	prerequisites = {
+		"tech_tiberium_refining_2"
+	}
+	
+	upgrades = {
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			owner = {
+				AND = {
+					has_monthly_income = {
+						resource = sr_tiberium_blue
+						value > 5
+					}
+					OR = {
+						has_monthly_income = {
+							resource = alloys
+							value < 20
+						}
+						has_monthly_income = {
+							resource = minerals
+							value < 20
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Liquid Refineries
+
+liquid_tiberium_factory_green = {
+	icon = "liquid_tiberium_factory_green"
+	base_buildtime = 240
+	
+
+	category = resource
+	
+	potential = {
+
+	}
+	
+	country_modifier = {
+		country_resource_max_sr_tiberium_liquid_add = 10
+	}
+	
+	resources = {
+		category = planet_green_tiberium_refining
+		cost = {
+			minerals = 200
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			sr_tiberium_liquid = 4
+		}		
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			sr_tiberium_green = 6
+			energy = 10
+		}
+	}	
+	
+	prerequisites = {
+		"tech_tiberium_liquid"
+	}
+	
+	upgrades = {
+		"liquid_tiberium_factory_green_2"
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+liquid_tiberium_factory_green_2 = {
+	icon = "liquid_tiberium_factory_green"
+	base_buildtime = 240
+	can_build = no
+
+	category = resource
+	
+	potential = {
+
+	}
+	
+	country_modifier = {
+		country_resource_max_sr_tiberium_liquid_add = 20
+	}
+	
+	resources = {
+		category = planet_green_tiberium_refining
+		cost = {
+			minerals = 200
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			sr_tiberium_liquid = 6
+		}		
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			sr_tiberium_green = 9
+			energy = 12
+		}
+	}	
+	
+	prerequisites = {
+		"tech_tiberium_refining"
+	}
+	
+	upgrades = {
+		"liquid_tiberium_factory_green_3"
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+liquid_tiberium_factory_green_3 = {
+	icon = "liquid_tiberium_factory_green"
+	base_buildtime = 240
+	can_build = no
+
+	category = resource
+	
+	potential = {
+
+	}
+	
+	country_modifier = {
+		country_resource_max_sr_tiberium_liquid_add = 30
+	}
+	
+	resources = {
+		category = planet_green_tiberium_refining
+		cost = {
+			minerals = 200
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			sr_tiberium_liquid = 8
+		}		
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_green } }
+			}
+			sr_tiberium_green = 12
+			energy = 15
+		}
+	}	
+	
+	prerequisites = {
+		"tech_tiberium_refining_2"
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+liquid_tiberium_factory_blue = {
+	base_buildtime = 240
+
+	category = resource
+	
+	potential = {
+
+	}
+	
+	country_modifier = {
+		country_resource_max_sr_tiberium_liquid_add = 10
+	}
+	
+	resources = {
+		category = planet_blue_tiberium_refining
+		cost = {
+			minerals = 200
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+			}
+			sr_tiberium_liquid = 4
+		}		
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+			}
+			sr_tiberium_blue = 3
+			energy = 10
+		}
+	}	
+	
+	prerequisites = {
+		"tech_tiberium_liquid"
+	}
+	
+	upgrades = {
+		"liquid_tiberium_factory_blue_2"
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+liquid_tiberium_factory_blue_2 = {
+	icon = "liquid_tiberium_factory_blue"
+	base_buildtime = 240
+	can_build = no
+
+	category = resource
+	
+	potential = {
+
+	}
+	
+	country_modifier = {
+		country_resource_max_sr_tiberium_liquid_add = 20
+	}
+	
+	resources = {
+		category = planet_blue_tiberium_refining
+		cost = {
+			minerals = 200
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+			}
+			sr_tiberium_liquid = 6
+		}		
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+			}
+			sr_tiberium_blue = 4.5
+			energy = 12
+		}
+	}	
+	
+	prerequisites = {
+		"tech_tiberium_refining"
+	}
+	
+	upgrades = {
+		"liquid_tiberium_factory_blue_3"
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+liquid_tiberium_factory_blue_3 = {
+	icon = "liquid_tiberium_factory_blue"
+	base_buildtime = 240
+	can_build = no
+
+	category = resource
+	
+	potential = {
+
+	}
+	
+	country_modifier = {
+		country_resource_max_sr_tiberium_liquid_add = 30
+	}
+	
+	resources = {
+		category = planet_blue_tiberium_refining
+		cost = {
+			minerals = 200
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+			}
+			sr_tiberium_liquid = 8
+		}		
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_blue } }
+			}
+			sr_tiberium_blue = 6
+			energy = 15
+		}
+	}	
+	
+	prerequisites = {
+		"tech_tiberium_refining_2"
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Liquid Reactors
+
+liquid_tiberium_reactor = {
+	base_buildtime = 240
+
+	category = resource
+	
+	potential = {
+	}
+	
+	resources = {
+		category = tiberium_reactors
+		cost = {
+			minerals = 200
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_liquid } }
+			}
+			energy = 50
+		}		
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_liquid } }
+			}
+			sr_tiberium_liquid = 2
+		}
+	}	
+	
+	prerequisites = {
+		"tech_tiberium_liquid"
+	}
+	
+	upgrades = {
+		"liquid_tiberium_reactor_2"
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+liquid_tiberium_reactor_2 = {
+	icon = "liquid_tiberium_reactor"
+	base_buildtime = 240
+	can_build = no
+
+	category = resource
+	
+	potential = {
+	}
+	
+	resources = {
+		category = tiberium_reactors
+		cost = {
+			minerals = 150
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_liquid } }
+			}
+			energy = 80
+		}		
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { NOT = { has_deficit = sr_tiberium_liquid } }
+			}
+			sr_tiberium_liquid = 3
+		}
+	}	
+	
+	prerequisites = {
+		"tech_tiberium_liquid_power_1"
+	}
+	
+	upgrades = {
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_initial_tiberium_research_lab = {
+	base_buildtime = 240
+
+
+	category = research
+	
+	is_capped_by_modifier = yes
+	
+	potential = {
+		has_deposit = d_tiberium_asteroid
+	}
+	
+	planet_modifier = {
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_tiberium_researcher_add = 3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_tiberium_researcher_gestalt_add = 3
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+		produces = {
+			physics_research = 5
+			engineering_research = 5
+			society_research = 5
+		}		
+		upkeep = {
+			energy = 10
+		}
+	}	
+	
+	prerequisites = {
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_tiberium_threshold = {
+	icon = "building_scrin_threshold_vanilla_based"
+	base_buildtime = 360
+	
+	is_capped_by_modifier = yes
+	
+	planet_modifier = { 
+#		district_yellow_zone_max = -50
+#		district_red_zone_max = -50
+#		district_green_harvester_max = -50
+#		district_blue_harvester_max = -50 
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 3000
+			alloys = 1000
+		}
+		produces = {
+
+		}		
+		upkeep = {
+			energy = 100
+		}
+	}	
+}

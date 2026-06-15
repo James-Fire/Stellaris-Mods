@@ -1,0 +1,1274 @@
+          #########################
+#---------## [WEAPON] OVERWRITES ##---------#
+          #########################
+
+##########
+# LASERS #
+##########
+
+### VS-Lasers (T1) ###----------------------
+tech_lasers_1 = {
+	area = physics
+	cost = 0
+	tier = 0
+	start_tech = yes
+	category = { field_manipulation }
+	ai_update_type = all
+}
+
+### UV/X-Lasers (T2) ###----------------------
+tech_lasers_2 = {
+	area = physics
+	cost = @tech_ukn_laser_1_cost
+	tier = @tech_ukn_laser_1_tier
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_lasers_1" }
+	weight = @tech_ukn_laser_1_weight
+
+	gateway = tech_ukn_laser_2_gateway
+
+	modifier = {
+		terraform_speed_mult = 0.10
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_lasers_1
+#P]		has_technology = tech_fusion_power
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E1) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_fusion_power }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+### UV/X-Lasers (T2) ###----------------------
+tech_lasers_3 = {
+	area = physics
+	cost = @tech_ukn_laser_3_cost
+	tier = @tech_ukn_laser_3_tier
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_lasers_2" }
+	weight = @tech_ukn_laser_3_weight
+
+	gateway = tech_ukn_laser_3_gateway
+
+	modifier = {
+		terraform_speed_mult = 0.10
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_lasers_2
+#P]		has_technology = tech_cold_fusion_power
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E2) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_cold_fusion_power }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+### Gamma Lasers (T3) ###----------------------
+tech_lasers_4 = {
+	area = physics
+	cost = @tech_ukn_laser_4_cost
+	tier = @tech_ukn_laser_4_tier
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_lasers_3" }
+	weight = @tech_ukn_laser_4_weight
+
+	gateway = tech_ukn_laser_4_gateway
+
+	modifier = {
+		terraform_speed_mult = 0.10
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_lasers_3
+#P]		has_technology = tech_antimatter_power
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E3) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_antimatter_power }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+### Transgamma Lasers (T4) ###----------------------
+tech_lasers_5 = {
+	area = physics
+	cost = @tech_ukn_laser_5_cost
+	tier = @tech_ukn_laser_5_tier
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_lasers_4" }
+	weight = @tech_ukn_laser_5_weight
+
+	gateway = tech_ukn_laser_5_gateway
+
+	modifier = {
+		terraform_speed_mult = 0.10
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_lasers_4
+#P]		has_technology = tech_zero_point_power
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E4) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_zero_point_power }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+
+####################
+# ENERGY LAUNCHERS #
+####################
+
+### Neutropositive Launchers (T3) ###----------------------
+tech_energy_torpedoes_1 = {
+	area = physics
+	cost = @tech_ukn_energy_torpedo_4_cost
+	tier = @tech_ukn_energy_torpedo_4_tier
+	category = { particles }
+	ai_update_type = all
+	prerequisites = { "tech_lasers_4" }
+	weight = @tech_ukn_energy_torpedo_4_weight
+
+	gateway = tech_ukn_energy_torpedo_1_gateway
+
+	modifier = {
+		weapon_type_strike_craft_weapon_damage_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_lasers_4
+#P]		has_technology = tech_physics_3
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E3) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_physics_3 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+### Antiquark Launchers (T4) ###----------------------
+tech_energy_torpedoes_2 = {
+	area = physics
+	cost = @tech_ukn_energy_torpedo_5_cost
+	tier = @tech_ukn_energy_torpedo_5_tier
+	category = { particles }
+	ai_update_type = all
+	prerequisites = { "tech_energy_torpedoes_1" }
+	weight = @tech_ukn_energy_torpedo_5_weight
+
+	gateway = tech_ukn_energy_torpedo_2_gateway
+
+	modifier = {
+		weapon_type_strike_craft_weapon_damage_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_energy_torpedoes_1
+#P]		has_technology = tech_lasers_5
+#P]		has_technology = tech_ukn_physics_output_4
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E4) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_lasers_5 }
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ukn_physics_output_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+
+##########
+# PLASMA #
+##########
+
+### Plasma Throwers (T2) ###----------------------
+tech_plasma_1 = {
+	area = physics
+	cost = @tech_ukn_plasma_3_cost
+	tier = @tech_ukn_plasma_3_tier
+	category = { particles }
+	ai_update_type = all
+	prerequisites = { "tech_lasers_3" }
+	weight = @tech_ukn_plasma_3_weight
+
+	gateway = tech_ukn_plasma_1_gateway
+
+	modifier = {
+		ship_shield_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_lasers_3
+#P]		has_technology = tech_physics_2
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E2) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_physics_2 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+### Fusion Cannons (T3) ###----------------------
+tech_plasma_2 = {
+	area = physics
+	cost = @tech_ukn_plasma_4_cost
+	tier = @tech_ukn_plasma_4_tier
+	category = { particles }
+	ai_update_type = all
+	prerequisites = { "tech_plasma_1" }
+	weight = @tech_ukn_plasma_4_weight
+
+	gateway = tech_ukn_plasma_2_gateway
+
+	modifier = {
+		ship_shield_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_plasma_1
+#P]		has_technology = tech_lasers_4
+#P]		has_technology = tech_physics_3
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E3) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_lasers_4 }
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_physics_3 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+### Quark-Gluon Plasma Cannons (T4) ###----------------------
+tech_plasma_3 = {
+	area = physics
+	cost = @tech_ukn_plasma_5_cost
+	tier = @tech_ukn_plasma_5_tier
+	category = { particles }
+	ai_update_type = all
+	prerequisites = { "tech_plasma_2" }
+	weight = @tech_ukn_plasma_5_weight
+
+	gateway = tech_ukn_plasma_3_gateway
+
+	modifier = {
+		ship_shield_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_plasma_2
+#P]		has_technology = tech_lasers_5
+#P]		has_technology = tech_ukn_physics_output_4
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E4) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_lasers_5 }
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ukn_physics_output_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+
+########################
+# POTENTIAL DISLOCATOR #
+########################
+
+### Plasma Throwers (T2) ###----------------------
+tech_disruptors_1 = {
+	area = physics
+	cost = @tech_ukn_potential_dislocator_3_cost
+	tier = @tech_ukn_potential_dislocator_3_tier
+	category = { particles }
+	ai_update_type = all
+	prerequisites = { "tech_lasers_3" }
+	weight = @tech_ukn_potential_dislocator_3_weight
+
+	gateway = tech_ukn_potential_dislocator_1_gateway
+
+	modifier = {
+#		weapon_type_strike_craft_weapon_damage_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_lasers_3
+#P]		has_technology = tech_physics_2
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E2) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_physics_2 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+### Fusion Cannons (T3) ###----------------------
+tech_disruptors_2 = {
+	area = physics
+	cost = @tech_ukn_potential_dislocator_4_cost
+	tier = @tech_ukn_potential_dislocator_4_tier
+	category = { particles }
+	ai_update_type = all
+	prerequisites = { "tech_disruptors_1" }
+	weight = @tech_ukn_potential_dislocator_4_weight
+
+	gateway = tech_ukn_potential_dislocator_2_gateway
+
+	modifier = {
+#		weapon_type_strike_craft_weapon_damage_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_disruptors_1
+#P]		has_technology = tech_lasers_4
+#P]		has_technology = tech_physics_3
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E3) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_lasers_4 }
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_physics_3 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+### Quark-Gluon Plasma Cannons (T4) ###----------------------
+tech_disruptors_3 = {
+	area = physics
+	cost = @tech_ukn_potential_dislocator_5_cost
+	tier = @tech_ukn_potential_dislocator_5_tier
+	category = { particles }
+	ai_update_type = all
+	prerequisites = { "tech_disruptors_2" }
+	weight = @tech_ukn_potential_dislocator_5_weight
+
+	gateway = tech_ukn_potential_dislocator_3_gateway
+
+	modifier = {
+#		weapon_type_strike_craft_weapon_damage_mult = 0.05
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_disruptors_2
+#P]		has_technology = tech_lasers_5
+#P]		has_technology = tech_ukn_physics_output_4
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E4) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_lasers_5 }
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ukn_physics_output_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+
+############
+# LASER PD #
+############
+
+### Iota Point Defense (T2) ###----------------------
+tech_pd_tracking_1 = {
+	area = physics
+	cost = 0
+	tier = 0
+	start_tech = yes
+	category = { field_manipulation }
+	ai_update_type = all
+}
+
+### Iota Point Defense (T2) ###----------------------
+tech_pd_tracking_2 = {
+	area = physics
+	cost = @tech_ukn_laser_pd_3_cost
+	tier = @tech_ukn_laser_pd_3_tier
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_pd_tracking_1" }
+	weight = @tech_ukn_laser_pd_3_weight
+
+	gateway = tech_ukn_laser_pd_2_gateway
+
+	modifier = {
+#		planet_technician_energy_produces_mult = 0.15
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_pd_tracking_1
+#P]		has_technology = tech_lasers_3
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E2) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_lasers_3 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+### Lambda Point Defense (T3) ###----------------------
+tech_pd_tracking_3 = {
+	area = physics
+	cost = @tech_ukn_laser_pd_4_cost
+	tier = @tech_ukn_laser_pd_4_tier
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_pd_tracking_2" }
+	weight = @tech_ukn_laser_pd_4_weight
+
+	gateway = tech_ukn_laser_pd_3_gateway
+
+	modifier = {
+#		planet_technician_energy_produces_mult = 0.15
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_pd_tracking_2
+#P]		has_technology = tech_lasers_4
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E3) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_lasers_4 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+
+##########################
+# ARCED SUPRA-DISRUPTORS #
+##########################
+
+### Arced Subspace Macro-Disruptors (T4) ###----------------------
+tech_arc_emitter_1 = {
+	area = physics
+	cost = @tech_ukn_arc_emitter_5_cost
+	tier = @tech_ukn_arc_emitter_5_tier
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_ukn_disruptor_1" "tech_battleships" }
+	weight = @tech_ukn_arc_emitter_5_weight
+
+	gateway = tech_ukn_arc_emitter_1_gateway
+	
+#P]	potential = {
+#P]		has_technology = tech_ukn_disruptor_1
+#P]		has_technology = tech_battleships
+#P]	}
+
+	weight_modifier = {
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+### Arced Higgs Macro-Disruptors (T5) ###----------------------
+tech_arc_emitter_2 = {
+	area = physics
+	cost = @tech_ukn_arc_emitter_6_cost
+	tier = @tech_ukn_arc_emitter_6_tier
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_arc_emitter_1" }
+	weight = @tech_ukn_arc_emitter_6_weight
+
+	gateway = tech_ukn_arc_emitter_2_gateway
+	
+#P]	potential = {
+#P]		has_technology = tech_arc_emitter_1
+#P]		has_technology = tech_ukn_disruptor_2
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E5) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ukn_disruptor_2 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+
+########################
+# SUPERBEAM PROJECTORS #
+########################
+
+### Arced Subspace Macro-Disruptors (T4) ###----------------------
+tech_energy_lance_1 = {
+	area = physics
+	cost = @tech_ukn_energy_lance_5_cost
+	tier = @tech_ukn_energy_lance_5_tier
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_lasers_5" "tech_battleships" }
+	weight = @tech_ukn_energy_lance_5_weight
+
+	gateway = tech_ukn_energy_lance_1_gateway
+	
+#P]	potential = {
+#P]		has_technology = tech_lasers_5
+#P]		has_technology = tech_battleships
+#P]	}
+
+	weight_modifier = {
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+### Arced Higgs Macro-Disruptors (T5) ###----------------------
+tech_energy_lance_2 = {
+	area = physics
+	cost = @tech_ukn_energy_lance_6_cost
+	tier = @tech_ukn_energy_lance_6_tier
+	category = { field_manipulation }
+	ai_update_type = all
+	prerequisites = { "tech_energy_lance_1" }
+	weight = @tech_ukn_energy_lance_6_weight
+
+	gateway = tech_ukn_energy_lance_2_gateway
+	
+#P]	potential = {
+#P]		has_technology = tech_energy_lance_1
+#P]		has_technology = tech_ukn_laser_6
+#P]	}
+
+	weight_modifier = {
+#[ALL] (E5) Required Techs
+		modifier = {
+			factor = 0
+			NOT = { has_technology = tech_ukn_laser_6 }
+		}
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+
+##################
+# PLASMA CANDLES #
+##################
+
+### Quasi-Solid Armor (T2) ###----------------------
+tech_mining_drone_weapon_1 = {
+	area = physics
+	cost = @tech_ukn_plasma_candle_3_cost
+	tier = @tech_ukn_plasma_candle_3_tier
+	category = { particles }
+	ai_update_type = all
+	is_reverse_engineerable = yes
+	prerequisites = { "tech_ukn_mining_drone_components_1" }
+	weight = @tech_ukn_plasma_candle_3_weight
+
+	gateway = tech_ukn_plasma_candle_1_gateway
+
+	modifier = {
+#		planet_technician_energy_produces_mult = 0.15
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_ukn_mining_drone_components_1
+#P]	}
+
+	weight_modifier = {
+#[ALL] (Other) Boosting/Debuffing
+		factor = 1.25
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+
+#######################
+### MACRODISRUPTORS ###
+#######################
+
+### Higgs Disruptor (T5) ###----------------------
+tech_space_cloud_weapon_1 = {
+	area = physics
+	cost = @tech_ukn_macro_disruptor_5_cost
+	tier = @tech_ukn_macro_disruptor_5_tier
+	category = { field_manipulation }
+	ai_update_type = all
+#	prerequisites = { "tech_ukn_void_cloud_components_1" }
+	weight = @tech_ukn_macro_disruptor_5_weight
+
+	gateway = tech_ukn_macro_disruptor_1_gateway
+
+	modifier = {
+#		planet_technician_energy_produces_mult = 0.15
+#		custom_tooltip = UKN_REVERSE_ENGINEERED_VOID_CLOUD_COMPONENT
+	}
+	
+#P]	potential = {
+#P]		has_technology = tech_ukn_void_cloud_components_1
+#P]	}
+
+	weight_modifier = {
+#[ALL] (Other) Boosting/Debuffing
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 2 #good component
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+#P]	potential = {
+#P]		has_technology = tech_ukn_X
+#P]		has_technology = tech_ukn_Y
+#P]	}
+
+#	weight_modifier = {
+#[ALL] (E1) Required Techs
+#[PHY] (E1) Boosting Techs
+#[SOC] (E1) Boosting Techs
+#[ENG] (E1) Boosting Techs
+#[ALL] (Other) Boosting/Debuffing
+
+          ###############################
+#---------## [ALL] NON-ALTERED VANILLA ##---------#
+          ###############################
+
+# ## Physics - Weapon Technologies
+
+# ##################
+# Critter Weapons
+# ##################
+
+tech_extradimensional_weapon_1 = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { particles }
+	ai_update_type = military
+	weight = 0
+	
+	weight_modifier = {
+		factor = 10
+		modifier = {
+			factor = 0
+			NOT = { has_modifier = covenant_end_of_the_cycle }
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_extradimensional_weapon_1 }
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5		#weapons are good
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = value:tech_weight_likelihood
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+# Null void beam
+null_void_beam = {
+	area = physics
+	cost = @tier1cost2
+	tier = 2
+	is_rare = yes
+	category = { particles }
+	ai_update_type = military
+	weight = 0
+	
+}

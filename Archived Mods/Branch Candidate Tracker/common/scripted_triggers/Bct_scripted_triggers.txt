@@ -1,0 +1,144 @@
+
+##########################################
+##########################################
+#####                                #####
+#####    Branch Candidate Tracker    #####
+#####                                #####
+#####    scripted_triggers           #####
+#####                                #####
+##########################################
+##########################################
+
+### cf. can_build_branch_offices, Scopes: this = country
+BctTriggerBuildBranchPossible = {
+	is_ai = no
+	has_authority = auth_corporate
+	NOT = { has_country_flag = BctFlagForbidEventChain }
+}
+
+### cf. can_support_branch_offices, can_build_branch_office_on_planet
+### Scopes: this = country (supporter), root = country (builder)
+BctTriggerSupportBranchPossible = {
+	is_country_type = default
+	is_regular_empire = yes
+	NOT = { has_authority = auth_corporate }
+	has_communications = root
+	
+	OR = {
+		AND = {
+			NOT = { root = { is_criminal_syndicate = yes } }
+			OR = {
+				has_commercial_pact = root
+				is_in_federation_with = root
+				root = {
+					OR = {
+						has_country_flag = BctFlagMarkAlsoNoCommercialPact
+						AND = {
+							is_subject = yes
+							is_subject_type = subsidiary
+							overlord = { is_same_value = prev }
+						}
+					}
+				}
+				AND = {
+					is_subject = yes
+					is_subject_type = subsidiary
+					overlord = { is_same_value = root }
+				}
+			}
+		}
+		AND = {
+			root = { is_criminal_syndicate = yes }
+			NOR = {
+				has_truce = root
+				is_at_war_with = root
+			}
+		}
+	}
+	OR = {
+		NOT = { has_civic = civic_fanatic_purifiers }
+		is_same_species = root
+	}
+}
+
+### cf. can_build_branch_office_on_planet, Scopes: this = planet, root = country (builder)
+BctTriggerTargetPlanet = {
+	exists = owner
+	NAND = {
+		root = { is_criminal_syndicate = yes }
+		has_planet_flag = criminal_branch_closed_cooldown_planet@root
+	}
+	
+	OR = {
+		NOR = {
+			has_branch_office = yes
+			root = { has_country_flag = BctFlagNoMarkFreePlanet }
+		}
+		AND = {
+			has_branch_office = yes
+			NOT = { has_branch_office = root }
+			root = { has_country_flag = BctFlagMarkPlanetWithForeignBranch }
+		}
+	}
+	OR = {
+		root = { check_variable = { which = BctVarBranchCandidatePlanetValue value < @BctConstBranchCandidatePlanetValue_T1 } }
+		AND = {
+			root = { check_variable = { which = BctVarBranchCandidatePlanetValue value < @BctConstBranchCandidatePlanetValue_T2 } }
+			branch_office_value = { who = root value >= @BctConstBranchCandidatePlanetValue_V1 }
+		}
+		AND = {
+			root = { check_variable = { which = BctVarBranchCandidatePlanetValue value < @BctConstBranchCandidatePlanetValue_T3 } }
+			branch_office_value = { who = root value >= @BctConstBranchCandidatePlanetValue_V2 }
+		}
+		AND = {
+			root = { check_variable = { which = BctVarBranchCandidatePlanetValue value < @BctConstBranchCandidatePlanetValue_T4 } }
+			branch_office_value = { who = root value >= @BctConstBranchCandidatePlanetValue_V3 }
+		}
+		AND = {
+			root = { check_variable = { which = BctVarBranchCandidatePlanetValue value < @BctConstBranchCandidatePlanetValue_T5 } }
+			branch_office_value = { who = root value >= @BctConstBranchCandidatePlanetValue_V4 }
+		}
+		branch_office_value = { who = root value >= @BctConstBranchCandidatePlanetValue_V5 }
+	}
+	OR = {
+		root = { check_variable = { which = BctVarBranchCandidateNumPops value < @BctConstBranchCandidateNumPops_T1 } }
+		AND = {
+			root = { check_variable = { which = BctVarBranchCandidateNumPops value < @BctConstBranchCandidateNumPops_T2 } }
+			num_pops >= @BctConstBranchCandidateNumPops_V1
+		}
+		AND = {
+			root = { check_variable = { which = BctVarBranchCandidateNumPops value < @BctConstBranchCandidateNumPops_T3 } }
+			num_pops >= @BctConstBranchCandidateNumPops_V2
+		}
+		AND = {
+			root = { check_variable = { which = BctVarBranchCandidateNumPops value < @BctConstBranchCandidateNumPops_T4 } }
+			num_pops >= @BctConstBranchCandidateNumPops_V3
+		}
+		AND = {
+			root = { check_variable = { which = BctVarBranchCandidateNumPops value < @BctConstBranchCandidateNumPops_T5 } }
+			num_pops >= @BctConstBranchCandidateNumPops_V4
+		}
+		num_pops >= @BctConstBranchCandidateNumPops_V5
+	}
+	OR = {
+		root = { check_variable = { which = BctVarBranchCandidatePlanetSize value < @BctConstBranchCandidatePlanetSize_T1 } }
+		AND = {
+			root = { check_variable = { which = BctVarBranchCandidatePlanetSize value < @BctConstBranchCandidatePlanetSize_T2 } }
+			planet_size >= @BctConstBranchCandidatePlanetSize_V1
+		}
+		AND = {
+			root = { check_variable = { which = BctVarBranchCandidatePlanetSize value < @BctConstBranchCandidatePlanetSize_T3 } }
+			planet_size >= @BctConstBranchCandidatePlanetSize_V2
+		}
+		AND = {
+			root = { check_variable = { which = BctVarBranchCandidatePlanetSize value < @BctConstBranchCandidatePlanetSize_T4 } }
+			planet_size >= @BctConstBranchCandidatePlanetSize_V3
+		}
+		AND = {
+			root = { check_variable = { which = BctVarBranchCandidatePlanetSize value < @BctConstBranchCandidatePlanetSize_T5 } }
+			planet_size >= @BctConstBranchCandidatePlanetSize_V4
+		}
+		planet_size >= @BctConstBranchCandidatePlanetSize_V5
+	}
+}
+

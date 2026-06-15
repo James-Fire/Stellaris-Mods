@@ -1,0 +1,203 @@
+giga_worldcraft_normal = {
+	entity = "war_planet_complete_entity"
+	max_speed = 75
+	acceleration = 0.15
+	rotation_speed = 0.05
+	collision_radius = 48
+	formation_priority = 48
+	modifier = {
+		ship_evasion_mult = -1
+		ship_armor_add = 1250000
+		ship_shield_add = 500000
+	}
+	max_hitpoints = 5000000
+	size_multiplier = 64
+	fleet_slot_size = 64
+	section_slots = {
+		"bowgun" =			{ locator = "root" }
+		"bow" =				{ locator = "root" }
+		"mid" =				{ locator = "root" }
+		"stern" =			{ locator = "root" }
+#		"sternthrusters" =	{ locator = "root" }
+	}
+	num_target_locators = 0
+#	is_space_station = no
+	icon_frame = 7
+	enable_default_design = yes
+	is_designable = yes
+	combat_disengage_chance = 0
+	prerequisites = { "giga_tech_war_planet" }
+	class = shipclass_starbase
+#	possible_construction = { always = no }
+	construction_type = starbase_shipyard
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = 10000
+		}
+		upkeep = {
+			energy = 500
+			alloys = 200
+		}
+	}
+}
+
+giga_worldcraft_ecumenopolis = {
+	entity = "war_planet_complete_entity"
+	max_speed = 75
+	acceleration = 0.15
+	rotation_speed = 0.05
+	collision_radius = 48
+	formation_priority = 48
+	modifier = {
+		ship_evasion_mult = -1
+		ship_armor_add = 1250000
+		ship_shield_add = 500000
+	}
+	max_hitpoints = 5000000
+	size_multiplier = 64
+	fleet_slot_size = 64
+	section_slots = {
+		"bowgun" =			{ locator = "root" }
+		"bow" =				{ locator = "root" }
+		"mid" =				{ locator = "root" }
+		"stern" =			{ locator = "root" }
+#		"sternthrusters" =	{ locator = "root" }
+	}
+	num_target_locators = 0
+#	is_space_station = no
+	icon_frame = 7
+	enable_default_design = yes
+	is_designable = yes
+	combat_disengage_chance = 0
+	prerequisites = { "giga_tech_war_planet" }
+	class = shipclass_starbase
+#	possible_construction = { always = no }
+	construction_type = starbase_shipyard
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = 10000
+		}
+		upkeep = {
+			energy = 500
+			alloys = 200
+		}
+	}
+}
+
+giga_worldcraft_machine = {
+	entity = "war_planet_complete_entity"
+	max_speed = 75
+	acceleration = 0.15
+	rotation_speed = 0.05
+	collision_radius = 48
+	formation_priority = 48
+	modifier = {
+		ship_evasion_mult = -1
+		ship_armor_add = 1250000
+		ship_shield_add = 500000
+	}
+	max_hitpoints = 5000000
+	size_multiplier = 64
+	fleet_slot_size = 64
+	section_slots = {
+		"bowgun" =			{ locator = "root" }
+		"bow" =				{ locator = "root" }
+		"mid" =				{ locator = "root" }
+		"stern" =			{ locator = "root" }
+#		"sternthrusters" =	{ locator = "root" }
+	}
+	num_target_locators = 0
+#	is_space_station = no
+	icon_frame = 7
+	enable_default_design = yes
+	is_designable = yes
+	combat_disengage_chance = 0
+	prerequisites = { "giga_tech_war_planet" }
+	class = shipclass_starbase
+#	possible_construction = { always = no }
+	construction_type = starbase_shipyard
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = 10000
+		}
+		upkeep = {
+			energy = 500
+			alloys = 200
+		}
+	}
+}
+
+giga_worldcraft_hive = {
+	entity = "war_planet_complete_entity"
+	max_speed = 75
+	acceleration = 0.15
+	rotation_speed = 0.05
+	collision_radius = 48
+	formation_priority = 48
+	modifier = {
+		ship_evasion_mult = -1
+		ship_armor_add = 1250000
+		ship_shield_add = 500000
+	}
+	max_hitpoints = 5000000
+	size_multiplier = 64
+	fleet_slot_size = 64
+	section_slots = {
+		"bowgun" =			{ locator = "root" }
+		"bow" =				{ locator = "root" }
+		"mid" =				{ locator = "root" }
+		"stern" =			{ locator = "root" }
+#		"sternthrusters" =	{ locator = "root" }
+	}
+	num_target_locators = 0
+#	is_space_station = no
+	icon_frame = 7
+	enable_default_design = yes
+	is_designable = yes
+	combat_disengage_chance = 0
+	prerequisites = { "giga_tech_war_planet" }
+	class = shipclass_starbase
+#	possible_construction = { always = no }
+	construction_type = starbase_shipyard
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+
+	resources = {
+		category = ships
+		cost = {
+			alloys = 10000
+		}
+		upkeep = {
+			energy = 500
+			alloys = 200
+		}
+	}
+}

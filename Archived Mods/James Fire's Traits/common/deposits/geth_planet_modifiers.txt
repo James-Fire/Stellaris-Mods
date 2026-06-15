@@ -1,0 +1,87 @@
+d_geth_1 = {		# 1-5 - animal level / no cognition, cannot perform even basic tasks
+
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = -2
+		planet_jobs_physics_research_produces_mult = -2
+		planet_jobs_society_research_produces_mult = -2
+		planet_jobs_minerals_produces_mult = -0.75
+		planet_jobs_energy_produces_mult = -2
+		planet_jobs_food_produces_mult = -1
+		planet_jobs_unity_produces_mult = -2
+	}
+
+	station = shipclass_mining_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+d_geth_2 = {		# from 5-12
+
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = -1
+		planet_jobs_physics_research_produces_mult = -1
+		planet_jobs_society_research_produces_mult = -1
+		planet_jobs_unity_produces_mult = -0.5
+		planet_jobs_energy_produces_mult = -0.75
+		planet_jobs_minerals_produces_mult = -0.25
+		planet_jobs_food_produces_mult = -0.5
+	}
+	station = shipclass_mining_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+d_geth_3 = {		# from 12-19
+
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = -0.25
+		planet_jobs_physics_research_produces_mult = -0.25
+		planet_jobs_society_research_produces_mult = -0.25
+		planet_jobs_unity_produces_mult = -0.2
+		planet_jobs_energy_produces_mult = -0.25
+		planet_jobs_minerals_produces_mult = 0.25
+	}
+	
+	station = shipclass_mining_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+d_geth_4 = {		# 20-29
+
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.5
+		planet_jobs_physics_research_produces_mult = 0.5
+		planet_jobs_society_research_produces_mult = 0.5
+		planet_jobs_unity_produces_mult = 0.25
+		planet_jobs_energy_produces_mult = 0.5
+		planet_jobs_minerals_produces_mult = 0.5
+		planet_jobs_food_produces_mult = 0.5
+	}
+	
+	station = shipclass_mining_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+d_geth_5 = {		# >30
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.75
+		planet_jobs_physics_research_produces_mult = 0.75
+		planet_jobs_society_research_produces_mult = 0.75
+		planet_jobs_unity_produces_mult = 0.5
+		planet_jobs_energy_produces_mult = 0.75
+		planet_jobs_minerals_produces_mult = 0.75
+		planet_jobs_food_produces_mult = 0.75
+	}
+	
+	station = shipclass_mining_station
+	is_for_colonizeable = no
+	
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}

@@ -1,0 +1,237 @@
+############################
+########## SPEED ###########
+############################
+
+@ukn_t0a_thruster_speed_mult = -0.20
+@ukn_t0b_thruster_speed_mult = -0.10
+
+@ukn_t1_thruster_speed_mult = 0
+@ukn_t2_thruster_speed_mult = 0.20
+@ukn_t3_thruster_speed_mult = 0.40
+@ukn_t4_thruster_speed_mult = 0.65
+
+@ukn_t5_thruster_speed_mult = 0.90
+@ukn_t6_thruster_speed_mult = 1.20
+@ukn_t7_thruster_speed_mult = 1.50
+@ukn_t8_thruster_speed_mult = 1.80
+@ukn_t9_thruster_speed_mult = 2.40
+@ukn_t10_thruster_speed_mult = 2.70
+@ukn_t_p_thruster_speed_mult = 2.10
+
+##############################
+########## EVASION ###########
+##############################
+
+# CORVETTE #---------------------------
+@ukn_corvette_t0a_thruster_evasion = -5.0
+@ukn_corvette_t0b_thruster_evasion = -2.0
+@ukn_corvette_t1_thruster_evasion = 0.0
+@ukn_corvette_t2_thruster_evasion = 5.0
+@ukn_corvette_t3_thruster_evasion = 10.0 
+@ukn_corvette_t4_thruster_evasion = 15.0 
+@ukn_corvette_t5_thruster_evasion = 20.0 
+@ukn_corvette_t6_thruster_evasion = 25.0 
+@ukn_corvette_t7_thruster_evasion = 30.0 
+@ukn_corvette_t8_thruster_evasion = 35.0
+@ukn_corvette_t9_thruster_evasion = 45.0 
+@ukn_corvette_t10_thruster_evasion = 50.0 
+@ukn_corvette_t_p_thruster_evasion = 40.0 
+
+# DESTROYER #---------------------------
+@ukn_destroyer_t0a_thruster_evasion = -5.0
+@ukn_destroyer_t0b_thruster_evasion = -2.0
+@ukn_destroyer_t1_thruster_evasion = 0.0
+@ukn_destroyer_t2_thruster_evasion = 4.0 
+@ukn_destroyer_t3_thruster_evasion = 8.0 
+@ukn_destroyer_t4_thruster_evasion = 12.0 
+@ukn_destroyer_t5_thruster_evasion = 16.0 
+@ukn_destroyer_t6_thruster_evasion = 20.0 
+@ukn_destroyer_t7_thruster_evasion = 24.0 
+@ukn_destroyer_t8_thruster_evasion = 28.0 
+@ukn_destroyer_t9_thruster_evasion = 36.0 
+@ukn_destroyer_t10_thruster_evasion = 40.0 
+@ukn_destroyer_t_p_thruster_evasion = 32.0 
+
+# CRUISER #---------------------------
+@ukn_cruiser_t0a_thruster_evasion = -5.0
+@ukn_cruiser_t0b_thruster_evasion = -2.0
+@ukn_cruiser_t1_thruster_evasion = 0.0
+@ukn_cruiser_t2_thruster_evasion = 3.0 
+@ukn_cruiser_t3_thruster_evasion = 6.0 
+@ukn_cruiser_t4_thruster_evasion = 9.0 
+@ukn_cruiser_t5_thruster_evasion = 12.0 
+@ukn_cruiser_t6_thruster_evasion = 15.0 
+@ukn_cruiser_t7_thruster_evasion = 18.0 
+@ukn_cruiser_t8_thruster_evasion = 21.0 
+@ukn_cruiser_t9_thruster_evasion = 27.0 
+@ukn_cruiser_t10_thruster_evasion = 30.0 
+@ukn_cruiser_t_p_thruster_evasion = 24.0 
+
+# BATTLESHIP #---------------------------
+@ukn_battleship_t0a_thruster_evasion = -5.0
+@ukn_battleship_t0b_thruster_evasion = -2.0
+@ukn_battleship_t1_thruster_evasion = 0.0
+@ukn_battleship_t2_thruster_evasion = 2.0 
+@ukn_battleship_t3_thruster_evasion = 4.0 
+@ukn_battleship_t4_thruster_evasion = 6.0 
+@ukn_battleship_t5_thruster_evasion = 8.0 
+@ukn_battleship_t6_thruster_evasion = 10.0
+@ukn_battleship_t7_thruster_evasion = 12.0 
+@ukn_battleship_t8_thruster_evasion = 14.0 
+@ukn_battleship_t9_thruster_evasion = 18.0 
+@ukn_battleship_t10_thruster_evasion = 20.0 
+@ukn_battleship_t_p_thruster_evasion = 16.0 
+
+# TITAN #---------------------------
+@ukn_titan_t0a_thruster_evasion = -5.0
+@ukn_titan_t0b_thruster_evasion = -2.0
+@ukn_titan_t1_thruster_evasion = 0.0
+@ukn_titan_t2_thruster_evasion = 1.0 
+@ukn_titan_t3_thruster_evasion = 2.0
+@ukn_titan_t4_thruster_evasion = 3.0
+@ukn_titan_t5_thruster_evasion = 4.0
+@ukn_titan_t6_thruster_evasion = 5.0
+@ukn_titan_t7_thruster_evasion = 6.0
+@ukn_titan_t8_thruster_evasion = 7.0
+@ukn_titan_t9_thruster_evasion = 9.0
+@ukn_titan_t10_thruster_evasion = 10.0
+@ukn_titan_t_p_thruster_evasion = 8.0
+
+# COLOSSUS #---------------------------
+@ukn_colossus_t0a_thruster_evasion = -5.0
+@ukn_colossus_t0b_thruster_evasion = -2.0
+@ukn_colossus_t1_thruster_evasion = 0.0
+@ukn_colossus_t2_thruster_evasion = 0.5
+@ukn_colossus_t3_thruster_evasion = 1.0 
+@ukn_colossus_t4_thruster_evasion = 1.5 
+@ukn_colossus_t5_thruster_evasion = 2.0 
+@ukn_colossus_t6_thruster_evasion = 2.5 
+@ukn_colossus_t7_thruster_evasion = 3.0 
+@ukn_colossus_t8_thruster_evasion = 3.5 
+@ukn_colossus_t9_thruster_evasion = 4.5 
+@ukn_colossus_t10_thruster_evasion = 5.0 
+@ukn_colossus_t_p_thruster_evasion = 4.0 
+
+# JUGGERNAUT #---------------------------
+@ukn_juggernaut_t0a_thruster_evasion = -5.0
+@ukn_juggernaut_t0b_thruster_evasion = -2.0
+@ukn_juggernaut_t1_thruster_evasion = 0.0
+@ukn_juggernaut_t2_thruster_evasion = 0.5
+@ukn_juggernaut_t3_thruster_evasion = 1.0 
+@ukn_juggernaut_t4_thruster_evasion = 1.5 
+@ukn_juggernaut_t5_thruster_evasion = 2.0 
+@ukn_juggernaut_t6_thruster_evasion = 2.5 
+@ukn_juggernaut_t7_thruster_evasion = 3.0 
+@ukn_juggernaut_t8_thruster_evasion = 3.5 
+@ukn_juggernaut_t9_thruster_evasion = 4.5
+@ukn_juggernaut_t10_thruster_evasion = 5.0
+@ukn_juggernaut_t_p_thruster_evasion = 4.0
+
+############################
+########## POWER ###########
+############################
+
+# CORVETTE #---------------------------
+@ukn_corvette_t0a_thruster_power = -6
+@ukn_corvette_t0b_thruster_power = -8
+@ukn_corvette_t1_thruster_power = -10
+@ukn_corvette_t2_thruster_power = -13 
+@ukn_corvette_t3_thruster_power = -17 
+@ukn_corvette_t4_thruster_power = -22 
+@ukn_corvette_t5_thruster_power = -29 
+@ukn_corvette_t6_thruster_power = -39 
+@ukn_corvette_t7_thruster_power = -54 
+@ukn_corvette_t8_thruster_power = -78 
+@ukn_corvette_t9_thruster_power = -170 
+@ukn_corvette_t10_thruster_power = -264 
+@ukn_corvette_t_p_thruster_power = -113 
+
+# DESTROYER #---------------------------
+@ukn_destroyer_t0a_thruster_power = -12 
+@ukn_destroyer_t0b_thruster_power = -15 
+@ukn_destroyer_t1_thruster_power = -20 
+@ukn_destroyer_t2_thruster_power = -26 
+@ukn_destroyer_t3_thruster_power = -34 
+@ukn_destroyer_t4_thruster_power = -44 
+@ukn_destroyer_t5_thruster_power = -57 
+@ukn_destroyer_t6_thruster_power = -77 
+@ukn_destroyer_t7_thruster_power = -108 
+@ukn_destroyer_t8_thruster_power = -157 
+@ukn_destroyer_t9_thruster_power = -340 
+@ukn_destroyer_t10_thruster_power = -528 
+@ukn_destroyer_t_p_thruster_power = -227 
+
+# CRUISER #---------------------------
+@ukn_cruiser_t0a_thruster_power = -24 
+@ukn_cruiser_t0b_thruster_power = -31 
+@ukn_cruiser_t1_thruster_power = -40 
+@ukn_cruiser_t2_thruster_power = -52 
+@ukn_cruiser_t3_thruster_power = -68 
+@ukn_cruiser_t4_thruster_power = -88 
+@ukn_cruiser_t5_thruster_power = -114 
+@ukn_cruiser_t6_thruster_power = -154 
+@ukn_cruiser_t7_thruster_power = -216 
+@ukn_cruiser_t8_thruster_power = -313 
+@ukn_cruiser_t9_thruster_power = -681 
+@ukn_cruiser_t10_thruster_power = -1055 
+@ukn_cruiser_t_p_thruster_power = -454 
+
+# BATTLESHIP #---------------------------
+@ukn_battleship_t0a_thruster_power = -47 
+@ukn_battleship_t0b_thruster_power = -62 
+@ukn_battleship_t1_thruster_power = -80 
+@ukn_battleship_t2_thruster_power = -104 
+@ukn_battleship_t3_thruster_power = -135 
+@ukn_battleship_t4_thruster_power = -176 
+@ukn_battleship_t5_thruster_power = -228 
+@ukn_battleship_t6_thruster_power = -308 
+@ukn_battleship_t7_thruster_power = -432 
+@ukn_battleship_t8_thruster_power = -626 
+@ukn_battleship_t9_thruster_power = -1362 
+@ukn_battleship_t10_thruster_power = -2111 
+@ukn_battleship_t_p_thruster_power = -908 
+
+# TITAN #---------------------------
+@ukn_titan_t0a_thruster_power = -95 
+@ukn_titan_t0b_thruster_power = -123 
+@ukn_titan_t1_thruster_power = -160 
+@ukn_titan_t2_thruster_power = -208 
+@ukn_titan_t3_thruster_power = -270 
+@ukn_titan_t4_thruster_power = -352 
+@ukn_titan_t5_thruster_power = -457 
+@ukn_titan_t6_thruster_power = -617
+@ukn_titan_t7_thruster_power = -864
+@ukn_titan_t8_thruster_power = -1252 
+@ukn_titan_t9_thruster_power = -2724 
+@ukn_titan_t10_thruster_power = -4222 
+@ukn_titan_t_p_thruster_power = -1816 
+
+# COLOSSUS #---------------------------
+@ukn_colossus_t0a_thruster_power = -107 
+@ukn_colossus_t0b_thruster_power = -138 
+@ukn_colossus_t1_thruster_power = -180 
+@ukn_colossus_t2_thruster_power = -234 
+@ukn_colossus_t3_thruster_power = -304 
+@ukn_colossus_t4_thruster_power = -395 
+@ukn_colossus_t5_thruster_power = -514 
+@ukn_colossus_t6_thruster_power = -694 
+@ukn_colossus_t7_thruster_power = -972
+@ukn_colossus_t8_thruster_power = -1409 
+@ukn_colossus_t9_thruster_power = -3064 
+@ukn_colossus_t10_thruster_power = -4750 
+@ukn_colossus_t_p_thruster_power = -2043 
+
+# JUGGERNAUT #---------------------------
+@ukn_juggernaut_t0a_thruster_power = -118 
+@ukn_juggernaut_t0b_thruster_power = -154 
+@ukn_juggernaut_t1_thruster_power = -200 
+@ukn_juggernaut_t2_thruster_power = -260 
+@ukn_juggernaut_t3_thruster_power = -338 
+@ukn_juggernaut_t4_thruster_power = -439 
+@ukn_juggernaut_t5_thruster_power = -571 
+@ukn_juggernaut_t6_thruster_power = -771 
+@ukn_juggernaut_t7_thruster_power = -1080 
+@ukn_juggernaut_t8_thruster_power = -1565 
+@ukn_juggernaut_t9_thruster_power = -3405
+@ukn_juggernaut_t10_thruster_power = -5277
+@ukn_juggernaut_t_p_thruster_power = -2270

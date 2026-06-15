@@ -1,0 +1,57 @@
+namespace = robovents
+
+event = {
+	id = robovents.0
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			country_event = { id = robovents.1 days = -1 }
+		}
+	}
+}
+
+country_event = {
+	id = robovents.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_trait = trait_robodesign_nanoswarm
+			}
+			add_modifier = {
+				modifier = trait_robodesign_nanoswarm
+				days = -1
+			}
+			set_country_flag = nanoswarm
+		}
+		else_if = {
+			limit = {
+				NOT = { has_trait = trait_robodesign_nanoswarm }
+				has_country_flag = nanoswarm
+			}
+			remove_modifier = "trait_robodesign_nanoswarm"
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

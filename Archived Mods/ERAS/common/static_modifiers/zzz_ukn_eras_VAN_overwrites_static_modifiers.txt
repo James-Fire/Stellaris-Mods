@@ -1,0 +1,32 @@
+# At 0% habitability
+pop_habitability = {
+	pop_amenities_usage_mult = 1
+	planet_pops_upkeep_mult = 1
+	pop_growth_speed = -0.5
+	pop_happiness = -0.25
+}
+
+# Stability ( 0 - 100 )
+planet_stability_no_happiness_low = {
+	planet_jobs_produces_mult = -0.5
+	planet_jobs_upkeep_mult = -0.25
+}
+
+planet_stability_no_happiness_high = {
+	planet_jobs_produces_mult = 0.30
+	planet_jobs_upkeep_mult = 0.15
+}
+
+planet_stability_low = {
+	planet_jobs_produces_mult = -0.5
+	planet_jobs_upkeep_mult = -0.25
+	trade_value_mult = -0.5
+	planet_emigration_push_add = 100
+}
+
+planet_stability_high = {
+	planet_jobs_produces_mult = 0.30
+	planet_jobs_upkeep_mult = 0.15
+	trade_value_mult = 0.30
+	planet_immigration_pull_add = 20
+}

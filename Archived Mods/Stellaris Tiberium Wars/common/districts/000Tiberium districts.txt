@@ -1,0 +1,1778 @@
+district_blue_zone = {
+	base_buildtime = 270
+	
+	min_for_deposits_on_planet = 0
+	max_for_deposits_on_planet = 999
+	
+	show_on_uncolonized = {
+		is_planet_class = pc_habitable_tiberium
+	}
+	
+	potential = {
+		is_planet_class = pc_habitable_tiberium
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 3
+		trade_value_add = 1
+		planet_max_buildings_add = 1
+	}
+	
+	resources = {
+		category = planet_tiberium_zones
+		cost = {
+			minerals = 550
+		}
+		produces = {
+
+		}
+		upkeep = {
+			energy = 6
+			alloys = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_technology = tech_housing_1 
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_technology = tech_housing_2 
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_crafter_empire = yes }
+		}
+		modifier = {
+			planet_max_buildings_add = 0.34
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_crafter_empire = no
+			}
+		}
+		modifier = {
+			job_artisan_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_crafter_empire = yes }
+		}
+		modifier = {
+			job_artificer_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		modifier = {
+			job_foundry_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			job_catalytic_technician_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		modifier = {
+			job_alloy_drone_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		modifier = {
+			job_fabricator_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			job_catalytic_drone_add = 2
+		}
+	}
+
+	# Designation Job Changes
+	triggered_planet_modifier = {
+		potential = {
+			has_designation = col_foundry
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_crafter_empire = no
+			}
+		}
+		modifier = {
+			job_artisan_add = -1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_designation = col_foundry
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_crafter_empire = yes
+			}
+		}
+		modifier = {
+			job_artificer_add = -1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_designation = col_foundry
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		modifier = {
+			job_foundry_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_designation = col_foundry
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			job_catalytic_technician_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_designation = col_factory
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_crafter_empire = no
+			}
+		}
+		modifier = {
+			job_artisan_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_designation = col_factory
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_crafter_empire = yes
+			}
+		}
+		modifier = {
+			job_artificer_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_designation = col_factory
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		modifier = {
+			job_foundry_add = -1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_designation = col_factory
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			job_catalytic_technician_add = -1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_designation = col_factory
+				has_designation = col_mac_factory
+			}
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				country_uses_consumer_goods = yes
+				is_catalytic_empire = no
+			}
+		}
+		modifier = {
+			job_artisan_drone_add = 1
+			job_fabricator_add = -1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_designation = col_factory
+				has_designation = col_mac_factory
+			}
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				country_uses_consumer_goods = yes
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			job_artisan_drone_add = 1
+			job_catalytic_drone_add = -1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_crafter_empire = no
+			}
+			NOT = { has_designation = col_foundry }
+		}
+		text = job_artisan_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_crafter_empire = yes
+			}
+			NOT = { has_designation = col_foundry }
+		}
+		text = job_artificer_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				country_uses_consumer_goods = yes
+			}
+		}
+		text = job_artisan_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = no
+			}
+			NOT = { has_designation = col_factory }
+		}
+		text = job_foundry_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_catalytic_empire = yes
+			}
+			NOT = { has_designation = col_factory }
+		}
+		text = job_catalytic_technician_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		text = job_fabricator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+				is_catalytic_empire = no
+			}
+		}
+		text = job_alloy_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_catalytic_empire = yes
+			}
+		}
+		text = job_catalytic_drone_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				has_edict = industrial_maintenance
+			}
+		}
+		modifier = {
+			job_maintenance_drone_add = 1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				has_edict = industrial_maintenance
+			}
+		}
+		text = job_maintenance_drone_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_interstellar_franchising }
+		}
+		modifier = {
+			job_clerk_add = 1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_clerk_effect_desc
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				NOT = {
+					has_ethic = ethic_gestalt_consciousness
+				}
+			}					
+		}
+		modifier = {
+			job_farmer_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ethic = ethic_gestalt_consciousness }
+		}
+		modifier = {
+			job_agri_drone_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		modifier = {
+			job_fe_acolyte_farm_add = 2
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_agri_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		text = job_farmer_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		text = job_fe_acolyte_farm_effect_desc
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				NOT = {
+					has_ethic = ethic_gestalt_consciousness
+				}
+			}					
+		}
+		modifier = {
+			job_clerk_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ethic = ethic_gestalt_consciousness }
+		}
+		modifier = {
+			job_maintenance_drone_add = 1
+		}
+	}
+	
+	
+	
+	#Tiberium Policy Triggers
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_augmentation
+			}
+		}
+		modifier = {
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_resource
+			}
+		}
+		modifier = {
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_banned
+			}
+		}
+		modifier = {
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = underharvest_tiberium
+			}
+		}
+		modifier = {
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = sustainable_harvest_tiberium
+			}
+		}
+		modifier = {
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = overharvest_tiberium
+			}
+		}
+		modifier = {
+
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_safe
+			}
+		}
+		modifier = {
+			planet_housing_add = 4
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_priority_safe
+			}
+		}
+		modifier = {
+			planet_housing_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_balanced_safe
+			}
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_minimal_safe
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_no_safe
+			}
+		}
+		modifier = {
+
+		}
+	}
+	
+	prerequisites = {
+		tech_tiberium_green
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			free_jobs > 0 
+		}
+	}
+}
+
+district_yellow_zone = {
+	base_buildtime = 180
+	
+	min_for_deposits_on_planet = 0
+	max_for_deposits_on_planet = 999
+	
+	show_on_uncolonized = {
+		is_planet_class = pc_habitable_tiberium
+	}
+	
+	potential = {
+		is_planet_class = pc_habitable_tiberium
+	}
+	
+	resources = {
+		category = planet_tiberium_zones
+		cost = {
+			minerals = 400
+		}
+		produces = {
+			sr_tiberium_green = 1
+		}
+		upkeep = {
+			energy = 3
+			alloys = 2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_gestalt = no
+				}
+			}
+			consumer_goods = 2.5
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_gestalt = yes
+				}
+			}
+			minerals = 1.5
+			alloys = 1
+		}
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 2
+		#planet_amenities_add = -3
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = underharvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = sustainable_harvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_add = 1
+			job_blue_tiberium_harvester_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = overharvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_add = 2
+			job_blue_tiberium_harvester_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = underharvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_gestalt_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = sustainable_harvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_gestalt_add = 1
+			job_blue_tiberium_harvester_gestalt_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = overharvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_gestalt_add = 2
+			job_blue_tiberium_harvester_gestalt_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_mining_drone_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_mining_drone_add = 1
+		}
+	}	
+		
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		modifier = {
+			job_miner_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		modifier = {
+			job_fe_acolyte_mine_add = 1
+		}
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_mining_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		text = job_miner_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		text = job_fe_acolyte_mine_effect_desc
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_augmentation
+			}
+		}
+		modifier = {
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_resource
+			}
+		}
+		modifier = {
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_banned
+			}
+		}
+		modifier = {
+
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_safe
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_priority_safe
+			}
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_balanced_safe
+			}
+		}
+		modifier = {
+			planet_housing_add = 3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_minimal_safe
+			}
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_no_safe
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+	
+	prerequisites = {
+		tech_tiberium_green
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			free_jobs > 0 
+		}
+	}
+}
+
+district_red_zone = {
+	base_buildtime = 270
+	
+	min_for_deposits_on_planet = 0
+	max_for_deposits_on_planet = 999
+	
+	show_on_uncolonized = {
+		is_planet_class = pc_habitable_tiberium
+	}
+	
+	potential = {
+		is_planet_class = pc_habitable_tiberium
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 1
+		#planet_amenities_add = -6
+	}
+	
+	resources = {
+		category = planet_tiberium_zones
+		cost = {
+			minerals = 400
+		}
+		produces = {
+			sr_tiberium_blue = 1
+			energy = 5
+		}
+		upkeep = {
+			minerals = 3
+			energy = 2
+			alloys = 1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+				
+					is_gestalt = no
+				}
+			}
+			consumer_goods = 5
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+				
+					is_gestalt = yes
+				}
+			}
+			minerals = 4
+			alloys = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = underharvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_add = 1
+			job_blue_tiberium_harvester_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = sustainable_harvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_add = 3
+			job_blue_tiberium_harvester_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = overharvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_add = 5
+			job_blue_tiberium_harvester_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = underharvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_gestalt_add = 1
+			job_blue_tiberium_harvester_gestalt_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = sustainable_harvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_gestalt_add = 3
+			job_blue_tiberium_harvester_gestalt_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = overharvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_gestalt_add = 5
+			job_blue_tiberium_harvester_gestalt_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_augmentation
+			}
+		}
+		modifier = {
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_resource
+			}
+		}
+		modifier = {
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_banned
+			}
+		}
+		modifier = {
+
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_safe
+			}
+		}
+		modifier = {
+		
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_priority_safe
+			}
+		}
+		modifier = {
+		
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_balanced_safe
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_minimal_safe
+			}
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = tiberium_no_safe
+			}
+		}
+		modifier = {
+			planet_housing_add = 3
+		}
+	}
+	
+	prerequisites = {
+		tech_tiberium_blue
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			free_jobs > 0 
+		}
+	}
+}
+
+district_green_harvester = {
+	base_buildtime = 120
+	
+	min_for_deposits_on_planet = 0
+	max_for_deposits_on_planet = 999
+	
+	show_on_uncolonized = {
+		is_planet_class = pc_uninhabitable_tiberium
+	}
+	
+	potential = {
+		OR = {
+			is_planet_class = pc_uninhabitable_tiberium
+		}
+	}
+	 
+	allow = {
+
+	}
+	
+	conversion_ratio = 1
+	
+	resources = {
+		category = planet_tiberium_mining_districts
+		cost = {
+			minerals = 300
+		}
+		upkeep = {
+			energy = 2
+		}
+	}	
+	
+	planet_modifier = {
+		planet_housing_add = 2
+	}
+	
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = underharvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_add = 1
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = sustainable_harvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = overharvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = underharvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_gestalt_add = 1
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = sustainable_harvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_gestalt_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = overharvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_harvester_gestalt_add = 3
+		}
+	}
+	
+	prerequisites = {
+		tech_tiberium_green
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = {
+			factor = 0
+			free_jobs > 0 
+		}
+	}
+}
+
+district_blue_harvester = {
+	base_buildtime = 120
+	
+	min_for_deposits_on_planet = 0
+	max_for_deposits_on_planet = 999
+	
+	show_on_uncolonized = {
+		is_planet_class = pc_uninhabitable_tiberium
+	}
+	
+	potential = {
+		OR = {
+			is_planet_class = pc_uninhabitable_tiberium
+		}
+	}
+	
+	allow = {
+
+	}
+	
+	conversion_ratio = 1	
+	
+	resources = {
+		category = planet_tiberium_mining_districts
+		cost = {
+			minerals = 300
+		}
+		upkeep = {
+			energy = 2
+		}
+	}	
+	
+	planet_modifier = {
+		planet_housing_add = 2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = underharvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_blue_tiberium_harvester_add = 1
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = sustainable_harvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_blue_tiberium_harvester_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = overharvest_tiberium
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_blue_tiberium_harvester_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = underharvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_blue_tiberium_harvester_gestalt_add = 1
+
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = sustainable_harvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_blue_tiberium_harvester_gestalt_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_policy_flag = overharvest_tiberium
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_blue_tiberium_harvester_gestalt_add = 3
+		}
+	}
+	
+	prerequisites = {
+		tech_tiberium_green
+	}
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = {
+			factor = 0
+			free_jobs > 0 
+		}
+	}
+}
+
+district_tiberium_refinery = {
+	base_buildtime = 210
+	
+	is_capped_by_modifier = no
+	
+	show_on_uncolonized = {
+		OR = {
+			is_planet_class = pc_uninhabitable_tiberium
+			is_planet_class = pc_habitable_tiberium
+		}
+	}
+	
+	potential = {
+		OR = {
+			is_planet_class = pc_uninhabitable_tiberium
+			is_planet_class = pc_habitable_tiberium
+		}
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 3
+	}
+	
+	
+	
+	triggered_planet_modifier = {
+		potential = {
+			is_planet_class = pc_uninhabitable_tiberium
+		}
+		modifier = {
+			planet_max_buildings_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_refiner_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_refiner_gestalt_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_tiberium_blue
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_blue_tiberium_refiner_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_tiberium_refining
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_refiner_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				AND = {
+					has_technology = tech_tiberium_blue
+					has_technology = tech_tiberium_refining
+					is_gestalt = no
+				}
+			}
+		}
+		modifier = {
+			job_blue_tiberium_refiner_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_tiberium_refining_2
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_green_tiberium_refiner_add = 1
+			job_blue_tiberium_refiner_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_tiberium_blue
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_blue_tiberium_refiner_gestalt_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_tiberium_refining
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_refiner_gestalt_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				AND = {
+					has_technology = tech_tiberium_blue
+					has_technology = tech_tiberium_refining
+					is_gestalt = yes
+				}
+			}
+		}
+		modifier = {
+			job_blue_tiberium_refiner_gestalt_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_tiberium_refining_2
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_green_tiberium_refiner_gestalt_add = 1
+			job_blue_tiberium_refiner_gestalt_add = 1
+		}
+	}
+
+	resources = {
+		category = planet_tiberium_refining
+		cost = {
+			minerals = 300
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { NOR = { 
+					has_deficit = sr_tiberium_green
+				} }
+			}
+			minerals = 8
+			alloys = 2
+		}
+		upkeep = {
+			sr_tiberium_green = 2 #4/1
+			energy = 5
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_technology = tech_tiberium_blue 
+				}
+			}
+			minerals = 4
+			alloys = 10
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { 
+					has_technology = tech_tiberium_blue
+				}
+			}
+			sr_tiberium_blue = 2 #2/5
+			energy = 2
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_technology = tech_tiberium_refining }
+			}
+			minerals = 8
+			alloys = 2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_technology = tech_tiberium_refining }
+			}
+			sr_tiberium_green = 2 #4/1
+			energy = 2
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { 
+					AND = {
+						has_technology = tech_tiberium_blue 
+						has_technology = tech_tiberium_refining
+					}
+				}
+			}
+			minerals = 4
+			alloys = 10
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { 
+					AND = {
+						has_technology = tech_tiberium_blue
+						has_technology = tech_tiberium_refining
+					}
+				}
+			}
+			sr_tiberium_blue = 2 #2/5
+			energy = 2
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_technology = tech_tiberium_refining_2 }
+			}
+			minerals = 12
+			alloys = 12
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_technology = tech_tiberium_refining_2 }
+			}
+			sr_tiberium_green = 2 #4/1
+			sr_tiberium_blue = 2 #2/5
+			energy = 4
+		}
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_regular_empire = yes } 
+		}
+		text = job_green_refinery_effect_desc
+	}
+
+	prerequisites = {
+		"tech_tiberium_green"
+	}
+
+	ai_weight = {
+		weight = 20
+	}
+}

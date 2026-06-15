@@ -1,0 +1,25 @@
+ukn_convert_city_districts_to_paradise_districts = {
+#[NORMAL] CITY DISTRICTS = {
+	if = {
+        limit = {
+            num_districts = {
+                type = district_city value > 0
+            }
+        }
+        export_trigger_value_to_variable = {
+            trigger = num_districts
+            parameters = {
+                type = district_city
+            }
+            variable = ukn_temp_counter_variable
+        }
+        while = {
+            count = ukn_temp_counter_variable
+            remove_district = district_city
+        }
+        while = {
+            count = ukn_temp_counter_variable
+            add_district = district_ukn_paradise
+        }
+    }
+}

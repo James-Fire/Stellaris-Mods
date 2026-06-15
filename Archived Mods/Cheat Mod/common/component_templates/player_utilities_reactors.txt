@@ -1,0 +1,338 @@
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes.
+#############
+#	 VAR	#
+#############
+
+@aai_super_power = 900000000
+@aai_super_cost = 2000
+
+@aai_core_power_1 = 110000
+@aai_core_power_2 = 145000
+@aai_core_power_3 = 190000
+@aai_core_power_4 = 250000
+@aai_core_power_5 = 320000
+@aai_core_power_6 = 420000
+
+@aai_core_cost_1 = 40
+@aai_core_cost_2 = 50
+@aai_core_cost_3 = 60
+@aai_core_cost_4 = 70
+@aai_core_cost_5 = 80
+@aai_core_cost_6 = 90
+
+@aai_core_power_chronos = 1500000
+
+@aai_core_cost_chronos = 0
+
+#############
+# UTILITIES #
+#############
+
+### REACTORS
+
+utility_component_template = {
+	key = "SMALL_PLAYER_SUPER_REACTOR_1"
+	size = small
+	icon = "GFX_ship_part_player_super_reactor_1"
+	icon_frame = 1
+	power = @aai_super_power
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @aai_super_cost
+			energy = 48000
+		}
+	}
+
+	prerequisites = { "tech_all_none" }
+	component_set = "power_core"
+
+	ai_weight = {
+		weight = 2000
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+	
+	}
+	ship_modifier = {
+		ship_hull_add = 2500
+		ship_shield_add = 2500
+		ship_armor_add = 2500
+	}
+}
+
+#replications of original reactors
+
+utility_component_template = {
+	key = "AAI_FISSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = @aai_core_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @aai_core_cost_1
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	component_set = "power_core"
+	size_restriction = { massive_ship_player_fallen_empire player_npc_warship_01 large_ship_player_fallen_empire small_ship_player_fallen_empire star_builder_station player_combat_constructor player_combat_science player_enclave_station }
+	upgrades_to = "AAI_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "AAI_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = @aai_core_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @aai_core_cost_2
+		}
+	}
+
+	prerequisites = { "tech_fusion_power" }
+	component_set = "power_core"
+	size_restriction = { massive_ship_player_fallen_empire player_npc_warship_01 large_ship_player_fallen_empire small_ship_player_fallen_empire star_builder_station player_combat_constructor player_combat_science player_enclave_station }
+	upgrades_to = "AAI_COLD_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "AAI_COLD_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = @aai_core_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @aai_core_cost_3
+		}
+	}
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	size_restriction = { massive_ship_player_fallen_empire player_npc_warship_01 large_ship_player_fallen_empire small_ship_player_fallen_empire star_builder_station player_combat_constructor player_combat_science player_enclave_station }
+	upgrades_to = "AAI_ANTIMATTER_REACTOR"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "AAI_ANTIMATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = @aai_core_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @aai_core_cost_4
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	size_restriction = { massive_ship_player_fallen_empire player_npc_warship_01 large_ship_player_fallen_empire small_ship_player_fallen_empire star_builder_station player_combat_constructor player_combat_science player_enclave_station }
+	upgrades_to = "AAI_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "AAI_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @aai_core_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @aai_core_cost_5
+		}
+	}
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	size_restriction = { massive_ship_player_fallen_empire player_npc_warship_01 large_ship_player_fallen_empire small_ship_player_fallen_empire star_builder_station player_combat_constructor player_combat_science player_enclave_station }
+	upgrades_to = "AAI_DARK_MATTER_REACTOR"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "AAI_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @aai_core_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @aai_core_cost_6
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	size_restriction = { massive_ship_player_fallen_empire player_npc_warship_01 large_ship_player_fallen_empire small_ship_player_fallen_empire star_builder_station player_combat_constructor player_combat_science player_enclave_station }
+
+	ai_weight = {
+		weight = 6
+	}
+}
+
+utility_component_template = {
+	key = "AAI_PK_FISSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = @aai_core_power_chronos
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @aai_core_cost_chronos
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	component_set = "power_core"
+	size_restriction = { player_chronos }
+	upgrades_to = "AAI_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "AAI_PK_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = @aai_core_power_chronos
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @aai_core_cost_chronos
+		}
+	}
+
+	prerequisites = { "tech_fusion_power" }
+	component_set = "power_core"
+	size_restriction = { player_chronos }
+	upgrades_to = "AAI_COLD_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "AAI_PK_COLD_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = @aai_core_power_chronos
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @aai_core_cost_chronos
+		}
+	}
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	size_restriction = { player_chronos }
+	upgrades_to = "AAI_ANTIMATTER_REACTOR"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "AAI_PK_ANTIMATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = @aai_core_power_chronos
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @aai_core_cost_chronos
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	size_restriction = { player_chronos }
+	upgrades_to = "AAI_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "AAI_PK_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @aai_core_power_chronos
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @aai_core_cost_chronos
+		}
+	}
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	size_restriction = { player_chronos }
+	upgrades_to = "AAI_DARK_MATTER_REACTOR"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "AAI_PK_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @aai_core_power_chronos
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @aai_core_cost_chronos
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	size_restriction = { player_chronos }
+
+	ai_weight = {
+		weight = 6
+	}
+}

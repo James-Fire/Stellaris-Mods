@@ -1,0 +1,99 @@
+# Arcology Project (Kyriopolis)
+decision_ukn_kyriopolis = {
+	owned_planets_only = yes
+	icon = decision_arcology_project
+
+	prerequisites = {
+		"tech_ukn_ecumenopolis"
+	}
+
+	enactment_time = 2700
+	resources = {
+		category = decisions
+		cost = {
+			influence = 50
+			ukn_meta_materials = 5500
+			consumer_goods = 2500
+			minerals = 1500
+		}
+	}
+
+	allow = {
+		if = {
+			limit = { owner = { is_ai = no } }
+			custom_tooltip = {
+				fail_text = decision_ukn_kyriopolis_requirements
+				free_district_slots < 6
+				num_districts = { type = district_farming value < 1 }
+				num_districts = { type = district_mining value < 1 }
+			}
+		}
+		num_uncleared_blockers < 1
+	}
+
+	potential = {
+		NOR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_relic
+			is_planet_class = pc_ukn_kyriopolis_dry
+			is_planet_class = pc_ukn_kyriopolis_wet
+			is_planet_class = pc_ukn_kyriopolis_cold
+			is_planet_class = pc_ukn_kyriopolis_gaia
+			has_modifier = resort_colony
+			has_modifier = penal_colony
+			has_modifier = slave_colony
+			has_modifier = pm_wenkwort_custodian
+		}
+		is_artificial = no
+		exists = owner
+		owner = { has_technology = tech_ukn_ecumenopolis }
+	}
+
+	effect = {
+		# Make city-planet
+		custom_tooltip = decision_ukn_kyriopolis_effects
+		hidden_effect = {
+			clear_deposits = yes
+			#change_pc = pc_ukn_kyriopolis_dry
+			if = {
+				limit = { is_planet_class = pc_gaia }
+				change_pc = pc_ukn_kyriopolis_gaia
+			}
+			else_if = {
+				limit = { is_dry = yes }
+				change_pc = pc_ukn_kyriopolis_dry
+			}
+			else_if = {
+				limit = { is_cold = yes }
+				change_pc = pc_ukn_kyriopolis_cold
+			}
+			else_if = {
+				limit = { is_wet = yes }
+				change_pc = pc_ukn_kyriopolis_wet
+			}
+			if = {
+				limit = {
+					OR = {
+						is_active_resolution = "resolution_ecology_environmental_control_board"
+						is_active_resolution = "resolution_ecology_paradise_initiative"
+					}
+				}
+				owner = {
+					set_timed_country_flag = { flag = resolution_breached_terraformed days = 3600 }
+				}
+			}		
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 100
+			exists = owner
+			OR = {
+				num_pops >= 60
+				is_capital = yes
+			}
+		}
+	}
+}

@@ -1,0 +1,631 @@
+######################################################
+### KINETIC SUPERARTILLERY / KINETIC SUPERMISSILES ###
+######################################################
+
+### Semi-Guided Phased Superartillery (T4)
+weapon_component_template = {
+	key = "MASS_ACCELERATOR_1"
+	size = extra_large
+	type = instant
+    power = @ukn_mass_accelerator_5_power
+	
+	icon = "GFX_ship_part_ukn_mass_accelerator_1"
+	icon_frame = 1
+#    static_rotation = yes
+	
+	damage = { min = @ukn_mass_accelerator_5_dmg_min max = @ukn_mass_accelerator_5_dmg_max }
+    windup = { min = @ukn_mass_accelerator_5_windup_min max = @ukn_mass_accelerator_5_windup_max }
+    total_fire_time = @ukn_mass_accelerator_5_total_fire_time
+    range = @ukn_mass_accelerator_5_range
+    accuracy = @ukn_mass_accelerator_5_accuracy
+	
+    hull_damage = @ukn_mass_accelerator_5_hull_damage_mult
+    armor_penetration = @ukn_mass_accelerator_5_armor_penetration_mult
+    shield_penetration = @ukn_mass_accelerator_5_shield_penetration_mult
+    armor_damage = @ukn_mass_accelerator_5_armor_damage_mult
+    shield_damage = @ukn_mass_accelerator_5_shield_damage_mult
+    tracking = @ukn_mass_accelerator_5_tracking
+
+    firing_arc = @ukn_mass_accelerator_5_firing_arc
+    min_range = @ukn_mass_accelerator_5_min_range
+    use_ship_kill_target = no
+	
+	prerequisites = { "tech_mass_accelerator_1" }
+	component_set = "UKN_SET_MASS_ACCELERATOR_1"
+	projectile_gfx = "projectile_ukn_mass_accelerator_1"
+	tags = { weapon_type_kinetic ukn_weapon_type_semi_guided_kinetic_artillery }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "MASS_ACCELERATOR_2"
+	
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_extralarge_t5_component_cost_minerals
+#			alloys = @ukn_extralarge_t5_component_cost_alloys
+			ukn_meta_materials = @ukn_extralarge_t5_component_cost_ukn_meta_materials
+			ukn_femtomatter = @ukn_extralarge_t5_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_extralarge_t5_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_extralarge_t5_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_extralarge_t5_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_extralarge_t5_component_cost_exotic_gases
+#			rare_crystals = @ukn_extralarge_t5_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_extralarge_t5_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_extralarge_t5_armor_cost_ukn_meta_materials
+#			nanites = @ukn_extralarge_t5_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_extralarge_t5_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_extralarge_t5_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_extralarge_t5_component_upkeep_energy
+#			minerals = @ukn_extralarge_t5_component_upkeep_minerals
+#			alloys = @ukn_extralarge_t5_component_upkeep_alloys
+			ukn_meta_materials = @ukn_extralarge_t5_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_extralarge_t5_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_extralarge_t5_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_extralarge_t5_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_extralarge_t5_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_extralarge_t5_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_extralarge_t5_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_extralarge_t5_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_extralarge_t5_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_extralarge_t5_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_extralarge_t5_component_upkeep_nanites
+#---
+#			minerals = @ukn_extralarge_t5_kinetics_upkeep_minerals
+#			alloys = @ukn_extralarge_t5_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_extralarge_t5_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+
+	ai_weight = {
+		weight = @ukn_component_weight_mass_accelerator_t5
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_femtomatter value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+### Kinetic Supermissiles (T5)
+weapon_component_template = {
+	key = "MASS_ACCELERATOR_2"
+	size = extra_large
+	type = instant
+    power = @ukn_mass_accelerator_6_power
+	
+	icon = "GFX_ship_part_ukn_mass_accelerator_2"
+	icon_frame = 1
+#    static_rotation = yes
+	
+	damage = { min = @ukn_mass_accelerator_6_dmg_min max = @ukn_mass_accelerator_6_dmg_max }
+    windup = { min = @ukn_mass_accelerator_6_windup_min max = @ukn_mass_accelerator_6_windup_max }
+    total_fire_time = @ukn_mass_accelerator_6_total_fire_time
+    range = @ukn_mass_accelerator_6_range
+    accuracy = @ukn_mass_accelerator_6_accuracy
+	
+    hull_damage = @ukn_mass_accelerator_6_hull_damage_mult
+    armor_penetration = @ukn_mass_accelerator_6_armor_penetration_mult
+    shield_penetration = @ukn_mass_accelerator_6_shield_penetration_mult
+    armor_damage = @ukn_mass_accelerator_6_armor_damage_mult
+    shield_damage = @ukn_mass_accelerator_6_shield_damage_mult
+    tracking = @ukn_mass_accelerator_6_tracking
+
+    firing_arc = @ukn_mass_accelerator_6_firing_arc
+    min_range = @ukn_mass_accelerator_6_min_range
+    use_ship_kill_target = no
+	
+	prerequisites = { "tech_mass_accelerator_2" }
+	component_set = "UKN_SET_MASS_ACCELERATOR_2"
+	projectile_gfx = "projectile_ukn_mass_accelerator_2"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_kinetic_artillery }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "UKN_MASS_ACCELERATOR_3"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_extralarge_t6_component_cost_minerals
+#			alloys = @ukn_extralarge_t6_component_cost_alloys
+			ukn_meta_materials = @ukn_extralarge_t6_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_extralarge_t6_component_cost_ukn_femtomatter
+			ukn_condensics = @ukn_extralarge_t6_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_extralarge_t6_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_extralarge_t6_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_extralarge_t6_component_cost_exotic_gases
+#			rare_crystals = @ukn_extralarge_t6_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_extralarge_t6_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_extralarge_t6_armor_cost_ukn_meta_materials
+#			nanites = @ukn_extralarge_t6_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_extralarge_t6_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_extralarge_t6_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_extralarge_t6_component_upkeep_energy
+#			minerals = @ukn_extralarge_t6_component_upkeep_minerals
+#			alloys = @ukn_extralarge_t6_component_upkeep_alloys
+			ukn_meta_materials = @ukn_extralarge_t6_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_extralarge_t6_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_extralarge_t6_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_extralarge_t6_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_extralarge_t6_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_extralarge_t6_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_extralarge_t6_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_extralarge_t6_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_extralarge_t6_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_extralarge_t6_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_extralarge_t6_component_upkeep_nanites
+#---
+#			minerals = @ukn_extralarge_t6_kinetics_upkeep_minerals
+#			alloys = @ukn_extralarge_t6_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_extralarge_t6_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+
+	ai_weight = {
+		weight = @ukn_component_weight_mass_accelerator_t6
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_condensics value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+### Superluminal Kinetic Supermissiles (T6)
+weapon_component_template = {
+	key = "UKN_MASS_ACCELERATOR_3"
+	size = extra_large
+	type = instant
+    power = @ukn_mass_accelerator_7_power
+	
+	icon = "GFX_ship_part_ukn_mass_accelerator_3"
+	icon_frame = 1
+#    static_rotation = yes
+	
+	damage = { min = @ukn_mass_accelerator_7_dmg_min max = @ukn_mass_accelerator_7_dmg_max }
+    windup = { min = @ukn_mass_accelerator_7_windup_min max = @ukn_mass_accelerator_7_windup_max }
+    total_fire_time = @ukn_mass_accelerator_7_total_fire_time
+    range = @ukn_mass_accelerator_7_range
+    accuracy = @ukn_mass_accelerator_7_accuracy
+	
+    hull_damage = @ukn_mass_accelerator_7_hull_damage_mult
+    armor_penetration = @ukn_mass_accelerator_7_armor_penetration_mult
+    shield_penetration = @ukn_mass_accelerator_7_shield_penetration_mult
+    armor_damage = @ukn_mass_accelerator_7_armor_damage_mult
+    shield_damage = @ukn_mass_accelerator_7_shield_damage_mult
+    tracking = @ukn_mass_accelerator_7_tracking
+
+    firing_arc = @ukn_mass_accelerator_7_firing_arc
+    min_range = @ukn_mass_accelerator_7_min_range
+    use_ship_kill_target = no
+	
+	prerequisites = { "tech_ukn_mass_accelerator_3" }
+	component_set = "UKN_SET_MASS_ACCELERATOR_3"
+	projectile_gfx = "projectile_ukn_mass_accelerator_3"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_kinetic_artillery }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "UKN_MASS_ACCELERATOR_4"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_extralarge_t7_component_cost_minerals
+#			alloys = @ukn_extralarge_t7_component_cost_alloys
+			ukn_meta_materials = @ukn_extralarge_t7_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_extralarge_t7_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_extralarge_t7_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_extralarge_t7_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_extralarge_t7_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_extralarge_t7_component_cost_exotic_gases
+#			rare_crystals = @ukn_extralarge_t7_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_extralarge_t7_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_extralarge_t7_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_extralarge_t7_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_extralarge_t7_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_extralarge_t7_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_extralarge_t7_component_upkeep_energy
+#			minerals = @ukn_extralarge_t7_component_upkeep_minerals
+#			alloys = @ukn_extralarge_t7_component_upkeep_alloys
+			ukn_meta_materials = @ukn_extralarge_t7_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_extralarge_t7_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_extralarge_t7_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_extralarge_t7_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_extralarge_t7_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_extralarge_t7_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_extralarge_t7_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_extralarge_t7_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_extralarge_t7_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_extralarge_t7_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_extralarge_t7_kinetics_upkeep_minerals
+#			alloys = @ukn_extralarge_t7_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_extralarge_t7_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+
+	ai_weight = {
+		weight = @ukn_component_weight_mass_accelerator_t7
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+### Supersolid Kinetic Supermissiles (T7)
+weapon_component_template = {
+	key = "UKN_MASS_ACCELERATOR_4"
+	size = extra_large
+	type = instant
+    power = @ukn_mass_accelerator_8_power
+	
+	icon = "GFX_ship_part_ukn_mass_accelerator_4"
+	icon_frame = 1
+#    static_rotation = yes
+	
+	damage = { min = @ukn_mass_accelerator_8_dmg_min max = @ukn_mass_accelerator_8_dmg_max }
+    windup = { min = @ukn_mass_accelerator_8_windup_min max = @ukn_mass_accelerator_8_windup_max }
+    total_fire_time = @ukn_mass_accelerator_8_total_fire_time
+    range = @ukn_mass_accelerator_8_range
+    accuracy = @ukn_mass_accelerator_8_accuracy
+	
+    hull_damage = @ukn_mass_accelerator_8_hull_damage_mult
+    armor_penetration = @ukn_mass_accelerator_8_armor_penetration_mult
+    shield_penetration = @ukn_mass_accelerator_8_shield_penetration_mult
+    armor_damage = @ukn_mass_accelerator_8_armor_damage_mult
+    shield_damage = @ukn_mass_accelerator_8_shield_damage_mult
+    tracking = @ukn_mass_accelerator_8_tracking
+
+    firing_arc = @ukn_mass_accelerator_8_firing_arc
+    min_range = @ukn_mass_accelerator_8_min_range
+    use_ship_kill_target = no
+	
+	prerequisites = { "tech_ukn_mass_accelerator_4" }
+	component_set = "UKN_SET_MASS_ACCELERATOR_4"
+	projectile_gfx = "projectile_ukn_mass_accelerator_4"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_kinetic_artillery }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "UKN_MASS_ACCELERATOR_5"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_extralarge_t8_component_cost_minerals
+#			alloys = @ukn_extralarge_t8_component_cost_alloys
+			ukn_meta_materials = @ukn_extralarge_t8_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_extralarge_t8_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_extralarge_t8_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_extralarge_t8_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_extralarge_t8_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_extralarge_t8_component_cost_exotic_gases
+#			rare_crystals = @ukn_extralarge_t8_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_extralarge_t8_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_extralarge_t8_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_extralarge_t8_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_extralarge_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_extralarge_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_extralarge_t8_component_upkeep_energy
+#			minerals = @ukn_extralarge_t8_component_upkeep_minerals
+#			alloys = @ukn_extralarge_t8_component_upkeep_alloys
+			ukn_meta_materials = @ukn_extralarge_t8_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_extralarge_t8_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_extralarge_t8_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_extralarge_t8_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_extralarge_t8_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_extralarge_t8_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_extralarge_t8_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_extralarge_t8_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_extralarge_t8_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_extralarge_t8_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_extralarge_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_extralarge_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_extralarge_t8_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+
+	ai_weight = {
+		weight = @ukn_component_weight_mass_accelerator_t8
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+### Supersolid Kinetic Supermissiles (T7)
+weapon_component_template = {
+	key = "UKN_MASS_ACCELERATOR_PLANCK"
+	size = extra_large
+	type = instant
+    power = @ukn_mass_accelerator_planck_power
+	
+	icon = "GFX_ship_part_ukn_mass_accelerator_planck"
+	icon_frame = 1
+#    static_rotation = yes
+	
+	damage = { min = @ukn_mass_accelerator_planck_dmg_min max = @ukn_mass_accelerator_planck_dmg_max }
+    windup = { min = @ukn_mass_accelerator_planck_windup_min max = @ukn_mass_accelerator_planck_windup_max }
+    total_fire_time = @ukn_mass_accelerator_planck_total_fire_time
+    range = @ukn_mass_accelerator_planck_range
+    accuracy = @ukn_mass_accelerator_planck_accuracy
+	
+    hull_damage = @ukn_mass_accelerator_planck_hull_damage_mult
+    armor_penetration = @ukn_mass_accelerator_planck_armor_penetration_mult
+    shield_penetration = @ukn_mass_accelerator_planck_shield_penetration_mult
+    armor_damage = @ukn_mass_accelerator_planck_armor_damage_mult
+    shield_damage = @ukn_mass_accelerator_planck_shield_damage_mult
+    tracking = @ukn_mass_accelerator_planck_tracking
+
+    firing_arc = @ukn_mass_accelerator_planck_firing_arc
+    min_range = @ukn_mass_accelerator_planck_min_range
+    use_ship_kill_target = no
+	
+	prerequisites = { "tech_ukn_mass_accelerator_planck" }
+	component_set = "UKN_SET_MASS_ACCELERATOR_PLANCK"
+	projectile_gfx = "projectile_ukn_mass_accelerator_planck"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_kinetic_artillery }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "UKN_MASS_ACCELERATOR_5"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_extralarge_t_p_component_cost_minerals
+#			alloys = @ukn_extralarge_t_p_component_cost_alloys
+			ukn_meta_materials = @ukn_extralarge_t_p_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_extralarge_t_p_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_extralarge_t_p_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_extralarge_t_p_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_extralarge_t_p_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_extralarge_t_p_component_cost_exotic_gases
+#			rare_crystals = @ukn_extralarge_t_p_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_extralarge_t_p_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_extralarge_t_p_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_extralarge_t_p_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_extralarge_t_p_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_extralarge_t_p_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_extralarge_t_p_component_upkeep_energy
+#			minerals = @ukn_extralarge_t_p_component_upkeep_minerals
+#			alloys = @ukn_extralarge_t_p_component_upkeep_alloys
+			ukn_meta_materials = @ukn_extralarge_t_p_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_extralarge_t_p_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_extralarge_t_p_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_extralarge_t_p_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_extralarge_t_p_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_extralarge_t_p_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_extralarge_t_p_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_extralarge_t_p_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_extralarge_t_p_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_extralarge_t_p_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_extralarge_t_p_kinetics_upkeep_minerals
+#			alloys = @ukn_extralarge_t_p_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_extralarge_t_p_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+
+	ai_weight = {
+		weight = @ukn_component_weight_mass_accelerator_t_d
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = sr_dark_matter value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+### Oscillative Kinetic Supermissiles (T8)
+weapon_component_template = {
+	key = "UKN_MASS_ACCELERATOR_5"
+	size = extra_large
+	type = instant
+    power = @ukn_mass_accelerator_9_power
+	
+	icon = "GFX_ship_part_ukn_mass_accelerator_5"
+	icon_frame = 1
+#    static_rotation = yes
+	
+	damage = { min = @ukn_mass_accelerator_9_dmg_min max = @ukn_mass_accelerator_9_dmg_max }
+    windup = { min = @ukn_mass_accelerator_9_windup_min max = @ukn_mass_accelerator_9_windup_max }
+    total_fire_time = @ukn_mass_accelerator_9_total_fire_time
+    range = @ukn_mass_accelerator_9_range
+    accuracy = @ukn_mass_accelerator_9_accuracy
+	
+    hull_damage = @ukn_mass_accelerator_9_hull_damage_mult
+    armor_penetration = @ukn_mass_accelerator_9_armor_penetration_mult
+    shield_penetration = @ukn_mass_accelerator_9_shield_penetration_mult
+    armor_damage = @ukn_mass_accelerator_9_armor_damage_mult
+    shield_damage = @ukn_mass_accelerator_9_shield_damage_mult
+    tracking = @ukn_mass_accelerator_9_tracking
+
+    firing_arc = @ukn_mass_accelerator_9_firing_arc
+    min_range = @ukn_mass_accelerator_9_min_range
+    use_ship_kill_target = no
+	
+	prerequisites = { "tech_ukn_mass_accelerator_5" }
+	component_set = "UKN_SET_MASS_ACCELERATOR_5"
+	projectile_gfx = "projectile_ukn_mass_accelerator_5"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_kinetic_artillery }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	upgrades_to = "UKN_MASS_ACCELERATOR_6"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_extralarge_t9_component_cost_minerals
+#			alloys = @ukn_extralarge_t9_component_cost_alloys
+#			ukn_meta_materials = @ukn_extralarge_t9_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_extralarge_t9_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_extralarge_t9_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_extralarge_t9_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_extralarge_t9_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_extralarge_t9_component_cost_exotic_gases
+#			rare_crystals = @ukn_extralarge_t9_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_extralarge_t9_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_extralarge_t9_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_extralarge_t9_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_extralarge_t9_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_extralarge_t9_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_extralarge_t9_component_upkeep_energy
+#			minerals = @ukn_extralarge_t9_component_upkeep_minerals
+#			alloys = @ukn_extralarge_t9_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_extralarge_t9_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_extralarge_t9_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_extralarge_t9_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_extralarge_t9_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_extralarge_t9_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_extralarge_t9_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_extralarge_t9_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_extralarge_t9_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_extralarge_t9_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_extralarge_t9_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_extralarge_t9_kinetics_upkeep_minerals
+#			alloys = @ukn_extralarge_t9_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_extralarge_t9_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+
+	ai_weight = {
+		weight = @ukn_component_weight_mass_accelerator_t9
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+### Flux Kinetic Supermissiles (T9)
+weapon_component_template = {
+	key = "UKN_MASS_ACCELERATOR_6"
+	size = extra_large
+	type = instant
+    power = @ukn_mass_accelerator_10_power
+	
+	icon = "GFX_ship_part_ukn_mass_accelerator_6"
+	icon_frame = 1
+#    static_rotation = yes
+	
+	damage = { min = @ukn_mass_accelerator_10_dmg_min max = @ukn_mass_accelerator_10_dmg_max }
+    windup = { min = @ukn_mass_accelerator_10_windup_min max = @ukn_mass_accelerator_10_windup_max }
+    total_fire_time = @ukn_mass_accelerator_10_total_fire_time
+    range = @ukn_mass_accelerator_10_range
+    accuracy = @ukn_mass_accelerator_10_accuracy
+	
+    hull_damage = @ukn_mass_accelerator_10_hull_damage_mult
+    armor_penetration = @ukn_mass_accelerator_10_armor_penetration_mult
+    shield_penetration = @ukn_mass_accelerator_10_shield_penetration_mult
+    armor_damage = @ukn_mass_accelerator_10_armor_damage_mult
+    shield_damage = @ukn_mass_accelerator_10_shield_damage_mult
+    tracking = @ukn_mass_accelerator_10_tracking
+
+    firing_arc = @ukn_mass_accelerator_10_firing_arc
+    min_range = @ukn_mass_accelerator_10_min_range
+    use_ship_kill_target = no
+	
+	prerequisites = { "tech_ukn_mass_accelerator_6" }
+	component_set = "UKN_SET_MASS_ACCELERATOR_6"
+	projectile_gfx = "projectile_ukn_mass_accelerator_6"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_kinetic_artillery }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+#	upgrades_to = "UKN_MASS_ACCELERATOR_7"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_extralarge_t10_component_cost_minerals
+#			alloys = @ukn_extralarge_t10_component_cost_alloys
+#			ukn_meta_materials = @ukn_extralarge_t10_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_extralarge_t10_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_extralarge_t10_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_extralarge_t10_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_extralarge_t10_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_extralarge_t10_component_cost_exotic_gases
+#			rare_crystals = @ukn_extralarge_t10_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_extralarge_t10_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_extralarge_t10_armor_cost_ukn_meta_materials
+#			ukn_causalitons = @ukn_extralarge_t10_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_extralarge_t10_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_extralarge_t10_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_extralarge_t10_component_upkeep_energy
+#			minerals = @ukn_extralarge_t10_component_upkeep_minerals
+#			alloys = @ukn_extralarge_t10_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_extralarge_t10_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_extralarge_t10_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_extralarge_t10_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_extralarge_t10_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_extralarge_t10_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_extralarge_t10_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_extralarge_t10_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_extralarge_t10_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_extralarge_t10_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_extralarge_t10_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_extralarge_t10_kinetics_upkeep_minerals
+#			alloys = @ukn_extralarge_t10_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_extralarge_t10_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+
+	ai_weight = {
+		weight = @ukn_component_weight_mass_accelerator_t10
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}

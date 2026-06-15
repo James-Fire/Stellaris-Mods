@@ -1,0 +1,750 @@
+trait_rpp_biological_traitpoint_positive_0010 = {
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	cost = -9999
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	advanced_trait = no
+	icon = "gfx/interface/icons/traits/species_traits/biological/traitpoint/positive/0010.dds"
+
+    opposites = {
+        "trait_rpp_biological_traitpoint_positive_0001"
+        "trait_rpp_biological_traitpoint_positive_0002"
+        "trait_rpp_biological_traitpoint_positive_0003"
+        "trait_rpp_biological_traitpoint_positive_0004"
+        "trait_rpp_biological_traitpoint_positive_0005"
+        "trait_rpp_biological_traitpoint_positive_0006"
+        "trait_rpp_biological_traitpoint_positive_0007"
+        "trait_rpp_biological_traitpoint_positive_0008"
+        "trait_rpp_biological_traitpoint_positive_0009"
+
+        "trait_rpp_biological_traitpoint_negative_0001"
+        "trait_rpp_biological_traitpoint_negative_0002"
+        "trait_rpp_biological_traitpoint_negative_0003"
+        "trait_rpp_biological_traitpoint_negative_0004"
+        "trait_rpp_biological_traitpoint_negative_0005"
+        "trait_rpp_biological_traitpoint_negative_0006"
+        "trait_rpp_biological_traitpoint_negative_0007"
+        "trait_rpp_biological_traitpoint_negative_0008"
+        "trait_rpp_biological_traitpoint_negative_0009"
+        "trait_rpp_biological_traitpoint_negative_0010"
+    }
+	
+	modifier = {
+		# Put modifiers here.
+	}
+	
+	# other stuff can be put in this area, or above with the rest of the stuff.
+}
+trait_rpp_biological_pop_baseproduction_energy_positive_0010 = {
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	cost = 50
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	species_possible_remove = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	advanced_trait = no
+	icon = "gfx/interface/icons/traits/species_traits/biological/pop_baseproduction_energy/positive/0010.dds"
+
+    opposites = {
+        "trait_rpp_biological_pop_baseproduction_energy_positive_0001"
+        "trait_rpp_biological_pop_baseproduction_energy_positive_0002"
+        "trait_rpp_biological_pop_baseproduction_energy_positive_0003"
+        "trait_rpp_biological_pop_baseproduction_energy_positive_0004"
+        "trait_rpp_biological_pop_baseproduction_energy_positive_0005"
+        "trait_rpp_biological_pop_baseproduction_energy_positive_0006"
+        "trait_rpp_biological_pop_baseproduction_energy_positive_0007"
+        "trait_rpp_biological_pop_baseproduction_energy_positive_0008"
+        "trait_rpp_biological_pop_baseproduction_energy_positive_0009"
+    }
+	
+	modifier = {
+		# 5 Energy
+	}
+	
+	# other stuff can be put in this area, or above with the rest of the stuff.
+}
+trait_rpp_biological_pop_baseproduction_minerals_positive_0010 = {
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	cost = 50
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	species_possible_remove = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	advanced_trait = no
+	icon = "gfx/interface/icons/traits/species_traits/biological/pop_baseproduction_minerals/positive/0010.dds"
+
+    opposites = {
+        "trait_rpp_biological_pop_baseproduction_minerals_positive_0001"
+        "trait_rpp_biological_pop_baseproduction_minerals_positive_0002"
+        "trait_rpp_biological_pop_baseproduction_minerals_positive_0003"
+        "trait_rpp_biological_pop_baseproduction_minerals_positive_0004"
+        "trait_rpp_biological_pop_baseproduction_minerals_positive_0005"
+        "trait_rpp_biological_pop_baseproduction_minerals_positive_0006"
+        "trait_rpp_biological_pop_baseproduction_minerals_positive_0007"
+        "trait_rpp_biological_pop_baseproduction_minerals_positive_0008"
+        "trait_rpp_biological_pop_baseproduction_minerals_positive_0009"
+    }
+	
+	modifier = {
+		# 5 Minerals
+	}
+	
+	# other stuff can be put in this area, or above with the rest of the stuff.
+}
+trait_rpp_biological_pop_baseproduction_food_positive_0010 = {
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	cost = 50
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	species_possible_remove = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	advanced_trait = no
+	icon = "gfx/interface/icons/traits/species_traits/biological/pop_baseproduction_food/positive/0010.dds"
+
+    opposites = {
+        "trait_rpp_biological_pop_baseproduction_food_positive_0001"
+        "trait_rpp_biological_pop_baseproduction_food_positive_0002"
+        "trait_rpp_biological_pop_baseproduction_food_positive_0003"
+        "trait_rpp_biological_pop_baseproduction_food_positive_0004"
+        "trait_rpp_biological_pop_baseproduction_food_positive_0005"
+        "trait_rpp_biological_pop_baseproduction_food_positive_0006"
+        "trait_rpp_biological_pop_baseproduction_food_positive_0007"
+        "trait_rpp_biological_pop_baseproduction_food_positive_0008"
+        "trait_rpp_biological_pop_baseproduction_food_positive_0009"
+    }
+	
+	modifier = {
+		# 5 Food
+	}
+	
+	# other stuff can be put in this area, or above with the rest of the stuff.
+}
+trait_rpp_biological_pop_baseproduction_unity_positive_0010 = {
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	cost = 40
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	species_possible_remove = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	advanced_trait = no
+	icon = "gfx/interface/icons/traits/species_traits/biological/pop_baseproduction_unity/positive/0010.dds"
+
+    opposites = {
+        "trait_rpp_biological_pop_baseproduction_unity_positive_0001"
+        "trait_rpp_biological_pop_baseproduction_unity_positive_0002"
+        "trait_rpp_biological_pop_baseproduction_unity_positive_0003"
+        "trait_rpp_biological_pop_baseproduction_unity_positive_0004"
+        "trait_rpp_biological_pop_baseproduction_unity_positive_0005"
+        "trait_rpp_biological_pop_baseproduction_unity_positive_0006"
+        "trait_rpp_biological_pop_baseproduction_unity_positive_0007"
+        "trait_rpp_biological_pop_baseproduction_unity_positive_0008"
+        "trait_rpp_biological_pop_baseproduction_unity_positive_0009"
+    }
+	
+	modifier = {
+		# 10 Unity
+	}
+	
+	# other stuff can be put in this area, or above with the rest of the stuff.
+}
+trait_rpp_biological_pop_baseproduction_alloys_positive_0010 = {
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	cost = 40
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	species_possible_remove = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	advanced_trait = no
+	icon = "gfx/interface/icons/traits/species_traits/biological/pop_baseproduction_alloys/positive/0010.dds"
+
+    opposites = {
+        "trait_rpp_biological_pop_baseproduction_alloys_positive_0001"
+        "trait_rpp_biological_pop_baseproduction_alloys_positive_0002"
+        "trait_rpp_biological_pop_baseproduction_alloys_positive_0003"
+        "trait_rpp_biological_pop_baseproduction_alloys_positive_0004"
+        "trait_rpp_biological_pop_baseproduction_alloys_positive_0005"
+        "trait_rpp_biological_pop_baseproduction_alloys_positive_0006"
+        "trait_rpp_biological_pop_baseproduction_alloys_positive_0007"
+        "trait_rpp_biological_pop_baseproduction_alloys_positive_0008"
+        "trait_rpp_biological_pop_baseproduction_alloys_positive_0009"
+    }
+	
+	modifier = {
+		# 2 Alloys
+	}
+	
+	# other stuff can be put in this area, or above with the rest of the stuff.
+}
+trait_rpp_biological_pop_baseproduction_consumergoods_positive_0010 = {
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	cost = 40
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	species_possible_remove = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	advanced_trait = no
+	icon = "gfx/interface/icons/traits/species_traits/biological/pop_baseproduction_consumergoods/positive/0010.dds"
+
+    opposites = {
+        "trait_rpp_biological_pop_baseproduction_consumergoods_positive_0001"
+        "trait_rpp_biological_pop_baseproduction_consumergoods_positive_0002"
+        "trait_rpp_biological_pop_baseproduction_consumergoods_positive_0003"
+        "trait_rpp_biological_pop_baseproduction_consumergoods_positive_0004"
+        "trait_rpp_biological_pop_baseproduction_consumergoods_positive_0005"
+        "trait_rpp_biological_pop_baseproduction_consumergoods_positive_0006"
+        "trait_rpp_biological_pop_baseproduction_consumergoods_positive_0007"
+        "trait_rpp_biological_pop_baseproduction_consumergoods_positive_0008"
+        "trait_rpp_biological_pop_baseproduction_consumergoods_positive_0009"
+    }
+	
+	modifier = {
+		# 2 Consumer Goods
+	}
+	
+	# other stuff can be put in this area, or above with the rest of the stuff.
+}
+trait_rpp_biological_pop_baseproduction_influence_positive_0010 = {
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	cost = 25
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	species_possible_remove = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	advanced_trait = no
+	icon = "gfx/interface/icons/traits/species_traits/biological/pop_baseproduction_influence/positive/0010.dds"
+
+    opposites = {
+        "trait_rpp_biological_pop_baseproduction_influence_positive_0001"
+        "trait_rpp_biological_pop_baseproduction_influence_positive_0002"
+        "trait_rpp_biological_pop_baseproduction_influence_positive_0003"
+        "trait_rpp_biological_pop_baseproduction_influence_positive_0004"
+        "trait_rpp_biological_pop_baseproduction_influence_positive_0005"
+        "trait_rpp_biological_pop_baseproduction_influence_positive_0006"
+        "trait_rpp_biological_pop_baseproduction_influence_positive_0007"
+        "trait_rpp_biological_pop_baseproduction_influence_positive_0008"
+        "trait_rpp_biological_pop_baseproduction_influence_positive_0009"
+    }
+	
+	modifier = {
+		# 0.25 Influence
+	}
+	
+	# other stuff can be put in this area, or above with the rest of the stuff.
+}
+trait_rpp_biological_pop_baseproduction_physicsresearch_positive_0010 = {
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	cost = 33
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	species_possible_remove = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	advanced_trait = no
+	icon = "gfx/interface/icons/traits/species_traits/biological/pop_baseproduction_physicsresearch/positive/0010.dds"
+
+    opposites = {
+        "trait_rpp_biological_pop_baseproduction_physicsresearch_positive_0001"
+        "trait_rpp_biological_pop_baseproduction_physicsresearch_positive_0002"
+        "trait_rpp_biological_pop_baseproduction_physicsresearch_positive_0003"
+        "trait_rpp_biological_pop_baseproduction_physicsresearch_positive_0004"
+        "trait_rpp_biological_pop_baseproduction_physicsresearch_positive_0005"
+        "trait_rpp_biological_pop_baseproduction_physicsresearch_positive_0006"
+        "trait_rpp_biological_pop_baseproduction_physicsresearch_positive_0007"
+        "trait_rpp_biological_pop_baseproduction_physicsresearch_positive_0008"
+        "trait_rpp_biological_pop_baseproduction_physicsresearch_positive_0009"
+    }
+	
+	modifier = {
+		# 5 Physics Research
+	}
+	
+	# other stuff can be put in this area, or above with the rest of the stuff.
+}
+trait_rpp_biological_pop_baseproduction_societyresearch_positive_0010 = {
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	cost = 33
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	species_possible_remove = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	advanced_trait = no
+	icon = "gfx/interface/icons/traits/species_traits/biological/pop_baseproduction_societyresearch/positive/0010.dds"
+
+    opposites = {
+        "trait_rpp_biological_pop_baseproduction_societyresearch_positive_0001"
+        "trait_rpp_biological_pop_baseproduction_societyresearch_positive_0002"
+        "trait_rpp_biological_pop_baseproduction_societyresearch_positive_0003"
+        "trait_rpp_biological_pop_baseproduction_societyresearch_positive_0004"
+        "trait_rpp_biological_pop_baseproduction_societyresearch_positive_0005"
+        "trait_rpp_biological_pop_baseproduction_societyresearch_positive_0006"
+        "trait_rpp_biological_pop_baseproduction_societyresearch_positive_0007"
+        "trait_rpp_biological_pop_baseproduction_societyresearch_positive_0008"
+        "trait_rpp_biological_pop_baseproduction_societyresearch_positive_0009"
+    }
+	
+	modifier = {
+		# 5 Society Research
+	}
+	
+	# other stuff can be put in this area, or above with the rest of the stuff.
+}
+trait_rpp_biological_pop_baseproduction_engineeringresearch_positive_0010 = {
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	cost = 33
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	species_possible_remove = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	advanced_trait = no
+	icon = "gfx/interface/icons/traits/species_traits/biological/pop_baseproduction_engineeringresearch/positive/0010.dds"
+
+    opposites = {
+        "trait_rpp_biological_pop_baseproduction_engineeringresearch_positive_0001"
+        "trait_rpp_biological_pop_baseproduction_engineeringresearch_positive_0002"
+        "trait_rpp_biological_pop_baseproduction_engineeringresearch_positive_0003"
+        "trait_rpp_biological_pop_baseproduction_engineeringresearch_positive_0004"
+        "trait_rpp_biological_pop_baseproduction_engineeringresearch_positive_0005"
+        "trait_rpp_biological_pop_baseproduction_engineeringresearch_positive_0006"
+        "trait_rpp_biological_pop_baseproduction_engineeringresearch_positive_0007"
+        "trait_rpp_biological_pop_baseproduction_engineeringresearch_positive_0008"
+        "trait_rpp_biological_pop_baseproduction_engineeringresearch_positive_0009"
+    }
+	
+	modifier = {
+		# 5 Engineering Research
+	}
+	
+	# other stuff can be put in this area, or above with the rest of the stuff.
+}
+trait_rpp_biological_pop_baseproduction_volatilemotes_positive_0010 = {
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	cost = 25
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	species_possible_remove = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	advanced_trait = no
+	icon = "gfx/interface/icons/traits/species_traits/biological/pop_baseproduction_volatilemotes/positive/0010.dds"
+
+    opposites = {
+        "trait_rpp_biological_pop_baseproduction_volatilemotes_positive_0001"
+        "trait_rpp_biological_pop_baseproduction_volatilemotes_positive_0002"
+        "trait_rpp_biological_pop_baseproduction_volatilemotes_positive_0003"
+        "trait_rpp_biological_pop_baseproduction_volatilemotes_positive_0004"
+        "trait_rpp_biological_pop_baseproduction_volatilemotes_positive_0005"
+        "trait_rpp_biological_pop_baseproduction_volatilemotes_positive_0006"
+        "trait_rpp_biological_pop_baseproduction_volatilemotes_positive_0007"
+        "trait_rpp_biological_pop_baseproduction_volatilemotes_positive_0008"
+        "trait_rpp_biological_pop_baseproduction_volatilemotes_positive_0009"
+    }
+	
+	modifier = {
+		# 0.25 Volatile Motes
+	}
+	
+	# other stuff can be put in this area, or above with the rest of the stuff.
+}
+trait_rpp_biological_pop_baseproduction_exoticgases_positive_0010 = {
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	cost = 25
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	species_possible_remove = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	advanced_trait = no
+	icon = "gfx/interface/icons/traits/species_traits/biological/pop_baseproduction_exoticgases/positive/0010.dds"
+
+    opposites = {
+        "trait_rpp_biological_pop_baseproduction_exoticgases_positive_0001"
+        "trait_rpp_biological_pop_baseproduction_exoticgases_positive_0002"
+        "trait_rpp_biological_pop_baseproduction_exoticgases_positive_0003"
+        "trait_rpp_biological_pop_baseproduction_exoticgases_positive_0004"
+        "trait_rpp_biological_pop_baseproduction_exoticgases_positive_0005"
+        "trait_rpp_biological_pop_baseproduction_exoticgases_positive_0006"
+        "trait_rpp_biological_pop_baseproduction_exoticgases_positive_0007"
+        "trait_rpp_biological_pop_baseproduction_exoticgases_positive_0008"
+        "trait_rpp_biological_pop_baseproduction_exoticgases_positive_0009"
+    }
+	
+	modifier = {
+		# 0.25 Exotic Gasses
+	}
+	
+	# other stuff can be put in this area, or above with the rest of the stuff.
+}
+trait_rpp_biological_pop_baseproduction_rarecrystals_positive_0010 = {
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	cost = 25
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	species_possible_remove = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	advanced_trait = no
+	icon = "gfx/interface/icons/traits/species_traits/biological/pop_baseproduction_rarecrystals/positive/0010.dds"
+
+    opposites = {
+        "trait_rpp_biological_pop_baseproduction_rarecrystals_positive_0001"
+        "trait_rpp_biological_pop_baseproduction_rarecrystals_positive_0002"
+        "trait_rpp_biological_pop_baseproduction_rarecrystals_positive_0003"
+        "trait_rpp_biological_pop_baseproduction_rarecrystals_positive_0004"
+        "trait_rpp_biological_pop_baseproduction_rarecrystals_positive_0005"
+        "trait_rpp_biological_pop_baseproduction_rarecrystals_positive_0006"
+        "trait_rpp_biological_pop_baseproduction_rarecrystals_positive_0007"
+        "trait_rpp_biological_pop_baseproduction_rarecrystals_positive_0008"
+        "trait_rpp_biological_pop_baseproduction_rarecrystals_positive_0009"
+    }
+	
+	modifier = {
+		# 0.25 Rare Crystals
+	}
+	
+	# other stuff can be put in this area, or above with the rest of the stuff.
+}
+trait_rpp_biological_pop_baseproduction_zro_positive_0010 = {
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	cost = 25
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	species_possible_remove = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	advanced_trait = no
+	icon = "gfx/interface/icons/traits/species_traits/biological/pop_baseproduction_zro/positive/0010.dds"
+
+    opposites = {
+        "trait_rpp_biological_pop_baseproduction_zro_positive_0001"
+        "trait_rpp_biological_pop_baseproduction_zro_positive_0002"
+        "trait_rpp_biological_pop_baseproduction_zro_positive_0003"
+        "trait_rpp_biological_pop_baseproduction_zro_positive_0004"
+        "trait_rpp_biological_pop_baseproduction_zro_positive_0005"
+        "trait_rpp_biological_pop_baseproduction_zro_positive_0006"
+        "trait_rpp_biological_pop_baseproduction_zro_positive_0007"
+        "trait_rpp_biological_pop_baseproduction_zro_positive_0008"
+        "trait_rpp_biological_pop_baseproduction_zro_positive_0009"
+    }
+	
+	modifier = {
+		# 0.25 Zro
+	}
+	
+	# other stuff can be put in this area, or above with the rest of the stuff.
+}
+
+trait_rpp_biological_pop_baseproduction_nanites_positive_0010 = {
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	cost = 25
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	species_possible_remove = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	advanced_trait = no
+	icon = "gfx/interface/icons/traits/species_traits/biological/pop_baseproduction_nanites/positive/0010.dds"
+
+    opposites = {
+        "trait_rpp_biological_pop_baseproduction_nanites_positive_0001"
+        "trait_rpp_biological_pop_baseproduction_nanites_positive_0002"
+        "trait_rpp_biological_pop_baseproduction_nanites_positive_0003"
+        "trait_rpp_biological_pop_baseproduction_nanites_positive_0004"
+        "trait_rpp_biological_pop_baseproduction_nanites_positive_0005"
+        "trait_rpp_biological_pop_baseproduction_nanites_positive_0006"
+        "trait_rpp_biological_pop_baseproduction_nanites_positive_0007"
+        "trait_rpp_biological_pop_baseproduction_nanites_positive_0008"
+        "trait_rpp_biological_pop_baseproduction_nanites_positive_0009"
+    }
+	
+	modifier = {
+		# 0.25 Nanites
+	}
+	
+	# other stuff can be put in this area, or above with the rest of the stuff.
+}
+
+trait_rpp_biological_pop_baseproduction_minorartifacts_positive_0010 = {
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	cost = 50
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	species_possible_remove = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	advanced_trait = no
+	icon = "gfx/interface/icons/traits/species_traits/biological/pop_baseproduction_minorartifacts/positive/0010.dds"
+
+    opposites = {
+        "trait_rpp_biological_pop_baseproduction_minorartifacts_positive_0001"
+        "trait_rpp_biological_pop_baseproduction_minorartifacts_positive_0002"
+        "trait_rpp_biological_pop_baseproduction_minorartifacts_positive_0003"
+        "trait_rpp_biological_pop_baseproduction_minorartifacts_positive_0004"
+        "trait_rpp_biological_pop_baseproduction_minorartifacts_positive_0005"
+        "trait_rpp_biological_pop_baseproduction_minorartifacts_positive_0006"
+        "trait_rpp_biological_pop_baseproduction_minorartifacts_positive_0007"
+        "trait_rpp_biological_pop_baseproduction_minorartifacts_positive_0008"
+        "trait_rpp_biological_pop_baseproduction_minorartifacts_positive_0009"
+    }
+	
+	modifier = {
+		# 0.1 Minor Artifacts
+	}
+	
+	# other stuff can be put in this area, or above with the rest of the stuff.
+}
+trait_rpp_biological_species_leaderexperience_positive_0007 = {
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	cost = 35
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	species_possible_remove = {
+		FROM = {
+			has_technology = tech_genetic_resequencing
+		}
+	}
+	advanced_trait = no
+	icon = "gfx/interface/icons/traits/species_traits/biological/species_leaderexperience/positive/0007.dds"
+
+    opposites = {
+        "trait_rpp_biological_species_leaderexperience_positive_0001"
+        "trait_rpp_biological_species_leaderexperience_positive_0002"
+        "trait_rpp_biological_species_leaderexperience_positive_0003"
+        "trait_rpp_biological_species_leaderexperience_positive_0004"
+        "trait_rpp_biological_species_leaderexperience_positive_0005"
+        "trait_rpp_biological_species_leaderexperience_positive_0006"
+        
+        "trait_rpp_biological_species_leaderexperience_negative_0001"
+        "trait_rpp_biological_species_leaderexperience_negative_0002"
+        "trait_rpp_biological_species_leaderexperience_negative_0003"
+        "trait_rpp_biological_species_leaderexperience_negative_0004"
+        "trait_rpp_biological_species_leaderexperience_negative_0005"
+        "trait_rpp_biological_species_leaderexperience_negative_0006"
+    }
+	
+	modifier = {
+		leader_skill_levels = 99
+		species_leader_exp_gain = 9
+	}
+	
+	# other stuff can be put in this area, or above with the rest of the stuff.
+}
+trait_rpp_biological_species_aliencountryopinion_biological_positive_0006 = {
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	cost = 16
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		FROM = {
+			has_technology = tech_gene_seed_purification
+		}
+	}
+	species_possible_remove = {
+		FROM = {
+			has_technology = tech_gene_seed_purification
+		}
+	}
+	advanced_trait = no
+	icon = "gfx/interface/icons/traits/species_traits/biological/species_aliencountryopinion_biological/positive/0006.dds"
+
+    opposites = {
+        "trait_rpp_biological_species_aliencountryopinion_biological_positive_0001"
+        "trait_rpp_biological_species_aliencountryopinion_biological_positive_0002"
+        "trait_rpp_biological_species_aliencountryopinion_biological_positive_0003"
+        "trait_rpp_biological_species_aliencountryopinion_biological_positive_0004"
+        "trait_rpp_biological_species_aliencountryopinion_biological_positive_0005"
+        "trait_rpp_biological_species_aliencountryopinion_biological_positive_0007"
+        
+        "trait_rpp_biological_species_aliencountryopinion_biological_negative_0001"
+        "trait_rpp_biological_species_aliencountryopinion_biological_negative_0002"
+        "trait_rpp_biological_species_aliencountryopinion_biological_negative_0003"
+        "trait_rpp_biological_species_aliencountryopinion_biological_negative_0004"
+        "trait_rpp_biological_species_aliencountryopinion_biological_negative_0005"
+        "trait_rpp_biological_species_aliencountryopinion_biological_negative_0006"
+        "trait_rpp_biological_species_aliencountryopinion_biological_negative_0007"
+    }
+	
+	modifier = {
+		# No direct modifiers from this trait.
+        # reminders:
+        # +250 Opinion to and from alien biological empires.
+        # +150 Opinion to and from fallen empires.
+	}
+	
+	# other stuff can be put in this area, or above with the rest of the stuff.
+}
+trait_rpp_biological_species_aliencountryopinion_machine_positive_0006 = {
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	cost = 16
+	initial = yes
+	randomized = no
+	species_potential_add = {
+		FROM = {
+			has_technology = tech_gene_seed_purification
+		}
+	}
+	species_possible_remove = {
+		FROM = {
+			has_technology = tech_gene_seed_purification
+		}
+	}
+	advanced_trait = no
+	icon = "gfx/interface/icons/traits/species_traits/biological/species_aliencountryopinion_machine/positive/0006.dds"
+
+    opposites = {
+        "trait_rpp_biological_species_aliencountryopinion_machine_positive_0001"
+        "trait_rpp_biological_species_aliencountryopinion_machine_positive_0002"
+        "trait_rpp_biological_species_aliencountryopinion_machine_positive_0003"
+        "trait_rpp_biological_species_aliencountryopinion_machine_positive_0004"
+        "trait_rpp_biological_species_aliencountryopinion_machine_positive_0005"
+        "trait_rpp_biological_species_aliencountryopinion_machine_positive_0007"
+        
+        "trait_rpp_biological_species_aliencountryopinion_machine_negative_0001"
+        "trait_rpp_biological_species_aliencountryopinion_machine_negative_0002"
+        "trait_rpp_biological_species_aliencountryopinion_machine_negative_0003"
+        "trait_rpp_biological_species_aliencountryopinion_machine_negative_0004"
+        "trait_rpp_biological_species_aliencountryopinion_machine_negative_0005"
+        "trait_rpp_biological_species_aliencountryopinion_machine_negative_0006"
+        "trait_rpp_biological_species_aliencountryopinion_machine_negative_0007"
+    }
+	
+	modifier = {
+		# No direct modifiers from this trait.
+        # reminders:
+        # +250 Opinion to and from alien machine empires.
+        # +150 Opinion to and from fallen empires.
+	}
+	
+	# other stuff can be put in this area, or above with the rest of the stuff.
+}

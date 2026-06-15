@@ -1,0 +1,256 @@
+star_lifter_0_f_star = {
+	entity = "giga_consite_7_7_entity"
+	construction_entity = "giga_consite_7_7_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	prerequisites = { giga_tech_star_lifter }
+	potential = { always = no }
+
+	build_time = @ukn_star_lifter_p0_build_time_g_star
+	resources = {
+		category = ukn_megastructure_site
+		cost = {
+			influence = @ukn_star_lifter_p0_cost_influence_f_star
+####
+			consumer_goods = @ukn_star_lifter_p0_cost_consumer_goods_g_star
+			ukn_meta_materials = @ukn_star_lifter_p0_cost_ukn_meta_materials_g_star
+#			ukn_quasi_matter = @ukn_star_lifter_p0_cost_ukn_quasi_matter_g_star
+#			ukn_causalitons = @ukn_star_lifter_p0_cost_ukn_causalitons_g_star
+		}
+		upkeep = {
+			energy = @ukn_star_lifter_p0_upkeep_energy_g_star
+		}
+	}
+#######################
+}
+
+star_lifter_1_f_star = {
+	entity = "starlifter_01_entity"
+	construction_entity = "starlifter_01_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { star_lifter_0_f_star }
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+
+	build_time = @ukn_star_lifter_p1_build_time_f_star
+	resources = {
+		category = ukn_megastructure_frame
+		cost = {
+			influence = @ukn_star_lifter_p1_cost_influence_f_star
+####
+			consumer_goods = @ukn_star_lifter_p1_cost_consumer_goods_f_star
+			ukn_meta_materials = @ukn_star_lifter_p1_cost_ukn_meta_materials_f_star
+####
+			ukn_femtomatter = @ukn_star_lifter_p1_cost_ukn_femtomatter_f_star
+#			ukn_condensics = @ukn_star_lifter_p1_cost_ukn_condensics_f_star
+#			ukn_quasi_matter = @ukn_star_lifter_p1_cost_ukn_quasi_matter_f_star
+#			ukn_causalitons = @ukn_star_lifter_p1_cost_ukn_causalitons_f_star
+		}
+		upkeep = {
+			energy = @ukn_star_lifter_p1_upkeep_energy_f_star
+			ukn_meta_materials = @ukn_star_lifter_p1_upkeep_ukn_meta_materials_f_star
+		}
+		produces = {
+			minerals = @ukn_star_lifter_p1_output_minerals_f_star
+		}
+	}
+#######################
+
+	potential = { NOT = { has_global_flag = lifters_disabled } }
+	possible = { from = { has_technology = giga_tech_star_lifter } }
+
+	on_build_complete = {
+		save_event_target_as = giga_system
+		fromfrom.planet = { save_event_target_as = giga_planet }
+		from = { country_event = { id = giga_dialog.1602 } }	# Notification
+	}
+}
+
+star_lifter_2_f_star = {
+	entity = "starlifter_02_entity"
+	construction_entity = "starlifter_02_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { star_lifter_1_f_star }
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+
+	build_time = @ukn_star_lifter_p2_build_time_f_star
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			influence = @ukn_star_lifter_p2_cost_influence_f_star
+####
+			consumer_goods = @ukn_star_lifter_p2_cost_consumer_goods_f_star
+			ukn_meta_materials = @ukn_star_lifter_p2_cost_ukn_meta_materials_f_star
+####
+			ukn_femtomatter = @ukn_star_lifter_p2_cost_ukn_femtomatter_f_star
+#			ukn_condensics = @ukn_star_lifter_p2_cost_ukn_condensics_f_star
+#			ukn_quasi_matter = @ukn_star_lifter_p2_cost_ukn_quasi_matter_f_star
+#			ukn_causalitons = @ukn_star_lifter_p2_cost_ukn_causalitons_f_star
+		}
+		upkeep = {
+			energy = @ukn_star_lifter_p2_upkeep_energy_f_star
+			ukn_meta_materials = @ukn_star_lifter_p2_upkeep_ukn_meta_materials_f_star
+		}
+		produces = {
+			minerals = @ukn_star_lifter_p2_output_minerals_f_star
+		}
+	}
+#######################
+
+	potential = { NOT = { has_global_flag = lifters_disabled } }
+	possible = { from = { has_technology = giga_tech_star_lifter } }
+
+	on_build_complete = {
+		save_event_target_as = giga_system
+		fromfrom.planet = { save_event_target_as = giga_planet }
+		from = { country_event = { id = giga_dialog.1603 } }	# Notification
+	}
+}
+
+star_lifter_3_f_star = {
+	entity = "starlifter_03_entity"
+	construction_entity = "starlifter_03_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { star_lifter_2_f_star }
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+
+	build_time = @ukn_star_lifter_p3_build_time_f_star
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			influence = @ukn_star_lifter_p3_cost_influence_f_star
+####
+			consumer_goods = @ukn_star_lifter_p3_cost_consumer_goods_f_star
+			ukn_meta_materials = @ukn_star_lifter_p3_cost_ukn_meta_materials_f_star
+####
+			ukn_femtomatter = @ukn_star_lifter_p3_cost_ukn_femtomatter_f_star
+#			ukn_condensics = @ukn_star_lifter_p3_cost_ukn_condensics_f_star
+#			ukn_quasi_matter = @ukn_star_lifter_p3_cost_ukn_quasi_matter_f_star
+#			ukn_causalitons = @ukn_star_lifter_p3_cost_ukn_causalitons_f_star
+		}
+		upkeep = {
+			energy = @ukn_star_lifter_p3_upkeep_energy_f_star
+			ukn_meta_materials = @ukn_star_lifter_p3_upkeep_ukn_meta_materials_f_star
+		}
+		produces = {
+			minerals = @ukn_star_lifter_p3_output_minerals_f_star
+		}
+	}
+#######################
+
+	potential = { NOT = { has_global_flag = lifters_disabled } }
+	possible = { from = { has_technology = giga_tech_star_lifter } }
+
+	on_build_complete = {
+		save_event_target_as = giga_system
+		fromfrom.planet = { save_event_target_as = giga_planet }
+		from = { country_event = { id = giga_dialog.1604 } }	# Notification
+	}
+}
+
+star_lifter_4_f_star = {
+	entity = "starlifter_04_entity"
+	construction_entity = "starlifter_04_construction_entity"
+	portrait = "GFX_megastructure_construction_background"
+	upgrade_from = { star_lifter_3_f_star }
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+
+	build_time = @ukn_star_lifter_p4_build_time_f_star
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			influence = @ukn_star_lifter_p4_cost_influence_f_star
+####
+			consumer_goods = @ukn_star_lifter_p4_cost_consumer_goods_f_star
+			ukn_meta_materials = @ukn_star_lifter_p4_cost_ukn_meta_materials_f_star
+####
+			ukn_femtomatter = @ukn_star_lifter_p4_cost_ukn_femtomatter_f_star
+#			ukn_condensics = @ukn_star_lifter_p4_cost_ukn_condensics_f_star
+#			ukn_quasi_matter = @ukn_star_lifter_p4_cost_ukn_quasi_matter_f_star
+#			ukn_causalitons = @ukn_star_lifter_p4_cost_ukn_causalitons_f_star
+		}
+		upkeep = {
+			energy = @ukn_star_lifter_p4_upkeep_energy_f_star
+			ukn_meta_materials = @ukn_star_lifter_p4_upkeep_ukn_meta_materials_f_star
+		}
+		produces = {
+			minerals = @ukn_star_lifter_p4_output_minerals_f_star
+		}
+	}
+#######################
+
+	potential = { NOT = { has_global_flag = lifters_disabled } }
+	possible = { from = { has_technology = giga_tech_star_lifter } }
+
+	on_build_complete = {
+		save_event_target_as = giga_system
+		fromfrom.planet = { save_event_target_as = giga_planet }
+		from = { country_event = { id = giga_dialog.1604 } }	# Notification
+	}
+}
+
+star_lifter_5_f_star = {
+	entity = "starlifter_05_entity"
+	construction_entity = "starlifter_05_construction_entity"
+	portrait = "GFX_megastructure_star_lifters"
+	upgrade_from = { star_lifter_4_f_star }
+	ai_weight = { factor = 10 } # If we can build it, we will build it
+
+	build_time = @ukn_star_lifter_p5_build_time_f_star
+	resources = {
+		category = ukn_megastructure_main
+		cost = {
+			influence = @ukn_star_lifter_p5_cost_influence_f_star
+####
+			consumer_goods = @ukn_star_lifter_p5_cost_consumer_goods_f_star
+			ukn_meta_materials = @ukn_star_lifter_p5_cost_ukn_meta_materials_f_star
+####
+			ukn_femtomatter = @ukn_star_lifter_p5_cost_ukn_femtomatter_f_star
+#			ukn_condensics = @ukn_star_lifter_p5_cost_ukn_condensics_f_star
+#			ukn_quasi_matter = @ukn_star_lifter_p5_cost_ukn_quasi_matter_f_star
+#			ukn_causalitons = @ukn_star_lifter_p5_cost_ukn_causalitons_f_star
+		}
+		upkeep = {
+			energy = @ukn_star_lifter_p5_upkeep_energy_f_star
+			ukn_meta_materials = @ukn_star_lifter_p5_upkeep_ukn_meta_materials_f_star
+		}
+		produces = {
+			minerals = @ukn_star_lifter_p5_output_minerals_f_star
+		}
+	}
+#######################
+
+	potential = { NOT = { has_global_flag = lifters_disabled } }
+	possible = { from = { has_technology = giga_tech_star_lifter } }
+
+	on_build_complete = {
+		save_event_target_as = giga_system
+		fromfrom.planet = { save_event_target_as = giga_planet }
+		from = {
+			country_event = { id = giga_dialog.1605 }				# Notification
+			set_country_flag = has_built_or_repaired_megastructure	# Backup
+			set_country_flag = ukn_has_built_megastructure 	# Triggers Master Builders
+			if = {
+				limit = {
+					NOR = {
+						has_global_flag = giga_achievements_disabled
+						has_country_flag = giga_achievement_79
+					}
+				}
+				set_country_flag = giga_achievement_79
+				set_timed_country_flag = { flag = giga_achievement_79_notification days = 30 }
+				giga_achievement_sound = yes
+			}
+		}
+		every_system_planet = {
+			limit = {
+				OR = {
+					is_planet_class = pc_molten
+					is_planet_class = pc_toxic
+					is_planet_class = pc_barren
+				}
+			}
+			if = {		limit = { OR = { is_planet_class = pc_molten is_planet_class = pc_toxic } }	change_pc = pc_frozen }
+			else_if = {	limit = { is_planet_class = pc_barren }										change_pc = pc_barren_cold }
+		}
+	}
+}

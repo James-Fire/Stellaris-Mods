@@ -1,0 +1,701 @@
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+
+#Updated Range on these
+
+# DEFAULT VALUES:
+# is_missile = no
+# is_beam = no
+# is_point_defence = no
+
+#########################
+### KINETIC ARTILLERY ###
+#########################
+
+############ TRANSLIGHT ############
+
+### Kinetic Artillery [Hybrid] (T3)
+weapon_component_template = {
+	key = "KINETIC_ARTILLERY_1"
+	size = large
+	#entity = "large_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_kinetic_artillery_1"
+	icon_frame = 1
+    power = @ukn_kinetic_artillery_4_power
+	
+	damage = { min = @ukn_kinetic_artillery_4_dmg_min max = @ukn_kinetic_artillery_4_dmg_max }
+    windup = { min = @ukn_kinetic_artillery_4_windup_min max = @ukn_kinetic_artillery_4_windup_max }
+    total_fire_time = @ukn_kinetic_artillery_4_total_fire_time
+    range = @ukn_kinetic_artillery_4_range
+    accuracy = @ukn_kinetic_artillery_4_accuracy
+	
+    hull_damage = @ukn_kinetic_artillery_4_hull_damage_mult
+    armor_penetration = @ukn_kinetic_artillery_4_armor_penetration_mult
+    armor_damage = @ukn_kinetic_artillery_4_armor_damage_mult
+    shield_penetration = @ukn_kinetic_artillery_4_shield_penetration_mult
+    shield_damage = @ukn_kinetic_artillery_4_shield_damage_mult
+    tracking = @ukn_kinetic_artillery_4_tracking
+	
+	prerequisites = { "tech_kinetic_artillery_1" } #To Be Done
+	component_set = "UKN_SET_KINETIC_ARTILLERY_1"
+	projectile_gfx = "projectile_ukn_kinetic_artillery_1"
+	tags = { weapon_type_kinetic ukn_weapon_type_kinetic_artillery }
+	upgrades_to = "KINETIC_ARTILLERY_2"
+	
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_big_t4_component_cost_minerals
+			alloys = @ukn_big_t4_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t4_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t4_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t4_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t4_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t4_component_cost_ukn_causalitons
+			exotic_gases = @ukn_big_t4_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t4_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t4_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t4_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t4_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_big_t4_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t4_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t4_component_upkeep_energy
+#			minerals = @ukn_big_t4_component_upkeep_minerals
+#			alloys = @ukn_big_t4_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t4_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t4_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t4_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t4_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t4_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t4_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t4_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_big_t4_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t4_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t4_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_big_t4_component_upkeep_nanites
+#---
+			minerals = @ukn_big_t4_kinetics_upkeep_minerals
+			alloys = @ukn_big_t4_kinetics_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t4_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_kinetic_artillery_t4
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------
+
+#~~~~~~~~~~Vanilla T1-T2 Kinetic Artillery Overwritten~~~~~~~~~~ (Vanilla File Nullified)
+
+### Semi-Guided Phased Artillery [Phased, Semi-Guided] (T4)
+weapon_component_template = {
+	type = instant
+    power = @ukn_kinetic_artillery_5_power
+	
+	key = "KINETIC_ARTILLERY_2"
+	size = large
+	#entity = "large_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_ukn_kinetic_artillery_2"
+	icon_frame = 1
+	
+	damage = { min = @ukn_kinetic_artillery_5_dmg_min max = @ukn_kinetic_artillery_5_dmg_max }
+    windup = { min = @ukn_kinetic_artillery_5_windup_min max = @ukn_kinetic_artillery_5_windup_max }
+    total_fire_time = @ukn_kinetic_artillery_5_total_fire_time
+    range = @ukn_kinetic_artillery_5_range
+    accuracy = @ukn_kinetic_artillery_5_accuracy
+	
+    hull_damage = @ukn_kinetic_artillery_5_hull_damage_mult
+    armor_penetration = @ukn_kinetic_artillery_5_armor_penetration_mult
+    armor_damage = @ukn_kinetic_artillery_5_armor_damage_mult
+    shield_penetration = @ukn_kinetic_artillery_5_shield_penetration_mult
+    shield_damage = @ukn_kinetic_artillery_5_shield_damage_mult
+    tracking = @ukn_kinetic_artillery_5_tracking
+	
+	prerequisites = { "tech_kinetic_artillery_2" }
+	component_set = "UKN_SET_KINETIC_ARTILLERY_2"
+	projectile_gfx = "projectile_ukn_kinetic_artillery_2"
+	tags = { weapon_type_kinetic ukn_weapon_type_semi_guided_kinetic_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+	ai_tag_weight = 0
+	upgrades_to = "UKN_KINETIC_ARTILLERY_3"
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ukn_big_t5_component_cost_minerals
+#			alloys = @ukn_big_t5_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t5_component_cost_ukn_meta_materials
+			ukn_femtomatter = @ukn_big_t5_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t5_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t5_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t5_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t5_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t5_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t5_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t5_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t5_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_big_t5_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t5_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t5_component_upkeep_energy
+#			minerals = @ukn_big_t5_component_upkeep_minerals
+#			alloys = @ukn_big_t5_component_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t5_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t5_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t5_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t5_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t5_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t5_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t5_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_big_t5_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t5_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t5_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_big_t5_component_upkeep_nanites
+#---
+#			minerals = @ukn_big_t5_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t5_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t5_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+
+	ai_weight = {
+		weight = @ukn_component_weight_kinetic_artillery_t5
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_femtomatter value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+### Kinetic Missiles [Ultra-Relativistic, Guided] (T5)
+weapon_component_template = {
+	type = instant
+    power = @ukn_kinetic_artillery_6_power
+	
+	key = "UKN_KINETIC_ARTILLERY_3"
+	size = large
+	#entity = "large_kinetic_gun_entity"
+	
+	icon = "GFX_ship_part_ukn_kinetic_artillery_3"
+	icon_frame = 1
+	
+	damage = { min = @ukn_kinetic_artillery_6_dmg_min max = @ukn_kinetic_artillery_6_dmg_max }
+    windup = { min = @ukn_kinetic_artillery_6_windup_min max = @ukn_kinetic_artillery_6_windup_max }
+    total_fire_time = @ukn_kinetic_artillery_6_total_fire_time
+    range = @ukn_kinetic_artillery_6_range
+    accuracy = @ukn_kinetic_artillery_6_accuracy
+	
+    hull_damage = @ukn_kinetic_artillery_6_hull_damage_mult
+    armor_penetration = @ukn_kinetic_artillery_6_armor_penetration_mult
+    armor_damage = @ukn_kinetic_artillery_6_armor_damage_mult
+    shield_penetration = @ukn_kinetic_artillery_6_shield_penetration_mult
+    shield_damage = @ukn_kinetic_artillery_6_shield_damage_mult
+    tracking = @ukn_kinetic_artillery_6_tracking
+	
+	prerequisites = { "tech_ukn_kinetic_artillery_3" }
+	component_set = "UKN_SET_KINETIC_ARTILLERY_3"
+	projectile_gfx = "projectile_ukn_kinetic_artillery_3"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_kinetic_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+	ai_tag_weight = 0
+	upgrades_to = "UKN_KINETIC_ARTILLERY_4"
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t6_component_cost_minerals
+#			alloys = @ukn_big_t6_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t6_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t6_component_cost_ukn_femtomatter
+			ukn_condensics = @ukn_big_t6_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t6_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t6_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t6_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t6_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t6_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t6_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t6_armor_cost_nanites
+#---
+#			ukn_meta_materials = @ukn_big_t6_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t6_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t6_component_upkeep_energy
+#			minerals = @ukn_big_t6_component_upkeep_minerals
+#			alloys = @ukn_big_t6_component_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t6_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t6_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t6_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t6_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t6_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t6_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t6_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_big_t6_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t6_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t6_component_upkeep_ehof_sr_negative_mass
+#			nanites = @ukn_big_t6_component_upkeep_nanites
+#---
+#			minerals = @ukn_big_t6_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t6_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t6_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+
+	ai_weight = {
+		weight = @ukn_component_weight_kinetic_artillery_t6
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_condensics value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+}
+
+# -----------------------------------------------------------------------
+
+#~~~~~~~~~~Vanilla Overwrite End (Kinetic Artillery T1-T2)~~~~~~~~~~
+
+### Superluminal Kinetic Missiles [Superluminal, Guided] (T6)
+weapon_component_template = {
+	key = "UKN_KINETIC_ARTILLERY_4"
+	size = large
+	#entity = "large_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_kinetic_artillery_4"
+	icon_frame = 1
+    power = @ukn_kinetic_artillery_7_power
+	
+	damage = { min = @ukn_kinetic_artillery_7_dmg_min max = @ukn_kinetic_artillery_7_dmg_max }
+    windup = { min = @ukn_kinetic_artillery_7_windup_min max = @ukn_kinetic_artillery_7_windup_max }
+    total_fire_time = @ukn_kinetic_artillery_7_total_fire_time
+    range = @ukn_kinetic_artillery_7_range
+    accuracy = @ukn_kinetic_artillery_7_accuracy
+	
+    hull_damage = @ukn_kinetic_artillery_7_hull_damage_mult
+    armor_penetration = @ukn_kinetic_artillery_7_armor_penetration_mult
+    armor_damage = @ukn_kinetic_artillery_7_armor_damage_mult
+    shield_penetration = @ukn_kinetic_artillery_7_shield_penetration_mult
+    shield_damage = @ukn_kinetic_artillery_7_shield_damage_mult
+    tracking = @ukn_kinetic_artillery_7_tracking
+	
+	prerequisites = { "tech_ukn_kinetic_artillery_4" } #To Be Done
+	component_set = "UKN_SET_KINETIC_ARTILLERY_4"
+	projectile_gfx = "projectile_ukn_kinetic_artillery_4"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_kinetic_artillery }
+	upgrades_to = "UKN_KINETIC_ARTILLERY_5"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t7_component_cost_minerals
+#			alloys = @ukn_big_t7_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t7_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t7_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t7_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_big_t7_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t7_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t7_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t7_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t7_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t7_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_big_t7_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_big_t7_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t7_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t7_component_upkeep_energy
+#			minerals = @ukn_big_t7_component_upkeep_minerals
+#			alloys = @ukn_big_t7_component_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t7_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t7_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t7_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t7_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t7_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t7_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t7_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_big_t7_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t7_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t7_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_big_t7_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t7_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t7_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_kinetic_artillery_t7
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------
+
+### Supersolid Kinetic Missiles [Supersolid, Guided] (T7)
+weapon_component_template = {
+	key = "UKN_KINETIC_ARTILLERY_5"
+	size = large
+	#entity = "large_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_kinetic_artillery_5"
+	icon_frame = 1
+    power = @ukn_kinetic_artillery_8_power
+	
+	damage = { min = @ukn_kinetic_artillery_8_dmg_min max = @ukn_kinetic_artillery_8_dmg_max }
+    windup = { min = @ukn_kinetic_artillery_8_windup_min max = @ukn_kinetic_artillery_8_windup_max }
+    total_fire_time = @ukn_kinetic_artillery_8_total_fire_time
+    range = @ukn_kinetic_artillery_8_range
+    accuracy = @ukn_kinetic_artillery_8_accuracy
+	
+    hull_damage = @ukn_kinetic_artillery_8_hull_damage_mult
+    armor_penetration = @ukn_kinetic_artillery_8_armor_penetration_mult
+    armor_damage = @ukn_kinetic_artillery_8_armor_damage_mult
+    shield_penetration = @ukn_kinetic_artillery_8_shield_penetration_mult
+    shield_damage = @ukn_kinetic_artillery_8_shield_damage_mult
+    tracking = @ukn_kinetic_artillery_8_tracking
+	
+	prerequisites = { "tech_ukn_kinetic_artillery_5" } #To Be Done
+	component_set = "UKN_SET_KINETIC_ARTILLERY_5"
+	projectile_gfx = "projectile_ukn_kinetic_artillery_5"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_kinetic_artillery }
+	upgrades_to = "UKN_KINETIC_ARTILLERY_6"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t8_component_cost_minerals
+#			alloys = @ukn_big_t8_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t8_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t8_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t8_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_big_t8_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t8_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t8_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t8_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_big_t8_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t8_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_big_t8_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_big_t8_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t8_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t8_component_upkeep_energy
+#			minerals = @ukn_big_t8_component_upkeep_minerals
+#			alloys = @ukn_big_t8_component_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t8_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t8_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t8_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t8_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t8_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t8_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t8_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_big_t8_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t8_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t8_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_big_t8_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t8_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t8_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_kinetic_artillery_t8
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = ehof_sr_negative_mass value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------
+
+### Supersolid Kinetic Missiles [Supersolid, Guided] (T7)
+weapon_component_template = {
+	key = "UKN_KINETIC_ARTILLERY_PLANCK"
+	size = large
+	#entity = "large_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_kinetic_artillery_planck"
+	icon_frame = 1
+    power = @ukn_kinetic_artillery_planck_power
+	
+	damage = { min = @ukn_kinetic_artillery_planck_dmg_min max = @ukn_kinetic_artillery_planck_dmg_max }
+    windup = { min = @ukn_kinetic_artillery_planck_windup_min max = @ukn_kinetic_artillery_planck_windup_max }
+    total_fire_time = @ukn_kinetic_artillery_planck_total_fire_time
+    range = @ukn_kinetic_artillery_planck_range
+    accuracy = @ukn_kinetic_artillery_planck_accuracy
+	
+    hull_damage = @ukn_kinetic_artillery_planck_hull_damage_mult
+    armor_penetration = @ukn_kinetic_artillery_planck_armor_penetration_mult
+    armor_damage = @ukn_kinetic_artillery_planck_armor_damage_mult
+    shield_penetration = @ukn_kinetic_artillery_planck_shield_penetration_mult
+    shield_damage = @ukn_kinetic_artillery_planck_shield_damage_mult
+    tracking = @ukn_kinetic_artillery_planck_tracking
+	
+	prerequisites = { "tech_ukn_kinetic_artillery_planck" } #To Be Done
+	component_set = "UKN_SET_KINETIC_ARTILLERY_PLANCK"
+	projectile_gfx = "projectile_ukn_kinetic_artillery_planck"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_kinetic_artillery }
+	upgrades_to = "UKN_KINETIC_ARTILLERY_6"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t_p_component_cost_minerals
+#			alloys = @ukn_big_t_p_component_cost_alloys
+			ukn_meta_materials = @ukn_big_t_p_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t_p_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t_p_component_cost_ukn_condensics
+			ukn_quasi_matter = @ukn_big_t_p_component_cost_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t_p_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t_p_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t_p_component_cost_rare_crystals
+			ehof_sr_negative_mass = @ukn_big_t_p_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t_p_armor_cost_ukn_meta_materials
+#			ukn_quasi_matter = @ukn_big_t_p_armor_cost_ukn_quasi_matter
+#---
+#			ukn_meta_materials = @ukn_big_t_p_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t_p_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t_p_component_upkeep_energy
+#			minerals = @ukn_big_t_p_component_upkeep_minerals
+#			alloys = @ukn_big_t_p_component_upkeep_alloys
+			ukn_meta_materials = @ukn_big_t_p_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t_p_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t_p_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t_p_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t_p_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t_p_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t_p_component_upkeep_rare_crystals
+			ukn_exotic_particles = @ukn_big_t_p_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t_p_component_upkeep_sr_dark_matter
+#			ehof_sr_negative_mass = @ukn_big_t_p_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_big_t_p_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t_p_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t_p_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_kinetic_artillery_t_d
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_quasi_matter value <= 0 }
+				has_monthly_income = { resource = sr_dark_matter value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------
+
+### Oscillative Kinetic Missiles [Sub-Planck, Guided] (T8)
+weapon_component_template = {
+	key = "UKN_KINETIC_ARTILLERY_6"
+	size = large
+	#entity = "large_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_kinetic_artillery_6"
+	icon_frame = 1
+    power = @ukn_kinetic_artillery_9_power
+	
+	damage = { min = @ukn_kinetic_artillery_9_dmg_min max = @ukn_kinetic_artillery_9_dmg_max }
+    windup = { min = @ukn_kinetic_artillery_9_windup_min max = @ukn_kinetic_artillery_9_windup_max }
+    total_fire_time = @ukn_kinetic_artillery_9_total_fire_time
+    range = @ukn_kinetic_artillery_9_range
+    accuracy = @ukn_kinetic_artillery_9_accuracy
+	
+    hull_damage = @ukn_kinetic_artillery_9_hull_damage_mult
+    armor_penetration = @ukn_kinetic_artillery_9_armor_penetration_mult
+    armor_damage = @ukn_kinetic_artillery_9_armor_damage_mult
+    shield_penetration = @ukn_kinetic_artillery_9_shield_penetration_mult
+    shield_damage = @ukn_kinetic_artillery_9_shield_damage_mult
+    tracking = @ukn_kinetic_artillery_9_tracking
+	
+	prerequisites = { "tech_ukn_kinetic_artillery_6" } #To Be Done
+	component_set = "UKN_SET_KINETIC_ARTILLERY_6"
+	projectile_gfx = "projectile_ukn_kinetic_artillery_6"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_kinetic_artillery }
+	upgrades_to = "UKN_KINETIC_ARTILLERY_7"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t9_component_cost_minerals
+#			alloys = @ukn_big_t9_component_cost_alloys
+#			ukn_meta_materials = @ukn_big_t9_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t9_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t9_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t9_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_big_t9_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t9_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t9_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t9_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t9_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t9_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_big_t9_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t9_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t9_component_upkeep_energy
+#			minerals = @ukn_big_t9_component_upkeep_minerals
+#			alloys = @ukn_big_t9_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t9_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t9_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t9_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t9_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t9_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t9_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t9_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_big_t9_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t9_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_big_t9_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_big_t9_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t9_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t9_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_kinetic_artillery_t9
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------
+
+### Flux Kinetic Missiles [Flux, Guided] (T9)
+weapon_component_template = {
+	key = "UKN_KINETIC_ARTILLERY_7"
+	size = large
+	#entity = "large_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_ukn_kinetic_artillery_7"
+	icon_frame = 1
+    power = @ukn_kinetic_artillery_10_power
+	
+	damage = { min = @ukn_kinetic_artillery_10_dmg_min max = @ukn_kinetic_artillery_10_dmg_max }
+    windup = { min = @ukn_kinetic_artillery_10_windup_min max = @ukn_kinetic_artillery_10_windup_max }
+    total_fire_time = @ukn_kinetic_artillery_10_total_fire_time
+    range = @ukn_kinetic_artillery_10_range
+    accuracy = @ukn_kinetic_artillery_10_accuracy
+	
+    hull_damage = @ukn_kinetic_artillery_10_hull_damage_mult
+    armor_penetration = @ukn_kinetic_artillery_10_armor_penetration_mult
+    armor_damage = @ukn_kinetic_artillery_10_armor_damage_mult
+    shield_penetration = @ukn_kinetic_artillery_10_shield_penetration_mult
+    shield_damage = @ukn_kinetic_artillery_10_shield_damage_mult
+    tracking = @ukn_kinetic_artillery_10_tracking
+	
+	prerequisites = { "tech_ukn_kinetic_artillery_7" } #To Be Done
+	component_set = "UKN_SET_KINETIC_ARTILLERY_7"
+	projectile_gfx = "projectile_ukn_kinetic_artillery_7"
+	tags = { weapon_type_kinetic ukn_weapon_type_guided_kinetic_artillery }
+#	upgrades_to = "UKN_KINETIC_ARTILLERY_8"
+	
+	resources = {
+		category = ship_components
+		cost = {
+#			minerals = @ukn_big_t10_component_cost_minerals
+#			alloys = @ukn_big_t10_component_cost_alloys
+#			ukn_meta_materials = @ukn_big_t10_component_cost_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t10_component_cost_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t10_component_cost_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t10_component_cost_ukn_quasi_matter
+			ukn_causalitons = @ukn_big_t10_component_cost_ukn_causalitons
+#			exotic_gases = @ukn_big_t10_component_cost_exotic_gases
+#			rare_crystals = @ukn_big_t10_component_cost_rare_crystals
+#			ehof_sr_negative_mass = @ukn_big_t10_component_cost_ehof_sr_negative_mass
+#---
+#			ukn_meta_materials = @ukn_big_t10_armor_cost_ukn_meta_materials
+#			nanites = @ukn_big_t10_armor_cost_ukn_causalitons
+#---
+#			ukn_meta_materials = @ukn_big_t10_shields_cost_ukn_meta_materials
+#			ukn_exotic_particles = @ukn_big_t10_shields_cost_ukn_exotic_particles
+		}
+		upkeep = {
+#			energy = @ukn_big_t10_component_upkeep_energy
+#			minerals = @ukn_big_t10_component_upkeep_minerals
+#			alloys = @ukn_big_t10_component_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t10_component_upkeep_ukn_meta_materials
+#			ukn_femtomatter = @ukn_big_t10_component_upkeep_ukn_femtomatter
+#			ukn_condensics = @ukn_big_t10_component_upkeep_ukn_condensics
+#			ukn_quasi_matter = @ukn_big_t10_component_upkeep_ukn_quasi_matter
+#			ukn_causalitons = @ukn_big_t10_component_upkeep_ukn_causalitons
+#			exotic_gases = @ukn_big_t10_component_upkeep_exotic_gases
+#			rare_crystals = @ukn_big_t10_component_upkeep_rare_crystals
+#			ukn_exotic_particles = @ukn_big_t10_component_upkeep_ukn_exotic_particles
+#			sr_dark_matter = @ukn_big_t10_component_upkeep_sr_dark_matter
+			ehof_sr_negative_mass = @ukn_big_t10_component_upkeep_ehof_sr_negative_mass
+#---
+#			minerals = @ukn_big_t10_kinetics_upkeep_minerals
+#			alloys = @ukn_big_t10_kinetics_upkeep_alloys
+#			ukn_meta_materials = @ukn_big_t10_kinetics_upkeep_ukn_meta_materials
+		}
+	}
+	ai_weight = {
+		weight = @ukn_component_weight_kinetic_artillery_t9
+		modifier = {
+			factor = 0
+			OR = {
+				has_monthly_income = { resource = ukn_causalitons value <= 0 }
+				has_monthly_income = { resource = ukn_exotic_particles value <= 0 }
+			}
+		}
+	}
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }	#tags must be pre-registered in common/weapon_tags
+}
+
+# -----------------------------------------------------------------------

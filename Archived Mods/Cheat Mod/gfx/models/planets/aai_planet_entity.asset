@@ -1,0 +1,1102 @@
+@mini_ring_scale_1 = 1.0
+@mini_ring_scale_2 = 0.2
+@mini_ring_scale_3 = 0.14
+@mini_ring_scale_4 = 0.24
+
+entity = {
+	name = "aai_combined_ring_entity"
+	cull_radius = 500
+	
+	locator = { name = "ring_sec_01" position = { 450 0 0 } rotation = { 90 0 0 }}
+	locator = { name = "ring_sec_02" position = { 389.7 0 225 } rotation = { 60 0 0 }}
+	locator = { name = "ring_sec_03" position = { 225 0 389.7 } rotation = { 30 0 0 }}
+	locator = { name = "ring_sec_04" position = { 0 0 450 } rotation = { 0 0 0 }}
+	locator = { name = "ring_sec_05" position = { -225 0 389.7 } rotation = { -30 0 0 }}
+	locator = { name = "ring_sec_06" position = { -389.7 0 225 } rotation = { -60 0 0 }}
+	locator = { name = "ring_sec_07" position = { -450 0 0 } rotation = { -90 0 0 }}
+	locator = { name = "ring_sec_08" position = { -389.7 0 -225 } rotation = { -120 0 0 }}
+	locator = { name = "ring_sec_09" position = { -225 0 -389.7 } rotation = { -150 0 0 }}	
+	locator = { name = "ring_sec_10" position = { 0 0 -450 } rotation = { -180 0 0 }}
+	locator = { name = "ring_sec_11" position = { 225 0 -389.7 } rotation = { -210 0 0 }}
+	locator = { name = "ring_sec_12" position = { 389.7 0 -225 } rotation = { -240 0 0 }}
+	
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+
+	attach = { "ring_sec_01" = "ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_02" = "ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_03" = "ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_04" = "ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_05" = "ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_06" = "ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_07" = "ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_08" = "ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_09" = "ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_10" = "ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_11" = "ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_12" = "ringworld_habitable_entity_01_entity"}
+
+	
+	scale = @mini_ring_scale_1
+}
+
+entity = {
+	name = "aai_combined_ring_hor1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_3
+}
+
+entity = {
+	name = "aai_combined_ring_hor2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_4
+}
+
+entity = {
+	name = "aai_combined_ring_ver1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "aai_combined_ring_ver2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 90 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "arthropoid_01_aai_combined_ring_entity"
+	cull_radius = 500
+	
+	locator = { name = "ring_sec_01" position = { 450 0 0 } rotation = { 90 0 0 }}
+	locator = { name = "ring_sec_02" position = { 389.7 0 225 } rotation = { 60 0 0 }}
+	locator = { name = "ring_sec_03" position = { 225 0 389.7 } rotation = { 30 0 0 }}
+	locator = { name = "ring_sec_04" position = { 0 0 450 } rotation = { 0 0 0 }}
+	locator = { name = "ring_sec_05" position = { -225 0 389.7 } rotation = { -30 0 0 }}
+	locator = { name = "ring_sec_06" position = { -389.7 0 225 } rotation = { -60 0 0 }}
+	locator = { name = "ring_sec_07" position = { -450 0 0 } rotation = { -90 0 0 }}
+	locator = { name = "ring_sec_08" position = { -389.7 0 -225 } rotation = { -120 0 0 }}
+	locator = { name = "ring_sec_09" position = { -225 0 -389.7 } rotation = { -150 0 0 }}	
+	locator = { name = "ring_sec_10" position = { 0 0 -450 } rotation = { -180 0 0 }}
+	locator = { name = "ring_sec_11" position = { 225 0 -389.7 } rotation = { -210 0 0 }}
+	locator = { name = "ring_sec_12" position = { 389.7 0 -225 } rotation = { -240 0 0 }}
+	
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+
+	attach = { "ring_sec_01" = "arthropoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_02" = "arthropoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_03" = "arthropoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_04" = "arthropoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_05" = "arthropoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_06" = "arthropoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_07" = "arthropoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_08" = "arthropoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_09" = "arthropoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_10" = "arthropoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_11" = "arthropoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_12" = "arthropoid_01_ringworld_habitable_entity_01_entity"}
+
+	
+	scale = @mini_ring_scale_1
+}
+
+entity = {
+	name = "arthropoid_01_aai_combined_ring_hor1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "arthropoid_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_3
+}
+
+entity = {
+	name = "arthropoid_01_aai_combined_ring_hor2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "arthropoid_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_4
+}
+
+entity = {
+	name = "arthropoid_01_aai_combined_ring_ver1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 }}
+
+	attach = { "root" = "arthropoid_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "arthropoid_01_aai_combined_ring_ver2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 90 }}
+
+	attach = { "root" = "arthropoid_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "avian_01_aai_combined_ring_entity"
+	cull_radius = 500
+	
+	locator = { name = "ring_sec_01" position = { 450 0 0 } rotation = { 90 0 0 }}
+	locator = { name = "ring_sec_02" position = { 389.7 0 225 } rotation = { 60 0 0 }}
+	locator = { name = "ring_sec_03" position = { 225 0 389.7 } rotation = { 30 0 0 }}
+	locator = { name = "ring_sec_04" position = { 0 0 450 } rotation = { 0 0 0 }}
+	locator = { name = "ring_sec_05" position = { -225 0 389.7 } rotation = { -30 0 0 }}
+	locator = { name = "ring_sec_06" position = { -389.7 0 225 } rotation = { -60 0 0 }}
+	locator = { name = "ring_sec_07" position = { -450 0 0 } rotation = { -90 0 0 }}
+	locator = { name = "ring_sec_08" position = { -389.7 0 -225 } rotation = { -120 0 0 }}
+	locator = { name = "ring_sec_09" position = { -225 0 -389.7 } rotation = { -150 0 0 }}	
+	locator = { name = "ring_sec_10" position = { 0 0 -450 } rotation = { -180 0 0 }}
+	locator = { name = "ring_sec_11" position = { 225 0 -389.7 } rotation = { -210 0 0 }}
+	locator = { name = "ring_sec_12" position = { 389.7 0 -225 } rotation = { -240 0 0 }}
+	
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+
+	attach = { "ring_sec_01" = "avian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_02" = "avian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_03" = "avian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_04" = "avian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_05" = "avian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_06" = "avian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_07" = "avian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_08" = "avian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_09" = "avian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_10" = "avian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_11" = "avian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_12" = "avian_01_ringworld_habitable_entity_01_entity"}
+
+	
+	scale = @mini_ring_scale_1
+}
+
+entity = {
+	name = "avian_01_aai_combined_ring_hor1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "avian_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_3
+}
+
+entity = {
+	name = "avian_01_aai_combined_ring_hor2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "avian_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_4
+}
+
+entity = {
+	name = "avian_01_aai_combined_ring_ver1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 }}
+
+	attach = { "root" = "avian_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "avian_01_aai_combined_ring_ver2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 90 }}
+
+	attach = { "root" = "avian_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "fungoid_01_aai_combined_ring_entity"
+	cull_radius = 500
+	
+	locator = { name = "ring_sec_01" position = { 450 0 0 } rotation = { 90 0 0 }}
+	locator = { name = "ring_sec_02" position = { 389.7 0 225 } rotation = { 60 0 0 }}
+	locator = { name = "ring_sec_03" position = { 225 0 389.7 } rotation = { 30 0 0 }}
+	locator = { name = "ring_sec_04" position = { 0 0 450 } rotation = { 0 0 0 }}
+	locator = { name = "ring_sec_05" position = { -225 0 389.7 } rotation = { -30 0 0 }}
+	locator = { name = "ring_sec_06" position = { -389.7 0 225 } rotation = { -60 0 0 }}
+	locator = { name = "ring_sec_07" position = { -450 0 0 } rotation = { -90 0 0 }}
+	locator = { name = "ring_sec_08" position = { -389.7 0 -225 } rotation = { -120 0 0 }}
+	locator = { name = "ring_sec_09" position = { -225 0 -389.7 } rotation = { -150 0 0 }}	
+	locator = { name = "ring_sec_10" position = { 0 0 -450 } rotation = { -180 0 0 }}
+	locator = { name = "ring_sec_11" position = { 225 0 -389.7 } rotation = { -210 0 0 }}
+	locator = { name = "ring_sec_12" position = { 389.7 0 -225 } rotation = { -240 0 0 }}
+	
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+
+	attach = { "ring_sec_01" = "fungoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_02" = "fungoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_03" = "fungoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_04" = "fungoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_05" = "fungoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_06" = "fungoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_07" = "fungoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_08" = "fungoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_09" = "fungoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_10" = "fungoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_11" = "fungoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_12" = "fungoid_01_ringworld_habitable_entity_01_entity"}
+
+	
+	scale = @mini_ring_scale_1
+}
+
+entity = {
+	name = "fungoid_01_aai_combined_ring_hor1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "fungoid_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_3
+}
+
+entity = {
+	name = "fungoid_01_aai_combined_ring_hor2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "fungoid_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_4
+}
+
+entity = {
+	name = "fungoid_01_aai_combined_ring_ver1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 }}
+
+	attach = { "root" = "fungoid_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "fungoid_01_aai_combined_ring_ver2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 90 }}
+
+	attach = { "root" = "fungoid_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "mammalian_01_aai_combined_ring_entity"
+	cull_radius = 500
+	
+	locator = { name = "ring_sec_01" position = { 450 0 0 } rotation = { 90 0 0 }}
+	locator = { name = "ring_sec_02" position = { 389.7 0 225 } rotation = { 60 0 0 }}
+	locator = { name = "ring_sec_03" position = { 225 0 389.7 } rotation = { 30 0 0 }}
+	locator = { name = "ring_sec_04" position = { 0 0 450 } rotation = { 0 0 0 }}
+	locator = { name = "ring_sec_05" position = { -225 0 389.7 } rotation = { -30 0 0 }}
+	locator = { name = "ring_sec_06" position = { -389.7 0 225 } rotation = { -60 0 0 }}
+	locator = { name = "ring_sec_07" position = { -450 0 0 } rotation = { -90 0 0 }}
+	locator = { name = "ring_sec_08" position = { -389.7 0 -225 } rotation = { -120 0 0 }}
+	locator = { name = "ring_sec_09" position = { -225 0 -389.7 } rotation = { -150 0 0 }}	
+	locator = { name = "ring_sec_10" position = { 0 0 -450 } rotation = { -180 0 0 }}
+	locator = { name = "ring_sec_11" position = { 225 0 -389.7 } rotation = { -210 0 0 }}
+	locator = { name = "ring_sec_12" position = { 389.7 0 -225 } rotation = { -240 0 0 }}
+	
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+
+	attach = { "ring_sec_01" = "mammalian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_02" = "mammalian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_03" = "mammalian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_04" = "mammalian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_05" = "mammalian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_06" = "mammalian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_07" = "mammalian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_08" = "mammalian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_09" = "mammalian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_10" = "mammalian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_11" = "mammalian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_12" = "mammalian_01_ringworld_habitable_entity_01_entity"}
+
+	
+	scale = @mini_ring_scale_1
+}
+
+entity = {
+	name = "mammalian_01_aai_combined_ring_hor1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "mammalian_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_3
+}
+
+entity = {
+	name = "mammalian_01_aai_combined_ring_hor2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "mammalian_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_4
+}
+
+entity = {
+	name = "mammalian_01_aai_combined_ring_ver1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 }}
+
+	attach = { "root" = "mammalian_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "mammalian_01_aai_combined_ring_ver2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 90 }}
+
+	attach = { "root" = "mammalian_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "molluscoid_01_aai_combined_ring_entity"
+	cull_radius = 500
+	
+	locator = { name = "ring_sec_01" position = { 450 0 0 } rotation = { 90 0 0 }}
+	locator = { name = "ring_sec_02" position = { 389.7 0 225 } rotation = { 60 0 0 }}
+	locator = { name = "ring_sec_03" position = { 225 0 389.7 } rotation = { 30 0 0 }}
+	locator = { name = "ring_sec_04" position = { 0 0 450 } rotation = { 0 0 0 }}
+	locator = { name = "ring_sec_05" position = { -225 0 389.7 } rotation = { -30 0 0 }}
+	locator = { name = "ring_sec_06" position = { -389.7 0 225 } rotation = { -60 0 0 }}
+	locator = { name = "ring_sec_07" position = { -450 0 0 } rotation = { -90 0 0 }}
+	locator = { name = "ring_sec_08" position = { -389.7 0 -225 } rotation = { -120 0 0 }}
+	locator = { name = "ring_sec_09" position = { -225 0 -389.7 } rotation = { -150 0 0 }}	
+	locator = { name = "ring_sec_10" position = { 0 0 -450 } rotation = { -180 0 0 }}
+	locator = { name = "ring_sec_11" position = { 225 0 -389.7 } rotation = { -210 0 0 }}
+	locator = { name = "ring_sec_12" position = { 389.7 0 -225 } rotation = { -240 0 0 }}
+	
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+
+	attach = { "ring_sec_01" = "molluscoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_02" = "molluscoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_03" = "molluscoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_04" = "molluscoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_05" = "molluscoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_06" = "molluscoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_07" = "molluscoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_08" = "molluscoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_09" = "molluscoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_10" = "molluscoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_11" = "molluscoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_12" = "molluscoid_01_ringworld_habitable_entity_01_entity"}
+
+	
+	scale = @mini_ring_scale_1
+}
+
+entity = {
+	name = "molluscoid_01_aai_combined_ring_hor1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "molluscoid_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_3
+}
+
+entity = {
+	name = "molluscoid_01_aai_combined_ring_hor2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "molluscoid_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_4
+}
+
+entity = {
+	name = "molluscoid_01_aai_combined_ring_ver1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 }}
+
+	attach = { "root" = "molluscoid_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "molluscoid_01_aai_combined_ring_ver2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 90 }}
+
+	attach = { "root" = "molluscoid_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "plantoid_01_aai_combined_ring_entity"
+	cull_radius = 500
+	
+	locator = { name = "ring_sec_01" position = { 450 0 0 } rotation = { 90 0 0 }}
+	locator = { name = "ring_sec_02" position = { 389.7 0 225 } rotation = { 60 0 0 }}
+	locator = { name = "ring_sec_03" position = { 225 0 389.7 } rotation = { 30 0 0 }}
+	locator = { name = "ring_sec_04" position = { 0 0 450 } rotation = { 0 0 0 }}
+	locator = { name = "ring_sec_05" position = { -225 0 389.7 } rotation = { -30 0 0 }}
+	locator = { name = "ring_sec_06" position = { -389.7 0 225 } rotation = { -60 0 0 }}
+	locator = { name = "ring_sec_07" position = { -450 0 0 } rotation = { -90 0 0 }}
+	locator = { name = "ring_sec_08" position = { -389.7 0 -225 } rotation = { -120 0 0 }}
+	locator = { name = "ring_sec_09" position = { -225 0 -389.7 } rotation = { -150 0 0 }}	
+	locator = { name = "ring_sec_10" position = { 0 0 -450 } rotation = { -180 0 0 }}
+	locator = { name = "ring_sec_11" position = { 225 0 -389.7 } rotation = { -210 0 0 }}
+	locator = { name = "ring_sec_12" position = { 389.7 0 -225 } rotation = { -240 0 0 }}
+	
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+
+	attach = { "ring_sec_01" = "plantoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_02" = "plantoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_03" = "plantoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_04" = "plantoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_05" = "plantoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_06" = "plantoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_07" = "plantoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_08" = "plantoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_09" = "plantoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_10" = "plantoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_11" = "plantoid_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_12" = "plantoid_01_ringworld_habitable_entity_01_entity"}
+
+	
+	scale = @mini_ring_scale_1
+}
+
+entity = {
+	name = "plantoid_01_aai_combined_ring_hor1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "plantoid_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_3
+}
+
+entity = {
+	name = "plantoid_01_aai_combined_ring_hor2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "plantoid_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_4
+}
+
+entity = {
+	name = "plantoid_01_aai_combined_ring_ver1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 }}
+
+	attach = { "root" = "plantoid_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "plantoid_01_aai_combined_ring_ver2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 90 }}
+
+	attach = { "root" = "plantoid_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "reptilian_01_aai_combined_ring_entity"
+	cull_radius = 500
+	
+	locator = { name = "ring_sec_01" position = { 450 0 0 } rotation = { 90 0 0 }}
+	locator = { name = "ring_sec_02" position = { 389.7 0 225 } rotation = { 60 0 0 }}
+	locator = { name = "ring_sec_03" position = { 225 0 389.7 } rotation = { 30 0 0 }}
+	locator = { name = "ring_sec_04" position = { 0 0 450 } rotation = { 0 0 0 }}
+	locator = { name = "ring_sec_05" position = { -225 0 389.7 } rotation = { -30 0 0 }}
+	locator = { name = "ring_sec_06" position = { -389.7 0 225 } rotation = { -60 0 0 }}
+	locator = { name = "ring_sec_07" position = { -450 0 0 } rotation = { -90 0 0 }}
+	locator = { name = "ring_sec_08" position = { -389.7 0 -225 } rotation = { -120 0 0 }}
+	locator = { name = "ring_sec_09" position = { -225 0 -389.7 } rotation = { -150 0 0 }}	
+	locator = { name = "ring_sec_10" position = { 0 0 -450 } rotation = { -180 0 0 }}
+	locator = { name = "ring_sec_11" position = { 225 0 -389.7 } rotation = { -210 0 0 }}
+	locator = { name = "ring_sec_12" position = { 389.7 0 -225 } rotation = { -240 0 0 }}
+	
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+
+	attach = { "ring_sec_01" = "reptilian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_02" = "reptilian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_03" = "reptilian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_04" = "reptilian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_05" = "reptilian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_06" = "reptilian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_07" = "reptilian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_08" = "reptilian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_09" = "reptilian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_10" = "reptilian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_11" = "reptilian_01_ringworld_habitable_entity_01_entity"}
+	attach = { "ring_sec_12" = "reptilian_01_ringworld_habitable_entity_01_entity"}
+
+	
+	scale = @mini_ring_scale_1
+}
+
+entity = {
+	name = "reptilian_01_aai_combined_ring_hor1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "reptilian_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_3
+}
+
+entity = {
+	name = "reptilian_01_aai_combined_ring_hor2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "reptilian_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_4
+}
+
+entity = {
+	name = "reptilian_01_aai_combined_ring_ver1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 }}
+
+	attach = { "root" = "reptilian_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "reptilian_01_aai_combined_ring_ver2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 90 }}
+
+	attach = { "root" = "reptilian_01_aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+#default gfx
+
+entity = {
+	name = "humanoid_01_aai_combined_ring_hor1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_3
+}
+
+entity = {
+	name = "humanoid_01_aai_combined_ring_hor2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_4
+}
+
+entity = {
+	name = "humanoid_01_aai_combined_ring_ver1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "humanoid_01_aai_combined_ring_ver2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 90 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "ai_01_aai_combined_ring_hor1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_3
+}
+
+entity = {
+	name = "ai_01_aai_combined_ring_hor2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_4
+}
+
+entity = {
+	name = "ai_01_aai_combined_ring_ver1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "ai_01_aai_combined_ring_ver2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 90 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "swarm_01_aai_combined_ring_hor1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_3
+}
+
+entity = {
+	name = "swarm_01_aai_combined_ring_hor2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_4
+}
+
+entity = {
+	name = "swarm_01_aai_combined_ring_ver1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "swarm_01_aai_combined_ring_ver2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 90 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "extra_dimensional_01_aai_combined_ring_hor1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_3
+}
+
+entity = {
+	name = "extra_dimensional_01_aai_combined_ring_hor2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_4
+}
+
+entity = {
+	name = "extra_dimensional_01_aai_combined_ring_ver1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "extra_dimensional_01_aai_combined_ring_ver2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 90 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "pirate_01_aai_combined_ring_hor1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_3
+}
+
+entity = {
+	name = "pirate_01_aai_combined_ring_hor2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_4
+}
+
+entity = {
+	name = "pirate_01_aai_combined_ring_ver1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "pirate_01_aai_combined_ring_ver2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 90 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "fallen_empire_01_aai_combined_ring_hor1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_3
+}
+
+entity = {
+	name = "fallen_empire_01_aai_combined_ring_hor2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_4
+}
+
+entity = {
+	name = "fallen_empire_01_aai_combined_ring_ver1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "fallen_empire_01_aai_combined_ring_ver2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 90 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "fallen_empire_02_aai_combined_ring_hor1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_3
+}
+
+entity = {
+	name = "fallen_empire_02_aai_combined_ring_hor2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_4
+}
+
+entity = {
+	name = "fallen_empire_02_aai_combined_ring_ver1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "fallen_empire_02_aai_combined_ring_ver2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 90 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "fallen_empire_03_aai_combined_ring_hor1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_3
+}
+
+entity = {
+	name = "fallen_empire_03_aai_combined_ring_hor2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_4
+}
+
+entity = {
+	name = "fallen_empire_03_aai_combined_ring_ver1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "fallen_empire_03_aai_combined_ring_ver2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 90 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "fallen_empire_04_aai_combined_ring_hor1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_3
+}
+
+entity = {
+	name = "fallen_empire_04_aai_combined_ring_hor2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_4
+}
+
+entity = {
+	name = "fallen_empire_04_aai_combined_ring_ver1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "fallen_empire_04_aai_combined_ring_ver2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 90 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "fallen_machine_empire_01_aai_combined_ring_hor1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_3
+}
+
+entity = {
+	name = "fallen_machine_empire_01_aai_combined_ring_hor2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_4
+}
+
+entity = {
+	name = "fallen_machine_empire_01_aai_combined_ring_ver1_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 90 0 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
+
+entity = {
+	name = "fallen_machine_empire_01_aai_combined_ring_ver2_entity"
+	cull_radius = 500
+
+	locator = { name = "root" position = { 0 0 0 } rotation = { 0 0 90 }}
+
+	attach = { "root" = "aai_combined_ring_entity"}
+	
+	scale = @mini_ring_scale_2
+}
