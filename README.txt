@@ -1,0 +1,1 @@
+This repositoory is for my entire mods folder, everything I've ever worked on. Everything provided here is "as-is" with no guarantee of working or support (Mostly covering things in the Archive that I am not actively maintaining/developing)
