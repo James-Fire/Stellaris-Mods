@@ -1,0 +1,30 @@
+# Triggers when the game starts
+on_game_start = {
+	events = {
+        hms_utility.10
+        hms_menu.1
+	}
+}
+
+on_single_player_save_game_load = {
+	events = {
+        hms_utility.10
+        hms_menu.1
+	}
+}
+
+dmm_mod_selected = {
+	events = {
+		hms_utility.15
+	}
+}
+
+# Triggers event when each country first sends a ship into the system (once per country)
+# Scope = Ship
+# From = System
+# FromFrom = Country
+on_entering_system_first_time = {
+	events = {
+		hms_menu.20
+	}
+}

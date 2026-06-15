@@ -1,0 +1,128 @@
+add_random_research_option - Adds s random tech research option to the scoped country's tech view list, permanent until researched. if none applicable it runs fail_effects
+add_random_research_option = {
+    category = <string>
+    area = <key>
+    tier = <int>
+   add_progress = <num>
+    ignore_prereqs = <yes/no> #default no
+    ignore_rare = <yes/no> #default yes
+    fail_effects = {}
+}
+
+count_tech_options - Checks the country's number available tech research options in a specific field
+count_tech_options = { area = physics count > 0 }
+Supported Scopes: country
+Supported Targets: ???
+
+add_monthly_resource_mult = {
+	resource = energy
+	value = @tier1materialreward
+	min = @tier1materialmin
+	max = @tier1materialmax
+}
+
+add_random_research_option - Adds s random tech research option to the scoped country's tech view list, permanent until researched. if none applicable it runs fail_effects
+add_random_research_option = {
+    category = <string>
+    area = <key>
+    tier = <int>
+   add_progress = <num>
+    ignore_prereqs = <yes/no> #default no
+    ignore_rare = <yes/no> #default yes
+    fail_effects = {}
+}
+Supported Scopes: country
+Supported Targets: none
+
+add_tech_progress - Gives percentage progress (0.0-1.0) in a specific tech to the scoped country
+add_tech_progress = { tech = <key> progress = <float> }
+Supported Scopes: country
+Supported Targets: none
+
+has_level - Checks if the leader has a specific experience level
+has_level > 2
+Supported Scopes: leader
+Supported Targets: ???
+
+scientist_count - Checks the countrys' number of scientists
+scientist_count < 4
+Supported Scopes: country
+Supported Targets: none
+
+any_owned_leader - Checks if any of the country's leaders meet the specified criteria
+any_owned_leader = { <triggers> }
+Supported Scopes: country
+Supported Targets: THIS ROOT PREV FROM OWNER CONTROLLER CAPITAL SOLAR_SYSTEM LEADER RANDOM FROMFROM PREVPREV PREVPREVPREV PREVPREVPREVPREV
+
+leader_class - Checks if the leader is of a specific class
+leader_class = scientist
+Supported Scopes: leader
+Supported Targets: THIS ROOT PREV FROM OWNER CONTROLLER CAPITAL SOLAR_SYSTEM LEADER RANDOM FROMFROM PREVPREV PREVPREVPREV PREVPREVPREVPREV
+
+is_researching_area - Checks the scientist's field of research
+is_researching_area = society
+Supported Scopes: leader
+Supported Targets: THIS ROOT PREV FROM OWNER CONTROLLER CAPITAL SOLAR_SYSTEM LEADER RANDOM FROMFROM PREVPREV PREVPREVPREV PREVPREVPREVPREV
+
+add_experience - Adds a sum of experience points to the scoped leader
+add_experience = 200
+Supported Scopes: leader
+Supported Targets: none
+
+add_trait - Adds a specific trait to the scoped leader
+add_trait = <trait>
+Supported Scopes: leader
+Supported Targets: none
+
+remove_trait - Removes a specific trait from the scoped leader
+remove_trait = <key>
+Supported Scopes: leader
+Supported Targets: none
+
+set_leader_flag - Sets an arbitrarily-named flag on the scoped leader
+set_leader_flag = <key>
+Supported Scopes: leader
+Supported Targets: none
+
+remove_leader_flag - Removes a flag from the scoped leader
+remove_leader_flag = <key>
+Supported Scopes: leader
+Supported Targets: none
+
+add_skill - Adds a sum of experience points to the scoped leader
+add_skill = 200
+Supported Scopes: leader
+Supported Targets: none
+
+set_skill - Sets the scoped leader's level
+set_skill = 3
+Supported Scopes: leader
+Supported Targets: none
+
+add_ruler_trait - Adds a specific ruler trait to the scoped leader, even if they are not currently ruler; it becomes active when they become ruler
+add_ruler_trait = <trait>
+Supported Scopes: leader
+Supported Targets: none
+
+every_owned_scientist 
+
+every_owned_leader
+
+any_owned_leader
+
+
+
+= {
+    leader_class =  scientist
+    NOR = {
+		is_researching_area = engineering 
+		is_researching_area = physics 
+		is_researching_area = society
+	}
+    prev = {
+        any_owned_fleet = {
+			exists = leader
+			leader = { is_same_value = prevprevprev }
+		}
+    }
+}

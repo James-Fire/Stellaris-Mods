@@ -1,0 +1,34 @@
+A mechanic by which to represent how unified your population is, and how easily you can direct them to do what you want. Happier people are more pliable. Fear works too.
+
+Cohesion Malus affected by Planets(10, Reduced by FTL tech, and eliminated entirely if there is a gateway in the system), Pops(1, less if they have your governing ethics, more if they don't.), Systems(5, Reduced by FTL tech, and eliminated entirely if there is a gateway in the system), Planetary Happiness(1 for each 5% below 50), Civics(5-10), Governors/Generals on planets(From bad traits), Ruler(From bad traits), Faction Approval/Support(1 for each 1% below 50, modified by support value).
+
+Cohesion Bonus affected by Unity Production(1), Enforcers(3), Soldiers(5 With Martial Law active.), Planetary Happiness(1 for each 5% above 50), Civics(5-10), Traditions(5-10), Sectors(5 per planet in the sector.), Governors/Generals on planets(1 per level, plus good traits), Ruler(10 per level, plus good traits), Faction Approval/Support(1 for each 1% above 50, modified by support value).
+
+Minus Malus from Bonus, then:
+
+For each point of Cohesion under 100(Capped at -100), lose 1 Stability, -1% Governing Ethics Attraction, +1% Sprawl from Pops.
+
+For each point of Cohesion over 100(Capped at 100), gain 1% Resources from Jobs, 1% Governing Ethics Attraction, -1% Sprawl from Pops, 1 Piracy Suppression/Trade Protection (Depending on if I can do the first).
+
+
+
+
+happiness_planet - Checks the average happiness on the planet
+happiness_planet < 60
+Supported Scopes: planet
+Supported Targets: none
+
+has_valid_civic - Checks if the current country has a certain civic and if its validated
+has_valid_civic = my_test_civic_1
+Supported Scopes: country
+Supported Targets: THIS ROOT PREV FROM OWNER CONTROLLER CAPITAL SOLAR_SYSTEM LEADER RANDOM FROMFROM PREVPREV PREVPREVPREV PREVPREVPREVPREV
+
+has_non_swapped_tradition - Checks if a country has the given tradition and it is not swapped.
+has_non_swapped_tradition = tr_my_santa_claus_tradition
+Supported Scopes: country
+Supported Targets: none
+
+has_swapped_tradition - Checks if a country has the given swapped tradition.
+has_swapped_tradition = tr_my_santa_claus_tradition
+Supported Scopes: country
+Supported Targets: none

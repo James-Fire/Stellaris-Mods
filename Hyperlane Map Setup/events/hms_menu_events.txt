@@ -1,0 +1,127 @@
+namespace = hms_menu
+event = {
+	id = hms_menu.1
+	hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        NOT = {
+            has_global_flag = hms_menu_start
+        }
+    }
+	immediate = {
+        hms_initialize = yes # will set the global flags
+        every_country = {
+            limit = {
+                NOT = {
+                    has_global_flag = hms_menu_start
+                }
+            }
+            set_global_flag = hms_menu_start
+            country_event = {
+                id = hms_menu.2
+            }
+        }
+	}
+}
+
+country_event = {
+	###Country Terminal
+	id = hms_menu.2
+	title = "hms_menu.2.name"
+	desc = "hms_menu.2.desc"
+	diplomatic = yes
+	custom_gui = "hms_menu_window"
+	is_triggered_only = yes
+	picture_event_data = {
+		portrait = ROOT.ruler
+		room = ethic_spaceship_room
+	}
+	immediate = {
+		set_global_flag = hms_page_1
+	}
+	# Confirm
+	option = {
+		name = "hms_menu.1.refresh"
+		#custom_tooltip = "hms_menu.1.refresh.tooltip"
+		custom_gui = "hms_menu_confirm"
+		#country_event = { id = hms_menu.2 }
+	}
+	after = {
+		#fire_on_action = { on_action = exploit_apply_queue }
+	}
+}
+
+country_event = {
+	### Generate hyperlane layout
+	id = hms_menu.10
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		hms_utilities_remove_gen_flags = yes
+		if = {
+			#If perma save is enabled, or if load after gen is enabled, save the current network.
+			# TODO perma save ???
+			limit = {
+				has_global_flag = hms_save_hyperlane_on_gen
+			}
+			hms_utilities_save_setup = {
+				INDEX = temp
+			}
+			hms_utilities_save_gateways = yes
+		}
+		every_megastructure = { limit = { is_megastructure_type = hms_gateway } delete_megastructure = this }
+		if = {
+			limit = {
+				has_global_flag = hms_generation_clusters
+			}
+			hms_generator_cluster = yes
+		}
+		else_if = {
+			limit = {
+				has_global_flag = hms_generation_pie_slices
+			}
+			hms_generator_pie = yes
+		}
+		else_if = {
+			limit = {
+				has_global_flag = hms_generation_corridor
+			}
+			hms_generator_closest_loop = yes
+		}
+		else_if = {
+			limit = {
+				has_global_flag = hms_generation_cursed_corridor
+			}
+			hms_generator_ugly_loop = yes
+		}
+		else_if = {
+			limit = {
+				has_global_flag = hms_generation_center
+			}
+			hms_generator_star = yes
+		}
+		else_if = {
+			limit = {
+				has_global_flag = hms_generation_circles
+			}
+			hms_generator_concentric_circles = yes
+		}
+		else_if = {
+			limit = {
+				has_global_flag = hms_generation_all
+			}
+			hms_generator_full = yes
+		}
+		if = {
+			#If perma save is disabled, clear the save slot.
+			# If load after gen is enabled, load the current network.
+			limit = {
+				has_global_flag = hms_save_hyperlane_on_gen
+			}
+			hms_utilities_load_setup = {
+				INDEX = temp
+			}
+			hms_utilities_load_gateways = yes
+		}
+	}
+}

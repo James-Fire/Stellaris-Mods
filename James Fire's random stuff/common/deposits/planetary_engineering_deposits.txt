@@ -1,0 +1,44 @@
+d_engineered_farms = {
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	
+	icon = d_building
+	
+	planet_modifier = {
+		district_farming_max = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_engineered_mines = {
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	
+	icon = d_crystalline_caverns
+	
+	planet_modifier = {
+		district_mining_max = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_engineered_generator = {
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	
+	icon = d_levitating_rocks
+	
+	planet_modifier = {
+		district_generator_max = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}

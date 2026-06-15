@@ -1,0 +1,869 @@
+#has_ethic = ethic_gestalt_consciousness
+#lv1 effect = +/-10
+#lv2 effect = +/-20
+#lv3 effect = +/-40
+#lv4 effect = +/-100
+#guaranteed effect = +/-200
+
+stargate_military_security = {
+
+	potential = {
+		has_stargate = yes
+	}
+	
+	option = {
+		name = "Open"
+		policy_flags = {
+			stargate_military_open
+		}
+		
+		modifier = {
+		
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = stargate_military_open
+			}
+		}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+			}
+			modifier = {
+				factor = 200
+				has_ai_personality = fanatic_befrienders
+			}
+			modifier = {
+				factor = -200
+				has_ai_personality = xenophobic_isolationists
+			}
+			modifier = {
+				factor = 40
+				has_ai_personality = honorbound_warriors
+			}
+			modifier = {
+				factor = -20
+				has_ethic = ethic_pacifist
+			}
+			modifier = {
+				factor = -40
+				has_ethic = ethic_fanatic_pacifist
+			}
+			modifier = {
+				factor = -20
+				has_ethic = ethic_xenophobe
+			}
+			modifier = {
+				factor = -40
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = 20
+				has_policy_flag = border_policy_open
+			}
+			modifier = {
+				factor = -40
+				has_policy_flag = diplo_stance_isolationist
+			}
+			modifier = {
+				factor = -40
+				OR = {
+					has_policy_flag = diplo_stance_supremacist
+					has_policy_flag = diplo_stance_belligerent
+				}
+			}
+			modifier = {
+				factor = 20
+				has_policy_flag = diplo_stance_cooperative
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_xenophile
+			}
+			modifier = {
+				factor = 20
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+	}
+	option = {
+		name = "Nonaggression"
+		
+		policy_flags = {
+			stargate_military_nap
+		}
+		
+		modifier = {
+		
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = stargate_military_nap
+			}
+		}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+			}
+			modifier = {
+				factor = -100
+				has_ai_personality = xenophobic_isolationists
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_fanatic_pacifist
+			}
+			modifier = {
+				factor = 20
+				has_ai_personality = honorbound_warriors
+			}
+			modifier = {
+				factor = -10
+				has_ethic = ethic_xenophobe
+			}
+			modifier = {
+				factor = -20
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = -40
+				OR = {
+					has_policy_flag = diplo_stance_supremacist
+					has_policy_flag = diplo_stance_belligerent
+				}
+			}
+			modifier = {
+				factor = 40
+				has_policy_flag = diplo_stance_cooperative
+			}
+			modifier = {
+				factor = 20
+				has_ethic = ethic_xenophile
+			}
+			modifier = {
+				factor = 40
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+	}
+	option = {
+		name = "Defensive"
+		
+		policy_flags = {
+			stargate_military_defensive
+		}
+		
+		modifier = {
+		
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = stargate_military_defensive
+			}
+		}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+			}
+			modifier = {
+				factor = -40
+				has_ai_personality = xenophobic_isolationists
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_pacifist
+			}
+			modifier = {
+				factor = 20
+				has_ethic = ethic_fanatic_pacifist
+			}
+			modifier = {
+				factor = 10
+				has_ai_personality = honorbound_warriors
+			}
+			modifier = {
+				factor = -10
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = -40
+				OR = {
+					has_policy_flag = diplo_stance_supremacist
+					has_policy_flag = diplo_stance_belligerent
+				}
+			}
+			modifier = {
+				factor = 40
+				has_policy_flag = diplo_stance_cooperative
+			}
+		}
+	}
+	option = {
+		name = "Alliance"
+		
+		policy_flags = {
+			stargate_military_allies
+		}
+		
+		modifier = {
+		
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = stargate_military_allies
+			}
+		}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_pacifist
+			}
+			modifier = {
+				factor = 20
+				has_ethic = ethic_fanatic_pacifist
+			}
+			modifier = {
+				factor = -10
+				has_ai_personality = honorbound_warriors
+			}
+			modifier = {
+				factor = -40
+				has_policy_flag = diplo_stance_supremacist
+			}
+			modifier = {
+				factor = -200
+				has_ai_personality = migrating_flock
+			}
+		}
+	}
+	option = {
+		name = "Federation"
+		
+		policy_flags = {
+			stargate_military_fed
+		}
+		
+		modifier = {
+		
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = stargate_military_fed
+			}
+		}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+			}
+			modifier = {
+				factor = 20
+				has_ai_personality = xenophobic_isolationists
+			}
+			modifier = {
+				factor = -20
+				has_ai_personality = honorbound_warriors
+			}
+			modifier = {
+				factor = -200
+				has_ai_personality = migrating_flock
+			}
+			modifier = {
+				factor = 100
+				has_civic = civic_inwards_perfection
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_xenophobe
+			}
+			modifier = {
+				factor = 20
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = 20
+				has_ai_personality = federation_builders
+			}
+		}
+	}
+	option = {
+		name = "Closed"
+		
+		policy_flags = {
+			stargate_military_closed
+		}
+		
+		modifier = {
+		
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = stargate_military_closed
+			}
+		}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+			}
+			modifier = {
+				factor = -200
+				has_ai_personality = migrating_flock
+			}
+			modifier = {
+				factor = 200
+				OR = {
+					has_ai_personality = devouring_swarm
+					has_ai_personality = metalhead
+				}
+			}
+			modifier = {
+				factor = 10
+				has_ai_personality = xenophobic_isolationists
+			}
+			modifier = {
+				factor = -40
+				has_ai_personality = honorbound_warriors
+			}
+			modifier = {
+				factor = 200
+				has_civic = civic_inwards_perfection
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = 20
+				has_policy_flag = border_policy_closed
+			}
+			modifier = {
+				factor = -40
+				has_policy_flag = diplo_stance_isolationist
+			}
+			modifier = {
+				factor = -40
+				has_policy_flag = diplo_stance_cooperative
+			}
+			modifier = {
+				factor = -200
+				has_ai_personality = federation_builders
+			}
+			modifier = {
+				factor = -20
+				has_ethic = ethic_egalitarian
+			}
+			modifier = {
+				factor = -40
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
+				factor = -20
+				has_ethic = ethic_xenophile
+			}
+			modifier = {
+				factor = -40
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+	}
+}
+
+stargate_civilian_security = {
+
+	potential = {
+		has_stargate = yes
+	}
+	
+	option = {
+		name = "Open"
+		policy_flags = {
+			stargate_civilian_open
+		}
+		
+		modifier = {
+		
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = stargate_civilian_open
+			}
+		}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+			}
+			modifier = {
+				factor = 200
+				OR = {
+					has_ai_personality = fanatic_befrienders
+					has_ai_personality = migrating_flock
+				}
+			}
+			modifier = {
+				factor = -200
+				has_ai_personality = xenophobic_isolationists
+			}
+			modifier = {
+				factor = 20
+				has_civic = civic_beacon_of_liberty
+			}
+			modifier = {
+				factor = 20
+				has_civic = civic_free_haven
+			}
+			modifier = {
+				factor = 20
+				has_policy_flag = border_policy_open
+			}
+			modifier = {
+				factor = -20
+				has_ethic = ethic_xenophobe
+			}
+			modifier = {
+				factor = -40
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = -40
+				has_policy_flag = diplo_stance_isolationist
+			}
+			modifier = {
+				factor = -40
+				OR = {
+					has_policy_flag = diplo_stance_supremacist
+					has_policy_flag = diplo_stance_belligerent
+				}
+			}
+			modifier = {
+				factor = 20
+				has_policy_flag = diplo_stance_cooperative
+			}
+			modifier = {
+				factor = 40
+				has_policy_flag = diplo_stance_mercantile
+			}
+			modifier = {
+				factor = 40
+				has_ai_personality = ruthless_capitalists
+				has_ai_personality = peaceful_traders
+			}
+			modifier = {
+				factor = 20
+				has_ethic = ethic_egalitarian
+			}
+			modifier = {
+				factor = 40
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
+				factor = 20
+				has_ethic = ethic_xenophile
+			}
+			modifier = {
+				factor = 40
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+	}
+	option = {
+		name = "Economic"
+		
+		policy_flags = {
+			stargate_civilian_economy
+		}
+		
+		modifier = {
+		
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = stargate_civilian_economy
+			}
+		}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+			}
+			modifier = {
+				factor = -100
+				has_ai_personality = xenophobic_isolationists
+			}
+			modifier = {
+				factor = 20
+				has_ethic = ethic_pacifist
+			}
+			modifier = {
+				factor = 40
+				has_ethic = ethic_fanatic_pacifist
+			}
+			modifier = {
+				factor = 20
+				has_civic = civic_mining_guilds
+			}
+			modifier = {
+				factor = -10
+				has_ethic = ethic_xenophobe
+			}
+			modifier = {
+				factor = -20
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = -40
+				OR = {
+					has_policy_flag = diplo_stance_supremacist
+					has_policy_flag = diplo_stance_belligerent
+				}
+			}
+			modifier = {
+				factor = 40
+				has_policy_flag = diplo_stance_cooperative
+			}
+			modifier = {
+				factor = 20
+				has_policy_flag = diplo_stance_mercantile
+			}
+			modifier = {
+				factor = 100
+				has_ai_personality = ruthless_capitalists
+				has_ai_personality = peaceful_traders
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_egalitarian
+			}
+			modifier = {
+				factor = 20
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_xenophile
+			}
+			modifier = {
+				factor = 20
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+	}
+	option = {
+		name = "Scientific"
+		
+		policy_flags = {
+			stargate_civilian_science
+		}
+		
+		modifier = {
+		
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = stargate_civilian_science
+			}
+		}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+			}
+			modifier = {
+				factor = -40
+				has_ai_personality = xenophobic_isolationists
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_pacifist
+			}
+			modifier = {
+				factor = 20
+				has_ethic = ethic_fanatic_pacifist
+			}
+			modifier = {
+				factor = 10
+				has_civic = civic_mining_guilds
+			}
+			modifier = {
+				factor = -10
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = -40
+				OR = {
+					has_policy_flag = diplo_stance_supremacist
+					has_policy_flag = diplo_stance_belligerent
+				}
+			}
+			modifier = {
+				factor = 40
+				has_policy_flag = diplo_stance_cooperative
+			}
+			modifier = {
+				factor = 10
+				has_policy_flag = diplo_stance_mercantile
+			}
+			modifier = {
+				factor = 20
+				has_ai_personality = ruthless_capitalists
+				has_ai_personality = peaceful_traders
+			}
+			modifier = {
+				factor = 20
+				has_ethic = ethic_materialist
+			}
+			modifier = {
+				factor = 40
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+	option = {
+		name = "Alliance"
+		
+		policy_flags = {
+			stargate_civilian_allies
+		}
+		
+		modifier = {
+		
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = stargate_civilian_allies
+			}
+		}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+			}
+			modifier = {
+				factor = -40
+				has_policy_flag = diplo_stance_supremacist
+			}
+			modifier = {
+				factor = -200
+				has_ai_personality = migrating_flock
+			}
+			modifier = {
+				factor = -10
+				has_policy_flag = diplo_stance_mercantile
+			}
+			modifier = {
+				factor = -20
+				has_ai_personality = ruthless_capitalists
+				has_ai_personality = peaceful_traders
+			}
+		}
+	}
+	option = {
+		name = "Federation"
+		
+		policy_flags = {
+			stargate_civilian_fed
+		}
+		
+		modifier = {
+		
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = stargate_civilian_fed
+			}
+		}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+			}
+			modifier = {
+				factor = 10
+				has_ai_personality = xenophobic_isolationists
+			}
+			modifier = {
+				factor = 100
+				has_civic = civic_inwards_perfection
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_xenophobe
+			}
+			modifier = {
+				factor = 20
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = -20
+				has_policy_flag = diplo_stance_mercantile
+			}
+			modifier = {
+				factor = -40
+				has_ai_personality = ruthless_capitalists
+				has_ai_personality = peaceful_traders
+			}
+			modifier = {
+				factor = 20
+				has_ai_personality = federation_builders
+			}
+		}
+	}
+	option = {
+		name = "Closed"
+		
+		policy_flags = {
+			stargate_civilian_closed
+		}
+		
+		modifier = {
+		
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = stargate_civilian_closed
+			}
+		}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+			}
+			modifier = {
+				factor = 200
+				OR = {
+					has_ai_personality = devouring_swarm
+					has_ai_personality = metalhead
+				}
+			}
+			modifier = {
+				factor = 20
+				has_ai_personality = xenophobic_isolationists
+			}
+			modifier = {
+				factor = 200
+				has_civic = civic_inwards_perfection
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = 20
+				has_policy_flag = border_policy_closed
+			}
+			modifier = {
+				factor = 40
+				has_policy_flag = diplo_stance_isolationist
+			}
+			modifier = {
+				factor = -40
+				has_policy_flag = diplo_stance_cooperative
+			}
+			modifier = {
+				factor = -40
+				has_policy_flag = diplo_stance_mercantile
+			}
+			modifier = {
+				factor = -200
+				has_ai_personality = ruthless_capitalists
+				has_ai_personality = peaceful_traders
+			}
+			modifier = {
+				factor = -200
+				has_ai_personality = federation_builders
+			}
+			modifier = {
+				factor = -20
+				has_ethic = ethic_materialist
+			}
+			modifier = {
+				factor = -40
+				has_ethic = ethic_fanatic_materialist
+			}
+			modifier = {
+				factor = -20
+				has_ethic = ethic_egalitarian
+			}
+			modifier = {
+				factor = -40
+				has_ethic = ethic_fanatic_egalitarian
+			}
+			modifier = {
+				factor = -20
+				has_ethic = ethic_xenophile
+			}
+			modifier = {
+				factor = -40
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+	}
+}

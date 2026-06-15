@@ -1,0 +1,273 @@
+namespace = megaremove
+
+country_event = {
+	id = megaremove.1
+	title = "megaremove.1.name"
+	desc = "megaremove.1.desc"
+	location = event_target:offending_toaster
+
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				any_system_within_border = {
+					has_star_flag = offensive_toaster_here
+				}
+			}
+			random_system_within_border = {
+				limit = {
+					has_star_flag = offensive_toaster_here
+				}
+				random_system_megastructure = {
+					limit = {
+						NOR = {
+							is_megastructure_type = gateway_ruined
+							is_megastructure_type = lgate_base
+							is_upgrading = yes
+						}
+					}
+					save_event_target_as = offending_toaster
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				any_system_within_border = {
+					has_star_flag = offensive_toaster_habitat_here
+				}
+			}
+			random_system_within_border = {
+				limit = {
+					has_star_flag = offensive_toaster_habitat_here
+				}
+				random_system_planet = {
+					limit = {
+						is_planet_class = pc_habitat
+					}
+					save_event_target_as = offending_toaster
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "Pick a different toaster."
+		country_event = { id = megaremove.1 }
+	}
+	
+	option = {
+		name = "Yes. Remove the offending toaster."
+		event_target:offending_toaster = {
+			remove_planet = yes
+		}
+		delete_megastructure = event_target:offending_toaster
+		event_target:offending_toaster = {
+			orbit = {
+				remove_planet_flag = has_megastructure
+				remove_planet_flag = megastructure
+			}
+		}
+		event_target:offending_toaster = {
+			solar_system = {
+				remove_star_flag = offensive_toaster_here
+			}
+			switch = {
+				trigger = is_megastructure_type
+				dyson_sphere_0 = {
+					owner = { remove_country_flag = built_dyson_sphere }
+				}
+				dyson_sphere_1 = {
+					owner = { remove_country_flag = built_dyson_sphere }
+				}
+				dyson_sphere_2 = {
+					owner = { remove_country_flag = built_dyson_sphere }
+				}
+				dyson_sphere_3 = {
+					owner = { remove_country_flag = built_dyson_sphere }
+				}
+				dyson_sphere_4 = {
+					owner = { remove_country_flag = built_dyson_sphere }
+				}
+				dyson_sphere_5 = {
+					owner = { remove_country_flag = built_dyson_sphere }
+				}
+				think_tank_0 = {
+					owner = { remove_country_flag = built_think_tank }
+				}
+				think_tank_1 = {
+					owner = { remove_country_flag = built_think_tank }
+				}
+				think_tank_2 = {
+					owner = { remove_country_flag = built_think_tank }
+				}
+				think_tank_3 = {
+					owner = { remove_country_flag = built_think_tank }
+				}
+				think_tank_4 = {
+					owner = { remove_country_flag = built_think_tank }
+				}
+				spy_orb_0 = {
+					owner = { remove_country_flag = built_spyorb }
+				}
+				spy_orb_1 = {
+					owner = { remove_country_flag = built_spyorb }
+				}
+				spy_orb_2 = {
+					owner = { remove_country_flag = built_spyorb }
+				}
+				spy_orb_3 = {
+					owner = { remove_country_flag = built_spyorb }
+				}
+				spy_orb_4 = {
+					owner = { remove_country_flag = built_spyorb }
+				}
+				matter_decompressor_0 = {
+					owner = { remove_country_flag = built_matter_decompressor_site }
+				}
+				matter_decompressor_1 = {
+					owner = { remove_country_flag = built_matter_decompressor_site }
+				}
+				matter_decompressor_2 = {
+					owner = { remove_country_flag = built_matter_decompressor_site }
+				}
+				matter_decompressor_3 = {
+					owner = { remove_country_flag = built_matter_decompressor_site }
+				}
+				matter_decompressor_4 = {
+					owner = { remove_country_flag = built_matter_decompressor_site }
+				}
+				strategic_coordination_center_0 = {
+					owner = { remove_country_flag = built_strategic_coordination_center_site }
+				}
+				strategic_coordination_center_1 = {
+					owner = { remove_country_flag = built_strategic_coordination_center_site }
+				}
+				strategic_coordination_center_2 = {
+					owner = { remove_country_flag = built_strategic_coordination_center_site }
+				}
+				strategic_coordination_center_3 = {
+					owner = { remove_country_flag = built_strategic_coordination_center_site }
+				}
+				strategic_coordination_center_4 = {
+					owner = { remove_country_flag = built_strategic_coordination_center_site }
+				}
+				mega_art_installation_0 = {
+					owner = { remove_country_flag = built_mega_art_installation_site }
+				}
+				mega_art_installation_1 = {
+					owner = { remove_country_flag = built_mega_art_installation_site }
+				}
+				mega_art_installation_2 = {
+					owner = { remove_country_flag = built_mega_art_installation_site }
+				}
+				mega_art_installation_3 = {
+					owner = { remove_country_flag = built_mega_art_installation_site }
+				}
+				interstellar_assembly_0 = {
+					owner = { remove_country_flag = built_interstellar_assembly_site }
+				}
+				interstellar_assembly_1 = {
+					owner = { remove_country_flag = built_interstellar_assembly_site }
+				}
+				interstellar_assembly_2 = {
+					owner = { remove_country_flag = built_interstellar_assembly_site }
+				}
+				interstellar_assembly_3 = {
+					owner = { remove_country_flag = built_interstellar_assembly_site }
+				}
+				interstellar_assembly_4 = {
+					owner = { remove_country_flag = built_interstellar_assembly_site }
+				}
+				mega_shipyard_0 = {
+					owner = { remove_country_flag = built_mega_shipyard_site }
+				}
+				mega_shipyard_1 = {
+					owner = { remove_country_flag = built_mega_shipyard_site }
+				}
+				mega_shipyard_2 = {
+					owner = { remove_country_flag = built_mega_shipyard_site }
+				}
+				mega_shipyard_3 = {
+					owner = { remove_country_flag = built_mega_shipyard_site }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "Nevermind"
+		trigger = { always = yes }
+	}
+}
+
+country_event = {
+	id = megaremove.2
+	title = "megaremove.2.name"
+	desc = "megaremove.2.desc"
+	location = event_target:offending_toaster_system
+	is_triggered_only = yes
+	
+	immediate = {
+		random_system_within_border = {
+			limit = {
+				has_any_megastructure = yes
+			}
+			save_event_target_as = unwanted_toaster_system
+		}
+	}
+	
+	option = {
+		name = "Pick a different toaster system."
+		country_event = { id = megaremove.2 }
+	}
+	
+	option = {
+		name = "Yes. Remove all from system."
+		event_target:unwanted_toaster_system = {
+			every_system_megastructure = {
+				delete_megastructure = THIS
+			}
+		}
+	}
+	option = {
+		name = "Nevermind"
+	}
+}
+
+country_event = {
+	id = megaremove.3
+	title = "OK"
+	desc = "OK"
+	location = event_target:offending_toaster
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		event_target:offending_toaster = {
+			OR = {
+				is_megastructure_type = potential
+				is_megastructure_type = possible
+				is_megastructure_type = ai_weight
+				is_megastructure_type = placement_rules
+				is_megastructure_type = on_build_complete
+			}
+		}
+	}
+	
+	immediate = {
+		random_owned_megastructure = {
+			limit = {
+				OR = {
+					is_megastructure_type = potential
+					is_megastructure_type = possible
+					is_megastructure_type = ai_weight
+					is_megastructure_type = placement_rules
+					is_megastructure_type = on_build_complete
+				}
+			}
+			delete_megastructure = THIS
+		}
+	}
+	
+}

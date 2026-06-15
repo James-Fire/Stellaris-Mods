@@ -1,0 +1,675 @@
+# noscope
+hms_generator_cluster = {
+	random_system = {
+		limit = {
+			NOT = {
+				exists = space_owner
+			}
+			NOT = {
+				hms_isolated_system = yes
+			}
+		}
+		set_star_flag = hms_hyperlane_hub_primary
+		set_star_flag = hms_hyperlane_hub
+		log = "Primary Hyperlane Hub on \\[This.GetName]"
+		set_variable = {
+			which = hms_hubs
+			value = 1
+		}
+		set_variable = {
+			which = cluster_connection_range
+			value = 1
+		}
+		save_global_event_target_as = hms_hyperlane_hub_primary
+	}
+	while = {
+		count = 70
+		random_system = {
+			limit = {
+				NOT = {
+					has_star_flag = hms_hyperlane_hub
+				}
+				NOT = {
+					has_star_flag = sealed_system
+				}
+				NOT = {
+					exists = space_owner
+				}
+				closest_system = {
+					limit = {
+						has_star_flag = hms_hyperlane_hub
+					}
+					min_steps = 1
+					max_steps = 200
+					distance = {
+						source = prev
+						min_distance >= 80
+						max_distance <= 120
+						type = euclidean
+					}
+				}
+			}
+			set_star_flag = hms_hyperlane_hub
+			log = "Hyperlane Hub on \\[This.GetName]"
+			event_target:hms_hyperlane_hub_primary = {
+				change_variable = {
+					which = hms_hubs
+					value = 1
+				}
+			}
+		}
+	}
+	log = "\\[event_target:hms_hyperlane_hub_primary.hms_hubs] Hyperlane Hubs"
+	log = "Remove all hyperlanes"
+	hms_utilities_clear_hyperlanes = yes
+	event_target:hms_hyperlane_hub_primary = {
+		system_event = {
+			id = hms_hubs.2
+		}
+	}
+}
+
+# noscope
+# ONLY WORK WITH DISABLED AI
+hms_generator_full = {
+	set_spawn_system_batch = begin
+	hms_utilities_clear_hyperlanes = yes
+	every_system = {
+		limit = {
+			hms_useable_system = yes
+		}
+		every_system = {
+			limit = {
+				hms_useable_system = yes
+				NOR = {
+					is_same_value = prev
+					has_hyperlane_to = prev
+				}
+				distance = {
+					source = prev
+					min_distance >= 1
+					max_distance <= 1  #prevprev.hms_all_gen_distance
+					type = euclidean
+				}
+			}
+			add_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+	}
+	set_spawn_system_batch = end
+}
+
+# noscope
+hms_generator_star = {
+	set_spawn_system_batch = begin
+	hms_utilities_clear_hyperlanes = yes
+	random_system = {
+		save_event_target_as = hms_star_central_star
+	}
+	random_system = {
+		limit = {
+			hms_useable_system = yes
+			NOT = {
+				exists = space_owner
+			}
+		}
+		save_event_target_as = hms_star_central_star
+	}
+	if = {
+		limit = {
+			has_global_flag = hms_central_hub_lgate
+		}
+		random_system = {
+			limit = {
+				any_system_megastructure = {
+					is_megastructure_type = lgate_base
+				}
+			}
+			save_event_target_as = hms_star_central_star
+		}
+	}
+	else_if = {
+		limit = {
+			has_global_flag = hms_central_hub_xenophile_fe
+			any_country = {
+				OR = {
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+				is_xenophile = yes
+			}
+		}
+		random_country = {
+			limit = {
+				OR = {
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+				is_xenophile = yes
+			}
+			capital_scope.solar_system = {
+				save_event_target_as = hms_star_central_star
+			}
+		}
+	}
+	event_target:hms_star_central_star = {
+		every_system = {
+			limit = {
+				NOT = {
+					is_same_value = prev
+				}
+				hms_useable_system = yes
+			}
+			add_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+	}
+	set_spawn_system_batch = end
+}
+
+# noscope
+# Might break
+hms_generator_closest_loop = {
+	set_spawn_system_batch = begin
+	every_system = {
+		every_system = {
+			limit = {
+				distance = {
+					source = prev
+					min_distance >= 1
+					max_distance <= 100
+					type = euclidean
+				}
+			}
+			add_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+	}
+	random_system = {
+		save_event_target_as = hms_current_system
+		save_event_target_as = hms_start_system
+		set_star_flag = hms_loop_added
+	}
+	set_global_flag = hms_continue
+	while = {
+		count = 10000
+		limit = {
+			has_global_flag = hms_continue
+		}
+		remove_global_flag = hms_continue
+		event_target:hms_current_system = {
+			closest_system = {
+				limit = {
+					NOT = {
+						has_star_flag = hms_loop_added
+					}
+				}
+				set_star_flag = hms_loop_added
+				set_star_flag = hms_linked_to_@prev
+				save_event_target_as = hms_current_system
+				set_global_flag = hms_continue
+			}
+		}
+	}
+	event_target:hms_current_system = {
+		event_target:hms_start_system = {
+			set_star_flag = hms_linked_to_@prev
+		}
+	}
+	hms_utilities_clear_hyperlanes = yes
+	every_system = {
+		random_system = {
+			limit = {
+				has_star_flag = hms_linked_to_@prev
+			}
+			remove_star_flag = hms_linked_to_@prev
+			remove_star_flag = hms_loop_added
+			add_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+	}
+	set_spawn_system_batch = end
+}
+
+# noscope
+hms_generator_ugly_loop = {
+	set_spawn_system_batch = begin
+	hms_utilities_clear_hyperlanes = yes
+	random_system = {
+		save_event_target_as = hms_current_system
+		save_event_target_as = hms_start_system
+		set_star_flag = hms_ugly_loop_added
+	}
+	set_global_flag = hms_continue
+	while = {
+		count = 10000
+		limit = {
+			has_global_flag = hms_continue
+		}
+		remove_global_flag = hms_continue
+		random_system = {
+			limit = {
+				NOT = {
+					has_star_flag = hms_ugly_loop_added
+				}
+			}
+			set_star_flag = hms_ugly_loop_added
+			add_hyperlane = {
+				from = this
+				to = event_target:hms_current_system
+			}
+			save_event_target_as = hms_current_system
+			set_global_flag = hms_continue
+		}
+	}
+	event_target:hms_current_system = {
+		add_hyperlane = {
+			from = this
+			to = event_target:hms_start_system
+		}
+	}
+	every_system = {
+		remove_star_flag = hms_ugly_loop_added
+	}
+	set_spawn_system_batch = end
+}
+
+# noscope
+hms_generator_pie = {
+	set_spawn_system_batch = begin
+	hms_utilities_remove_gen_flags = yes
+	hms_utilities_clear_hyperlanes = yes
+	# select the slices centers
+	set_global_flag = hms_continue
+	while = {
+		count = 10000
+		limit = {
+			has_global_flag = hms_continue
+		}
+		remove_global_flag = hms_continue
+		random_system = {
+			limit = {
+				distance_to_core_percent > 0.4
+				distance_to_core_percent < 0.6
+				NOT = {
+					has_star_flag = hms_hyperlane_hub
+				}
+				NOT = {
+					any_system = {
+						has_star_flag = hms_hyperlane_hub
+						distance = {
+							source = prev
+							type = euclidean
+							min_distance >= 0
+							max_distance <= 200							# change ?
+						}
+					}
+				}
+			}
+			set_star_flag = hms_hyperlane_hub
+			set_global_flag = hms_continue
+		}
+	}
+	# for every non slice center
+	every_system = {
+		limit = {
+			NOT = {
+				has_star_flag = hms_hyperlane_hub
+			}
+		}
+		# we connect to the closest slice center systems
+		# to do that, we connect to every slice center, then closest_system on them work
+		every_system = {
+			limit = {
+				has_star_flag = hms_hyperlane_hub
+			}
+			add_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+		closest_system = {
+			limit = {
+				has_star_flag = hms_hyperlane_hub
+			}
+			save_event_target_as = hms_chosen_hub
+		}
+		# remove hyperlanes from the far away slice centers
+		every_system = {
+			limit = {
+				has_star_flag = hms_hyperlane_hub
+				NOT = {
+					is_same_value = event_target:hms_chosen_hub
+				}
+			}
+			remove_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+	}
+	hms_utilities_set_hub_stars = yes
+	hms_utilities_connect_hubs = yes
+	# cleanup
+	hms_utilities_remove_gen_flags = yes
+	set_spawn_system_batch = end
+}
+
+# no scope
+hms_generator_concentric_circles = {
+	set_spawn_system_batch = begin
+	hms_utilities_clear_hyperlanes = yes
+	every_system = {
+		limit = {
+			distance_to_core_percent < 0.1
+		}
+		set_variable = {
+			which = hms_index
+			value = 1
+		}
+	}
+	every_system = {
+		limit = {
+			distance_to_core_percent >= 0.1
+			distance_to_core_percent < 0.2
+		}
+		set_variable = {
+			which = hms_index
+			value = 2
+		}
+	}
+	every_system = {
+		limit = {
+			distance_to_core_percent >= 0.2
+			distance_to_core_percent < 0.3
+		}
+		set_variable = {
+			which = hms_index
+			value = 3
+		}
+	}
+	every_system = {
+		limit = {
+			distance_to_core_percent >= 0.3
+			distance_to_core_percent < 0.4
+		}
+		set_variable = {
+			which = hms_index
+			value = 4
+		}
+	}
+	every_system = {
+		limit = {
+			distance_to_core_percent >= 0.4
+			distance_to_core_percent < 0.5
+		}
+		set_variable = {
+			which = hms_index
+			value = 5
+		}
+	}
+	every_system = {
+		limit = {
+			distance_to_core_percent >= 0.5
+			distance_to_core_percent < 0.55
+		}
+		set_variable = {
+			which = hms_index
+			value = 5.5
+		}
+	}
+	every_system = {
+		limit = {
+			distance_to_core_percent >= 0.55
+			distance_to_core_percent < 0.6
+		}
+		set_variable = {
+			which = hms_index
+			value = 6
+		}
+	}
+	every_system = {
+		limit = {
+			distance_to_core_percent >= 0.6
+			distance_to_core_percent < 0.65
+		}
+		set_variable = {
+			which = hms_index
+			value = 6.5
+		}
+	}
+	every_system = {
+		limit = {
+			distance_to_core_percent >= 0.65
+			distance_to_core_percent < 0.7
+		}
+		set_variable = {
+			which = hms_index
+			value = 7
+		}
+	}
+	every_system = {
+		limit = {
+			distance_to_core_percent >= 0.7
+			distance_to_core_percent < 0.75
+		}
+		set_variable = {
+			which = hms_index
+			value = 7.5
+		}
+	}
+	every_system = {
+		limit = {
+			distance_to_core_percent >= 0.75
+			distance_to_core_percent < 0.8
+		}
+		set_variable = {
+			which = hms_index
+			value = 8
+		}
+	}
+	every_system = {
+		limit = {
+			distance_to_core_percent >= 0.8
+			distance_to_core_percent < 0.85
+		}
+		set_variable = {
+			which = hms_index
+			value = 8.5
+		}
+	}
+	every_system = {
+		limit = {
+			distance_to_core_percent >= 0.85
+			distance_to_core_percent < 0.9
+		}
+		set_variable = {
+			which = hms_index
+			value = 9
+		}
+	}
+	every_system = {
+		limit = {
+			distance_to_core_percent >= 0.9
+		}
+		set_variable = {
+			which = hms_index
+			value = 10
+		}
+	}
+	hms_generator_concentric_circles_aux = {
+		INDEX = 1
+	}
+	hms_generator_concentric_circles_aux = {
+		INDEX = 2
+	}
+	hms_generator_concentric_circles_aux = {
+		INDEX = 3
+	}
+	hms_generator_concentric_circles_aux = {
+		INDEX = 4
+	}
+	hms_generator_concentric_circles_aux = {
+		INDEX = 5
+	}
+	hms_generator_concentric_circles_aux = {
+		INDEX = 5.5
+	}
+	hms_generator_concentric_circles_aux = {
+		INDEX = 6
+	}
+	hms_generator_concentric_circles_aux = {
+		INDEX = 6.5
+	}
+	hms_generator_concentric_circles_aux = {
+		INDEX = 7
+	}
+	hms_generator_concentric_circles_aux = {
+		INDEX = 7.5
+	}
+	hms_generator_concentric_circles_aux = {
+		INDEX = 8
+	}
+	hms_generator_concentric_circles_aux = {
+		INDEX = 8.5
+	}
+	hms_generator_concentric_circles_aux = {
+		INDEX = 9
+	}
+	hms_generator_concentric_circles_aux = {
+		INDEX = 10
+	}
+	set_spawn_system_batch = end
+}
+
+# no scope
+# INDEX
+hms_generator_concentric_circles_aux = {
+	# connect every system from a circle to each other
+	every_system = {
+		limit = {
+			check_variable = {
+				which = hms_index
+				value = $INDEX$
+			}
+		}
+		every_system = {
+			limit = {
+				NOT = {
+					is_same_value = prev
+				}
+				check_variable = {
+					which = hms_index
+					value = $INDEX$
+				}
+			}
+			add_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+	}
+	# get a random start system
+	random_system = {
+		limit = {
+			check_variable = {
+				which = hms_index
+				value = $INDEX$
+			}
+		}
+		save_event_target_as = hms_start_system
+		save_event_target_as = hms_current_system
+		set_star_flag = hms_added
+	}
+	set_global_flag = hms_continue
+	while = {
+		count = 10000
+		limit = {
+			has_global_flag = hms_continue
+		}
+		remove_global_flag = hms_continue
+		event_target:hms_current_system = {
+			closest_system = {
+				limit = {
+					check_variable = {
+						which = hms_index
+						value = $INDEX$
+					}
+					NOT = {
+						has_star_flag = hms_added
+					}
+				}
+				set_star_flag = hms_connected_to_@prev
+				set_star_flag = hms_added
+				save_event_target_as = hms_current_system
+				set_global_flag = hms_continue
+			}
+		}
+	}
+	event_target:hms_current_system = {
+		event_target:hms_start_system = {
+			set_star_flag = hms_connected_to_@prev
+		}
+	}
+	every_system = {
+		limit = {
+			check_variable = {
+				which = hms_index
+				value = $INDEX$
+			}
+		}
+		every_system = {
+			limit = {
+				check_variable = {
+					which = hms_index
+					value = $INDEX$
+				}
+				has_hyperlane_to = prev
+			}
+			remove_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+	}
+	every_system = {
+		limit = {
+			check_variable = {
+				which = hms_index
+				value = $INDEX$
+			}
+		}
+		every_system = {
+			limit = {
+				check_variable = {
+					which = hms_index
+					value = $INDEX$
+				}
+				has_star_flag = hms_connected_to_@prev
+			}
+			remove_star_flag = hms_connected_to_@prev
+			add_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+		remove_star_flag = hms_added
+	}
+	every_system = {
+		limit = {
+			check_variable = {
+				which = hms_index
+				value = $INDEX$
+			}
+		}
+		clear_variable = hms_index
+	}
+}

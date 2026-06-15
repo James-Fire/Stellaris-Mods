@@ -1,0 +1,260 @@
+﻿l_polish:
+
+ #Events
+  MediumDreadnought.1.name:0 "Choose your hull"
+  MediumDreadnought.1.desc:0 "In order to make this mod as flexible as possible, this event has been put in. Below is a list of all the current possible Drreadnought GFX to choose from. There are 3 weapon styles to choose from, and currently 2 GFX to choose from. As more GFX is obtained, or more weapon loadouts, more options will be added. If there is a specific GFX, or weapon loadout you want, come comment on our mod page."
+  BuildableDreadnought.4.name:0 "Choose your weapon loadout"
+  BuildableDreadnought.4.desc:0 "These are the available weapon loadouts for the Automated Dreadnought. The 'leave it to chance' option will give you one of these options, randomly."
+  BuildableDreadnought.5.name:0 "Choose your weapon loadout"
+  BuildableDreadnought.5.desc:0 "These are the available weapon loadouts for the Executor Star Destroyer. The 'leave it to chance' option will give you one of these options, randomly."
+  BuildableDreadnought.7.name:0 "Choose whether you want multiple section types"
+  BuildableDreadnought.7.desc:0 "This event is here to let you choose whether you want to be able to get sections from different dreadnought types (ie. Artillery and Carrier)."
+  BuildableDreadnought.6.desc:0 ""
+ 
+ #Automated Dreadnought
+  dreadnought_core:0 "Dreadnought Core"
+  dreadnought_core_DESC:0 "The core of a dreadnought powers it in a way that we only partially understand"
+  DREADNOUGHT_CORE_BASIC:0 "Basic Dreadnought Core"
+  DREADNOUGHT_CORE_BASIC_DESC:0 "A basic dreadnought core, providing no bonuses"
+  DREADNOUGHT_CORE_ADVANCED:0 "Advanced Dreadnought Core"
+  DREADNOUGHT_CORE_ADVANCED_DESC:0 "A dreadnought core that we have based off what fragments we can find of the original automated dreadnought"
+  DREADNOUGHT_CORE_HYPER:0 "Integrated Dreadnought Core"
+  DREADNOUGHT_CORE_HYPER_DESC:0 "Improvements on the advanced core, and more seamless integration with the ship systems, allows for a more powerful core."
+  DREADNOUGHT_CORE_ORIGINAL:0 "Original Dreadnought Core"
+  DREADNOUGHT_CORE_ORIGINAL_DESC:0 "The dreadnought core of the original automated dreadnought"
+     
+  AUTO_DREADNOUGHT_SHIP_THRUSTER_1:0 "Chemical Thrusters"
+  AUTO_DREADNOUGHT_SHIP_THRUSTER_2:0 "Ion Thrusters"
+  AUTO_DREADNOUGHT_SHIP_THRUSTER_3:0 "Plasma Thrusters"
+  AUTO_DREADNOUGHT_SHIP_THRUSTER_4:0 "Impulse Thrusters"
+  AUTO_DREADNOUGHT_SHIP_THRUSTER_5:0 "Dark Matter Thrusters"
+     
+  AUTO_DREADNOUGHT_FISSION_REACTOR:0 "Fission Reactor"
+  AUTO_DREADNOUGHT_FUSION_REACTOR:0 "Fusion Reactor"
+  AUTO_DREADNOUGHT_COLD_FUSION_REACTOR:0 "Cold Fusion Reactor"
+  AUTO_DREADNOUGHT_ANTIMATTER_REACTOR:0 "Antimatter Reactor"
+  AUTO_DREADNOUGHT_ZERO_POINT_REACTOR:0 "Zero Point Reactor"
+  AUTO_DREADNOUGHT_DARK_MATTER_REACTOR:0 "Dark Matter Reactor"
+     
+  COMBAT_COMPUTER_AUTO_DREADNOUGHT_LINE_DEFAULT:0 "Basic Combat Computer"
+  COMBAT_COMPUTER_AUTO_DREADNOUGHT_LINE_BASIC:0 "Combat Computer (Line)"
+  COMBAT_COMPUTER_AUTO_DREADNOUGHT_LINE_ADVANCED:0 "Advanced Combat Computer (Line)"
+  COMBAT_COMPUTER_AUTO_DREADNOUGHT_LINE_SAPIENT:0 "Sapient Combat Computer (Line)"
+  COMBAT_COMPUTER_AUTO_DREADNOUGHT_LINE_PRECOG:0 "Precognitive Interface (Line)"
+  COMBAT_COMPUTER_AUTO_DREADNOUGHT_PICKET_BASIC:0 "Combat Computer (Picket)"
+  COMBAT_COMPUTER_AUTO_DREADNOUGHT_PICKET_ADVANCED:0 "Advanced Combat Computer (Picket)"
+  COMBAT_COMPUTER_AUTO_DREADNOUGHT_PICKET_SAPIENT:0 "Sapient Combat Computer (Picket)"
+  COMBAT_COMPUTER_AUTO_DREADNOUGHT_PICKET_PRECOG:0 "Precognitive Interface (Picket)"
+  COMBAT_COMPUTER_AUTO_DREADNOUGHT_ARTILLERY_BASIC:0 "Combat Computer (Artillery)"
+  COMBAT_COMPUTER_AUTO_DREADNOUGHT_ARTILLERY_ADVANCED:0 "Advanced Combat Computer (Artillery)"
+  COMBAT_COMPUTER_AUTO_DREADNOUGHT_ARTILLERY_SAPIENT:0 "Sapient Combat Computer (Artillery)"
+  COMBAT_COMPUTER_AUTO_DREADNOUGHT_ARTILLERY_PRECOG:0 "Precognitive Interface (Artillery)"
+  COMBAT_COMPUTER_AUTO_DREADNOUGHT_PICKET_AUTONOMOUS:0 "Autonomous Ship Intellect (Line)"
+  COMBAT_COMPUTER_AUTO_DREADNOUGHT_LINE_AUTONOMOUS:0 "Autonomous Ship Intellect (Picket)"
+  COMBAT_COMPUTER_AUTO_DREADNOUGHT_ARTILLERY_AUTONOMOUS:0 "Autonomous Ship Intellect (Artillery)"
+     
+  PERDITION_BEAM_AUTO_DREADNOUGHT:0 "Perdition Beam"
+     
+  buildable_dreadnought:0 "Automated Dreadnought"
+  buildable_dreadnought_plural:0 "Automated Dreadnoughts"
+     
+  automated_dreadnought_key_fore:0 "Dreadnought Fore"
+  automated_dreadnought_key_fore_X:0 "Large Dreadnought Fore"
+  automated_dreadnought_key_fore_X2:0 "Massive Dreadnought Fore"
+  automated_dreadnought_key_fore_T:0 "Titanic Dreadnought Fore"
+  automated_dreadnought_key_stern_TX:0 "XL Artillery Bank"
+  automated_dreadnought_key_mid:0 "Dreadnought Mid"
+  automated_dreadnought_key_stern:0 "Dreadnought Stern"
+  
+  carrier_dreadnought_key_stern:0 "Rear Hangar Bay"
+     
+  tech_buildable_dreadnought:0 "Dreadnought Construction"
+  tech_buildable_dreadnought_desc:0 "Reverse Engineering the Automated Dreadnought."  
+  tech_artillery_dreadnought:0 "Artillery Dreadnought Construction"
+  tech_artillery_dreadnought_desc:0 "Sections for artillery dreadnought."
+     
+  tech_build_dreadnought:0 "Automated Dreadnought Construction"
+  tech_build_dreadnought_desc:0 "Reverse Engineering the Automated Dreadnought."
+  tech_improved_dreadnought_cores:0 "Improved Dreadnought Cores"
+  tech_improved_dreadnought_cores_desc:0 "A dreadnought core based on fragments of the Automated Dreadnought."
+  tech_integrated_dreadnought_cores:0 "Integrated Dreadnought Cores"
+  tech_integrated_dreadnought_cores_desc:0 "Improvements on the advanced core, and more seamless integration with the ship systems, allows for a more powerful core."
+  tech_perfected_dreadnought_cores:0 "Perfected Dreadnought Cores"
+  tech_perfected_dreadnought_cores_desc:0 "The dreadnought core of the original Automated Dreadnought."
+  tech_auto_dreadnought_xl:0 "Larger dreadnought mounts"
+  tech_auto_dreadnought_xl_desc:0 "What's better than a dreadnought? A dreadnought with bigger guns!"
+  tech_auto_dreadnought_xxl:0 "Even larger dreadnought mounts"
+  tech_auto_dreadnought_xxl_desc:0 "Double the size, double the explosions."
+  tech_auto_dreadnought_t:0 "Titanic dreadnought mounts"
+  tech_auto_dreadnought_t_desc:0 "Why stop at merely 'big?'"
+  tech_auto_dreadnought_txl:0 "Colossal dreadnought mounts"
+  tech_auto_dreadnought_txl_desc:0 "The only thing we won't be able to fit on here is something too small."
+  tech_auto_dreadnought_build_speed:0 "Standardized Automated Dreadnought Patterns"
+  tech_auto_dreadnought_build_speed_desc:0 "Establishing new standards for the modeling and construction of Automated Dreadnoughts greatly improves the efficiency of the production pipeline."
+  tech_auto_dreadnought_hull_1:0 "Improved Automated Dreadnought Hulls"
+  tech_auto_dreadnought_hull_1_desc:0 "Advances in building techniques will allow for the construction of sturdier and more durable Automated Dreadnoughts."
+  tech_auto_dreadnought_hull_2:0 "Advanced Automated Dreadnought Hulls"
+  tech_auto_dreadnought_hull_2_desc:0 "The latest generation of Automated Dreadnoughts have optimized structural integrity fields and improved bulkheads."
+     
+  mod_shipsize_buildable_dreadnought_build_speed_mult:0 "Automated Dreadnought Build Speed"
+  mod_shipsize_buildable_dreadnought_build_cost_mult:0 "Automated Dreadnought Build Cost"
+  mod_shipsize_buildable_dreadnought_hull_add:0 "Automated Dreadnought Hull Points"
+ 
+ #Medium Dreadnought
+    
+  buildable_dreadnought_m:0 "Automated Dreadnought"
+  buildable_dreadnought_m_plural:0 "Automated Dreadnoughts"
+  tech_build_dreadnought_m:0 "Broadside Dreadnought Construction"
+  tech_build_dreadnought_m_desc:0 "Reverse Engineering the Automated Dreadnought."
+    
+    
+  automated_dreadnought_m_key_fore:0 "Dreadnought Fore"
+  automated_dreadnought_m_key_stern:0 "Dreadnought Stern"
+    
+  shipsize_buildable_dreadnought_m_build_speed_mult:0 "Automated Dreadnought Build Speed"
+  shipsize_buildable_dreadnought_m_build_cost_mult:0 "Automated Dreadnought Build Cost"
+  shipsize_buildable_dreadnought_m_hull_add:0 "Automated Dreadnought Hull Points"
+    
+  tech_auto_dreadnought_m_build_speed:0 "Standardized Automated Dreadnought Patterns"
+  tech_auto_dreadnought_m_build_speed_desc:0 "Establishing new standards for the modeling and construction of Automated Dreadnoughts greatly improves the efficiency of the production pipeline."
+  tech_auto_dreadnought_m_hull_1:0 "Improved Automated Dreadnought Hulls"
+  tech_auto_dreadnought_m_hull_1_desc:0 "Advances in building techniques will allow for the construction of sturdier and more durable Automated Dreadnoughts."
+  tech_auto_dreadnought_m_hull_2:0 "Advanced Automated Dreadnought Hulls"
+  tech_auto_dreadnought_m_hull_2_desc:0 "The latest generation of Automated Dreadnoughts have optimized structural integrity fields and improved bulkheads."
+
+  sm_dreadnought_yards:0 "Dreadnought Shipyards"
+  sm_dreadnought_yards_desc:0 "Shipyards big enough to build colossal dreadnought-sized ships."
+     
+ #Carrier Dreadnought
+    carrier_dreadnought:0 "Carrier Dreadnought"
+    carrier_dreadnought_plural:0 "Carrier Dreadnoughts"
+    
+    carrier_dreadnought_key_mid:0 "Carrier Dreadnought Mid"
+    carrier_dreadnought_key_mid_desc:0 ""
+    carrier_dreadnought_key_fore:0 "Carrier Dreadnought Hangar"
+    carrier_dreadnought_key_fore_desc:0 ""
+    
+    tech_carrier_dreadnought:0 "Carrier Dreadnought"
+    tech_carrier_dreadnought_desc:0 "Using the Dreadnought template, we can make a massive carrier the spews fighters like an angry hornets' nest."
+    tech_carrier_dreadnought_build_speed:0 "Standardized Carrier Dreadnought Patterns"
+    tech_carrier_dreadnought_build_speed_desc:0 "Establishing new standards for the modeling and construction of Carrier Dreadnoughts greatly improves the efficiency of the production pipeline."
+    tech_carrier_dreadnought_hull_1:0 "Improved Carrier Dreadnought Hulls"
+    tech_carrier_dreadnought_hull_1_desc:0 "Advances in building techniques will allow for the construction of sturdier and more durable Carrier Dreadnoughts."
+    tech_carrier_dreadnought_hull_2:0 "Advanced Carrier Dreadnought Hulls"
+    tech_carrier_dreadnought_hull_2_desc:0 "The latest generation of Carrier Dreadnoughts have optimized structural integrity fields and improved bulkheads."
+        
+        
+ #Executor
+ 
+  buildable_executor:0 "Executor"
+  buildable_executor_plural:0 "Executors"
+  
+  
+  automated_executor_key_fore:0 "Executor Fore"
+  automated_executor_key_fore_X:0 "Large Executor Fore"
+  automated_executor_key_fore_X2:0 "Massive Executor Fore"
+  automated_executor_key_fore_T:0 "Titanic Executor Fore"
+  automated_executor_key_fore_TX:0 "Colossal Executor Fore"
+  automated_executor_key_mid:0 "Executor Mid"
+  automated_executor_key_stern_X:0 "XL Artillery bank"
+  
+  EXECUTOR_MID1:0 "Forward Artillery Battery"  
+  EXECUTOR_MID2:0 "Point Defense Bank"
+  EXECUTOR_MID3:0 "Rear Artillery Battery"
+  
+  CARRIER_EXECUTOR_MID1:0 "Forward Hangar"
+  CARRIER_EXECUTOR_MID3:0 "Rear Hangar"
+  
+  MEDIUM_EXECUTOR_MID1:0 "Forward Turret Bank"
+  MEDIUM_EXECUTOR_MID3:0 "Rear Turret Bank"
+     
+  tech_buildable_executor:0 "Executor Construction"
+  tech_buildable_executor_desc:0 "Reverse Engineering the Executor."
+  tech_artillery_executor:0 "Artillery Executor Blueprints"
+  tech_artillery_executor_desc:0 "Blueprints for Artillery Executor sections."
+  tech_build_executor_m:0 "Broadside Executor Blueprints"
+  tech_build_executor_m_desc:0 "Blueprints for Broadside Executor sections."
+  tech_carrier_executor:0 "Executor Carrier Blueprints"
+  tech_carrier_executor_desc:0 "Blueprints for Carrier Executor sections."
+     
+  tech_build_executor:0 "Executor Construction"
+  tech_build_executor_desc:0 "Reverse Engineering the Executor."
+  tech_auto_executor_xl:0 "Larger executor mounts"
+  tech_auto_executor_xl_desc:0 "What's better than an executor? An executor with bigger guns!"
+  tech_auto_executor_xxl:0 "Even larger executor mounts"
+  tech_auto_executor_xxl_desc:0 "Double the size, double the explosions."
+  tech_auto_executor_t:0 "Titanic executor mounts"
+  tech_auto_executor_t_desc:0 "Why stop at merely 'big?'"
+  tech_auto_executor_txl:0 "Colossal executor mounts"
+  tech_auto_executor_txl_desc:0 "The only thing we won't be able to fit on here is something too small."
+  tech_auto_executor_build_speed:0 "Standardized Executor Patterns"
+  tech_auto_executor_build_speed_desc:0 "Establishing new standards for the modeling and construction of Executors greatly improves the efficiency of the production pipeline."
+  tech_auto_executor_hull_1:0 "Improved Executor Hulls"
+  tech_auto_executor_hull_1_desc:0 "Advances in building techniques will allow for the construction of sturdier and more durable Executors."
+  tech_auto_executor_hull_2:0 "Advanced Executor Hulls"
+  tech_auto_executor_hull_2_desc:0 "The latest generation of Executors have optimized structural integrity fields and improved bulkheads."
+     
+  shipsize_executor_build_speed_mult:0 "Executor Star Destroyer Build Speed"
+  shipsize_executor_build_cost_mult:0 "Executor Star Destroyer Build Cost"
+  shipsize_executor_hull_add:0 "Executor Star Destroyer Hull Points"   
+ 
+    
+    
+    
+  automated_executor_m_key_fore:0 "Executor Fore"
+  automated_executor_m_key_mid:0 "Executor Mid"
+  automated_executor_m_key_stern:0 "Executor Stern"
+  
+ #Yamato
+  buildable_yamato:0 "Space Battleship Yamato"
+  buildable_yamato_plural:0 "Space Battleship Yamato"
+  
+  automated_yamato_key_fore:0 "Yamato Fore"
+  automated_yamato_key_fore_X:0 "Large Yamato Fore"
+  automated_yamato_key_fore_X2:0 "Massive Yamato Fore"
+  automated_yamato_key_fore_T:0 "Titanic Yamato Fore"
+  automated_yamato_key_fore_TX:0 "Colossal Yamato Fore"
+  automated_yamato_key_mid:0 "Yamato Mid"
+  automated_yamato_key_stern_X:0 "XL Artillery bank"
+  
+  yamato_MID1:0 "Forward Artillery Battery"  
+  YAMATO_MID2:0 "Point Defense Bank"
+  yamato_MID3:0 "Rear Artillery Battery"
+  
+  CARRIER_YAMATO_MID1:0 "Forward Hangar"
+  CARRIER_YAMATO_MID3:0 "Rear Hangar"
+  
+  MEDIUM_YAMATO_MID1:0 "Forward Turret Bank"
+  MEDIUM_YAMATO_MID3:0 "Rear Turret Bank"
+  
+  tech_buildable_yamato:0 "Space Battlehsip Yamato Construction"
+  tech_buildable_yamato_desc:0 "Reverse Engineering the Space Battlehsip Yamato."
+  tech_artillery_yamato:0 "Artillery Space Battlehsip Yamato Blueprints"
+  tech_artillery_yamato_desc:0 "Blueprints for Artillery Space Battlehsip Yamato sections."
+  tech_build_yamato_m:0 "Broadside Space Battlehsip Yamato Blueprints"
+  tech_build_yamato_m_desc:0 "Blueprints for Broadside Space Battlehsip Yamato sections."
+  tech_carrier_yamato:0 "Space Battlehsip Yamato Carrier Blueprints"
+  tech_carrier_yamato_desc:0 "Blueprints for Carrier Space Battlehsip Yamato sections."
+  
+  tech_build_yamato:0 "Yamato Construction"
+  tech_build_yamato_desc:0 "Reverse Engineering the Space Battleship Yamato."
+  tech_auto_yamato_xl:0 "Larger Space Battleship Yamato mounts"
+  tech_auto_yamato_xl_desc:0 "What's better than an Space Battleship Yamato? An Space Battleship Yamato with bigger guns!"
+  tech_auto_yamato_xxl:0 "Even larger Space Battleship Yamato mounts"
+  tech_auto_yamato_xxl_desc:0 "Double the size, double the explosions."
+  tech_auto_yamato_t:0 "Titanic Space Battleship Yamato mounts"
+  tech_auto_yamato_t_desc:0 "Why stop at merely 'big?'"
+  tech_auto_yamato_txl:0 "Colossal Space Battleship Yamato mounts"
+  tech_auto_yamato_txl_desc:0 "The only thing we won't be able to fit on here is something too small."
+  tech_auto_yamato_build_speed:0 "Standardized Space Battleship Yamato Patterns"
+  tech_auto_yamato_build_speed_desc:0 "Establishing new standards for the modeling and construction of Space Battleship Yamatos greatly improves the efficiency of the production pipeline."
+  tech_auto_yamato_hull_1:0 "Improved Space Battleship Yamato Hulls"
+  tech_auto_yamato_hull_1_desc:0 "Advances in building techniques will allow for the construction of sturdier and more durable Space Battleship Yamatos."
+  tech_auto_yamato_hull_2:0 "Advanced Space Battleship Yamato Hulls"
+  tech_auto_yamato_hull_2_desc:0 "The latest generation of Space Battleship Yamatos have optimized structural integrity fields and improved bulkheads."
+     
+  shipsize_yamato_build_speed_mult:0 "Space Battleship Yamato Build Speed"
+  shipsize_yamato_build_cost_mult:0 "Space Battleship Yamato Build Cost"
+  shipsize_yamato_hull_add:0 "Space Battleship Yamato Hull Points"   
+  
+ 

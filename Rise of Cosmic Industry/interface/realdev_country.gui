@@ -1,0 +1,934 @@
+guiTypes = {
+	containerWindowType = {
+		name = "realdev_country_menu_confirm"
+		position = { x= 0 y= 0 }
+		size = { width = 35 height = 35 }
+		moveable = no
+		
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_half_menu_button_bg" 
+			position = { x= -15 y= 3930 }
+			font = "cg_16b"
+			text = "OPTION_TEXT"
+		}
+	}
+	containerWindowType = {
+		name = "realdev_country_menu_YEET"
+		position = { x=0 y=0 }
+		size = { width = 0 height = 0 }
+		moveable = no
+		
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_half_menu_button_bg" 
+			position = { x=-15 y=20000 }
+			font = "cg_16b"
+			text = "OPTION_TEXT"
+		}
+	}
+
+	containerWindowType = {
+		name = "realdev_country_window"
+		orientation = center
+		origo = center
+		moveable = yes
+		size = { width = 640 height = 610 }
+		containerWindowType = {
+			name = "portrait"
+			position = { x = -95 y = 11000 } #Yeet
+			size = { width = 314 height = 400 }
+			clipping = yes
+			ButtonType = {
+				name = "black_frame"
+				spriteType = "GFX_portrait_character"
+				position = { x = 95 y = -90 }
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "portrait"
+				spriteType = "GFX_portrait_character"
+				position = { x = 0 y = 15 }
+				scale = 0.70
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "city_frame"
+				spriteType = "GFX_diplomacy_portrait_frame_curator"
+				position = { x = -6 y = -5000 }
+				alwaysTransparent = yes
+			}
+		}
+		iconType = {#Hexagon fade in
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg_curator"
+			position = { x = -10 y = -14 }
+			alwaysTransparent = yes
+		}
+		containerWindowType = { #Event Title
+			name = "EVENT_DIPLO"
+			position = { x = 20 y = 5 }
+			size = { width=563 height=280 }
+			moveable = no
+			instantTextBoxType={
+				name = "action_title"
+				font = "malgun_goth_24"
+				position = { x = -5 y = 0 }
+				maxWidth = 520
+				alwaysTransparent = yes
+			}
+			instantTextBoxType={
+				name = "action_desc"
+				font = "malgun_goth_24"
+				position = { x = 490 y = 0 }
+				maxWidth = 500
+				maxHeight = 180
+				Orientation = "UPPER_LEFT"
+				format = center
+				alwaysTransparent = yes
+				text_color_code = "H"
+			}
+			listboxType = {
+				name = "option_list"
+				position = { x = 0 y = 0 }
+				size = { x=1000 y=3000 }
+				spacing = 1
+				scrollbartype = "standardlistbox_slider"
+				borderSize = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+		effectButtonType = {
+			name = "realdev_country_tooltip"
+			spriteType = "GFX_roci_tooltip"
+			position = { x = 561 y = 20 }
+			format = left
+			no_clicksound = yes
+			borderSize = { x = 10 y = 0 }
+			font = "cg_16b"
+			text = "blank"
+			effect = "realdev_country_tooltip"
+		}
+		effectButtonType = {
+			name = "realdev_inheritance_tooltip"
+			spriteType = "GFX_roci_info"
+			position = { x = 523 y = 20 }
+			format = left
+			no_clicksound = yes
+			borderSize = { x = 10 y = 0 }
+			font = "cg_16b"
+			text = "blank"
+			effect = "realdev_inheritance_tooltip"
+		}
+		
+		
+		containerWindowType = {
+			name = "realdev_header_contain"
+			position = { x = 202 y = 45 }
+			size = { width=563 height=280 }
+			
+			effectButtonType = {
+				name = "realdev_planet_header_gear_left"
+				spriteType = "GFX_realdev_tiny_gear_anim_ccw"
+				position = { x = 0 y = 0 }
+				format = left
+				no_clicksound = yes
+				alwaysTransparent = yes
+				effect = "roci_blank_effect"
+			}
+			effectButtonType = {
+				name = "realdev_planet_header_gear_right"
+				spriteType = "GFX_realdev_tiny_gear_anim_cw"
+				position = { x = 188 y = 0 }
+				format = left
+				no_clicksound = yes
+				alwaysTransparent = yes
+				effect = "roci_blank_effect"
+			}
+			effectButtonType = {
+				name = "realdev_planet_header"
+				spriteType = "GFX_realdev_header"
+				position = { x = 18 y = -2 }
+				format = left
+				no_clicksound = yes
+				alwaysTransparent = yes
+				effect = "roci_blank_effect" #realdev_industrial_production, pending giving it a tooltip
+			}
+		}
+		
+		containerWindowType = {
+			name = "realdev_country_ui"
+			position = { x = 42 y = 0 }
+			size = { width=400 height=400 }
+			
+			effectButtonType = {
+				name = "realdev_country_bg"
+				spriteType = "GFX_realdev_country_bg"
+				position = { x = 80 y = 13 }
+				alwaysTransparent = yes
+				effect = "roci_blank_effect"
+				scale = 1.1
+			}
+			containerWindowType = {
+				name = "realdev_country_bg_layer"
+				position = { x = 5000 y = 0 }
+				size = { width=400 height=400 }
+			
+				containerWindowType = {
+					name = "realdev_gears_contain"
+					position = { x = 189 y = 390 }
+					size = { width=563 height=280 }
+					effectButtonType = {
+						name = "realdev_planet_large_gear"
+						spriteType = "GFX_realdev_large_gear_anim"
+						position = { x = 0 y = 50 }
+						format = left
+						no_clicksound = yes
+						alwaysTransparent = yes
+						effect = "roci_blank_effect"
+					}
+					effectButtonType = {
+						name = "realdev_planet_small_gear"
+						spriteType = "GFX_realdev_small_gear_anim"
+						position = { x = 70 y = 0 }
+						format = left
+						no_clicksound = yes
+						alwaysTransparent = yes
+						effect = "roci_blank_effect"
+					}
+				}
+			}
+			containerWindowType = {
+				name = "realdev_flow_layer"
+				position = { x = 200 y = 130 }
+				size = { width=563 height=280 }
+				
+				#Section 1
+				effectButtonType = {
+					name = "GFX_ip_distribution_S1U"
+					spriteType = "GFX_ip_distribution_S1U"
+					alwaysTransparent = yes
+					position = { x = 0 y = 45 }
+				}
+				effectButtonType = {
+					name = "GFX_ip_distribution_S1V"
+					spriteType = "GFX_ip_distribution_S1V"
+					alwaysTransparent = yes
+					position = { x = 78 y = 47 }
+				}
+				effectButtonType = {
+					name = "GFX_ip_distribution_S1L_L"
+					spriteType = "GFX_ip_distribution_S1L"
+					alwaysTransparent = yes
+					position = { x = 0 y = 96 }
+				}
+				effectButtonType = {
+					name = "GFX_ip_distribution_S1L_R"
+					spriteType = "GFX_ip_distribution_S1L"
+					alwaysTransparent = yes
+					position = { x = 100 y = 96 }
+				}
+				effectButtonType = {
+					name = "roci_big_chip_1"
+					spriteType = "GFX_roci_big_chip"
+					alwaysTransparent = yes
+					position = { x = 56 y = 73 }
+				}
+				effectButtonType = {
+					name = "roci_big_chip_pulse_1"
+					spriteType = "GFX_roci_big_chip_pulse"
+					alwaysTransparent = yes
+					position = { x = 65 y = 82 }
+				}
+				
+				#Section 2
+				effectButtonType = {
+					name = "GFX_ip_distribution_S2V"
+					spriteType = "GFX_ip_distribution_S1V"
+					alwaysTransparent = yes
+					position = { x = 276 y = 126 }
+				}
+				effectButtonType = {
+					name = "ip_distribution_flow_4"
+					spriteType = "GFX_ip_distribution_flow_4"
+					alwaysTransparent = yes
+					position = { x = 47 y = 164 } #164
+				}
+				effectButtonType = {
+					name = "roci_mini_chip_2"
+					spriteType = "GFX_roci_mini_chip_pulse"
+					alwaysTransparent = yes
+					position = { x = 262 y = 150 }
+				}
+				effectButtonType = {
+					name = "roci_mini_chip_21"
+					spriteType = "GFX_roci_mini_chip_pulse"
+					alwaysTransparent = yes
+					position = { x = 15 y = 150 }
+				}
+				#Section 3
+				effectButtonType = {
+					name = "GFX_ip_distribution_S3V"
+					spriteType = "GFX_ip_distribution_S1V"
+					alwaysTransparent = yes
+					position = { x = 28 y = 308 }
+				}
+				effectButtonType = {
+					name = "GFX_ip_distribution_S3V2"
+					spriteType = "GFX_ip_distribution_S3V"
+					alwaysTransparent = yes
+					position = { x = 28 y = 180 }
+				}
+				effectButtonType = {
+					name = "GFX_ip_distribution_S3US"
+					spriteType = "GFX_ip_distribution_S3US"
+					alwaysTransparent = yes
+					position = { x = 40 y = 280 }
+					scale = 1
+				}
+				effectButtonType = {
+					name = "GFX_ip_distribution_splitter"
+					spriteType = "GFX_ip_distribution_splitter"
+					alwaysTransparent = yes
+					position = { x = 35 y = 317 }
+					effect = "realdev_country_minor_colonies_check"
+				}
+				effectButtonType = {
+					name = "GFX_ip_distribution_splitter_2"
+					spriteType = "GFX_ip_distribution_splitter_2"
+					alwaysTransparent = yes
+					position = { x = 35 y = 317 }
+					effect = "realdev_country_minor_colonies_check_null"
+				}
+				effectButtonType = {
+					name = "GFX_roci_big_chip_S3U"
+					spriteType = "GFX_roci_big_chip"
+					alwaysTransparent = yes
+					position = { x = 6 y = 256 }
+				}
+				effectButtonType = {
+					name = "GFX_roci_big_chip_center_S3U"
+					spriteType = "GFX_roci_big_chip_center"
+					position = { x = 15 y = 265 }
+					format = center
+					no_clicksound = yes
+					borderSize = { x = 0 y = 0 }
+					font = "cg_16b"
+					text = "realdev_country_split_1_display"
+					effect = "realdev_country_split_1_display"
+				}
+				effectButtonType = {
+					name = "GFX_roci_big_chip_S3L"
+					spriteType = "GFX_roci_big_chip"
+					alwaysTransparent = yes
+					position = { x = 6 y = 328 }
+				}
+				effectButtonType = {
+					name = "GFX_roci_big_chip_center_S3L"
+					spriteType = "GFX_roci_big_chip_center"
+					position = { x = 15 y = 337 }
+					format = center
+					no_clicksound = yes
+					borderSize = { x = 0 y = 0 }
+					font = "cg_16b"
+					text = "realdev_country_split_2_display"
+					effect = "realdev_country_split_2_display"
+				}
+			}
+			containerWindowType = {
+				name = "realdev_numbers_layer"
+				position = { x = 0 y = 30 }
+				size = { width=563 height=280 }
+				
+				effectButtonType = {
+					name = "realdev_country_numbers"
+					spriteType = "GFX_realdev_country_numbers"
+					alwaysTransparent = yes
+					position = { x = 5000 y = 0 }
+					format = left
+					no_clicksound = yes
+					effect = "roci_blank_effect"
+				}
+				effectButtonType = {
+					name = "GFX_realdev_country_numbers_bg"
+					spriteType = "GFX_realdev_country_numbers_bg"
+					alwaysTransparent = yes
+					position = { x = 5000 y = 0 }
+					format = left
+					no_clicksound = yes
+					effect = "roci_blank_effect"
+				}
+				containerWindowType = {
+					name = "realdev_country_collection_contain"
+					position = { x = -15 y = 135 }
+					size = { width=563 height=280 }
+					
+					effectButtonType = {
+						name = "ip_distribution_window_collection"
+						spriteType = "GFX_ip_distribution_window_collection"
+						alwaysTransparent = yes
+						position = { x = -15 y = -70 }
+					}
+					effectButtonType = {
+						name = "realdev_country_collection_title"
+						spriteType = "GFX_blank_tiny_menu_button_bg"
+						alwaysTransparent = yes
+						position = { x = 2000 y = -35 }
+						format = center
+						no_clicksound = yes
+						borderSize = { x = 10 y = 0 }
+						font = "malgun_goth_24"
+						text = "realdev_country_collection"
+						effect = "roci_blank_effect"
+					}
+					
+					#Current/Cap IndCap display
+					effectButtonType = {
+						name = "realdev_industry_from_planets"
+						spriteType = "GFX_blank_half_menu_button_bg"
+						position = { x = 0 y = 0 }
+						format = center
+						no_clicksound = yes
+						borderSize = { x = 10 y = 0 }
+						font = "cg_16b"
+						text = "realdev_industry_from_planets"
+						effect = "realdev_industry_from_planets"
+					}
+					#Current TV Display
+					effectButtonType = {
+						name = "realdev_country_tv_display"
+						spriteType = "GFX_blank_half_menu_button_bg"
+						position = { x = 0 y = 40 }
+						format = center
+						clicksound = interface
+						borderSize = { x = 10 y = 0 }
+						font = "cg_16b"
+						text = "realdev_country_tv"
+						effect = "realdev_country_tv"
+					}
+				}
+				containerWindowType = {
+					name = "realdev_ip_totals"
+					position = { x = 370 y = 135 }
+					size = { width=563 height=280 }
+					
+					effectButtonType = {
+						name = "ip_distribution_window_totals"
+						spriteType = "GFX_ip_distribution_window_totals"
+						alwaysTransparent = yes
+						position = { x = -15 y = -70 }
+					}
+					effectButtonType = {
+						name = "realdev_country_totals_title"
+						spriteType = "GFX_blank_tiny_menu_button_bg"
+						alwaysTransparent = yes
+						position = { x = -1000 y = -35 }
+						format = center
+						no_clicksound = yes
+						borderSize = { x = 10 y = 0 }
+						font = "malgun_goth_24"
+						text = "realdev_country_totals"
+						effect = "roci_blank_effect"
+					}
+					
+					#Current/Cap IndCap display
+					effectButtonType = {
+						name = "realdev_total_ind_cap_display"
+						spriteType = "GFX_blank_half_menu_button_bg"
+						position = { x = 0 y = 0 }
+						format = center
+						no_clicksound = yes
+						borderSize = { x = 10 y = 0 }
+						font = "cg_16b"
+						text = "realdev_total_ind_cap_display"
+						effect = "realdev_total_ind_cap_display"
+					}
+					effectButtonType = {
+						name = "realdev_country_indcap_display"
+						spriteType = "GFX_blank_half_menu_button_bg"
+						position = { x = 0 y = 40 }
+						format = center
+						no_clicksound = yes
+						borderSize = { x = 10 y = 0 }
+						font = "cg_16b"
+						text = "realdev_country_indcap_display"
+						effect = "realdev_country_indcap_display"
+					}
+				}
+				containerWindowType = {
+					name = "realdev_country_distribution_contain"
+					position = { x = 345 y = 365 }
+					size = { width=563 height=280 }
+					
+					effectButtonType = {
+						name = "ip_distribution_window_distribution"
+						spriteType = "GFX_ip_distribution_window_distribution_4"
+						alwaysTransparent = yes
+						position = { x = -27 y = -70 }
+					}
+					effectButtonType = {
+						name = "realdev_country_distribution_title"
+						spriteType = "GFX_blank_tiny_menu_button_bg"
+						alwaysTransparent = yes
+						position = { x = 2000 y = -35 }
+						format = center
+						no_clicksound = yes
+						borderSize = { x = 10 y = 0 }
+						font = "malgun_goth_24"
+						text = "realdev_country_distribution"
+						effect = "roci_blank_effect"
+					}
+					
+					#Current Distributed IP
+					effectButtonType = {
+						name = "realdev_country_distributed_ip_display"
+						spriteType = "GFX_blank_half_menu_button_bg"
+						position = { x = 0 y = 0 }
+						format = center
+						clicksound = interface
+						borderSize = { x = 10 y = 0 }
+						font = "cg_16b"
+						text = "realdev_ip_distributed"
+						effect = "realdev_ip_distributed"
+					}
+					
+					containerWindowType = {
+						name = "realdev_country_ship_distribution"
+						position = { x = 0 y = 35 }
+						size = { width=563 height=280 }
+						
+						#Current Shipyard Count
+						effectButtonType = {
+							name = "realdev_country_shipyard_display"
+							spriteType = "GFX_blank_half_menu_button_bg"
+							position = { x = 5 y = 0 }
+							format = right
+							clicksound = interface
+							borderSize = { x = 10 y = 0 }
+							font = "cg_16b"
+							text = "realdev_country_shipyard"
+							effect = "realdev_country_shipyard"
+						}
+						#Current Speed display
+						effectButtonType = {
+							name = "realdev_country_ship_speed_display"
+							spriteType = "GFX_blank_tiny_menu_button_bg"
+							alwaysTransparent = yes
+							position = { x = 55 y = 0 }
+							format = left
+							no_clicksound = yes
+							borderSize = { x = 10 y = 0 }
+							font = "cg_16b"
+							text = "realdev_country_ship_speed_display"
+							effect = "roci_blank_effect"
+						}
+						#Current Speed %
+						effectButtonType = {
+							name = "realdev_industry_shipyard_ratio"
+							spriteType = "GFX_roci_thicc_round_circuit"
+							position = { x = 15 y = 5 }
+							format = left
+							no_clicksound = yes
+							borderSize = { x = 0 y = 0 }
+							font = "cg_16b"
+							text = "realdev_industry_shipyard_ratio"
+							effect = "realdev_industry_ratio_desc"
+						}
+						effectButtonType = { name = "realdev_country_shipyard_ip_increase" spriteType = "GFX_up_curve_left_blue" position = { x = 5 y = 4 } clicksound = interface effect = "realdev_country_shipyard_ip_increase" }
+						effectButtonType = { name = "realdev_country_shipyard_ip_decrease" spriteType = "GFX_down_curve_left_blue" position = { x = 5 y = 19 } clicksound = interface effect = "realdev_country_shipyard_ip_decrease" }
+						
+					}
+					containerWindowType = {
+						name = "realdev_country_megastructure_distribution"
+						position = { x = 0 y = 70 }
+						size = { width=563 height=280 }
+					
+						#Current Megastructures
+						effectButtonType = {
+							name = "realdev_country_megastructures_display"
+							spriteType = "GFX_blank_half_menu_button_bg"
+							position = { x = 5 y = 0 }
+							format = right
+							clicksound = interface
+							borderSize = { x = 10 y = 0 }
+							font = "cg_16b"
+							text = "realdev_country_megastructures"
+							effect = "realdev_country_megastructures"
+						}
+						#Current Megastructure Speed display
+						effectButtonType = {
+							name = "realdev_mega_build_speed_display"
+							spriteType = "GFX_blank_tiny_menu_button_bg"
+							alwaysTransparent = yes
+							position = { x = 55 y = 0 }
+							format = left
+							no_clicksound = yes
+							borderSize = { x = 10 y = 0 }
+							font = "cg_16b"
+							text = "realdev_mega_build_speed_display"
+							effect = "roci_blank_effect"
+						}
+						#Current Speed %
+						effectButtonType = {
+							name = "realdev_megastructure_ratio"
+							spriteType = "GFX_roci_thicc_round_circuit"
+							alwaysTransparent = yes
+							position = { x = 15 y = 5 }
+							format = left
+							no_clicksound = yes
+							borderSize = { x = 0 y = 0 }
+							font = "cg_16b"
+							text = "realdev_megastructure_ratio"
+							effect = "roci_blank_effect"
+						}
+						effectButtonType = { name = "realdev_country_megastructure_ip_increase" spriteType = "GFX_up_curve_left_blue" position = { x = 5 y = 4 } clicksound = interface effect = "realdev_country_megastructure_ip_increase" }
+						effectButtonType = { name = "realdev_country_megastructure_ip_decrease" spriteType = "GFX_down_curve_left_blue" position = { x = 5 y = 19 } clicksound = interface effect = "realdev_country_megastructure_ip_decrease" }
+					}
+					containerWindowType = {
+						name = "realdev_country_minor_colony_distribution"
+						position = { x = 0 y = 105 }
+						size = { width=563 height=280 }
+						
+						#Current Minor Colonies
+						effectButtonType = {
+							name = "realdev_country_minor_colonies_display"
+							spriteType = "GFX_blank_half_menu_button_bg"
+							position = { x = 5 y = 0 }
+							format = right
+							clicksound = interface
+							borderSize = { x = 10 y = 0 }
+							font = "cg_16b"
+							text = "realdev_country_minor_colonies"
+							effect = "realdev_country_minor_colonies"
+						}
+					
+						#Current Minor Colony Speed display
+						effectButtonType = {
+							name = "realdev_minor_colonies_display"
+							spriteType = "GFX_blank_tiny_menu_button_bg"
+							alwaysTransparent = yes
+							position = { x = 55 y = 0 }
+							format = left
+							no_clicksound = yes
+							borderSize = { x = 10 y = 0 }
+							font = "cg_16b"
+							text = "realdev_minor_colonies_display"
+							effect = "realdev_country_minor_colonies_check"
+						}
+						#Current Speed %
+						effectButtonType = {
+							name = "realdev_minor_colony_ratio"
+							spriteType = "GFX_roci_thicc_round_circuit"
+							alwaysTransparent = yes
+							position = { x = 15 y = 5 }
+							format = left
+							no_clicksound = yes
+							borderSize = { x = 0 y = 0 }
+							font = "cg_16b"
+							text = "realdev_minor_colony_ratio"
+							effect = "realdev_country_minor_colonies_check"
+						}
+						effectButtonType = { name = "realdev_country_minor_colonies_ip_increase" spriteType = "GFX_up_curve_left_blue" position = { x = 5 y = 4 } clicksound = interface effect = "realdev_country_minor_colonies_ip_increase" }
+						effectButtonType = { name = "realdev_country_minor_colonies_ip_decrease" spriteType = "GFX_down_curve_left_blue" position = { x = 5 y = 19 } clicksound = interface effect = "realdev_country_minor_colonies_ip_decrease" }
+					}
+				}
+				containerWindowType = {
+					name = "realdev_settings_contain"
+					position = { x = -35 y = 435 }
+					size = { width=563 height=280 }
+					
+					effectButtonType = {
+						name = "realdev_country_settings_bg"
+						spriteType = "GFX_realdev_country_settings_bg"
+						alwaysTransparent = yes
+						position = { x = 21 y = -90 }
+					}
+					effectButtonType = {
+						name = "realdev_country_settings_title"
+						spriteType = "GFX_blank_tiny_menu_button_bg"
+						alwaysTransparent = yes
+						position = { x = -1000 y = -100 }
+						format = center
+						no_clicksound = yes
+						borderSize = { x = 10 y = 0 }
+						font = "malgun_goth_24"
+						text = "realdev_country_settings"
+						effect = "roci_blank_effect"
+					}
+					
+					effectButtonType = {
+						name = "realdev_alt_production"
+						position = { x = 5 y = 5 }
+						spriteType = "GFX_blank_tiny_menu_button_bg"
+						format = center
+						no_clicksound = yes
+						borderSize = { x = 10 y = 0 }
+						font = "cg_16b"
+						text = "realdev_alt_production"
+						effect = "realdev_alt_production"
+					}
+						effectButtonType = { name = "realdev_alt_production_swap" spriteType = "GFX_autofab_menu_swap" position = { x = 45 y = 10 } clicksound = interface effect = "realdev_alt_production_swap" }
+					
+					containerWindowType = {
+						name = "realdev_target_contain"
+						position = { x = 0 y = -30 }
+						size = { width=563 height=280 }	
+						
+						effectButtonType = {
+							name = "roci_settings_target"
+							spriteType = "GFX_roci_settings_target"
+							position = { x = 50 y = -25 }
+							effect = "realdev_target_mode_swap"
+						}
+						effectButtonType = {
+							name = "realdev_country_target_name"
+							spriteType = "GFX_blank_tiny_menu_button_bg"
+							alwaysTransparent = yes
+							position = { x = 70 y = -28 }
+							format = left
+							no_clicksound = yes
+							borderSize = { x = 10 y = 0 }
+							font = "malgun_goth_24"
+							text = "realdev_country_target_display"
+							effect = "realdev_country_target"
+						}
+						
+						effectButtonType = { name = "realdev_target_mode_swap" spriteType = "GFX_roci_menu_swap_blue" position = { x = 59 y = 5 } clicksound = interface effect = "realdev_target_mode_swap" }
+					
+						effectButtonType = { name = "realdev_country_target_increase" spriteType = "GFX_up_curve_right_blue" position = { x = 116 y = 4 } clicksound = interface effect = "realdev_country_target_increase" }
+						effectButtonType = { name = "realdev_country_target_decrease" spriteType = "GFX_down_curve_right_blue" position = { x = 116 y = 19 } clicksound = interface effect = "realdev_country_target_decrease" }
+						
+						#Current Target display
+						effectButtonType = { name = "realdev_planet_target_bg" spriteType = "GFX_thicc_round" position = { x = 80 y = 5 } clicksound = interface effect = "roci_blank_effect" }
+						effectButtonType = {
+							name = "realdev_country_target_display"
+							spriteType = "GFX_blank_tiny_menu_button_bg"
+							alwaysTransparent = yes
+							position = { x = 73 y = 0 }
+							format = left
+							no_clicksound = yes
+							borderSize = { x = 10 y = 0 }
+							font = "cg_16b"
+							text = "realdev_target_display"
+							effect = "roci_blank_effect"
+						}
+					}
+				}
+			}
+		}
+		
+		background = { #The event window BG
+			name = "background"
+			quadTextureSprite ="GFX_tile_large_bg_curator" 
+		}
+
+		instantTextBoxType = { #Window Title
+			name = "heading"
+			font = "malgun_goth_24"
+			text = "REALDEV_country_MENU"
+			position = { x = 5250 y = 15 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		iconType = { #Title Underline
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_long_curator"
+			position = { x = 6 y = 22 }
+			alwaysTransparent = yes
+		}
+		
+		effectButtonType = {#Yeet
+			name = "alien_message_background"
+			size = { x = 735 y = 120 }
+			position = { x = 225 y = 20000 }
+			spriteType = "GFX_tiles_dark_area_cut_8"
+			alwaysTransparent = yes
+			effect = "roci_blank_effect"
+		}
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "cg_16b"
+			position = { x = 450 y = 4000 }
+			maxWidth = 50
+			maxHeight = 360
+			format = left
+			scrollbartype = "standardtext_slider"
+		}
+		buttonType = {
+			name = "focus_button"
+			position = { x = -80 y = 12 }
+			orientation = "UPPER_RIGHT"
+			spriteType = "GFX_fleetview_focus"
+			buttonFont = "cg_16b"
+			shortcut = "q"
+		}
+		
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_main_close_button_curator"
+			position = { x= -45 y = 16 }
+			Orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+		}
+
+		buttonType = {
+			name = "confirm_button"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= -175 y = 564  }
+			Orientation = "UPPER_RIGHT"
+			font = "cg_16b"
+			text = "MESSAGE_OK"
+			clicksound = "confirmation"
+		}
+
+
+		### PORTRAIT ###
+		containerWindowType = {
+			name = "portrait_background"
+			position = { x = 0 y = 200 }
+			size = { width = 964 height = 350 }
+			clipping = yes
+			iconType = {
+				name = "event_picture"
+				spriteType = "GFX_diplomacy_portrait_frame"
+				position = { x = -6 y = -5 }
+			}
+			iconType = {
+				name = "portrait"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_portrait_character"
+			}	
+		}
+		
+		iconType = {#Hide this thing.
+			name = "empire_info_bg"
+			spriteType = "GFX_diplomacy_dark_fade_bg"
+			position = { x = 33 y = 20000 }
+			alwaysTransparent = yes
+		}
+		instantTextBoxType={#Hide this thing.
+			name = "empire_name"
+			font = "malgun_goth_24"
+			text = "Kammarian Galactic Concordat"
+			position = { x = 45 y = 20000 }
+			maxWidth = 450
+			maxHeight = 16
+			format = LEFT
+			text_color_code = "E"
+			fixedsize = yes
+		}
+		instantTextBoxType={#Hide this thing.
+			name = "empire_government_type"
+			font = "cg_16b"
+			text = "Autocracy"
+			position = { x = 45 y = 20000	}
+			maxWidth = 250
+			maxHeight = 16
+			format = LEFT
+			fixedsize = yes
+			text_color_code = "Y"
+		}
+		instantTextBoxType={#Hide this thing.
+			name = "empire_personality_type"
+			font = "cg_16b"
+			text = "Despicable Neutrals"
+			position = { x = 45 y = 20000	}
+			maxWidth = 250
+			maxHeight = 16
+			format = LEFT
+			fixedsize = yes
+		}
+		OverlappingElementsBoxType = {#Hide this thing.
+			name = "empire_ethics_icons"
+			position = { x = 45 y = 20000 }
+			size = { x = 240 y = 30 }
+			spacing = 2.0
+			format = left
+		}
+		buttonType = {#Hide this thing.
+			name = "empire_flag"
+			quadTextureSprite = "GFX_empire_flag_128_curator"
+			position = { x = 25 y = 20000 }
+			orientation = UPPER_LEFT
+		}
+		containerWindowType = {#Hide this thing
+			name = "leader_details"
+			position = { x = 25 y = 20000 }
+			containerWindowType = {
+				name = "empire_traits_box"
+				position = { x = 0 y = -5 }
+				size = { width = 210 height = 75 }
+
+				background = {
+					name = "ethics_bg"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+			}
+			instantTextBoxType = {
+				name = "empire_traits_label"
+				position = { x = 214 y = 37 }
+				font = "cg_16b"
+				maxWidth = 230
+				maxHeight = 20
+				fixedSize = yes
+				format = left
+				#text_color_code = "E"
+				text = "RULER_TRAITS"
+				alwaysTransparent = yes
+			}
+			overlappingElementsBoxType = {
+				name = "leader_traits"
+				position = { x = 215 y = 55 }
+				size = { x = 125 y = 330 }
+			}
+			instantTextBoxType = {
+				name = "leader_name"
+				position = { x = 10 y = 0 }
+				font = "cg_16b"
+				maxWidth = 330
+				maxHeight = 20
+				fixedSize = yes
+				format = left
+				text = "Leader Name"
+				text_color_code = "E"
+			}
+			instantTextBoxType = {
+				name = "leader_species"
+				position = { x = 10 y = 18 }
+				font = "cg_16b"
+				maxWidth = 330
+				maxHeight = 20
+				fixedSize = yes
+				text = "Leader Species"
+				format = left
+			}
+		}
+		containerWindowType = {#Hide this thing.
+			name = "opinion_window"
+			position = { x = 27 y = 20000 }
+			size = { width = 94 height = 30 }
+			background = {# Use this for tooltip area, picture comes from somewhere else
+				name = "opinion_bg"
+				spriteType = "GFX_tiled_window_transparent"
+			}
+			iconType = {
+				name = "their_opinion_icon"
+				spriteType = "GFX_diplomacy_opinion"
+				position = { x = 7 y = 4 }
+				alwaysTransparent = yes
+			}
+			instantTextBoxType = {
+				name = "their_opinion"
+				font = "cg_16b"
+				maxWidth = 40
+				position = { x = 40 y = 7 }
+				format = left
+				text = "100"
+				alwaysTransparent = yes
+			}
+		}
+	}
+}

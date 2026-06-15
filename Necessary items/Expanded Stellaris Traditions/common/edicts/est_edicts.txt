@@ -1,0 +1,130 @@
+##########################################################################
+# Empire edicts
+##########################################################################
+
+country_edict = {
+	name = "est_subminds_5_energy"
+
+	influence_cost = 0.5
+
+	potential = {
+		Or = {
+			has_swapped_tradition = tr_est_subminds_5
+			has_swapped_tradition = tr_est_subminds_5_machines
+		}
+	}
+
+	allow = {
+		Nor = {
+			has_edict = est_subminds_5_food
+			has_edict = est_subminds_5_minerals
+			has_edict = est_subminds_5_unity
+			has_edict = est_subminds_5_research
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+country_edict = {
+	name = "est_subminds_5_food"
+
+	influence_cost = 0.5
+
+	potential = {
+		has_swapped_tradition = tr_est_subminds_5
+	}
+
+	allow = {
+		Nor = {
+			has_edict = est_subminds_5_energy
+			has_edict = est_subminds_5_minerals
+			has_edict = est_subminds_5_unity
+			has_edict = est_subminds_5_research
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+country_edict = {
+	name = "est_subminds_5_minerals"
+
+	influence_cost = 0.5
+
+	potential = {
+		Or = {
+			has_swapped_tradition = tr_est_subminds_5
+			has_swapped_tradition = tr_est_subminds_5_machines
+		}
+	}
+
+	allow = {
+		Nor = {
+			has_edict = est_subminds_5_energy
+			has_edict = est_subminds_5_food
+			has_edict = est_subminds_5_unity
+			has_edict = est_subminds_5_research
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+country_edict = {
+	name = "est_subminds_5_unity"
+
+	influence_cost = 0.5
+
+	potential = {
+		Or = {
+			has_swapped_tradition = tr_est_subminds_5
+			has_swapped_tradition = tr_est_subminds_5_machines
+		}
+	}
+
+	allow = {
+		Nor = {
+			has_edict = est_subminds_5_energy
+			has_edict = est_subminds_5_food
+			has_edict = est_subminds_5_minerals
+			has_edict = est_subminds_5_research
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+country_edict = {
+	name = "est_subminds_5_research"
+
+	influence_cost = 0.5
+
+	potential = {
+		Or = {
+			has_swapped_tradition = tr_est_subminds_5
+			has_swapped_tradition = tr_est_subminds_5_machines
+		}
+	}
+
+	allow = {
+		Nor = {
+			has_edict = est_subminds_5_energy
+			has_edict = est_subminds_5_food
+			has_edict = est_subminds_5_minerals
+			has_edict = est_subminds_5_unity
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}	
+}

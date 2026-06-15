@@ -1,0 +1,610 @@
+spriteTypes = {
+	spriteType = { name = "GFX_roci_tooltip"					texturefile = "gfx/interface/menu_ui/roci_tooltip.dds" }
+	spriteType = { name = "GFX_roci_info"					texturefile = "gfx/interface/menu_ui/roci_button_i.dds" }
+
+	spriteType = {
+		name = "GFX_roci_settings_anim"
+		texturefile = "gfx/interface/menu_ui/roci_settings.dds" #The base image. Defines the size of the sprite.
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 1
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/roci_settings.dds" #The shape of the animation. Whitespace appears to define where the animation can appear.
+			animationtexturefile = "gfx/interface/menu_ui/roci_settings.dds" #The image to animate.
+			animationrotation = 0.0
+			animationlooping = yes
+			animationtime = 5.0
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "pulsing"  #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = { name = "GFX_roci_settings"						texturefile = "gfx/interface/menu_ui/roci_settings.dds" }
+	spriteType = { name = "GFX_roci_settings_off"					texturefile = "gfx/interface/menu_ui/roci_settings_off.dds" }
+	
+	#Thumbnails for the ROCI settings menu
+	spriteType = { name = "GFX_roci_settings_bg"					texturefile = "gfx/event_pictures/module_thumbnails/half_button_background.dds" }
+	spriteType = { name = "GFX_roci_desc_bg"						texturefile = "gfx/event_pictures/module_thumbnails/desc_background.dds" }
+	spriteType = { name = "GFX_roci_autofab_thumb"					texturefile = "gfx/event_pictures/module_thumbnails/autofab.dds" }
+	spriteType = { name = "GFX_roci_exploit_thumb"					texturefile = "gfx/event_pictures/module_thumbnails/exploit.dds" }
+	spriteType = { name = "GFX_roci_orbital_thumb"					texturefile = "gfx/event_pictures/module_thumbnails/orbital.dds" }
+	spriteType = { name = "GFX_roci_realdev_thumb"					texturefile = "gfx/event_pictures/module_thumbnails/realdev.dds" }
+	spriteType = { name = "GFX_roci_febuildings_thumb"				texturefile = "gfx/event_pictures/module_thumbnails/febuildings.dds" }
+	spriteType = { name = "GFX_roci_cargoships_thumb"				texturefile = "gfx/event_pictures/module_thumbnails/cargoships.dds" }
+	spriteType = { name = "GFX_roci_shipping_thumb"					texturefile = "gfx/event_pictures/module_thumbnails/shipping.dds" }
+	
+	spriteType = {
+		name = "GFX_roci_border"
+		texturefile = "gfx/event_pictures/module_thumbnails/roci_module_border.dds" #The base image. Defines the size of the sprite.
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 1
+		animation = {
+			animationmaskfile = "gfx/event_pictures/module_thumbnails/roci_module_border.dds" #The shape of the animation. Whitespace appears to define where the animation can appear.
+			animationtexturefile = "gfx/event_pictures/module_thumbnails/roci_module_border.dds" #The image to animate.
+			animationrotation = 0.0
+			animationlooping = yes
+			animationtime = 5.0
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "pulsing"  #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 }
+		}
+		legacy_lazy_load = no
+	}
+	
+	
+	spriteType = { name = "GFX_realdev_planet_bg"						texturefile = "gfx/interface/menu_ui/industry_production_panel_planet.dds" }
+	
+	
+	spriteType = { name = "GFX_roci_1"						texturefile = "gfx/interface/menu_ui/1.dds" }
+	spriteType = { name = "GFX_roci_1_neg"					texturefile = "gfx/interface/menu_ui/-1.dds" }
+	spriteType = { name = "GFX_roci_10"						texturefile = "gfx/interface/menu_ui/10.dds" }
+	spriteType = { name = "GFX_roci_10_neg"					texturefile = "gfx/interface/menu_ui/-10.dds" }
+	spriteType = { name = "GFX_roci_100"						texturefile = "gfx/interface/menu_ui/100.dds" }
+	spriteType = { name = "GFX_roci_100_neg"					texturefile = "gfx/interface/menu_ui/-100.dds" }
+	
+	spriteType = { name = "GFX_text_menu_1"							texturefile = "gfx/interface/icons/text_icons/text_icon_menu_1.dds" }
+	spriteType = { name = "GFX_text_menu_2"							texturefile = "gfx/interface/icons/text_icons/text_icon_menu_2.dds" }
+	spriteType = { name = "GFX_text_menu_3"							texturefile = "gfx/interface/icons/text_icons/text_icon_menu_3.dds" }
+	spriteType = { name = "GFX_giga_menu_bg"						texturefile = "gfx/interface/menu_ui/background.dds" }
+	spriteType = { name = "GFX_menu_button_bg"						texturefile = "gfx/interface/menu_ui/button_background.dds" }
+	spriteType = { name = "GFX_extend_menu_button"					texturefile = "gfx/interface/menu_ui/extend_button_background.dds" }
+	spriteType = { name = "GFX_long_menu_button"					texturefile = "gfx/interface/menu_ui/long_button_background.dds" }
+	spriteType = { name = "GFX_long_menu_button_skinny"				texturefile = "gfx/interface/menu_ui/skinny_long_button_background.dds" }
+	spriteType = { name = "GFX_medium_menu_button_skinny"			texturefile = "gfx/interface/menu_ui/skinny_medium_button_background.dds" }
+	spriteType = { name = "GFX_half_menu_button_bg"					texturefile = "gfx/interface/menu_ui/half_button_background.dds" }
+	spriteType = { name = "GFX_small_half_menu_button_bg"			texturefile = "gfx/interface/menu_ui/small_half_button_background.dds" }
+	spriteType = { name = "GFX_blank_small_half_menu_button_bg"		texturefile = "gfx/interface/menu_ui/blank_small_half_button_background.dds" }
+	spriteType = { name = "GFX_blank_menu_button_bg"				texturefile = "gfx/interface/menu_ui/blank_button_background.dds" }
+	spriteType = { name = "GFX_blank_half_menu_button_bg"			texturefile = "gfx/interface/menu_ui/blank_half_button_background.dds" }
+	spriteType = { name = "GFX_blank_tiny_menu_button_bg"			texturefile = "gfx/interface/menu_ui/blank_tiny_button_background.dds" }
+	spriteType = { name = "GFX_menu_button_skinny"					texturefile = "gfx/interface/menu_ui/skinny_button_background.dds" }
+	spriteType = { name = "GFX_half_menu_button_skinny"				texturefile = "gfx/interface/menu_ui/skinny_half_button_background.dds" }
+	spriteType = { name = "GFX_blank_menu_button_skinny"			texturefile = "gfx/interface/menu_ui/blank_skinny_button_background.dds" }
+	spriteType = { name = "GFX_blank_half_menu_button_skinny"		texturefile = "gfx/interface/menu_ui/blank_skinny_half_button_background.dds" }
+	
+	#Buttons
+	spriteType = { name = "GFX_roci_menu_minus_g"					texturefile = "gfx/interface/menu_ui/roci_menu_minus_g.dds" }
+	
+	#Sidebar Buttons
+	spriteType = { name = "GFX_side_top"							texturefile = "gfx/interface/menu_ui/side_button_top.dds" }
+	spriteType = { name = "GFX_autofab_side"						texturefile = "gfx/interface/menu_ui/side_button_factory.dds" }
+	spriteType = { name = "GFX_exploit_side"						texturefile = "gfx/interface/menu_ui/side_button_exploit.dds" }
+	spriteType = { name = "GFX_side_bottom"							texturefile = "gfx/interface/menu_ui/side_button_bottom.dds" }
+	spriteType = { name = "GFX_exploit_side_button"					texturefile = "gfx/interface/menu_ui/exploit_side_button.dds" }
+	
+	##Realdev
+	spriteType = { name = "GFX_thicc_round_anim"							texturefile = "gfx/interface/menu_ui/roci_settings_button_middle_blu_anim.dds" }
+	spriteType = { name = "GFX_thicc_round"							texturefile = "gfx/interface/menu_ui/roci_settings_button_middle_blu.dds" }
+	spriteType = { name = "GFX_horflip_thicc_round"							texturefile = "gfx/interface/menu_ui/roci_settings_button_middle_blu_horflip.dds" }
+	spriteType = { name = "GFX_up_curve_right_blue"							texturefile = "gfx/interface/menu_ui/roci_settings_button_up_blu.dds" }
+	spriteType = { name = "GFX_down_curve_right_blue"							texturefile = "gfx/interface/menu_ui/roci_settings_button_down_blu.dds" }
+	spriteType = { name = "GFX_up_curve_left_blue"							texturefile = "gfx/interface/menu_ui/roci_settings_button_up_left_blu.dds" }
+	spriteType = { name = "GFX_down_curve_left_blue"							texturefile = "gfx/interface/menu_ui/roci_settings_button_down_left_blu.dds" }
+	spriteType = { name = "GFX_roci_menu_swap_blue"							texturefile = "gfx/interface/menu_ui/roci_settings_button_circle_swap_blu.dds" }
+	spriteType = { name = "GFX_up_curve"							texturefile = "gfx/interface/menu_ui/up_curve.dds" }
+	spriteType = { name = "GFX_down_curve"							texturefile = "gfx/interface/menu_ui/down_curve.dds" }
+	spriteType = { name = "GFX_up_curve_right"							texturefile = "gfx/interface/menu_ui/up_curve_right.dds" }
+	spriteType = { name = "GFX_down_curve_right"							texturefile = "gfx/interface/menu_ui/down_curve_right.dds" }
+	
+	spriteType = { name = "GFX_realdev_planet_numbers"					texturefile = "gfx/interface/menu_ui/realdev_planet_numbers.dds" }
+	spriteType = { name = "GFX_realdev_country_numbers"					texturefile = "gfx/interface/menu_ui/realdev_country_numbers.dds" }
+	spriteType = { name = "GFX_realdev_country_numbers_bg"					texturefile = "gfx/interface/menu_ui/realdev_country_numbers_bg.dds" }
+	spriteType = { name = "GFX_realdev_country_sliders"					texturefile = "gfx/interface/menu_ui/realdev_country_sliders.dds" }
+	spriteType = { name = "GFX_realdev_header"							texturefile = "gfx/interface/menu_ui/realdev_header.dds" }
+	spriteType = { name = "GFX_realdev_slider_space"							texturefile = "gfx/interface/menu_ui/realdev_slider_space.dds" }
+	
+	
+	#Documented
+	spriteType = {
+		name = "GFX_realdev_small_gear_anim"
+		texturefile = "gfx/interface/menu_ui/realdev_cog_small_blank.dds" #The base image. Defines the size of the sprite.
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 1
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/realdev_cog_small_mask.dds" #The shape of the animation. Whitespace appears to define where the animation can appear.
+			animationtexturefile = "gfx/interface/menu_ui/realdev_cog_small.dds" #The image to animate.
+			animationrotation = 0 #0 is bottom
+			animationlooping = yes
+			animationtime = 5.0
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating_ccw"  #scrolling, rotating, pulsing, rotating_ccw, rotating_cw
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_roci_menu_swap_blue"
+		texturefile = "gfx/interface/menu_ui/roci_settings_button_circle_swap_blu.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_menu_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/crystal_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_thicc_round_animated"
+		texturefile = "gfx/interface/menu_ui/roci_settings_button_middle_blu.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/roci_settings_button_middle_blu_anim.dds"
+			animationtexturefile = "gfx/interface/menu_ui/roci_crystal_overlay.dds" #The image to animate.
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_realdev_large_gear_anim"
+		texturefile = "gfx/interface/menu_ui/realdev_cog_big_blank.dds" #The base image. Defines the size of the sprite.
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 1
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/realdev_cog_big_mask.dds" #The shape of the animation. Whitespace appears to define where the animation can appear.
+			animationtexturefile = "gfx/interface/menu_ui/realdev_cog_big.dds" #The image to animate.
+			animationrotation = 0.0
+			animationlooping = yes
+			animationtime = 5.0
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"  #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_realdev_tiny_gear_anim_ccw"
+		texturefile = "gfx/interface/menu_ui/realdev_cog_tiny_blank.dds" #The base image. Defines the size of the sprite.
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 1
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/realdev_cog_tiny_mask_left.dds" #The shape of the animation. Whitespace appears to define where the animation can appear.
+			animationtexturefile = "gfx/interface/menu_ui/realdev_cog_tiny.dds" #The image to animate.
+			animationrotation = 0.0
+			animationlooping = yes
+			animationtime = 5.0
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating_ccw"  #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_realdev_tiny_gear_anim_cw"
+		texturefile = "gfx/interface/menu_ui/realdev_cog_tiny_blank.dds" #The base image. Defines the size of the sprite.
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 1
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/realdev_cog_tiny_mask_right.dds" #The shape of the animation. Whitespace appears to define where the animation can appear.
+			animationtexturefile = "gfx/interface/menu_ui/realdev_cog_tiny.dds" #The image to animate.
+			animationrotation = 0.0
+			animationlooping = yes
+			animationtime = 5.0
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"  #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_autofab_settings"
+		texturefile = "gfx/interface/menu_ui/autofab_settings_button.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_menu_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/crystal_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_autofab_menu_swap"
+		texturefile = "gfx/interface/menu_ui/UI_menu_swap.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_menu_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/crystal_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_roci_menu_1"
+		texturefile = "gfx/interface/menu_ui/giga_menu_1.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_menu_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/crystal_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_roci_menu_2"
+		texturefile = "gfx/interface/menu_ui/giga_menu_2.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_menu_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/crystal_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_roci_menu_3"
+		texturefile = "gfx/interface/menu_ui/giga_menu_3.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_menu_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/crystal_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_roci_menu_4"
+		texturefile = "gfx/interface/menu_ui/autofab_menu_4.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_menu_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/crystal_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_roci_menu_5"
+		texturefile = "gfx/interface/menu_ui/autofab_menu_5.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_menu_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/crystal_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_roci_menu_1_neg"
+		texturefile = "gfx/interface/menu_ui/exploit_menu_1_neg.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_menu_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/crystal_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_roci_menu_2_neg"
+		texturefile = "gfx/interface/menu_ui/exploit_menu_2_neg.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_menu_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/crystal_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_roci_menu_3_neg"
+		texturefile = "gfx/interface/menu_ui/exploit_menu_3_neg.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_menu_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/crystal_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_roci_menu_4_neg"
+		texturefile = "gfx/interface/menu_ui/exploit_menu_4_neg.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_menu_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/crystal_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_roci_menu_5_neg"
+		texturefile = "gfx/interface/menu_ui/exploit_menu_5_neg.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_menu_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/crystal_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_roci_menu_enabled"
+		texturefile = "gfx/interface/menu_ui/giga_menu_enabled.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_menu_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/crystal_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_roci_menu_disabled"
+		texturefile = "gfx/interface/menu_ui/giga_menu_disabled.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_menu_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/crystal_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_roci_menu_plus"
+		texturefile = "gfx/interface/menu_ui/autofab_menu_plus.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_menu_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/crystal_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_roci_menu_minus"
+		texturefile = "gfx/interface/menu_ui/autofab_menu_minus.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_menu_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/crystal_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "rotating"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_main_title"
+		texturefile = "gfx/interface/menu_ui/giga_title.dds"
+		noOfFrames = 1
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_title_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay_02.dds"
+			animationrotation = 185.0
+			animationlooping = yes
+			animationtime = 4
+			animationdelay = 5
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_title_mask.dds"
+			animationtexturefile = "gfx/interface/icons/relics/shine_overlay_02.dds"
+			animationrotation = 185.0
+			animationlooping = yes
+			animationtime = 10
+			animationdelay = 7.5
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+	spriteType = {
+		name = "GFX_roci_btn_prev"
+		texturefile = "gfx/interface/menu_ui/giga_ui_left.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_ui_left_mask.dds"
+			animationtexturefile = "gfx/interface/buttons/button_268_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 20.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_roci_btn_next"
+		texturefile = "gfx/interface/menu_ui/giga_ui_right.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/menu_ui/giga_ui_right_mask.dds"
+			animationtexturefile = "gfx/interface/buttons/button_268_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 20.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	
+	
+	spriteType = {
+		name = "GFX_origin_exodus_fleet"
+		texturefile = "gfx/event_pictures/origins/origin_exodus_fleet.dds"
+		alwaystransparent = yes
+	}
+	
+}

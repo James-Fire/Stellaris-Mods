@@ -1,0 +1,132 @@
+effect every_country = {
+	limit = {
+		any_owned_planet = {
+			has_planet_flag = remove_country
+		}
+	}
+	destroy_country = yes
+}
+effect random_system = {
+		limit = { has_star_flag = hyperlane_source }
+		save_global_event_target_as = hyperlane_source
+	}
+	random_system = {
+		limit = {
+			has_star_flag = neighbor_4
+			has_star_flag = precursor_zroni_1
+			has_star_flag = ehof_listed
+			has_star_flag = empire_cluster
+			NOT = {
+				has_star_flag = empire_has_visited_anyone
+			}
+		}
+		add_hyperlane = {
+			from = event_target:hyperlane_source
+			to = this
+		}
+	}
+	
+effect random_system = {
+		limit = { 
+			has_star_flag = empire_home_system
+			has_star_flag = precursor_5
+			has_star_flag = neighbor_3
+		}
+		save_global_event_target_as = hyperlane_source
+	}	
+	every_system = {
+		limit = {
+			has_star_flag = rising_empire
+			has_star_flag = neighbor_4
+		}
+		add_hyperlane = {
+			from = event_target:hyperlane_source
+			to = this
+		}
+	}
+	
+effect solar_system = {
+	set_star_flag = hyperlane_source
+}
+
+effect add_resource = {	volatile_motes = 5000 }
+
+effect add_resource = {	consumer_goods = 5000 }
+
+effect 
+	solar_system = {
+		set_star_flag = war_moon_planet_here
+		spawn_megastructure = {
+			type = war_moon_debris
+			random_pos = yes
+			orbit_angle = 360
+			orbit_distance = 200
+			location = star
+		}
+	}
+
+effect set_variable = { which = pop_count value = 0 } every_galaxy_pop = { PREV = { change_variable = { which = pop_count value = 1 } }
+
+effect every_subject = { limit = { is_subject_type = vassal } set_subject_of = { who = ROOT	subject_type = tributary }
+
+effect set_policy = { policy = war_philosophy option = unrestricted_wars }
+
+effect set_planet_flag = hyperlane_source
+effect set_planet_flag = hyperlane_dest
+effect 
+	random_system = {
+		limit = { any_system_planet = { has_planet_flag = hyperlane_source } }
+		save_global_event_target_as = hyperlane_source
+		every_system_planet = {
+			remove_planet_flag = hyperlane_source
+		}
+	}
+	solar_system = {
+		add_hyperlane = {
+			from = event_target:hyperlane_source
+			to = this
+		}
+	}
+
+effect federation = { add_federation_experience = 1000 add_cohesion = 100 }
+effect set_federation_leader = ROOT
+effect every_owned_pop = {
+		limit = {
+			OR = {
+				has_trait = trait_robot_recycled
+				has_trait = trait_robot_streamlined_protocols
+				has_trait = trait_robot_loyalty_circuits
+			}
+		}
+		kill_pop = yes
+		root = {
+			create_pop = {
+				species = owner_species
+				ethos = ethic_materialist
+			}
+		}
+	}
+effect save_global_event_target_as = resettle_dest
+effect clear_global_event_target = resettle_dest
+effect every_owned_pop = { resettle_pop = { pop = this planet = event_target:resettle_dest } }
+effect set_variable = { which = orbital_industry value = orbital_forge } set_variable = { which = orbital_forge value = 0 }
+
+effect change_government = {
+	authority = auth_machine_intelligence
+	civics = random
+}
+
+effect every_country = { limit = { has_country_flag = copy_dest } copy_ethos_and_authority = FROM }
+
+effect while = {
+	count = 30
+	create_pop = {
+				species = owner_species
+				ethos = ethic_materialist
+			}
+}
+
+effect add_modifier = {
+	modifier = galatron_naval_cap1
+	multiplier = 100
+}

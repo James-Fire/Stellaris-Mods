@@ -1,0 +1,456 @@
+tech_buildable_battlecruiser = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	weight = 0
+	prerequisites = { "tech_battleships" }
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { any_owned_ship = { is_ship_size = npc_warship_01 } }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_technology = tech_titans
+		}
+	}
+	
+	ai_weight = {
+		factor = 100 #important tech
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_carrier_battlecruiser = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	weight = 20
+	prerequisites = { "tech_battleships" }
+	
+	potential = {
+		has_country_flag = picked_battlecruiser
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { any_owned_ship = { is_ship_size = npc_warship_01 } }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_technology = tech_titans
+		}
+		modifier = {
+			factor = 0
+			has_country_flag = picked_battlecruiser
+			NOT = {
+				has_country_flag = wants_others
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100 #important tech
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_build_battlecruiser_m = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	weight = 20
+	
+	potential = {
+		has_country_flag = picked_battlecruiser
+	}
+
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { any_owned_ship = { is_ship_size = npc_warship_01 } }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_technology = tech_titans
+		}
+		modifier = {
+			factor = 0
+			has_country_flag = picked_battlecruiser
+			NOT = {
+				has_country_flag = wants_others
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100 #important tech
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_auto_battlecruiser_xl = {
+	cost = 14000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_buildable_battlecruiser" }
+	weight = 30
+	
+	potential = {
+		has_country_flag = picked_battlecruiser
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_auto_battlecruiser_xxl = {
+	cost = 17000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_auto_battlecruiser_xl" }
+	weight = 25
+	
+	potential = {
+		has_country_flag = picked_battlecruiser
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_auto_battlecruiser_t = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_auto_battlecruiser_xxl" "tech_titans" }
+	weight = 20
+	
+	potential = {
+		has_country_flag = picked_battlecruiser
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_auto_battlecruiser_txl = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_auto_battlecruiser_t" }
+	weight = 20
+	
+	potential = {
+		has_country_flag = picked_battlecruiser
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_auto_battlecruiser_build_speed = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_buildable_battlecruiser" }
+	weight = 12.5
+	
+	potential = {
+		has_country_flag = picked_battlecruiser
+	}
+	
+	modifier = {
+		shipsize_buildable_battlecruiser_build_speed_mult = 0.25
+		ship_dreadnought_build_cost_mult = -0.05
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_auto_battlecruiser_hull_1 = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_buildable_battlecruiser" }
+	weight = 12.5
+	
+	potential = {
+		has_country_flag = picked_battlecruiser
+	}
+	
+	modifier = {
+		shipsize_buildable_battlecruiser_hull_add = 2000
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+	}
+	
+	ai_weight = {
+		factor = 3 #ship upgrades are supposed to be good!
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_auto_battlecruiser_hull_2 = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_buildable_battlecruiser" "tech_auto_battlecruiser_hull_1" }
+	weight = 5
+	is_rare = yes
+	
+	potential = {
+		has_country_flag = picked_battlecruiser
+	}
+	
+	modifier = {
+		shipsize_buildable_battlecruiser_hull_add = 2000
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.25
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_voidcraft"
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+	}
+	
+	ai_weight = {
+		factor = 3 #ship upgrades are supposed to be good!
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_artillery_battlecruiser = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	weight = 20
+	prerequisites = { "tech_battleships" }
+	
+	potential = {
+		has_country_flag = picked_battlecruiser
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { any_owned_ship = { is_ship_size = npc_warship_01 } }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_technology = tech_titans
+		}
+		modifier = {
+			factor = 0
+			has_country_flag = picked_battlecruiser
+			NOT = {
+				has_country_flag = wants_others
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100 #important tech
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}

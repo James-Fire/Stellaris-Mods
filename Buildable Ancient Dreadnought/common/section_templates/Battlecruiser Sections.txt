@@ -1,0 +1,334 @@
+@section_cost = 140
+
+#Mid2
+ship_section_template = {
+	key = "automated_battlecruiser_key_mid"
+	ship_size = buildable_battlecruiser
+	fits_on_slot = mid
+	entity = "terran_01_Hypercruiser_frontal_battery_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	ai_weight = {
+		factor = 1
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+
+		locatorname = "small_gun_01"
+	}	
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+
+		locatorname = "small_gun_02"
+	}	
+	
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "small_turret"
+
+		locatorname = "small_gun_03"
+	}
+	component_slot = {
+		name = "SMALL_GUN_04"
+		template = "small_turret"
+
+		is_side_slot = yes
+		locatorname = "small_gun_04"
+	}
+	component_slot = {
+		name = "SMALL_GUN_05"
+		template = "small_turret"
+
+		is_side_slot = yes
+		locatorname = "small_gun_05"
+	}
+	
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+
+		locatorname = "small_gun_08"
+	}	
+	
+	component_slot = {
+		name = "PD_02"
+		template = "point_defence_turret"
+
+		locatorname = "small_gun_09"
+	}	
+	
+	component_slot = {
+		name = "PD_03"
+		template = "point_defence_turret"
+
+		locatorname = "small_gun_10"
+	}
+	
+	large_utility_slots = 8
+	
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}
+
+#Mid1
+ship_section_template = {
+	key = "automated_battlecruiser_key_fore"
+	ship_size = buildable_battlecruiser
+	fits_on_slot = fore
+	entity = "terran_01_Hypercruiser_hammerhead_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { "tech_artillery_battlecruiser" }
+	
+	ai_weight = {
+		factor = 1
+	}
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+
+		locatorname = "large_gun_02"
+	}
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "large_turret"
+
+		is_side_slot = yes
+		locatorname = "large_gun_03"
+	}
+	component_slot = {
+		name = "LARGE_GUN_04"
+		template = "large_turret"
+
+		is_side_slot = yes
+		locatorname = "large_gun_04"
+	}
+	
+	large_utility_slots = 6
+	
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}
+
+ship_section_template = {
+	key = "automated_battlecruiser_key_fore_X"
+	ship_size = buildable_battlecruiser
+	fits_on_slot = fore
+	entity = "terran_01_Hypercruiser_hammerhead_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { tech_auto_battlecruiser_xl }
+	
+	ai_weight = {
+		factor = 2
+	}
+	
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_01"
+		template = "invisible_extra_large_fixed"
+
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "large_turret"
+
+		is_side_slot = yes
+		locatorname = "large_gun_03"
+	}
+	component_slot = {
+		name = "LARGE_GUN_04"
+		template = "large_turret"
+
+		is_side_slot = yes
+		locatorname = "large_gun_04"
+	}
+	
+	large_utility_slots = 6
+	
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}
+
+ship_section_template = {
+	key = "automated_battlecruiser_key_fore_X2"
+	ship_size = buildable_battlecruiser
+	fits_on_slot = fore
+	entity = "terran_01_Hypercruiser_hammerhead_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { tech_auto_battlecruiser_xxl }
+	
+	ai_weight = {
+		factor = 3
+	}
+	
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_01"
+		template = "invisible_extra_large_fixed"
+
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_02"
+		template = "invisible_extra_large_fixed"
+
+		locatorname = "large_gun_02"
+	}
+	
+	large_utility_slots = 6
+	
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}
+
+ship_section_template = {
+	key = "automated_battlecruiser_key_fore_T"
+	ship_size = buildable_battlecruiser
+	fits_on_slot = fore
+	entity = "terran_01_Hypercruiser_hammerhead_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { tech_auto_battlecruiser_t }
+	
+	ai_weight = {
+		factor = 4
+	}
+	
+	component_slot = {
+		name = "TITANIC_GUN_01"
+		template = "invisible_titanic_fixed"
+
+		locatorname = "large_gun_01"
+	}
+	
+	large_utility_slots = 6
+	
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}
+
+ship_section_template = {
+	key = "automated_battlecruiser_key_bridge_TX"
+	ship_size = buildable_battlecruiser
+	fits_on_slot = bridge
+	entity = "terran_01_Hypercruiser_deck_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { tech_auto_battlecruiser_txl }
+	
+	ai_weight = {
+		factor = 5
+	}
+	
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_02"
+		template = "invisible_extra_large_fixed"
+
+		locatorname = "large_gun_02"
+	}
+	
+	
+	large_utility_slots = 1
+	aux_utility_slots = 2
+	
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}
+
+#Mid3
+ship_section_template = {
+	key = "automated_battlecruiser_key_bridge"
+	ship_size = buildable_battlecruiser
+	fits_on_slot = bridge
+	entity = "terran_01_Hypercruiser_deck_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { "tech_artillery_battlecruiser" }
+	
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = @section_cost
+		}
+	}
+	
+	component_slot = {
+		name = "LARGE_GUN_05"
+		template = "large_turret"
+
+		is_side_slot = yes
+		locatorname = "large_gun_05"
+	}
+	component_slot = {
+		name = "LARGE_GUN_06"
+		template = "large_turret"
+
+		locatorname = "large_gun_06"
+	}
+	
+	large_utility_slots = 1
+	aux_utility_slots = 2
+}
+
+ship_section_template = {
+	key = "automated_battlecruiser_key_stern"
+	ship_size = buildable_battlecruiser
+	fits_on_slot = stern
+	entity = "terran_01_Hypercruiser_stern_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { "tech_artillery_battlecruiser" }
+	
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = 0
+		}
+	}
+	
+	component_slot = {
+		name = "LARGE_GUN_05"
+		template = "large_turret"
+
+		is_side_slot = yes
+		locatorname = "large_gun_05"
+	}
+	
+	aux_utility_slots = 3
+}

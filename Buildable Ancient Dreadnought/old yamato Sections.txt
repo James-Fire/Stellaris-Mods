@@ -1,0 +1,315 @@
+#Bow
+ship_section_template = {
+	key = "YAMATO_BOW"
+	ship_size = yamato 
+	fits_on_slot = bow
+	entity = "yamato_bow_entity"
+	icon = "GFX_ship_part_core_bow"
+
+	component_slot = {
+		name = "WAVE_MOTION_GUN_SET"
+		template = "invisible_titanic_fixed"
+
+		locatorname = "xl_gun_01"
+	}
+
+	large_utility_slots = 9
+	aux_utility_slots = 3
+	
+	cost = 2000
+}
+	
+#Mid1
+ship_section_template = {
+	key = "YAMATO_MID1"
+	ship_size = yamato 
+	fits_on_slot = mid1
+	entity = "yamato_mid1_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+
+		locatorname = "XL_gun_01"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+
+		locatorname = "XL_gun_02"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_03"
+		template = "invisible_extra_large_fixed"
+
+		locatorname = "XL_gun_03"
+	}
+	component_slot = {
+		name = "TORPEDO_01"
+		slot_size = torpedo
+
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "TORPEDO_02"
+		slot_size = torpedo
+
+		locatorname = "medium_gun_02"
+	}
+	component_slot = {
+		name = "TORPEDO_03"
+		slot_size = torpedo
+
+		locatorname = "medium_gun_03"
+	}
+
+	large_utility_slots = 9
+	aux_utility_slots = 3
+	
+	cost = 2000
+}
+	
+#Mid2
+ship_section_template = {
+	key = "YAMATO_MID2"
+	ship_size = yamato 
+	fits_on_slot = mid2
+	entity = "yamato_mid2_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+
+		locatorname = "XL_gun_01"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+
+		locatorname = "XL_gun_02"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_03"
+		template = "invisible_extra_large_fixed"
+
+		locatorname = "XL_gun_03"
+	}
+	component_slot = {
+		name = "TORPEDO_01"
+		slot_size = torpedo
+
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "TORPEDO_02"
+		slot_size = torpedo
+
+		locatorname = "medium_gun_02"
+	}
+	component_slot = {
+		name = "TORPEDO_03"
+		slot_size = torpedo
+
+		locatorname = "medium_gun_03"
+	}
+	
+	large_utility_slots = 9
+	aux_utility_slots = 3
+	
+	cost = 2000
+}
+
+#Mid3
+ship_section_template = {
+	key = "YAMATO_MID3"
+	ship_size = yamato 
+	fits_on_slot = mid3
+	entity = "yamato_mid3_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_turret"
+		slot_type = strike_craft
+		locatorname = "strike_craft_locator_01"
+	}	
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_turret"
+		slot_type = strike_craft
+		locatorname = "strike_craft_locator_02"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_turret"
+		slot_type = strike_craft
+		locatorname = "strike_craft_locator_03"
+	}	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+
+		locatorname = "large_gun_02"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+
+		locatorname = "medium_gun_02"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		template = "medium_turret"
+
+		locatorname = "medium_gun_03"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		template = "medium_turret"
+
+		locatorname = "medium_gun_04"
+	}
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+
+		locatorname = "small_gun_01"
+	}	
+	component_slot = {
+		name = "PD_02"
+		template = "point_defence_turret"
+
+		locatorname = "small_gun_02"
+	}
+	component_slot = {
+		name = "PD_03"
+		template = "point_defence_turret"
+
+		locatorname = "small_gun_03"
+	}
+	component_slot = {
+		name = "PD_04"
+		template = "point_defence_turret"
+
+		locatorname = "small_gun_04"
+	}	
+	component_slot = {
+		name = "PD_05"
+		template = "point_defence_turret"
+
+		locatorname = "small_gun_05"
+	}
+	component_slot = {
+		name = "PD_06"
+		template = "point_defence_turret"
+
+		locatorname = "small_gun_06"
+	}
+
+	large_utility_slots = 9
+	aux_utility_slots = 3
+
+	cost = 2000
+}
+	
+#Stern
+ship_section_template = {
+	key = "YAMATO_STERN"
+	ship_size = yamato 
+	fits_on_slot = stern
+	entity = "yamato_stern_entity"
+	icon = "GFX_ship_part_core_stern"
+
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+
+		locatorname = "XL_gun_01"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+
+		locatorname = "XL_gun_02"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_03"
+		template = "invisible_extra_large_fixed"
+
+		locatorname = "XL_gun_03"
+	}
+	component_slot = {
+		name = "TORPEDO_01"
+		slot_size = torpedo
+
+		locatorname = "medium_gun_01"
+	}
+	component_slot = {
+		name = "TORPEDO_02"
+		slot_size = torpedo
+
+		locatorname = "medium_gun_02"
+	}
+	component_slot = {
+		name = "TORPEDO_03"
+		slot_size = torpedo
+
+		locatorname = "medium_gun_03"
+	}
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+
+		locatorname = "small_gun_01"
+	}	
+	component_slot = {
+		name = "PD_02"
+		template = "point_defence_turret"
+
+		locatorname = "small_gun_02"
+	}
+	component_slot = {
+		name = "PD_03"
+		template = "point_defence_turret"
+
+		locatorname = "small_gun_03"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_turret"
+		slot_type = strike_craft
+		locatorname = "strike_craft_locator_01"
+	}	
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_turret"
+		slot_type = strike_craft
+		locatorname = "strike_craft_locator_02"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_turret"
+		slot_type = strike_craft
+		locatorname = "strike_craft_locator_03"
+	}
+
+
+	large_utility_slots = 9
+	aux_utility_slots = 3
+
+	cost = 2000
+}

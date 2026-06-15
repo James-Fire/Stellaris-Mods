@@ -1,0 +1,508 @@
+stargate_starting_flags = {
+	set_country_flag = stargate_placement
+	switch = {  #Starting Stargate Connection Priorities.
+		trigger = has_ethic
+		ethic_fanatic_authoritarian = {
+		}
+		ethic_fanatic_egalitarian = {
+		}
+		ethic_fanatic_xenophobe = {
+		}
+		ethic_fanatic_xenophile = {
+		}
+		ethic_fanatic_militarist = {
+		}
+		ethic_fanatic_pacifist = {
+		}
+		ethic_fanatic_spiritualist = {
+		}
+		ethic_fanatic_materialist = {
+		}
+		ethic_authoritarian = {
+		}
+		ethic_egalitarian = {
+		}
+		ethic_xenophobe = {
+		}
+		ethic_xenophile = {
+		}
+		ethic_militarist = {
+		}
+		ethic_pacifist = {
+		}
+		ethic_spiritualist = {
+		}
+		ethic_materialist = {
+		}
+		ethic_gestalt_consciousness = {
+		}
+		
+	}
+	set_country_flag = stargate_military_connections_int_1
+	set_country_flag = stargate_military_connections_ex_2
+	set_country_flag = stargate_economic_connections_int_3
+	set_country_flag = stargate_economic_connections_ex_4
+	set_country_flag = stargate_research_connections_ex_5
+}
+
+add_stargate = {
+	add_deposit = d_stargate
+	set_planet_flag = has_stargate
+	set_planet_flag = stargate_military_connections_int_1
+	set_planet_flag = stargate_military_connections_ex_2
+	set_planet_flag = stargate_economic_connections_int_3
+	set_planet_flag = stargate_economic_connections_ex_4
+	set_planet_flag = stargate_research_connections_ex_5
+	set_planet_flag = stargate_military_connections_int_cap_1
+	set_planet_flag = stargate_military_connections_ex_cap_1
+	set_planet_flag = stargate_economic_connections_int_cap_1
+	set_planet_flag = stargate_economic_connections_ex_cap_1
+	set_planet_flag = stargate_research_connections_ex_cap_1
+}
+
+reset_stargate_menu_settings_country = {
+	remove_country_flag = stargate_military_connections_int_cap_1
+	remove_country_flag = stargate_military_connections_int_cap_2
+	remove_country_flag = stargate_military_connections_int_cap_3
+	remove_country_flag = stargate_military_connections_int_cap_4
+	remove_country_flag = stargate_military_connections_int_cap_5
+	
+	remove_country_flag = stargate_military_connections_ex_cap_1
+	remove_country_flag = stargate_military_connections_int_cap_2
+	remove_country_flag = stargate_military_connections_int_cap_3
+	remove_country_flag = stargate_military_connections_int_cap_4
+	remove_country_flag = stargate_military_connections_int_cap_5
+	
+	remove_country_flag = stargate_economic_connections_int_cap_1
+	remove_country_flag = stargate_economic_connections_int_cap_2
+	remove_country_flag = stargate_economic_connections_int_cap_3
+	remove_country_flag = stargate_economic_connections_int_cap_4
+	remove_country_flag = stargate_economic_connections_int_cap_5
+	
+	remove_country_flag = stargate_economic_connections_ex_cap_1
+	remove_country_flag = stargate_economic_connections_ex_cap_2
+	remove_country_flag = stargate_economic_connections_ex_cap_3
+	remove_country_flag = stargate_economic_connections_ex_cap_4
+	remove_country_flag = stargate_economic_connections_ex_cap_5
+	
+	remove_country_flag = stargate_research_connections_ex_cap_1
+	remove_country_flag = stargate_research_connections_ex_cap_2
+	remove_country_flag = stargate_research_connections_ex_cap_3
+	remove_country_flag = stargate_research_connections_ex_cap_4
+	remove_country_flag = stargate_research_connections_ex_cap_5
+	
+	set_country_flag = stargate_military_connections_int_cap_1
+	set_country_flag = stargate_military_connections_ex_cap_1
+	set_country_flag = stargate_economic_connections_int_cap_1
+	set_country_flag = stargate_economic_connections_ex_cap_1
+	set_country_flag = stargate_research_connections_ex_cap_1
+	
+	set_stargate_variables = yes
+}
+
+reset_stargate_menu_settings_planet = {
+	remove_planet_flag = stargate_military_connections_int_cap_1
+	remove_planet_flag = stargate_military_connections_int_cap_2
+	remove_planet_flag = stargate_military_connections_int_cap_3
+	remove_planet_flag = stargate_military_connections_int_cap_4
+	remove_planet_flag = stargate_military_connections_int_cap_5
+	
+	remove_planet_flag = stargate_military_connections_ex_cap_1
+	remove_planet_flag = stargate_military_connections_int_cap_2
+	remove_planet_flag = stargate_military_connections_int_cap_3
+	remove_planet_flag = stargate_military_connections_int_cap_4
+	remove_planet_flag = stargate_military_connections_int_cap_5
+	
+	remove_planet_flag = stargate_economic_connections_int_cap_1
+	remove_planet_flag = stargate_economic_connections_int_cap_2
+	remove_planet_flag = stargate_economic_connections_int_cap_3
+	remove_planet_flag = stargate_economic_connections_int_cap_4
+	remove_planet_flag = stargate_economic_connections_int_cap_5
+	
+	remove_planet_flag = stargate_economic_connections_ex_cap_1
+	remove_planet_flag = stargate_economic_connections_ex_cap_2
+	remove_planet_flag = stargate_economic_connections_ex_cap_3
+	remove_planet_flag = stargate_economic_connections_ex_cap_4
+	remove_planet_flag = stargate_economic_connections_ex_cap_5
+	
+	remove_planet_flag = stargate_research_connections_ex_cap_1
+	remove_planet_flag = stargate_research_connections_ex_cap_2
+	remove_planet_flag = stargate_research_connections_ex_cap_3
+	remove_planet_flag = stargate_research_connections_ex_cap_4
+	remove_planet_flag = stargate_research_connections_ex_cap_5
+	
+	set_planet_flag = stargate_military_connections_int_cap_1
+	set_planet_flag = stargate_military_connections_ex_cap_1
+	set_planet_flag = stargate_economic_connections_int_cap_1
+	set_planet_flag = stargate_economic_connections_ex_cap_1
+	set_planet_flag = stargate_research_connections_ex_cap_1
+	
+	set_stargate_variables = yes
+}
+
+set_stargate_variables = {
+	if = {
+		limit = {
+			NOT = { is_variable_set = stargatecount }
+		}
+		set_variable = { which = stargatecount value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { is_variable_set = accessible_internal_military_stargatecount }
+		}
+		set_variable = { which = accessible_internal_military_stargatecount value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { is_variable_set = stargate_military_connections_int_cap }
+		}
+		set_variable = { which = stargate_military_connections_int_cap value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { is_variable_set = accessible_external_military_stargatecount }
+		}
+		set_variable = { which = accessible_external_military_stargatecount value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { is_variable_set = stargate_military_connections_ex_cap }
+		}
+		set_variable = { which = stargate_military_connections_ex_cap value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { is_variable_set = accessible_internal_civilian_stargatecount }
+		}
+		set_variable = { which = accessible_internal_civilian_stargatecount value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { is_variable_set = stargate_economic_connections_int_cap }
+		}
+		set_variable = { which = stargate_economic_connections_int_cap value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { is_variable_set = accessible_external_civilian_stargatecount }
+		}
+		set_variable = { which = accessible_external_civilian_stargatecount value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { is_variable_set = stargate_economic_connections_ex_cap }
+		}
+		set_variable = { which = stargate_economic_connections_ex_cap value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { is_variable_set = accessible_external_research_stargatecount }
+		}
+		set_variable = { which = accessible_external_research_stargatecount value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { is_variable_set = stargate_research_connections_ex_cap }
+		}
+		set_variable = { which = stargate_research_connections_ex_cap value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { is_variable_set = stargate_military_connections_int_con }
+		}
+		set_variable = { which = stargate_military_connections_int_con value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { is_variable_set = stargate_military_connections_ex_con }
+		}
+		set_variable = { which = stargate_military_connections_ex_con value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { is_variable_set = stargate_economic_connections_int_con }
+		}
+		set_variable = { which = stargate_economic_connections_int_con value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { is_variable_set = stargate_economic_connections_ex_con }
+		}
+		set_variable = { which = stargate_economic_connections_ex_con value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { is_variable_set = stargate_research_connections_ex_con }
+		}
+		set_variable = { which = stargate_research_connections_ex_con value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { is_variable_set = int_civ_stargatecount_cap }
+		}
+		set_variable = { which = int_civ_stargatecount_cap value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { is_variable_set = ex_civ_stargatecount_cap }
+		}
+		set_variable = { which = ex_civ_stargatecount_cap value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { is_variable_set = int_mil_stargatecount_cap }
+		}
+		set_variable = { which = int_mil_stargatecount_cap value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { is_variable_set = ex_mil_stargatecount_cap }
+		}
+		set_variable = { which = ex_mil_stargatecount_cap value = 0 }
+	}
+	if = {
+		limit = {
+			NOT = { is_variable_set = ex_res_stargatecount_cap }
+		}
+		set_variable = { which = ex_res_stargatecount_cap value = 0 }
+	}
+}
+
+calc_connections_upkeep_part_1 = {
+	set_variable = { which = stargate_connection_mult value = stargate_connections }
+	set_variable = { which = stargate_connection_multi value = stargate_connections }
+	if = {
+		limit = {
+			has_global_flag = stargate_logging
+		}
+		log = "Stargate Connection mult Step 1 for \\[This.GetName] \\[This.stargate_connection_mult]"
+	}
+	#(a*a)/160+1.9a-0.9
+	calc_connections_upkeep_part_2 = yes
+}
+
+calc_connections_upkeep_part_2 = {
+	multiply_variable = { which = stargate_connection_multi value = 1.9 }
+	multiply_variable = { which = stargate_connection_mult value = stargate_connection_mult }
+	if = {
+		limit = {
+			has_global_flag = stargate_logging
+		}
+		log = "Stargate Connection mult Step 2 for \\[This.GetName] \\[This.stargate_connection_mult]"
+		log = "Stargate Connection multi Step 2 for \\[This.GetName] \\[This.stargate_connection_multi]"
+	}
+	calc_connections_upkeep_part_3 = yes
+}
+
+calc_connections_upkeep_part_3 = {
+	divide_variable = { which = stargate_connection_mult value = 160 }
+	change_variable = { which = stargate_connection_multi value = -0.9 }
+	if = {
+		limit = {
+			has_global_flag = stargate_logging
+		}
+		log = "Stargate Connection mult Step 3 for \\[This.GetName] \\[This.stargate_connection_mult]"
+		log = "Stargate Connection multi Step 3 for \\[This.GetName] \\[This.stargate_connection_multi]"
+	}
+	calc_connections_upkeep_part_4 = yes
+}
+
+calc_connections_upkeep_part_4 = {
+	change_variable = { which = stargate_connection_mult value = stargate_connection_multi }
+	if = {
+		limit = {
+			has_global_flag = stargate_logging
+		}
+		log = "Stargate Connection mult Step 4 for \\[This.GetName] \\[This.stargate_connection_mult]"
+	}
+}
+
+set_stargate_connection_caps = {
+	if = {
+		limit = {
+			NOT = { has_planet_flag = stargate_local_caps }
+		}
+		set_variable = { which = int_civ_stargatecount_cap value = owner.int_civ_stargatecount_cap }
+		set_variable = { which = ex_civ_stargatecount_cap value = owner.ex_civ_stargatecount_cap }
+		set_variable = { which = int_mil_stargatecount_cap value = owner.int_mil_stargatecount_cap }
+		set_variable = { which = ex_mil_stargatecount_cap value = owner.ex_mil_stargatecount_cap }
+		set_variable = { which = ex_res_stargatecount_cap value = owner.ex_res_stargatecount_cap }
+	}
+}
+	
+
+check_galaxy_stargate_deposit = {
+	every_system = {
+		limit = {
+			any_system_planet = {
+				has_planet_flag = has_stargate
+				NOT = {
+					has_deposit = d_stargate
+				}
+			}
+		}
+		every_system_planet = {
+			limit = {
+				has_planet_flag = has_stargate
+				NOT = {
+					has_deposit = d_stargate
+				}
+			}
+			add_deposit = d_stargate
+		}
+	}
+}
+
+transfer_stargate_connection_count = {
+	if = {
+		limit = {
+			has_civilian_connection = yes
+		}
+		change_variable = { which = accessible_external_civilian_stargatecount value = PREV.stargatecount }
+	}
+	if = {
+		limit = {
+			has_military_connection = yes		
+		}
+		change_variable = { which = accessible_external_military_stargatecount value = PREV.stargatecount }
+	}
+	if = {
+		limit = {
+			has_research_connection = yes
+		}
+		change_variable = { which = accessible_external_research_stargatecount value = PREV.stargatecount }
+	}
+}
+
+#Country Scope
+stargate_connection_opinion_set = {
+	set_variable = { which = opinion_stargatecount value = PREV.stargatecount }
+	if = {
+		limit = {
+			has_global_flag = stargate_logging
+		}
+		log = "Diplo Stargates Subject \\[This.GetName] \\[This.diplo_stargatecount] for \\[PREV.GetName]"
+	}
+	while = {
+		limit = {
+			check_variable = { which = opinion_stargatecount value > 0 }
+		}
+		change_variable = { which = opinion_stargatecount value = -1 }
+		add_opinion_modifier = {
+			who = prev
+			modifier = opinion_stargate_access
+		}
+	}
+}
+
+#Country Scope
+stargate_subject_connections_calc = {
+
+}
+
+#Country Scope
+stargate_primitive_connections = {
+	every_planet_within_border = {
+		limit = {
+			OR = {
+				is_colonizable = yes
+				is_colony = yes
+			}
+			has_deposit = d_stargate
+			has_observation_outpost = yes
+			observation_outpost = { has_mission = primitive_tribute }
+			exists = owner
+			owner = {
+				is_country_type = primitive
+				is_primitive = yes
+				OR = {
+					has_country_flag = stone_age
+					has_country_flag = bronze_age
+					has_country_flag = iron_age
+					has_country_flag = late_medieval_age
+					has_country_flag = renaissance_age
+					has_country_flag = steam_age
+					has_country_flag = industrial_age
+					has_country_flag = machine_age
+					has_country_flag = atomic_age
+					has_country_flag = early_space_age
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = stargate_logging
+			}
+			log = "Valid primitive planet found for \\[PREV.GetName]"
+		}
+		ROOT = { change_variable = { which = accessible_civilian_stargatecount value = 1 } }
+		ROOT = { change_variable = { which = accessible_military_stargatecount value = 1 } }
+	}
+}
+
+reset_stargate_resettle = {
+	remove_modifier = stargate_resettle_9
+	remove_modifier = stargate_resettle_8
+	remove_modifier = stargate_resettle_7
+	remove_modifier = stargate_resettle_6
+	remove_modifier = stargate_resettle_5
+	remove_modifier = stargate_resettle_4
+	remove_modifier = stargate_resettle_3
+	remove_modifier = stargate_resettle_2
+	remove_modifier = stargate_resettle_1
+	if = {
+		limit = {
+			ROOT = { check_variable = { which = stargate_fraction value >= 0.9 } }
+		}
+		add_modifier = { modifier = stargate_resettle_9 days = -1 }
+	}
+	else_if = {
+		limit = {
+			ROOT = { check_variable = { which = stargate_fraction value >= 0.8 } }
+		}
+		add_modifier = { modifier = stargate_resettle_8 days = -1 }
+	}
+	else_if = {
+		limit = {
+			ROOT = { check_variable = { which = stargate_fraction value >= 0.7 } }
+		}
+		add_modifier = { modifier = stargate_resettle_7 days = -1 }
+	}
+	else_if = {
+		limit = {
+			ROOT = { check_variable = { which = stargate_fraction value >= 0.6 } }
+		}
+		add_modifier = { modifier = stargate_resettle_6 days = -1 }
+	}
+	else_if = {
+		limit = {
+			ROOT = { check_variable = { which = stargate_fraction value >= 0.5 } }
+		}
+		add_modifier = { modifier = stargate_resettle_5 days = -1 }
+	}
+	else_if = {
+		limit = {
+			ROOT = { check_variable = { which = stargate_fraction value >= 0.4 } }
+		}
+		add_modifier = { modifier = stargate_resettle_4 days = -1 }
+	}
+	else_if = {
+		limit = {
+			ROOT = { check_variable = { which = stargate_fraction value >= 0.3 } }
+		}
+		add_modifier = { modifier = stargate_resettle_3 days = -1 }
+	}
+	else_if = {
+		limit = {
+			ROOT = { check_variable = { which = stargate_fraction value >= 0.2 } }
+		}
+		add_modifier = { modifier = stargate_resettle_2 days = -1 }
+	}
+	else_if = {
+		limit = {
+			ROOT = { check_variable = { which = stargate_fraction value >= 0.1 } }
+		}
+		add_modifier = { modifier = stargate_resettle_1 days = -1 }
+	}
+}

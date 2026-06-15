@@ -1,0 +1,111 @@
+@section_cost = 140
+
+#Mid1
+ship_section_template = {
+	key = "carrier_battlecruiser_key_fore"
+	ship_size = buildable_battlecruiser
+	fits_on_slot = fore
+	entity = "terran_01_Hypercruiser_hammerhead_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { tech_carrier_battlecruiser }
+		
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "large_gun_02"
+	}
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "large_strike_craft"
+		is_side_slot = yes
+		rotation = 90
+		locatorname = "large_gun_03"
+	}
+	component_slot = {
+		name = "LARGE_GUN_04"
+		template = "large_strike_craft"
+		is_side_slot = yes
+		rotation = 90
+		locatorname = "large_gun_04"
+	}
+	
+	large_utility_slots = 6
+
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}
+	
+#Mid3
+ship_section_template = {
+	key = "carrier_battlecruiser_key_bridge"
+	ship_size = buildable_battlecruiser
+	fits_on_slot = bridge
+	entity = "terran_01_Hypercruiser_deck_entity"
+	icon = "GFX_ship_part_core_mid"	
+	
+	prerequisites = { tech_carrier_battlecruiser }
+	
+	component_slot = {
+		name = "LARGE_GUN_05"
+		template = "large_strike_craft"
+		is_side_slot = yes
+		rotation = 90
+		locatorname = "large_gun_05"
+	}
+	component_slot = {
+		name = "LARGE_GUN_06"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "large_gun_06"
+	}
+	
+	large_utility_slots = 1
+	aux_utility_slots = 2
+	
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}
+
+#Mid3
+ship_section_template = {
+	key = "carrier_battlecruiser_key_stern"
+	ship_size = buildable_battlecruiser
+	fits_on_slot = stern
+	entity = "terran_01_Hypercruiser_stern_entity"
+	icon = "GFX_ship_part_core_mid"	
+	
+	prerequisites = { tech_carrier_battlecruiser }
+	
+	component_slot = {
+		name = "LARGE_GUN_05"
+		template = "large_strike_craft"
+		is_side_slot = yes
+		rotation = 90
+		locatorname = "large_gun_05"
+	}
+	
+	aux_utility_slots = 3
+	
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = 0
+		}
+	}
+}

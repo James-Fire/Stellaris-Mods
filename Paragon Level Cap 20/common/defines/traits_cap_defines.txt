@@ -1,0 +1,19 @@
+	NGameplay = {
+		LEADER_BASE_SKILL_CAP = 20
+		LEADER_MAX_SKILL_CAP = 20
+		LEADER_SUBCLASS_CHOICE_LEVEL = 4 
+		# At what level you can pick your leader subclass
+		LEADER_DESTINY_CHOICE_LEVEL = 8
+		# At what level you can pick your leader destiny trait
+		MAX_BASIC_TRAITS = 3
+		# How many basic traits you can have before you only get the option to level them up
+		MAX_VETERAN_TRAITS = 4
+		# How many veteran traits you can have before you only get the option to level them up
+		DEFAULT_TRAIT_OPTIONS_ON_LEVEL_UP = 2
+		# Default number of selectable non-upgrade trait options before modifiers available on level up
+		NUM_DESTINY_TRAIT_OPTIONS = 3
+		# Default number of destiny traits to select from
+		NON_PARAGON_TRAIT_OPTIONS_ON_LEVEL_UP = 4
+		# Number of non-upgrade trait options available on level up without Galactic Paragons
+		LEADER_TRAIT_SELECTION_LEVELS = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 }
+	}

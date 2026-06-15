@@ -1,0 +1,16 @@
+if = {
+	limit = {
+		check_variable = { which = accessible_external_research_stargatecount value <= ex_res_stargatecount_cap }
+	}
+	change_variable = { which = stargate_connections value = accessible_external_research_stargatecount }
+	change_variable = { which = stargate_research_connections_ex_con value = accessible_external_research_stargatecount }
+	owner = { change_variable = { which = stargate_research_connections_ex_con value = prev.accessible_external_research_stargatecount } }
+}
+else = {
+	change_variable = { which = stargate_connections value = ex_res_stargatecount_cap }
+	change_variable = { which = stargate_research_connections_ex_con value = ex_res_stargatecount_cap }
+	owner = { change_variable = { which = stargate_research_connections_ex_con value = prev.ex_res_stargatecount_cap } }
+}
+check_connections_cap = {
+	last_changed_connection = stargate_research_connections_ex_con
+}

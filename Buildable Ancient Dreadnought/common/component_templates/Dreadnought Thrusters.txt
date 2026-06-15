@@ -1,0 +1,136 @@
+@titan_cost1 = 48
+@titan_cost2 = 96
+@titan_cost3 = 144
+@titan_cost4 = 192
+@titan_cost5 = 240
+
+utility_component_template = {
+	key = "AUTO_DREADNOUGHT_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	power = -160
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titan_cost1
+		}
+	}
+	
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	size_restriction = { buildable_dreadnought buildable_yamato buildable_executor buildable_battlecruiser }
+	upgrades_to = "AUTO_DREADNOUGHT_SHIP_THRUSTER_2"
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "AUTO_DREADNOUGHT_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	power = -240
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titan_cost2
+		}
+	}
+	
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_evasion_add = 1
+	}
+		
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	size_restriction = { buildable_dreadnought buildable_yamato buildable_executor buildable_battlecruiser }
+	upgrades_to = "AUTO_DREADNOUGHT_SHIP_THRUSTER_3"
+	
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "AUTO_DREADNOUGHT_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	power = -320
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titan_cost3
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_evasion_add = 2
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	size_restriction = { buildable_dreadnought buildable_yamato buildable_executor buildable_battlecruiser }
+	upgrades_to = "AUTO_DREADNOUGHT_SHIP_THRUSTER_4"
+	
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "AUTO_DREADNOUGHT_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	power = -400
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titan_cost4
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_evasion_add = 3
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	size_restriction = { buildable_dreadnought buildable_yamato buildable_executor buildable_battlecruiser }
+	upgrades_to = "AUTO_DREADNOUGHT_SHIP_THRUSTER_5"
+	
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "AUTO_DREADNOUGHT_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_thruster_5"
+	icon_frame = 1
+	power = -480
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titan_cost5
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 4
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	size_restriction = { buildable_dreadnought buildable_yamato buildable_executor buildable_battlecruiser }
+	
+	ai_weight = {
+		weight = 5
+	}
+}

@@ -1,0 +1,300 @@
+@cost = 56
+
+tr_est_justice_adopt = {
+	cost = { unity = @cost }
+	
+	modifier = {
+		planet_unrest_add = -25
+	}
+	
+	tradition_swap = {
+		name = tr_est_destruction_adopt
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}	
+		modifier = {
+			navy_size_mult = 0.20
+		}
+		weight = {factor = 1 }
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_egalitarian
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_egalitarian
+		}		
+	}
+}
+
+tr_est_justice_finish = {	
+	on_enabled = {
+		every_owned_pop = {
+			limit = {
+				Or = {
+					has_citizenship_type = {
+						country = owner
+						type = citizenship_full
+					}
+					And = {
+						has_citizenship_type = {
+							country = owner
+							type = citizenship_caste_system
+						}
+						is_enslaved = no				
+					}
+				}
+			}
+			add_modifier = {
+				modifier = "mod_justice_finish"
+				days = -1
+			}		
+		}
+	}
+	
+	#Check Even test_exp1.16-20
+	
+	tradition_swap = {
+		name = tr_est_destruction_finish
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}	
+		on_enabled = {
+			if = {
+				limit = {
+					is_at_war = yes
+				}
+				add_modifier = {
+					modifier = mod_est_destruction_finish
+					days = -1
+				}
+			}
+		}
+		modifier = {
+			ascension_perks_add = 1
+		}
+		weight = {factor = 1 }
+	}
+	
+	modifier = {	
+		ascension_perks_add = 1
+	}
+}
+
+tr_est_justice_1 = {
+	cost = { unity = @cost }
+	
+	modifier = {
+		pop_happiness = 0.05
+		country_resource_unity_mult = 0.05
+	}
+	
+	tradition_swap = {
+		name = tr_est_destruction_1
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}	
+		weight = {factor = 1 }
+	}
+	
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_est_justice_2 = {
+	cost = { unity = @cost }
+	
+	possible = {
+		has_tradition = tr_est_justice_1
+	}
+	
+	on_enabled = {
+		every_pop_faction = {
+			limit = {
+				has_modifier = suppressed_faction
+				owner = {
+					Not = {
+						has_country_flag = est_justice_supressing_faction
+					}
+				}
+			}
+			owner = {
+				set_country_flag = est_justice_supressing_faction
+			}
+		}
+		if = {
+			limit = {
+				Not = {
+					has_country_flag = est_justice_supressing_faction
+				}
+			}
+			every_pop_faction = {
+				add_modifier = {
+					modifier = "mod_justice_2"
+					days = -1
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = est_justice_supressing_faction
+			}
+			remove_country_flag = est_justice_supressing_faction
+		}
+	}
+	
+	#Check Event
+	
+	tradition_swap = {
+		name = tr_est_destruction_2
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}	
+		modifier = {
+			ship_weapon_damage = 0.10
+			army_damage_mult = 0.10
+			
+		}
+		weight = {factor = 1 }
+	}
+	
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_est_justice_3 = {
+	cost = { unity = @cost }
+	
+	possible = {
+		has_tradition = tr_est_justice_1
+	}
+	
+	
+	modifier = {
+		planet_colony_development_speed_mult = 0.25
+		tradition_cost_num_colonies_mult = -0.15		
+		planet_unrest_add = -5
+	}
+	
+	tradition_swap = {
+		name = tr_est_destruction_3
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}	
+		modifier = {
+		}
+		weight = {factor = 1 }
+	}
+	
+	ai_weight = {
+		factor = 2000
+	}
+}
+
+tr_est_justice_4 = {
+	cost = { unity = @cost }
+	
+	possible = {
+		has_tradition = tr_est_justice_3
+	}
+	
+	modifier = {
+		edict_influence_cost = -0.05
+		edict_length_mult = 0.10
+	}
+	
+	tradition_swap = {
+		name = tr_est_destruction_4
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}	
+		on_enabled = {
+			every_neighbor_country = {
+				limit = {
+					Not = {
+						has_ethic = ethic_gestalt_consciousness	
+						has_modifier = mod_est_destruction_4				
+					}
+				}
+				add_modifier = {
+					modifier = mod_est_destruction_4
+					days = -1
+				}
+			}				
+		}
+		weight = {factor = 1 }
+	}
+
+	ai_weight = {
+		factor = 2000
+	}
+}
+
+tr_est_justice_5 = {
+	cost = { unity = @cost }
+	
+	possible = {
+		has_tradition = tr_est_justice_4
+	}
+	
+	#esap compatibility
+	on_enabled = {	
+		if = {
+			limit = {
+				has_ascension_perk = ap_esap_multicult	
+			}	
+			add_modifier = {
+				modifier = "mod_justice_5_esap_comp"
+				days = -1
+			}
+		}
+	}
+	
+	modifier = {
+		tradition_cost_num_founder_pops_mult = -0.25
+		tradition_cost_num_xenos_mult = -0.25
+	}
+	
+	tradition_swap = {
+		name = tr_est_destruction_5
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}	
+		modifier = {
+			max_rivalries = 2
+			rivalry_influence_gain = 0.2
+		}
+		weight = {factor = 1 }
+	}
+	
+	ai_weight = {
+		factor = 5000
+	}
+}

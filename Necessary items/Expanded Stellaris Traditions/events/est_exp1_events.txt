@@ -1,0 +1,2770 @@
+namespace = est_exp1
+
+#Confederacy Adopt, gives bonus to sector planets.
+event = {
+	id = est_exp1.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		any_country = {
+			has_tradition = tr_est_confederacy_adopt
+		}
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_tradition = tr_est_confederacy_adopt
+			}
+			every_owned_planet = {
+				if = {
+					limit = {
+						sector_controlled = yes 
+						Not = {
+							And = {
+								sector = {
+									exists = leader
+								}
+								owner = {
+									has_tradition = tr_est_confederacy_2
+								}
+							}
+						}
+					}
+					if = {
+						limit = {
+							has_modifier = mod_confederacy_2								
+						}
+						remove_modifier = "mod_confederacy_2"
+					}	
+					if = {
+						limit = {
+							has_modifier = mod_subminds_2								
+						}
+						remove_modifier = "mod_subminds_2"
+					}	
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_confederacy_adopt
+							}							
+						}
+						if = {
+							limit = {
+								owner = {
+									has_non_swapped_tradition = tr_est_confederacy_adopt	
+								}	
+							}
+							if = {
+								limit = {
+									Not = {
+										has_modifier = mod_confederacy_adopt
+									}
+								}
+								add_modifier = {
+									modifier = "mod_confederacy_adopt"							
+									days = -1
+								}
+							}
+							else = {
+								if = {
+									limit = {
+										Not = {
+											has_modifier = mod_subminds_adopt
+										}
+									}
+									add_modifier = {
+										modifier = "mod_subminds_adopt"							
+										days = -1
+									}
+								}
+							}
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_confederacy_adopt								
+							}
+							remove_modifier = "mod_confederacy_adopt"
+						}	
+						if = {
+							limit = {
+								has_modifier = mod_subminds_adopt								
+							}
+							remove_modifier = "mod_subminds_adopt"
+						}						
+					}
+				}
+			}
+		}
+	}
+}
+
+#Confederacy 2, gives bonus to planets in sectors with governor.
+event = {
+	id = est_exp1.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		any_country = {
+			has_tradition = tr_est_confederacy_2
+		}
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_tradition = tr_est_confederacy_2
+			}
+			every_owned_planet = {
+				if = {
+					limit = {
+						sector_controlled = yes 
+						sector = {
+							exists = leader
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_confederacy_2
+							}
+						}
+						if = {
+							limit = {
+								owner = {
+									has_non_swapped_tradition = tr_est_confederacy_adopt}									
+							}
+							if = {
+								limit = {
+									Not = {
+										has_modifier = mod_confederacy_2
+									}
+								}
+								add_modifier = {
+									modifier = "mod_confederacy_2"							
+									days = -1
+								}
+							}
+							else = {
+								if = {
+									limit = {
+										Not = {
+											has_modifier = mod_subminds_2
+										}
+									}
+									add_modifier = {
+										modifier = "mod_subminds_2"							
+										days = -1
+									}
+								}
+							}
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_confederacy_2								
+							}
+							remove_modifier = "mod_confederacy_2"
+						}		
+						if = {
+							limit = {
+								has_modifier = mod_subminds_2								
+							}
+							remove_modifier = "mod_subminds_2"
+						}			
+					}
+				}
+			}
+		}
+	}
+}
+
+#Subminds 5, edict bonus for sector planets
+event = {
+	id = est_exp1.2001
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		any_country = {
+			has_swapped_tradition = tr_est_subminds_5
+		}
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_swapped_tradition = tr_est_subminds_5
+			}
+			if = {
+				limit = {
+					has_edict = est_subminds_5_energy
+				}
+				if = {
+					limit = {
+						Not = {
+							has_country_flag = esap_subminds_5_active_energy
+						}
+					}
+					set_country_flag = esap_subminds_5_active_energy
+					every_owned_planet = {
+						limit = {
+							sector_controlled = yes 						
+						}
+						add_modifier = {
+							modifier = "mod_subminds_5_edict_energy"							
+							days = -1
+						}
+					}
+					else = {
+						every_owned_planet = {
+							if = {
+								limit = {
+									sector_controlled = yes 						
+								}
+								if = {
+									limit = {
+										Not = {
+											has_modifier = mod_subminds_5_edict_energy
+										}
+									}
+									add_modifier = {
+										modifier = "mod_subminds_5_edict_energy"							
+										days = -1
+									}
+								}
+								else = {
+									if = {
+										limit = {
+											has_modifier = mod_subminds_5_edict_energy
+										}
+										remove_modifier = "mod_subminds_5_edict_energy"		
+									}
+								}
+							}
+						
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							has_country_flag = esap_subminds_5_active_energy
+						}
+						every_owned_planet = {
+							limit = {
+								has_modifier = mod_subminds_5_edict_energy
+							}
+							remove_modifier = "mod_subminds_5_edict_energy"
+						}	
+						remove_country_flag = esap_subminds_5_active_energy				
+					}					
+				}
+			}
+			if = {
+				limit = {
+					has_edict = est_subminds_5_minerals
+				}
+				if = {
+					limit = {
+						Not = {
+							has_country_flag = esap_subminds_5_active_minerals
+						}
+					}
+					set_country_flag = esap_subminds_5_active_minerals
+					every_owned_planet = {
+						limit = {
+							sector_controlled = yes 						
+						}
+						add_modifier = {
+							modifier = "mod_subminds_5_edict_minerals"							
+							days = -1
+						}
+					}
+					else = {
+						every_owned_planet = {
+							if = {
+								limit = {
+									sector_controlled = yes 						
+								}
+								if = {
+									limit = {
+										Not = {
+											has_modifier = mod_subminds_5_edict_minerals
+										}
+									}
+									add_modifier = {
+										modifier = "mod_subminds_5_edict_minerals"							
+										days = -1
+									}
+								}
+								else = {
+									if = {
+										limit = {
+											has_modifier = mod_subminds_5_edict_minerals
+										}
+										remove_modifier = "mod_subminds_5_edict_minerals"		
+									}
+								}
+							}
+						
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							has_country_flag = esap_subminds_5_active_minerals
+						}
+						every_owned_planet = {
+							limit = {
+								has_modifier = mod_subminds_5_edict_minerals
+							}
+							remove_modifier = "mod_subminds_5_edict_minerals"
+						}	
+						remove_country_flag = esap_subminds_5_active_minerals				
+					}					
+				}
+			}
+			if = {
+				limit = {
+					has_edict = est_subminds_5_food
+				}
+				if = {
+					limit = {
+						Not = {
+							has_country_flag = esap_subminds_5_active_food
+						}
+					}
+					set_country_flag = esap_subminds_5_active_food
+					every_owned_planet = {
+						limit = {
+							sector_controlled = yes 						
+						}
+						add_modifier = {
+							modifier = "mod_subminds_5_edict_food"							
+							days = -1
+						}
+					}
+					else = {
+						every_owned_planet = {
+							if = {
+								limit = {
+									sector_controlled = yes 						
+								}
+								if = {
+									limit = {
+										Not = {
+											has_modifier = mod_subminds_5_edict_food
+										}
+									}
+									add_modifier = {
+										modifier = "mod_subminds_5_edict_food"							
+										days = -1
+									}
+								}
+								else = {
+									if = {
+										limit = {
+											has_modifier = mod_subminds_5_edict_food
+										}
+										remove_modifier = "mod_subminds_5_edict_food"		
+									}
+								}
+							}
+						
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							has_country_flag = esap_subminds_5_active_food
+						}
+						every_owned_planet = {
+							limit = {
+								has_modifier = mod_subminds_5_edict_food
+							}
+							remove_modifier = "mod_subminds_5_edict_food"
+						}	
+						remove_country_flag = esap_subminds_5_active_food				
+					}					
+				}
+			}
+			if = {
+				limit = {
+					has_edict = est_subminds_5_unity
+				}
+				if = {
+					limit = {
+						Not = {
+							has_country_flag = esap_subminds_5_active_unity
+						}
+					}
+					set_country_flag = esap_subminds_5_active_unity
+					every_owned_planet = {
+						limit = {
+							sector_controlled = yes 						
+						}
+						add_modifier = {
+							modifier = "mod_subminds_5_edict_unity"							
+							days = -1
+						}
+					}
+					else = {
+						every_owned_planet = {
+							if = {
+								limit = {
+									sector_controlled = yes 						
+								}
+								if = {
+									limit = {
+										Not = {
+											has_modifier = mod_subminds_5_edict_unity
+										}
+									}
+									add_modifier = {
+										modifier = "mod_subminds_5_edict_unity"							
+										days = -1
+									}
+								}
+								else = {
+									if = {
+										limit = {
+											has_modifier = mod_subminds_5_edict_unity
+										}
+										remove_modifier = "mod_subminds_5_edict_unity"		
+									}
+								}
+							}
+						
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							has_country_flag = esap_subminds_5_active_unity
+						}
+						every_owned_planet = {
+							limit = {
+								has_modifier = mod_subminds_5_edict_unity
+							}
+							remove_modifier = "mod_subminds_5_edict_unity"
+						}	
+						remove_country_flag = esap_subminds_5_active_unity				
+					}					
+				}
+			}
+			if = {
+				limit = {
+					has_edict = est_subminds_5_research
+				}
+				if = {
+					limit = {
+						Not = {
+							has_country_flag = esap_subminds_5_active_research
+						}
+					}
+					set_country_flag = esap_subminds_5_active_research
+					every_owned_planet = {
+						limit = {
+							sector_controlled = yes 						
+						}
+						add_modifier = {
+							modifier = "mod_subminds_5_edict_research"							
+							days = -1
+						}
+					}
+					else = {
+						every_owned_planet = {
+							if = {
+								limit = {
+									sector_controlled = yes 						
+								}
+								if = {
+									limit = {
+										Not = {
+											has_modifier = mod_subminds_5_edict_research
+										}
+									}
+									add_modifier = {
+										modifier = "mod_subminds_5_edict_research"							
+										days = -1
+									}
+								}
+								else = {
+									if = {
+										limit = {
+											has_modifier = mod_subminds_5_edict_research
+										}
+										remove_modifier = "mod_subminds_5_edict_research"		
+									}
+								}
+							}
+						
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							has_country_flag = esap_subminds_5_active_research
+						}
+						every_owned_planet = {
+							limit = {
+								has_modifier = mod_subminds_5_edict_research
+							}
+							remove_modifier = "mod_subminds_5_edict_research"
+						}	
+						remove_country_flag = esap_subminds_5_active_research				
+					}					
+				}
+			}
+		}
+	}
+}
+					
+#Confederacy 3, reduce upkeep cost for Military Stations controlled by Sectors.
+event = {
+	id = est_exp1.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		any_country = {
+			has_tradition = tr_est_confederacy_3
+		}
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_tradition = tr_est_confederacy_2
+			}
+			every_owned_ship = {
+				limit = {
+					Or = {
+						is_ship_size = military_station_small
+						is_ship_size = military_station_medium
+						is_ship_size = military_station_large
+					}
+				}
+				if = {
+					limit = {
+						fleet = {
+							sector_controlled = yes 		
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_confederacy_3
+							}
+						}
+						add_modifier = {
+							modifier = "mod_confederacy_3"
+							days = -1
+						}
+					}					
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_confederacy_3								
+							}
+							remove_modifier = "mod_confederacy_3"
+						}					
+					}
+				}
+			}
+		}
+	}
+}
+
+#Confederacy 4, gives bonuses to subjects.
+event = {
+	id = est_exp1.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		any_country = {
+			has_tradition = tr_est_confederacy_4
+		}
+	}
+	immediate = {
+		every_country = {
+			if = {
+				limit = {
+					is_subject = yes
+					overlord = {
+						has_tradition = tr_est_confederacy_4					
+					}
+				}
+				if = {
+					limit = {
+						Not = {
+							has_modifier = mod_confederacy_4
+						}
+					}
+					add_modifier = {
+						modifier = "mod_confederacy_4"
+						days = -1
+					}
+				}					
+				else = {
+					if = {
+						limit = {
+							has_modifier = mod_confederacy_4								
+						}
+						remove_modifier = "mod_confederacy_4"
+					}					
+				}
+			}
+		}	
+	}
+}
+
+#Cybernetics 1, adds Energy bonus to robots when built. 
+pop_event = {
+	id = est_exp1.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		owner = {
+			has_non_swapped_tradition = tr_est_cybernetics_1		
+		}
+	}
+	
+	immediate = {
+		switch = {
+			trigger = pop_has_trait			
+			trait_robotic_1 = { add_modifier = {modifier = "mod_cybernetics_1_robot" days = -1}}
+			trait_robotic_2 = { add_modifier = {modifier = "mod_cybernetics_1_droid" days = -1} }
+			trait_robotic_3 = { add_modifier = {modifier = "mod_cybernetics_1_synthetic" days = -1} }
+		}
+	}
+}
+
+#Cybernetics 1, adds Energy bonus to robots when conquered. 
+planet_event = {
+	id = est_exp1.6
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		owner = {
+			has_non_swapped_tradition = tr_est_cybernetics_1		
+		}
+	}
+	
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				Or = {
+					pop_has_trait = trait_robotic_1
+					pop_has_trait = trait_robotic_2
+					pop_has_trait = trait_robotic_3
+				}
+				NOR = {
+					has_modifier = mod_cybernetics_1_robot
+					has_modifier = mod_cybernetics_1_droid
+					has_modifier = mod_cybernetics_1_synthetic
+				}
+			}
+			switch = {
+				trigger = pop_has_trait			
+				trait_robotic_1 = { add_modifier = {modifier = "mod_cybernetics_1_robot" days = -1} }
+				trait_robotic_2 = { add_modifier = {modifier = "mod_cybernetics_1_droid" days = -1} }
+				trait_robotic_3 = { add_modifier = {modifier = "mod_cybernetics_1_synthetic" days = -1} }
+			}			
+		}
+	}
+}
+
+#Cybernetics 2, adds Research bonus to robots when built.
+pop_event = {
+	id = est_exp1.7
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		owner = {
+			has_non_swapped_tradition = tr_est_cybernetics_2		
+		}
+	}
+	
+	immediate = {
+		switch = {
+			trigger = pop_has_trait			
+			trait_robotic_1 = { add_modifier = {modifier = "mod_cybernetics_2_robot" days = -1} }
+			trait_robotic_2 = { add_modifier = {modifier = "mod_cybernetics_2_droid" days = -1} }
+			trait_robotic_3 = { add_modifier = {modifier = "mod_cybernetics_2_synthetic" days = -1} }
+		}
+	}
+}
+
+#Cybernetics 2, adds Research bonus to robots when conquered.
+planet_event = {
+	id = est_exp1.8
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		owner = {
+			has_non_swapped_tradition = tr_est_cybernetics_2		
+		}
+	}
+	
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				Or = {
+					pop_has_trait = trait_robotic_1
+					pop_has_trait = trait_robotic_2
+					pop_has_trait = trait_robotic_3
+				}
+				NOR = {
+					has_modifier = mod_cybernetics_2_robot
+					has_modifier = mod_cybernetics_2_droid
+					has_modifier = mod_cybernetics_2_synthetic
+				}
+			}
+			switch = {
+				trigger = pop_has_trait			
+				trait_robotic_1 = { add_modifier = {modifier = "mod_cybernetics_2_robot" days = -1} }
+				trait_robotic_2 = { add_modifier = {modifier = "mod_cybernetics_2_droid" days = -1} }
+				trait_robotic_3 = { add_modifier = {modifier = "mod_cybernetics_2_synthetic" days = -1} }
+			}			
+		}
+	}
+}
+
+event = {
+	id = est_exp1.8001
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		any_country = {
+			has_swapped_tradition = tr_est_processing_4
+		}
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_swapped_tradition = tr_est_processing_4
+			}
+			every_owned_leader = {
+				add_experience = 5
+			}
+		}
+	}
+}
+	
+
+country_event = {
+	id = est_exp1.8001
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		has_non_swapped_tradition = tr_est_cybernetics_1		
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				last_increased_tech = "tech_droid_workers"
+			}
+			every_owned_pop = {
+				limit = {
+					pop_has_trait = trait_robotic_1
+				}
+				if = {
+					limit = {
+						Not = {
+							has_modifier = mod_cybernetics_1_droid			
+						}
+					}
+					add_modifier = {
+						modifier = "mod_cybernetics_1_droid" 
+						days = -1 
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = mod_cybernetics_1_robot
+					}
+					remove_modifier = "mod_cybernetics_1_robot"
+				}
+				if = {
+					limit = {
+						has_modifier = mod_cybernetics_1_synthetic
+					}
+					remove_modifier = "mod_cybernetics_1_synthetic"
+				}
+			}			
+		}
+		if = {
+			limit = {
+				last_increased_tech = "tech_synthetic_workers"
+			}
+			every_owned_pop = {
+				limit = {
+					pop_has_trait = trait_robotic_2
+				}
+				if = {
+					limit = {
+						Not = {
+							has_modifier = mod_cybernetics_1_synthetic
+						}
+					}
+					add_modifier = {
+						modifier = "mod_cybernetics_1_synthetic" 
+						days = -1 
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = mod_cybernetics_1_robot
+					}
+					remove_modifier = "mod_cybernetics_1_robot"
+				}
+				if = {
+					limit = {
+						has_modifier = mod_cybernetics_1_droid
+					}
+					remove_modifier = "mod_cybernetics_1_droid"
+				}
+			}			
+		}	
+	}
+}
+
+country_event = {
+	id = est_exp1.8002
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		has_non_swapped_tradition = tr_est_cybernetics_2	
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				last_increased_tech = "tech_droid_workers"
+			}
+			every_owned_pop = {
+				limit = {
+					pop_has_trait = trait_robotic_1
+				}
+				if = {
+					limit = {
+						Not = {
+							has_modifier = mod_cybernetics_2_droid			
+						}
+					}
+					add_modifier = {
+						modifier = "mod_cybernetics_2_droid" 
+						days = -1 
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = mod_cybernetics_2_robot
+					}
+					remove_modifier = "mod_cybernetics_2_robot"
+				}
+				if = {
+					limit = {
+						has_modifier = mod_cybernetics_2_synthetic
+					}
+					remove_modifier = "mod_cybernetics_2_synthetic"
+				}
+			}			
+		}
+		if = {
+			limit = {
+				last_increased_tech = "tech_synthetic_workers"
+			}
+			every_owned_pop = {
+				limit = {
+					pop_has_trait = trait_robotic_2
+				}
+				if = {
+					limit = {
+						Not = {
+							has_modifier = mod_cybernetics_2_synthetic
+						}
+					}
+					add_modifier = {
+						modifier = "mod_cybernetics_2_synthetic" 
+						days = -1 
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = mod_cybernetics_2_robot
+					}
+					remove_modifier = "mod_cybernetics_2_robot"
+				}
+				if = {
+					limit = {
+						has_modifier = mod_cybernetics_2_droid
+					}
+					remove_modifier = "mod_cybernetics_2_droid"
+				}
+			}			
+		}	
+	}
+}
+
+event = {
+	id = est_exp1.8003
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		any_country = {
+			has_non_swapped_tradition = tr_est_cybernetics_1		
+		}
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_non_swapped_tradition = tr_est_cybernetics_1	
+			}		
+			every_owned_pop = {
+				limit = {
+					Or = {
+						pop_has_trait = trait_robotic_1
+						pop_has_trait = trait_robotic_2
+						pop_has_trait = trait_robotic_3
+					}				
+				}
+				if = {
+					limit = {
+						pop_has_trait = trait_robotic_1
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_cybernetics_1_robot
+							}
+						}
+						add_modifier = {
+							modifier = "mod_cybernetics_1_robot" 
+							days = -1 
+						}
+					}
+					if = {
+						limit = {
+							has_modifier = mod_cybernetics_1_synthetic
+						}
+						remove_modifier = "mod_cybernetics_1_synthetic"
+					}
+					if = {
+						limit = {
+							has_modifier = mod_cybernetics_1_droid
+						}
+						remove_modifier = "mod_cybernetics_1_droid"
+					}					
+				}
+				if = {
+					limit = {
+						pop_has_trait = trait_robotic_2
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_cybernetics_1_droid
+							}
+						}
+						add_modifier = {
+							modifier = "mod_cybernetics_1_droid" 
+							days = -1 
+						}
+					}
+					if = {
+						limit = {
+							has_modifier = mod_cybernetics_1_synthetic
+						}
+						remove_modifier = "mod_cybernetics_1_synthetic"
+					}
+					if = {
+						limit = {
+							has_modifier = mod_cybernetics_1_robot
+						}
+						remove_modifier = "mod_cybernetics_1_robot"
+					}					
+				}
+				if = {
+					limit = {
+						pop_has_trait = trait_robotic_3
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_cybernetics_1_synthetic
+							}
+						}
+						add_modifier = {
+							modifier = "mod_cybernetics_1_synthetic" 
+							days = -1 
+						}
+					}
+					if = {
+						limit = {
+							has_modifier = mod_cybernetics_1_robot
+						}
+						remove_modifier = "mod_cybernetics_1_robot"
+					}
+					if = {
+						limit = {
+							has_modifier = mod_cybernetics_1_droid
+						}
+						remove_modifier = "mod_cybernetics_1_droid"
+					}					
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				has_non_swapped_tradition = tr_est_cybernetics_2	
+			}		
+			every_owned_pop = {
+				limit = {
+					Or = {
+						pop_has_trait = trait_robotic_1
+						pop_has_trait = trait_robotic_2
+						pop_has_trait = trait_robotic_3
+					}				
+				}
+				if = {
+					limit = {
+						pop_has_trait = trait_robotic_1
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_cybernetics_2_robot
+							}
+						}
+						add_modifier = {
+							modifier = "mod_cybernetics_2_robot" 
+							days = -1 
+						}
+					}
+					if = {
+						limit = {
+							has_modifier = mod_cybernetics_2_synthetic
+						}
+						remove_modifier = "mod_cybernetics_2_synthetic"
+					}
+					if = {
+						limit = {
+							has_modifier = mod_cybernetics_2_droid
+						}
+						remove_modifier = "mod_cybernetics_2_droid"
+					}					
+				}
+				if = {
+					limit = {
+						pop_has_trait = trait_robotic_2
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_cybernetics_2_droid
+							}
+						}
+						add_modifier = {
+							modifier = "mod_cybernetics_2_droid" 
+							days = -1 
+						}
+					}
+					if = {
+						limit = {
+							has_modifier = mod_cybernetics_2_synthetic
+						}
+						remove_modifier = "mod_cybernetics_2_synthetic"
+					}
+					if = {
+						limit = {
+							has_modifier = mod_cybernetics_2_robot
+						}
+						remove_modifier = "mod_cybernetics_2_robot"
+					}					
+				}
+				if = {
+					limit = {
+						pop_has_trait = trait_robotic_3
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_cybernetics_2_synthetic
+							}
+						}
+						add_modifier = {
+							modifier = "mod_cybernetics_2_synthetic" 
+							days = -1 
+						}
+					}
+					if = {
+						limit = {
+							has_modifier = mod_cybernetics_2_robot
+						}
+						remove_modifier = "mod_cybernetics_2_robot"
+					}
+					if = {
+						limit = {
+							has_modifier = mod_cybernetics_2_droid
+						}
+						remove_modifier = "mod_cybernetics_2_droid"
+					}					
+				}
+			}
+		}
+	}
+}
+
+
+#Cybernetics 4, adds bonus to fleets without an admiral.
+event = {
+	id = est_exp1.9
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		any_country = {
+			has_non_swapped_tradition = tr_est_cybernetics_4		
+		}
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_non_swapped_tradition = tr_est_cybernetics_4	
+			}		
+			every_owned_ship = {
+				if = {
+					limit = {
+						fleet = {
+							Not = {
+								exists = leader
+							}
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_cybernetics_4
+							}
+						}
+						add_modifier = {
+							modifier = "mod_cybernetics_4"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_cybernetics_4
+							}
+							remove_modifier = "mod_cybernetics_4"		
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Cybernetics 5, adds happiness to slaves when enslaved.
+pop_event = {
+	id = est_exp1.10
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		owner = {
+			has_non_swapped_tradition = tr_est_cybernetics_5		
+		}
+		Not = {
+			has_modifier = mod_cybernetics_5_slave			
+		}
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = "mod_cybernetics_5_slave"
+			days = -1
+		}
+	}
+}
+
+#Cybernetics 5, removes happiness to slaves when freed.
+pop_event = {
+	id = est_exp1.11
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		has_modifier = mod_cybernetics_5_slave	
+	}
+	
+	immediate = {
+		remove_modifier = "mod_cybernetics_5_slave"
+	}
+}
+
+#Cybernetics 5, gives happiness when chemical bliss.
+pop_event = {
+	id = est_exp1.12
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		owner = {
+			has_non_swapped_tradition = tr_est_cybernetics_5
+		}
+		Not = {
+			has_modifier = mod_cybernetics_5_chemical_bliss		
+		}
+		has_living_standard = { 
+			country = owner 
+			type = living_standard_chemical_bliss 
+		}
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = "mod_cybernetics_5_chemical_bliss"
+			days = -1
+		}
+	}
+}
+
+#Cybernetics 5, gives happiness when chemical bliss (on born).
+pop_event = {
+	id = est_exp1.13
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		owner = {
+			has_non_swapped_tradition = tr_est_cybernetics_5		
+		}
+		has_living_standard = { 
+			country = owner 
+			type = living_standard_chemical_bliss
+		}
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = "mod_cybernetics_5_chemical_bliss"
+			days = -1
+		}
+	}
+}
+
+#Cybernetics 5, adds happiness when chemical bliss (on conquered).
+planet_event = {
+	id = est_exp1.14
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		owner = {
+			has_non_swapped_tradition = tr_est_cybernetics_5		
+		}
+	}
+	
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				has_living_standard = { 
+					country = owner 
+					type = living_standard_chemical_bliss 
+				}				
+				Not = {
+					has_modifier = mod_cybernetics_5_chemical_bliss		
+				}
+			}
+			add_modifier = {
+				modifier = "mod_cybernetics_5_chemical_bliss"
+				days = -1
+			}			
+		}
+	}
+}
+
+#Justice 2, gives faction happiness when no faction is supressed.
+event = {
+	id = est_exp1.15
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		any_country = {
+			has_non_swapped_tradition = tr_est_justice_2
+		}
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_non_swapped_tradition = tr_est_justice_2			
+			}
+			every_pop_faction = {
+				limit = {
+					has_modifier = suppressed_faction
+					owner = {
+						Not = {
+							has_country_flag = est_justice_supressing_faction
+						}
+					}
+				}
+				owner = {
+					set_country_flag = est_justice_supressing_faction
+				}
+			}
+			if = {
+				limit = {
+					Not = {
+						has_country_flag = est_justice_supressing_faction
+					}
+				}
+				every_pop_faction = {
+					limit = {
+						Not = {
+							has_modifier = mod_justice_2
+						}
+					}
+					add_modifier = {
+						modifier = "mod_justice_2"
+						days = -1
+					}
+				}
+				else = {
+					every_pop_faction = {
+						limit = {
+							has_modifier = mod_justice_2							
+						}
+						remove_modifier = "mod_justice_2"
+					}			
+					remove_country_flag = est_justice_supressing_faction
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = est_justice_supressing_faction
+				}
+				remove_country_flag = est_justice_supressing_faction
+			}
+		}
+	}
+}
+
+#Justice Finish, gives bonus when pop are born.
+pop_event = {
+	id = est_exp1.16
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		owner = {
+			has_non_swapped_tradition = tr_est_justice_finish
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				Or = {
+					has_citizenship_type = {
+						country = owner
+						type = citizenship_full
+					}
+					And = {
+						has_citizenship_type = {
+							country = owner
+							type = citizenship_caste_system
+						}
+						is_enslaved = no				
+					}
+				}
+			}
+			add_modifier = {
+				modifier = "mod_justice_finish"
+				days = -1
+			}
+		}
+	}
+}
+
+#Justice Finish, gives bonus when planet conquered.
+planet_event = {
+	id = est_exp1.17
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		owner = {
+			has_non_swapped_tradition = tr_est_justice_finish
+		}
+	}
+	
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				Or = {
+					has_citizenship_type = {
+						country = owner
+						type = citizenship_full
+					}
+					And = {
+						has_citizenship_type = {
+							country = owner
+							type = citizenship_caste_system
+						}
+						is_enslaved = no				
+					}
+				}
+				Not = {
+					has_modifier = "mod_justice_finish"
+				}
+			}
+			add_modifier = {
+				modifier = "mod_justice_finish"
+				days = -1
+			}		
+		}
+	}
+}
+
+#Justice Finish, updates when rights are changed.
+pop_event = {
+	id = est_exp1.18
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		owner = {
+			has_non_swapped_tradition = tr_est_justice_finish
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				Or = {
+					has_citizenship_type = {
+						country = owner
+						type = citizenship_full
+					}
+					And = {
+						has_citizenship_type = {
+							country = owner
+							type = citizenship_caste_system
+						}
+						is_enslaved = no				
+					}
+				}
+			}
+			if = {
+				limit = {
+					Not = {
+						has_modifier = mod_justice_finish
+					}
+				}			
+				add_modifier = {
+					modifier = "mod_justice_finish"
+					days = -1
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						has_modifier = mod_justice_finish
+					}			
+					remove_modifier = "mod_justice_finish"
+				}			
+			}
+		}
+	}
+}
+
+#Justice Finish, updates when enslaved.
+pop_event = {
+	id = est_exp1.19
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		has_modifier = mod_justice_finish
+	}
+	
+	immediate = {
+		remove_modifier = "mod_justice_finish"
+	}
+}
+
+#Justice Finish, updates when emanicipated.
+pop_event = {
+	id = est_exp1.20
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		owner = {
+			has_non_swapped_tradition = tr_est_justice_finish
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				Or = {
+					has_citizenship_type = {
+						country = owner
+						type = citizenship_full
+					}
+					And = {
+						has_citizenship_type = {
+							country = owner
+							type = citizenship_caste_system
+						}
+						is_enslaved = no				
+					}
+				}
+			}
+			if = {
+				limit = {
+					Not = {
+						has_modifier = mod_justice_finish
+					}
+				}			
+				add_modifier = {
+					modifier = "mod_justice_finish"
+					days = -1
+				}
+			}
+		}
+	}
+}
+
+#Destruction finish, influence while at war.
+event = {
+	id = est_exp1.20001
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		any_country = {
+			has_swapped_tradition = tr_est_destruction_finish
+		}
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_swapped_tradition = tr_est_destruction_finish		
+			}
+			if = {
+				limit = {
+					is_at_war = yes
+				}
+				if = {
+					limit = {
+						Not = {
+							has_modifier = mod_est_destruction_finish
+						}
+					}
+					add_modifier = {
+						modifier = mod_est_destruction_finish
+						days = -1
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							has_modifier = mod_est_destruction_finish
+						}
+						remove_modifier = mod_est_destruction_finish
+					}					
+				}
+			}
+		}
+	}
+}
+
+#Destruction 4, penalty to neighbours.
+event = {
+	id = est_exp1.20002
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_country = {
+			has_swapped_tradition = tr_est_destruction_4
+		}
+	}
+
+	immediate = {
+		every_country = {
+			limit = {			
+				has_swapped_tradition = tr_est_destruction_4
+			}
+			every_neighbor_country = {
+				limit = {
+					Not = {
+						has_ethic = ethic_gestalt_consciousness					
+					}
+				}
+				set_timed_country_flag = {
+					flag = est_destruction_4_flag
+					days = 1
+				}
+				if = {
+					limit = {
+						Not = {
+							has_modifier = mod_est_destruction_4
+						}
+					}
+					add_modifier = {
+						modifier = "mod_est_destruction_4"
+						days = -1
+					}
+				}
+			}
+		}
+		every_country = {
+			limit = {			
+				Not = {	
+					has_country_flag = est_destruction_4_flag			
+				}
+				has_modifier = mod_est_destruction_4
+			}
+			remove_modifier = "mod_est_destruction_4"
+		}
+	}
+}
+
+
+#Destruction 1, influence from purging.
+planet_event = {
+	id = est_exp1.20003
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			OR = {
+				has_swapped_tradition = tr_est_destruction_1
+			}
+		}
+		FROMFROM = {
+			is_robot_pop = no
+			NOT = {
+				is_same_species = owner_species
+			}
+		}
+		is_controlled_by = FROM
+	}
+	
+	immediate = {
+		FROM = {
+			add_influence = 5
+		}
+	}
+}
+
+#Proselytism 1, gives Ethics attraction to neighbours with the tradition.
+event = {
+	id = est_exp1.21
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		any_country = {
+			has_tradition = tr_est_proselytism_1
+		}		
+	}
+	
+	immediate = {
+	every_country = {
+			limit = {
+				has_country_flag = got_mod_mod_proselytism_1
+			}
+			if = {
+				limit = {
+					Not = {
+						any_neighbor_country = {
+							has_tradition = tr_est_proselytism_1							
+						}
+					}
+				}
+				remove_country_flag = got_mod_mod_proselytism_1
+				switch = {
+					trigger = has_modifier 	
+					mod_proselytism_1_authoritarian = {remove_modifier = "mod_proselytism_1_authoritarian"}
+					mod_proselytism_1_authoritarian_fanatic = {remove_modifier = "mod_proselytism_1_authoritarian_fanatic"}
+					mod_proselytism_1_egalitarian = {remove_modifier = "mod_proselytism_1_egalitarian"}
+					mod_proselytism_1_egalitarian_fanatic = {remove_modifier = "mod_proselytism_1_egalitarian_fanatic"}
+					mod_proselytism_1_xenophobe = {remove_modifier = "mod_proselytism_1_xenophobe"}
+					mod_proselytism_1_xenophobe_fanatic = {remove_modifier = "mod_proselytism_1_xenophobe_fanatic"}
+					mod_proselytism_1_xenophile = {remove_modifier = "mod_proselytism_1_xenophile"}
+					mod_proselytism_1_xenophile_fanatic = {remove_modifier = "mod_proselytism_1_xenophile_fanatic"}
+					mod_proselytism_1_militarist = {remove_modifier = "mod_proselytism_1_militarist"}
+					mod_proselytism_1_militarist_fanatic = {remove_modifier = "mod_proselytism_1_militarist_fanatic"}
+					mod_proselytism_1_pacifist = {remove_modifier = "mod_proselytism_1_pacifist"}
+					mod_proselytism_1_pacifist_fanatic = {remove_modifier = "mod_proselytism_1_pacifist_fanatic"}
+					mod_proselytism_1_materialist = {remove_modifier = "mod_proselytism_1_materialist"}
+					mod_proselytism_1_materialist_fanatic = {remove_modifier = "mod_proselytism_1_materialist_fanatic"}
+					mod_proselytism_1_spiritualist = {remove_modifier = "mod_proselytism_1_spiritualist"}
+					mod_proselytism_1_spiritualist_fanatic = {remove_modifier = "mod_proselytism_1_spiritualist_fanatic"}
+				}
+			}			
+		}
+		every_country = {
+			limit = {
+				has_tradition = tr_est_proselytism_1
+			}
+			every_neighbor_country = {
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_authoritarian
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_1_authoritarian
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_1_authoritarian"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_1_authoritarian									
+							}
+							remove_modifier = "mod_proselytism_1_authoritarian"
+						}
+					}
+				}
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_fanatic_authoritarian
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_1_authoritarian_fanatic
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_1_authoritarian_fanatic"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_1_authoritarian_fanatic								
+							}
+							remove_modifier = "mod_proselytism_1_authoritarian_fanatic"
+						}
+					}
+				}				
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_egalitarian
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_1_egalitarian
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_1_egalitarian"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_1_egalitarian									
+							}
+							remove_modifier = "mod_proselytism_1_egalitarian"
+						}
+					}
+				}
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_fanatic_egalitarian
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_1_egalitarian_fanatic
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_1_egalitarian_fanatic"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_1_egalitarian_fanatic								
+							}
+							remove_modifier = "mod_proselytism_1_egalitarian_fanatic"
+						}
+					}
+				}			
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_xenophobe
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_1_xenophobe
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_1_xenophobe"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_1_xenophobe									
+							}
+							remove_modifier = "mod_proselytism_1_xenophobe"
+						}
+					}
+				}
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_fanatic_xenophobe
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_1_xenophobe_fanatic
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_1_xenophobe_fanatic"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_1_xenophobe_fanatic								
+							}
+							remove_modifier = "mod_proselytism_1_xenophobe_fanatic"
+						}
+					}
+				}				
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_xenophile
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_1_xenophile
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_1_xenophile"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_1_xenophile									
+							}
+							remove_modifier = "mod_proselytism_1_xenophile"
+						}
+					}
+				}
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_fanatic_xenophile
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_1_xenophile_fanatic
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_1_xenophile_fanatic"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_1_xenophile_fanatic								
+							}
+							remove_modifier = "mod_proselytism_1_xenophile_fanatic"
+						}
+					}
+				}				
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_militarist
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_1_militarist
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_1_militarist"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_1_militarist									
+							}
+							remove_modifier = "mod_proselytism_1_militarist"
+						}
+					}
+				}
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_fanatic_militarist
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_1_militarist_fanatic
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_1_militarist_fanatic"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_1_militarist_fanatic								
+							}
+							remove_modifier = "mod_proselytism_1_militarist_fanatic"
+						}
+					}
+				}				
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_pacifist
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_1_pacifist
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_1_pacifist"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_1_pacifist									
+							}
+							remove_modifier = "mod_proselytism_1_pacifist"
+						}
+					}
+				}
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_fanatic_pacifist
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_1_pacifist_fanatic
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_1_pacifist_fanatic"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_1_pacifist_fanatic								
+							}
+							remove_modifier = "mod_proselytism_1_pacifist_fanatic"
+						}
+					}
+				}				
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_materialist
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_1_materialist
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_1_materialist"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_1_materialist									
+							}
+							remove_modifier = "mod_proselytism_1_materialist"
+						}
+					}
+				}
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_fanatic_materialist
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_1_materialist_fanatic
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_1_materialist_fanatic"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_1_materialist_fanatic								
+							}
+							remove_modifier = "mod_proselytism_1_materialist_fanatic"
+						}
+					}
+				}
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_spiritualist
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_1_spiritualist
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_1_spiritualist"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_1_spiritualist									
+							}
+							remove_modifier = "mod_proselytism_1_spiritualist"
+						}
+					}
+				}
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_fanatic_spiritualist
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_1_spiritualist_fanatic
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_1_spiritualist_fanatic"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_1_spiritualist_fanatic								
+							}
+							remove_modifier = "mod_proselytism_1_spiritualist_fanatic"
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Proselytism 2, gives bonus while at war with war leader with different ethos.
+event = {
+	id = est_exp1.22
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		any_country = {
+			has_tradition = tr_est_proselytism_2
+		}	
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_tradition = tr_est_proselytism_2			
+			}
+			if = {
+				limit = {
+					any_war = {
+						any_war_participant = {
+							is_war_leader = yes
+							is_at_war_with = prevprev
+							opposing_ethics_divergence = {
+								steps > 1
+								who = prevprev
+							}					
+						}
+					}							
+				}
+				if = {
+					limit = {
+						Not = {
+							has_modifier = mod_proselytism_2
+						}
+					}
+					add_modifier = {
+						modifier = "mod_proselytism_2"
+						days = -1
+					}
+				}				
+				else = {
+					if = {
+						limit = {
+							has_modifier = mod_proselytism_2
+						}
+						remove_modifier = "mod_proselytism_2"
+					}
+				}
+			}
+		}
+	}
+}
+
+#Proselytism 3, removes recent conquered penalty when planet takenn
+planet_event = {
+	id = est_exp1.23
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		owner = {
+			has_tradition = tr_est_proselytism_3
+		}	
+	}
+	
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				has_modifier = pop_recently_conquered
+			}
+			remove_modifier = "pop_recently_conquered"
+		}
+	}
+}
+
+#Proselytism 4, gives ethics attraction to subjects of those who have tradition.
+event = {
+	id = est_exp1.24
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		any_country = {
+			has_tradition = tr_est_proselytism_4
+		}	
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_country_flag = got_mod_mod_proselytism_4
+			}
+			if = {
+				limit = {
+					NOR = {
+						is_subject = yes
+						overlord = {
+							has_tradition = tr_est_proselytism_4
+						}		
+					}
+				}
+				remove_country_flag = got_mod_mod_proselytism_4
+				switch = {
+					trigger = has_modifier 	
+					mod_proselytism_4_authoritarian = {remove_modifier = "mod_proselytism_4_authoritarian"}
+					mod_proselytism_4_authoritarian_fanatic = {remove_modifier = "mod_proselytism_4_authoritarian_fanatic"}
+					mod_proselytism_4_egalitarian = {remove_modifier = "mod_proselytism_4_egalitarian"}
+					mod_proselytism_4_egalitarian_fanatic = {remove_modifier = "mod_proselytism_4_egalitarian_fanatic"}
+					mod_proselytism_4_xenophobe = {remove_modifier = "mod_proselytism_4_xenophobe"}
+					mod_proselytism_4_xenophobe_fanatic = {remove_modifier = "mod_proselytism_4_xenophobe_fanatic"}
+					mod_proselytism_4_xenophile = {remove_modifier = "mod_proselytism_4_xenophile"}
+					mod_proselytism_4_xenophile_fanatic = {remove_modifier = "mod_proselytism_4_xenophile_fanatic"}
+					mod_proselytism_4_militarist = {remove_modifier = "mod_proselytism_4_militarist"}
+					mod_proselytism_4_militarist_fanatic = {remove_modifier = "mod_proselytism_4_militarist_fanatic"}
+					mod_proselytism_4_pacifist = {remove_modifier = "mod_proselytism_4_pacifist"}
+					mod_proselytism_4_pacifist_fanatic = {remove_modifier = "mod_proselytism_4_pacifist_fanatic"}
+					mod_proselytism_4_materialist = {remove_modifier = "mod_proselytism_4_materialist"}
+					mod_proselytism_4_materialist_fanatic = {remove_modifier = "mod_proselytism_4_materialist_fanatic"}
+					mod_proselytism_4_spiritualist = {remove_modifier = "mod_proselytism_4_spiritualist"}
+					mod_proselytism_4_spiritualist_fanatic = {remove_modifier = "mod_proselytism_4_spiritualist_fanatic"}
+				}
+			}			
+		}
+		every_country = {
+			limit = {
+				has_tradition = tr_est_proselytism_4
+			}
+			every_subject = {
+				if = {
+					limit = {
+						Not = {
+							has_country_flag = got_mod_mod_proselytism_4						
+						}
+					}
+					set_country_flag = got_mod_mod_proselytism_4
+				}
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_authoritarian
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_4_authoritarian
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_4_authoritarian"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_4_authoritarian									
+							}
+							remove_modifier = "mod_proselytism_4_authoritarian"
+						}
+					}
+				}
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_fanatic_authoritarian
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_4_authoritarian_fanatic
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_4_authoritarian_fanatic"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_4_authoritarian_fanatic								
+							}
+							remove_modifier = "mod_proselytism_4_authoritarian_fanatic"
+						}
+					}
+				}				
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_egalitarian
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_4_egalitarian
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_4_egalitarian"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_4_egalitarian									
+							}
+							remove_modifier = "mod_proselytism_4_egalitarian"
+						}
+					}
+				}
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_fanatic_egalitarian
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_4_egalitarian_fanatic
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_4_egalitarian_fanatic"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_4_egalitarian_fanatic								
+							}
+							remove_modifier = "mod_proselytism_4_egalitarian_fanatic"
+						}
+					}
+				}			
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_xenophobe
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_4_xenophobe
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_4_xenophobe"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_4_xenophobe									
+							}
+							remove_modifier = "mod_proselytism_4_xenophobe"
+						}
+					}
+				}
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_fanatic_xenophobe
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_4_xenophobe_fanatic
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_4_xenophobe_fanatic"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_4_xenophobe_fanatic								
+							}
+							remove_modifier = "mod_proselytism_4_xenophobe_fanatic"
+						}
+					}
+				}				
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_xenophile
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_4_xenophile
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_4_xenophile"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_4_xenophile									
+							}
+							remove_modifier = "mod_proselytism_4_xenophile"
+						}
+					}
+				}
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_fanatic_xenophile
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_4_xenophile_fanatic
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_4_xenophile_fanatic"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_4_xenophile_fanatic								
+							}
+							remove_modifier = "mod_proselytism_4_xenophile_fanatic"
+						}
+					}
+				}				
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_militarist
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_4_militarist
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_4_militarist"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_4_militarist									
+							}
+							remove_modifier = "mod_proselytism_4_militarist"
+						}
+					}
+				}
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_fanatic_militarist
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_4_militarist_fanatic
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_4_militarist_fanatic"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_4_militarist_fanatic								
+							}
+							remove_modifier = "mod_proselytism_4_militarist_fanatic"
+						}
+					}
+				}				
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_pacifist
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_4_pacifist
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_4_pacifist"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_4_pacifist									
+							}
+							remove_modifier = "mod_proselytism_4_pacifist"
+						}
+					}
+				}
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_fanatic_pacifist
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_4_pacifist_fanatic
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_4_pacifist_fanatic"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_4_pacifist_fanatic								
+							}
+							remove_modifier = "mod_proselytism_4_pacifist_fanatic"
+						}
+					}
+				}				
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_materialist
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_4_materialist
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_4_materialist"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_4_materialist									
+							}
+							remove_modifier = "mod_proselytism_4_materialist"
+						}
+					}
+				}
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_fanatic_materialist
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_4_materialist_fanatic
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_4_materialist_fanatic"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_4_materialist_fanatic								
+							}
+							remove_modifier = "mod_proselytism_4_materialist_fanatic"
+						}
+					}
+				}
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_spiritualist
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_4_spiritualist
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_4_spiritualist"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_4_spiritualist									
+							}
+							remove_modifier = "mod_proselytism_4_spiritualist"
+						}
+					}
+				}
+				if = {
+					limit = {
+						prev = {
+							has_ethic = ethic_fanatic_spiritualist
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = mod_proselytism_4_spiritualist_fanatic
+							}
+						}
+						add_modifier = {
+							modifier = "mod_proselytism_4_spiritualist_fanatic"
+							days = -1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								has_modifier = mod_proselytism_4_spiritualist_fanatic								
+							}
+							remove_modifier = "mod_proselytism_4_spiritualist_fanatic"
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#Proselytism 5, gives/removes/updates bonus when war is finishes.
+country_event = {
+	id = est_exp1.25
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		fromfrom = {
+			any_war_participant = {
+				has_tradition = tr_est_proselytism_5			
+			}
+		}
+	}
+	
+	immediate = {
+		fromfrom = {
+			every_war_participant = {
+				limit = {
+					has_tradition = tr_est_proselytism_5
+				}
+				if = {
+					limit = {
+						has_modifier = mod_proselytism_5
+					}
+					remove_modifier = "mod_proselytism_5"
+				}	
+				if = {
+					limit = {
+						fromfrom = {
+							is_war_participant = {
+								who = prev
+								side = Root
+							}					
+						}
+					}
+					add_modifier = {
+						modifier = "mod_proselytism_5"
+						days = 3650
+					}
+				}
+			}
+		}
+	}
+}
+

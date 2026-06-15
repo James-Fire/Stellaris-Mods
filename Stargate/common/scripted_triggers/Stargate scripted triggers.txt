@@ -1,0 +1,659 @@
+has_stargate = {
+	OR = {
+		has_technology = tech_stargate
+		any_owned_planet = {
+			has_deposit = d_stargate
+		}
+	}
+}
+
+can_have_seed_stargate = {
+	OR = {
+		#is_terraforming_candidate = yes #Guilli's compat
+		has_modifier = terraforming_candidate
+		is_colonizable = yes
+		is_colony = yes
+	}
+	NOR = {
+		has_deposit = d_stargate
+		has_planet_flag = stargate_check
+		has_planet_flag = has_stargate
+		is_planet_class = pc_gas_giant
+	}
+}
+
+is_subject_of = {  #is_subject_of = { target = event_target:myTarget }
+    NAND = {
+        exists = overlord
+        overlord = { is_same_value = $target$ }
+    }
+}
+
+has_civilian_connection = {
+	has_communications = ROOT
+	OR = {
+		AND = {
+			has_policy_flag = stargate_civilian_open
+			NOT = { 
+				has_closed_borders = ROOT
+			}
+			ROOT = {
+				has_policy_flag = stargate_civilian_open
+			}
+		}
+		AND = {
+			has_commercial_pact = ROOT
+			OR = {
+				has_policy_flag = stargate_civilian_open
+				has_policy_flag = stargate_civilian_economy
+			}
+			ROOT = {
+				OR = {
+					has_policy_flag = stargate_civilian_open
+					has_policy_flag = stargate_civilian_economy
+				}
+			}
+		}
+		AND = {
+			has_research_agreement = ROOT
+			OR = {
+				has_policy_flag = stargate_civilian_open
+				has_policy_flag = stargate_civilian_economy
+				has_policy_flag = stargate_civilian_science
+			}
+			ROOT = {
+				OR = {
+					has_policy_flag = stargate_civilian_open
+					has_policy_flag = stargate_civilian_economy
+					has_policy_flag = stargate_civilian_science
+				}
+			}
+		}
+		AND = {
+			has_association_status = ROOT
+			OR = {
+				has_policy_flag = stargate_civilian_open
+				has_policy_flag = stargate_civilian_economy
+				has_policy_flag = stargate_civilian_science
+				has_policy_flag = stargate_civilian_allies
+			}
+			ROOT = {
+				OR = {
+					has_policy_flag = stargate_civilian_open
+					has_policy_flag = stargate_civilian_economy
+					has_policy_flag = stargate_civilian_science
+					has_policy_flag = stargate_civilian_allies
+				}
+			}
+		}
+		AND = {
+			is_in_federation_with = ROOT
+			OR = {
+				has_policy_flag = stargate_civilian_open
+				has_policy_flag = stargate_civilian_economy
+				has_policy_flag = stargate_civilian_science
+				has_policy_flag = stargate_civilian_allies
+				has_policy_flag = stargate_civilian_fed
+			}
+			ROOT = {
+				OR = {
+					has_policy_flag = stargate_civilian_open
+					has_policy_flag = stargate_civilian_economy
+					has_policy_flag = stargate_civilian_science
+					has_policy_flag = stargate_civilian_allies
+					has_policy_flag = stargate_civilian_fed
+				}
+			}
+		}
+	}
+	#has_diplo_migration_treaty
+}
+
+has_military_connection = {
+	has_communications = ROOT
+	OR = {
+		AND = {
+			has_policy_flag = stargate_military_open
+			NOT = { 
+				has_closed_borders = ROOT
+			}
+			ROOT = {
+				has_policy_flag = stargate_military_open
+			}
+		}
+		AND = {
+			has_non_aggression_pact = ROOT
+			OR = {
+				has_policy_flag = stargate_military_open
+				has_policy_flag = stargate_military_nap
+			}
+			ROOT = {
+				OR = {
+					has_policy_flag = stargate_military_open
+					has_policy_flag = stargate_military_nap
+				}
+			}
+		}
+		AND = {
+			has_defensive_pact = ROOT
+			OR = {
+				has_policy_flag = stargate_military_open
+				has_policy_flag = stargate_military_nap
+				has_policy_flag = stargate_military_defensive
+			}
+			ROOT = {
+				OR = {
+					has_policy_flag = stargate_military_open
+					has_policy_flag = stargate_military_nap
+					has_policy_flag = stargate_military_defensive
+				}
+			}
+		}
+		AND = {
+			has_association_status = ROOT
+			OR = {
+				has_policy_flag = stargate_military_open
+				has_policy_flag = stargate_military_nap
+				has_policy_flag = stargate_military_defensive
+				has_policy_flag = stargate_military_allies
+			}
+			ROOT = {
+				OR = {
+					has_policy_flag = stargate_military_open
+					has_policy_flag = stargate_military_nap
+					has_policy_flag = stargate_military_defensive
+					has_policy_flag = stargate_military_allies
+				}
+			}
+		}
+		AND = {
+			is_in_federation_with = ROOT
+			OR = {
+				has_policy_flag = stargate_military_open
+				has_policy_flag = stargate_military_nap
+				has_policy_flag = stargate_military_defensive
+				has_policy_flag = stargate_military_allies
+				has_policy_flag = stargate_military_fed
+			}
+			ROOT = {
+				OR = {
+					has_policy_flag = stargate_military_open
+					has_policy_flag = stargate_military_nap
+					has_policy_flag = stargate_military_defensive
+					has_policy_flag = stargate_military_allies
+					has_policy_flag = stargate_military_fed
+				}
+			}
+		}
+	}
+}
+
+has_research_connection = {
+	has_communications = ROOT
+	has_research_agreement = ROOT
+	OR = {
+		AND = {
+			has_policy_flag = stargate_civilian_open
+			NOT = { 
+				has_closed_borders = ROOT
+			}
+			ROOT = {
+				has_policy_flag = stargate_civilian_open
+			}
+		}
+		AND = {
+			has_commercial_pact = ROOT
+			OR = {
+				has_policy_flag = stargate_civilian_open
+				has_policy_flag = stargate_civilian_economy
+			}
+			ROOT = {
+				OR = {
+					has_policy_flag = stargate_civilian_open
+					has_policy_flag = stargate_civilian_economy
+				}
+			}
+		}
+		AND = {
+			has_research_agreement = ROOT
+			OR = {
+				has_policy_flag = stargate_civilian_open
+				has_policy_flag = stargate_civilian_economy
+				has_policy_flag = stargate_civilian_science
+			}
+			ROOT = {
+				OR = {
+					has_policy_flag = stargate_civilian_open
+					has_policy_flag = stargate_civilian_economy
+					has_policy_flag = stargate_civilian_science
+				}
+			}
+		}
+		AND = {
+			has_association_status = ROOT
+			OR = {
+				has_policy_flag = stargate_civilian_open
+				has_policy_flag = stargate_civilian_economy
+				has_policy_flag = stargate_civilian_science
+				has_policy_flag = stargate_civilian_allies
+			}
+			ROOT = {
+				OR = {
+					has_policy_flag = stargate_civilian_open
+					has_policy_flag = stargate_civilian_economy
+					has_policy_flag = stargate_civilian_science
+					has_policy_flag = stargate_civilian_allies
+				}
+			}
+		}
+		AND = {
+			is_in_federation_with = ROOT
+			OR = {
+				has_policy_flag = stargate_civilian_open
+				has_policy_flag = stargate_civilian_economy
+				has_policy_flag = stargate_civilian_science
+				has_policy_flag = stargate_civilian_allies
+				has_policy_flag = stargate_civilian_fed
+			}
+			ROOT = {
+				OR = {
+					has_policy_flag = stargate_civilian_open
+					has_policy_flag = stargate_civilian_economy
+					has_policy_flag = stargate_civilian_science
+					has_policy_flag = stargate_civilian_allies
+					has_policy_flag = stargate_civilian_fed
+				}
+			}
+		}
+	}
+	#has_diplo_migration_treaty
+
+}
+
+has_priority_1 = {
+	OR = {
+		has_int_civ_prioty_1 = yes
+		has_ex_civ_prioty_1 = yes
+		has_int_mil_prioty_1 = yes
+		has_ex_mil_prioty_1 = yes
+		has_ex_res_prioty_1 = yes
+	}
+}
+has_int_civ_prioty_1 = {
+	OR = {
+		has_planet_flag = stargate_economic_connections_int_1
+		AND = {
+			owner = { has_country_flag = stargate_economic_connections_int_1 }
+			NOT = { planet_has_int_econ_priority = yes }
+		}
+	}
+}
+has_ex_civ_prioty_1 = {
+	OR = {
+		has_planet_flag = stargate_economic_connections_ex_1
+		AND = {
+			owner = { has_country_flag = stargate_economic_connections_ex_1 }
+			NOT = { planet_has_ex_econ_priority = yes }
+		}
+	}
+}
+has_int_mil_prioty_1 = {
+	OR = {
+		has_planet_flag = stargate_military_connections_int_1
+		AND = {
+			owner = { has_country_flag = stargate_military_connections_int_1 }
+			NOT = { planet_has_int_mil_priority = yes }
+		}
+	}
+}
+has_ex_mil_prioty_1 = {
+	OR = {
+		has_planet_flag = stargate_military_connections_ex_1
+		AND = {
+			owner = { has_country_flag = stargate_military_connections_ex_1 }
+			NOT = { planet_has_ex_mil_priority = yes }
+		}
+	}
+}
+has_ex_res_prioty_1 = {
+	OR = {
+		has_planet_flag = stargate_research_connections_ex_1
+		AND = {
+			owner = { has_country_flag = stargate_research_connections_ex_1 }
+			NOT = { planet_has_ex_res_priority = yes }
+		}
+	}
+}
+
+has_priority_2 = {
+	OR = {
+		has_int_civ_prioty_2 = yes
+		has_ex_civ_prioty_2 = yes
+		has_int_mil_prioty_2 = yes
+		has_ex_mil_prioty_2 = yes
+		has_ex_res_prioty_2 = yes
+	}
+}
+has_int_civ_prioty_2 = {
+	OR = {
+		has_planet_flag = stargate_economic_connections_int_2
+		AND = {
+			owner = { has_country_flag = stargate_economic_connections_int_2 }
+			NOT = { planet_has_int_econ_priority = yes }
+		}
+	}
+}
+has_ex_civ_prioty_2 = {
+	OR = {
+		has_planet_flag = stargate_economic_connections_ex_2
+		AND = {
+			owner = { has_country_flag = stargate_economic_connections_ex_2 }
+			NOT = { planet_has_ex_econ_priority = yes }
+		}
+	}
+}
+has_int_mil_prioty_2 = {
+	OR = {
+		has_planet_flag = stargate_military_connections_int_2
+		AND = {
+			owner = { has_country_flag = stargate_military_connections_int_2 }
+			NOT = { planet_has_int_mil_priority = yes }
+		}
+	}
+}
+has_ex_mil_prioty_2 = {
+	OR = {
+		has_planet_flag = stargate_military_connections_ex_2
+		AND = {
+			owner = { has_country_flag = stargate_military_connections_ex_2 }
+			NOT = { planet_has_ex_mil_priority = yes }
+		}
+	}
+}
+has_ex_res_prioty_2 = {
+	OR = {
+		has_planet_flag = stargate_research_connections_ex_2
+		AND = {
+			owner = { has_country_flag = stargate_research_connections_ex_2 }
+			NOT = { planet_has_ex_res_priority = yes }
+		}
+	}
+}
+
+has_priority_3 = {
+	OR = {
+		has_int_civ_prioty_3 = yes
+		has_ex_civ_prioty_3 = yes
+		has_int_mil_prioty_3 = yes
+		has_ex_mil_prioty_3 = yes
+		has_ex_res_prioty_3 = yes
+	}
+}
+has_int_civ_prioty_3 = {
+	OR = {
+		has_planet_flag = stargate_economic_connections_int_3
+		AND = {
+			owner = { has_country_flag = stargate_economic_connections_int_3 }
+			NOT = { planet_has_int_econ_priority = yes }
+		}
+	}
+}
+has_ex_civ_prioty_3 = {
+	OR = {
+		has_planet_flag = stargate_economic_connections_ex_3
+		AND = {
+			owner = { has_country_flag = stargate_economic_connections_ex_3 }
+			NOT = { planet_has_ex_econ_priority = yes }
+		}
+	}
+}
+has_int_mil_prioty_3 = {
+	OR = {
+		has_planet_flag = stargate_military_connections_int_3
+		AND = {
+			owner = { has_country_flag = stargate_military_connections_int_3 }
+			NOT = { planet_has_int_mil_priority = yes }
+		}
+	}
+}
+has_ex_mil_prioty_3 = {
+	OR = {
+		has_planet_flag = stargate_military_connections_ex_3
+		AND = {
+			owner = { has_country_flag = stargate_military_connections_ex_3 }
+			NOT = { planet_has_ex_mil_priority = yes }
+		}
+	}
+}
+has_ex_res_prioty_3 = {
+	OR = {
+		has_planet_flag = stargate_research_connections_ex_3
+		AND = {
+			owner = { has_country_flag = stargate_research_connections_ex_3 }
+			NOT = { planet_has_ex_res_priority = yes }
+		}
+	}
+}
+
+has_priority_4 = {
+	OR = {
+		has_int_civ_prioty_4 = yes
+		has_ex_civ_prioty_4 = yes
+		has_int_mil_prioty_4 = yes
+		has_ex_mil_prioty_4 = yes
+		has_ex_res_prioty_4 = yes
+	}
+}
+has_int_civ_prioty_4 = {
+	OR = {
+		has_planet_flag = stargate_economic_connections_int_4
+		AND = {
+			owner = { has_country_flag = stargate_economic_connections_int_4 }
+			NOT = { planet_has_int_econ_priority = yes }
+		}
+	}
+}
+has_ex_civ_prioty_4 = {
+	OR = {
+		has_planet_flag = stargate_economic_connections_ex_4
+		AND = {
+			owner = { has_country_flag = stargate_economic_connections_ex_4 }
+			NOT = { planet_has_ex_econ_priority = yes }
+		}
+	}
+}
+has_int_mil_prioty_4 = {
+	OR = {
+		has_planet_flag = stargate_military_connections_int_4
+		AND = {
+			owner = { has_country_flag = stargate_military_connections_int_4 }
+			NOT = { planet_has_int_mil_priority = yes }
+		}
+	}
+}
+has_ex_mil_prioty_4 = {
+	OR = {
+		has_planet_flag = stargate_military_connections_ex_4
+		AND = {
+			owner = { has_country_flag = stargate_military_connections_ex_4 }
+			NOT = { planet_has_ex_mil_priority = yes }
+		}
+	}
+}
+has_ex_res_prioty_4 = {
+	OR = {
+		has_planet_flag = stargate_research_connections_ex_4
+		AND = {
+			owner = { has_country_flag = stargate_research_connections_ex_4 }
+			NOT = { planet_has_ex_res_priority = yes }
+		}
+	}
+}
+
+has_priority_5 = {
+	OR = {
+		has_int_civ_prioty_5 = yes
+		has_ex_civ_prioty_5 = yes
+		has_int_mil_prioty_5 = yes
+		has_ex_mil_prioty_5 = yes
+		has_ex_res_prioty_5 = yes
+	}
+}
+has_int_civ_prioty_5 = {
+	OR = {
+		has_planet_flag = stargate_economic_connections_int_5
+		AND = {
+			owner = { has_country_flag = stargate_economic_connections_int_5 }
+			NOT = { planet_has_int_econ_priority = yes }
+		}
+	}
+}
+has_ex_civ_prioty_5 = {
+	OR = {
+		has_planet_flag = stargate_economic_connections_ex_5
+		AND = {
+			owner = { has_country_flag = stargate_economic_connections_ex_5 }
+			NOT = { planet_has_ex_econ_priority = yes }
+		}
+	}
+}
+has_int_mil_prioty_5 = {
+	OR = {
+		has_planet_flag = stargate_military_connections_int_5
+		AND = {
+			owner = { has_country_flag = stargate_military_connections_int_5 }
+			NOT = { planet_has_int_mil_priority = yes }
+		}
+	}
+}
+has_ex_mil_prioty_5 = {
+	OR = {
+		has_planet_flag = stargate_military_connections_ex_5
+		AND = {
+			owner = { has_country_flag = stargate_military_connections_ex_5 }
+			NOT = { planet_has_ex_mil_priority = yes }
+		}
+	}
+}
+has_ex_res_prioty_5 = {
+	OR = {
+		has_planet_flag = stargate_research_connections_ex_5
+		AND = {
+			owner = { has_country_flag = stargate_research_connections_ex_5 }
+			NOT = { planet_has_ex_res_priority = yes }
+		}
+	}
+}
+
+planet_has_int_econ_priority = {
+	has_planet_flag = stargate_economic_connections_int_1
+	has_planet_flag = stargate_economic_connections_int_2
+	has_planet_flag = stargate_economic_connections_int_3
+	has_planet_flag = stargate_economic_connections_int_4
+	has_planet_flag = stargate_economic_connections_int_5
+}
+planet_has_ex_econ_priority = {
+	has_planet_flag = stargate_economic_connections_ex_1
+	has_planet_flag = stargate_economic_connections_ex_2
+	has_planet_flag = stargate_economic_connections_ex_3
+	has_planet_flag = stargate_economic_connections_ex_4
+	has_planet_flag = stargate_economic_connections_ex_5
+}
+planet_has_int_mil_priority = {
+	has_planet_flag = stargate_military_connections_int_1
+	has_planet_flag = stargate_military_connections_int_2
+	has_planet_flag = stargate_military_connections_int_3
+	has_planet_flag = stargate_military_connections_int_4
+	has_planet_flag = stargate_military_connections_int_5
+}
+planet_has_ex_mil_priority = {
+	has_planet_flag = stargate_military_connections_ex_1
+	has_planet_flag = stargate_military_connections_ex_2
+	has_planet_flag = stargate_military_connections_ex_3
+	has_planet_flag = stargate_military_connections_ex_4
+	has_planet_flag = stargate_military_connections_ex_5
+}
+planet_has_ex_res_priority = {
+	has_planet_flag = stargate_research_connections_ex_1
+	has_planet_flag = stargate_research_connections_ex_2
+	has_planet_flag = stargate_research_connections_ex_3
+	has_planet_flag = stargate_research_connections_ex_4
+	has_planet_flag = stargate_research_connections_ex_5
+}
+
+#Planet Scope
+has_int_econ_con_space = {
+	check_variable = { which = stargate_connections value <= 90 }
+	check_variable = { which = accessible_internal_civilian_stargatecount value > 1 }
+	OR = {
+		count_deposit = { limit = { is_deposit_type = d_stargate_internal_civilian_network } count < int_civ_stargatecount_cap }
+		check_variable = { which = int_civ_stargatecount_cap value = 0 }
+	}
+	AND = {
+		NOT = { has_planet_flag = int_econ_con_disabled }
+		NAND = {
+			owner = { has_country_flag = int_econ_con_disabled }
+			has_planet_flag = int_econ_con_default
+		}
+	}
+}
+has_ex_econ_con_space = {
+	check_variable = { which = stargate_connections value <= 90 }
+	check_variable = { which = accessible_external_civilian_stargatecount value > 1 }
+	OR = {
+		count_deposit = { limit = { is_deposit_type = d_stargate_external_civilian_network } count < ex_civ_stargatecount_cap }
+		check_variable = { which = ex_civ_stargatecount_cap value = 0 }
+	}
+	AND = {
+		NOT = { has_planet_flag = ex_econ_con_disabled }
+		NAND = {
+			owner = { has_country_flag = ex_econ_con_disabled }
+			has_planet_flag = ex_econ_con_default
+		}
+	}
+}
+has_int_mil_con_space = {
+	check_variable = { which = stargate_connections value <= 90 }
+	check_variable = { which = accessible_internal_military_stargatecount value > 1 }
+	OR = {
+		count_deposit = { limit = { is_deposit_type = d_stargate_internal_military_network } count < int_mil_stargatecount_cap }
+		check_variable = { which = int_mil_stargatecount_cap value = 0 }
+	}
+	AND = {
+		NOT = { has_planet_flag = int_econ_con_disabled }
+		NAND = {
+			owner = { has_country_flag = int_mil_con_disabled }
+			has_planet_flag = int_mil_con_default
+		}
+	}
+}
+has_ex_mil_con_space = {
+	check_variable = { which = stargate_connections value <= 90 }
+	check_variable = { which = accessible_external_military_stargatecount value > 1 }
+	OR = {
+		count_deposit = { limit = { is_deposit_type = d_stargate_external_military_network } count < ex_mil_stargatecount_cap }
+		check_variable = { which = ex_mil_stargatecount_cap value = 0 }
+	}
+	AND = {
+		NOT = { has_planet_flag = ex_mil_con_disabled }
+		NAND = {
+			owner = { has_country_flag = ex_mil_con_disabled }
+			has_planet_flag = ex_mil_con_default
+		}
+	}
+}
+has_ex_res_con_space = {
+	check_variable = { which = stargate_connections value <= 90 }
+	check_variable = { which = accessible_external_research_stargatecount value > 1 }
+	OR = {
+		count_deposit = { limit = { is_deposit_type = d_stargate_external_research_network } count < ex_res_stargatecount_cap }
+		check_variable = { which = ex_res_stargatecount_cap value = 0 }
+	}
+	AND = {
+		NOT = { has_planet_flag = ex_res_con_disabled }
+		NAND = {
+			owner = { has_country_flag = ex_res_con_disabled }
+			has_planet_flag = ex_res_con_default
+		}
+	}
+}

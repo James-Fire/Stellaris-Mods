@@ -1,0 +1,101 @@
+# Automated Dreadnought
+buildable_dreadnought = {
+	graphical_culture = no
+	entity = "npf_01_dirty_npc_warship_01_hull_entity"
+	formation_priority = 40
+	max_speed = 80
+	acceleration = 0.15
+	rotation_speed = 0.1
+	collision_radius = 10
+	modifier = {
+		ship_evasion_add = 2
+		ship_armor_add = 5000
+		ship_piracy_suppression_add = 2
+	}
+	max_hitpoints = 10000
+	size_multiplier = 16
+	fleet_slot_size = 8
+	section_slots = { "fore" = { locator = "part1" } "mid" = { locator = "part1" } "stern" = { locator = "part1" } }
+	num_target_locators = 0
+	is_space_station = no
+	icon_frame = 6
+	base_buildtime = 900
+	can_have_federation_design = yes
+	enable_default_design = no
+	
+	prerequisites = { "tech_buildable_dreadnought" }
+	
+	combat_disengage_chance = 1.25
+	
+	class = shipclass_military
+	construction_type = starbase_shipyard
+	required_component_set = "power_core"
+	required_component_set = "ftl_components" 
+	required_component_set = "combat_computers"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "dreadnought_core"
+	required_component_set = "special_ship_slot"
+	required_component_set = "special_ship_slot"
+	required_component_set = "special_ship_slot"
+	required_component_set = "ship_aura_components"
+	resources = {
+		category = ship_dreadnought
+		upkeep = {
+			energy = @titan_upkeep_energy
+			alloys = @titan_upkeep_alloys
+		}
+	}
+	
+	potential_construction = {
+		OR = {
+			is_scope_type = starbase
+			AND = {
+				is_scope_type = megastructure
+				OR = {
+					is_megastructure_type = mega_shipyard_3
+					is_megastructure_type = mega_shipyard_restored
+				}
+			}
+		}
+	}
+
+	possible_construction = {
+		custom_tooltip = {
+			fail_text = starbase_citadel_trigger
+			OR = {
+				AND = {
+					is_scope_type = megastructure
+					OR = {
+						is_megastructure_type = mega_shipyard_3
+						is_megastructure_type = mega_shipyard_restored
+					}
+				}
+				AND = {
+					is_scope_type = starbase
+					has_starbase_size >= starbase_citadel
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = starbase_dreadnought_yards_trigger
+			OR = {
+				AND = {
+					is_scope_type = megastructure
+					OR = {
+						is_megastructure_type = mega_shipyard_3
+						is_megastructure_type = mega_shipyard_restored
+					}
+				}
+				AND = {
+					is_scope_type = starbase
+					has_starbase_building = dreadnought_yards
+				}
+			}
+		}
+	}
+	
+	min_upgrade_cost = {
+		alloys = 16
+	}
+}

@@ -1,0 +1,64 @@
+bonus_production_active = {
+	exists = owner
+	OR = {
+		has_planet_flag = realdev_production
+		AND = {
+			owner = {
+				has_country_flag = realdev_production
+			}
+			NOT = {
+				has_planet_flag = realdev_assembly
+			}
+		}
+	}
+}
+
+can_pops_assemble_on_planet = {
+	NOR = {
+		has_modifier = planet_robot_assembly_control
+		has_modifier = planet_population_control_gestalt
+		AND = { # conquered by crisis
+			exists = controller
+			controller = {
+				OR = {
+					is_country_type = ai_empire
+					is_country_type = swarm
+				}
+			}
+		}
+	}
+}
+
+planet_uses_target_auto = {
+	OR = {
+		has_planet_flag = realdev_target_auto
+		AND = {
+			has_planet_flag = realdev_target_country
+			exists = owner
+			owner = {
+				has_country_flag = realdev_target_auto
+			}
+		}
+	}
+}
+planet_uses_target_manual = {
+	OR = {
+		has_planet_flag = realdev_target_manual
+		AND = {
+			has_planet_flag = realdev_target_country
+			exists = owner
+			owner = {
+				has_country_flag = realdev_target_manual
+			}
+		}
+	}
+}
+
+country_has_megastructures_building = {
+	NOT = { has_global_flag = realdev_megastructure_build_ignore }
+	check_variable = { which = realdev_building_megas value > 0 }
+}
+country_has_minor_colonies_building = {
+	check_variable = { which = exploit_minor_colonies_building value > 0 }
+	roci_exploit_module_active = yes
+}

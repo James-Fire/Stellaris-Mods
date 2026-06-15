@@ -1,0 +1,22 @@
+# Triggers when the game starts
+on_game_start = {
+	events = {
+		ship_numbers.1
+		ssrt_evt.0
+		hyperlane_hubs.1
+	}
+}
+
+# A country has increased the level of a tech
+on_tech_increased = {
+	events = {
+		ship_numbers.2
+	}
+}
+
+# Triggers when the game starts
+on_game_start_country = {
+	events = {
+		startsystem.1
+	}
+}

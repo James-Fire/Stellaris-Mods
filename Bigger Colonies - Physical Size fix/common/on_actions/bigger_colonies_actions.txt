@@ -1,0 +1,11 @@
+# Triggers when the game starts
+on_game_start = {
+	events = {
+		BiggerColonies.0
+	}
+}
+on_yearly_pulse = {
+	events = {
+		BiggerColonies.999
+	}
+}

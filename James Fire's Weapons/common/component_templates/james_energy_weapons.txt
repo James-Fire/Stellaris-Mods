@@ -1,0 +1,516 @@
+#void weapons
+weapon_component_template = {
+	key = "VOID_POINT_DEFENSE"
+	size = point_defence
+	entity = "turret_point_defence_entity"	
+	power = -40
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 30
+			rare_crystals = 10
+		}		
+		upkeep = {
+			energy = 0.6
+			alloys = 0.3
+			rare_crystals = 0.1
+		}
+	}
+	entity = "turret_point_defence_entity"
+	damage = { min = 16 max = 64 }
+	windup = { min = 0.0 max = 0.0 }
+	cooldown = 5
+	range = 30
+	accuracy = 0.75
+	tracking = 0.3
+	shield_damage = 0.25
+	armor_damage = 2.25
+	armor_penetration = 0.25
+	type = instant
+	
+	icon = "GFX_ship_part_point_defense_1"
+	icon_frame = 1
+	
+	prerequisites = { "tech_hyperconductors_2" }
+	component_set = "VOID_POINT_DEFENSE"
+	type = point_defence
+	projectile_gfx = "red_laser_pd"
+	tags = { weapon_type_point_defense weapon_type_energy }
+	ai_tags = { weapon_role_point_defense screen }
+	point_defence_targets = { "missile" "strike_craft" }
+}
+
+weapon_component_template = {
+	key = "SMALL_VOID_LASER"
+	size = small
+	power = -68
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 90
+			rare_crystals = 30
+		}		
+		upkeep = {
+			energy = 1.8
+			alloys = 0.9
+			rare_crystals = 0.3
+		}
+	}
+	entity = "small_laser_gun_entity"
+	damage = { min = 68 max = 184 }
+	windup = { min = 5.0 max = 20.0 }
+	cooldown = 30
+	range = 40.0
+	accuracy = 0.90
+	tracking = 0.50
+	shield_damage = 0.25
+	shield_penetration = 0.05
+	armor_damage = 1.75
+	hull_damage = 1.25
+	type = instant
+
+	icon = "GFX_ship_part_jump_drive_1"
+	icon_frame = 1
+	prerequisites = { "tech_hyperconductors_2" }
+	component_set = "VOID_LASERS"
+	projectile_gfx = "gamma_laser_s"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor gunship }
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_VOID_LASER"
+	size = medium
+	power = -156
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 219
+			rare_crystals = 73
+		}		
+		upkeep = {
+			energy = 4.38
+			alloys = 2.19
+			rare_crystals = 0.73
+		}
+	}
+	entity = "medium_laser_gun_entity"
+	damage = { min = 172 max = 460 }
+	windup = { min = 6 max = 24.0 }
+	cooldown = 35
+	range = 60.0
+	accuracy = 0.90
+	tracking = 0.30
+	shield_damage = 0.25
+	shield_penetration = 0.05
+	armor_damage = 1.75
+	hull_damage = 1.25
+	type = instant
+
+	icon = "GFX_ship_part_jump_drive_1"
+	icon_frame = 1
+	prerequisites = { "tech_hyperconductors_2" }
+	component_set = "VOID_LASERS"
+	projectile_gfx = "gamma_laser_m"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor gunship }
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_VOID_LASER"
+	size = large
+	power = -352
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 519
+			rare_crystals = 173
+		}		
+		upkeep = {
+			energy = 10.38
+			alloys = 5.19
+			rare_crystals = 1.73
+		}
+	}	
+	entity = "large_laser_gun_entity"
+	damage = { min = 408 max = 1104 }
+	windup = { min = 7 max = 27.0 }
+	cooldown = 40
+	range = 80
+	accuracy = 0.90
+	tracking = 0.05
+	shield_damage = 0.25
+	shield_penetration = 0.05
+	armor_damage = 1.75
+	hull_damage = 1.25
+	type = instant
+
+	icon = "GFX_ship_part_jump_drive_1"
+	icon_frame = 1
+	prerequisites = { "tech_hyperconductors_2" }
+	component_set = "VOID_LASERS"
+	projectile_gfx = "gamma_laser_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor gunship }
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+weapon_component_template = {
+	key = "VOID_LANCE"
+	size = extra_large
+	power = -1040
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 975
+			rare_crystals = 325
+		}		
+		upkeep = {
+			energy = 19.5
+			alloys = 9.75
+			rare_crystals = 3.25
+		}
+	}	
+	entity = "invisible_turret_entity"
+	damage = { min = 3120 max = 7800 }
+	windup = { min = 12 max = 47.0 }
+	cooldown = 70
+	range = 150.0
+	accuracy = 0.75
+	tracking = 0.10
+	shield_damage = 0.25
+	shield_penetration = 0.05
+	armor_damage = 2.25
+	hull_damage = 1.75
+	type = instant
+	
+	icon = "GFX_ship_part_jump_drive_1"
+	icon_frame = 1
+	
+	firing_arc = 25.0
+	use_ship_kill_target = no
+	
+	prerequisites = { "tech_hyperconductors_3" }
+	component_set = "VOID_LANCE"
+	projectile_gfx = "particle_lance"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 5000
+		large_ship_fallen_empire = 5000	
+		battleship = 5000
+		cruiser = 2500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+	ai_weight = {
+		weight = 10000
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "SMALL_VOID_DISRUPTOR"
+	size = small
+	power = -68
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 78
+			rare_crystals = 26
+		}		
+		upkeep = {
+			energy = 1.56
+			alloys = 0.78
+			rare_crystals = 0.26
+		}
+	}
+	entity = "small_laser_gun_entity"
+	damage = { min = 4 max = 76 }
+	windup = { min = 3 max = 11 }
+	cooldown = 16
+	range = 30.0
+	accuracy = 1.0
+	tracking = 0.60
+	shield_penetration = 1.0
+	armor_penetration = 1.0
+	type = instant
+
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	prerequisites = { "tech_hyperconductors_2a" }
+	component_set = "VOID_DISRUPTOR"
+	projectile_gfx = "gamma_laser_s"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_VOID_DISRUPTOR"
+	size = medium
+	power = -156
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 195
+			rare_crystals = 65
+		}		
+		upkeep = {
+			energy = 3.90
+			alloys = 1.95
+			rare_crystals = 0.65
+		}
+	}
+	entity = "medium_laser_gun_entity"
+	damage = { min = 4 max = 192 }
+	windup = { min = 4 max = 16 }
+	cooldown = 24
+	range = 40.0
+	accuracy = 1.0
+	tracking = 0.35
+	shield_penetration = 1.0
+	armor_penetration = 1.0
+	type = instant
+
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	prerequisites = { "tech_hyperconductors_2a" }
+	component_set = "VOID_DISRUPTOR"
+	projectile_gfx = "gamma_laser_m"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+weapon_component_template = {
+	key = "VOID_CLOUD_LIGHTNING"
+	size = large
+	power = -92
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 114
+			rare_crystals = 38
+		}
+		upkeep = {
+			energy = 2.28
+			alloys = 1.14
+			rare_crystals = 0.38
+		}
+	}	
+	entity = "large_laser_gun_entity"
+	damage = { min = 4 max = 424 }
+	windup = { min = 9 max = 34 }
+	cooldown = 50
+	range = 60
+	accuracy = 1.0
+	tracking = 0.30
+	shield_penetration = 1.0
+	armor_penetration = 1.0
+	type = instant
+
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	prerequisites = { "tech_hyperconductors_2d" }
+	component_set = "VOID_CLOUD_LIGHTNING"
+	projectile_gfx = "gamma_laser_l"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+weapon_component_template = {
+	key = "VOID_ARC_EMITTER"
+	size = extra_large
+	power = -1040
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 975
+			rare_crystals = 325
+		}		
+		upkeep = {
+			energy = 19.5
+			alloys = 9.75
+			rare_crystals = 3.25
+		}
+	}	
+	entity = "invisible_turret_entity"
+	damage = { min = 8 max = 6760 }
+	windup = { min = 12.0 max = 48.0 }
+	cooldown = 71
+	range = 150.0
+	accuracy = 1.0
+	tracking = 0
+	shield_penetration = 1.0
+	armor_penetration = 1.0
+	type = instant
+	
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	
+	firing_arc = 25.0
+	min_range = 10.0
+	use_ship_kill_target = no
+	
+	prerequisites = { "tech_hyperconductors_3b" }
+	component_set = "VOID_ARC_EMITTER"
+	projectile_gfx = "particle_lance"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery artillery }
+	
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 5000
+		large_ship_fallen_empire = 5000	
+		battleship = 5000
+		cruiser = 2500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+	ai_weight = {
+		weight = 10000
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "VOID_TITAN_LANCE"
+	size = titanic
+	power = -2000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1500
+			rare_crystals = 500
+		}		
+		upkeep = {
+			energy = 30
+			alloys = 15
+			rare_crystals = 5
+		}
+	}
+	entity = "invisible_turret_entity"
+	damage = { min = 20000 max = 40000 }
+	windup = { min = 30 max = 120 }
+	cooldown = 180
+	range = 250.0
+	accuracy = 0.85
+	tracking = 0
+	shield_damage = 0.5
+	armor_damage = 1.75
+	hull_damage = 1.5
+	type = instant
+	
+	icon = "GFX_ship_part_energy_lance_1"
+	icon_frame = 1
+	
+	firing_arc = 25.0
+	min_range = 10.0
+	use_ship_kill_target = no
+	
+	prerequisites = { "tech_hyperconductors_4" }
+	component_set = "VOID_TITAN_LANCE"
+	projectile_gfx = "particle_lance"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
+	
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 5000
+		large_ship_fallen_empire = 5000	
+		battleship = 5000
+		cruiser = 2500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+weapon_component_template = {
+	key = "VOID_TORPEDO"
+	size = torpedo
+	power = -308
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 360
+			rare_crystals = 120
+		}		
+		upkeep = {
+			energy = 7.2
+			alloys = 3.6
+			rare_crystals = 1.2
+		}
+	}
+	entity = "turret_energy_torpedo_entity"
+	damage = { min = 244 max = 524 }
+	windup = { min = 25 max = 100 }
+	cooldown = 150
+	range = 120.0
+	accuracy = 0.75
+	tracking = 0
+	shield_damage = 0.25
+	shield_penetration = 0.05
+	armor_damage = 1.75
+	hull_damage = 2
+	type = instant
+	
+	size_damage_factor = 1
+	
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	
+	prerequisites = { "tech_hyperconductors_3" }
+	component_set = "VOID_TORPEDO"
+	projectile_gfx = "plasma_thrower_m"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 5000
+		large_ship_fallen_empire = 5000	
+		battleship = 5000
+		cruiser = 2500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+	
+	ai_weight = {
+		weight = 10000
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}

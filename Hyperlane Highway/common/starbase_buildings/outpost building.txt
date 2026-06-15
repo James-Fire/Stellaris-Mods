@@ -1,0 +1,36 @@
+outpost_warp_fluctuator = {
+	icon = "GFX_spaceport_module_atmospheric_manipulator"
+	construction_days = 180
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_outpost"
+			has_starbase_size >= starbase_outpost
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 200
+			influence = 15
+		}
+
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_ftl_inhibitor }
+	}
+
+	equipped_component = "OUTPOST_AURA_WARP_FLUCTUATOR"
+	
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 15
+	}
+}

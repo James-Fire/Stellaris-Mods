@@ -1,0 +1,16 @@
+name="James Fire's random stuff"
+path="mod/James Fire's random stuff"
+tags={
+	"High Precision Terraforming"
+	"Titan Loadouts"
+	"Battlestar Colosssus"
+	"Special Planets Modifiers"
+	"Ship Numbers Rebalance"
+	"Enhanced SR Mining"
+	"No Specialization District Discounts"
+	"Federation EXP per rank rebalanced"
+	"Utopian Abundance Tech"
+	"Selectable Starting Ruler Traits"
+	"Military Stations Return"
+}
+supported_version="3.1.*"

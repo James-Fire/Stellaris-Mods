@@ -1,0 +1,1977 @@
+##################
+### TECH COSTS ###
+##################
+#If you change any of these, use replace in files so the values are the same across all files
+
+@tier1cost1 = 500
+@tier1cost2 = 640
+@tier1cost3 = 780
+
+@tier2cost1 = 1000
+@tier2cost2 = 1500
+@tier2cost3 = 2000
+
+@tier3cost1 = 3000
+@tier3cost2 = 4000
+@tier3cost3 = 5000
+
+@tier4cost1 = 6000
+@tier4cost2 = 8000
+@tier4cost3 = 10000
+
+@tier5cost1 = 14000
+@tier5cost2 = 17000
+@tier5cost3 = 20000
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+
+@tier2weight1 = 85
+@tier2weight2 = 75
+@tier2weight3 = 70
+
+@tier3weight1 = 65
+@tier3weight2 = 60
+@tier3weight3 = 50
+
+@tier4weight1 = 45
+@tier4weight2 = 40
+@tier4weight3 = 35
+
+@tier5weight1 = 30
+@tier5weight2 = 25
+@tier5weight3 = 20
+
+
+
+
+###########################
+### TECH WEIGHTS - REPEATABLE  ###
+###########################
+
+@repeatableTechWeight = 25
+@repatableTechFactor = 0.5
+
+
+
+tech_advanced_wormhole_physics_1 = {
+	cost = 6000
+	area = physics
+	tier = 4
+	category = { field_manipulation }
+	prerequisites = { "tech_jump_drive_1" }
+	is_reverse_engineerable = no
+	is_rare = yes
+	is_dangerous = no
+	weight = 25
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+
+		modifier = {
+			factor = 2.0
+			has_technology = tech_extradimensional_weapon_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_jump_drive_1
+		}
+	}
+    modifier = {
+        ship_ftl_jumpdrive_range_mult = 1.0
+	}
+
+	ai_weight = {
+		factor = 4 #FTL techs are good
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+
+
+tech_hyperconductors_1 = {
+	cost = 8000
+	area = physics
+	tier = 4
+	category = { field_manipulation }
+	prerequisites = { "tech_jump_drive_1" }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_extradimensional_weapon_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_jump_drive_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_advanced_wormhole_physics_1 
+		}	
+	}
+	
+	modifier = {
+		planet_jobs_energy_produces_mult = 0.10
+	}
+	
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_hyperconductors_2 = {
+	cost = @tier5cost1
+	area = physics
+	tier = 5
+	category = { field_manipulation }
+	prerequisites = { "tech_hyperconductors_1" "tech_hyperconductors_2e" }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_extradimensional_weapon_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_jump_drive_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_advanced_wormhole_physics_1 
+		}	
+		modifier = {
+			factor = 0.0
+			NOR = {
+				has_technology = tech_lasers_1
+				has_technology = tech_lasers_2
+				has_technology = tech_lasers_3
+				has_technology = tech_lasers_4
+				has_technology = tech_lasers_5
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_hyperconductors_2a = {
+	cost = @tier5cost1
+	area = physics
+	tier = 5
+	category = { field_manipulation }
+	prerequisites = { "tech_hyperconductors_1" "tech_hyperconductors_2e" }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_extradimensional_weapon_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_jump_drive_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_advanced_wormhole_physics_1 
+		}
+		modifier = {
+			factor = 0.0
+			NOR = {
+				has_technology = tech_disruptors_1
+				has_technology = tech_disruptors_2
+				has_technology = tech_disruptors_3
+				}
+		}
+	}
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_hyperconductors_2b = {
+	cost = @tier5cost1
+	area = physics
+	tier = 5
+	category = { field_manipulation }
+	prerequisites = { "tech_hyperconductors_1" "tech_missiles_5"  "tech_hyperconductors_2e" }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_extradimensional_weapon_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_jump_drive_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_advanced_wormhole_physics_1 
+		}	
+	}
+	
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_hyperconductors_2c = {
+	cost = @tier5cost1
+	area = physics
+	tier = 5
+	category = { field_manipulation }
+	prerequisites = { "tech_hyperconductors_1" "tech_hyperconductors_2e" }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 5.0
+			has_technology = tech_shield_rechargers_1
+		}
+	}
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_hyperconductors_2d = {
+	cost = @tier5cost1
+	area = physics
+	tier = 5
+	category = { field_manipulation }
+	prerequisites = { "tech_hyperconductors_1" "tech_space_cloud_weapon_1" "tech_hyperconductors_2e" }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_extradimensional_weapon_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_jump_drive_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_advanced_wormhole_physics_1 
+		}	
+	}
+	
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_hyperconductors_2e = {
+	cost = @tier5cost1
+	area = physics
+	tier = 5
+	category = { field_manipulation }
+	prerequisites = { "tech_hyperconductors_1" "tech_zero_point_power" }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_extradimensional_weapon_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_jump_drive_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_advanced_wormhole_physics_1 
+		}	
+	}
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_hyperconductors_2f = {
+	cost = @tier5cost1
+	area = engineering
+	tier = 5
+	category = { propulsion }
+	prerequisites = { "tech_hyperconductors_1" "tech_mass_drivers_5" "tech_hyperconductors_2e" }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_propulsion"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_extradimensional_weapon_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_jump_drive_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_advanced_wormhole_physics_1 
+		}	
+	}
+	
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+tech_hyperconductors_2g = {
+	cost = @tier5cost1
+	area = engineering
+	tier = 5
+	category = { propulsion }
+	prerequisites = { "tech_hyperconductors_1" "tech_kinetic_artillery_2" "tech_hyperconductors_2e" }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_propulsion"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_extradimensional_weapon_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_jump_drive_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_advanced_wormhole_physics_1 
+		}	
+	}
+	
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+tech_hyperconductors_2h = {
+	cost = @tier5cost1
+	area = engineering
+	tier = 5
+	category = { propulsion }
+	prerequisites = { "tech_hyperconductors_1" "tech_autocannons_3" "tech_hyperconductors_2e" }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_propulsion"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_extradimensional_weapon_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_jump_drive_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_advanced_wormhole_physics_1 
+		}	
+	}
+	
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+tech_hyperconductors_2i = {
+	cost = @tier5cost1
+	area = physics
+	tier = 5
+	category = { field_manipulation }
+	prerequisites = { "tech_reactor_boosters_3" "tech_hyperconductors_2e" "tech_hyperconductors_2e" }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_extradimensional_weapon_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_jump_drive_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_advanced_wormhole_physics_1 
+		}	
+	}
+	
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_hyperconductors_3 = {
+	cost = @tier5cost3
+	area = physics
+	tier = 5
+	category = { field_manipulation }
+	prerequisites = { "tech_hyperconductors_1" "tech_hyperconductors_2e" "tech_hyperconductors_2" }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 0.0
+			NOR = {
+				has_technology = tech_hyperconductors_2
+				has_technology = tech_hyperconductors_2a
+				has_technology = tech_hyperconductors_2e
+			}
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2a
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2b
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2e
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2d
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_jump_drive_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_advanced_wormhole_physics_1 
+		}		
+	}
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_hyperconductors_3a = {
+	cost = @tier5cost3
+	area = engineering
+	tier = 5
+	category = { propulsion }
+	prerequisites = { "tech_hyperconductors_2f" "tech_hyperconductors_2e" }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_propulsion"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2a
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2b
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2e
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2d
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_jump_drive_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_advanced_wormhole_physics_1 
+		}		
+	}
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_hyperconductors_3b = {
+	cost = @tier5cost3
+	area = physics
+	tier = 5
+	category = { field_manipulation }
+	prerequisites = { "tech_hyperconductors_1" "tech_arc_emitter_2" "tech_hyperconductors_2e" }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2a
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2b
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2e
+		}
+		modifier = {
+			factor = 10.0
+			has_technology = tech_hyperconductors_2d
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_jump_drive_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_advanced_wormhole_physics_1 
+		}		
+	}
+}
+
+tech_hyperconductors_4 = {
+	cost = 25000
+	area = physics
+	tier = 5
+	category = { field_manipulation }
+	is_reverse_engineerable = no
+	prerequisites = { "tech_hyperconductors_3" "tech_hyperconductors_2e" }
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2a
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2b
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2e
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2d
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_jump_drive_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_advanced_wormhole_physics_1 
+		}		
+	}
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_hyperconductors_4a = {
+	cost = 25000
+	area = engineering
+	tier = 5
+	category = { propulsion }
+	is_reverse_engineerable = no
+	prerequisites = { "tech_hyperconductors_3a" "tech_hyperconductors_2e" }
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_propulsion"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2a
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2b
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2e
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2d
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_jump_drive_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_advanced_wormhole_physics_1 
+		}		
+	}
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+tech_void_extradimensional_weapon = {
+	cost = 25000
+	area = physics
+	tier = 5
+	category = { particles }
+	is_reverse_engineerable = no
+	prerequisites = { "tech_hyperconductors_2e" "tech_extradimensional_weapon_1" }
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2a
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2b
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2d
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_jump_drive_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_advanced_wormhole_physics_1 
+		}		
+	}
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_void_afterburners = {
+	cost = 25000
+	area = physics
+	tier = 5
+	category = { propulsion }
+	is_reverse_engineerable = no
+	prerequisites = { "tech_hyperconductors_2e" "tech_afterburners_2" }
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_propulsion"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2a
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2b
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2d
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_jump_drive_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_advanced_wormhole_physics_1 
+		}		
+	}
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+
+
+tech_shield_generator = {
+	cost = @tier4cost3
+	area = physics
+	tier = 4
+	category = { field_manipulation }
+	prerequisites = { "tech_shields_5" }
+	is_reverse_engineerable = yes
+	is_rare = no
+	is_dangerous = no
+	weight = @tier4weight2
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		
+	}
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_shield_armour = {
+	cost = @tier5cost3
+	area = physics
+	tier = 5
+	category = { field_manipulation }
+	prerequisites = { "tech_shield_generator" }
+	is_reverse_engineerable = yes
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight2
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		
+	}
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_shield_strike_craft = {
+	cost = @tier4cost3
+	area = physics
+	tier = 4
+	category = { field_manipulation }
+	prerequisites = { "tech_shield_generator" "tech_strike_craft_3" }
+	is_reverse_engineerable = yes
+	is_rare = no
+	is_dangerous = no
+	weight = @tier4weight2
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		
+	}
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_void_strike_craft = {
+	cost = @tier5cost1
+	area = physics
+	tier = 5
+	category = { field_manipulation }
+	prerequisites = { "tech_hyperconductors_2" "tech_shield_strike_craft" }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}		
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2a
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2b
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2e
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2d
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_jump_drive_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_advanced_wormhole_physics_1 
+		}	
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_3
+		}	
+	}
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_nanomachines_1 = {
+	cost = @tier4cost3
+	area = engineering
+	tier = 4
+	category = { industry }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_industry"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}	
+		modifier = {
+		factor = 0.0
+			NOR = {
+				has_technology = tech_sapient_ai
+				has_technology = tech_combat_computers_autonomous
+			}
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_sapient_ai
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_combat_computers_autonomous
+		}
+	}
+	
+	modifier = {
+		ship_hull_regen_add_perc = 0.2
+		ship_armor_regen_add_perc = 0.1
+	}
+	
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+tech_void_thrusters = {
+	cost = @tier4cost3
+	area = physics
+	tier = 5
+	prerequisites = { "tech_thrusters_3" "tech_hyperconductors_1" "tech_hyperconductors_2e" }
+	category = { field_manipulation }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}	
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_thrusters_4
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2a
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2b
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2e
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_2d
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_jump_drive_1
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_advanced_wormhole_physics_1 
+		}	
+		modifier = {
+			factor = 2.0
+			has_technology = tech_hyperconductors_3
+		}
+	}
+	
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_fabric_sensors = {
+	cost = @tier4cost3
+	area = physics
+	tier = 5
+	prerequisites = { "tech_sensors_4" }
+	category = { field_manipulation }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}	
+	}
+	
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_quantum_ai_computing = {
+	cost = @tier4cost3
+	area = physics
+	tier = 4
+	category = { computing }
+	prerequisites = { "tech_sapient_ai" }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_computing"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}	
+		
+		modifier = {
+			factor = 0.0
+			NOR = {
+				has_technology = tech_combat_computers_3
+				has_technology = tech_combat_computers_autonomous
+			}
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_combat_computers_3
+		}
+		modifier = {
+			factor = 2.0
+			has_technology = tech_combat_computers_autonomous
+		}
+		
+		
+	}
+	
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+
+
+tech_hyper_drive_4 = {
+	cost = @tier4cost3
+	area = physics
+	tier = 4
+	prerequisites = { "tech_hyper_drive_3" "tech_advanced_wormhole_physics_1" }
+	category = { computing }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}	
+		modifier = {
+			factor = 5.0
+			has_technology = tech_hyperconductors_1
+		}
+	}
+	
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_jump_drive_2 = {
+	cost = 6000
+	area = physics
+	tier = 5
+	prerequisites = { "tech_jump_drive_1" "tech_advanced_wormhole_physics_1" }
+	category = { computing }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+				NOR = {
+					research_leader = {
+						area = physics
+						has_trait = "leader_trait_expertise_field_manipulation"
+					}
+					research_leader = {
+						area = physics
+						has_trait = "leader_trait_curator"
+					}
+					research_leader = {
+						area = physics
+						has_trait = "leader_trait_spark_of_genius"
+					}
+					research_leader = {
+						area = physics
+						has_trait = "leader_trait_maniacal"
+				}
+			}
+		}
+		modifier = {
+			factor = 5.0
+			has_technology = tech_hyperconductors_1
+		}
+	}
+		
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_psi_jump_drive_2 = {
+	cost = 6000
+	area = physics
+	tier = 5
+	prerequisites = { "tech_psi_jump_drive_1" "tech_advanced_wormhole_physics_1" }
+	category = { computing }
+	is_reverse_engineerable = no
+	is_rare = no
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}
+		modifier = {
+			factor = 5.0
+			has_technology = tech_hyperconductors_1
+		}
+	}
+		
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_lantean_drones = {
+	cost = @tier4cost3
+	area = physics
+	tier = 5
+	prerequisites = { "tech_thrusters_4" "tech_sapient_ai" "tech_sensors_4" "tech_zero_point_power" }
+	category = { field_manipulation }
+	is_reverse_engineerable = no
+	is_rare = yes
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}	
+		}
+	}
+	
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}

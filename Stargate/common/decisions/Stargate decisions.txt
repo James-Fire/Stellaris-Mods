@@ -1,0 +1,68 @@
+build_stargate = {
+	sound = event_administrative_work
+	icon = decision_resources
+	
+	prerequisites = {
+		"tech_stargate"
+	}
+	
+	enactment_time = 180
+	
+	resources = {
+		category = decisions
+		cost = {
+			energy = 2000
+			alloys = 1500
+			sr_living_metal = 100
+		}
+	}
+	potential = {
+		is_colony = yes
+		NOT = {
+			has_deposit = d_stargate
+		}
+	}
+	allow = {
+	}
+	
+	effect = {
+		add_stargate = yes
+	}
+	
+	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 0
+			FROM = { has_monthly_income = { resource = sr_living_metal  value = 0 } }
+		}
+		
+	}
+}
+
+decision_manage_stargate = {
+	owned_planets_only = yes
+	#sound = event_administrative_work
+	icon = decision_autofab
+	
+	resources = {
+		category = planet_districts
+		cost = {
+		}	
+	}
+	
+	potential = {
+		has_planet_flag = has_stargate
+	}
+
+	effect = {
+		custom_tooltip = "Manage the Stargate Facility"
+		hidden_effect = {
+			reset_stargate_menu_settings_planet = yes
+		}
+		planet_event = { id = stargate_menu.10 }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

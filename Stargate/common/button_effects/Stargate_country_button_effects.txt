@@ -1,0 +1,2435 @@
+blank_effect = {
+	potential = { hidden_trigger = { always = yes } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { }
+}
+
+#BG buttons, for tooltips
+
+stargate_military_connections_int = {
+	potential = { hidden_trigger = { always = yes } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "stargate_military_connections_int" }
+}
+stargate_military_connections_ex = {
+	potential = { hidden_trigger = { always = yes } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "stargate_military_connections_ex" }
+}
+stargate_economic_connections_int = {
+	potential = { hidden_trigger = { always = yes } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "stargate_economic_connections_int" }
+}
+stargate_economic_connections_ex = {
+	potential = { hidden_trigger = { always = yes } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "stargate_economic_connections_ex" }
+}
+stargate_research_connections_ex = {
+	potential = { hidden_trigger = { always = yes } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "stargate_research_connections_ex" }
+}
+
+
+###Stargate Priority Count Numbers
+
+stargate_military_connections_int_cap_1 = {
+	potential = { has_country_flag = stargate_military_connections_int_cap_1 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_military_connections_int_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_military_connections_int_cap_1 set_country_flag = stargate_military_connections_int_cap_2 }
+}
+stargate_military_connections_int_cap_2 = {
+	potential = { has_country_flag = stargate_military_connections_int_cap_2 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_military_connections_int_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_military_connections_int_cap_2 set_country_flag = stargate_military_connections_int_cap_3 }
+}
+stargate_military_connections_int_cap_3 = {
+	potential = { has_country_flag = stargate_military_connections_int_cap_3 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_military_connections_int_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_military_connections_int_cap_3 set_country_flag = stargate_military_connections_int_cap_4 }
+}
+stargate_military_connections_int_cap_4 = {
+	potential = { has_country_flag = stargate_military_connections_int_cap_4 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_military_connections_int_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_military_connections_int_cap_4 set_country_flag = stargate_military_connections_int_cap_5 }
+}
+stargate_military_connections_int_cap_5 = {
+	potential = { has_country_flag = stargate_military_connections_int_cap_5 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_military_connections_int_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_military_connections_int_cap_5 set_country_flag = stargate_military_connections_int_cap_1 }
+}
+
+stargate_military_connections_ex_cap_1 = {
+	potential = { has_country_flag = stargate_military_connections_ex_cap_1 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_military_connections_ex_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_military_connections_ex_cap_1 set_country_flag = stargate_military_connections_ex_cap_2 }
+}
+stargate_military_connections_ex_cap_2 = {
+	potential = { has_country_flag = stargate_military_connections_ex_cap_2 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_military_connections_ex_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_military_connections_ex_cap_2 set_country_flag = stargate_military_connections_ex_cap_3 }
+}
+stargate_military_connections_ex_cap_3 = {
+	potential = { has_country_flag = stargate_military_connections_ex_cap_3 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_military_connections_ex_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_military_connections_ex_cap_3 set_country_flag = stargate_military_connections_ex_cap_4 }
+}
+stargate_military_connections_ex_cap_4 = {
+	potential = { has_country_flag = stargate_military_connections_ex_cap_4 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_military_connections_ex_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_military_connections_ex_cap_4 set_country_flag = stargate_military_connections_ex_cap_5 }
+}
+stargate_military_connections_ex_cap_5 = {
+	potential = { has_country_flag = stargate_military_connections_ex_cap_5 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_military_connections_ex_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_military_connections_ex_cap_5 set_country_flag = stargate_military_connections_ex_cap_1 }
+}
+
+stargate_economic_connections_int_cap_1 = {
+	potential = { has_country_flag = stargate_economic_connections_int_cap_1 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_economy_connections_int_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_economic_connections_int_cap_1 set_country_flag = stargate_economic_connections_int_cap_2 }
+}
+stargate_economic_connections_int_cap_2 = {
+	potential = { has_country_flag = stargate_economic_connections_int_cap_2 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_economy_connections_int_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_economic_connections_int_cap_2 set_country_flag = stargate_economic_connections_int_cap_3 }
+}
+stargate_economic_connections_int_cap_3 = {
+	potential = { has_country_flag = stargate_economic_connections_int_cap_3 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_economy_connections_int_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_economic_connections_int_cap_3 set_country_flag = stargate_economic_connections_int_cap_4 }
+}
+stargate_economic_connections_int_cap_4 = {
+	potential = { has_country_flag = stargate_economic_connections_int_cap_4 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_economy_connections_int_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_economic_connections_int_cap_4 set_country_flag = stargate_economic_connections_int_cap_5 }
+}
+stargate_economic_connections_int_cap_5 = {
+	potential = { has_country_flag = stargate_economic_connections_int_cap_5 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_economy_connections_int_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_economic_connections_int_cap_5 set_country_flag = stargate_economic_connections_int_cap_1 }
+}
+
+stargate_economic_connections_ex_cap_1 = {
+	potential = { has_country_flag = stargate_economic_connections_ex_cap_1 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_economy_connections_ex_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_economic_connections_ex_cap_1 set_country_flag = stargate_economic_connections_ex_cap_2 }
+}
+stargate_economic_connections_ex_cap_2 = {
+	potential = { has_country_flag = stargate_economic_connections_ex_cap_2 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_economy_connections_ex_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_economic_connections_ex_cap_2 set_country_flag = stargate_economic_connections_ex_cap_3 }
+}
+stargate_economic_connections_ex_cap_3 = {
+	potential = { has_country_flag = stargate_economic_connections_ex_cap_3 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_economy_connections_ex_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_economic_connections_ex_cap_3 set_country_flag = stargate_economic_connections_ex_cap_4 }
+}
+stargate_economic_connections_ex_cap_4 = {
+	potential = { has_country_flag = stargate_economic_connections_ex_cap_4 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_economy_connections_ex_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_economic_connections_ex_cap_4 set_country_flag = stargate_economic_connections_ex_cap_5 }
+}
+stargate_economic_connections_ex_cap_5 = {
+	potential = { has_country_flag = stargate_economic_connections_ex_cap_5 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_economy_connections_ex_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_economic_connections_ex_cap_5 set_country_flag = stargate_economic_connections_ex_cap_1 }
+}
+
+stargate_research_connections_ex_cap_1 = {
+	potential = { has_country_flag = stargate_research_connections_ex_cap_1 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_research_connections_ex_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_research_connections_ex_cap_1 set_country_flag = stargate_research_connections_ex_cap_2 }
+}
+stargate_research_connections_ex_cap_2 = {
+	potential = { has_country_flag = stargate_research_connections_ex_cap_2 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_research_connections_ex_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_research_connections_ex_cap_2 set_country_flag = stargate_research_connections_ex_cap_3 }
+}
+stargate_research_connections_ex_cap_3 = {
+	potential = { has_country_flag = stargate_research_connections_ex_cap_3 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_research_connections_ex_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_research_connections_ex_cap_3 set_country_flag = stargate_research_connections_ex_cap_4 }
+}
+stargate_research_connections_ex_cap_4 = {
+	potential = { has_country_flag = stargate_research_connections_ex_cap_4 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_research_connections_ex_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_research_connections_ex_cap_4 set_country_flag = stargate_research_connections_ex_cap_5 }
+}
+stargate_research_connections_ex_cap_5 = {
+	potential = { has_country_flag = stargate_research_connections_ex_cap_5 }
+	allow = {
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_research_connections_ex_off }
+		}
+	}
+	effect = { remove_country_flag = stargate_research_connections_ex_cap_5 set_country_flag = stargate_research_connections_ex_cap_1 }
+}
+
+###Stargate Priority Count
+
+stargate_mil_con_int_increase_cap = {
+	potential = { }
+	allow = {
+		custom_tooltip = {
+			fail_text = at_max_connections
+			NOT = { check_variable = { which = stargate_connections_cap value >= 90 } }
+		}
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_military_connections_int_off }
+		}
+	}
+	effect = {
+		custom_tooltip = "stargate_connection_cap_increase"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = stargate_military_connections_int_cap_1
+					check_variable = { which = stargate_connections_cap value < 90 }
+				}
+				change_variable = { which = stargate_military_connections_int_cap value = 1 }
+				change_variable = { which = stargate_connections_cap value = 1 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_military_connections_int_cap_2
+					check_variable = { which = stargate_connections_cap value < 89 }
+				}
+				change_variable = { which = stargate_military_connections_int_cap value = 2 }
+				change_variable = { which = stargate_connections_cap value = 2 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_military_connections_int_cap_3
+					check_variable = { which = stargate_connections_cap value < 88 }
+				}
+				change_variable = { which = stargate_military_connections_int_cap value = 3 }
+				change_variable = { which = stargate_connections_cap value = 3 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_military_connections_int_cap_4
+					check_variable = { which = stargate_connections_cap value < 87 }
+				}
+				change_variable = { which = stargate_military_connections_int_cap value = 4 }
+				change_variable = { which = stargate_connections_cap value = 4 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_military_connections_int_cap_5
+					check_variable = { which = stargate_connections_cap value < 86 }
+				}
+				change_variable = { which = stargate_military_connections_int_cap value = 5 }
+				change_variable = { which = stargate_connections_cap value = 5 }
+			}
+		}
+	}
+}
+stargate_mil_con_int_decrease_cap = {
+	potential = { }
+	allow = {
+		custom_tooltip = {
+			fail_text = at_max_connections
+			NOT = { check_variable = { which = stargate_connections_cap value <= 0 } }
+		}
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_military_connections_int_off }
+		}
+	}
+	effect = {
+		custom_tooltip = "stargate_connection_cap_decrease"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = stargate_military_connections_int_1
+				}
+				change_variable = { which = autofab_queue value = -1 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_military_connections_int_2
+				}
+				change_variable = { which = autofab_queue value = -2 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_military_connections_int_3
+				}
+				change_variable = { which = autofab_queue value = -3 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_military_connections_int_4
+				}
+				change_variable = { which = autofab_queue value = -4 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_military_connections_int_5
+				}
+				change_variable = { which = autofab_queue value = -5 }
+			}
+		}
+	}
+}
+
+stargate_mil_con_ex_increase_cap = {
+	potential = { }
+	allow = {
+		custom_tooltip = {
+			fail_text = at_max_connections
+			NOT = { check_variable = { which = stargate_connections_cap value >= 90 } }
+		}
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_military_connections_ex_off }
+		}
+	}
+	effect = {
+		custom_tooltip = "stargate_connection_cap_increase"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = stargate_military_connections_ex_cap_1
+					check_variable = { which = stargate_connections_cap value < 90 }
+				}
+				change_variable = { which = stargate_military_connections_ex_cap value = 1 }
+				change_variable = { which = stargate_connections_cap value = 1 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_military_connections_ex_cap_2
+					check_variable = { which = stargate_connections_cap value < 89 }
+				}
+				change_variable = { which = stargate_military_connections_ex_cap value = 2 }
+				change_variable = { which = stargate_connections_cap value = 2 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_military_connections_ex_cap_3
+					check_variable = { which = stargate_connections_cap value < 88 }
+				}
+				change_variable = { which = stargate_military_connections_ex_cap value = 3 }
+				change_variable = { which = stargate_connections_cap value = 3 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_military_connections_ex_cap_4
+					check_variable = { which = stargate_connections_cap value < 87 }
+				}
+				change_variable = { which = stargate_military_connections_ex_cap value = 4 }
+				change_variable = { which = stargate_connections_cap value = 4 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_military_connections_ex_cap_5
+					check_variable = { which = stargate_connections_cap value < 86 }
+				}
+				change_variable = { which = stargate_military_connections_ex_cap value = 5 }
+				change_variable = { which = stargate_connections_cap value = 5 }
+			}
+		}
+	}
+}
+stargate_mil_con_ex_decrease_cap = {
+	potential = { }
+	allow = {
+		custom_tooltip = {
+			fail_text = at_max_connections
+			NOT = { check_variable = { which = stargate_connections_cap value <= 0 } }
+		}
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_military_connections_ex_off }
+		}
+	}
+	effect = {
+		custom_tooltip = "stargate_connection_cap_decrease"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = stargate_military_connections_ex_1
+				}
+				change_variable = { which = autofab_energy_queue value = -1 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_military_connections_ex_2
+				}
+				change_variable = { which = autofab_energy_queue value = -2 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_military_connections_ex_3
+				}
+				change_variable = { which = autofab_energy_queue value = -3 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_military_connections_ex_4
+				}
+				change_variable = { which = autofab_energy_queue value = -4 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_military_connections_ex_5
+				}
+				change_variable = { which = autofab_energy_queue value = -5 }
+			}
+		}
+	}
+}
+
+stargate_econ_con_int_increase_cap = {
+	potential = { }
+	allow = {
+		custom_tooltip = {
+			fail_text = at_max_connections
+			NOT = { check_variable = { which = stargate_connections_cap value >= 90 } }
+		}
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_economy_connections_int_off }
+		}
+	}
+	effect = {
+		custom_tooltip = "stargate_connection_cap_increase"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = stargate_economic_connections_int_cap_1
+					check_variable = { which = stargate_connections_cap value < 90 }
+				}
+				change_variable = { which = stargate_economic_connections_int_cap value = 1 }
+				change_variable = { which = stargate_connections_cap value = 1 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_economic_connections_int_cap_2
+					check_variable = { which = stargate_connections_cap value < 89 }
+				}
+				change_variable = { which = stargate_economic_connections_int_cap value = 2 }
+				change_variable = { which = stargate_connections_cap value = 2 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_economic_connections_int_cap_3
+					check_variable = { which = stargate_connections_cap value < 88 }
+				}
+				change_variable = { which = stargate_economic_connections_int_cap value = 3 }
+				change_variable = { which = stargate_connections_cap value = 3 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_economic_connections_int_cap_4
+					check_variable = { which = stargate_connections_cap value < 87 }
+				}
+				change_variable = { which = stargate_economic_connections_int_cap value = 4 }
+				change_variable = { which = stargate_connections_cap value = 4 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_economic_connections_int_cap_5
+					check_variable = { which = stargate_connections_cap value < 86 }
+				}
+				change_variable = { which = stargate_economic_connections_int_cap value = 5 }
+				change_variable = { which = stargate_connections_cap value = 5 }
+			}
+		}
+	}
+}
+stargate_econ_con_int_decrease_cap = {
+	potential = { }
+	allow = {
+		custom_tooltip = {
+			fail_text = at_max_connections
+			NOT = { check_variable = { which = stargate_connections_cap value <= 0 } }
+		}
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_economy_connections_int_off }
+		}
+	}
+	effect = {
+		custom_tooltip = "stargate_connection_cap_decrease"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = stargate_economic_connections_int_1
+				}
+				change_variable = { which = autofab_mineral_queue value = -1 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_economic_connections_int_2
+				}
+				change_variable = { which = autofab_mineral_queue value = -2 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_economic_connections_int_3
+				}
+				change_variable = { which = autofab_mineral_queue value = -3 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_economic_connections_int_4
+				}
+				change_variable = { which = autofab_mineral_queue value = -4 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_economic_connections_int_5
+				}
+				change_variable = { which = autofab_mineral_queue value = -5 }
+			}
+		}
+	}
+}
+
+stargate_econ_con_ex_increase_cap = {
+	potential = { }
+	allow = {
+		custom_tooltip = {
+			fail_text = at_max_connections
+			NOT = { check_variable = { which = stargate_connections_cap value >= 90 } }
+		}
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_economy_connections_ex_off }
+		}
+	}
+	effect = {
+		custom_tooltip = "stargate_connection_cap_increase"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = stargate_economic_connections_ex_cap_1
+					check_variable = { which = stargate_connections_cap value < 90 }
+				}
+				change_variable = { which = stargate_economic_connections_ex_cap value = 1 }
+				change_variable = { which = stargate_connections_cap value = 1 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_economic_connections_ex_cap_2
+					check_variable = { which = stargate_connections_cap value < 89 }
+				}
+				change_variable = { which = stargate_economic_connections_ex_cap value = 2 }
+				change_variable = { which = stargate_connections_cap value = 2 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_economic_connections_ex_cap_3
+					check_variable = { which = stargate_connections_cap value < 88 }
+				}
+				change_variable = { which = stargate_economic_connections_ex_cap value = 3 }
+				change_variable = { which = stargate_connections_cap value = 3 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_economic_connections_ex_cap_4
+					check_variable = { which = stargate_connections_cap value < 87 }
+				}
+				change_variable = { which = stargate_economic_connections_ex_cap value = 4 }
+				change_variable = { which = stargate_connections_cap value = 4 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_economic_connections_ex_cap_5
+					check_variable = { which = stargate_connections_cap value < 86 }
+				}
+				change_variable = { which = stargate_economic_connections_ex_cap value = 5 }
+				change_variable = { which = stargate_connections_cap value = 5 }
+			}
+		}
+	}
+}
+stargate_econ_con_ex_decrease_cap = {
+	potential = { }
+	allow = {
+		custom_tooltip = {
+			fail_text = at_max_connections
+			NOT = { check_variable = { which = stargate_connections_cap value <= 0 } }
+		}
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_economy_connections_ex_off }
+		}
+	}
+	effect = {
+		custom_tooltip = "stargate_connection_cap_decrease"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = stargate_economic_connections_ex_1
+				}
+				change_variable = { which = autofab_food_queue value = -1 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_economic_connections_ex_2
+				}
+				change_variable = { which = autofab_food_queue value = -2 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_economic_connections_ex_3
+				}
+				change_variable = { which = autofab_food_queue value = -3 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_economic_connections_ex_4
+				}
+				change_variable = { which = autofab_food_queue value = -4 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_economic_connections_ex_5
+				}
+				change_variable = { which = autofab_food_queue value = -5 }
+			}
+		}
+	}
+}
+
+stargate_res_con_ex_increase_cap = {
+	potential = { }
+	allow = {
+		custom_tooltip = {
+			fail_text = at_max_connections
+			NOT = { check_variable = { which = stargate_connections_cap value >= 90 } }
+		}
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_research_connections_ex_off }
+		}
+	}
+	effect = {
+		custom_tooltip = "stargate_connection_cap_increase"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = stargate_research_connections_ex_cap_1
+					check_variable = { which = stargate_connections_cap value < 90 }
+				}
+				change_variable = { which = stargate_research_connections_ex_cap value = 1 }
+				change_variable = { which = stargate_connections_cap value = 1 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_research_connections_ex_cap_2
+					check_variable = { which = stargate_connections_cap value < 89 }
+				}
+				change_variable = { which = stargate_research_connections_ex_cap value = 2 }
+				change_variable = { which = stargate_connections_cap value = 2 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_research_connections_ex_cap_3
+					check_variable = { which = stargate_connections_cap value < 88 }
+				}
+				change_variable = { which = stargate_research_connections_ex_cap value = 3 }
+				change_variable = { which = stargate_connections_cap value = 3 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_research_connections_ex_cap_4
+					check_variable = { which = stargate_connections_cap value < 87 }
+				}
+				change_variable = { which = stargate_research_connections_ex_cap value = 4 }
+				change_variable = { which = stargate_connections_cap value = 4 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_research_connections_ex_cap_5
+					check_variable = { which = stargate_connections_cap value < 86 }
+				}
+				change_variable = { which = stargate_research_connections_ex_cap value = 5 }
+				change_variable = { which = stargate_connections_cap value = 5 }
+			}
+		}
+	}
+}
+stargate_res_con_ex_decrease_cap = {
+	potential = { }
+	allow = {
+		custom_tooltip = {
+			fail_text = at_max_connections
+			NOT = { check_variable = { which = stargate_connections_cap value <= 0 } }
+		}
+		custom_tooltip = {
+			fail_text = connection_type_disabled
+			NOT = { has_country_flag = stargate_research_connections_ex_off }
+		}
+	}
+	effect = {
+		custom_tooltip = "stargate_connection_cap_decrease"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = stargate_research_connections_ex_1
+				}
+				change_variable = { which = autofab_alloys_queue value = -1 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_research_connections_ex_2
+				}
+				change_variable = { which = autofab_alloys_queue value = -2 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_research_connections_ex_3
+				}
+				change_variable = { which = autofab_alloys_queue value = -3 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_research_connections_ex_4
+				}
+				change_variable = { which = autofab_alloys_queue value = -4 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_research_connections_ex_5
+				}
+				change_variable = { which = autofab_alloys_queue value = -5 }
+			}
+		}
+	}
+}
+
+###Stargate Active Buttons
+
+stargate_military_connections_int_off = {
+	potential = { has_country_flag = stargate_military_connections_int_off }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "stargate_connection_off" remove_country_flag = stargate_military_connections_int_off }
+}
+stargate_military_connections_int_on = {
+	potential = { NOT = { has_country_flag = stargate_military_connections_int_off } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = {
+		custom_tooltip = "stargate_connection_on"
+		set_country_flag = stargate_military_connections_int_off
+	}
+}
+stargate_military_connections_ex_off = {
+	potential = { has_country_flag = stargate_military_connections_ex_off }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "stargate_connection_off" remove_country_flag = stargate_military_connections_ex_off }
+}
+stargate_military_connections_ex_on = {
+	potential = { NOT = { has_country_flag = stargate_military_connections_ex_off } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = {
+		custom_tooltip = "stargate_connection_on"
+		set_country_flag = stargate_military_connections_ex_off
+	}
+}
+stargate_economy_connections_int_off = {
+	potential = { has_country_flag = stargate_economy_connections_int_off }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "stargate_connection_off" remove_country_flag = stargate_economy_connections_int_off }
+}
+stargate_economy_connections_int_on = {
+	potential = { NOT = { has_country_flag = stargate_economy_connections_int_off } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = {
+		custom_tooltip = "stargate_connection_on"
+		set_country_flag = stargate_economy_connections_int_off
+	}
+}
+stargate_economy_connections_ex_off = {
+	potential = { has_country_flag = stargate_economy_connections_ex_off }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "stargate_connection_off" remove_country_flag = stargate_economy_connections_ex_off }
+}
+stargate_economy_connections_ex_on = {
+	potential = { NOT = { has_country_flag = stargate_economy_connections_ex_off } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = {
+		custom_tooltip = "stargate_connection_on"
+		set_country_flag = stargate_economy_connections_ex_off
+	}
+}
+stargate_research_connections_ex_off = {
+	potential = { has_country_flag = stargate_research_connections_ex_off }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "stargate_connection_off" remove_country_flag = stargate_research_connections_ex_off }
+}
+stargate_research_connections_ex_on = {
+	potential = { NOT = { has_country_flag = stargate_research_connections_ex_off } }
+	allow = { hidden_trigger = { always = yes } }
+	effect = {
+		custom_tooltip = "stargate_connection_on"
+		set_country_flag = stargate_research_connections_ex_off
+	}
+}
+
+###Stargate Priority Numbers
+
+stargate_military_connections_int_1 = {
+	potential = { has_country_flag = stargate_military_connections_int_1 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_military_connections_int_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+stargate_military_connections_int_2 = {
+	potential = { has_country_flag = stargate_military_connections_int_2 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_military_connections_int_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+stargate_military_connections_int_3 = {
+	potential = { has_country_flag = stargate_military_connections_int_3 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_military_connections_int_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+stargate_military_connections_int_4 = {
+	potential = { has_country_flag = stargate_military_connections_int_4 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_military_connections_int_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+stargate_military_connections_int_5 = {
+	potential = { has_country_flag = stargate_military_connections_int_5 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_military_connections_int_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+
+stargate_military_connections_ex_1 = {
+	potential = { has_country_flag = stargate_military_connections_ex_1 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_military_connections_ex_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+stargate_military_connections_ex_2 = {
+	potential = { has_country_flag = stargate_military_connections_ex_2 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_military_connections_ex_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+stargate_military_connections_ex_3 = {
+	potential = { has_country_flag = stargate_military_connections_ex_3 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_military_connections_ex_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+stargate_military_connections_ex_4 = {
+	potential = { has_country_flag = stargate_military_connections_ex_4 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_military_connections_ex_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+stargate_military_connections_ex_5 = {
+	potential = { has_country_flag = stargate_military_connections_ex_5 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_military_connections_ex_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+
+stargate_economic_connections_int_1 = {
+	potential = { has_country_flag = stargate_economic_connections_int_1 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_economy_connections_int_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+stargate_economic_connections_int_2 = {
+	potential = { has_country_flag = stargate_economic_connections_int_2 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_economy_connections_int_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+stargate_economic_connections_int_3 = {
+	potential = { has_country_flag = stargate_economic_connections_int_3 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_economy_connections_int_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+stargate_economic_connections_int_4 = {
+	potential = { has_country_flag = stargate_economic_connections_int_4 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_economy_connections_int_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+stargate_economic_connections_int_5 = {
+	potential = { has_country_flag = stargate_economic_connections_int_5 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_economy_connections_int_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+
+stargate_economic_connections_ex_1 = {
+	potential = { has_country_flag = stargate_economic_connections_ex_1 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_economy_connections_ex_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+stargate_economic_connections_ex_2 = {
+	potential = { has_country_flag = stargate_economic_connections_ex_2 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_economy_connections_ex_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+stargate_economic_connections_ex_3 = {
+	potential = { has_country_flag = stargate_economic_connections_ex_3 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_economy_connections_ex_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+stargate_economic_connections_ex_4 = {
+	potential = { has_country_flag = stargate_economic_connections_ex_4 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_economy_connections_ex_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+stargate_economic_connections_ex_5 = {
+	potential = { has_country_flag = stargate_economic_connections_ex_5 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_economy_connections_ex_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+
+stargate_research_connections_ex_1 = {
+	potential = { has_country_flag = stargate_research_connections_ex_1 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_research_connections_ex_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+stargate_research_connections_ex_2 = {
+	potential = { has_country_flag = stargate_research_connections_ex_2 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_research_connections_ex_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+stargate_research_connections_ex_3 = {
+	potential = { has_country_flag = stargate_research_connections_ex_3 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_research_connections_ex_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+stargate_research_connections_ex_4 = {
+	potential = { has_country_flag = stargate_research_connections_ex_4 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_research_connections_ex_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+stargate_research_connections_ex_5 = {
+	potential = { has_country_flag = stargate_research_connections_ex_5 }
+	allow = { hidden_trigger = { NOT = { has_country_flag = stargate_research_connections_ex_off } } }
+	effect = { custom_tooltip = "stargate_connection_priority" }
+}
+
+###Stargate Priority Buttons
+
+stargate_mil_con_int_increase_priority = {
+	potential = { }
+	allow = {
+		custom_tooltip = "already_maximum_priority"
+		hidden_trigger = {
+			NOT = { has_country_flag = stargate_military_connections_int_1 }
+			NOT = { has_country_flag = stargate_military_connections_int_off }
+		}
+	}
+	effect = {
+		custom_tooltip = "increase_connection_priority"
+		hidden_effect = {
+			switch = {
+				trigger = has_country_flag
+				stargate_military_connections_int_1 = {
+				}
+				stargate_military_connections_int_2 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_military_connections_int_1 = { }
+						stargate_military_connections_ex_1 = { 
+							remove_country_flag = stargate_military_connections_ex_1
+							remove_country_flag = stargate_military_connections_int_2
+							set_country_flag = stargate_military_connections_ex_2
+							set_country_flag = stargate_military_connections_int_1
+						}
+						stargate_economic_connections_int_1 = { 
+							remove_country_flag = stargate_economic_connections_int_1
+							remove_country_flag = stargate_military_connections_int_2
+							set_country_flag = stargate_economic_connections_int_2
+							set_country_flag = stargate_military_connections_int_1
+						}
+						stargate_economic_connections_ex_1 = { 
+							remove_country_flag = stargate_economic_connections_ex_1
+							remove_country_flag = stargate_military_connections_int_2
+							set_country_flag = stargate_economic_connections_ex_2
+							set_country_flag = stargate_military_connections_int_1
+						}
+						stargate_research_connections_ex_1 = { 
+							remove_country_flag = stargate_research_connections_ex_1
+							remove_country_flag = stargate_military_connections_int_2
+							set_country_flag = stargate_research_connections_ex_2
+							set_country_flag = stargate_military_connections_int_1
+						}
+					}
+				}
+				stargate_military_connections_int_3 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_military_connections_int_2 = { }
+						stargate_military_connections_ex_2 = { 
+							remove_country_flag = stargate_military_connections_ex_2
+							remove_country_flag = stargate_military_connections_int_3
+							set_country_flag = stargate_military_connections_ex_3
+							set_country_flag = stargate_military_connections_int_2
+						}
+						stargate_economic_connections_int_2 = { 
+							remove_country_flag = stargate_economic_connections_int_2
+							remove_country_flag = stargate_military_connections_int_3
+							set_country_flag = stargate_economic_connections_int_3
+							set_country_flag = stargate_military_connections_int_2
+						}
+						stargate_economic_connections_ex_2 = { 
+							remove_country_flag = stargate_economic_connections_ex_2
+							remove_country_flag = stargate_military_connections_int_3
+							set_country_flag = stargate_economic_connections_ex_3
+							set_country_flag = stargate_military_connections_int_2
+						}
+						stargate_research_connections_ex_2 = { 
+							remove_country_flag = stargate_research_connections_ex_2
+							remove_country_flag = stargate_military_connections_int_3
+							set_country_flag = stargate_research_connections_ex_3
+							set_country_flag = stargate_military_connections_int_2
+						}
+					}
+				}
+				stargate_military_connections_int_4 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_military_connections_int_3 = { }
+						stargate_military_connections_ex_3 = { 
+							remove_country_flag = stargate_military_connections_ex_3
+							remove_country_flag = stargate_military_connections_int_4
+							set_country_flag = stargate_military_connections_ex_4
+							set_country_flag = stargate_military_connections_int_3
+						}
+						stargate_economic_connections_int_3 = { 
+							remove_country_flag = stargate_economic_connections_int_3
+							remove_country_flag = stargate_military_connections_int_4
+							set_country_flag = stargate_economic_connections_int_4
+							set_country_flag = stargate_military_connections_int_3
+						}
+						stargate_economic_connections_ex_3 = { 
+							remove_country_flag = stargate_economic_connections_ex_3
+							remove_country_flag = stargate_military_connections_int_4
+							set_country_flag = stargate_economic_connections_ex_4
+							set_country_flag = stargate_military_connections_int_3
+						}
+						stargate_research_connections_ex_3 = { 
+							remove_country_flag = stargate_research_connections_ex_3
+							remove_country_flag = stargate_military_connections_int_4
+							set_country_flag = stargate_research_connections_ex_4
+							set_country_flag = stargate_military_connections_int_3
+						}
+					}
+				}
+				stargate_military_connections_int_5 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_military_connections_int_4 = { }
+						stargate_military_connections_ex_4 = { 
+							remove_country_flag = stargate_military_connections_ex_4
+							remove_country_flag = stargate_military_connections_int_5
+							set_country_flag = stargate_military_connections_ex_5
+							set_country_flag = stargate_military_connections_int_4
+						}
+						stargate_economic_connections_int_4 = { 
+							remove_country_flag = stargate_economic_connections_int_4
+							remove_country_flag = stargate_military_connections_int_5
+							set_country_flag = stargate_economic_connections_int_5
+							set_country_flag = stargate_military_connections_int_4
+						}
+						stargate_economic_connections_ex_4 = { 
+							remove_country_flag = stargate_economic_connections_ex_4
+							remove_country_flag = stargate_military_connections_int_5
+							set_country_flag = stargate_economic_connections_ex_5
+							set_country_flag = stargate_military_connections_int_4
+						}
+						stargate_research_connections_ex_4 = { 
+							remove_country_flag = stargate_research_connections_ex_4
+							remove_country_flag = stargate_military_connections_int_5
+							set_country_flag = stargate_research_connections_ex_5
+							set_country_flag = stargate_military_connections_int_4
+						}
+					}
+				}
+			}
+		}
+	}
+}
+stargate_mil_con_int_decrease_priority = {
+	potential = { }
+	allow = {
+		custom_tooltip = "already_minimum_priority"
+		hidden_trigger = {
+			NOT = { has_country_flag = stargate_military_connections_int_5 }
+			NOT = { has_country_flag = stargate_military_connections_int_off }
+		}
+	}
+	effect = {
+		custom_tooltip = "decrease_connection_priority"
+		hidden_effect = {
+			switch = {
+				trigger = has_country_flag
+				stargate_military_connections_int_1 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_military_connections_int_2 = { }
+						stargate_military_connections_ex_2 = { 
+							remove_country_flag = stargate_military_connections_ex_2
+							remove_country_flag = stargate_military_connections_int_1
+							set_country_flag = stargate_military_connections_ex_1
+							set_country_flag = stargate_military_connections_int_2
+						}
+						stargate_economic_connections_int_2 = { 
+							remove_country_flag = stargate_economic_connections_int_2
+							remove_country_flag = stargate_military_connections_int_1
+							set_country_flag = stargate_economic_connections_int_1
+							set_country_flag = stargate_military_connections_int_2
+						}
+						stargate_economic_connections_ex_2 = { 
+							remove_country_flag = stargate_economic_connections_ex_2
+							remove_country_flag = stargate_military_connections_int_1
+							set_country_flag = stargate_economic_connections_ex_1
+							set_country_flag = stargate_military_connections_int_2
+						}
+						stargate_research_connections_ex_2 = { 
+							remove_country_flag = stargate_research_connections_ex_2
+							remove_country_flag = stargate_military_connections_int_1
+							set_country_flag = stargate_research_connections_ex_1
+							set_country_flag = stargate_military_connections_int_2
+						}
+					}
+				}
+				stargate_military_connections_int_2 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_military_connections_int_3 = { }
+						stargate_military_connections_ex_3 = { 
+							remove_country_flag = stargate_military_connections_ex_3
+							remove_country_flag = stargate_military_connections_int_2
+							set_country_flag = stargate_military_connections_ex_2
+							set_country_flag = stargate_military_connections_int_3
+						}
+						stargate_economic_connections_int_3 = { 
+							remove_country_flag = stargate_economic_connections_int_3
+							remove_country_flag = stargate_military_connections_int_2
+							set_country_flag = stargate_economic_connections_int_2
+							set_country_flag = stargate_military_connections_int_3
+						}
+						stargate_economic_connections_ex_3 = { 
+							remove_country_flag = stargate_economic_connections_ex_3
+							remove_country_flag = stargate_military_connections_int_2
+							set_country_flag = stargate_economic_connections_ex_2
+							set_country_flag = stargate_military_connections_int_3
+						}
+						stargate_research_connections_ex_3 = { 
+							remove_country_flag = stargate_research_connections_ex_3
+							remove_country_flag = stargate_military_connections_int_2
+							set_country_flag = stargate_research_connections_ex_2
+							set_country_flag = stargate_military_connections_int_3
+						}
+					}
+				}
+				stargate_military_connections_int_3 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_military_connections_int_4 = { }
+						stargate_military_connections_ex_4 = { 
+							remove_country_flag = stargate_military_connections_ex_4
+							remove_country_flag = stargate_military_connections_int_3
+							set_country_flag = stargate_military_connections_ex_3
+							set_country_flag = stargate_military_connections_int_4
+						}
+						stargate_economic_connections_int_4 = { 
+							remove_country_flag = stargate_economic_connections_int_4
+							remove_country_flag = stargate_military_connections_int_3
+							set_country_flag = stargate_economic_connections_int_3
+							set_country_flag = stargate_military_connections_int_4
+						}
+						stargate_economic_connections_ex_4 = { 
+							remove_country_flag = stargate_economic_connections_ex_4
+							remove_country_flag = stargate_military_connections_int_3
+							set_country_flag = stargate_economic_connections_ex_3
+							set_country_flag = stargate_military_connections_int_4
+						}
+						stargate_research_connections_ex_4 = { 
+							remove_country_flag = stargate_research_connections_ex_4
+							remove_country_flag = stargate_military_connections_int_3
+							set_country_flag = stargate_research_connections_ex_3
+							set_country_flag = stargate_military_connections_int_4
+						}
+					}
+				}
+				stargate_military_connections_int_4 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_military_connections_int_5 = { }
+						stargate_military_connections_ex_5 = { 
+							remove_country_flag = stargate_military_connections_ex_5
+							remove_country_flag = stargate_military_connections_int_4
+							set_country_flag = stargate_military_connections_ex_4
+							set_country_flag = stargate_military_connections_int_5
+						}
+						stargate_economic_connections_int_5 = { 
+							remove_country_flag = stargate_economic_connections_int_5
+							remove_country_flag = stargate_military_connections_int_4
+							set_country_flag = stargate_economic_connections_int_4
+							set_country_flag = stargate_military_connections_int_5
+						}
+						stargate_economic_connections_ex_5 = { 
+							remove_country_flag = stargate_economic_connections_ex_5
+							remove_country_flag = stargate_military_connections_int_4
+							set_country_flag = stargate_economic_connections_ex_4
+							set_country_flag = stargate_military_connections_int_5
+						}
+						stargate_research_connections_ex_5 = { 
+							remove_country_flag = stargate_research_connections_ex_5
+							remove_country_flag = stargate_military_connections_int_4
+							set_country_flag = stargate_research_connections_ex_4
+							set_country_flag = stargate_military_connections_int_5
+						}
+					}
+				}
+				stargate_military_connections_int_5 = {
+				}
+			}
+		}
+	}
+}
+
+stargate_mil_con_ex_increase_priority = {
+	potential = { }
+	allow = {
+		custom_tooltip = "already_maximum_priority"
+		hidden_trigger = {
+			NOT = { has_country_flag = stargate_military_connections_ex_1 }
+			NOT = { has_country_flag = stargate_military_connections_ex_off }
+		}
+	}
+	effect = {
+		custom_tooltip = "increase_connection_priority"
+		hidden_effect = {
+			switch = {
+				trigger = has_country_flag
+				stargate_military_connections_ex_1 = {
+				}
+				stargate_military_connections_ex_2 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_military_connections_ex_1 = { }
+						stargate_military_connections_int_1 = { 
+							remove_country_flag = stargate_military_connections_int_1
+							remove_country_flag = stargate_military_connections_ex_2
+							set_country_flag = stargate_military_connections_int_2
+							set_country_flag = stargate_military_connections_ex_1
+						}
+						stargate_economic_connections_int_1 = { 
+							remove_country_flag = stargate_economic_connections_int_1
+							remove_country_flag = stargate_military_connections_ex_2
+							set_country_flag = stargate_economic_connections_int_2
+							set_country_flag = stargate_military_connections_ex_1
+						}
+						stargate_economic_connections_ex_1 = { 
+							remove_country_flag = stargate_economic_connections_ex_1
+							remove_country_flag = stargate_military_connections_ex_2
+							set_country_flag = stargate_economic_connections_ex_2
+							set_country_flag = stargate_military_connections_ex_1
+						}
+						stargate_research_connections_ex_1 = { 
+							remove_country_flag = stargate_research_connections_ex_1
+							remove_country_flag = stargate_military_connections_ex_2
+							set_country_flag = stargate_research_connections_ex_2
+							set_country_flag = stargate_military_connections_ex_1
+						}
+					}
+				}
+				stargate_military_connections_ex_3 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_military_connections_ex_2 = { }
+						stargate_military_connections_int_2 = {
+							remove_country_flag = stargate_military_connections_int_2
+							remove_country_flag = stargate_military_connections_ex_3
+							set_country_flag = stargate_military_connections_int_3
+							set_country_flag = stargate_military_connections_ex_2
+						}
+						stargate_economic_connections_int_2 = { 
+							remove_country_flag = stargate_economic_connections_int_2
+							remove_country_flag = stargate_military_connections_ex_3
+							set_country_flag = stargate_economic_connections_int_3
+							set_country_flag = stargate_military_connections_ex_2
+						}
+						stargate_economic_connections_ex_2 = { 
+							remove_country_flag = stargate_economic_connections_ex_2
+							remove_country_flag = stargate_military_connections_ex_3
+							set_country_flag = stargate_economic_connections_ex_3
+							set_country_flag = stargate_military_connections_ex_2
+						}
+						stargate_research_connections_ex_2 = { 
+							remove_country_flag = stargate_research_connections_ex_2
+							remove_country_flag = stargate_military_connections_ex_3
+							set_country_flag = stargate_research_connections_ex_3
+							set_country_flag = stargate_military_connections_ex_2
+						}
+					}
+				}
+				stargate_military_connections_ex_4 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_military_connections_ex_3 = { }
+						stargate_military_connections_int_3 = { 
+							remove_country_flag = stargate_military_connections_int_3
+							remove_country_flag = stargate_military_connections_ex_4
+							set_country_flag = stargate_military_connections_int_4
+							set_country_flag = stargate_military_connections_ex_3
+						}
+						stargate_economic_connections_int_3 = { 
+							remove_country_flag = stargate_economic_connections_int_3
+							remove_country_flag = stargate_military_connections_ex_4
+							set_country_flag = stargate_economic_connections_int_4
+							set_country_flag = stargate_military_connections_ex_3
+						}
+						stargate_economic_connections_ex_3 = { 
+							remove_country_flag = stargate_economic_connections_ex_3
+							remove_country_flag = stargate_military_connections_ex_4
+							set_country_flag = stargate_economic_connections_ex_4
+							set_country_flag = stargate_military_connections_ex_3
+						}
+						stargate_research_connections_ex_3 = { 
+							remove_country_flag = stargate_research_connections_ex_3
+							remove_country_flag = stargate_military_connections_ex_4
+							set_country_flag = stargate_research_connections_ex_4
+							set_country_flag = stargate_military_connections_ex_3
+						}
+					}
+				}
+				stargate_military_connections_ex_5 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_military_connections_ex_4 = { }
+						stargate_military_connections_int_4 = { 
+							remove_country_flag = stargate_military_connections_int_4
+							remove_country_flag = stargate_military_connections_ex_5
+							set_country_flag = stargate_military_connections_int_5
+							set_country_flag = stargate_military_connections_ex_4
+						}
+						stargate_economic_connections_int_4 = { 
+							remove_country_flag = stargate_economic_connections_int_4
+							remove_country_flag = stargate_military_connections_ex_5
+							set_country_flag = stargate_economic_connections_int_5
+							set_country_flag = stargate_military_connections_ex_4
+						}
+						stargate_economic_connections_ex_4 = { 
+							remove_country_flag = stargate_economic_connections_ex_4
+							remove_country_flag = stargate_military_connections_ex_5
+							set_country_flag = stargate_economic_connections_ex_5
+							set_country_flag = stargate_military_connections_ex_4
+						}
+						stargate_research_connections_ex_4 = { 
+							remove_country_flag = stargate_research_connections_ex_4
+							remove_country_flag = stargate_military_connections_ex_5
+							set_country_flag = stargate_research_connections_ex_5
+							set_country_flag = stargate_military_connections_ex_4
+						}
+					}
+				}
+			}
+		}
+	}
+}
+stargate_mil_con_ex_decrease_priority = {
+	potential = { }
+	allow = {
+		custom_tooltip = "already_minimum_priority"
+		hidden_trigger = {
+			NOT = { has_country_flag = stargate_military_connections_ex_5 }
+			NOT = { has_country_flag = stargate_military_connections_ex_off }
+		}
+	}
+	effect = {
+		custom_tooltip = "decrease_connection_priority"
+		hidden_effect = {
+			switch = {
+				trigger = has_country_flag
+				stargate_military_connections_ex_1 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_military_connections_ex_2 = { }
+						stargate_military_connections_int_2 = { 
+							remove_country_flag = stargate_military_connections_int_2
+							remove_country_flag = stargate_military_connections_ex_1
+							set_country_flag = stargate_military_connections_int_1
+							set_country_flag = stargate_military_connections_ex_2
+						}
+						stargate_economic_connections_int_2 = { 
+							remove_country_flag = stargate_economic_connections_int_2
+							remove_country_flag = stargate_military_connections_ex_1
+							set_country_flag = stargate_economic_connections_int_1
+							set_country_flag = stargate_military_connections_ex_2
+						}
+						stargate_economic_connections_ex_2 = { 
+							remove_country_flag = stargate_economic_connections_ex_2
+							remove_country_flag = stargate_military_connections_ex_1
+							set_country_flag = stargate_economic_connections_ex_1
+							set_country_flag = stargate_military_connections_ex_2
+						}
+						stargate_research_connections_ex_2 = { 
+							remove_country_flag = stargate_research_connections_ex_2
+							remove_country_flag = stargate_military_connections_ex_1
+							set_country_flag = stargate_research_connections_ex_1
+							set_country_flag = stargate_military_connections_ex_2
+						}
+					}
+				}
+				stargate_military_connections_ex_2 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_military_connections_ex_3 = { }
+						stargate_military_connections_int_3 = {
+							remove_country_flag = stargate_military_connections_int_3
+							remove_country_flag = stargate_military_connections_ex_2
+							set_country_flag = stargate_military_connections_int_2
+							set_country_flag = stargate_military_connections_ex_3
+						}
+						stargate_economic_connections_int_3 = { 
+							remove_country_flag = stargate_economic_connections_int_3
+							remove_country_flag = stargate_military_connections_ex_2
+							set_country_flag = stargate_economic_connections_int_2
+							set_country_flag = stargate_military_connections_ex_3
+						}
+						stargate_economic_connections_ex_3 = { 
+							remove_country_flag = stargate_economic_connections_ex_3
+							remove_country_flag = stargate_military_connections_ex_2
+							set_country_flag = stargate_economic_connections_ex_2
+							set_country_flag = stargate_military_connections_ex_3
+						}
+						stargate_research_connections_ex_3 = { 
+							remove_country_flag = stargate_research_connections_ex_2
+							remove_country_flag = stargate_military_connections_ex_3
+							set_country_flag = stargate_research_connections_ex_2
+							set_country_flag = stargate_military_connections_ex_3
+						}
+					}
+				}
+				stargate_military_connections_ex_3 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_military_connections_ex_4 = { }
+						stargate_military_connections_int_4 = { 
+							remove_country_flag = stargate_military_connections_int_4
+							remove_country_flag = stargate_military_connections_ex_3
+							set_country_flag = stargate_military_connections_int_3
+							set_country_flag = stargate_military_connections_ex_4
+						}
+						stargate_economic_connections_int_4 = { 
+							remove_country_flag = stargate_economic_connections_int_4
+							remove_country_flag = stargate_military_connections_ex_3
+							set_country_flag = stargate_economic_connections_int_3
+							set_country_flag = stargate_military_connections_ex_4
+						}
+						stargate_economic_connections_ex_4 = { 
+							remove_country_flag = stargate_economic_connections_ex_4
+							remove_country_flag = stargate_military_connections_ex_3
+							set_country_flag = stargate_economic_connections_ex_3
+							set_country_flag = stargate_military_connections_ex_4
+						}
+						stargate_research_connections_ex_4 = { 
+							remove_country_flag = stargate_research_connections_ex_4
+							remove_country_flag = stargate_military_connections_ex_3
+							set_country_flag = stargate_research_connections_ex_3
+							set_country_flag = stargate_military_connections_ex_4
+						}
+					}
+				}
+				stargate_military_connections_ex_4 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_military_connections_ex_5 = { }
+						stargate_military_connections_int_5 = { 
+							remove_country_flag = stargate_military_connections_int_5
+							remove_country_flag = stargate_military_connections_ex_4
+							set_country_flag = stargate_military_connections_int_4
+							set_country_flag = stargate_military_connections_ex_5
+						}
+						stargate_economic_connections_int_5 = { 
+							remove_country_flag = stargate_economic_connections_int_5
+							remove_country_flag = stargate_military_connections_ex_4
+							set_country_flag = stargate_economic_connections_int_4
+							set_country_flag = stargate_military_connections_ex_5
+						}
+						stargate_economic_connections_ex_5 = { 
+							remove_country_flag = stargate_economic_connections_ex_5
+							remove_country_flag = stargate_military_connections_ex_4
+							set_country_flag = stargate_economic_connections_ex_4
+							set_country_flag = stargate_military_connections_ex_5
+						}
+						stargate_research_connections_ex_5 = { 
+							remove_country_flag = stargate_research_connections_ex_5
+							remove_country_flag = stargate_military_connections_ex_4
+							set_country_flag = stargate_research_connections_ex_4
+							set_country_flag = stargate_military_connections_ex_5
+						}
+					}
+				}
+				stargate_military_connections_ex_5 = {
+				}
+			}
+		}
+	}
+}
+
+stargate_econ_con_int_increase_priority = {
+	potential = { }
+	allow = {
+		custom_tooltip = "already_maximum_priority"
+		hidden_trigger = {
+			NOT = { has_country_flag = stargate_economic_connections_int_1 }
+			NOT = { has_country_flag = stargate_economy_connections_int_off }
+		}
+	}
+	effect = {
+		custom_tooltip = "increase_connection_priority"
+		hidden_effect = {
+			switch = {
+				trigger = has_country_flag
+				stargate_economic_connections_int_1 = {
+				}
+				stargate_economic_connections_int_2 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_economic_connections_int_1 = { }
+						stargate_military_connections_int_1 = { 
+							remove_country_flag = stargate_military_connections_int_1
+							remove_country_flag = stargate_economic_connections_int_2
+							set_country_flag = stargate_military_connections_int_2
+							set_country_flag = stargate_economic_connections_int_1
+						}
+						stargate_military_connections_ex_1 = { 
+							remove_country_flag = stargate_military_connections_ex_1
+							remove_country_flag = stargate_economic_connections_int_2
+							set_country_flag = stargate_military_connections_ex_2
+							set_country_flag = stargate_economic_connections_int_1
+						}
+						stargate_economic_connections_ex_1 = { 
+							remove_country_flag = stargate_economic_connections_ex_1
+							remove_country_flag = stargate_economic_connections_int_2
+							set_country_flag = stargate_economic_connections_ex_2
+							set_country_flag = stargate_economic_connections_int_1
+						}
+						stargate_research_connections_ex_1 = { 
+							remove_country_flag = stargate_research_connections_ex_1
+							remove_country_flag = stargate_economic_connections_int_2
+							set_country_flag = stargate_research_connections_ex_2
+							set_country_flag = stargate_economic_connections_int_1
+						}
+					}
+				}
+				stargate_economic_connections_int_3 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_economic_connections_int_2 = { }
+						stargate_military_connections_int_2 = {
+							remove_country_flag = stargate_military_connections_int_2
+							remove_country_flag = stargate_economic_connections_int_3
+							set_country_flag = stargate_military_connections_int_3
+							set_country_flag = stargate_economic_connections_int_2
+						}
+						stargate_military_connections_ex_2 = { 
+							remove_country_flag = stargate_military_connections_ex_2
+							remove_country_flag = stargate_economic_connections_int_3
+							set_country_flag = stargate_military_connections_ex_3
+							set_country_flag = stargate_economic_connections_int_2
+						}
+						stargate_economic_connections_ex_2 = { 
+							remove_country_flag = stargate_economic_connections_ex_2
+							remove_country_flag = stargate_economic_connections_int_3
+							set_country_flag = stargate_economic_connections_ex_3
+							set_country_flag = stargate_economic_connections_int_2
+						}
+						stargate_research_connections_ex_2 = { 
+							remove_country_flag = stargate_research_connections_ex_2
+							remove_country_flag = stargate_economic_connections_int_3
+							set_country_flag = stargate_research_connections_ex_3
+							set_country_flag = stargate_economic_connections_int_2
+						}
+					}
+				}
+				stargate_economic_connections_int_4 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_economic_connections_int_3 = { }
+						stargate_military_connections_int_3 = { 
+							remove_country_flag = stargate_military_connections_int_3
+							remove_country_flag = stargate_economic_connections_int_4
+							set_country_flag = stargate_military_connections_int_4
+							set_country_flag = stargate_economic_connections_int_3
+						}
+						stargate_military_connections_ex_3 = { 
+							remove_country_flag = stargate_military_connections_ex_3
+							remove_country_flag = stargate_economic_connections_int_4
+							set_country_flag = stargate_military_connections_ex_4
+							set_country_flag = stargate_economic_connections_int_3
+						}
+						stargate_economic_connections_ex_3 = { 
+							remove_country_flag = stargate_economic_connections_ex_3
+							remove_country_flag = stargate_economic_connections_int_4
+							set_country_flag = stargate_economic_connections_ex_4
+							set_country_flag = stargate_economic_connections_int_3
+						}
+						stargate_research_connections_ex_3 = { 
+							remove_country_flag = stargate_research_connections_ex_3
+							remove_country_flag = stargate_economic_connections_int_4
+							set_country_flag = stargate_research_connections_ex_4
+							set_country_flag = stargate_economic_connections_int_3
+						}
+					}
+				}
+				stargate_economic_connections_int_5 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_economic_connections_int_4 = { }
+						stargate_military_connections_int_4 = { 
+							remove_country_flag = stargate_military_connections_int_4
+							remove_country_flag = stargate_economic_connections_int_5
+							set_country_flag = stargate_military_connections_int_5
+							set_country_flag = stargate_economic_connections_int_4
+						}
+						stargate_military_connections_ex_4 = { 
+							remove_country_flag = stargate_military_connections_ex_4
+							remove_country_flag = stargate_economic_connections_int_5
+							set_country_flag = stargate_military_connections_ex_5
+							set_country_flag = stargate_economic_connections_int_4
+						}
+						stargate_economic_connections_ex_4 = { 
+							remove_country_flag = stargate_economic_connections_ex_4
+							remove_country_flag = stargate_economic_connections_int_5
+							set_country_flag = stargate_economic_connections_ex_5
+							set_country_flag = stargate_economic_connections_int_4
+						}
+						stargate_research_connections_ex_4 = { 
+							remove_country_flag = stargate_research_connections_ex_4
+							remove_country_flag = stargate_economic_connections_int_5
+							set_country_flag = stargate_research_connections_ex_5
+							set_country_flag = stargate_economic_connections_int_4
+						}
+					}
+				}
+			}
+		}
+	}
+}
+stargate_econ_con_int_decrease_priority = {
+	potential = { }
+	allow = {
+		custom_tooltip = "already_minimum_priority"
+		hidden_trigger = {
+			NOT = { has_country_flag = stargate_economic_connections_int_5 }
+			NOT = { has_country_flag = stargate_economy_connections_int_off }
+		}
+	}
+	effect = {
+		custom_tooltip = "decrease_connection_priority"
+		hidden_effect = {
+			switch = {
+				trigger = has_country_flag
+				stargate_economic_connections_int_1 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_economic_connections_int_2 = { }
+						stargate_military_connections_int_2 = { 
+							remove_country_flag = stargate_military_connections_int_2
+							remove_country_flag = stargate_economic_connections_int_1
+							set_country_flag = stargate_military_connections_int_1
+							set_country_flag = stargate_economic_connections_int_2
+						}
+						stargate_military_connections_ex_2 = { 
+							remove_country_flag = stargate_military_connections_ex_2
+							remove_country_flag = stargate_economic_connections_int_1
+							set_country_flag = stargate_military_connections_ex_1
+							set_country_flag = stargate_economic_connections_int_2
+						}
+						stargate_economic_connections_ex_2 = { 
+							remove_country_flag = stargate_economic_connections_ex_2
+							remove_country_flag = stargate_economic_connections_int_1
+							set_country_flag = stargate_economic_connections_ex_1
+							set_country_flag = stargate_economic_connections_int_2
+						}
+						stargate_research_connections_ex_2 = { 
+							remove_country_flag = stargate_research_connections_ex_2
+							remove_country_flag = stargate_economic_connections_int_1
+							set_country_flag = stargate_research_connections_ex_1
+							set_country_flag = stargate_economic_connections_int_2
+						}
+					}
+				}
+				stargate_economic_connections_int_2 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_economic_connections_int_3 = { }
+						stargate_military_connections_int_3 = {
+							remove_country_flag = stargate_military_connections_int_3
+							remove_country_flag = stargate_economic_connections_int_2
+							set_country_flag = stargate_military_connections_int_2
+							set_country_flag = stargate_economic_connections_int_3
+						}
+						stargate_military_connections_ex_3 = { 
+							remove_country_flag = stargate_military_connections_ex_3
+							remove_country_flag = stargate_economic_connections_int_2
+							set_country_flag = stargate_military_connections_ex_2
+							set_country_flag = stargate_economic_connections_int_3
+						}
+						stargate_economic_connections_ex_3 = { 
+							remove_country_flag = stargate_economic_connections_ex_3
+							remove_country_flag = stargate_economic_connections_int_2
+							set_country_flag = stargate_economic_connections_ex_2
+							set_country_flag = stargate_economic_connections_int_3
+						}
+						stargate_research_connections_ex_3 = { 
+							remove_country_flag = stargate_research_connections_ex_3
+							remove_country_flag = stargate_economic_connections_int_2
+							set_country_flag = stargate_research_connections_ex_2
+							set_country_flag = stargate_economic_connections_int_3
+						}
+					}
+				}
+				stargate_economic_connections_int_3 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_economic_connections_int_4 = { }
+						stargate_military_connections_int_4 = { 
+							remove_country_flag = stargate_military_connections_int_4
+							remove_country_flag = stargate_economic_connections_int_3
+							set_country_flag = stargate_military_connections_int_3
+							set_country_flag = stargate_economic_connections_int_4
+						}
+						stargate_military_connections_ex_4 = { 
+							remove_country_flag = stargate_military_connections_ex_4
+							remove_country_flag = stargate_economic_connections_int_3
+							set_country_flag = stargate_military_connections_ex_3
+							set_country_flag = stargate_economic_connections_int_4
+						}
+						stargate_economic_connections_ex_4 = { 
+							remove_country_flag = stargate_economic_connections_ex_4
+							remove_country_flag = stargate_economic_connections_int_3
+							set_country_flag = stargate_economic_connections_ex_3
+							set_country_flag = stargate_economic_connections_int_4
+						}
+						stargate_research_connections_ex_4 = { 
+							remove_country_flag = stargate_research_connections_ex_4
+							remove_country_flag = stargate_economic_connections_int_3
+							set_country_flag = stargate_research_connections_ex_3
+							set_country_flag = stargate_economic_connections_int_4
+						}
+					}
+				}
+				stargate_economic_connections_int_4 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_economic_connections_int_5 = { }
+						stargate_military_connections_int_5 = { 
+							remove_country_flag = stargate_military_connections_int_5
+							remove_country_flag = stargate_economic_connections_int_4
+							set_country_flag = stargate_military_connections_int_4
+							set_country_flag = stargate_economic_connections_int_5
+						}
+						stargate_military_connections_ex_5 = { 
+							remove_country_flag = stargate_military_connections_ex_5
+							remove_country_flag = stargate_economic_connections_int_4
+							set_country_flag = stargate_military_connections_ex_4
+							set_country_flag = stargate_economic_connections_int_5
+						}
+						stargate_economic_connections_ex_5 = { 
+							remove_country_flag = stargate_economic_connections_ex_5
+							remove_country_flag = stargate_economic_connections_int_4
+							set_country_flag = stargate_economic_connections_ex_4
+							set_country_flag = stargate_economic_connections_int_5
+						}
+						stargate_research_connections_ex_5 = { 
+							remove_country_flag = stargate_research_connections_ex_5
+							remove_country_flag = stargate_economic_connections_int_4
+							set_country_flag = stargate_research_connections_ex_4
+							set_country_flag = stargate_economic_connections_int_5
+						}
+					}
+				}
+				stargate_economic_connections_int_5 = {
+				}
+			}
+		}
+	}
+}
+
+stargate_econ_con_ex_increase_priority = {
+	potential = { }
+	allow = {
+		custom_tooltip = "already_maximum_priority"
+		hidden_trigger = {
+			NOT = { has_country_flag = stargate_economic_connections_ex_1 }
+			NOT = { has_country_flag = stargate_economy_connections_ex_off }
+		}
+	}
+	effect = {
+		custom_tooltip = "increase_connection_priority"
+		hidden_effect = {
+			switch = {
+				trigger = has_country_flag
+				stargate_economic_connections_ex_1 = {
+				}
+				stargate_economic_connections_ex_2 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_economic_connections_ex_1 = { }
+						stargate_military_connections_int_1 = { 
+							remove_country_flag = stargate_military_connections_int_1
+							remove_country_flag = stargate_economic_connections_ex_2
+							set_country_flag = stargate_military_connections_int_2
+							set_country_flag = stargate_economic_connections_ex_1
+						}
+						stargate_military_connections_ex_1 = { 
+							remove_country_flag = stargate_military_connections_ex_1
+							remove_country_flag = stargate_economic_connections_ex_2
+							set_country_flag = stargate_military_connections_ex_2
+							set_country_flag = stargate_economic_connections_ex_1
+						}
+						stargate_economic_connections_int_1 = { 
+							remove_country_flag = stargate_economic_connections_int_1
+							remove_country_flag = stargate_economic_connections_ex_2
+							set_country_flag = stargate_economic_connections_int_2
+							set_country_flag = stargate_economic_connections_ex_1
+						}
+						stargate_research_connections_ex_1 = { 
+							remove_country_flag = stargate_research_connections_ex_1
+							remove_country_flag = stargate_economic_connections_ex_2
+							set_country_flag = stargate_research_connections_ex_2
+							set_country_flag = stargate_economic_connections_ex_1
+						}
+					}
+				}
+				stargate_economic_connections_ex_3 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_economic_connections_ex_2 = { }
+						stargate_military_connections_int_2 = {
+							remove_country_flag = stargate_military_connections_int_2
+							remove_country_flag = stargate_economic_connections_ex_3
+							set_country_flag = stargate_military_connections_int_3
+							set_country_flag = stargate_economic_connections_ex_2
+						}
+						stargate_military_connections_ex_2 = { 
+							remove_country_flag = stargate_military_connections_ex_2
+							remove_country_flag = stargate_economic_connections_ex_3
+							set_country_flag = stargate_military_connections_ex_3
+							set_country_flag = stargate_economic_connections_ex_2
+						}
+						stargate_economic_connections_int_2 = { 
+							remove_country_flag = stargate_economic_connections_int_2
+							remove_country_flag = stargate_economic_connections_ex_3
+							set_country_flag = stargate_economic_connections_int_3
+							set_country_flag = stargate_economic_connections_ex_2
+						}
+						stargate_research_connections_ex_2 = { 
+							remove_country_flag = stargate_research_connections_ex_2
+							remove_country_flag = stargate_economic_connections_ex_3
+							set_country_flag = stargate_research_connections_ex_3
+							set_country_flag = stargate_economic_connections_ex_2
+						}
+					}
+				}
+				stargate_economic_connections_ex_4 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_economic_connections_ex_3 = { }
+						stargate_military_connections_int_3 = { 
+							remove_country_flag = stargate_military_connections_int_3
+							remove_country_flag = stargate_economic_connections_ex_4
+							set_country_flag = stargate_military_connections_int_4
+							set_country_flag = stargate_economic_connections_ex_3
+						}
+						stargate_military_connections_ex_3 = { 
+							remove_country_flag = stargate_military_connections_ex_3
+							remove_country_flag = stargate_economic_connections_ex_4
+							set_country_flag = stargate_military_connections_ex_4
+							set_country_flag = stargate_economic_connections_ex_3
+						}
+						stargate_economic_connections_int_3 = { 
+							remove_country_flag = stargate_economic_connections_int_3
+							remove_country_flag = stargate_economic_connections_ex_4
+							set_country_flag = stargate_economic_connections_int_4
+							set_country_flag = stargate_economic_connections_ex_3
+						}
+						stargate_research_connections_ex_3 = { 
+							remove_country_flag = stargate_research_connections_ex_3
+							remove_country_flag = stargate_economic_connections_ex_4
+							set_country_flag = stargate_research_connections_ex_4
+							set_country_flag = stargate_economic_connections_ex_3
+						}
+					}
+				}
+				stargate_economic_connections_ex_5 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_economic_connections_ex_4 = { }
+						stargate_military_connections_int_4 = { 
+							remove_country_flag = stargate_military_connections_int_4
+							remove_country_flag = stargate_economic_connections_ex_5
+							set_country_flag = stargate_military_connections_int_5
+							set_country_flag = stargate_economic_connections_ex_4
+						}
+						stargate_military_connections_ex_4 = { 
+							remove_country_flag = stargate_military_connections_ex_4
+							remove_country_flag = stargate_economic_connections_ex_5
+							set_country_flag = stargate_military_connections_ex_5
+							set_country_flag = stargate_economic_connections_ex_4
+						}
+						stargate_economic_connections_int_4 = { 
+							remove_country_flag = stargate_economic_connections_int_4
+							remove_country_flag = stargate_economic_connections_ex_5
+							set_country_flag = stargate_economic_connections_int_5
+							set_country_flag = stargate_economic_connections_ex_4
+						}
+						stargate_research_connections_ex_4 = { 
+							remove_country_flag = stargate_research_connections_ex_4
+							remove_country_flag = stargate_economic_connections_ex_5
+							set_country_flag = stargate_research_connections_ex_5
+							set_country_flag = stargate_economic_connections_ex_4
+						}
+					}
+				}
+			}
+		}
+	}
+}
+stargate_econ_con_ex_decrease_priority = {
+	potential = { }
+	allow = {
+		custom_tooltip = "already_minimum_priority"
+		hidden_trigger = {
+			NOT = { has_country_flag = stargate_economic_connections_ex_5 }
+			NOT = { has_country_flag = stargate_economy_connections_ex_off }
+		}
+	}
+	effect = {
+		custom_tooltip = "decrease_connection_priority"
+		hidden_effect = {
+			switch = {
+				trigger = has_country_flag
+				stargate_economic_connections_ex_1 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_economic_connections_ex_2 = { }
+						stargate_military_connections_int_2 = { 
+							remove_country_flag = stargate_military_connections_int_2
+							remove_country_flag = stargate_economic_connections_ex_1
+							set_country_flag = stargate_military_connections_int_1
+							set_country_flag = stargate_economic_connections_ex_2
+						}
+						stargate_military_connections_ex_2 = { 
+							remove_country_flag = stargate_military_connections_ex_2
+							remove_country_flag = stargate_economic_connections_ex_1
+							set_country_flag = stargate_military_connections_ex_1
+							set_country_flag = stargate_economic_connections_ex_2
+						}
+						stargate_economic_connections_int_2 = { 
+							remove_country_flag = stargate_economic_connections_int_2
+							remove_country_flag = stargate_economic_connections_ex_1
+							set_country_flag = stargate_economic_connections_int_1
+							set_country_flag = stargate_economic_connections_ex_2
+						}
+						stargate_research_connections_ex_2 = { 
+							remove_country_flag = stargate_research_connections_ex_2
+							remove_country_flag = stargate_economic_connections_ex_1
+							set_country_flag = stargate_research_connections_ex_1
+							set_country_flag = stargate_economic_connections_ex_2
+						}
+					}
+				}
+				stargate_economic_connections_ex_2 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_economic_connections_ex_3 = { }
+						stargate_military_connections_int_3 = {
+							remove_country_flag = stargate_military_connections_int_3
+							remove_country_flag = stargate_economic_connections_ex_2
+							set_country_flag = stargate_military_connections_int_2
+							set_country_flag = stargate_economic_connections_ex_3
+						}
+						stargate_military_connections_ex_3 = { 
+							remove_country_flag = stargate_military_connections_ex_3
+							remove_country_flag = stargate_economic_connections_ex_2
+							set_country_flag = stargate_military_connections_ex_2
+							set_country_flag = stargate_economic_connections_ex_3
+						}
+						stargate_economic_connections_int_3 = { 
+							remove_country_flag = stargate_economic_connections_int_3
+							remove_country_flag = stargate_economic_connections_ex_2
+							set_country_flag = stargate_economic_connections_int_2
+							set_country_flag = stargate_economic_connections_ex_3
+						}
+						stargate_research_connections_ex_3 = { 
+							remove_country_flag = stargate_research_connections_ex_3
+							remove_country_flag = stargate_economic_connections_ex_2
+							set_country_flag = stargate_research_connections_ex_2
+							set_country_flag = stargate_economic_connections_ex_3
+						}
+					}
+				}
+				stargate_economic_connections_ex_3 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_economic_connections_ex_4 = { }
+						stargate_military_connections_int_4 = { 
+							remove_country_flag = stargate_military_connections_int_4
+							remove_country_flag = stargate_economic_connections_ex_3
+							set_country_flag = stargate_military_connections_int_3
+							set_country_flag = stargate_economic_connections_ex_4
+						}
+						stargate_military_connections_ex_4 = { 
+							remove_country_flag = stargate_military_connections_ex_4
+							remove_country_flag = stargate_economic_connections_ex_3
+							set_country_flag = stargate_military_connections_ex_3
+							set_country_flag = stargate_economic_connections_ex_4
+						}
+						stargate_economic_connections_int_4 = { 
+							remove_country_flag = stargate_economic_connections_int_4
+							remove_country_flag = stargate_economic_connections_ex_3
+							set_country_flag = stargate_economic_connections_int_3
+							set_country_flag = stargate_economic_connections_ex_4
+						}
+						stargate_research_connections_ex_4 = { 
+							remove_country_flag = stargate_research_connections_ex_4
+							remove_country_flag = stargate_economic_connections_ex_3
+							set_country_flag = stargate_research_connections_ex_3
+							set_country_flag = stargate_economic_connections_ex_4
+						}
+					}
+				}
+				stargate_economic_connections_ex_4 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_economic_connections_ex_5 = { }
+						stargate_military_connections_int_5 = { 
+							remove_country_flag = stargate_military_connections_int_5
+							remove_country_flag = stargate_economic_connections_ex_4
+							set_country_flag = stargate_military_connections_int_4
+							set_country_flag = stargate_economic_connections_ex_5
+						}
+						stargate_military_connections_ex_5 = { 
+							remove_country_flag = stargate_military_connections_ex_5
+							remove_country_flag = stargate_economic_connections_ex_4
+							set_country_flag = stargate_military_connections_ex_4
+							set_country_flag = stargate_economic_connections_ex_5
+						}
+						stargate_economic_connections_int_5 = { 
+							remove_country_flag = stargate_economic_connections_int_5
+							remove_country_flag = stargate_economic_connections_ex_4
+							set_country_flag = stargate_economic_connections_int_4
+							set_country_flag = stargate_economic_connections_ex_5
+						}
+						stargate_research_connections_ex_5 = { 
+							remove_country_flag = stargate_research_connections_ex_5
+							remove_country_flag = stargate_economic_connections_ex_4
+							set_country_flag = stargate_research_connections_ex_4
+							set_country_flag = stargate_economic_connections_ex_5
+						}
+					}
+				}
+				stargate_economic_connections_ex_5 = {
+				}
+			}
+		}
+	}
+}
+
+stargate_res_con_ex_increase_priority = {
+	potential = { }
+	allow = {
+		custom_tooltip = "already_maximum_priority"
+		hidden_trigger = {
+			NOT = { has_country_flag = stargate_research_connections_ex_1 }
+			NOT = { has_country_flag = stargate_research_connections_ex_off }
+		}
+	}
+	effect = {
+		custom_tooltip = "increase_connection_priority"
+		hidden_effect = {
+			switch = {
+				trigger = has_country_flag
+				stargate_research_connections_ex_1 = {
+				}
+				stargate_research_connections_ex_2 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_research_connections_ex_1 = { }
+						stargate_military_connections_int_1 = { 
+							remove_country_flag = stargate_military_connections_int_1
+							remove_country_flag = stargate_research_connections_ex_2
+							set_country_flag = stargate_military_connections_int_2
+							set_country_flag = stargate_research_connections_ex_1
+						}
+						stargate_military_connections_ex_1 = { 
+							remove_country_flag = stargate_military_connections_ex_1
+							remove_country_flag = stargate_research_connections_ex_2
+							set_country_flag = stargate_military_connections_ex_2
+							set_country_flag = stargate_research_connections_ex_1
+						}
+						stargate_economic_connections_int_1 = { 
+							remove_country_flag = stargate_economic_connections_int_1
+							remove_country_flag = stargate_research_connections_ex_2
+							set_country_flag = stargate_economic_connections_int_2
+							set_country_flag = stargate_research_connections_ex_1
+						}
+						stargate_economic_connections_ex_1 = { 
+							remove_country_flag = stargate_economic_connections_ex_1
+							remove_country_flag = stargate_research_connections_ex_2
+							set_country_flag = stargate_economic_connections_ex_2
+							set_country_flag = stargate_research_connections_ex_1
+						}
+					}
+				}
+				stargate_research_connections_ex_3 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_research_connections_ex_2 = { }
+						stargate_military_connections_int_2 = {
+							remove_country_flag = stargate_military_connections_int_2
+							remove_country_flag = stargate_research_connections_ex_3
+							set_country_flag = stargate_military_connections_int_3
+							set_country_flag = stargate_research_connections_ex_2
+						}
+						stargate_military_connections_ex_2 = { 
+							remove_country_flag = stargate_military_connections_ex_2
+							remove_country_flag = stargate_research_connections_ex_3
+							set_country_flag = stargate_military_connections_ex_3
+							set_country_flag = stargate_research_connections_ex_2
+						}
+						stargate_economic_connections_int_2 = { 
+							remove_country_flag = stargate_economic_connections_int_2
+							remove_country_flag = stargate_research_connections_ex_3
+							set_country_flag = stargate_economic_connections_int_3
+							set_country_flag = stargate_research_connections_ex_2
+						}
+						stargate_economic_connections_ex_2 = { 
+							remove_country_flag = stargate_economic_connections_ex_2
+							remove_country_flag = stargate_research_connections_ex_3
+							set_country_flag = stargate_economic_connections_ex_3
+							set_country_flag = stargate_research_connections_ex_2
+						}
+					}
+				}
+				stargate_research_connections_ex_4 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_research_connections_ex_3 = { }
+						stargate_military_connections_int_3 = { 
+							remove_country_flag = stargate_military_connections_int_3
+							remove_country_flag = stargate_research_connections_ex_4
+							set_country_flag = stargate_military_connections_int_4
+							set_country_flag = stargate_research_connections_ex_3
+						}
+						stargate_military_connections_ex_3 = { 
+							remove_country_flag = stargate_military_connections_ex_3
+							remove_country_flag = stargate_research_connections_ex_4
+							set_country_flag = stargate_military_connections_ex_4
+							set_country_flag = stargate_research_connections_ex_3
+						}
+						stargate_economic_connections_int_3 = { 
+							remove_country_flag = stargate_economic_connections_int_3
+							remove_country_flag = stargate_research_connections_ex_4
+							set_country_flag = stargate_economic_connections_int_4
+							set_country_flag = stargate_research_connections_ex_3
+						}
+						stargate_economic_connections_ex_3 = { 
+							remove_country_flag = stargate_economic_connections_ex_3
+							remove_country_flag = stargate_research_connections_ex_4
+							set_country_flag = stargate_economic_connections_ex_4
+							set_country_flag = stargate_research_connections_ex_3
+						}
+					}
+				}
+				stargate_research_connections_ex_5 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_research_connections_ex_4 = { }
+						stargate_military_connections_int_4 = { 
+							remove_country_flag = stargate_military_connections_int_4
+							remove_country_flag = stargate_research_connections_ex_5
+							set_country_flag = stargate_military_connections_int_5
+							set_country_flag = stargate_research_connections_ex_4
+						}
+						stargate_military_connections_ex_4 = { 
+							remove_country_flag = stargate_military_connections_ex_4
+							remove_country_flag = stargate_research_connections_ex_5
+							set_country_flag = stargate_military_connections_ex_5
+							set_country_flag = stargate_research_connections_ex_4
+						}
+						stargate_economic_connections_int_4 = { 
+							remove_country_flag = stargate_economic_connections_int_4
+							remove_country_flag = stargate_research_connections_ex_5
+							set_country_flag = stargate_economic_connections_int_5
+							set_country_flag = stargate_research_connections_ex_4
+						}
+						stargate_economic_connections_ex_4 = { 
+							remove_country_flag = stargate_economic_connections_ex_4
+							remove_country_flag = stargate_research_connections_ex_5
+							set_country_flag = stargate_economic_connections_ex_5
+							set_country_flag = stargate_research_connections_ex_4
+						}
+					}
+				}
+			}
+		}
+	}
+}
+stargate_res_con_ex_decrease_priority = {
+	potential = { }
+	allow = {
+		custom_tooltip = "already_minimum_priority"
+		hidden_trigger = {
+			NOT = { has_country_flag = stargate_research_connections_ex_5 }
+			NOT = { has_country_flag = stargate_research_connections_ex_off }
+		}
+	}
+	effect = {
+		custom_tooltip = "decrease_connection_priority"
+		hidden_effect = {
+			switch = {
+				trigger = has_country_flag
+				stargate_research_connections_ex_1 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_research_connections_ex_2 = { }
+						stargate_military_connections_int_2 = { 
+							remove_country_flag = stargate_military_connections_int_2
+							remove_country_flag = stargate_research_connections_ex_1
+							set_country_flag = stargate_military_connections_int_1
+							set_country_flag = stargate_research_connections_ex_2
+						}
+						stargate_military_connections_ex_2 = { 
+							remove_country_flag = stargate_military_connections_ex_2
+							remove_country_flag = stargate_research_connections_ex_1
+							set_country_flag = stargate_military_connections_ex_1
+							set_country_flag = stargate_research_connections_ex_2
+						}
+						stargate_economic_connections_int_2 = { 
+							remove_country_flag = stargate_economic_connections_int_2
+							remove_country_flag = stargate_research_connections_ex_1
+							set_country_flag = stargate_economic_connections_int_1
+							set_country_flag = stargate_research_connections_ex_2
+						}
+						stargate_economic_connections_ex_2 = { 
+							remove_country_flag = stargate_economic_connections_ex_2
+							remove_country_flag = stargate_research_connections_ex_1
+							set_country_flag = stargate_economic_connections_ex_1
+							set_country_flag = stargate_research_connections_ex_2
+						}
+					}
+				}
+				stargate_research_connections_ex_2 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_research_connections_ex_3 = { }
+						stargate_military_connections_int_3 = {
+							remove_country_flag = stargate_military_connections_int_3
+							remove_country_flag = stargate_research_connections_ex_2
+							set_country_flag = stargate_military_connections_int_2
+							set_country_flag = stargate_research_connections_ex_3
+						}
+						stargate_military_connections_ex_3 = { 
+							remove_country_flag = stargate_military_connections_ex_3
+							remove_country_flag = stargate_research_connections_ex_2
+							set_country_flag = stargate_military_connections_ex_2
+							set_country_flag = stargate_research_connections_ex_3
+						}
+						stargate_economic_connections_int_3 = { 
+							remove_country_flag = stargate_economic_connections_int_3
+							remove_country_flag = stargate_research_connections_ex_2
+							set_country_flag = stargate_economic_connections_int_2
+							set_country_flag = stargate_research_connections_ex_3
+						}
+						stargate_economic_connections_ex_3 = { 
+							remove_country_flag = stargate_economic_connections_ex_3
+							remove_country_flag = stargate_research_connections_ex_2
+							set_country_flag = stargate_economic_connections_ex_2
+							set_country_flag = stargate_research_connections_ex_3
+						}
+					}
+				}
+				stargate_research_connections_ex_3 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_research_connections_ex_4 = { }
+						stargate_military_connections_int_4 = { 
+							remove_country_flag = stargate_military_connections_int_4
+							remove_country_flag = stargate_research_connections_ex_3
+							set_country_flag = stargate_military_connections_int_3
+							set_country_flag = stargate_research_connections_ex_4
+						}
+						stargate_military_connections_ex_4 = { 
+							remove_country_flag = stargate_military_connections_ex_4
+							remove_country_flag = stargate_research_connections_ex_3
+							set_country_flag = stargate_military_connections_ex_3
+							set_country_flag = stargate_research_connections_ex_4
+						}
+						stargate_economic_connections_int_4 = { 
+							remove_country_flag = stargate_economic_connections_int_4
+							remove_country_flag = stargate_research_connections_ex_3
+							set_country_flag = stargate_economic_connections_int_3
+							set_country_flag = stargate_research_connections_ex_4
+						}
+						stargate_economic_connections_ex_4 = { 
+							remove_country_flag = stargate_economic_connections_ex_4
+							remove_country_flag = stargate_research_connections_ex_3
+							set_country_flag = stargate_economic_connections_ex_3
+							set_country_flag = stargate_research_connections_ex_4
+						}
+					}
+				}
+				stargate_research_connections_ex_4 = {
+					switch = {
+						trigger = has_country_flag
+						stargate_research_connections_ex_5 = { }
+						stargate_military_connections_int_5 = { 
+							remove_country_flag = stargate_military_connections_int_5
+							remove_country_flag = stargate_research_connections_ex_4
+							set_country_flag = stargate_military_connections_int_4
+							set_country_flag = stargate_research_connections_ex_5
+						}
+						stargate_military_connections_ex_5 = { 
+							remove_country_flag = stargate_military_connections_ex_5
+							remove_country_flag = stargate_research_connections_ex_4
+							set_country_flag = stargate_military_connections_ex_4
+							set_country_flag = stargate_research_connections_ex_5
+						}
+						stargate_economic_connections_int_5 = { 
+							remove_country_flag = stargate_economic_connections_int_5
+							remove_country_flag = stargate_research_connections_ex_4
+							set_country_flag = stargate_economic_connections_int_4
+							set_country_flag = stargate_research_connections_ex_5
+						}
+						stargate_economic_connections_ex_5 = { 
+							remove_country_flag = stargate_economic_connections_ex_5
+							remove_country_flag = stargate_research_connections_ex_4
+							set_country_flag = stargate_economic_connections_ex_4
+							set_country_flag = stargate_research_connections_ex_5
+						}
+					}
+				}
+				stargate_research_connections_ex_5 = {
+				}
+			}
+		}
+	}
+}

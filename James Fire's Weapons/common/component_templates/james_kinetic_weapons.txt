@@ -1,0 +1,417 @@
+weapon_component_template = {
+	key = "SMALL_KINETIC_PLASMA_CANNON"
+	size = small
+	power = -68
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 90
+			rare_crystals = 7.5
+			volatile_motes = 22.5
+		}		
+		upkeep = {
+			energy = 1.8
+			alloys = 0.9
+			rare_crystals = 0.075
+			volatile_motes = 0.225
+		}
+	}
+
+	entity = "small_kinetic_gun_entity"
+	damage = { min = 54 max = 184 }
+	windup = { min = 4.0 max = 14.0 }
+	cooldown = 20
+	range = 50.0
+	accuracy = 0.75
+	tracking = 0.5
+	shield_damage = 1.75
+	armor_damage = 0.25
+	hull_damage = 1.25
+	type = instant
+
+	icon = "GFX_ship_part_aura_quantum_destabilizer"
+	icon_frame = 1
+	prerequisites = { "tech_hyperconductors_2f" }
+	component_set = "KINETIC_PLASMA_CANNON"
+	projectile_gfx = "gauss_cannon_s"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth gunship }
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_KINETIC_PLASMA_CANNON"
+	size = medium
+	power = -156
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 219
+			rare_crystals = 18.25
+			volatile_motes = 54.75
+		}		
+		upkeep = {
+			energy = 4.38
+			alloys = 2.19
+			rare_crystals = 0.5475
+			volatile_motes = 0.1825
+		}
+	}
+	entity = "medium_kinetic_gun_entity"
+	damage = { min = 160 max = 460 }
+	windup = { min = 5.0 max = 17.0 }
+	cooldown = 25
+	range = 75.0
+	accuracy = 0.75
+	tracking = 0.30
+	shield_damage = 1.75
+	armor_damage = 0.25
+	hull_damage = 1.25
+	type = instant
+
+	icon = "GFX_ship_part_aura_quantum_destabilizer"
+	icon_frame = 1
+	prerequisites = { "tech_hyperconductors_2f" }
+	component_set = "KINETIC_PLASMA_CANNON"
+	projectile_gfx = "gauss_cannon_m"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield gunship }
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_KINETIC_PLASMA_CANNON"
+	size = large
+	power = -352
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 519
+			rare_crystals = 33.25
+			volatile_motes = 129.75
+		}		
+		upkeep = {
+			energy = 10.38
+			alloys = 5.19
+			rare_crystals = 0.3325
+			volatile_motes = 1.2975
+		}
+	}
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 336 max = 1104 }
+	windup = { min = 5.0 max = 20.0 }
+	cooldown = 30
+	range = 100
+	min_range = 45.0
+	accuracy = 0.75
+	tracking = 0.15
+	shield_damage = 1.75
+	armor_damage = 0.25
+	hull_damage = 1.25
+	type = instant
+
+	icon = "GFX_ship_part_aura_quantum_destabilizer"
+	icon_frame = 1
+	prerequisites = { "tech_hyperconductors_2f" }
+	component_set = "KINETIC_PLASMA_CANNON"
+	projectile_gfx = "gauss_cannon_l"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield gunship }
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+weapon_component_template = {
+	key = "KINETIC_PLASMA_ARTILLERY"
+	size = large
+	power = -364
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 468
+			rare_crystals = 39
+			volatile_motes = 117
+		}		
+		upkeep = {
+			energy = 9.26
+			alloys = 4.68
+			rare_crystals = 0.39
+			volatile_motes = 1.17
+		}
+	}
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 780 max = 2340 }
+	windup = { min = 14.0 max = 54.0 }
+	cooldown = 80
+	range = 150
+	min_range = 45.0
+	accuracy = 0.75
+	tracking = 0
+	shield_damage = 2.25
+	armor_damage = 0.25
+	type = instant
+
+	icon = "GFX_ship_part_mass_accelerator_2"
+	icon_frame = 1
+	prerequisites = { "tech_hyperconductors_2g" }
+	component_set = "KINETIC_PLASMA_ARTILLERY"
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+weapon_component_template = {
+	key = "SMALL_KINETIC_PLASMA_AUTOCANNON"
+	size = small
+	power = -120
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 150
+			rare_crystals = 12.5
+			volatile_motes = 37.5
+		}		
+		upkeep = {
+			energy = 3
+			alloys = 1.5
+			rare_crystals = 0.125
+			volatile_motes = 0.375
+		}
+	}
+	entity = "small_kinetic_gun_entity"
+	damage = { min = 68 max = 140 }
+	windup = { min = 1.0 max = 4.0 }
+	cooldown = 6
+	range = 30
+	accuracy = 0.85
+	tracking = 0.75
+	shield_damage = 1.75
+	armor_damage = 0.25
+	hull_damage = 1.25
+	type = instant
+
+	icon = "GFX_ship_part_point_defense_3"
+	icon_frame = 1
+	prerequisites = { "tech_hyperconductors_2h" }
+	component_set = "KINETIC_PLASMA_AUTOCANNON"
+	projectile_gfx = "stormfire_auto_cannons_s"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+weapon_component_template = {
+	key = "MEDIUM_KINETIC_PLASMA_AUTOCANNON"
+	size = medium
+	power = -268
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 475
+			rare_crystals = 31.25
+			volatile_motes = 93.75
+		}		
+		upkeep = {
+			energy = 9.5
+			alloys = 4.75
+			rare_crystals = 0.3125
+			volatile_motes = 0.9375
+		}
+	}
+	entity = "medium_kinetic_gun_entity"
+	damage = { min = 132 max = 352 }
+	windup = { min = 2.0 max = 6.0 }
+	cooldown = 9
+	range = 35
+	accuracy = 0.85
+	tracking = 0.5
+	shield_damage = 1.75
+	armor_damage = 0.25
+	hull_damage = 1.25
+	type = instant
+
+	icon = "GFX_ship_part_point_defense_3"
+	icon_frame = 1
+	prerequisites = { "tech_hyperconductors_2h" }
+	component_set = "KINETIC_PLASMA_AUTOCANNON"
+	projectile_gfx = "stormfire_auto_cannons_s"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_KINETIC_PLASMA_AUTOCANNON"
+	size = large
+	power = -600
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 900
+			rare_crystals = 75
+			volatile_motes = 225
+		}		
+		upkeep = {
+			energy = 18
+			alloys = 9
+			rare_crystals = 0.75
+			volatile_motes = 2.25
+		}
+	}
+	entity = "large_kinetic_gun_entity"
+	damage = { min = 408 max = 840 }
+	windup = { min = 2.0 max = 8.0 }
+	cooldown = 12
+	range = 40
+	accuracy = 0.85
+	tracking = 0.25
+	shield_damage = 1.75
+	armor_damage = 0.25
+	hull_damage = 1.25
+	type = instant
+
+	icon = "GFX_ship_part_point_defense_3"
+	icon_frame = 1
+	prerequisites = { "tech_hyperconductors_2h" }
+	component_set = "KINETIC_PLASMA_AUTOCANNON"
+	projectile_gfx = "stormfire_auto_cannons_s"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+weapon_component_template = {
+	key = "KINETIC_PLASMA_LANCE"
+	size = extra_large
+	power = -1040
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 975
+			rare_crystals = 81.5
+			volatile_motes = 244.5
+		}		
+		upkeep = {
+			energy = 19.5
+			alloys = 9.75
+			rare_crystals = 0.815
+			volatile_motes = 2.445
+		}
+	}
+	entity = "invisible_turret_entity"
+	damage = { min = 3640 max = 10400 }
+	windup = { min = 14.0 max = 54.0 }
+	cooldown = 80
+	range = 150.0
+	accuracy = 0.75
+	tracking = 0
+	shield_damage = 1.75
+	armor_damage = 0.5
+	type = instant
+	
+	icon = "GFX_ship_part_aura_quantum_destabilizer"
+	icon_frame = 1
+	
+	firing_arc = 25.0
+	min_range = 45.0
+	use_ship_kill_target = no
+	
+	prerequisites = { "tech_hyperconductors_3a" }
+	component_set = "KINETIC_PLASMA_LANCE"
+	projectile_gfx = "mega_cannon"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 5000
+		large_ship_fallen_empire = 5000	
+		battleship = 5000
+		cruiser = 2500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+	ai_weight = {
+		weight = 10000
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "TITANIC_KINETIC_PLASMA_CANNON"
+	size = titanic
+	power = -2000
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1500
+			rare_crystals = 125
+			volatile_motes = 375
+		}		
+		upkeep = {
+			energy = 30
+			alloys = 15
+			rare_crystals = 1.25
+			volatile_motes = 3.75
+		}
+	}
+	entity = "invisible_turret_entity"
+	damage = { min = 23333 max = 53333 }
+	windup = { min = 14.0 max = 54.0 }
+	cooldown = 80
+	range = 250.0
+	accuracy = 0.75
+	tracking = 0
+	shield_damage = 1.75
+	armor_damage = 0.5
+	type = instant
+	
+	icon = "GFX_ship_part_aura_quantum_destabilizer"
+	icon_frame = 1
+	
+	firing_arc = 25.0
+	min_range = 45.0
+	use_ship_kill_target = no
+	
+	prerequisites = { "tech_hyperconductors_4a" }
+	component_set = "TITANIC_KINETIC_PLASMA_CANNON"
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+	
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 5000
+		large_ship_fallen_empire = 5000	
+		battleship = 5000
+		cruiser = 2500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+	ai_weight = {
+		weight = 10000
+	}
+}

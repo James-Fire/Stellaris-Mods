@@ -1,0 +1,37 @@
+#Given by mechanicum traditiom 3. Enables mechanical knights and titans.
+tech_mechanical_knights = {
+	area = engineering	
+	start_tech = no
+	category = { materials }
+	tier = 0
+	weight = 0
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}
+
+#Given by order tradition 5. Enables police force.
+tech_police_force = {
+	area = society
+	start_tech = no
+	category = { military_theory }
+	tier = 0
+	weight = 0
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}

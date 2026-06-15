@@ -1,0 +1,151 @@
+
+
+*Hyper Relays now decrease shipping cost.
+
+*Added some techs to decrease shipping cost. Or overwrite relevant vanilla ones
+
+*Orbital Defense Platform now has modifiers saying what it does.
+
+
+
+
+
+
+*Updated the Autofab Automation Settings window, so now it doesn't need to close and reopen to update numbers.
+
+*Realdev now calculates the current stuff for 3 calcs out, instead of next calc.
+
+*Realdev now shows you the next 3 calcs, in addition to current numbers
+
+*Equipment Factory no longer provides Foreman jobs.
+
+*Added a "Construction Office" building that provides Foreman jobs.
+
+*Moved Equipment Factory upgrades to their own techs.
+
+*Construction Office upgrades are on the same techs as Equipment Factory.
+
+*Realdev Production Boost now has a cap based on how many Equipment Factories are on the planet, being 25 per.
+This cap applies during splitting, so Planet Build Speed will get any IP over this cap first, then it will follow normal inheritance rules.
+
+*Added a value for how many Equipment Factories you have to the Realdev Planet UI.
+
+*Made autofab retooling respect Realdev.
+
+*Autofab Modules are now Districts.
+
+*Orbital "Districts" are now deposits.
+
+*To build an orbital deposit, you now "upgrade" the spaceport.
+
+*Realdev IP stuff is now recalculated every 3 months instead of every month.
+
+Added a whole bunch of nested tooltips to help explain various mod concepts.*
+
+Fixed the Orbital Infrastructure modifier sometimes reporting the clearly wrong value.*
+
+Fixed "Uses Orbital Slot" modifier showing up wherever the fuck it wants to.*
+
+FE Buildings now make the job they affect have appropriate SR upkeep as well.*
+
+*Added Development Milestones. These can affect both the Target system and Ratios. These are a collection of triggers that modify the Target and Ratios based on the status of the planet or country they apply to. These are default off for the player.
+
+
+
+
+*Merged the Exploit Minimum Stockpile menu with the Autofab Automation Settings window. Exploit probably won't come back
+
+Moved the Trade Value provided by completed exploit constructions to the minor colonies.* Exploit probably won't come back
+
+Fixed Exploit starting Minor Colonies sometimes having incompatible loops on them.* Kinda annoying to do, Exploit probably won't come back
+
+Added explicit build time info to Exploit UI tooltips.* Exploit probably won't come back
+
+Added a collection of Realdev Default Settings that can be set in the Country UI, and can optionally be used by planets instead of setting them in the Planet UI.*
+
+Added a "Space Colonizer" Origin that deals with Minor Colonies.* Exploit probably won't come back
+
+Orbital Cities increase the upkeep of Districts by a flat and % amount.*
+
+Added a decision to enable Swapping for Orbital Districts.*
+
+Made planets that are being colonized not get shipping costs.*
+
+Overhauled Orbital Infrastructure so that it conflicts (Thematically and mechanically) much less with the Planetary Ring.*
+
+Added a block to the Autofab Planet UI to show current "time" remaining on the current construction, total "time" for the entire Queue, and the current build speed modifier.*
+
+Reduced FE buildings Flat production bonus, gave them a % production bonus, to work better with Orbital Districts.*
+
+Realdev Assembly Speed Cap is now affected by select techs and APs.*
+
+Added a "Deconstruct all" button to the Planet Autofab UI.*
+
+
+
+Added the Strategic Production module, that deals with the production of SRs, and how it's currently terrible in vanilla.*
+
+Added the Subterannean Infrastructure module, dealing with construction projects beneath the surface.*
+
+Simplified autofab loop events. This should reduce the performance impact of lots of colonies building at once.*
+
+Added a collection of effects that can be called to log autofab trigger values on things.*
+
+Added a collection of effects that can be called to log orbital trigger values on things.*
+
+Added a collection of effects that can be called to log exploit trigger values on things.*
+
+Added a collection of effects that can be called to log realdev trigger values on things.*
+
+Added a collection of effects that can be called to log trade trigger values on things.*
+
+Added a collection of effects that can be called to log shipping trigger values on things.*
+
+Added an effect that can be called to log orbital values on things.*
+
+Added an effect that can be called to log exploit values on things.*
+
+Added an effect that can be called to log realdev values on things.*
+
+Added an effect that can be called to log trade values on things.*
+
+Optimized detection events for when Cargo Ships have Sudden Dissapearance Syndrome, or other circumstances in which a trade route is cancelled.*
+
+Changed trade routes to never expire. Instead, they are cancelled if you have the trade fleet do something else.*
+
+Scripted more complex AI triggers involving all orbital platforms, so maybe they'll stop spamming specific ones in situations they don't belong.*
+
+Gave the Realdev Empire UI the same treatment as the Planet UI, having a host of buttons that display numbers and tooltips about those numbers.*
+
+
+
+
+
+
+Changed Assembly to have a per cap based on how many Roboticist (Or equivalent) jobs exist. Assembly Speed is now also "split" between them, like it is with shipyards. This will cause empires with lots of assembly jobs (Like machines) to require more IP to get the max boost.* Seems to not be necessary
+
+Implemented a "Simple Mode" setting that changes various facets of Realistic Development to be easier to manage.* Not sure if this is actually necessary. Also I'm not sure what to do for it.
+
+Trade Routes now also apply a +1 1/year decaying opinion modifier per cargo ship in the fleet. Empires with closer planets that get cargo ship visits more often will like you more(And vice-versa).* Looks to be impossible to implement how I want
+
+Scripted more complex AI triggers for the Orbital Defense Platforms, so they are hopefully a bit more smart about it.* Not sure how to actually go about this. Will need some ideas.
+
+Fixed Gigas Ruined Ships blocking Minor Colonies.* This might not even be a problem.
+
+Overhauled Exploit to have production work through a deposit on the Hosting Major Colonies instead.* This hard. And honestly not *that* neccesary
+
+Merged some pulse events properly, to reduce performance impact.* Uh... save it for if this becomes a problem?
+
+Reduced performance impact of Orbital stuff.* Uh... save it for if this becomes a problem?
+
+Added support for Production Revolution's Manpower to Realdev. Manpower is now treated as pops for the purposes of IP generation.* Need to know the Manpower Variable
+
+Capped Industrial Production on any 1 object to +/- 2 million, to avoid overflow.* Not sure if even necessary outside of edge cases where the system is broken anyway
+
+Fixed Starting Minor Colonies having more construction than they should be able to support.* This is a PITA to try doing
+
+Orbital Districts now also add a 0.1 alloy upkeep cost per job they affect. Those that don't affect jobs (Housing, Commercial) instead do 0.05 alloys per pop on the planet.* Might not do, see if current district upkeep is good enough
+
+Added a Preset Empire for the Autofab Origin.* Maybe later, maybe never
+
+Added a Preset Empire for the Space Colonizer Origin.* Maybe later, maybe never

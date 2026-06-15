@@ -1,0 +1,119 @@
+utility_component_template = {
+	key = "DREADNOUGHT_CORE_BASIC"
+	size = small
+	icon = "GFX_ship_part_armor_1"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 0
+		}
+	}
+	class_restriction = { shipclass_military }
+	size_restriction = { buildable_dreadnought }
+	prerequisites = { "tech_build_dreadnought" }
+	component_set = "dreadnought_core"
+	upgrades_to = "DREADNOUGHT_CORE_ADVANCED"
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+	key = "DREADNOUGHT_CORE_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_auto_repair"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 1500
+		}
+	}
+	class_restriction = { shipclass_military }
+	size_restriction = { buildable_dreadnought }
+	prerequisites = { "tech_improved_dreadnought_cores" "tech_build_dreadnought" }
+	component_set = "dreadnought_core"
+	upgrades_to = "DREADNOUGHT_CORE_HYPER"
+	
+	modifier = {
+		ships_upkeep_mult = -0.4
+		ship_weapon_damage = 1
+		ship_shield_mult = 1.5
+	}
+	
+	ship_modifier = {
+		ship_fire_rate_mult = 0.5
+		ships_upkeep_mult = -0.4
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "DREADNOUGHT_CORE_HYPER"
+	size = small
+	icon = "GFX_ship_part_crystal_armor_1"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 2250
+		}
+	}
+	class_restriction = { shipclass_military }
+	size_restriction = { buildable_dreadnought }
+	prerequisites = { "tech_integrated_dreadnought_cores" "tech_build_dreadnought" }
+	component_set = "dreadnought_core"
+	upgrades_to = "DREADNOUGHT_CORE_ORIGINAL"
+	
+	modifier = {
+		ships_upkeep_mult = -0.6
+		ship_weapon_damage = 1.5
+		ship_shield_mult = 2.25
+	}
+	
+	ship_modifier = {
+		ship_fire_rate_mult = 0.75
+		ships_upkeep_mult = -0.6
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "DREADNOUGHT_CORE_ORIGINAL"
+	size = small
+	icon = "GFX_ship_part_crystal_armor_2"
+	icon_frame = 1
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 3000
+		}
+	}
+	class_restriction = { shipclass_military }
+	size_restriction = { buildable_dreadnought }
+	prerequisites = { "tech_perfected_dreadnought_cores" "tech_build_dreadnought" }
+	component_set = "dreadnought_core"
+	
+	modifier = {
+		ships_upkeep_mult = -0.8
+		ship_weapon_damage = 2
+		ship_shield_mult = 3
+	}
+	
+	ship_modifier = {
+		ship_fire_rate_mult = 1
+		ships_upkeep_mult = -0.8
+	}
+	
+	ai_weight = {
+		weight = 2
+	}
+}

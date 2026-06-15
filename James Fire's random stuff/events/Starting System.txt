@@ -1,0 +1,470 @@
+namespace = startsystem
+
+country_event = {
+	id = startsystem.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_origin = origin_mechanists
+			}
+			add_research_option = tech_droid_workers
+		}
+		if = {
+			limit = {
+				is_ai = no
+				always = no
+			}
+			capital_scope = {
+				solar_system = {
+					every_system_planet = {
+						limit = {
+							has_deposit_for = shipclass_mining_station
+							has_mining_station = no
+						}
+						create_mining_station = { owner = ROOT }
+						ROOT = {
+							add_resource = {
+								minerals = 20
+								energy = 10
+							}
+						}
+					}
+					every_system_planet = {
+						limit = {
+							has_deposit_for = shipclass_research_station
+							has_research_station = no
+						}
+						create_research_station = { owner = ROOT }
+						ROOT = {
+							add_resource = {
+								minerals = 20
+								energy = 10
+							}
+						}
+					}
+					every_system_planet = {
+						limit = {
+							OR = {
+								is_colonizable = yes
+								is_colony = yes
+							}
+							NOR = {
+								is_planet_class = pc_continental
+								is_planet_class = pc_ocean
+								is_planet_class = pc_tropical
+								is_planet_class = pc_machine
+								is_planet_class = pc_relic
+								habitable_structure = yes
+							}
+						}
+						random_list = {
+							33 = {
+								change_pc = pc_ocean
+							}
+							33 = {
+								change_pc = pc_continental
+							}
+							33 = {
+								change_pc = pc_tropical
+							}
+						}
+					}
+					spawn_system = { hyperlane = yes min_distance >= 3 max_distance <= 3 min_orientation_angle = 0	max_orientation_angle = 45	initializer = "rising_empire_bud" }
+					spawn_system = { hyperlane = yes min_distance >= 3 max_distance <= 3 min_orientation_angle = 90	max_orientation_angle = 135	initializer = "rising_empire_bud" }
+					spawn_system = { hyperlane = yes min_distance >= 3 max_distance <= 3 min_orientation_angle = 180 max_orientation_angle = 225	initializer = "rising_empire_bud_neutron" }
+					every_neighbor_system = {
+						limit = {
+							has_star_flag = rising_empire
+						}
+						create_starbase = {
+							owner = ROOT
+							size = starbase_outpost
+						}
+						every_system_planet = {
+							limit = {
+								has_deposit_for = shipclass_mining_station
+								has_mining_station = no
+							}
+							ROOT = {
+								add_resource = {
+									minerals = 20
+									energy = 10
+								}
+							}
+							random_list = {
+								10 = { }
+								10 = {
+									create_mining_station = { owner = ROOT }
+								}
+							}
+						}
+						every_system_planet = {
+							limit = {
+								has_deposit_for = shipclass_research_station
+								has_research_station = no
+							}
+							ROOT = {
+								add_resource = {
+									minerals = 20
+									energy = 10
+								}
+							}
+							random_list = {
+								10 = { }
+								10 = {
+									create_research_station = { owner = ROOT }
+								}
+							}
+						}
+						every_system_planet = {
+							limit = {
+								OR = {
+									is_colonizable = yes
+									is_colony = yes
+								}
+								NOR = {
+									is_planet_class = pc_continental
+									is_planet_class = pc_ocean
+									is_planet_class = pc_tropical
+									is_planet_class = pc_machine
+									is_planet_class = pc_relic
+									habitable_structure = yes
+								}
+							}
+							random_list = {
+								33 = {
+									change_pc = pc_continental
+								}
+								33 = {
+									change_pc = pc_tropical
+								}
+								33 = {
+									change_pc = pc_ocean
+								}
+							}
+						}
+					}
+					every_neighbor_system = {
+						limit = {
+							NOR = {
+								has_star_flag = neighbor_1
+								has_star_flag = neighbor_2
+								has_star_flag = neighbor_3
+								has_star_flag = neighbor_4
+								has_star_flag = rising_empire_home
+								has_star_flag = rising_empire
+							}
+						}
+						set_star_flag = neighbor_1
+						every_neighbor_system = {
+							limit = {
+								NOR = {
+									has_star_flag = neighbor_1
+									has_star_flag = neighbor_2
+									has_star_flag = neighbor_3
+									has_star_flag = neighbor_4
+									has_star_flag = rising_empire_home
+									has_star_flag = rising_empire
+								}
+							}
+							if = {
+								limit = {
+									has_star_flag = empire_home_system
+									NOT = {
+										owner = {
+											is_same_value = ROOT
+										}
+									}
+								}
+								owner = {
+									destroy_country = yes
+								}
+								every_system_planet = {
+									limit = {
+										is_colony = yes
+									}
+									destroy_colony = yes
+								}
+							}
+							if = {
+								limit = {
+									NOR = {
+										has_star_flag = neighbor_1
+										has_star_flag = neighbor_2
+										has_star_flag = neighbor_3
+										has_star_flag = neighbor_4
+										has_star_flag = rising_empire_home
+										has_star_flag = rising_empire
+									}
+								}
+								set_star_flag = neighbor_2
+							}
+							every_neighbor_system = {
+								limit = {
+									NOR = {
+										has_star_flag = neighbor_1
+										has_star_flag = neighbor_2
+										has_star_flag = neighbor_3
+										has_star_flag = neighbor_4
+										has_star_flag = rising_empire_home
+										has_star_flag = rising_empire
+									}
+								}
+								if = {
+									limit = {
+										has_star_flag = empire_home_system
+										NOT = {
+											owner = {
+												is_same_value = ROOT
+											}
+										}
+									}
+									owner = {
+										destroy_country = yes
+									}
+									every_system_planet = {
+										limit = {
+											is_colony = yes
+										}
+										destroy_colony = yes
+									}
+								}
+								if = {
+									limit = {
+										NOR = {
+											has_star_flag = neighbor_1
+											has_star_flag = neighbor_2
+											has_star_flag = neighbor_3
+											has_star_flag = neighbor_4
+											has_star_flag = rising_empire_home
+											has_star_flag = rising_empire
+										}
+									}
+									set_star_flag = neighbor_3
+								}
+								every_neighbor_system = {
+									limit = {
+										NOR = {
+											has_star_flag = neighbor_1
+											has_star_flag = neighbor_2
+											has_star_flag = neighbor_3
+											has_star_flag = neighbor_4
+											has_star_flag = rising_empire_home
+											has_star_flag = rising_empire
+										}
+									}
+									if = {
+										limit = {
+											NOR = {
+												has_star_flag = neighbor_1
+												has_star_flag = neighbor_2
+												has_star_flag = neighbor_3
+												has_star_flag = neighbor_4
+												has_star_flag = rising_empire_home
+												has_star_flag = rising_empire
+											}
+										}
+										set_star_flag = neighbor_4
+									}
+								}
+							every_neighbor_system = {
+								limit = {
+									NOR = {
+										has_star_flag = neighbor_1
+										has_star_flag = neighbor_2
+										has_star_flag = neighbor_3
+										has_star_flag = neighbor_4
+										has_star_flag = rising_empire_home
+										has_star_flag = rising_empire
+									}
+								}
+								if = {
+									limit = {
+										has_star_flag = empire_home_system
+										NOT = {
+											owner = {
+												is_same_value = ROOT
+											}
+										}
+									}
+									owner = {
+										destroy_country = yes
+									}
+									every_system_planet = {
+										limit = {
+											is_colony = yes
+										}
+										destroy_colony = yes
+									}
+								}
+								if = {
+									limit = {
+										NOR = {
+											has_star_flag = neighbor_1
+											has_star_flag = neighbor_2
+											has_star_flag = neighbor_3
+											has_star_flag = neighbor_4
+											has_star_flag = rising_empire_home
+											has_star_flag = rising_empire
+										}
+									}
+									set_star_flag = neighbor_3
+								}
+								every_neighbor_system = {
+									limit = {
+										NOR = {
+											has_star_flag = neighbor_1
+											has_star_flag = neighbor_2
+											has_star_flag = neighbor_3
+											has_star_flag = neighbor_4
+											has_star_flag = rising_empire_home
+											has_star_flag = rising_empire
+										}
+									}
+									if = {
+										limit = {
+											NOR = {
+												has_star_flag = neighbor_1
+												has_star_flag = neighbor_2
+												has_star_flag = neighbor_3
+												has_star_flag = neighbor_4
+												has_star_flag = rising_empire_home
+												has_star_flag = rising_empire
+											}
+										}
+										set_star_flag = neighbor_4
+									}
+								}
+							}
+						}
+					}
+					
+				}
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_system = {
+				limit = {
+					OR = {
+						has_star_flag = neighbor_1
+						has_star_flag = neighbor_2
+						has_star_flag = neighbor_3
+						has_star_flag = neighbor_4
+					}
+				}
+				if = {
+					limit = {
+						has_star_flag = neighbor_1
+					}
+					remove_star_flag = neighbor_2
+					remove_star_flag = neighbor_3
+					remove_star_flag = neighbor_4
+				}
+				else_if = {
+					limit = {
+						has_star_flag = neighbor_2
+					}
+					remove_star_flag = neighbor_3
+					remove_star_flag = neighbor_4
+				}
+				else_if = {
+					limit = {
+						has_star_flag = neighbor_3
+					}
+					remove_star_flag = neighbor_4
+				}
+			}
+			every_system = {
+				limit = {
+					has_star_flag = neighbor_4
+				}
+				every_neighbor_system = {
+					limit = {
+						OR = {
+							has_star_flag = neighbor_1
+							has_star_flag = neighbor_2
+							has_star_flag = neighbor_3
+						}
+					}
+					remove_hyperlane = { from = this to = prev }
+					log = "Removed hyperlane from [This.GetName] to [PREV.GetName]"
+				}
+			}
+			while = {
+				count = 3
+				random_system = {
+					limit = {
+						has_star_flag = neighbor_4
+						NOT = {
+							has_star_flag = neighbor_3
+							has_natural_wormhole = yes
+						}
+					}
+					spawn_natural_wormhole = { bypass_type = wormhole orbit_distance = 100 random_pos = yes }
+					save_global_event_target_as = wormhole_source
+					random_system = {
+						limit = {
+							has_star_flag = neighbor_3
+							NOT = {
+								has_natural_wormhole = yes
+							}
+						}
+						spawn_natural_wormhole = { bypass_type = wormhole orbit_distance = 100 random_pos = yes }
+						link_wormholes = event_target:wormhole_source
+					}
+				}
+			}
+			while = {
+				count = 2
+				create_fleet = {
+					effect = {
+						set_owner = root
+
+						create_ship = {
+							name = random
+							random_existing_design = science
+						}
+
+						set_fleet_stance = evasive
+						#set_location = root.capital_star
+						set_location = root.capital_scope.star
+
+						owner = {
+							create_leader = {
+								class = scientist
+								sub_type = survey
+								name = random
+								species = owner_main_species
+							}
+						}
+						set_leader = last_created_leader
+					}
+				}
+			}
+			while = {
+				count = 1
+				create_fleet = {
+					effect = {
+						set_owner = root
+
+						create_ship = {
+							name = random
+							random_existing_design = constructor
+						}
+
+						set_fleet_stance = evasive
+						set_location = root.capital_star
+					}
+				}
+			}
+		}
+	}
+}

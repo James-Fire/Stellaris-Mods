@@ -1,0 +1,26 @@
+choose_galactic_market_host = {
+	ordered_galaxy_planet = {
+		limit = {
+			NOT = { exists = global_event_target = market_founder_planet }
+			is_market_nominee_planet = yes
+			exists = owner
+			owner = {
+				is_country_type = default
+				has_country_flag = market_nomination_eligible # i.e. they are or were a GalCom member
+			}
+		}
+		position = 0
+		order_by = value:planet_market_rating
+
+		save_global_event_target_as = market_founder_planet
+		owner = {
+			save_global_event_target_as = market_founder
+		}
+		every_playable_country = {
+			limit = {
+				has_country_flag = market_nomination_eligible
+			}
+			remove_galactic_market_modifiers = yes
+		}
+	}
+}

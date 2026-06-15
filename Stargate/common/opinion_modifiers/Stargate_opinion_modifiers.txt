@@ -1,0 +1,22 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+
+#opinion for stargate access
+opinion_stargate_access = {
+	opinion = {
+		base = 3
+	}
+
+	accumulative = yes
+
+}
+
+#opinion for stargate revokation
+opinion_stargate_revokation = {
+	opinion = {
+		base = -3
+	}
+
+	accumulative = yes
+}

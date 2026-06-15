@@ -1,0 +1,598 @@
+tech_build_dreadnought = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	weight = 20
+	prerequisites = { "tech_battleships" }
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { any_owned_ship = { is_ship_size = npc_warship_01 } }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_technology = tech_titans
+		}
+		modifier = {
+			factor = 5
+			any_neighbor_country = {
+				has_technology = tech_build_dreadnought
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100 #important tech
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 50
+			any_neighbor_country = {
+				has_technology = tech_build_dreadnought
+			}
+		}
+	}
+}
+
+tech_artillery_dreadnought = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	weight = 20
+	prerequisites = { "tech_battleships" }
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_technology = tech_titans
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				has_country_flag = picked_buildable_dreadnought
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				has_country_flag = wants_others
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100 #important tech
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 50
+			any_neighbor_country = {
+				has_technology = tech_build_dreadnought
+			}
+		}
+	}
+}
+
+tech_carrier_dreadnought = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	weight = 20
+	prerequisites = { "tech_battleships" }
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { any_owned_ship = { is_ship_size = npc_warship_01 } }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_technology = tech_titans
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				has_country_flag = picked_buildable_dreadnought
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				has_country_flag = wants_others
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100 #important tech
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_build_dreadnought_m = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	weight = 20
+
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { any_owned_ship = { is_ship_size = npc_warship_01 } }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_technology = tech_titans
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				has_country_flag = picked_buildable_dreadnought
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				has_country_flag = wants_others
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 100 #important tech
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_buildable_dreadnought = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	weight = 0
+	prerequisites = { "tech_battleships" }
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { any_owned_ship = { is_ship_size = npc_warship_01 } }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_technology = tech_titans
+		}
+	}
+	
+	ai_weight = {
+		factor = 100 #important tech
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_improved_dreadnought_cores = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_buildable_dreadnought" }
+	weight = 12.5
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { any_owned_ship = { is_ship_size = npc_warship_01 } }
+		}
+	}
+	
+	ai_weight = {
+		factor = 100 #important tech
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_integrated_dreadnought_cores = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_buildable_dreadnought" "tech_improved_dreadnought_cores" }
+	weight = 12.5
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { any_owned_ship = { is_ship_size = npc_warship_01 } }
+		}
+	}
+	
+	ai_weight = {
+		factor = 100 #important tech
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_perfected_dreadnought_cores = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_buildable_dreadnought" "tech_integrated_dreadnought_cores" }
+	weight = 12.5
+	is_reverse_engineerable = no
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { any_owned_ship = { is_ship_size = npc_warship_01 } }
+		}
+		modifier = {
+			factor = 0.0
+			NOT = { has_country_flag = killed_dreadnought }
+		}
+	}
+	
+	ai_weight = {
+		factor = 100 #important tech
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_auto_dreadnought_xl = {
+	cost = 14000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_buildable_dreadnought" }
+	weight = 30
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_auto_dreadnought_xxl = {
+	cost = 17000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_auto_dreadnought_xl" }
+	weight = 25
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_auto_dreadnought_t = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_auto_dreadnought_xxl" "tech_titans" }
+	weight = 20
+	
+	potential = {
+		host_has_dlc = "Apocalypse"
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_auto_dreadnought_txl = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_auto_dreadnought_t" }
+	weight = 20
+	
+	potential = {
+		host_has_dlc = "Apocalypse"
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_auto_dreadnought_build_speed = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_buildable_dreadnought" }
+	weight = 12.5
+	
+	modifier = {
+		shipsize_buildable_dreadnought_build_speed_mult = 0.25
+		shipsize_buildable_dreadnought_build_cost_mult = -0.05
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_auto_dreadnought_hull_1 = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_buildable_dreadnought" }
+	weight = 12.5
+	
+	modifier = {
+		shipsize_buildable_dreadnought_hull_add = 2000
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+	}
+	
+	ai_weight = {
+		factor = 3 #ship upgrades are supposed to be good!
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+tech_auto_dreadnought_hull_2 = {
+	cost = 20000
+	area = engineering
+	tier = 5
+	category = { voidcraft }
+	prerequisites = { "tech_buildable_dreadnought" "tech_auto_dreadnought_hull_1" }
+	weight = 5
+	is_rare = yes
+	
+	modifier = {
+		shipsize_buildable_dreadnought_hull_add = 2000
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0.25
+			NOR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_expertise_voidcraft"
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+	}
+	
+	ai_weight = {
+		factor = 3 #ship upgrades are supposed to be good!
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}

@@ -1,0 +1,116 @@
+weapon_component_template = {
+	key = "VOID_SMALL_ED_WEAPON"
+	power = -100
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 120
+			rare_crystals = 40
+		}		
+		upkeep = {
+			energy = 2.4
+			alloys = 1.2
+			rare_crystals = 0.40
+		}
+	}	
+	size = small
+	entity = "small_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_wormhole"
+	icon_frame = 1
+	damage = { min = 80 max = 196 }
+	windup = { min = 5.0 max = 20.0 }
+	cooldown = 30
+	range = 30.0
+	accuracy = 0.90
+	tracking = 0.60
+	size_damage_factor = 0.1
+	shield_damage = 0.25
+	armor_damage = 1.75
+	hull_damage = 1.5
+	
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	component_set = "VOID_EXTRADIMENSIONAL_1"
+	prerequisites = { "tech_void_extradimensional_weapon" }
+}
+
+weapon_component_template = {
+	key = "VOID_MEDIUM_ED_WEAPON"
+	power = -160
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 240
+			rare_crystals = 80
+		}		
+		upkeep = {
+			energy = 4.8
+			alloys = 2.4
+			rare_crystals = 0.80
+		}
+	}
+	size = medium
+	entity = "medium_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_wormhole"
+	icon_frame = 1
+	damage = { min = 200 max = 492 }
+	windup = { min = 5.0 max = 20.0 }
+	cooldown = 30
+	range = 50.0
+	accuracy = 0.90
+	tracking = 0.30
+	size_damage_factor = 0.1
+	shield_damage = 0.25
+	armor_damage = 1.75
+	hull_damage = 1.5
+	
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	component_set = "VOID_EXTRADIMENSIONAL_1"
+	prerequisites = { "tech_void_extradimensional_weapon" }
+}
+
+weapon_component_template = {
+	key = "VOID_LARGE_ED_WEAPON"
+	power = -320
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 480
+			rare_crystals = 160
+		}		
+		upkeep = {
+			energy = 9.6
+			alloys = 4.8
+			rare_crystals = 1.60
+		}
+	}
+	size = large
+	entity = "large_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_wormhole"
+	icon_frame = 1
+	damage = { min = 480 max = 1176 }
+	windup = { min = 5.0 max = 20.0 }
+	cooldown = 30
+	range = 70.0
+	accuracy = 0.90
+	tracking = 0.05
+	size_damage_factor = 0.1
+	shield_damage = 0.25
+	armor_damage = 1.75
+	hull_damage = 1.5
+	
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	component_set = "VOID_EXTRADIMENSIONAL_1"
+	prerequisites = { "tech_void_extradimensional_weapon" }
+}

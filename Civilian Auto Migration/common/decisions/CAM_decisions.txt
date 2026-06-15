@@ -1,0 +1,69 @@
+decision_set_CAM_destination = {
+	owned_planets_only = yes
+	
+	potential = {
+		NOT = { has_planet_flag = CAM_destination }
+	}
+	
+	effect = {
+		hidden_effect = {
+			set_planet_flag = CAM_destination
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+decision_unset_CAM_destination = {
+	owned_planets_only = yes
+	
+	potential = {
+		has_planet_flag = CAM_destination
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_planet_flag = CAM_destination
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+decision_set_CAM_exclusion = {
+	owned_planets_only = yes
+	
+	potential = {
+		NOT = { has_planet_flag = CAM_excluded }
+		NOT = { has_planet_flag = CAM_destination }
+	}
+	
+	effect = {
+		hidden_effect = {
+			set_planet_flag = CAM_excluded
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+decision_unset_CAM_exclusion = {
+	owned_planets_only = yes
+	
+	potential = {
+		has_planet_flag = CAM_excluded
+	}
+	
+	effect = {
+		hidden_effect = {
+			remove_planet_flag = CAM_excluded
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

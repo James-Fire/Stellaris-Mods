@@ -1,0 +1,13 @@
+﻿l_english:
+ 
+    decision_set_CAM_destination: "Set as Civilian Destination"
+    decision_set_CAM_destination_desc: "As a ['concept_civilian_migration'] destination, this planet will receive up to 1000 civilian pops every month, from other planets in your empire that are not excluded. This planet will also be excluded as a source."
+    decision_unset_CAM_destination: "Unset as Civilian Destination"
+    decision_unset_CAM_destination_desc: "This planet will no longer be a ['concept_civilian_migration'] destination, and will no longer be excluded as a source."
+    decision_set_CAM_exclusion: "Exclude as Civilian Source"
+    decision_set_CAM_exclusion_desc: "Exclude this planet from ['concept_civilian_migration']."
+    decision_unset_CAM_exclusion: "Unexclude as Civilian Source"
+    decision_unset_CAM_exclusion_desc: "Stop excluding this planet from ['concept_civilian_migration']."
+    
+    concept_civilian_migration: "Civilian Migration"
+    concept_civilian_migration_desc: "Civilians will migrate from planets that are not excluded or destinations, to planets that are destinations. Each destination will pull up to 1000 civilians per month."

@@ -1,0 +1,32 @@
+utility_component_template = {
+	key = "OUTPOST_AURA_WARP_FLUCTUATOR"
+	size = medium
+	icon = "GFX_ship_part_aura_snare"
+	icon_frame = 1
+	power = 0
+
+	class_restriction = { shipclass_starbase }
+
+	friendly_aura = {
+		name = "aura_starbase_warp_fluctuator"
+		system_wide = yes
+
+		stack_info = {
+			id = friendly_warp_fluctuator_aura
+			priority = 10
+		}
+
+		modifier = {
+			ship_windup_mult = -0.30
+			ship_winddown_mult = -0.50
+			ship_speed_mult = 0.5
+		}
+
+		graphics = {
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+}

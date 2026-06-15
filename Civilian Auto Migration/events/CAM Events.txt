@@ -1,0 +1,92 @@
+namespace = CAM
+
+event = {
+	id = CAM.0
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		every_country = {
+			limit = {
+				is_ai = no
+				any_owned_planet = {
+					has_planet_flag = CAM_destination
+				}
+				any_owned_planet = {
+					planet_can_migrate = yes
+				}
+			}
+			country_event = { id = CAM.1 days = 5 random = 20 }
+		}
+	}
+}
+country_event = {
+	id = CAM.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				has_planet_flag = CAM_destination
+			}
+			planet_event = { id = CAM.2 }
+		}
+	}
+}
+
+planet_event = {
+	id = CAM.2
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		set_variable = { which = CAM_count value = 1000 }
+		while = {
+			limit = {
+				check_variable = { which = CAM_count value > 0 }
+				free_amenities >= CAM_count
+				free_housing >= CAM_count
+				owner = {
+					any_owned_planet = {
+						planet_can_migrate = yes
+					}
+				}
+			}
+			owner = { 
+				random_owned_planet = {
+					limit = {
+						planet_can_migrate = yes
+					}
+					if = {
+						limit = {
+							planet_can_migrate_bulk = yes
+						}
+						resettle_civilians = {
+							count = 1000
+						}
+					}
+					else_if = {
+						limit = {
+							planet_can_migrate_normal = yes
+						}
+						resettle_civilians = {
+							count = 100
+						}
+					}
+					else = {
+						resettle_civilians = {
+							count = 1
+						}
+					}
+				}
+			}
+		}
+	}
+}

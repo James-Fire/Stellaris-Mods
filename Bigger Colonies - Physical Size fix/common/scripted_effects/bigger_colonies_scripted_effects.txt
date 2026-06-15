@@ -1,0 +1,116 @@
+bc_add_random_energy_deposit = {	
+	random_list = {
+		100 = { add_deposit = d_arid_highlands }
+		100 = { add_deposit = d_hot_springs }
+		50 = { add_deposit = d_rushing_waterfalls }
+		50 = { add_deposit = d_searing_desert }
+		50 = { add_deposit = d_frozen_gas_lake }	
+		25 = { add_deposit = d_geothermal_vent }
+		25 = { add_deposit = d_underwater_vent }
+		25 = { add_deposit = d_tempestous_mountain }
+	}
+}
+
+bc_add_random_minerals_deposit = {	
+	random_list = {
+		100 = { add_deposit = d_veiny_cliffs }
+		100 = { add_deposit = d_mineral_fields }
+		50 = { add_deposit = d_prosperous_mesa }
+		50 = { add_deposit = d_ore_rich_caverns }
+		25 = { add_deposit = d_rich_mountain }
+		25 = { add_deposit = d_submerged_ore_veins }
+	}
+}
+
+
+bc_add_random_food_deposit = {	
+	random_list = {
+		100 = { add_deposit = d_lichen_fields }
+		100 = { add_deposit = d_bountiful_plains }
+		100 = { add_deposit = d_rugged_woods }
+		100 = { add_deposit = d_green_hills }
+		100 = { add_deposit = d_forgiving_tundra }
+		100 = { add_deposit = d_boggy_fens }
+		100 = { add_deposit = d_nutritious_mudland }
+		50 = { add_deposit = d_fungal_caves }
+		50 = { add_deposit = d_lush_jungle }
+		50 = { add_deposit = d_fertile_lands }
+		50 = { add_deposit = d_great_river }
+		25 = { add_deposit = d_black_soil }
+		25 = { add_deposit = d_teeming_reef }
+		25 = { add_deposit = d_tropical_island }
+		25 = { add_deposit = d_fungal_forest }
+	}
+}
+
+bc_add_random_rare_deposit = {	
+	random_list = {
+		100 = { add_deposit = d_dust_caverns }
+		50 = { add_deposit = d_dust_desert }
+		100 = { add_deposit = d_bubbling_swamp }
+		50 = { add_deposit = d_fuming_bog }
+		100 = { add_deposit = d_crystalline_caverns }
+		50 = { add_deposit = d_crystal_forest }	
+		50 = { add_deposit = d_crystal_reef }
+		50 = { add_deposit = d_betharian_deposit }
+		50 = { add_deposit = d_alien_pets_deposit }
+	}
+}
+
+bc_add_random_deposit = {	
+	random_list = {
+		20 = { bc_add_random_rare_deposit = yes }
+		50 = { bc_add_random_food_deposit = yes }
+		50 = { bc_add_random_minerals_deposit = yes }
+		50 = { bc_add_random_energy_deposit = yes }
+	}
+}
+
+bc_add_random_blocker = {
+	random_list = { 
+		200 = {}
+		50 = { add_deposit = d_mountain_range }
+		50 = { add_deposit = d_active_volcano }
+		50 = { add_deposit = d_dangerous_wildlife_blocker }
+		100 = { add_deposit = d_dense_jungle }
+		100 = { add_deposit = d_toxic_kelp }
+		100 = { add_deposit = d_deep_sinkhole }
+		100 = { add_deposit = d_quicksand_basin }
+		100 = { add_deposit = d_noxious_swamp }
+		100 = { add_deposit = d_massive_glacier }
+		100 = { add_deposit = d_radioactive_wasteland }
+		100 = { add_deposit = d_city_ruins }
+		100 = { add_deposit = d_bomb_crater }
+	}
+}
+
+bc_add_random_diversity_mod_deposit = {
+	if = {
+		limit = { is_district_diversity_mod = yes }
+		random_list = {
+			100 = { add_deposit = d_stormy_highlands }
+			50 = { add_deposit = d_stormy_flats }
+			100 = { add_deposit = d_boiling_lake }
+			50 = { add_deposit = d_hot_vulcano }
+			100 = { add_deposit = d_open_space }
+			50 = { add_deposit = d_low_athmosphere_zone }
+			100 = { add_deposit = d_stable_ground }
+			50 = { add_deposit = d_ultra_stable_ground }
+			100 = { add_deposit = d_small_rock_formation }
+			50 = { add_deposit = d_large_rock_formation }
+			100 = { add_deposit = d_interesting_wildlife }
+			25 = { add_deposit = d_complex_ecosystem }
+			100 = { add_deposit = d_relaxing_location }
+			25 = { add_deposit = d_super_relaxing_location }
+			100 = { add_deposit = d_berries_hedge }
+			25 = { add_deposit = d_mushroom_ecosystem }
+			100 = { add_deposit = d_carbon_compounds }
+			25 = { add_deposit = d_complex_carbon_compounds }
+			100 = { add_deposit = d_bubbling_lake }
+			25 = { add_deposit = d_bubbling_ocean }
+			100 = { add_deposit = d_luminescent_cave }
+			25 = { add_deposit = d_luminescent_cave_system }
+		}
+	}
+}
+

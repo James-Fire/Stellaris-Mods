@@ -1,0 +1,405 @@
+@cost = 56
+
+tr_est_academy_adopt = {
+	cost = { unity = @cost }
+	modifier = {
+		country_leader_cap = 2
+	}
+	
+	tradition_swap = {
+		name = tr_est_psion_adopt
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+			Not = {
+				has_authority = auth_machine_intelligence
+			}
+		}	
+		modifier = {
+			country_resource_unity_mult = 0.10		
+		}
+		weight = {factor =  1}
+	}
+	
+	tradition_swap = {
+		name = tr_est_hacking_adopt
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}	
+		modifier = {
+			category_computing_research_speed_mult = 0.25
+		}
+		weight = {factor =  1}
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_materialist
+		}	
+		modifier = {
+			factor = 2
+			has_ai_personality = erudite_explorers
+		}		
+	}
+}
+
+tr_est_academy_finish = {
+	on_enabled = {
+		country_event = {
+			id = est.10001
+		}
+	}
+	
+	modifier = {	
+		##Check est.1 event.
+		ascension_perks_add = 1
+	}
+	
+	tradition_swap = {
+		name = tr_est_psion_finish
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+			Not = {
+				has_authority = auth_machine_intelligence
+			}
+		}	
+		modifier = {
+			species_leader_exp_gain = 0.25
+			ascension_perks_add = 1
+		}
+		weight = {factor =  1}
+	}
+	
+	tradition_swap = {
+		name = tr_est_hacking_finish
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}	
+		modifier = {
+			rivalry_influence_gain = 0.3
+			ascension_perks_add = 1
+		}
+		weight = {factor =  1}
+	}
+}
+
+tr_est_academy_1 = {
+	cost = { unity = @cost }
+	
+	modifier = {
+		country_leader_pool_size = 3
+	}
+	
+	tradition_swap = {
+		name = tr_est_psion_1
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+			Not = {
+				has_authority = auth_machine_intelligence
+			}
+		}	
+		modifier = {		
+			ship_evasion_mult = 0.10
+		}
+		weight = {factor =  1}
+	}
+	
+	tradition_swap = {
+		name = tr_est_hacking_1
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}	
+		modifier = {
+			ship_evasion_mult = 0.10
+		}
+		weight = {factor =  1}
+	}
+	
+	ai_weight = {
+		factor = 2000
+	}
+}
+
+tr_est_academy_2 = {	
+	possible = {
+		has_tradition = tr_est_academy_1
+	}
+	
+	cost = { unity = @cost }
+	
+	modifier = {
+		leader_skill_levels = 1
+	}
+	
+	tradition_swap = {
+		name = tr_est_psion_2
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+			Not = {
+				has_authority = auth_machine_intelligence
+			}
+		}	
+		on_enabled = {
+			every_neighbor_country = {
+				limit = {
+					Not = {
+						has_ethic = ethic_gestalt_consciousness					
+					}
+				}
+				if = {
+					limit = {
+						Not = {
+							has_modifier = mod_est_psion_2
+						}
+					}
+					add_modifier = {
+						modifier = "mod_est_psion_2"
+						days = -1
+					}
+				}
+			}
+		}
+		modifier = {
+			army_morale_damage_mult = 0.25
+		}
+		weight = {factor =  1}
+	}
+	
+	tradition_swap = {
+		name = tr_est_hacking_2
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}	
+		modifier = {
+		}
+		weight = {factor =  1}
+	}
+	
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_est_academy_3 = {
+	cost = { unity = @cost }
+	
+	possible = {
+		has_tradition = tr_est_academy_2
+	}
+	
+	modifier = {		
+		species_leader_exp_gain = 0.20
+	}
+	
+	tradition_swap = {
+		name = tr_est_psion_3
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+			Not = {
+				has_authority = auth_machine_intelligence
+			}
+		}	
+		modifier = {
+			planet_sensor_range_mult = 0.75
+		}
+		weight = {factor =  1}
+	}
+	
+	tradition_swap = {
+		name = tr_est_hacking_3
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}	
+		modifier = {
+			planet_sensor_range_mult = 0.75
+		}
+		weight = {factor =  1}
+	}
+	
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_est_academy_4 = {
+	cost = { unity = @cost }
+	
+	possible = {
+		has_tradition = tr_est_academy_3
+	}
+	
+	#Possibly will be used
+	on_enabled = {
+		every_owned_planet = {
+			every_tile = {
+				limit = {
+					Or = {
+						has_building = building_engineering_facility_3
+						has_building = building_engineering_facility_4
+						has_building = building_physics_lab_3
+						has_building = building_physics_lab_4
+						has_building = building_biolab_3
+						has_building = building_biolab_4
+					}
+				}
+				if = {
+					limit = {
+						has_building = building_engineering_facility_3
+					}
+					add_deposit = d_est_academy_3_engineering_deposit_1
+				}
+				if = {
+					limit = {
+						has_building = building_engineering_facility_4
+					}
+					add_deposit = d_est_academy_3_engineering_deposit_1
+					add_deposit = d_est_academy_3_engineering_deposit_2
+				}
+				if = {
+					limit = {
+						has_building = building_physics_lab_3
+					}
+					add_deposit = d_est_academy_3_physics_deposit_1
+				}
+				if = {
+					limit = {
+						has_building = building_physics_lab_4
+					}
+					add_deposit = d_est_academy_3_physics_deposit_1
+					add_deposit = d_est_academy_3_physics_deposit_2
+				}
+				if = {
+					limit = {
+						has_building = building_biolab_3
+					}
+					add_deposit = d_est_academy_3_society_deposit_1
+				}
+				if = {
+					limit = {
+						has_building = building_biolab_4
+					}
+					add_deposit = d_est_academy_3_society_deposit_1
+					add_deposit = d_est_academy_3_society_deposit_2
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		#Check buildings file.
+		#Updates, check events.
+	}
+	
+	tradition_swap = {
+		name = tr_est_psion_4
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+			Not = {
+				has_authority = auth_machine_intelligence
+			}
+		}	
+		modifier = {
+			science_ship_survey_speed  = 0.20
+			ship_anomaly_generation_chance_mult = 0.10		
+		}
+		weight = {factor =  1}
+	}
+	
+	tradition_swap = {
+		name = tr_est_hacking_4
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}	
+		weight = {factor =  1}
+	}
+
+	ai_weight = {
+		factor = 4000
+	}
+}
+
+tr_est_academy_5 = {
+	cost = { unity = @cost }
+	
+	modifier = {
+		ship_evasion_mult = 0.05
+		ship_combat_speed_mult = 0.10
+	}
+	
+	tradition_swap = {
+		name = tr_est_psion_5
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+			Not = {
+				has_authority = auth_machine_intelligence
+			}
+		}	
+		modifier = {
+			ship_shield_hp_mult = 0.15
+			weapon_type_energy_weapon_damage_mult = 0.15
+		}
+		weight = {factor =  1}
+	}
+	
+	tradition_swap = {
+		name = tr_est_hacking_5
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}	
+		modifier = {
+			all_technology_research_speed = 0.10
+		}
+		weight = {factor =  1}
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}

@@ -1,0 +1,18 @@
+resettle_civilians = {
+	ordered_owned_pop_group = {
+		limit = {
+			OR = {
+				is_pop_category = civilian
+				is_pop_category = maintenance_drone
+			}
+		}
+		position = 0
+		order_by = trigger:pop_group_size
+		resettle_pop_group = {
+			POP_GROUP = this
+			PLANET = root
+			AMOUNT = $count$
+		}
+		ROOT = { subtract_variable = { which = CAM_count value = $count$ } }
+	}
+}

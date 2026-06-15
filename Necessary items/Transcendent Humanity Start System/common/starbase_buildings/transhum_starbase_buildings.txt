@@ -1,0 +1,39 @@
+#####
+# Aura buildings
+#####
+
+
+transhum_fuck_yo_shit = {
+	icon = "GFX_starbase_communication_jammer"
+	construction_days = 180
+
+	potential = {
+		exists = owner
+		owner = { has_technology = "tech_self_aware_logic" }
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starport"
+			has_starbase_size >= starbase_starport
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 50
+		}
+
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	equipped_component = "STARBASE_AURA_TRANSHUM_INHIBITOR"
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = no
+	ai_weight = {
+		weight = 10
+	}
+}

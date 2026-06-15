@@ -1,0 +1,16 @@
+﻿l_english:
+
+    #Events
+     megaremove.1.name:0 "Are you sure?"
+     megaremove.1.desc:0 "If you are sure you want to remove the current megastructure in the [offending_toaster.solar_system.GetName] system, use the 'yes' option. Otherwise, 'no'. \nThe random megastructure is as accurate as I can get right now with an event. If you want something more accurate, and have access to the console you can paste this into it to delete your currently selected megastructure. \neffect delete_megastructure = this"
+     megaremove.2.name:0 "Are you sure?"
+     megaremove.2.desc:0 "If you are sure you want to remove the megastructures in the [offending_toaster.solar_system.GetName] system, use the 'yes' option. Otherwise, 'no'. \nThe random megastructure is as accurate as I can get right now with an event. If you want something more accurate, and have access to the console you can paste this into it to delete your currently selected megastructure. \neffect delete_megastructure = this"
+     
+    edict_remove_megastructure:0 "Remove Megastructure"
+    edict_remove_megastructure_desc:0 ""
+    edict_remove_system_megastructure:0 "Remove System Megastructure"
+    edict_remove_system_megastructure:0 ""
+    mark_for_toaster:0 "Mark for Removal"
+    mark_for_toaster_desc:0 "Mark this system as a system with a unwanted megastructure."
+    mark_for_toaster_habitat:0 "Mark for Habitat Removal"
+    mark_for_toaster_habitat_desc:0 "Mark this system as a system with a unwanted Habitat."

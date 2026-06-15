@@ -1,0 +1,90 @@
+##########################################################################
+# Modifiers
+##########################################################################
+
+mod_est_cv_faith_2 = {
+	tile_resource_unity_mult = 0.15
+	
+	icon = "gfx/interface/icons/planet_modifiers/est_mod_faith_2.dds"
+	icon_frame = 1	
+}
+
+mod_est_cv_industry_finish_mine_1 = {
+	max_minerals = 1000
+}
+
+mod_est_cv_industry_finish_mine_2 = {
+	max_minerals = 1000
+}
+
+mod_est_cv_industry_finish_mine_3 = {
+	max_minerals = 1000
+}
+
+mod_est_cv_industry_finish_mineral_processing_1 = {
+	max_minerals = 1000
+}
+
+mod_est_cv_industry_finish_mineral_processing_2 = {
+	max_minerals = 1000
+}
+
+mod_est_cv_industry_finish_space_station_1 = {
+	max_minerals = 2000
+}
+
+mod_est_cv_industry_finish_space_station_2 = {
+	max_minerals = 2000
+}
+
+mod_est_cv_industry_finish_space_station_3 = {
+	max_minerals = 2000
+}
+
+mod_est_cv_industry_finish_space_station_4 = {
+	max_minerals = 2000
+}
+
+mod_est_cv_industry_finish_space_station_5 = {
+	max_minerals = 2000
+}
+
+mod_est_cv_industry_finish_mega_engineering = {
+	max_minerals = 20000
+}
+
+mod_est_cv_liberty_4 = {
+	ship_weapon_damage = 0.15
+	army_damage_mult = 0.25
+	ship_upkeep_mult = -0.10	
+}
+
+mod_est_cv_prosyletism_adopt = {
+	tile_resource_unity_mult = 0.15
+	pop_happiness = 0.05
+	
+	icon = "gfx/interface/icons/planet_modifiers/est_mod_prosyletism.dds"
+	icon_frame = 1	
+}
+
+mod_est_cv_purity_adopt_1 = {
+	tile_resource_unity_mult = 0.10	
+	
+	icon = "gfx/interface/icons/planet_modifiers/est_mod_purity.dds"
+	icon_frame = 1	
+}
+
+mod_est_cv_purity_adopt_2 = {
+	pop_happiness = 0.05
+}
+
+
+
+
+mod_est_commerce_1 = {
+	country_resource_energy_mult = 0.15
+}
+
+mod_est_commerce_2 = {
+	country_resource_influence_add = 1	
+}

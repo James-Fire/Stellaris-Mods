@@ -1,0 +1,93 @@
+namespace = stargate_menu
+
+country_event = { ###Country Terminal
+	id = stargate_menu.1
+	title = "stargate_menu.1.name"
+	desc = "stargate_menu.1.desc"
+	diplomatic = yes
+	custom_gui = "stargate_country_window"
+	is_triggered_only = yes
+	
+	picture_event_data = {
+		portrait = ROOT.ruler
+		room = ethic_spaceship_room
+	}
+	
+	immediate = {
+	}
+	
+	# Confirm
+	option = {
+		name = "stargate_menu.1.refresh"
+		#custom_tooltip = "stargate_menu.1.refresh.tooltip"
+		custom_gui = "stargate_main_menu_confirm"
+		country_event = { id = stargate_menu.1 }
+	}
+	option = {
+		name = "stargate_menu.1.confirm"
+		#custom_tooltip = "stargate_menu.1.confirm.tooltip"
+		custom_gui = "stargate_main_menu_confirm"
+		#country_event = { id = stargate_menu.20 }
+	}
+	option = {
+		name = "stargate_menu.1.confirm"
+		#custom_tooltip = "stargate_menu.1.confirm.tooltip"
+		custom_gui = "stargate_main_menu_YEET"
+		default_hide_option = yes
+	}
+	
+	after = {
+		#fire_on_action = { on_action = stargate_apply_queue }
+	}
+}
+
+planet_event = { ###Planet Terminal
+	id = stargate_menu.10
+	title = "stargate_menu.10.name"
+	desc = "stargate_menu.10.desc"
+	diplomatic = yes
+	custom_gui = "stargate_planet_window"
+	is_triggered_only = yes
+	
+	
+	picture_event_data = {
+		portrait = ROOT.owner.ruler
+		room = ethic_spaceship_room
+	}
+	
+	# Confirm
+	# Confirm
+	option = {
+		name = "stargate_menu.1.confirm"
+		#custom_tooltip = "stargate_menu.1.confirm.tooltip"
+		custom_gui = "stargate_planet_menu_confirm"
+		#owner = { country_event = { id = stargate_menu.20 } }
+	}
+	option = {
+		name = "stargate_menu.1.refresh"
+		#custom_tooltip = "stargate_menu.1.refresh.tooltip"
+		custom_gui = "stargate_planet_menu_confirm"
+		planet_event = { id = stargate_menu.10 }
+	}
+	option = {
+		name = "stargate_menu.10.confirm"
+		custom_tooltip = "Open the Country Terminal"
+		custom_gui = "stargate_planet_menu_confirm"
+		hidden_effect = {
+			owner = {
+				reset_stargate_menu_settings_country = yes
+				country_event = { id = stargate_menu.1 }
+			}
+		}	
+	}
+	option = {
+		name = "stargate_menu.1.confirm"
+		#custom_tooltip = "stargate_menu.1.confirm.tooltip"
+		custom_gui = "stargate_planet_menu_YEET"
+		default_hide_option = yes
+	}
+	
+	after = {
+		#fire_on_action = { on_action = stargate_apply_planet_queue scopes = { from = owner } }
+	}
+}

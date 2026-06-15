@@ -1,0 +1,55 @@
+planet_can_migrate_bulk = {
+	NOT = {
+		has_planet_flag = CAM_destination
+		has_planet_flag = CAM_excluded
+	}
+	num_assigned_jobs = { job = civilian value >= 1000 }
+	any_owned_pop_group = {
+		OR = {
+			is_pop_category = civilian
+			is_pop_category = maintenance_drone
+		}
+		pop_group_size > 1000
+	}
+}
+planet_can_migrate_normal = {
+	NOT = {
+		has_planet_flag = CAM_destination
+		has_planet_flag = CAM_excluded
+	}
+	num_assigned_jobs = { job = civilian value >= 100 }
+	any_owned_pop_group = {
+		OR = {
+			is_pop_category = civilian
+			is_pop_category = maintenance_drone
+		}
+		pop_group_size > 100
+	}
+}
+planet_can_migrate_granular = {
+	NOT = {
+		has_planet_flag = CAM_destination
+		has_planet_flag = CAM_excluded
+	}
+	num_assigned_jobs = { job = civilian value > 0 }
+	any_owned_pop_group = {
+		OR = {
+			is_pop_category = civilian
+			is_pop_category = maintenance_drone
+		}
+		pop_group_size > 1
+	}
+}
+
+planet_can_migrate = {
+	NOT = {
+		has_planet_flag = CAM_destination
+		has_planet_flag = CAM_excluded
+	}
+	sapient_pop_amount > 1
+	OR = {
+		planet_can_migrate_bulk = yes
+		planet_can_migrate_normal = yes
+		planet_can_migrate_granular = yes
+	}
+}

@@ -1,0 +1,377 @@
+@cost = 56
+
+tr_est_militarism_adopt = {
+	cost = { unity = @cost }
+	
+	on_enabled = {
+		if = {
+			limit = {
+				Not = {
+					used_naval_capacity_percent < 1.0
+				}
+			}
+			add_modifier = {
+				modifier = "mod_militarism_adopt"
+			}
+		}
+	}	
+
+	tradition_swap = {
+		name = tr_est_might_adopt
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}	
+		on_enabled = {
+			if = {
+				limit = {
+					Not = {
+						used_naval_capacity_percent < 1.0
+					}
+				}
+				add_modifier = {
+					modifier = "mod_militarism_adopt"
+				}
+			}
+		}	
+		weight = {
+			factor = 1
+		}
+	}
+	
+	#See est.15 event.
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_militarist
+		}			
+	}
+}
+
+tr_est_militarism_finish = {
+	
+	modifier = {	
+		ship_weapon_range_mult = 0.25
+		ascension_perks_add = 1
+	}
+
+	tradition_swap = {
+		name = tr_est_might_finish
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}		
+		modifier = {	
+			ship_weapon_range_mult = 0.15
+			ship_weapon_damage = 0.05
+			ascension_perks_add = 1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+}
+
+tr_est_militarism_1 = {
+	cost = { unity = @cost }
+	
+	modifier = {
+		garrison_health = 3.0
+		planet_army_build_cost_mult = -0.5
+		spaceport_ship_build_cost_mult = -0.05
+	}
+
+	tradition_swap = {
+		name = tr_est_might_1
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}		
+		modifier = {
+			garrison_health = 3.0
+			planet_army_build_cost_mult = -0.33
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	
+	ai_weight = {
+		factor = 2000
+	}
+}
+
+tr_est_militarism_2 = {
+	cost = { unity = @cost }
+	
+	possible = {
+		has_tradition = tr_est_militarism_1
+	}
+	
+	modifier = {
+		general_skill_levels = 2
+		leader_general_influence_cost = -0.50
+		army_morale = 0.10
+		planet_unrest_add = -5
+	}
+
+	tradition_swap = {
+		name = tr_est_might_2
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}		
+		modifier = {
+			general_skill_levels = 2
+			leader_general_influence_cost = -0.50
+			army_morale_damage_mult = 0.20
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_est_militarism_3 = {
+	cost = { unity = @cost }
+	
+	modifier = {
+		navy_size_mult = 0.25	
+	}
+	
+	ai_weight = {
+		factor = 3000
+	}
+}
+
+tr_est_militarism_4 = {
+	cost = { unity = @cost }
+	
+	possible = {
+		has_tradition = tr_est_militarism_2
+		has_tradition = tr_est_militarism_3
+	}
+	
+	modifier = {
+		army_upkeep_mult = -0.20
+		ship_upkeep_mult = -0.10
+	}
+
+	tradition_swap = {
+		name = tr_est_might_4
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}		
+		modifier = {
+			ship_fire_rate_mult = 0.05
+			ship_combat_speed_mult = 0.10
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	ai_weight = {
+		factor = 2000
+	}
+}
+
+tr_est_militarism_5 = {
+	cost = { unity = @cost }
+	
+	on_enabled = {
+		every_owned_leader = {
+			limit = {
+				Not = {
+					has_trait = leader_trait_admiral_est_militarism_5
+				}
+			}
+			if = {
+				limit = { leader_class = admiral }
+				if = {
+					limit = {
+						owner = {
+							has_ethic = ethic_gestalt_consciousness						
+						}
+					}
+					add_trait = leader_trait_admiral_est_militarism_5_GC
+					else = {
+						add_trait = leader_trait_admiral_est_militarism_5					
+					}
+				}
+			}
+		}
+		every_pool_leader = {
+			limit = {
+				Not = {
+					has_trait = leader_trait_admiral_est_militarism_5
+				}
+			}
+			if = {
+				limit = { leader_class = admiral }
+				if = {
+					limit = {
+						owner = {
+							has_ethic = ethic_gestalt_consciousness						
+						}
+					}
+					add_trait = leader_trait_admiral_est_militarism_5_GC
+					else = {
+						add_trait = leader_trait_admiral_est_militarism_5					
+					}
+				}
+			}
+		}	
+		every_owned_leader = {
+			limit = {
+				leader_class = admiral
+			}
+			owner ={
+				if = {
+					limit = {
+						has_country_flag = est_militarism_5_4
+					}	
+					set_timed_country_flag = {
+						flag = est_militarism_5_5
+						days = 2
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = est_militarism_5_3
+					}	
+					set_timed_country_flag = {
+						flag = est_militarism_5_4
+						days = 2
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = est_militarism_5_2
+					}	
+					set_timed_country_flag = {
+						flag = est_militarism_5_3
+						days = 2
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = est_militarism_5_1
+					}	
+					set_timed_country_flag = {
+						flag = est_militarism_5_2
+						days = 2
+					}
+				}
+				if = {
+					limit = {
+						Not = {
+							has_country_flag = est_militarism_5_1
+						}
+					}	
+					set_timed_country_flag = {
+						flag = est_militarism_5_1
+						days = 2
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = est_militarism_5_5				
+			}
+			add_modifier = {
+				modifier = "est_mod_militarism_5_5"
+				days = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = est_militarism_5_4		
+				Not = {
+					has_country_flag = est_militarism_5_5		
+				}
+			}
+			add_modifier = {
+				modifier = "est_mod_militarism_5_4"
+				days = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = est_militarism_5_3			
+				Not = {
+					has_country_flag = est_militarism_5_4		
+				}			
+			}
+			add_modifier = {
+				modifier = "est_mod_militarism_5_3"
+				days = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = est_militarism_5_2			
+				Not = {
+					has_country_flag = est_militarism_5_3		
+				}			
+			}
+			add_modifier = {
+				modifier = "est_mod_militarism_5_2"
+				days = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = est_militarism_5_1			
+				Not = {
+					has_country_flag = est_militarism_5_2		
+				}			
+			}
+			add_modifier = {
+				modifier = "est_mod_militarism_5_1"
+				days = -1
+			}
+		}
+	}	
+
+	tradition_swap = {
+		name = tr_est_might_5
+		inherit_effects = yes
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}		
+		weight = {
+			factor = 1
+		}
+	}
+	
+	#Check event
+		
+	ai_weight = {
+		factor = 3000
+	}
+}

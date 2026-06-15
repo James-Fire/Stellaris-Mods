@@ -1,0 +1,298 @@
+realdev_country_tooltip = {
+	potential = { }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "realdev_country_tooltip" }
+}
+
+#Settings!
+realdev_alt_production = {
+	potential = { always = yes }
+	allow = { hidden_trigger = { always = yes } }
+	effect = {
+		custom_tooltip = "realdev_alt_production_desc"
+	}
+}
+realdev_alt_production_swap = {
+	potential = { }
+	allow = { hidden_trigger = { always = yes } }
+	effect = {
+		custom_tooltip = "realdev_alt_production_desc"
+		if = {
+			limit = {
+				has_country_flag = realdev_assembly
+			}
+			remove_country_flag = realdev_assembly
+			set_country_flag = realdev_production
+		}
+		else_if = {
+			limit = {
+				has_country_flag = realdev_production
+			}
+			remove_country_flag = realdev_production
+			set_country_flag = realdev_assembly
+		}
+	}
+}
+
+#Targets
+realdev_country_target = {
+	potential = { }
+	allow = { custom_tooltip = "realdev_target_desc" hidden_trigger = { always = yes } }
+	effect = { }
+}
+realdev_target_mode_swap = {
+	potential = { }
+	allow = { hidden_trigger = { always = yes } }
+	effect = {
+		custom_tooltip = "realdev_target_desc"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = realdev_target_auto
+				}
+				remove_country_flag = realdev_target_auto
+				set_country_flag = realdev_target_manual
+			}
+			else_if = {
+				limit = {
+					has_country_flag = realdev_target_manual
+				}
+				remove_country_flag = realdev_target_manual
+				set_country_flag = realdev_target_auto
+			}
+		}
+	}
+}
+realdev_country_target_increase = {
+	potential = { }
+	allow = { hidden_trigger = { has_country_flag = realdev_target_manual } }
+	effect = {
+		custom_tooltip = "realdev_target_increase"
+		hidden_effect = {
+			change_variable = { which = realdev_ip_target value = 1 }
+			change_variable = { which = realdev_ip_target_display value = 1 }
+		}
+	}
+}
+realdev_country_target_decrease = {
+	potential = { }
+	allow = {
+		hidden_trigger = { has_country_flag = realdev_target_manual }
+		custom_tooltip = {
+			fail_text = realdev_target_minned
+			NOT = { check_variable = { which = realdev_ip_target value < 1 } }
+		}
+	}
+	effect = {
+		custom_tooltip = "realdev_target_decrease"
+		hidden_effect = {
+			change_variable = { which = realdev_ip_target value = -1 }
+			change_variable = { which = realdev_ip_target_display value = -1 }
+		}
+	}
+}
+
+
+realdev_industry_ratio_desc = {
+	potential = { }
+	allow = { custom_tooltip = "realdev_industry_ratio_desc" hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "realdev_industry_ratio_desc" }
+}
+
+#Shipyards
+realdev_country_shipyard = {
+	potential = { }
+	allow = { custom_tooltip = "realdev_country_shipyard_desc" hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "realdev_country_shipyard_desc" }
+}
+realdev_country_shipyard_ip_increase = {
+	potential = { }
+	allow = {
+		custom_tooltip_fail = {
+			text = "realdev_all_committed"
+			check_variable_arithmetic = {
+				which = value:realdev_distribution_total
+				value < 100
+			}
+			check_variable_arithmetic = {
+				which = realdev_industry_shipyard_ratio
+				value < 100
+			}
+		}
+	}
+	effect = { 
+		custom_tooltip = "realdev_country_shipyard_increase_desc"
+		hidden_effect = {
+			change_variable = { which = realdev_industry_shipyard_ratio value = 1 }
+		}
+	}
+}
+realdev_country_shipyard_ip_decrease = {
+	potential = { }
+	allow = {
+		custom_tooltip_fail = {
+			text = "realdev_none_committed"
+			check_variable_arithmetic = {
+				which = realdev_industry_shipyard_ratio
+				value > 0
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = "realdev_country_shipyard_decrease_desc"
+		hidden_effect = {
+			change_variable = { which = realdev_industry_shipyard_ratio value = -1 }
+		}
+	}
+}
+
+
+
+#Megastructures
+realdev_country_megastructures = {
+	potential = { NOT = { has_global_flag = realdev_megastructure_build_ignore } }
+	allow = { custom_tooltip = "realdev_country_megastructures_desc" hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "realdev_country_megastructures_desc" }
+}
+realdev_country_megastructure_ip_increase = {
+	potential = { NOT = { has_global_flag = realdev_megastructure_build_ignore } }
+	allow = {
+		custom_tooltip_fail = {
+			text = "realdev_all_committed"
+			check_variable_arithmetic = {
+				which = value:realdev_distribution_total
+				value < 100
+			}
+			check_variable_arithmetic = {
+				which = realdev_megastructure_ratio
+				value < 100
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = "realdev_country_megastructure_increase_desc"
+		hidden_effect = {
+			change_variable = { which = realdev_megastructure_ratio value = 1 }
+		}
+	}
+}
+realdev_country_megastructure_ip_decrease = {
+	potential = { NOT = { has_global_flag = realdev_megastructure_build_ignore } }
+	allow = {
+		custom_tooltip_fail = {
+			text = "realdev_none_committed"
+			check_variable_arithmetic = {
+				which = realdev_megastructure_ratio
+				value > 0
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = "realdev_country_megastructure_decrease_desc"
+		hidden_effect = {
+			change_variable = { which = realdev_megastructure_ratio value = -1 }
+		}
+	}
+}
+
+#Minor Colonies
+realdev_country_minor_colonies_check = {
+	potential = { roci_exploit_module_active = yes }
+	allow = { }
+	effect = { }
+}
+realdev_country_minor_colonies_check_null = {
+	potential = { roci_exploit_module_active = no }
+	allow = { }
+	effect = { }
+}
+realdev_country_minor_colonies = {
+	potential = { roci_exploit_module_active = yes }
+	allow = { custom_tooltip = "realdev_country_minor_colonies_desc" hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "realdev_country_minor_colonies_desc" }
+}
+realdev_country_minor_colonies_ip_increase = {
+	potential = { roci_exploit_module_active = yes }
+	allow = {
+		custom_tooltip_fail = {
+			text = "realdev_all_committed"
+			check_variable_arithmetic = {
+				which = value:realdev_distribution_total
+				value < 100
+			}
+			check_variable_arithmetic = {
+				which = realdev_minor_colony_ratio
+				value < 100
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = "realdev_country_minor_colonies_increase_desc"
+		hidden_effect = {
+			change_variable = { which = realdev_minor_colony_ratio value = 1 }
+		}
+	}
+}
+realdev_country_minor_colonies_ip_decrease = {
+	potential = { roci_exploit_module_active = yes }
+	allow = {
+		custom_tooltip_fail = {
+			text = "realdev_none_committed"
+			check_variable_arithmetic = {
+				which = realdev_minor_colony_ratio
+				value > 0
+			}
+		}
+	}
+	effect = {
+		custom_tooltip = "realdev_country_minor_colonies_decrease_desc"
+		hidden_effect = {
+			change_variable = { which = realdev_minor_colony_ratio value = -1 }
+		}
+	}
+}
+
+#Trade Value
+realdev_country_tv = {
+	potential = { }
+	allow = { custom_tooltip = "realdev_country_tv_desc" hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "realdev_country_tv_desc" }
+}
+
+#Planets
+realdev_industry_from_planets = {
+	potential = { }
+	allow = { custom_tooltip = "realdev_industry_from_planets_desc" hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "realdev_industry_from_planets_desc" }
+}
+
+#Distributed IP
+realdev_ip_distributed = {
+	potential = { }
+	allow = { custom_tooltip = "realdev_ip_distributed_desc" hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "realdev_ip_distributed_desc" }
+}
+
+#IP Totals
+realdev_country_indcap_display = {
+	potential = { }
+	allow = { custom_tooltip = "realdev_country_indcap_display_desc" hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "realdev_country_indcap_display_desc" }
+}
+realdev_total_ind_cap_display = {
+	potential = { }
+	allow = { custom_tooltip = "realdev_total_ind_cap_display_desc" hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "realdev_total_ind_cap_display_desc" }
+}
+
+#Distribution Lines
+realdev_country_split_1_display = {
+	potential = { }
+	allow = { custom_tooltip = "realdev_country_split_1_display_desc" hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "realdev_country_split_1_display_desc" }
+}
+realdev_country_split_2_display = {
+	potential = { }
+	allow = { custom_tooltip = "realdev_country_split_2_display_desc" hidden_trigger = { always = yes } }
+	effect = { custom_tooltip = "realdev_country_split_2_display_desc" }
+}

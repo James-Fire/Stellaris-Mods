@@ -1,0 +1,36 @@
+namespace = ship_numbers
+
+# This fires when the game starts up
+event = {
+	id = ship_numbers.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOT = { has_technology = "ship_numbers_tech" }
+			}
+			give_technology =  { tech = "ship_numbers_tech" message = no }
+		}
+	}
+}
+
+# This fires every time a country researches anything,
+# because I could not find an event that fires when
+# either a primitive colony advances to space age or
+# other random empires suddenly pop in to existence.
+
+country_event = {
+	id = ship_numbers.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_country_type = default
+		NOT = { has_technology = "ship_numbers_tech" }
+	}
+	immediate = {
+		give_technology = { tech = "ship_numbers_tech" message = no }
+	}
+}

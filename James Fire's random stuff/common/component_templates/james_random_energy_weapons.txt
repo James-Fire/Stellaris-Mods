@@ -1,0 +1,70 @@
+@attack_range = 10
+@engagement_range = 100
+@launch_time = 1.5
+@speed1 = 550
+@speed2 = 600
+@speed3 = 650
+@speed4 = 700
+@count = 8
+@regen = 1
+
+
+strike_craft_component_template = {
+	key = "DRONE_WEAPON"
+	size = LARGE
+	entity = "fighter_entity"
+	weapon_type = point_defence
+	projectile_gfx = "plasma_thrower_s"
+	power = -1000
+	resources = {
+		category = ship_components
+		cost = {
+			energy = 500
+			alloys = 500
+			rare_crystals = 100
+		}		
+		upkeep = {
+			energy = 200
+			alloys = 200
+		}
+	}
+	count = 100
+	regeneration_per_day = 5
+	launch_time = 0.1
+
+	damage = { min = 40 max = 60 }
+	cooldown = 0.1
+	range = 5
+	engagement_range = 250
+	accuracy = 1.00 
+	tracking = 1.00
+
+	health = 10
+	armor = 0
+	shield = 1000
+	evasion = 0.90
+
+	speed = 1000
+	rotation_speed = 500
+	acceleration = 20
+
+	shield_damage = 2
+	shield_penetration = 0.9
+	armor_penetration = 0.5
+	armor_damage = 2
+	hull_damage = 2
+
+	ship_behavior = "fighters_behavior"
+	
+	icon = "GFX_ship_part_drones"
+	icon_frame = 1
+	
+	prerequisites = { "tech_lantean_drones" }
+	component_set = "DRONE_WEAPON"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield }
+	
+	ai_weight = {
+		weight = 10000
+	}
+}

@@ -1,0 +1,102 @@
+utility_component_template = {
+	key = "CRUISER_SPEED_MAX"
+	size = small
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	power = 0
+	component_set = "cruiser_specialization"
+
+	size_restriction = { cruiser }
+	
+	modifier = {
+		ship_evasion_add = 6
+	}
+	ship_modifier = {
+		ship_weapon_damage = -0.40
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_SPEED_WEIGHTED"
+	size = small
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	power = 0
+	component_set = "cruiser_specialization"
+
+	size_restriction = { cruiser }
+	
+	modifier = {
+		ship_evasion_add = 3
+	}
+	ship_modifier = {
+		ship_weapon_damage = -0.20
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_BALANCED"
+	size = small
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	power = 0
+	component_set = "cruiser_specialization"
+
+	size_restriction = { cruiser }
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_WEAPON_WEIGHTED"
+	size = small
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	power = 0
+	component_set = "cruiser_specialization"
+
+	size_restriction = { cruiser }
+	
+	modifier = {
+		ship_evasion_add = -3
+	}
+	ship_modifier = {
+		ship_weapon_damage = 0.20
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_WEAPON_MAX"
+	size = small
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	power = 0
+	component_set = "cruiser_specialization"
+
+	size_restriction = { cruiser }
+	
+	modifier = {
+		ship_evasion_add = -6
+	}
+	ship_modifier = {
+		ship_weapon_damage = 0.40
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}

@@ -1,0 +1,72 @@
+namespace = hms_utility
+
+event = {
+	id = hms_utility.10
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = hyperlane_map_setup_installed		# we use the long name for less conflicts
+		dmm_register_mod = {
+			DMM_NAME = hyperlane_map_setup.dmm_name
+			DMM_FLAG = hyperlane_map_setup_unique_flag
+		}
+	}
+}
+
+# DMM gate
+country_event = {
+	id = hms_utility.15
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		from = {
+			has_leader_flag = hyperlane_map_setup_unique_flag
+		}
+	}
+	immediate = {
+		country_event = {
+			id = hms_menu.2
+		}
+	}
+}
+
+# Encountered Abandoned Gateway
+ship_event = {
+	id = hms_utility.20
+	#hide_window = yes
+	title = "apoc.1.name"
+	desc = {
+		text = apoc.1.desc
+		trigger = {
+			NOT = {
+				owner = { has_country_flag = encountered_first_lgate }
+			}
+		}
+	}
+	desc = {
+		text = apoc.1.b.desc
+		trigger = {
+			owner = { has_country_flag = encountered_first_lgate }
+		}
+	}
+	picture = GFX_evt_drifting_gateway
+	show_sound = event_radio_chatter
+	location = FROM
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			NOT = { has_country_flag = encountered_first_gateway }
+		}
+		FROM = {
+			any_system_megastructure = { is_megastructure_type = hms_gateway }
+		}
+	}
+
+	immediate = {
+		owner = {
+			set_country_flag = encountered_first_gateway
+			add_seen_bypass_type = gateway
+		}
+	}
+}

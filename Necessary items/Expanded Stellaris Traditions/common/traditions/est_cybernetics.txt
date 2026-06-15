@@ -1,0 +1,656 @@
+@cost = 56
+
+tr_est_cybernetics_adopt = {
+	cost = { unity = @cost }
+	modifier = {
+		category_computing_research_speed_mult = 0.25
+	}
+	
+	tradition_swap = {
+		name = tr_est_biogenesis_adopt
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+			Not = {
+				has_authority = auth_machine_intelligence
+			}
+		}	
+		modifier = {	
+			pop_environment_tolerance = 0.10
+			planet_colony_development_speed_mult = 0.25
+		}
+		weight = {factor =  1}
+	}
+	
+	tradition_swap = {
+		name = tr_est_processing_adopt
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}	
+		modifier = {
+			country_core_sector_system_cap = 2
+		}
+		weight = {factor =  1}
+	}
+	
+	ai_weight = {
+		factor = 0	#To Complicated for the AI to use.
+	}
+}
+
+tr_est_cybernetics_finish = {
+
+	#Check Buildings (automated mine/power plant/farm).
+	
+	modifier = {	
+		ascension_perks_add = 1
+	}
+	
+	tradition_swap = {
+		name = tr_est_biogenesis_finish
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+			Not = {
+				has_authority = auth_machine_intelligence
+			}
+		}	
+		modifier = {	
+			ascension_perks_add = 1
+		}
+	}
+	
+	tradition_swap = {
+		name = tr_est_processing_finish
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}	
+		modifier = {	
+			ascension_perks_add = 1
+			max_energy = 2500
+		}	
+		on_enabled = {
+			if = {		
+				limit = {
+					has_technology = "tech_power_plant_2"
+				}
+				add_modifier = {
+					modifier = "mod_processing_finish_PP_1"
+				}
+			}
+			if = {		
+				limit = {
+					has_technology = "tech_power_plant_3"
+				}
+				add_modifier = {
+					modifier = "mod_processing_finish_PP_2"
+				}
+			}
+			if = {		
+				limit = {
+					has_technology = "tech_power_plant_4"
+				}
+				add_modifier = {
+					modifier = "mod_processing_finish_PP_3"
+				}
+			}
+			if = {		
+				limit = {
+					has_technology = "tech_power_hub_1"
+				}
+				add_modifier = {
+					modifier = "mod_processing_finish_EN_1"
+				}
+			}
+			if = {		
+				limit = {
+					has_technology = "tech_power_hub_2"
+				}
+				add_modifier = {
+					modifier = "mod_processing_finish_EN_2"
+				}
+			}
+			if = {		
+				limit = {
+					has_technology = "tech_fusion_power"
+				}
+				add_modifier = {
+					modifier = "mod_processing_finish_PS_1"
+				}
+			}
+			if = {		
+				limit = {
+					has_technology = "tech_cold_fusion_power"
+				}
+				add_modifier = {
+					modifier = "mod_processing_finish_PS_2"
+				}
+			}
+			if = {		
+				limit = {
+					has_technology = "tech_antimatter_power"
+				}
+				add_modifier = {
+					modifier = "mod_processing_finish_PS_3"
+				}
+			}
+			if = {		
+				limit = {
+					has_technology = "tech_zero_point_power"
+				}
+				add_modifier = {
+					modifier = "mod_processing_finish_PS_4"
+				}
+			}
+			
+			#esap compatibility
+			if = {
+				limit = {
+					has_ascension_perk = ap_esap_energy		
+				}	
+				add_modifier = {
+					modifier = "mod_processing_finish_esap_comp"
+				}
+			}
+		}	
+	}
+}
+
+tr_est_cybernetics_1 = {
+	cost = { unity = @cost }
+	
+	on_enabled = {
+		every_owned_pop = {
+			limit = {
+				Or = {
+					pop_has_trait = trait_robotic_1
+					pop_has_trait = trait_robotic_2
+					pop_has_trait = trait_robotic_3
+				}
+				NOR = {
+					has_modifier = mod_cybernetics_1_robot
+					has_modifier = mod_cybernetics_1_droid
+					has_modifier = mod_cybernetics_1_synthetic
+				}
+			}
+			switch = {
+				trigger = pop_has_trait			
+				trait_robotic_1 = { add_modifier = {modifier = "mod_cybernetics_1_robot" days = -1}}
+				trait_robotic_2 = { add_modifier = {modifier = "mod_cybernetics_1_droid" days = -1}}
+				trait_robotic_3 = { add_modifier = {modifier = "mod_cybernetics_1_synthetic" days = -1}}
+			}
+		}	
+	}
+
+	tradition_swap = {
+		name = tr_est_cybernetics_1_no_robots
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			Not = {
+				has_ethic = ethic_gestalt_consciousness			
+			}
+			if = {
+				limit = {
+					Not = {
+						num_pops > 20
+					}
+				}
+				Not = {
+					count_owned_pops = { 
+						limit = { 
+							is_robot_pop = yes 
+						} 
+						count > 0						
+					}
+				}
+			}
+			if = {
+				limit = {
+					Not = {
+						num_pops > 100
+					}
+					num_pops > 20
+				}
+				Not = {
+					count_owned_pops = { 
+						limit = { 
+							is_robot_pop = yes 
+						} 
+						count > 3						
+					}
+				}
+			}
+			if = {
+				limit = {
+					num_pops > 100
+				}
+				Not = {
+					count_owned_pops = { 
+						limit = { 
+							is_robot_pop = yes 
+						} 
+						count > 8						
+					}
+				}
+			}
+		}
+	
+		on_enabled = {
+			every_owned_pop = {
+				limit = {
+					Or = {
+						pop_has_trait = trait_robotic_1
+						pop_has_trait = trait_robotic_2
+						pop_has_trait = trait_robotic_3
+					}
+					NOR = {
+						has_modifier = mod_cybernetics_1_robot
+						has_modifier = mod_cybernetics_1_droid
+						has_modifier = mod_cybernetics_1_synthetic
+					}
+				}
+				switch = {
+					trigger = pop_has_trait			
+					trait_robotic_1 = { add_modifier = {modifier = "mod_cybernetics_1_robot" days = -1}}
+					trait_robotic_2 = { add_modifier = {modifier = "mod_cybernetics_1_droid" days = -1}}
+					trait_robotic_3 = { add_modifier = {modifier = "mod_cybernetics_1_synthetic" days = -1}}
+				}
+			}	
+		}
+
+		modifier = {
+			country_resource_energy_mult = 0.10
+		}
+
+		weight = {
+			factor = 1
+		}
+	}
+	
+	tradition_swap = {
+		name = tr_est_biogenesis_1
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+			Not = {
+				has_authority = auth_machine_intelligence
+			}
+		}	
+		modifier = {
+			pop_growth_speed = 0.20
+		}
+		weight = {factor =  1}
+	}
+	
+	tradition_swap = {
+		name = tr_est_processing_1
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}	
+		modifier = {
+			country_resource_energy_mult = 0.15
+		}
+		weight = {factor =  1}
+	}
+	
+	#Check event est_exp1.5 and est_exp1.6
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+
+tr_est_cybernetics_2 = {
+	cost = { unity = @cost }
+	
+	possible = {
+		has_tradition = tr_est_cybernetics_1
+	}
+	
+	on_enabled = {
+		every_owned_pop = {
+			limit = {
+				Or = {
+					pop_has_trait = trait_robotic_1
+					pop_has_trait = trait_robotic_2
+					pop_has_trait = trait_robotic_3
+				}
+				NOR = {
+					has_modifier = mod_cybernetics_2_robot
+					has_modifier = mod_cybernetics_2_droid
+					has_modifier = mod_cybernetics_2_synthetic
+				}
+			}
+			switch = {
+				trigger = pop_has_trait			
+				trait_robotic_1 = { add_modifier = {modifier = "mod_cybernetics_2_robot" days = -1}}
+				trait_robotic_2 = { add_modifier = {modifier = "mod_cybernetics_2_droid" days = -1}}
+				trait_robotic_3 = { add_modifier = {modifier = "mod_cybernetics_2_synthetic" days = -1}}
+			}
+		}		
+	}
+
+	tradition_swap = {
+		name = tr_est_cybernetics_2_no_robots
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			Not = {
+				has_ethic = ethic_gestalt_consciousness			
+			}
+			if = {
+				limit = {
+					Not = {
+						num_pops > 20
+					}
+				}
+				Not = {
+					count_owned_pops = { 
+						limit = { 
+							is_robot_pop = yes 
+						} 
+						count > 0						
+					}
+				}
+			}
+			if = {
+				limit = {
+					Not = {
+						num_pops > 100
+					}
+					num_pops > 20
+				}
+				Not = {
+					count_owned_pops = { 
+						limit = { 
+							is_robot_pop = yes 
+						} 
+						count > 3						
+					}
+				}
+			}
+			if = {
+				limit = {
+					num_pops > 100
+				}
+				Not = {
+					count_owned_pops = { 
+						limit = { 
+							is_robot_pop = yes 
+						} 
+						count > 8						
+					}
+				}
+			}
+		}
+	
+		on_enabled = {
+			every_owned_pop = {
+				limit = {
+					Or = {
+						pop_has_trait = trait_robotic_1
+						pop_has_trait = trait_robotic_2
+						pop_has_trait = trait_robotic_3
+					}
+					NOR = {
+						has_modifier = mod_cybernetics_2_robot
+						has_modifier = mod_cybernetics_2_droid
+						has_modifier = mod_cybernetics_2_synthetic
+					}
+				}
+				switch = {
+					trigger = pop_has_trait			
+					trait_robotic_1 = { add_modifier = {modifier = "mod_cybernetics_2_robot" days = -1}}
+					trait_robotic_2 = { add_modifier = {modifier = "mod_cybernetics_2_droid" days = -1}}
+					trait_robotic_3 = { add_modifier = {modifier = "mod_cybernetics_2_synthetic" days = -1}}
+				}
+			}		
+		}
+
+		modifier = {
+			country_resource_engineering_research_mult = 0.05
+			country_resource_physics_research_mult = 0.05
+			country_resource_society_research_mult = 0.05
+		}
+
+		weight = {
+			factor = 1
+		}
+	}
+	
+	tradition_swap = {
+		name = tr_est_biogenesis_2
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+			Not = {
+				has_authority = auth_machine_intelligence
+			}
+		}	
+		modifier = {	
+			planet_building_upkeep_mult = -0.10
+			planet_building_cost_mult = -0.10
+		}
+		weight = {factor =  1}
+	}
+	
+	tradition_swap = {
+		name = tr_est_processing_2
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}	
+		modifier = {
+			country_resource_engineering_research_mult = 0.05
+			country_resource_physics_research_mult = 0.05
+			country_resource_society_research_mult = 0.05
+		}
+		weight = {factor =  1}
+	}
+	
+	#Check event est_exp1.7 and est_exp1.8
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+
+tr_est_cybernetics_3 = {
+	cost = { unity = @cost }	
+	
+	modifier = {
+		weapon_type_strike_craft_weapon_fire_rate_mult = 0.20
+		ship_evasion_mult = 0.05
+	}
+	
+	tradition_swap = {
+		name = tr_est_biogenesis_3
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+			Not = {
+				has_authority = auth_machine_intelligence
+			}
+		}	
+		modifier = {	
+			ship_auto_repair_add = 0.01
+		}
+		weight = {factor =  1}
+	}
+	
+	tradition_swap = {
+		name = tr_est_processing_3
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}	
+		modifier = {
+			tradition_cost_num_colonies_mult = -0.20
+		}
+		weight = {factor =  1}
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+
+tr_est_cybernetics_4 = {
+	cost = { unity = @cost }
+	
+	possible = {
+		has_tradition = tr_est_cybernetics_2
+		has_tradition = tr_est_cybernetics_3
+	}
+	
+	on_enabled = {
+		every_owned_ship = {
+			limit = {
+				fleet = {
+					Not = {
+						exists = leader
+					}
+				}
+			}
+			add_modifier = {
+				modifier = "mod_cybernetics_4"
+				days = -1
+			}
+		}	
+	}
+	
+	tradition_swap = {
+		name = tr_est_biogenesis_4
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+			Not = {
+				has_authority = auth_machine_intelligence
+			}
+		}	
+		modifier = {	
+			country_resource_food_mult = 0.20
+		}
+		weight = {factor =  1}
+	}
+	
+	tradition_swap = {
+		name = tr_est_processing_4
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}	
+		weight = {factor =  1}
+	}
+	
+	#Check event est_exp1.9
+	
+	ai_weight = {
+		factor = 0
+	}
+}
+
+tr_est_cybernetics_5 = {
+	cost = { unity = @cost }
+	
+	possible = {
+		has_tradition = tr_est_cybernetics_4
+	}
+	
+	on_enabled = {
+		every_owned_pop = {
+			limit = {
+				has_living_standard = { 
+					country = owner 
+					type = living_standard_chemical_bliss 
+				}
+			}
+			add_modifier = {
+				modifier = "mod_cybernetics_5_chemical_bliss"
+				days = -1
+			}
+		}
+		every_owned_pop = {
+			limit = {
+				is_enslaved = yes
+			}
+			add_modifier = {
+				modifier = "mod_cybernetics_5_slave"
+				days = -1
+			}
+		}
+	}
+	
+	#Check event est_exp1.10-14
+	
+	
+	modifier = {
+		pop_happiness = 0.05
+	}
+	
+	tradition_swap = {
+		name = tr_est_biogenesis_5
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+			Not = {
+				has_authority = auth_machine_intelligence
+			}
+		}	
+		modifier = {	
+			BIOLOGICAL_species_trait_points_add = 1
+			modify_species_cost_mult = -0.05
+		}
+		weight = {factor =  1}
+	}
+	
+	tradition_swap = {
+		name = tr_est_processing_5
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}	
+		modifier = {
+			country_leader_cap = 4
+		}
+		weight = {factor =  1}
+	}
+	
+	ai_weight = {
+		factor = 0
+	}
+}

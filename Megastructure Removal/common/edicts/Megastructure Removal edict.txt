@@ -1,0 +1,17 @@
+remove_megastructure = {
+	icon = "GFX_edict_type_policy"
+	length = 0
+	
+	effect = {
+		country_event = { id = megaremove.1 }
+	}
+}
+
+#remove_system_megastructure = {
+#	length = 0
+#	cost = { }
+#	
+#	effect = {
+#		country_event = { id = megaremove.2 }
+#	}
+#}

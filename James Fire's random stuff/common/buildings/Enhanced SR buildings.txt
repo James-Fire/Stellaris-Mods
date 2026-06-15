@@ -1,0 +1,218 @@
+#########################
+## Limited by deposits ##
+#########################
+
+building_mote_harvesters_2 = {
+	base_buildtime = @b1_time
+	icon = building_mote_harvesting_traps
+	can_build = no
+
+	category = resource
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_mote_harvester_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_mote_harvesting_drone_add = 3
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 300
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	prerequisites = {
+		"tech_mine_volatile_motes"
+	}
+
+	ai_weight = {
+		weight = 1000
+	}#Always build the pop to work it can come later.
+}
+
+building_gas_extractors_2 = {
+	base_buildtime = @b1_time
+	icon = building_gas_extractors
+	can_build = no
+
+	category = resource
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_gas_extractor_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_gas_extraction_drone_add = 3
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 300
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	prerequisites = {
+		"tech_mine_exotic_gases"
+	}
+
+	ai_weight = {
+		weight = 1000
+	}#Always build the pop to work it can come later.
+}
+
+building_crystal_mines_2 = {
+	base_buildtime = @b1_time
+	icon = building_crystal_mines
+	can_build = no
+
+	category = resource
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_crystal_miner_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_crystal_mining_drone_add = 3
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 300
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	prerequisites = {
+		"tech_mine_rare_crystals"
+	}
+
+	ai_weight = {
+		weight = 1000
+	}#Always build the pop to work it can come later.
+}
+
+building_betharian_power_plant_2 = {
+	base_buildtime = @b1_time
+	can_build = no
+
+
+	category = resource
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 300
+		}
+		produces = {
+			energy = 20
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_technician_add = 8
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_technician_drone_add = 8
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_technician_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_technician_effect_desc
+	}
+
+	prerequisites = {
+		"tech_mine_betharian"
+	}
+
+	ai_weight = {
+		weight = 500
+	}
+}

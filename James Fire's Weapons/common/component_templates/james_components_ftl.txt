@@ -1,0 +1,104 @@
+utility_component_template = {
+	key = "HYPER_DRIVE_4"
+	size = small
+	icon = "GFX_ship_part_hyper_drive_4"
+	icon_frame = 1
+	power = -80
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 45
+			rare_crystals = 15
+		}		
+		upkeep = {
+			energy = 0.9
+			alloys = 0.45
+			rare_crystals = 0.15
+		}
+	}
+	ftl = yes
+	ship_modifier = {
+		ship_windup_mult = -0.8
+		ship_interstellar_speed_mult = 0.50
+		ship_winddown_mult = -0.5
+	}
+	
+	ai_weight = {
+		weight = 50
+	}
+	
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { "tech_hyper_drive_4" }
+	component_set = "ftl_components"
+}
+
+utility_component_template = {
+	key = "JUMP_DRIVE_2"
+	size = small
+	icon = "GFX_ship_part_jump_drive_2"
+	icon_frame = 1
+	power = -160
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 90
+			rare_crystals = 30
+		}		
+		upkeep = {
+			energy = 1.8
+			alloys = 0.9
+			rare_crystals = 0.3
+		}
+	}	
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_ftl_jumpdrive_range_mult = 0.5
+		ship_windup_mult = -0.8
+		ship_winddown_mult = -0.25
+	}
+	ai_weight = {
+		weight = 60
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { "tech_jump_drive_2" }
+	component_set = "ftl_components"
+	upgrades_to = "PSI_JUMP_DRIVE_2"
+}
+
+utility_component_template = {
+	key = "PSI_JUMP_DRIVE_2"
+	size = small
+	icon = "GFX_ship_part_psi_jump_drive_2"
+	icon_frame = 1
+	power = -200
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 90
+			rare_crystals = 30
+		}		
+		upkeep = {
+			energy = 1.8
+			alloys = 0.9
+			rare_crystals = 0.3
+		}
+	}
+	ftl = yes
+	jumpdrive = yes
+	
+	ai_weight = {
+		weight = 70
+	}
+	
+	ship_modifier = {
+		ship_ftl_jumpdrive_range_mult = 1
+		ship_windup_mult = -0.8
+		ship_winddown_mult = -0.25
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { "tech_psi_jump_drive_2" }
+	component_set = "ftl_components"
+}

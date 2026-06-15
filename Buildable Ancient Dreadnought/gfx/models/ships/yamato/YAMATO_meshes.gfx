@@ -1,0 +1,21 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "yamato_mesh"
+		file = "gfx/models/ships/yamato/YAMATO.mesh"
+		scale = 35.0
+	
+			meshsettings = {
+			texture_diffuse = "YAMATO_diffuse.dds"
+			texture_normal = "YAMATO_normal.dds"
+			texture_specular = "YAMATO_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "empty_mesh"
+		file = "gfx/models/ships/yamato/empty.mesh"
+		scale = 0.0
+	}
+}

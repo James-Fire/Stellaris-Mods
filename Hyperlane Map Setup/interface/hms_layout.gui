@@ -1,0 +1,501 @@
+guiTypes = {
+	containerWindowType = {
+		name = "hms_menu_confirm"
+		position = { x=0 y=0 }
+		size = { width = 188 height = 35 }
+		moveable = no
+		
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_half_menu_button_bg"
+			position = { x=-12 y=-28500 } #Yeet
+			font = "cg_16b"
+			text = "OPTION_TEXT"
+		}
+
+		OverlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = 0  y = 10 }
+			size = { x=65 y= 28 }
+		}
+	}
+
+	containerWindowType = {
+		name = "hms_menu_window"
+		orientation = center
+		origo = center
+		moveable = yes
+		size = { width = 1065 height = 582 }
+		
+		iconType = {#Hexagon fade in
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg_curator"
+			position = { x = -10 y = -14 }
+			alwaysTransparent = yes
+		}
+		containerWindowType = { #Event Title
+			name = "EVENT_DIPLO"
+			position = { x = 20 y = 5 }
+			size = { width=563 height=280 }
+			moveable = no
+			
+			instantTextBoxType={
+				name = "action_title"
+				font = "malgun_goth_24"
+				position = { x = -5 y = 0 }
+				maxWidth = 520
+				alwaysTransparent = yes
+			}
+			instantTextBoxType={
+				name = "action_desc"
+				font = "malgun_goth_24"
+				position = { x = 490 y = 0 }
+				maxWidth = 500
+				maxHeight = 180
+				Orientation = "UPPER_LEFT"
+				format = center
+				alwaysTransparent = yes
+				text_color_code = "H"
+			}
+			listboxType = {
+				name = "option_list"
+				position = { x = 0 y = 400 }
+				size = { x=450 y=240 }
+				spacing = 1
+				scrollbartype = "standardlistbox_slider"
+				borderSize = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+		ButtonType = {
+			name = "hms_border"
+			spriteType = "GFX_hms_border"
+			position = { x = 0 y = 36 }
+			scale = 1
+			alwaysTransparent = yes
+		}
+		ButtonType = {
+			name = "hms_border_spin_layer"
+			spriteType = "GFX_hms_border_spin_layer"
+			position = { x = 518 y = 526 }
+			scale = 1
+			alwaysTransparent = yes
+		}
+		
+		containerWindowType = {
+			name = "generation_types_contain"
+			position = { x = 335 y = 50 }
+			size = { width = 410 height = 102 }
+			orientation = upper_left
+			
+				effectButtonType = { name = "hms_generation_page_left" spriteType = "GFX_hms_arrow_left_toll" position = { x = -111 y = 0 } clicksound = interface effect = "hms_previous_page" }
+				effectButtonType = { name = "hms_generation_clusters_tab" spriteType = "GFX_column_menu_button" position = { x = -98 y = 0 } clicksound = interface font = "cg_16b" text = "hms_generation_clusters" effect = "hms_generation_clusters_tab" }
+				effectButtonType = { name = "hms_generation_pie_slices_tab" spriteType = "GFX_column_menu_button" position = { x = -98 y = 37 } clicksound = interface font = "cg_16b" text = "hms_generation_pie_slices" effect = "hms_generation_pie_slices_tab" }
+				effectButtonType = { name = "hms_generation_corridor_tab" spriteType = "GFX_column_menu_button" position = { x = 100 y = 0 } clicksound = interface font = "cg_16b" text = "hms_generation_corridor" effect = "hms_generation_corridor_tab" }
+				effectButtonType = { name = "hms_generation_cursed_corridor_tab" spriteType = "GFX_column_menu_button" position = { x = 100 y = 37 } clicksound = interface font = "cg_16b" text = "hms_generation_cursed_corridor" effect = "hms_generation_cursed_corridor_tab" }
+				effectButtonType = { name = "hms_generation_center_tab" spriteType = "GFX_column_menu_button" position = { x = 298 y = 0 } clicksound = interface font = "cg_16b" text = "hms_generation_center" effect = "hms_generation_center_tab" }
+				effectButtonType = { name = "hms_generation_circles_tab" spriteType = "GFX_column_menu_button" position = { x = 298 y = 37 } clicksound = interface font = "cg_16b" text = "hms_generation_circles" effect = "hms_generation_circles_tab" }
+				effectButtonType = { name = "hms_generation_all_tab" spriteType = "GFX_column_menu_button" position = { x = -100 y = 0 } clicksound = interface font = "cg_16b" text = "hms_generation_all" effect = "hms_generation_all_tab" }
+				effectButtonType = { name = "hms_generation_page_right" spriteType = "GFX_hms_arrow_right_toll" position = { x = 496 y = 0 } clicksound = interface effect = "hms_next_page" }
+				
+				
+				effectButtonType = { name = "hms_generation_image_bg" spriteType = "GFX_hms_image_bg" position = { x = -114 y = 77 } clicksound = interface effect = "hms_generation_image_bg" alwaysTransparent = yes }
+				effectButtonType = { name = "hms_generation_none" spriteType = "GFX_hms_gentype_none" position = { x = -115 y = 73 } clicksound = interface effect = "hms_generation_none" alwaysTransparent = yes }
+				effectButtonType = { name = "hms_generation_none_error" spriteType = "GFX_hms_error_anim" position = { x = 47 y = 105 } clicksound = interface effect = "hms_generation_none" alwaysTransparent = yes }
+				effectButtonType = { name = "hms_generation_stripes" spriteType = "GFX_hms_genstripes" position = { x = -114 y = 75 } scale = 1.0 clicksound = interface effect = "hms_generation_image_bg" alwaysTransparent = yes }
+				effectButtonType = { name = "hms_generation_radar" spriteType = "GFX_hms_radar" position = { x = 422 y = 61 } clicksound = interface effect = "hms_generation_image_bg" alwaysTransparent = yes }
+				
+				
+				effectButtonType = { name = "hms_generation_clusters" spriteType = "GFX_thicc_menu_button_bg" position = { x = -9 y = 0 } clicksound = interface font = "large_title_font_28" text = "hms_generation_clusters" effect = "hms_generation_clusters" }
+				effectButtonType = { name = "hms_generation_clusters_image" spriteType = "GFX_hms_clusters_gentype" position = { x = -115 y = 73 } clicksound = interface effect = "hms_generation_clusters_image" alwaysTransparent = yes }
+				
+				effectButtonType = { name = "hms_generation_pie_slices" spriteType = "GFX_thicc_menu_button_bg" position = { x = -9 y = 0 } clicksound = interface font = "large_title_font_28" text = "hms_generation_pie_slices" effect = "hms_generation_pie_slices" }
+				effectButtonType = { name = "hms_generation_pie_slices_image" spriteType = "GFX_hms_pie_slices_gentype" position = { x = -115 y = 73 } clicksound = interface effect = "hms_generation_pie_slices_image" alwaysTransparent = yes }
+				
+				effectButtonType = { name = "hms_generation_corridor" spriteType = "GFX_thicc_menu_button_bg" position = { x = -9 y = 0 } clicksound = interface font = "large_title_font_28" text = "hms_generation_corridor" effect = "hms_generation_corridor" }
+				effectButtonType = { name = "hms_generation_corridor_image" spriteType = "GFX_hms_nice_loop_gentype" position = { x = -115 y = 73 } clicksound = interface effect = "hms_generation_corridor_image" alwaysTransparent = yes }
+				
+				effectButtonType = { name = "hms_generation_cursed_corridor" spriteType = "GFX_thicc_menu_button_bg" position = { x = -9 y = 0 } clicksound = interface font = "large_title_font_28" text = "hms_generation_cursed_corridor" effect = "hms_generation_cursed_corridor" }
+				effectButtonType = { name = "hms_generation_cursed_corridor_image" spriteType = "GFX_hms_ugly_loop_gentype" position = { x = -115 y = 73 } clicksound = interface effect = "hms_generation_cursed_corridor_image" alwaysTransparent = yes }
+				
+				effectButtonType = { name = "hms_generation_center" spriteType = "GFX_thicc_menu_button_bg" position = { x = -9 y = 0 } clicksound = interface font = "large_title_font_28" text = "hms_generation_center" effect = "hms_generation_center" }
+				effectButtonType = { name = "hms_generation_center_image" spriteType = "GFX_hms_hub_gentype" position = { x = -115 y = 73 } clicksound = interface effect = "hms_generation_center_image" alwaysTransparent = yes }
+				
+				effectButtonType = { name = "hms_generation_circles" spriteType = "GFX_thicc_menu_button_bg" position = { x = -9 y = 0 } clicksound = interface font = "large_title_font_28" text = "hms_generation_circles" effect = "hms_generation_circles" }
+				effectButtonType = { name = "hms_generation_circles_image" spriteType = "GFX_hms_circles_gentype" position = { x = -115 y = 73 } clicksound = interface effect = "hms_generation_circles_image" alwaysTransparent = yes }
+				
+				effectButtonType = { name = "hms_generation_all" spriteType = "GFX_thicc_menu_button_bg" position = { x = -9 y = 0 } clicksound = interface font = "large_title_font_28" text = "hms_generation_all" effect = "hms_generation_all" }
+				effectButtonType = { name = "hms_generation_all_image" spriteType = "GFX_hms_cursed_gentype" position = { x = -115 y = 73 } clicksound = interface effect = "hms_generation_all_image" alwaysTransparent = yes }
+				effectButtonType = { name = "hms_generation_all_image_error" spriteType = "GFX_hms_error_anim" position = { x = 47 y = 105 } clicksound = interface effect = "hms_generation_all_image" alwaysTransparent = yes }
+		
+				effectButtonType = { name = "hms_generation_dropdown" spriteType = "GFX_hms_arrow_dropdown" position = { x = 0 y = 13 } clicksound = interface effect = "hms_generation_dropdown" alwaysTransparent = yes }
+				effectButtonType = { name = "hms_generation_dropdown_right" spriteType = "GFX_hms_arrow_dropdown" position = { x = 367 y = 13 } clicksound = interface effect = "hms_generation_dropdown" alwaysTransparent = yes }
+		}
+		
+		
+		containerWindowType = {
+			name = "generation_options_contain"
+			position = { x = 295 y = 380 }
+			size = { width = 410 height = 102 }
+			orientation = upper_left
+			
+			effectButtonType = {
+				name = "generation_options_title"
+				position = { x = 95 y = -25 }
+				size = { width = 270 height = 102 }
+				no_clicksound = yes
+				alwaysTransparent = yes
+				font = "large_title_font_28"
+				text = "generation_options_title"
+				effect = "hms_blank_effect"
+			}
+				#Cluster Options
+				effectButtonType = { name = "hms_hub_hyperlanes" spriteType = "GFX_half_menu_button_bg" position = { x = 24 y = 43 } clicksound = interface font = "cg_16b" text = "hms_hub_hyperlanes" effect = "hms_hub_hyperlanes" }
+				effectButtonType = { name = "hms_hub_wormholes" spriteType = "GFX_half_menu_button_bg" position = { x = 24 y = 43 } clicksound = interface font = "cg_16b" text = "hms_hub_wormholes" effect = "hms_hub_wormholes" }
+				effectButtonType = { name = "hms_hub_gateways" spriteType = "GFX_half_menu_button_bg" position = { x = 24 y = 43 } clicksound = interface font = "cg_16b" text = "hms_hub_gateways" effect = "hms_hub_gateways" }
+				effectButtonType = { name = "hms_standard_hyperlanes" spriteType = "GFX_half_menu_button_bg" position = { x = 43 y = 43 } clicksound = interface font = "cg_16b" text = "hms_standard_hyperlanes" effect = "hms_standard_hyperlanes" }
+				effectButtonType = { name = "hms_cluster_connection_type_left" spriteType = "GFX_hms_left" position = { x = 27 y = 47 } clicksound = interface effect = "hms_cluster_connection_type_reverse" }
+				effectButtonType = { name = "hms_cluster_connection_type_right" spriteType = "GFX_hms_right" position = { x = 201 y = 47 } clicksound = interface effect = "hms_cluster_connection_type" }
+				
+				effectButtonType = { name = "hms_hub_no_change" spriteType = "GFX_half_menu_button_bg" position = { x = 234 y = 43 } clicksound = interface font = "cg_16b" text = "hms_hub_no_change" effect = "hms_hub_no_change" }
+				effectButtonType = { name = "hms_hub_black_hole" spriteType = "GFX_half_menu_button_bg" position = { x = 234 y = 43 } clicksound = interface font = "cg_16b" text = "hms_hub_black_hole" effect = "hms_hub_black_hole" }
+				effectButtonType = { name = "hms_hub_neutron_star" spriteType = "GFX_half_menu_button_bg" position = { x = 234 y = 43 } clicksound = interface font = "cg_16b" text = "hms_hub_neutron_star" effect = "hms_hub_neutron_star" }
+				effectButtonType = { name = "hms_hub_pulsar" spriteType = "GFX_half_menu_button_bg" position = { x = 234 y = 43 } clicksound = interface font = "cg_16b" text = "hms_hub_pulsar" effect = "hms_hub_pulsar" }
+				effectButtonType = { name = "hms_cluster_hub_star_left" spriteType = "GFX_hms_left" position = { x = 236 y = 47 } clicksound = interface effect = "hms_cluster_hub_star_reverse" }
+				effectButtonType = { name = "hms_cluster_hub_star_right" spriteType = "GFX_hms_right" position = { x = 410 y = 47 } clicksound = interface effect = "hms_cluster_hub_star" }
+				
+				effectButtonType = { name = "hms_cluster_hyperlanes_neighbour" spriteType = "GFX_half_menu_button_bg" position = { x = 24 y = 80 } clicksound = interface font = "cg_16b" text = "hms_cluster_hyperlanes_neighbour" effect = "hms_cluster_hyperlanes_neighbour" }
+				effectButtonType = { name = "hms_cluster_hyperlanes_distance" spriteType = "GFX_half_menu_button_bg" position = { x = 24 y = 80 } clicksound = interface font = "cg_16b" text = "hms_cluster_hyperlanes_distance" effect = "hms_cluster_hyperlanes_distance" }
+				effectButtonType = { name = "hms_cluster_hyperlanes_hub" spriteType = "GFX_half_menu_button_bg" position = { x = 24 y = 80 } clicksound = interface font = "cg_16b" text = "hms_cluster_hyperlanes_hub" effect = "hms_cluster_hyperlanes_hub" }
+				effectButtonType = { name = "hms_cluster_hyperlanes_swap_left" spriteType = "GFX_hms_left" position = { x = 27 y = 84 } clicksound = interface effect = "hms_cluster_hyperlanes_swap_reverse" }
+				effectButtonType = { name = "hms_cluster_hyperlanes_swap_right" spriteType = "GFX_hms_right" position = { x = 201 y = 84 } clicksound = interface effect = "hms_cluster_hyperlanes_swap" }
+				
+				#Central Hub Options
+				effectButtonType = { name = "hms_central_hub_random" spriteType = "GFX_half_menu_button_bg" position = { x = 24 y = 43 } clicksound = interface font = "cg_16b" text = "hms_central_hub_random" effect = "hms_central_hub_random" }
+				effectButtonType = { name = "hms_central_hub_lgate" spriteType = "GFX_half_menu_button_bg" position = { x = 24 y = 43 } clicksound = interface font = "cg_16b" text = "hms_central_hub_lgate" effect = "hms_central_hub_lgate" }
+				effectButtonType = { name = "hms_central_hub_xenophile_fe" spriteType = "GFX_half_menu_button_bg" position = { x = 24 y = 43 } clicksound = interface font = "cg_16b" text = "hms_central_hub_xenophile_fe" effect = "hms_central_hub_xenophile_fe" }
+				#effectButtonType = { name = "hms_central_hub_katzens" spriteType = "GFX_half_menu_button_bg" position = { x = 24 y = 43 } clicksound = interface font = "cg_16b" text = "hms_central_hub_katzens" effect = "hms_central_hub_katzens" } #For gigas, whenever we do that.
+				effectButtonType = { name = "hms_central_hub_swap_left" spriteType = "GFX_hms_left" position = { x = 27 y = 47 } clicksound = interface effect = "hms_central_hub_swap_reverse" }
+				effectButtonType = { name = "hms_central_hub_swap_right" spriteType = "GFX_hms_right" position = { x = 201 y = 47 } clicksound = interface effect = "hms_central_hub_swap" }
+				
+				#
+		}
+		
+		containerWindowType = {
+			name = "hyperlane_manipulation_contain"
+			position = { x = 10 y = 58 }
+			size = { width = 410 height = 102 }
+			orientation = upper_left
+			
+			effectButtonType = {
+				name = "hyperlane_manipulation_title"
+				position = { x = 10 y = -45 }
+				size = { width = 170 height = 102 }
+				no_clicksound = yes
+				#alwaysTransparent = yes
+				font = "large_title_font_28"
+				text = "hyperlane_manipulation_title"
+				effect = "hms_blank_effect"
+			}
+			effectButtonType = {
+				name = "hyperlane_manipulation_title_2"
+				position = { x = 10 y = -20 }
+				size = { width = 170 height = 102 }
+				no_clicksound = yes
+				#alwaysTransparent = yes
+				font = "large_title_font_28"
+				text = "hyperlane_manipulation_title_2"
+				effect = "hms_blank_effect"
+			}
+			
+			effectButtonType = { name = "hms_manipulation_bg" spriteType = "GFX_column_menu_button" position = { x = 0 y = 50 } clicksound = interface effect = "hms_blank_effect" }
+			effectButtonType = { name = "hms_generate_hyperlane_layout" spriteType = "GFX_hms_blank" position = { x = 39 y = 55 } clicksound = interface effect = "hms_generate_hyperlane_layout" }
+			effectButtonType = { name = "hms_generate_hyperlane_layout_anim" spriteType = "GFX_hms_generate" position = { x = 39 y = 55 } clicksound = interface effect = "hms_generate_hyperlane_layout" alwaysTransparent = yes }
+			effectButtonType = { name = "hms_delete_hyperlanes" spriteType = "GFX_hms_delete" position = { x = 69 y = 55 } clicksound = interface effect = "hms_delete_hyperlanes" }
+			effectButtonType = { name = "hms_save_hyperlane_layout" spriteType = "GFX_hms_save" position = { x = 99 y = 55 } clicksound = interface effect = "hms_save_hyperlane_layout" }
+			effectButtonType = { name = "hms_load_hyperlane_layout" spriteType = "GFX_hms_load" position = { x = 129 y = 55 } clicksound = interface effect = "hms_load_hyperlane_layout" }
+			
+			effectButtonType = { name = "save_hyperlanes" spriteType = "GFX_column_menu_button" position = { x = 0 y = 86 } clicksound = interface font = "cg_16b" text = "save_hyperlanes" effect = "hms_blank_effect" }
+			effectButtonType = { name = "hms_save_hyperlane_on_gen" spriteType = "GFX_hms_enabled" position = { x = 3 y = 91 } clicksound = interface effect = "hms_save_hyperlane_on_gen" }
+			effectButtonType = { name = "hms_save_hyperlane_on_gen_false" spriteType = "GFX_hms_disabled" position = { x = 3 y = 91 } clicksound = interface effect = "hms_save_hyperlane_on_gen_false" }
+            
+            # We save/load from temp before/after generation based on the button above
+			# effectButtonType = { name = "load_hyperlanes" spriteType = "GFX_column_menu_button" position = { x = 0 y = 122 } clicksound = interface font = "cg_16b" text = "load_hyperlanes" effect = "hms_blank_effect" }
+			# effectButtonType = { name = "hms_load_hyperlane_on_gen" spriteType = "GFX_hms_enabled" position = { x = 3 y = 127 } clicksound = interface effect = "hms_load_hyperlane_on_gen" }
+			# effectButtonType = { name = "hms_load_hyperlane_on_gen_false" spriteType = "GFX_hms_disabled" position = { x = 3 y = 127 } clicksound = interface effect = "hms_load_hyperlane_on_gen_false" }
+		}
+		
+		containerWindowType = {
+			name = "hyperlane_saving_contain"
+			position = { x = 855 y = 900 } #Yeet for now
+			size = { width = 410 height = 102 }
+			orientation = upper_left
+			
+			effectButtonType = {
+				name = "hyperlane_saving_title"
+				position = { x = 7	 y = -65 }
+				no_clicksound = yes
+				alwaysTransparent = yes
+				font = "large_title_font_28"
+				text = "hyperlane_saving_title"
+				effect = "hms_blank_effect"
+			}
+			
+			effectButtonType = { name = "save_load_hyperlanes_buttons" spriteType = "GFX_half_menu_button_bg" position = { x = 0 y = 50 } clicksound = interface effect = "save_load_hyperlanes" }
+			
+		}
+		
+		
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_tile_large_bg_curator" 
+		}
+
+
+		
+		effectButtonType = {
+			name = "alien_message_background"
+			size = { x = 490 y = 304 }
+			position = { x = 225 y = 36500 } #Yeet
+			spriteType = "GFX_tiles_dark_area_cut_8"
+			alwaysTransparent = yes
+			effect = "hms_blank_effect"
+		}
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "cg_16b"
+			position = { x = 230 y = 37000 } #Yeet
+			maxWidth = 475
+			maxHeight = 290
+			format = left
+			scrollbartype = "standardtext_slider"
+		}	
+		instantTextBoxType = {
+			name = "heading"
+			font = "cg_16b"
+			position = { x = 230 y = 37000 } #Yeet
+			maxWidth = 475
+			maxHeight = 290
+			format = left
+			scrollbartype = "standardtext_slider"
+		}	
+
+		instantTextBoxType = { #Window Title
+			name = "ADVISOR"
+			font = "malgun_goth_24"
+			text = "blank"
+			position = { x = 525 y = 15 }
+			maxWidth = 543
+			maxHeight = 22
+			fixedSize = yes
+			alwaysTransparent = yes
+		}
+		iconType = { #Title Underline
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_long_curator"
+			position = { x = 6 y = 22 }
+			alwaysTransparent = yes
+		}	
+		buttonType = {
+			name = "focus_button"
+			position = { x = -80 y = 12 }
+			orientation = "UPPER_RIGHT"
+			spriteType = "GFX_fleetview_focus"
+			buttonFont = "cg_16b"
+			shortcut = "q"
+		}
+		
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_main_close_button_curator"
+			position = { x= -45 y = 16 }
+			Orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+		}
+
+		buttonType = {
+			name = "confirm_button"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x= -175 y = 564  }
+			Orientation = "UPPER_RIGHT"
+			font = "cg_16b"
+			text = "MESSAGE_OK"
+			clicksound = "confirmation"
+		}
+
+
+		### PORTRAIT ###
+		containerWindowType = {#Hide this thing.
+			name = "portrait_background"
+			position = { x = 17 y = 20000 }
+			size = { width = 964 height = 350 }
+			clipping = yes
+			iconType = {
+				name = "event_picture"
+				spriteType = "GFX_diplomacy_portrait_frame"
+				position = { x = -6 y = -5 }
+			}
+			iconType = {
+				name = "portrait"
+				position = { x = 250 y = 0 }
+				spriteType = "GFX_portrait_character"
+			}	
+		}
+		containerWindowType = {#Hide this thing.
+			name = "portrait"
+			position = { x = 11 y = 20000 }
+			size = { width = 964 height = 350 }
+			clipping = yes
+			iconType = {
+				name = "portrait"
+				spriteType = "GFX_portrait_gamesetup_mask"
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "black_frame"
+				spriteType = "GFX_diplomacy_portrait_shadow_frame"
+				position = { x = -4 y = -5}
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "stripes_1"
+				spriteType = "GFX_diplomacy_stripes_2"
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "city_frame"
+				spriteType = "GFX_diplomacy_portrait_frame_curator"
+				position = { x = -6 y = -5 }
+				alwaysTransparent = yes
+			}
+		}
+		iconType = {#Hide this thing.
+			name = "empire_info_bg"
+			spriteType = "GFX_diplomacy_dark_fade_bg"
+			position = { x = 33 y = 20000 }
+			alwaysTransparent = yes
+		}
+		instantTextBoxType={#Hide this thing.
+			name = "empire_name"
+			font = "malgun_goth_24"
+			text = "Kammarian Galactic Concordat"
+			position = { x = 45 y = 20000 }
+			maxWidth = 450
+			maxHeight = 16
+			format = LEFT
+			text_color_code = "E"
+			fixedsize = yes
+		}
+		instantTextBoxType={#Hide this thing.
+			name = "empire_government_type"
+			font = "cg_16b"
+			text = "Autocracy"
+			position = { x = 45 y = 20000	}
+			maxWidth = 250
+			maxHeight = 16
+			format = LEFT
+			fixedsize = yes
+			text_color_code = "Y"
+		}
+		instantTextBoxType={#Hide this thing.
+			name = "empire_personality_type"
+			font = "cg_16b"
+			text = "Despicable Neutrals"
+			position = { x = 45 y = 20000	}
+			maxWidth = 250
+			maxHeight = 16
+			format = LEFT
+			fixedsize = yes
+		}
+		OverlappingElementsBoxType = {#Hide this thing.
+			name = "empire_ethics_icons"
+			position = { x = 45 y = 20000 }
+			size = { x = 240 y = 30 }
+			spacing = 2.0
+			format = left
+		}
+		buttonType = {#Hide this thing.
+			name = "empire_flag"
+			quadTextureSprite = "GFX_empire_flag_128_curator"
+			position = { x = 25 y = 20000 }
+			orientation = UPPER_LEFT
+		}
+		containerWindowType = {#Hide this thing.
+			name = "leader_details"
+			position = { x = 25 y = 20000 }
+			containerWindowType = {
+				name = "empire_traits_box"
+				position = { x = 0 y = -5 }
+				size = { width = 210 height = 75 }
+
+				background = {
+					name = "ethics_bg"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+			}
+			instantTextBoxType = {
+				name = "empire_traits_label"
+				position = { x = 214 y = 37 }
+				font = "cg_16b"
+				maxWidth = 230
+				maxHeight = 20
+				fixedSize = yes
+				format = left
+				#text_color_code = "E"
+				text = "RULER_TRAITS"
+				alwaysTransparent = yes
+			}
+			overlappingElementsBoxType = {
+				name = "leader_traits"
+				position = { x = 215 y = 55 }
+				size = { x = 125 y = 330 }
+			}
+			instantTextBoxType = {
+				name = "leader_name"
+				position = { x = 10 y = 0 }
+				font = "cg_16b"
+				maxWidth = 330
+				maxHeight = 20
+				fixedSize = yes
+				format = left
+				text = "Leader Name"
+				text_color_code = "E"
+			}
+			instantTextBoxType = {
+				name = "leader_species"
+				position = { x = 10 y = 18 }
+				font = "cg_16b"
+				maxWidth = 330
+				maxHeight = 20
+				fixedSize = yes
+				text = "Leader Species"
+				format = left
+			}
+		}
+		containerWindowType = {#Hide this thing.
+			name = "opinion_window"
+			position = { x = 27 y = 20000 }
+			size = { width = 94 height = 30 }
+			background = {# Use this for tooltip area, picture comes from somewhere else
+				name = "opinion_bg"
+				spriteType = "GFX_tiled_window_transparent"
+			}
+			iconType = {
+				name = "their_opinion_icon"
+				spriteType = "GFX_diplomacy_opinion"
+				position = { x = 7 y = 4 }
+				alwaysTransparent = yes
+			}
+			instantTextBoxType = {
+				name = "their_opinion"
+				font = "cg_16b"
+				maxWidth = 40
+				position = { x = 40 y = 7 }
+				format = left
+				text = "100"
+				alwaysTransparent = yes
+			}
+		}
+	}
+}

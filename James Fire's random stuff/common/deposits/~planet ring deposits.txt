@@ -1,0 +1,89 @@
+d_planet_ring_1 = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_energy
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = no
+	
+	planet_modifier = { 
+		district_generator_max = 3
+		district_farming_max = 3
+		planet_max_districts_mult = 0.5
+	}
+	
+	potential = {
+		OR = {
+			is_planet_class = pc_arctic
+			is_planet_class = pc_tundra
+			is_planet_class = pc_savannah
+			is_planet_class = pc_desert
+			is_planet_class = pc_arid
+		}
+	}
+	
+	drop_weight = {
+		weight = 0		
+	}
+}
+
+d_planet_ring_2 = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_energy
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = no
+	
+	planet_modifier = {
+		district_generator_max = 4
+		district_farming_max = 4
+		planet_max_districts_mult = 0.5
+	}
+	
+	potential = {
+		OR = {
+			is_planet_class = pc_arctic
+			is_planet_class = pc_tundra
+			is_planet_class = pc_savannah
+			is_planet_class = pc_desert
+			is_planet_class = pc_arid
+		}
+	}
+	
+	drop_weight = {
+		weight = 0		
+	}
+}
+
+d_planet_ring_3 = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_energy
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = no
+	
+	planet_modifier = { 
+		district_generator_max = 5
+		district_farming_max = 5
+		planet_max_districts_mult = 0.5
+	}
+	
+	potential = {
+		OR = {
+			is_planet_class = pc_arctic
+			is_planet_class = pc_tundra
+			is_planet_class = pc_savannah
+			is_planet_class = pc_desert
+			is_planet_class = pc_arid
+		}
+	}
+	
+	drop_weight = {
+		weight = 0		
+	}
+}

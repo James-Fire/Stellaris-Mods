@@ -1,0 +1,241 @@
+d_stargate = {
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_rare
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+	
+	resources = {
+		category = stargate
+		produces = {
+			unity = 4
+			#multiplier = value:empire_active_stargates
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	
+	country_modifier = {
+	}
+	
+	planet_modifier = {
+		planet_stability_add = 5
+		planet_immigration_pull_mult = 0.1
+		planet_resettlement_unemployed_mult = 3.00
+		planet_jobs_unity_produces_mult = 0.05
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				exists = owner
+				owner = { is_gestalt = no }
+			}
+		}
+		modifier = {
+			job_stargate_manager_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				exists = owner
+				owner = { is_gestalt = yes }
+			}
+		}
+		modifier = {
+			job_gestalt_stargate_manager_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				owner = { is_gestalt = yes }
+			}
+		}
+		modifier = {
+			#job_patrol_drone_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				owner = { is_gestalt = no }
+			}
+		}
+		modifier = {
+			#job_enforcer_add = 2
+		}
+	}
+}
+
+d_stargate_internal_civilian_network = {
+	icon = "d_stargate_economy_internal"
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_energy	
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+	
+	resources = {
+		category = stargate
+		produces = {
+			trigger = {
+				exists = planet
+				planet = {
+					owner = { is_gestalt = yes }
+				}
+			}
+			energy = 0.5
+		}
+	}
+	
+	planet_modifier = {
+		planet_miners_minerals_produces_add = 0.05
+		planet_farmers_food_produces_add = 0.05
+		planet_technician_energy_produces_add = 0.05
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				owner = { is_gestalt = no }
+			}
+		}
+		modifier = {
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				owner = { is_gestalt = yes }
+			}
+		}
+		modifier = {
+			#planet_jobs_simple_drone_produces_mult = 0.01
+		}
+	}
+}
+d_stargate_external_civilian_network = {
+	icon = "d_stargate_economy_external"
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_energy	
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+	
+	resources = {
+		category = stargate
+		produces = {
+			trigger = {
+				exists = planet
+				planet = {
+					owner = { is_gestalt = yes }
+				}
+			}
+			energy = 0.5
+		}
+	}
+	
+	planet_modifier = {
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				owner = { is_gestalt = no }
+			}
+		}
+		modifier = {	
+			planet_immigration_pull_add = 50
+			trade_value_mult = 0.02
+			planet_amenities_mult = 0.01
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				owner = { is_gestalt = yes }
+			}
+		}
+		modifier = {
+			planet_jobs_simple_drone_produces_mult = 0.01
+			planet_amenities_no_happiness_mult = 0.01
+		}
+	}
+}
+
+d_stargate_internal_military_network = {
+	icon = "d_stargate_military_internal"
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_energy	
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+	
+	resources = {
+		category = stargate
+		produces = {
+		}
+	}
+	
+	planet_modifier = {
+		planet_army_build_speed_mult = 0.10
+	}
+	country_modifier = {
+	}
+}
+d_stargate_external_military_network = {
+	icon = "d_stargate_military_external"
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_energy	
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+	
+	resources = {
+		category = stargate
+		produces = {
+		}
+	}
+	
+	planet_modifier = {
+	}
+	country_modifier = {
+		country_naval_cap_add = 1
+	}
+}
+
+d_stargate_external_research_network = {
+	icon = "d_stargate_research_external"
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_energy	
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+	
+	
+	
+	resources = {
+		category = stargate
+		produces = {
+			physics_research = 1
+			society_research = 1
+			engineering_research = 1
+		}
+	}
+	
+	planet_modifier = {
+		planet_researchers_physics_research_produces_mult = 0.05
+		planet_researchers_society_research_produces_mult = 0.05
+		planet_researchers_engineering_research_produces_mult = 0.05
+	}
+	country_modifier = {
+	}
+}

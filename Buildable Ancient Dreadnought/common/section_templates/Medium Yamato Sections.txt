@@ -1,0 +1,148 @@
+@section_cost = 140
+
+#Mid1
+ship_section_template = {
+	key = "MEDIUM_YAMATO_MID1"
+	ship_size = buildable_yamato
+	fits_on_slot = mid1
+	entity = "yamato_mid1_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { tech_build_yamato_m }
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+
+		locatorname = "large_gun_02"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		template = "medium_turret"
+
+		is_side_slot = yes
+		locatorname = "MEDIUM_GUN_05"
+	}
+	component_slot = {
+		name = "SMALL_GUN_04"
+		template = "small_turret"
+
+		locatorname = "SMALL_GUN_06"
+	}
+	component_slot = {
+		name = "SMALL_GUN_05"
+		template = "small_turret"
+
+		is_side_slot = yes
+		locatorname = "SMALL_GUN_07"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_06"
+		template = "small_turret"
+
+		locatorname = "SMALL_GUN_06"
+	}
+	component_slot = {
+		name = "SMALL_GUN_07	"
+		template = "small_turret"
+
+		locatorname = "SMALL_GUN_06"
+	}
+	component_slot = {
+		name = "PD_01"
+		template = "point_defence_turret"
+
+		locatorname = "small_gun_10"
+	}
+	component_slot = {
+		name = "PD_02"
+		template = "point_defence_turret"
+
+		locatorname = "small_gun_10"
+	}
+	
+	
+	large_utility_slots = 6
+	
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}
+	
+#Mid3
+ship_section_template = {
+	key = "MEDIUM_YAMATO_MID3"
+	ship_size = buildable_yamato
+	fits_on_slot = mid3
+	entity = "yamato_mid3_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	prerequisites = { tech_build_yamato_m }
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+
+		locatorname = "MEDIUM_GUN_01"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+
+		locatorname = "MEDIUM_GUN_02"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		template = "medium_turret"
+
+		is_side_slot = yes
+		locatorname = "MEDIUM_GUN_03"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		template = "medium_turret"
+
+		is_side_slot = yes
+		locatorname = "MEDIUM_GUN_04"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_05"
+		template = "medium_turret"
+
+		is_side_slot = yes
+		locatorname = "MEDIUM_GUN_05"
+	}
+	component_slot = {
+		name = "SMALL_GUN_06"
+		template = "small_turret"
+
+		locatorname = "SMALL_GUN_06"
+	}
+	component_slot = {
+		name = "SMALL_GUN_07"
+		template = "small_turret"
+
+		is_side_slot = yes
+		locatorname = "SMALL_GUN_07"
+	}
+	
+	large_utility_slots = 1
+	aux_utility_slots = 5
+	
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}

@@ -1,0 +1,157 @@
+namespace = BuildableDreadnought
+
+country_event = {
+	id = BuildableDreadnought.1
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROMFROMFROM = {
+			is_ship_size = npc_warship_01
+		}
+		NOR = {
+			has_technology = tech_build_dreadnought
+			has_tech_option = tech_build_dreadnought
+			has_special_project = DISABLED_DREADNOUGHT_PROJECT
+		}
+	}
+	
+	immediate = {
+		country_event = { id = BuildableDreadnought.2 days = 30 }
+		set_country_flag = killed_dreadnought
+	}
+}
+
+country_event = {
+	id = BuildableDreadnought.2
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOR = {
+			has_technology = tech_build_dreadnought
+			has_tech_option = tech_build_dreadnought
+			has_special_project = DISABLED_DREADNOUGHT_PROJECT
+		}
+	}
+	
+	immediate = {
+		add_research_option = tech_build_dreadnought
+		add_tech_progress = {
+			tech = tech_build_dreadnought
+			progress = 0.20
+		}
+	}
+}
+
+country_event = {
+	id = BuildableDreadnought.3
+	title = "MediumDreadnought.1.name"
+	desc = "MediumDreadnought.1.desc"
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			has_technology = tech_build_dreadnought
+			last_increased_tech = tech_build_dreadnought
+		}
+		NOT = { has_country_flag = picked_dreadnought }
+		NOT = { has_country_flag = dreadnought_pick_fired }
+	}
+	
+	immediate = {
+		set_country_flag = dreadnought_pick_fired
+		country_event = { id = BuildableDreadnought.7 days = 10 }
+		country_event = { id = BuildableDreadnought.4 }
+		set_country_flag = picked_dreadnought
+	}
+	
+}
+
+country_event = {
+	id = BuildableDreadnought.4
+	title = "BuildableDreadnought.4.name"
+	desc = "BuildableDreadnought.4.desc"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = Dreadnought
+		give_technology = { tech = tech_artillery_dreadnought }
+		give_technology = { tech = tech_buildable_dreadnought }
+		set_country_flag = picked_dreadnought
+		set_country_flag = picked_buildable_dreadnought
+	}
+	
+	option = {
+		name = "Broadside Dreadnought"
+		give_technology = { tech = tech_build_dreadnought_m }
+		give_technology = { tech = tech_buildable_dreadnought }
+		set_country_flag = picked_dreadnought
+		set_country_flag = picked_buildable_dreadnought
+	}
+	
+	option = {
+		name = "Carrier Dreadnought"
+		give_technology = { tech = tech_carrier_dreadnought }
+		give_technology = { tech = tech_buildable_dreadnought }
+		set_country_flag = picked_dreadnought
+		set_country_flag = picked_buildable_dreadnought
+	}
+	
+	option = {
+		name = "I want to leave it to chance"
+		give_technology = { tech = tech_buildable_dreadnought }
+		random_list = {
+			25 = {
+				give_technology = { tech = tech_buildable_dreadnought }
+			}			
+			25 = {
+				give_technology = { tech = tech_build_dreadnought_m }
+			}
+			25 = {
+				give_technology = { tech = tech_carrier_dreadnought }
+			}
+		}
+		set_country_flag = picked_dreadnought
+		set_country_flag = picked_buildable_dreadnought
+	}
+	
+	option = {
+		name = "Take me back to the GFX"
+		remove_country_flag = dreadnought_pick_fired
+		country_event = { id = BuildableDreadnought.3 }
+	}
+	
+}
+
+country_event = {
+	id = BuildableDreadnought.7
+	title = "BuildableDreadnought.7.name"
+	desc = "BuildableDreadnought.7.desc"
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_country_flag = picked_dreadnought
+		has_country_flag = dreadnought_pick_fired
+		NOT = { has_country_flag = more_options_fired }
+	}
+	
+	immediate = {
+		set_country_flag = more_options_fired
+	}
+	
+	option = {
+		name = Yes
+		set_country_flag = wants_others
+	}
+	
+	option = {
+		name = No
+	}
+}

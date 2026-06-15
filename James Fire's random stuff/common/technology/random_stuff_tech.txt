@@ -1,0 +1,107 @@
+ship_numbers_tech = {
+	cost = 100
+	area = engineering
+	start_tech = no
+	category = {industry}
+	tier = 0
+	
+	modifier = {
+		ship_hull_mult = 1.5
+		ship_shield_mult = 3
+		ship_armor_mult = 2
+		weapon_type_strike_craft_weapon_damage_mult = 2
+		ship_weapon_damage = 2
+		ship_fire_rate_mult = -0.8
+		starbases_upkeep_mult = 0.3
+		starbase_shipyard_build_cost_mult = 3
+		starbase_shipyard_build_time_mult = 1
+		ships_upkeep_mult = 3
+		shipclass_starbase_damage_mult = 2
+		shipclass_military_station_damage_mult = 1
+		country_command_limit_mult = -0.5
+		country_naval_cap_mult = -0.75
+		#ship_corvette_alloys_cost_add =
+		#ship_destroyer_alloys_cost_mult = 
+		#ship_cruiser_alloys_cost_mult = 
+		#ship_battleship_alloys_cost_mult = 
+	}
+}
+
+tech_lantean_drones = {
+	cost = @tier4cost3
+	area = physics
+	tier = 5
+	prerequisites = { "tech_thrusters_4" "tech_sapient_ai" "tech_sensors_4" "tech_zero_point_power" }
+	category = { field_manipulation }
+	is_reverse_engineerable = no
+	is_rare = yes
+	is_dangerous = no
+	weight = @tier5weight3
+
+    weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOR = {
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_expertise_field_manipulation"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = physics
+					has_trait = "leader_trait_maniacal"
+				}
+			}	
+		}
+	}
+	
+	ai_weight = {
+		factor = 4 
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_repeatable_improved_tile_research_output = {
+	area = physics
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { computing }
+	levels = -1
+	prerequisites = {"tech_basic_science_lab_3"}
+	weight = @repeatableTechWeight
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+
+	ai_weight = {
+		factor = 1.0
+	}
+
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+
+	modifier = {
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+		planet_jobs_engineering_research_produces_mult = 0.05
+	}
+}

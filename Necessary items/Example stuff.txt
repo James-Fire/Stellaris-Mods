@@ -1,0 +1,44 @@
+#one megastructure limit
+NOT = { has_megastructure = blargh }
+#multiple megastructure limit
+any_owned_megastructure = {
+	count = numbers
+	is_megastructure_type = blargh
+}
+#check number of planets with flexible conditions
+count_planets = {
+	count = numbers
+	have_awesome_conditions
+}
+#check number of buildings in a country that have a pop on them
+count_owned_pops = {
+	count = numbers
+	tile = {
+		do_building_stuff
+	}
+}
+
+trigger = {
+	count_owned_pops = {
+		count > 0
+        tile = {
+			has_building = building_replicator
+        }
+	}
+}
+
+set_variable = { which = count_rep value = 0 }
+every_owned_planet = {
+    every_tile = {
+        limit = {
+            has_building = building_replicator
+        }
+        prevprev = { change_variable = { which = count_rep value = 1 } }
+    }
+}
+if = {
+    limit = {
+        check_variable = { which = count_rep value = X }
+    }
+    #do something
+}

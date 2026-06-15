@@ -1,0 +1,157 @@
+utility_component_template = {
+	key = "VOID_AFTERBURNER"
+	size = aux
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	power = -60
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 14.4
+			rare_crystals = 1.8
+			volatile_motes = 1.8
+		}		
+		upkeep = {
+			energy = 1.44
+			alloys = 0.288
+		}
+	}
+	modifier = {
+		ship_speed_mult = 0.80
+		ship_evasion_mult = 0.40
+	}
+	prerequisites = { "tech_void_afterburners" }
+	component_set = "VOID_AFTERBURNER"
+	
+	ai_weight = {
+		weight = 10000
+		modifier = {
+			factor = 2.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0.5
+			is_preferred_weapons = weapon_type_explosive
+		}	
+	}
+}
+
+utility_component_template = {
+	key = "WORMHOLE_REACTOR_BOOSTER"
+	size = aux
+	icon = "GFX_ship_part_wormhole"
+	icon_frame = 1
+	power = 400
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 36
+			rare_crystals = 9
+
+		}		
+		upkeep = {
+			energy = 3.6
+			alloys = 0.72
+		}
+	}	
+	prerequisites = { "tech_hyperconductors_2i" }
+	component_set = "WORMHOLE_REACTOR_BOOSTER"
+
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+utility_component_template = {
+	key = "QUANTUM_TARGETING_COMPUTER"
+	size = aux
+	icon = "GFX_ship_part_computer_swarm_advanced"
+	icon_frame = 1
+	power = -30
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 24
+		}		
+		upkeep = {
+			energy = 2.4
+			alloys = 0.48
+		}
+	}
+	
+	ship_modifier = {
+		ship_accuracy_add = 20
+	}
+	
+	prerequisites = { "tech_quantum_ai_computing" }
+	component_set = "QUANTUM_TARGETING_COMPUTER"
+
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+
+utility_component_template = {
+	key = "NANO_ARMOUR"
+	size = aux
+	icon = "GFX_ship_part_aura_nanobot"
+	icon_frame = 1
+	power = -60
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 40
+		}		
+		upkeep = {
+			energy = 4
+			alloys = 0.8
+		}
+	}
+
+	modifier = {
+		ship_hull_regen_add_perc = 0.2
+		ship_armor_regen_add_perc = 0.1
+		ship_hull_mult = 0.05
+		ship_armor_mult = 0.05
+		ships_upkeep_mult = -0.10
+	}
+	
+	ship_modifier = {
+		ships_upkeep_mult = -0.10
+	}
+
+	prerequisites = { "tech_nanomachines_1" }
+	component_set = "NANO_ARMOUR"
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+utility_component_template = {
+	key = "HYPERCONDUCTOR_SHIELD_RECHARGER"
+	size = aux
+	icon = "GFX_ship_part_shield_recharger"
+	icon_frame = 1
+	power = -80
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 16
+			rare_crystals = 4
+		}		
+		upkeep = {
+			energy = 1.6
+			alloys = 0.32
+		}
+	}	
+	prerequisites = { "tech_hyperconductors_2c" }
+	component_set = "HYPERCONDUCTOR_SHIELD_RECHARGER"
+	
+	modifier = {
+		ship_shield_mult = 0.30
+	}
+	ai_weight = {
+		weight = 10000
+	}
+}

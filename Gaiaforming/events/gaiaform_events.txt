@@ -1,0 +1,170 @@
+namespace = gaiaform
+
+planet_event = {
+	id = gaiaform.1
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		if = {
+			limit = { 
+				is_planet_class = pc_gaia
+			}
+			random_list = {
+				10 = {
+					add_modifier = { modifier = natural_beauty days = -1 }
+					modifier = {
+						factor = 0
+						has_modifier = natural_beauty
+					}
+				}
+				10 = {
+					add_modifier = { modifier = lush_planet days = -1 }
+					modifier = {
+						factor = 0
+						has_modifier = lush_planet
+					}
+				}
+			}
+			random_list = {
+				10 = {
+					add_deposit = d_submerged_ore_veins
+				}
+				10 = {
+					add_deposit = d_rich_mountain	
+				}
+			}
+			random_list = {
+				10 = {
+					add_deposit = d_tempestous_mountain
+				}
+				10 = {
+					add_deposit = d_underwater_vent	
+				}
+				10 = {
+					add_deposit = d_geothermal_vent	
+				}
+			}
+			random_list = {
+				10 = {
+					add_deposit = d_fungal_forest
+				}
+				10 = {
+					add_deposit = d_tropical_island	
+				}
+				10 = {
+					add_deposit = d_marvelous_oasis	
+				}
+				10 = {
+					add_deposit = d_teeming_reef
+				}
+				10 = {
+					add_deposit = d_black_soil	
+				}
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = gaiaform.2
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		if = {
+			limit = { 
+				is_planet_class = pc_gaia
+				OR = {
+					has_deposit = d_arid_highlands
+					has_deposit = d_hot_springs
+					has_deposit = d_buzzing_plains
+					
+					has_deposit = d_veiny_cliffs
+					has_deposit = d_mineral_striations
+					has_deposit = d_mineral_fields
+					
+					has_deposit = d_lichen_fields
+					has_deposit = d_bountiful_plains
+					has_deposit = d_rugged_woods
+					has_deposit = d_green_hills
+					has_deposit = d_forgiving_tundra
+					has_deposit = d_boggy_fens
+					has_deposit = d_natural_farmland
+					has_deposit = d_nutritious_mudland
+				}
+			}
+			while = {
+				limit = { has_deposit = d_arid_highlands }
+				remove_deposit = d_arid_highlands
+				add_deposit = d_searing_desert
+			}
+			while = {
+				limit = { has_deposit = d_hot_springs }
+				remove_deposit = d_hot_springs
+				add_deposit = d_geothermal_vent
+			}
+			while = {
+				limit = { has_deposit = d_buzzing_plains }
+				remove_deposit = d_buzzing_plains
+				add_deposit = d_searing_desert
+			}
+			while = {
+				limit = { has_deposit = d_veiny_cliffs }
+				remove_deposit = d_veiny_cliffs
+				add_deposit = d_ore_rich_caverns
+			}
+			while = {
+				limit = { has_deposit = d_mineral_striations }
+				remove_deposit = d_mineral_striations
+				add_deposit = d_prosperous_mesa
+			}
+			while = {
+				limit = { has_deposit = d_mineral_fields }
+				remove_deposit = d_mineral_fields
+				add_deposit = d_prosperous_mesa
+			}
+			while = {
+				limit = { has_deposit = d_lichen_fields }
+				remove_deposit = d_lichen_fields
+				add_deposit = d_fertile_lands
+			}
+			while = {
+				limit = { has_deposit = d_bountiful_plains }
+				remove_deposit = d_bountiful_plains
+				add_deposit = d_fertile_lands
+			}
+			while = {
+				limit = { has_deposit = d_rugged_woods }
+				remove_deposit = d_rugged_woods
+				add_deposit = d_lush_jungle
+			}
+			while = {
+				limit = { has_deposit = d_green_hills }
+				remove_deposit = d_green_hills
+				add_deposit = d_fungal_caves
+			}
+			while = {
+				limit = { has_deposit = d_forgiving_tundra }
+				remove_deposit = d_forgiving_tundra
+				add_deposit = d_fertile_lands
+			}
+			while = {
+				limit = { has_deposit = d_boggy_fens }
+				remove_deposit = d_boggy_fens
+				add_deposit = d_fertile_lands
+			}
+			while = {
+				limit = { has_deposit = d_natural_farmland }
+				remove_deposit = d_natural_farmland
+				add_deposit = d_fertile_lands
+			}
+			while = {
+				limit = { has_deposit = d_nutritious_mudland }
+				remove_deposit = d_nutritious_mudland
+				add_deposit = d_fertile_lands
+			}
+		}
+	}
+}			
+			

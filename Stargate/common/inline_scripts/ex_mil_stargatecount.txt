@@ -1,0 +1,16 @@
+if = {
+	limit = {
+		check_variable = { which = accessible_external_military_stargatecount value <= ex_mil_stargatecount_cap }
+	}
+	change_variable = { which = stargate_connections value = accessible_external_military_stargatecount }
+	change_variable = { which = stargate_military_connections_ex_con value = accessible_external_military_stargatecount }
+	owner = { change_variable = { which = stargate_military_connections_ex_con value = prev.accessible_external_military_stargatecount } }
+}
+else = {
+	change_variable = { which = stargate_connections value = ex_mil_stargatecount_cap }
+	change_variable = { which = stargate_military_connections_ex_con value = ex_mil_stargatecount_cap }
+	owner = { change_variable = { which = stargate_military_connections_ex_con value = prev.ex_mil_stargatecount_cap } }
+}
+check_connections_cap = {
+	last_changed_connection = stargate_military_connections_ex_con
+}

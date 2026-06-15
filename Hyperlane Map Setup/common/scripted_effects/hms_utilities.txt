@@ -1,0 +1,602 @@
+hms_utilities_save_gateways = {
+	every_system = {
+		limit = {
+			has_megastructure = hms_gateway
+		}
+		set_star_flag = hms_cluster_gateway
+	}
+}
+
+hms_utilities_load_gateways = {
+	every_system = {
+		limit = {
+			has_star_flag = hms_cluster_gateway
+		}
+		spawn_megastructure = {
+			type = "hms_gateway"
+			orbit_distance = 20
+			random_pos = yes
+			orbit_angle = 360	# range of the randomization
+		}
+	}
+}
+
+# noscope
+hms_utilities_generate_hub_wormholes = { #There can only be 1 wormhole per system, so they have to be spread throughout the cluster.
+	while = {
+		limit = {
+			any_system = {
+				has_star_flag = hms_hyperlane_hub
+				OR = {
+					has_natural_wormhole = no
+					count_neighbor_system = {
+						count = 5
+						limit = { has_natural_wormhole = no }
+					}
+				}
+				any_system = {
+					NOT = { is_same_value = PREV }
+					has_star_flag = hms_hyperlane_hub
+					OR = {
+						has_natural_wormhole = no
+						any_neighbor_system = {
+							has_natural_wormhole = no
+						}
+					}
+					distance = {
+						source = prev
+						min_distance >= 1
+						max_distance <= 170
+						type = euclidean
+					}
+					NOT = {
+						distance = {
+							source = prev
+							min_jumps = 1
+							max_jumps = 3
+							type = hyperlane
+						}
+					}
+				}
+			}
+		}
+		random_system = {
+			limit = {
+				has_star_flag = hms_hyperlane_hub
+			}
+			if = {
+				limit = {
+					has_natural_wormhole = no
+				}
+				random_system = {
+					limit = {
+						has_star_flag = hms_hyperlane_hub
+						distance = {
+							source = prev
+							min_distance >= 1
+							max_distance <= 100
+							type = euclidean
+						}
+					}
+					if = {
+						limit = {
+							has_natural_wormhole = no
+						}
+						PREV = {
+							spawn_natural_wormhole = {
+								bypass_type = wormhole
+								orbit_distance = 100
+								random_pos = yes
+							}
+						}
+						spawn_natural_wormhole = {
+							bypass_type = wormhole
+							orbit_distance = 100
+							random_pos = yes
+						}
+						link_wormholes = prev
+					}
+					else_if = {
+						limit = {
+							any_neighbor_system = {
+								has_natural_wormhole = no
+							}
+						}
+						random_neighbor_system = {
+							limit = {
+								has_natural_wormhole = no
+							}
+							PREVPREV = {
+								spawn_natural_wormhole = {
+									bypass_type = wormhole
+									orbit_distance = 100
+									random_pos = yes
+								}
+							}
+							spawn_natural_wormhole = {
+								bypass_type = wormhole
+								orbit_distance = 100
+								random_pos = yes
+							}
+							link_wormholes = prevprev
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_neighbor_system = {
+						has_natural_wormhole = no
+					}
+				}
+				random_neighbor_system = {
+					limit = {
+						has_natural_wormhole = no
+					}
+					random_system = {
+						limit = {
+							has_star_flag = hms_hyperlane_hub
+							distance = {
+								source = prevprev
+								min_distance >= 1
+								max_distance <= 100
+								type = euclidean
+							}
+						}
+						if = {
+							limit = {
+								has_natural_wormhole = no
+							}
+							PREVPREV = {
+								spawn_natural_wormhole = {
+									bypass_type = wormhole
+									orbit_distance = 100
+									random_pos = yes
+								}
+							}
+							spawn_natural_wormhole = {
+								bypass_type = wormhole
+								orbit_distance = 100
+								random_pos = yes
+							}
+							link_wormholes = prevprev
+						}
+						else_if = {
+							limit = {
+								any_neighbor_system = {
+									has_natural_wormhole = no
+								}
+							}
+							random_neighbor_system = {
+								limit = {
+									has_natural_wormhole = no
+								}
+								PREVPREVPREV = {
+									spawn_natural_wormhole = {
+										bypass_type = wormhole
+										orbit_distance = 100
+										random_pos = yes
+									}
+								}
+								spawn_natural_wormhole = {
+									bypass_type = wormhole
+									orbit_distance = 100
+									random_pos = yes
+								}
+								link_wormholes = prevprevprev
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# noscope
+hms_utilities_set_hub_stars = {
+	every_system = {
+		limit = {
+			has_star_flag = hms_hyperlane_hub
+		}
+		switch = {
+			trigger = has_global_flag
+			hms_hub_black_hole = {
+				set_star_class = sc_black_hole
+				star = {
+					change_pc = pc_black_hole
+				}
+			}
+			hms_hub_neutron_star = {
+				set_star_class = sc_neutron_star
+				star = {
+					change_pc = pc_neutron_star
+				}
+			}
+			hms_hub_pulsar = {
+				set_star_class = sc_pulsar
+				star = {
+					change_pc = pc_pulsar
+				}
+			}
+		}
+	}
+}
+
+# noscope
+hms_utilities_remove_gen_flags = {
+	every_system = {
+		remove_star_flag = hms_hyperlane_hub_primary
+		remove_star_flag = hms_hyperlane_hub
+		remove_star_flag = hms_hyperlane_hub_spread
+		remove_star_flag = hms_loop_added
+		remove_star_flag = hms_added
+		remove_star_flag = hms_continue
+		remove_star_flag = hms_cluster_gateway
+	}
+}
+
+# noscope
+hms_utilities_clear_hyperlanes = {
+	set_spawn_system_batch = begin
+	every_system = {
+		every_system = {
+			limit = {
+				has_hyperlane_to = prev
+			}
+			remove_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+	}
+	set_spawn_system_batch = end
+}
+
+# noscope
+# INDEX = index of the save
+hms_utilities_clear_save_setup = {
+	every_system = {
+		every_system = {
+			limit = {
+				NOT = {
+					is_same_value = prev
+				}
+			}
+			prev = {
+				remove_star_flag = hms_save_$INDEX$_connected_to_@prev
+			}
+		}
+	}
+}
+
+# noscope
+# INDEX = index of the save
+hms_utilities_save_setup = {
+	hms_utilities_clear_save_setup = {
+		INDEX = $INDEX$
+	}
+	every_system = {
+		every_neighbor_system = {
+			limit = {
+				NOT = {
+					is_same_value = prev
+				}
+			}
+			prev = {
+				set_star_flag = hms_save_$INDEX$_connected_to_@prev
+			}
+			# this allow to have 1 flag per hyperlane instead of 2
+			remove_star_flag = hms_save_$INDEX$_connected_to_@prev
+		}
+	}
+}
+
+# noscope
+# INDEX = index of the save
+hms_utilities_load_setup = {
+	set_spawn_system_batch = begin
+	every_system = {
+		every_system = {
+			limit = {
+				NOR = {
+					is_same_value = prev
+					has_hyperlane_to = prev
+				}
+				has_star_flag = hms_save_$INDEX$_connected_to_@prev
+			}
+			add_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+	}
+	set_spawn_system_batch = end
+}
+
+# noscope
+hms_utilities_count_hyperlanes = {
+	# TODO switch to custom global empire ?
+	event_target:global_event_country = {
+		set_variable = {
+			which = hms_hyperlane_count
+			value = 0
+		}
+	}
+	every_system = {
+		every_neighbor_system = {
+			event_target:global_event_country = {
+				change_variable = {
+					which = hms_hyperlane_count
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+# noscope
+# INDEX
+hms_utilities_count_hyperlanes_saved = {
+	# TODO switch to custom global empire ?
+	event_target:global_event_country = {
+		set_variable = {
+			which = hms_hyperlane_count
+			value = 0
+		}
+	}
+	every_system = {
+		every_system = {
+			limit = {
+				has_star_flag = hms_save_$INDEX$_connected_to_@prev
+			}
+			event_target:global_event_country = {
+				change_variable = {
+					which = hms_hyperlane_count
+					value = 1
+				}
+			}
+		}
+	}
+}
+
+# noscope
+# DOESN'T WORK IN 3.0 DUE TO RANDOM BUG
+# CHANCE
+hms_utilities_prune_hyperlane = {
+	every_system = {
+		every_neighbor_system = {
+			random = {
+				chance = $CHANCE$
+				remove_hyperlane = {
+					from = this
+					to = prev
+				}
+			}
+		}
+	}
+}
+
+# noscope
+hms_utilities_tag_partitions = {
+	every_system = {
+		limit = {
+			is_variable_set = hms_partition
+		}
+		clear_variable = hms_partition
+	}
+	set_global_flag = hms_continue
+	event_target:global_event_country = {
+		set_variable = {
+			which = hms_partition_count
+			value = 0
+		}
+	}
+	while = {
+		count = 10000
+		limit = {
+			has_global_flag = hms_continue
+		}
+		remove_global_flag = hms_continue
+		random_system = {
+			limit = {
+				NOT = {
+					is_variable_set = hms_partition
+				}
+			}
+			set_global_flag = hms_continue
+			event_target:global_event_country = {
+				change_variable = {
+					which = hms_partition_count
+					value = 1
+				}
+			}
+			set_variable = {
+				which = hms_partition
+				value = event_target:global_event_country.hms_partition_count
+			}
+			every_system = {
+				limit = {
+					distance = {
+						source = prev
+						type = hyperlane
+						min_jumps = 1
+						max_jumps = 10000
+					}
+				}
+				set_variable = {
+					which = hms_partition
+					value = event_target:global_event_country.hms_partition_count
+				}
+			}
+			# TODO remove
+			if = {
+				limit = {
+					is_variable_set = hms_partition
+				}
+				log = "var set"
+			}
+			else = {
+				log = "var not set"
+			}
+		}
+	}
+}
+
+# noscope
+# star flags hms_hyperlane_hub must be set
+# MAX_DISTANCE : the max euclidean distance between 2 hubs
+hms_utilities_connect_hubs = {
+	# first, connect every hub to allow distance to work properly
+	every_system = {
+		limit = {
+			has_star_flag = hms_hyperlane_hub
+		}
+		every_system = {
+			limit = {
+				has_star_flag = hms_hyperlane_hub
+				NOR = {
+					is_same_value = prev
+					has_hyperlane_to = prev
+				}
+			}
+			add_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+	}
+	# then we want to connect them in a loop fashion
+	random_system = {
+		limit = {
+			has_star_flag = hms_hyperlane_hub
+		}
+		save_event_target_as = hms_current_system
+		save_event_target_as = hms_start_system
+		set_star_flag = hms_loop_added
+	}
+	set_global_flag = hms_continue
+	while = {
+		count = 10000
+		limit = {
+			has_global_flag = hms_continue
+		}
+		remove_global_flag = hms_continue
+		event_target:hms_current_system = {
+			closest_system = {
+				limit = {
+					has_star_flag = hms_hyperlane_hub
+					NOT = {
+						has_star_flag = hms_loop_added
+					}
+				}
+				set_star_flag = hms_loop_added
+				set_star_flag = hms_linked_to_@prev
+				save_event_target_as = hms_current_system
+				set_global_flag = hms_continue
+			}
+		}
+	}
+	event_target:hms_current_system = {
+		event_target:hms_start_system = {
+			set_star_flag = hms_linked_to_@prev
+		}
+	}
+	every_system = {
+		limit = {
+			has_star_flag = hms_loop_added
+		}
+		remove_star_flag = hms_loop_added
+	}
+	# then switch on the hub connection setting
+	switch = {
+		trigger = has_global_flag
+		hms_hub_hyperlanes = {
+			every_system = {
+				limit = {
+					has_star_flag = hms_hyperlane_hub
+				}
+				every_system = {
+					limit = {
+						has_star_flag = hms_hyperlane_hub
+						has_star_flag = hms_linked_to_@prev
+					}
+					add_hyperlane = {
+						from = this
+						to = prev
+					}
+				}
+			}
+		}
+		hms_hub_wormholes = {
+			every_system = {
+				limit = {
+					has_star_flag = hms_hyperlane_hub
+				}
+				spawn_natural_wormhole = {
+					bypass_type = wormhole
+					orbit_distance = 100
+					random_pos = yes
+				}
+			}
+			every_system = {
+				limit = {
+					has_star_flag = hms_hyperlane_hub
+				}
+				every_system = {
+					limit = {
+						has_star_flag = hms_hyperlane_hub
+						has_star_flag = hms_linked_to_@prev
+					}
+					link_wormholes = prev
+				}
+			}
+		}
+		hms_hub_gateways = {
+			every_system = {
+				limit = {
+					has_star_flag = hms_hyperlane_hub
+				}
+				spawn_megastructure = {
+					type = "gateway_final"
+					orbit_distance = 100
+					random_pos = yes
+					orbit_angle = 360					# range of the randomization
+				}
+			}
+		}
+	}
+	# cleanup : remove hyperlanes and then flags
+	every_system = {
+		limit = {
+			has_star_flag = hms_hyperlane_hub
+		}
+		every_neighbor_system = {
+			limit = {
+				has_star_flag = hms_hyperlane_hub
+				NOR = {
+					has_star_flag = hms_linked_to_@prev
+					prev = {
+						has_star_flag = hms_linked_to_@prev
+					}
+				}
+			}
+			remove_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+	}
+	every_system = {
+		limit = {
+			has_star_flag = hms_hyperlane_hub
+		}
+		every_system = {
+			limit = {
+				has_star_flag = hms_hyperlane_hub
+				has_star_flag = hms_linked_to_@prev
+			}
+			remove_star_flag = hms_linked_to_@prev
+		}
+	}
+}

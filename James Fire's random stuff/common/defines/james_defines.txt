@@ -1,0 +1,109 @@
+	NGameplay = {	
+		MAX_PLANET_POPS							= 5000	# Used for building calculations
+		MAX_PLANET_BUILDING_SLOTS				= 40
+		MAX_PLANET_BRANCH_OFFICE_BUILDING_SLOTS	= 12
+		RESOLUTION_VOTE_TIMER = 360					# number of days a resolution will be on the senate floor before being passed/failed
+		SENATE_RECESS_TIMER = 720						# number of days until the next proposed resolution will be put on the floor after the current vote
+		CATEGORY_VOTE_COOLDOWN = 1780					# time before another resolution in a given category can proposed again
+		CHANGE_VOTE_COOLDOWN = 60						# number of days after voting in a resolution before you can change your vote
+		TYPE_VOTE_COOLDOWN = 1800						# time before a referendum of a given type can be proposed again
+		VETO_COOLDOWN = 900								# time before a country can enact another veto
+		EMERGENCY_MEASURES_COOLDOWN = 1800				# time before a country can propose another emergency measure
+		
+		COMMAND_LIMIT_MAX = 1000
+		NAVAL_CAPACITY_MAX = 999999
+		
+		NAVAL_CAPACITY_POP_MULT = 0.02
+		STARBASE_CAPACITY_POP_MULT = 0.01
+		
+		ASCENSION_PERKS_SLOTS				= 21 # Number of ascension perk slots
+		TRADITION_CATEGORIES_MAX			= 14
+		
+		
+		LOGISTIC_CEILING_DEFAULT = 5000
+		LOGISTIC_CEILING_MIN = 1.0
+		LOGISTIC_CEILING_MAX = 5000.0
+		LOGISTIC_CEILING_SLIDER_INTERVAL = 0.05
+
+		GROWTH_SCALE_DEFAULT = 0
+		GROWTH_SCALE_MIN = 0.00
+		GROWTH_SCALE_MAX = 1.00
+		GROWTH_SCALE_SLIDER_INTERVAL = 0.05
+	}
+	
+	NPop = {
+		BASE_POP_GROWTH						= 0.1	# Base growth rate of pops
+		LOGISTIC_POP_GROWTH_R				= 2.6	# Logistic Pop Growth Constant r
+		LOGISTIC_POP_GROWTH_FLOOR			= 1		# Logistic Pop Growth won't lower growth to less than this percent.
+		LOGISTIC_POP_GROWTH_MIN_POPS		= 2		# Treat small colonies as having this many pops to avoid the very bottom of the curve
+		LOGISTIC_POP_GROWTH_LOWER_THRESHOLD	= 0.6	# Ignore penalties to Pop Growth if the current number of pops are below this percent of the carrying capacity
+		MAX_CARRYING_CAPACITY				= 5000	# Logistic Carrying Capacity Cap (so modders have access to this value in case they make a planet with infinite districts or something like that)
+		MAX_NEW_COLONIES_SCALE				= 2 	# At this ratio of new to old colonies, no further scaling of migration
+		REQUIRED_POP_GROWTH					= 100	# Required growth to make a new pop
+		LOGISTIC_CEILING_MAX                = 500
+		LOGISTIC_CEILING_DEFAULT            = 500
+		GROWTH_SCALE_DEFAULT                = 0
+		#LOGISTIC_POP_GROWTH_CEILING		= 100.00	# Logistic Pop Growth won't raise growth beyond this percent.
+		#REQUIRED_POP_GROWTH_SCALE			= 0.5	# Required pop growth increased by this much for every pop in the empire
+		#REQUIRED_POP_ASSEMBLY_SCALE		=  0.1	# Required pop assembly increased by this much for every pop in the empire
+		NEW_COLONY_GROWTH					= 0		# New colonies have a penalty to their growth
+		OVERCROWDING_NO_GROWTH_THRESHOLD	= 1.1	# At this amount of overcrowding, growth stops entirely
+		OVERCROWDING_DECLINE_THRESHOLD		= 1.2	# At this amount of overcrowding, pops start declining
+		
+		NEW_POP_SPECIES_RANDOMNESS = 0.0 # The higher this is, the more random species selection of new pops will be
+		NEW_POP_SAME_SPECIES_WEIGHT = 2.0 # The higher this is, the more new pops will be weighted by number of exact same species pops
+		NEW_POP_EXACT_SPECIES_WEIGHT = 0.5 # The higher this is, the more new pops will be weighted by number of same or subspecies pops
+		NEW_POP_SLAVERY_WEIGHT = 0.5 # The higher this is, the more new pops will tend to be balanced between enslaved and non-enslaved species
+		NEW_POP_SPECIES_DIV = 0.0 # The higher this is, the more planets will tend to grow species that are underrepresented on the planet
+		NEW_POP_HABITABILITY_THRESHOLD = 0.7 # If habitability is under this, apply exponentinally increasing penalties to new pop weight
+		NEW_POP_HOMEWORLD_MULT = 3 # Pops have increased weight for growing on their homeworld
+		NEW_POP_ASSEMBLY_TRAIT_MULT = 1 # Extra weight per trait point for assembled pops
+		NEW_POP_GROWTH_MOD_MULT = 0.66 # How much does species growth mod trait matter for new pop weight
+		NEW_POP_IMMIGRATION_MOD_MULT = 1 # How much does species immigration growth mod trait matter for new pop weight (when there is immigration)
+				
+		MAX_EMIGRATION_PUSH					= 1000000
+		MAX_GROWTH_FROM_IMMIGRATION			= 10000
+		MAX_GROWTH_PENALTY_FROM_EMIGRATION	= 1000	# Fraction of base monthly growth
+		BASE_POP_DECLINE					= 20	# Base decline rate of pops
+		REQUIRED_POP_ASSEMBLY				= 50	# Required assembly to add a pop
+		SAME_STRATA_EMPLOYMENT_BONUS		= 10 # How much score will be added to an unemployed pop when considering it for a job in the same strata
+	}
+	
+	NShip = {
+		OUT_OF_COMBAT_SHIELD_REGEN_MULT		= 2.0		# Shields recharge this much faster outside combat
+		SHIELD_RECHARGE_TICKS				= 1	# Combat ticks before a shield that is fully depleted will start to recharge
+
+		MILITARY_POWER_HEALTH_WEIGHT		= 0.01
+		MILITARY_POWER_ARMOR_WEIGHT			= 0.02	# compared to health
+		MILITARY_POWER_SHIELD_WEIGHT		= 0.02	# compared to health
+		MILITARY_POWER_DAMAGE_WEIGHT		= 0.10
+		MILITARY_POWER_SCALE				= 0.25
+		MILITARY_POWER_EXPONENT				= 0.90	# math: power = ( ( effective_health * damage_per_day ) ^ exponent ) * scale
+
+		# below values determine how large an effect special values such as shield penetration have on the military power of a weapon
+		MILITARY_POWER_ARMOR_PENETRATION_WEIGHT = 0.1	# larger value = adds more military power
+		MILITARY_POWER_SHIELD_PENETRATION_WEIGHT = 0.1
+		MILITARY_POWER_HULL_DAMAGE_WEIGHT = 0.2
+		MILITARY_POWER_ARMOR_DAMAGE_WEIGHT = 0.2
+		MILITARY_POWER_SHIELD_DAMAGE_WEIGHT = 0.2
+		MILITARY_POWER_TRACKING_WEIGHT = -0.5	# at 0% tracking
+		MILITARY_POWER_RANGE_DIV = 100	# smaller value = adds more military power
+		MILITARY_POWER_MISSILE_MULT = 0.60		# overall military power of missiles is lowered due to being vulnerable to PD
+		MILITARY_POWER_PD_MULT = 1.20		# overall military power of PD is increased to compensate for relatively bad DPS/range
+
+		DEFAULT_ARMOR_RATIO = 0.5
+		DEFAULT_SHIELD_RATIO = 0.5
+		MIN_SPEED_FOR_UTILITIES = 1.25 # Minimum value for ship utilities with speed to be considered viable when creating designs
+
+		EXCESS_POWER_BONUS_THRESHOLD_MAX	= 1.0 	# 0.5 means 0-50% excess power linearly scales ship_excess_power modifier between 0-1.
+		EXCESS_POWER_BONUS_THRESHOLD_MIN	= 0.01 # min value for excess power to be used.
+
+		SHIP_EXP_GAIN_COMBAT			= 1.0				# Gained each day ship is in combat
+		SHIP_EXP_GAIN_PIRACY_SUP		= 0.5				# Gained each day ship suppressing piracy
+		SHIP_EXP_EXPERIENCED			= 100				# Amount of exp to reach experienced rank
+		SHIP_EXP_VETERAN				= 500				# Amount of exp to reach veteran rank
+		SHIP_EXP_ELITE					= 2500				# Amount of exp to reach elite rank
+	}
+	NAI = {
+		NUM_TRADITIONS_FOR_EDICTS = 98			# How many traditions does the AI want before spending Unity on edicts (there are 49 in total in the base game counting adoption & completion effects)
+	}

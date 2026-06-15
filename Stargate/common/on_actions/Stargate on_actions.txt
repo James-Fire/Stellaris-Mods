@@ -1,0 +1,23 @@
+on_yearly_pulse = {
+	events = {
+		stargate.0
+	}
+}
+
+on_game_start = {
+	events = {
+		stargate.10
+		stargate.0
+	}
+}
+
+on_policy_changed = {
+	events = {
+		stargate.5
+	}
+}
+on_tech_increased = {
+	events = {
+		stargate.400
+	}
+}

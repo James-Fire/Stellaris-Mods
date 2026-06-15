@@ -1,0 +1,776 @@
+
+###############################
+### FunEFork by MrFunEGUY ###
+###############################
+
+# Find Subjects
+get_subjects_effect = {
+
+	set_variable = { which = veru_total_subjects value = 0 }
+
+	# Count how many valid Subject States there are
+	every_subject = {
+		limit = {
+			NOR = {
+				any_agreement = {
+					agreement_preset = preset_protectorate
+					agreement_preset = preset_satrapy
+				}
+			}
+		}
+		set_country_flag = subject_country
+		overlord = { change_variable = { which = veru_total_subjects value = 1 } }
+	}
+
+	if = {
+		inline_script = { script = effects/get_subjects_list_effect NUM = 1 }
+	}
+	if = {
+		inline_script = { script = effects/get_subjects_list_effect NUM = 2 }
+	}
+	if = {
+		inline_script = { script = effects/get_subjects_list_effect NUM = 3 }
+	}
+	if = {
+		inline_script = { script = effects/get_subjects_list_effect NUM = 4 }
+	}
+	if = {
+		inline_script = { script = effects/get_subjects_list_effect NUM = 5 }
+	}
+	if = {
+		inline_script = { script = effects/get_subjects_list_effect NUM = 6 }
+	}
+	if = {
+		inline_script = { script = effects/get_subjects_list_effect NUM = 7 }
+	}
+	if = {
+		inline_script = { script = effects/get_subjects_list_effect NUM = 8 }
+	}
+	if = {
+		inline_script = { script = effects/get_subjects_list_effect NUM = 9 }
+	}
+	if = {
+		inline_script = { script = effects/get_subjects_list_effect NUM = 10 }
+	}
+
+	if = {
+		limit = { any_country = { has_country_flag = subject_country } }
+		every_country = {
+			limit = { has_country_flag = subject_country }
+			remove_country_flag = subject_country
+		}
+	}
+
+	country_event = { id = veru.1000 }
+}
+
+# Get Intervention Effects
+get_intervention_effect = {
+	if = {
+		limit = {
+			event_target:chosen_subject = {
+				is_disloyal_to = root
+				has_country_flag = intervened_once_@root
+			}
+		}
+		event_target:chosen_subject = {
+			every_pop_faction = {
+				limit = {
+					NOR = {
+						ruler_has_faction_ethic = { ETHIC = xenophobe }
+						ruler_has_faction_ethic = { ETHIC = xenophile }
+						ruler_has_faction_ethic = { ETHIC = militarist }
+						ruler_has_faction_ethic = { ETHIC = pacifist }
+						ruler_has_faction_ethic = { ETHIC = materialist }
+						ruler_has_faction_ethic = { ETHIC = spiritualist }
+						ruler_has_faction_ethic = { ETHIC = authoritarian }
+						ruler_has_faction_ethic = { ETHIC = egalitarian }
+						ruler_has_faction_ethic = { ETHIC = socialism }
+						ruler_has_faction_ethic = { ETHIC = capitalism }
+					}
+				}
+				add_modifier = {
+	                modifier = overlord_intervention_disloyal_faction
+	                years = 15
+	            }
+			}
+			random_pop_faction = {
+				limit = {
+					OR = {
+						ruler_has_faction_ethic = { ETHIC = xenophobe }
+						ruler_has_faction_ethic = { ETHIC = xenophile }
+						ruler_has_faction_ethic = { ETHIC = militarist }
+						ruler_has_faction_ethic = { ETHIC = pacifist }
+						ruler_has_faction_ethic = { ETHIC = materialist }
+						ruler_has_faction_ethic = { ETHIC = spiritualist }
+						ruler_has_faction_ethic = { ETHIC = authoritarian }
+						ruler_has_faction_ethic = { ETHIC = egalitarian }
+						ruler_has_faction_ethic = { ETHIC = socialism }
+						ruler_has_faction_ethic = { ETHIC = capitalism }
+					}
+				}
+				add_modifier = {
+	                modifier = overlord_intervention_disloyal_leader
+	                years = 15
+	            }
+			}
+			every_owned_planet = {
+				limit = {
+					pop_amount > 300
+				}
+				add_modifier = {
+	                modifier = overlord_intervention_disloyal_planet
+	                years = 15
+	            }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			event_target:chosen_subject = {
+				is_disloyal_to = root
+				has_country_flag = intervened_once_@root
+			}
+		}
+		event_target:chosen_subject = {
+			every_pop_faction = {
+				limit = {
+					NOR = {
+						ruler_has_faction_ethic = { ETHIC = xenophobe }
+						ruler_has_faction_ethic = { ETHIC = xenophile }
+						ruler_has_faction_ethic = { ETHIC = militarist }
+						ruler_has_faction_ethic = { ETHIC = pacifist }
+						ruler_has_faction_ethic = { ETHIC = materialist }
+						ruler_has_faction_ethic = { ETHIC = spiritualist }
+						ruler_has_faction_ethic = { ETHIC = authoritarian }
+						ruler_has_faction_ethic = { ETHIC = egalitarian }
+						ruler_has_faction_ethic = { ETHIC = socialism }
+						ruler_has_faction_ethic = { ETHIC = capitalism }
+					}
+				}
+				add_modifier = {
+	                modifier = overlord_intervention_loyal_faction
+	                years = 10
+	            }
+			}
+			random_pop_faction = {
+				limit = {
+					OR = {
+						ruler_has_faction_ethic = { ETHIC = xenophobe }
+						ruler_has_faction_ethic = { ETHIC = xenophile }
+						ruler_has_faction_ethic = { ETHIC = militarist }
+						ruler_has_faction_ethic = { ETHIC = pacifist }
+						ruler_has_faction_ethic = { ETHIC = materialist }
+						ruler_has_faction_ethic = { ETHIC = spiritualist }
+						ruler_has_faction_ethic = { ETHIC = authoritarian }
+						ruler_has_faction_ethic = { ETHIC = egalitarian }
+						ruler_has_faction_ethic = { ETHIC = socialism }
+						ruler_has_faction_ethic = { ETHIC = capitalism }
+					}
+				}
+				add_modifier = {
+	                modifier = overlord_intervention_loyal_leader
+	                years = 10
+	            }
+			}
+			every_owned_planet = {
+				limit = {
+					pop_amount > 300
+				}
+				add_modifier = {
+	                modifier = overlord_intervention_loyal_planet
+	                years = 10
+	            }
+			}
+		}
+	}
+	if = {
+		limit = { event_target:chosen_subject = { NOT = { has_country_flag = intervened_once_@root } } }
+		event_target:chosen_subject = {
+			set_country_flag = intervened_once_@root
+		}
+	}
+}
+
+# Get Government Intervention Effects
+get_intervention_effect_gov = {
+	if = {
+		limit = {
+			event_target:chosen_subject = {
+				is_disloyal_to = root
+				has_country_flag = gov_changed_once_@root
+			}
+		}
+		event_target:chosen_subject = {
+			every_pop_faction = {
+				limit = {
+					NOR = {
+						ruler_has_faction_ethic = { ETHIC = xenophobe }
+						ruler_has_faction_ethic = { ETHIC = xenophile }
+						ruler_has_faction_ethic = { ETHIC = militarist }
+						ruler_has_faction_ethic = { ETHIC = pacifist }
+						ruler_has_faction_ethic = { ETHIC = materialist }
+						ruler_has_faction_ethic = { ETHIC = spiritualist }
+						ruler_has_faction_ethic = { ETHIC = authoritarian }
+						ruler_has_faction_ethic = { ETHIC = egalitarian }
+						ruler_has_faction_ethic = { ETHIC = socialism }
+						ruler_has_faction_ethic = { ETHIC = capitalism }
+					}
+				}
+				add_modifier = {
+	                modifier = overlord_intervention_disloyal_faction
+	                years = 20
+	            }
+			}
+			random_pop_faction = {
+				limit = {
+					OR = {
+						ruler_has_faction_ethic = { ETHIC = xenophobe }
+						ruler_has_faction_ethic = { ETHIC = xenophile }
+						ruler_has_faction_ethic = { ETHIC = militarist }
+						ruler_has_faction_ethic = { ETHIC = pacifist }
+						ruler_has_faction_ethic = { ETHIC = materialist }
+						ruler_has_faction_ethic = { ETHIC = spiritualist }
+						ruler_has_faction_ethic = { ETHIC = authoritarian }
+						ruler_has_faction_ethic = { ETHIC = egalitarian }
+						ruler_has_faction_ethic = { ETHIC = socialism }
+						ruler_has_faction_ethic = { ETHIC = capitalism }
+					}
+				}
+				add_modifier = {
+	                modifier = overlord_intervention_disloyal_leader
+	                years = 20
+	            }
+			}
+			every_owned_planet = {
+				limit = { pop_amount > 300 }
+				add_modifier = {
+	                modifier = overlord_intervention_disloyal_planet_gov
+	                years = 20
+	            }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			event_target:chosen_subject = {
+				is_loyal_to = root
+				has_country_flag = gov_changed_once_@root
+			}
+		}
+		event_target:chosen_subject = {
+			every_pop_faction = {
+				limit = {
+					NOR = {
+						ruler_has_faction_ethic = { ETHIC = xenophobe }
+						ruler_has_faction_ethic = { ETHIC = xenophile }
+						ruler_has_faction_ethic = { ETHIC = militarist }
+						ruler_has_faction_ethic = { ETHIC = pacifist }
+						ruler_has_faction_ethic = { ETHIC = materialist }
+						ruler_has_faction_ethic = { ETHIC = spiritualist }
+						ruler_has_faction_ethic = { ETHIC = authoritarian }
+						ruler_has_faction_ethic = { ETHIC = egalitarian }
+						ruler_has_faction_ethic = { ETHIC = socialism }
+						ruler_has_faction_ethic = { ETHIC = capitalism }
+					}
+				}
+				add_modifier = {
+	                modifier = overlord_intervention_loyal_faction
+	                years = 15
+	            }
+			}
+			random_pop_faction = {
+				limit = {
+					OR = {
+						ruler_has_faction_ethic = { ETHIC = xenophobe }
+						ruler_has_faction_ethic = { ETHIC = xenophile }
+						ruler_has_faction_ethic = { ETHIC = militarist }
+						ruler_has_faction_ethic = { ETHIC = pacifist }
+						ruler_has_faction_ethic = { ETHIC = materialist }
+						ruler_has_faction_ethic = { ETHIC = spiritualist }
+						ruler_has_faction_ethic = { ETHIC = authoritarian }
+						ruler_has_faction_ethic = { ETHIC = egalitarian }
+						ruler_has_faction_ethic = { ETHIC = socialism }
+						ruler_has_faction_ethic = { ETHIC = capitalism }
+					}
+				}
+				add_modifier = {
+	                modifier = overlord_intervention_loyal_leader
+	                years = 15
+	            }
+			}
+			every_owned_planet = {
+				limit = {
+					pop_amount > 300
+				}
+				add_modifier = {
+	                modifier = overlord_intervention_loyal_planet_gov
+	                years = 15
+	            }
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = gov_changed_once }
+				}
+				set_country_flag = gov_changed_once
+			}
+		}
+	}
+	if = {
+		limit = { event_target:chosen_subject = { NOT = { has_country_flag = gov_changed_once_@root } } }
+		event_target:chosen_subject = {
+			set_country_flag = gov_changed_once_@root
+		}
+	}
+}
+
+get_leaders_in_class = {
+	set_variable = { which = total_class_leaders value = 0 }
+
+	every_owned_leader = {
+		limit = {
+			is_ruler = no
+			is_fake_leader = no
+			leader_class = $CLASS$
+		}
+		set_leader_flag = vear_possible_leader
+		prev = { change_variable = { which = total_class_leaders value = 1 } }
+	}
+
+	# Next, we save each subject as an Event Target
+	# As the scripting language doesn't have proper loops, we use a lot of ifs if there are more than 10, the event can be run again.
+	## If we do ordered_owned_leader and there are more than 10, some will be inaccessible.
+	if = {
+		inline_script = { script = effects/get_leaders_class_effect NUM = 1 }
+	}
+	if = {
+		inline_script = { script = effects/get_leaders_class_effect NUM = 2 }
+	}
+	if = {
+		inline_script = { script = effects/get_leaders_class_effect NUM = 3 }
+	}
+	if = {
+		inline_script = { script = effects/get_leaders_class_effect NUM = 4 }
+	}
+	if = {
+		inline_script = { script = effects/get_leaders_class_effect NUM = 5 }
+	}
+	if = {
+		inline_script = { script = effects/get_leaders_class_effect NUM = 6 }
+	}
+	if = {
+		inline_script = { script = effects/get_leaders_class_effect NUM = 7 }
+	}
+	if = {
+		inline_script = { script = effects/get_leaders_class_effect NUM = 8 }
+	}
+	if = {
+		inline_script = { script = effects/get_leaders_class_effect NUM = 9 }
+	}
+	if = {
+		inline_script = { script = effects/get_leaders_class_effect NUM = 10 }
+	}
+
+	root = { country_event = { id = veru.5100 } }
+}
+
+# Remove All Civics 
+get_remove_civics = {
+	while = {
+		limit = { civics_count >= 1 }
+		force_remove_civic = 1
+	}
+}
+
+# Remove Egalitarian and add Authoritarian 
+get_ethics_check_egal_auth = {
+	if = {
+		limit = { is_authoritarian = no }
+		while = {
+			limit = { is_authoritarian = no }
+			shift_ethic = ethic_authoritarian
+		}
+	}
+}
+
+# Remove Authoritarian and add Egalitarian 
+get_ethics_check_auth_egal = {
+	if = {
+		limit = { is_egalitarian = no }
+		while = {
+			limit = { is_egalitarian = no }
+			shift_ethic = ethic_egalitarian
+		}
+	}
+}
+
+# Remove Socialism and add Capitalism 
+get_ethics_check_soc_cap = {
+	if = {
+		limit = { is_capitalism = no }
+		while = {
+			limit = { is_capitalism = no }
+			shift_ethic = ethic_capitalism
+		}
+	}
+}
+
+# Remove Xenophobe 
+get_ethics_check_phobe = {
+	if = {
+		limit = { is_xenophobe = yes }
+		while = {
+			limit = { is_xenophobe = yes }
+			shift_ethic = ethic_xenophile
+		}
+	}
+}
+
+# Remove Fanatic Authoritarian and Fanatic Egalitarian
+get_ethics_check_fan = {
+	if = {
+		limit = { has_ethic = ethic_fanatic_egalitarian }
+		shift_ethic = ethic_authoritarian
+	}
+	else_if = {
+		limit = { has_ethic = ethic_fanatic_authoritarian }
+		shift_ethic = ethic_egalitarian
+	}
+}
+
+vear_install_leader_effect = {
+	event_target:chosen_subject = {
+		if = { # Already Auth, more amenable to a Monarchy
+			limit = {
+				is_authoritarian = yes
+				is_imp_or_dict = no
+			}
+			random_list = {
+				50 = {
+					change_government = {
+						authority = auth_imperial
+						remove_invalid_civics = yes
+						cooldown = no
+					}
+				}
+				50 = {
+					change_government = {
+						authority = auth_dictatorial
+						remove_invalid_civics = yes
+						cooldown = no
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { is_authoritarian = no }
+			while = {
+				limit = { is_authoritarian = no }
+				shift_ethic = ethic_authoritarian
+			}
+		}
+		if = { # Wasn't already Auth, just make a Dictatorship
+			limit = { is_imp_or_dict = no }
+			change_government = {
+				authority = auth_dictatorial
+				remove_invalid_civics = yes
+				cooldown = no
+			}
+		}
+		if = {
+			limit = { event_target:chosen_leader = { is_owned_by = event_target:chosen_subject } }
+			random = {
+				chance = 30
+				ruler = { set_leader_flag = grateful_installed_vassal_leader_@this }
+				add_opinion_modifier = {
+					who = prev
+					modifier = opinion_installed_as_vassal_leader
+				}
+				prev = { set_country_flag = vassal_installer_country_@event_target:chosen_subject.ruler }
+			}
+		}
+		else = {
+			ruler = { set_leader_flag = grateful_installed_vassal_leader_@this }
+			add_opinion_modifier = {
+				who = prev
+				modifier = opinion_installed_as_vassal_leader
+			}
+		}
+		
+	}
+	set_country_flag = vassal_installer_country_@event_target:chosen_subject.ruler
+	event_target:chosen_subject = {
+		set_leader = event_target:chosen_leader
+
+		if = {
+			limit = { exists = heir }
+			if = {
+				limit = { has_civil_wars_mod = yes }
+				heir = { save_event_target_as = disinherited_heir }
+				country_event = { id = civheir.1000 }
+			}
+			else = {
+				heir = {
+					set_leader_flag = dead_ruler
+					kill_leader = { show_notification = no }
+				}
+			}
+		}
+		if = {
+			limit = { has_adoptive_dynasties = yes }
+			remove_adoptive_dynasties = yes
+			country_event = { id = veru_misc.4005 days = 5 }
+		}
+
+		if = {
+			limit = { is_ver_clientkingdom = no }
+			if = {
+				limit = { is_loyal_to = root }
+				every_pop_faction = {
+					limit = {
+						NOR = {
+							ruler_has_faction_ethic = { ETHIC = xenophobe }
+							ruler_has_faction_ethic = { ETHIC = xenophile }
+							ruler_has_faction_ethic = { ETHIC = militarist }
+							ruler_has_faction_ethic = { ETHIC = pacifist }
+							ruler_has_faction_ethic = { ETHIC = materialist }
+							ruler_has_faction_ethic = { ETHIC = spiritualist }
+							ruler_has_faction_ethic = { ETHIC = authoritarian }
+							ruler_has_faction_ethic = { ETHIC = egalitarian }
+							ruler_has_faction_ethic = { ETHIC = socialism }
+							ruler_has_faction_ethic = { ETHIC = capitalism }
+						}
+					}
+					add_modifier = {
+						modifier = overlord_intervention_loyal_faction
+						years = 15
+					}
+				}
+				random_pop_faction = {
+					limit = {
+						OR = {
+							ruler_has_faction_ethic = { ETHIC = xenophobe }
+							ruler_has_faction_ethic = { ETHIC = xenophile }
+							ruler_has_faction_ethic = { ETHIC = militarist }
+							ruler_has_faction_ethic = { ETHIC = pacifist }
+							ruler_has_faction_ethic = { ETHIC = materialist }
+							ruler_has_faction_ethic = { ETHIC = spiritualist }
+							ruler_has_faction_ethic = { ETHIC = authoritarian }
+							ruler_has_faction_ethic = { ETHIC = egalitarian }
+							ruler_has_faction_ethic = { ETHIC = socialism }
+							ruler_has_faction_ethic = { ETHIC = capitalism }
+						}
+					}
+					add_modifier = {
+						modifier = overlord_intervention_loyal_leader
+						years = 15
+					}
+				}
+				every_owned_planet = {
+					limit = {
+						pop_amount > 300
+					}
+					add_modifier = {
+						modifier = overlord_intervention_loyal_planet_leader
+						years = 15
+					}
+				}
+			}
+			else = {
+				every_pop_faction = {
+					limit = {
+						NOR = {
+							ruler_has_faction_ethic = { ETHIC = xenophobe }
+							ruler_has_faction_ethic = { ETHIC = xenophile }
+							ruler_has_faction_ethic = { ETHIC = militarist }
+							ruler_has_faction_ethic = { ETHIC = pacifist }
+							ruler_has_faction_ethic = { ETHIC = materialist }
+							ruler_has_faction_ethic = { ETHIC = spiritualist }
+							ruler_has_faction_ethic = { ETHIC = authoritarian }
+							ruler_has_faction_ethic = { ETHIC = egalitarian }
+							ruler_has_faction_ethic = { ETHIC = socialism }
+							ruler_has_faction_ethic = { ETHIC = capitalism }
+						}
+					}
+					add_modifier = {
+						modifier = overlord_intervention_disloyal_faction
+						years = 20
+					}
+				}
+				random_pop_faction = {
+					limit = {
+						OR = {
+							ruler_has_faction_ethic = { ETHIC = xenophobe }
+							ruler_has_faction_ethic = { ETHIC = xenophile }
+							ruler_has_faction_ethic = { ETHIC = militarist }
+							ruler_has_faction_ethic = { ETHIC = pacifist }
+							ruler_has_faction_ethic = { ETHIC = materialist }
+							ruler_has_faction_ethic = { ETHIC = spiritualist }
+							ruler_has_faction_ethic = { ETHIC = authoritarian }
+							ruler_has_faction_ethic = { ETHIC = egalitarian }
+							ruler_has_faction_ethic = { ETHIC = socialism }
+							ruler_has_faction_ethic = { ETHIC = capitalism }
+						}
+					}
+					add_modifier = {
+						modifier = overlord_intervention_disloyal_leader
+						years = 20
+					}
+				}
+				every_owned_planet = {
+					limit = {
+						pop_amount > 300
+					}
+					add_modifier = {
+						modifier = overlord_intervention_disloyal_planet_leader
+						years = 20
+					}
+				}
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			exists = heir
+			heir = { is_same_value = event_target:chosen_leader }
+		}
+		create_leader = {
+			class = random_ruler
+			event_leader = yes
+			species = owner_main_species
+			name = random
+			effect = {
+				set_leader_flag = dummy_leader
+				save_event_target_as = dummy_heir
+			}
+		}
+		set_heir = event_target:dummy_heir
+		event_target:dummy_heir = { kill_leader = { show_notification = no } }
+	}
+	
+}
+
+
+##########
+
+empower_subject_faction = {
+	event_target:chosen_subject = {
+		random_pop_faction = {
+			limit = { is_$ETHIC$ = yes }
+			save_event_target_as = embraced_faction
+			add_modifier = { modifier = embraced_faction days = 3600 }
+			event_target:chosen_subject = {
+				shift_ethic = ethic_$ETHIC$
+				hidden_effect = {
+					add_modifier = { modifier = embraced_faction_timer days = 3600 }
+					every_pop_faction = {
+						limit = { NOT = { is_same_value = event_target:embraced_faction } }
+						add_modifier = { modifier = embraced_another_faction days = 3600 }
+					}
+				}
+			}
+			hidden_effect = {
+				save_event_target_as = TargetFaction
+				event_target:chosen_subject = {
+					every_relation = {
+						limit = {
+							NOT = { is_same_empire = root }
+							is_ai = no
+							is_country_type = default
+							has_communications = prev
+							has_intel_level = {
+								who = prev
+								category = government
+								level >= 1
+							}
+						}
+						country_event = { id = veru_misc.4000 days = 3 }
+					}
+				}
+			}
+		}
+	}
+}
+
+##########
+
+
+# Get Subject Planets
+get_relocation_planets = {
+	set_variable = { which = total_relocation_planets value = 0 }
+
+	every_owned_planet = {
+		limit = {
+			is_capital = no
+			is_occupied_flag = no
+			is_under_colonization = no
+			has_orbital_bombardment = no
+		}
+		set_planet_flag = relocation_planet
+		prev = { change_variable = { which = total_relocation_planets value = 1 } }
+	}
+
+	# Next, we save each subject as an Event Target
+	# As the scripting language doesn't have proper loops, we use a lot of ifs if there are more than 10, the event can be run again.
+	if = {
+		inline_script = { script = effects/get_relocation_planet_effect NUM = 1 }
+	}
+	if = {
+		inline_script = { script = effects/get_relocation_planet_effect NUM = 2 }
+	}
+	if = {
+		inline_script = { script = effects/get_relocation_planet_effect NUM = 3 }
+	}
+	if = {
+		inline_script = { script = effects/get_relocation_planet_effect NUM = 4 }
+	}
+	if = {
+		inline_script = { script = effects/get_relocation_planet_effect NUM = 5 }
+	}
+	if = {
+		inline_script = { script = effects/get_relocation_planet_effect NUM = 6 }
+	}
+	if = {
+		inline_script = { script = effects/get_relocation_planet_effect NUM = 7 }
+	}
+	if = {
+		inline_script = { script = effects/get_relocation_planet_effect NUM = 8 }
+	}
+	if = {
+		inline_script = { script = effects/get_relocation_planet_effect NUM = 9 }
+	}
+	if = {
+		inline_script = { script = effects/get_relocation_planet_effect NUM = 10 }
+	}
+	if = {
+		inline_script = { script = effects/get_relocation_planet_effect NUM = 11 }
+	}
+	if = {
+		inline_script = { script = effects/get_relocation_planet_effect NUM = 12 }
+	}
+	if = {
+		inline_script = { script = effects/get_relocation_planet_effect NUM = 13 }
+	}
+	if = {
+		inline_script = { script = effects/get_relocation_planet_effect NUM = 14 }
+	}
+	if = {
+		inline_script = { script = effects/get_relocation_planet_effect NUM = 15 }
+	}
+	if = {
+		inline_script = { script = effects/get_relocation_planet_effect NUM = 16 }
+	}
+	if = {
+		inline_script = { script = effects/get_relocation_planet_effect NUM = 17 }
+	}
+	if = {
+		inline_script = { script = effects/get_relocation_planet_effect NUM = 18 }
+	}
+	if = {
+		inline_script = { script = effects/get_relocation_planet_effect NUM = 19 }
+	}
+	if = {
+		inline_script = { script = effects/get_relocation_planet_effect NUM = 20 }
+	}
+}

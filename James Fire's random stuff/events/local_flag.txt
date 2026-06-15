@@ -1,0 +1,66 @@
+namespace = local_flag
+
+### Mod Flag
+country_event = {
+	id = local_flag.1
+	hide_window = yes
+	fire_only_once = yes
+	trigger = { NOT = { has_global_flag = LocalProduction_active } }
+	immediate = { set_global_flag = LocalProduction_active }
+}
+
+planet_event = {
+	id = local_flag.3
+	hide_window = no
+    is_triggered_only = yes	
+	option = {
+		name = 5
+		while = {
+			count = 5
+			create_pop = {
+				species = owner_main_species
+				ethos = random
+			}
+		}
+	}
+	option = {
+		name = 10
+		while = {
+			count = 10
+			create_pop = {
+				species = owner_main_species
+				ethos = random
+			}
+		}
+	}
+	option = {
+		name = 15
+		while = {
+			count = 15
+			create_pop = {
+				species = owner_main_species
+				ethos = random
+			}
+		}
+	}
+	option = {
+		name = 20
+		while = {
+			count = 20
+			create_pop = {
+				species = owner_main_species
+				ethos = random
+			}
+		}
+	}
+	option = {
+		name = 25
+		while = {
+			count = 25
+			create_pop = {
+				species = owner_main_species
+				ethos = random
+			}
+		}
+	}
+}

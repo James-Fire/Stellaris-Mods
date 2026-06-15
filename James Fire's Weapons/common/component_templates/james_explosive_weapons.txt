@@ -1,0 +1,277 @@
+@attack_range = 10
+@engagement_range = 125
+@launch_time = 2
+@speed1 = 550
+@speed2 = 600
+@speed3 = 650
+@speed4 = 700
+@count = 8
+@regen = 0.5
+
+@power1 = -20
+@power2 = -34
+@power3 = -45
+@power4 = -59
+
+strike_craft_component_template = {
+	key = "LARGE_FIGHTERS_HANGAR_SHIELD"
+	size = LARGE
+	entity = "bomber_entity"
+
+	weapon_type = point_defence
+	projectile_gfx = "strike_craft_laser_3"
+
+	power = @power4
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t5_cost
+		}
+		upkeep = {
+			energy = @l_t5_upkeep_energy
+			alloys = @l_t5_upkeep_alloys
+		}
+	}
+
+	count = @count
+	regeneration_per_day = @regen
+	launch_time = @launch_time
+
+	damage = { min = 6 max = 17 }
+	cooldown = 2.3
+	range = @attack_range
+	engagement_range = @engagement_range
+	accuracy = 1.00 
+	tracking = 1.00
+
+	health = 12
+	armor = 0
+	shield = 150
+	evasion = 0.80
+
+	speed = @speed4
+	rotation_speed = 0.8
+	acceleration = 1
+
+	shield_penetration = 1.0
+	armor_damage = 1.5
+
+	ship_behavior = "fighters_behavior"
+
+	icon = "GFX_ship_part_strike_craft_fighter_3"
+	icon_frame = 1
+	component_set = "FIGHTERS_HANGAR_SHIELD"
+	prerequisites = { "tech_shield_strike_craft" }
+
+	tags = { weapon_type_strike_craft }
+	ai_tags = { weapon_role_point_defense carrier }
+	point_defence_targets = { "strike_craft" }
+}
+
+strike_craft_component_template = {
+	key = "LARGE_FIGHTERS_HANGAR_VOID"
+	size = LARGE
+	entity = "fighter_entity"
+	
+	weapon_type = point_defence
+	projectile_gfx = "gamma_lasers_s"
+	power = -270
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 88
+			rare_crystals = 20
+		}		
+		upkeep = {
+			energy = 8.8
+			alloys = 1.96
+		}
+	}
+
+	count = @count
+	regeneration_per_day = @regen
+	launch_time = @launch_time
+
+	damage = { min = 24 max = 64 }
+	cooldown = 2.3
+	range = @attack_range
+	engagement_range = @engagement_range
+	accuracy = 1.00
+	tracking = 1.00
+
+	health = 12
+	armor = 0
+	shield = 150
+	evasion = 0.80
+
+	speed = @speed4
+	rotation_speed = 0.8
+	acceleration = 1
+
+	shield_penetration = 1.0
+	armor_damage = 1.75
+	
+	ship_behavior = "fighters_behavior"
+
+	icon = "GFX_ship_part_strike_craft_fighter_3"
+	icon_frame = 1
+	component_set = "FIGHTERS_HANGAR_VOID"
+	prerequisites = { "tech_void_strike_craft" }
+
+	tags = { weapon_type_strike_craft }
+	ai_tags = { weapon_role_point_defense carrier }
+	point_defence_targets = { "strike_craft" }
+}
+
+weapon_component_template = {
+	key = "VOID_MISSILE"
+	size = small
+	power = -68
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 90
+			rare_crystals = 30
+		}		
+		upkeep = {
+			energy = 1.8
+			alloys = 0.9
+			rare_crystals = 0.3
+		}
+	}
+	damage = { min = 196.0 max = 288.0 }
+	windup = { min = 10.0 max = 40.0 }
+	cooldown = 60
+	range = 100.0
+	accuracy = 1.0
+	tracking = 0.25
+	shield_penetration = 1.0
+	missile_speed = 400.0
+	missile_evasion = 0.4
+	missile_health = 28.0
+	missile_armor = 28
+	missile_shield = 28.0
+	missile_retarget_range = 100.0
+	type = missile
+	
+	icon = "GFX_ship_part_torpedo_1"
+	icon_frame = 1
+	
+	prerequisites = { "tech_hyperconductors_2b" }
+	component_set = "VOID_MISSILE"
+	type = missile
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+weapon_component_template = {
+	key = "VOID_TORPEDO_MISSILE"
+	size = torpedo
+	entity = "turret_torpedo_entity"
+	power = -132
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 204
+			rare_crystals = 68
+		}		
+		upkeep = {
+			energy = 4.08
+			alloys = 2.04
+			rare_crystals = 0.68
+		}
+	}
+	firing_arc = 25.0
+	damage = { min = 676.0 max = 1016 }
+	windup = { min = 5.0 max = 10.0 }
+	cooldown = 200
+	range = 30.0
+	accuracy = 1.0
+	tracking = 0.1
+	size_damage_factor = 1
+	shield_penetration = 1.00
+	armor_damage = 1.75
+	missile_speed = 250.0
+	missile_evasion = 0.2
+	missile_health = 40.0
+	missile_armor = 40.0
+	missile_shield = 40.0
+	missile_retarget_range = 100.0
+	type = missile
+	
+	size_damage_factor = 1
+	
+	icon = "GFX_ship_part_missile_1"
+	icon_frame = 1
+	
+	prerequisites = { "tech_hyperconductors_2b" }
+	component_set = "VOID_TORPEDO_MISSILE"
+	type = missile
+	projectile_gfx = "large_torpedo"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
+	
+	target_weights = {
+		npc_warship_01 = 5000
+		space_dragon_baby = 5000	
+		massive_ship_fallen_empire = 5000
+		large_ship_fallen_empire = 5000	
+		battleship = 5000
+		cruiser = 2500
+		destroyer = 1000
+		small_ship_fallen_empire = 1000	
+	}
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+weapon_component_template = {
+	key = "VOID_SWARMER"
+	size = torpedo
+	entity = "turret_missile_medium_entity"
+	power = -68
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 87
+			rare_crystals = 29
+		}		
+		upkeep = {
+			energy = 1.74
+			alloys = 0.87
+			rare_crystals = 0.29
+		}
+	}
+	damage = { min = 184.0 max = 340.0 }
+	windup = { min = 5.0 max = 20.0 }
+	cooldown = 30
+	range = 120.0
+	accuracy = 1.0
+	tracking = 0.3
+	shield_penetration = 1.00
+	missile_speed = 20
+	missile_evasion = 0.0
+	missile_health = 80.0
+	missile_armor = 0.0
+	missile_shield = 0.0
+	missile_retarget_range = 120.0
+	type = missile
+	
+	icon = "GFX_ship_part_swarmer_missile_1"
+	icon_frame = 1
+	
+	prerequisites = { "tech_hyperconductors_2b" }
+	component_set = "VOID_SWARMER"
+	type = missile
+	projectile_gfx = "swarmer_missiles"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_weight = {
+		weight = 10000
+	}
+}

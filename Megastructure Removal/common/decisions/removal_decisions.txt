@@ -1,0 +1,67 @@
+mark_for_toaster = {
+	sound = event_administrative_work
+	icon = decision_resources
+	
+	potential = {
+		OR = {
+			AND = {
+				is_star = yes
+				NOT = {
+					solar_system = {
+						has_star_flag = offensive_toaster_here
+					}
+				}
+			}
+			solar_system = {
+				star = {
+					OR = {
+						has_planet_flag = has_megastructure
+						has_planet_flag = megastructure
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			solar_system = {
+				set_star_flag = offensive_toaster_here
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+mark_for_toaster_habitat = {
+	sound = event_administrative_work
+	icon = decision_resources
+	
+	potential = {
+		solar_system = {
+			any_system_planet = {
+				is_planet_class = pc_habitat
+			}
+		}
+		NOT = {
+			solar_system = {
+				has_star_flag = offensive_toaster_habitat_here
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			solar_system = {
+				set_star_flag = offensive_toaster_habitat_here
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

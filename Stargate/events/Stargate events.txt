@@ -1,0 +1,1570 @@
+namespace = stargate
+
+event = {
+	id = stargate.0
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		check_galaxy_stargate_deposit = yes #Checks the entire galaxy for planets that should have a Stargate, and don't.
+	}
+	after = {
+		every_country = {
+			limit = {
+				NOT = {
+					is_country_type = primitive
+				}
+				has_stargate = yes
+			}
+			country_event = { id = stargate.1 days = 5 }
+			country_event = { id = stargate.1 days = 185 }
+		}
+	}
+}
+
+country_event = {
+	id = stargate.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		set_stargate_variables = yes
+		set_variable = { which = stargatecount value = 0 }
+		set_variable = { which = accessible_internal_civilian_stargatecount value = 0 }
+		set_variable = { which = accessible_external_civilian_stargatecount value = 0 }
+		set_variable = { which = accessible_internal_military_stargatecount value = 0 }
+		set_variable = { which = accessible_external_military_stargatecount value = 0 }
+		set_variable = { which = accessible_external_research_stargatecount value = 0 }
+		
+		#set_variable = { which = stargate_economic_connections_int_con value = 0 }
+		#set_variable = { which = stargate_economic_connections_ex_con value = 0 }
+		#set_variable = { which = stargate_military_connections_int_con value = 0 }
+		#set_variable = { which = stargate_military_connections_ex_con value = 0 }
+		#set_variable = { which = stargate_research_connections_ex_con value = 0 }
+		
+		set_variable = { which = stargate_owned_planets value = 0 }
+		every_owned_planet = {
+			limit = {
+				num_pops > 0
+			}
+			set_stargate_variables = yes
+			PREV = { change_variable = { which = stargate_owned_planets value = 1 } }
+		}
+		every_owned_planet = {
+			limit = {
+				has_deposit = d_stargate
+				num_pops > 0
+			}
+			PREV = { change_variable = { which = stargatecount value = 1 } }
+			if = {
+				limit = {
+					has_global_flag = stargate_logging
+				}
+				log = "Valid source planet found on [This.GetName]"
+			}
+		}
+		#stargate_primitive_connections = yes
+	}
+	
+	
+	after = {
+		set_variable = { which = stargate_fraction value = stargatecount }
+		set_variable = { which = stargate_malus_count value = stargatecount }
+		divide_variable = { which = stargate_fraction value = stargate_owned_planets }
+		set_variable = { which = accessible_internal_civilian_stargatecount value = stargatecount }
+		set_variable = { which = accessible_internal_military_stargatecount value = stargatecount }
+		subtract_variable = { which = accessible_internal_civilian_stargatecount value = 1 }
+		subtract_variable = { which = accessible_internal_military_stargatecount value = 1 }
+		if = {
+			limit = {
+				has_global_flag = stargate_logging
+			}
+			log = "Stargates Start for [This.GetName] [This.stargatecount]"
+			log = "Internal Civilian Connections Start for [This.GetName] [This.accessible_internal_civilian_stargatecount]"
+			log = "External Civilian Connections Start for [This.GetName] [This.accessible_external_civilian_stargatecount]"
+			log = "Internal Military Connections Start for [This.GetName] [This.accessible_internal_military_stargatecount]"
+			log = "External Military Connections Start for [This.GetName] [This.accessible_external_military_stargatecount]"
+			log = "Research Connections Start for [This.GetName] [This.accessible_external_research_stargatecount]"
+		}
+		if = {
+			limit = {
+				NOT = {
+					is_country_type = primitive
+				}
+			}
+			country_event = { id = stargate.2 days = 1 }
+		}
+	}
+}
+country_event = {
+	id = stargate.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_subject = {
+			limit = {
+				NOT = {
+					is_in_federation_with = ROOT
+				}
+				has_stargate = yes
+				ROOT = { is_overlord = yes }
+			}
+			stargate_connection_opinion_set = yes
+			transfer_stargate_connection_count = yes
+			if = {
+				limit = {
+					has_global_flag = stargate_logging
+				}
+				log = "Stargates Subject [This.GetName] [This.stargatecount]"
+			}
+			ROOT = {
+				stargate_connection_opinion_set = yes
+				transfer_stargate_connection_count = yes
+				if = {
+					limit = {
+						has_global_flag = stargate_logging
+					}
+					log = "Subject External Military Connections after [PREV.GetName] for [This.GetName] [This.accessible_external_military_stargatecount]"
+					log = "Subject External Civilian Connections after [PREV.GetName] for [This.GetName] [This.accessible_external_civilian_stargatecount]"
+					log = "Subject Research Connections after [PREV.GetName] for [This.GetName] [This.accessible_external_research_stargatecount]"
+				}
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				has_global_flag = stargate_logging
+			}
+			log = "Stargates Host Before Allies [This.GetName] [This.stargatecount]"
+		}
+		every_country = {
+			limit = {
+				NOT = { is_same_value = prev }
+				NOT = {
+					is_country_type = primitive
+				}
+				has_communications = ROOT
+				has_stargate = yes
+			}
+			remove_opinion_modifier = {
+				who = root
+				modifier = opinion_stargate_access
+			}
+		}
+		every_country = {
+			limit = {
+				NOT = { is_same_value = prev }
+				NOT = {
+					is_country_type = primitive
+				}
+				has_communications = ROOT
+				has_stargate = yes
+			}
+			if = {
+				limit = {
+					has_global_flag = stargate_logging
+				}
+				log = "Stargates Military Ally [This.GetName] [This.stargatecount]"
+			}
+			stargate_connection_opinion_set = yes
+			transfer_stargate_connection_count = yes
+			ROOT = {
+				stargate_connection_opinion_set = yes
+				transfer_stargate_connection_count = yes
+			}
+		}
+		reset_stargate_resettle = yes
+		#accessible_internal_military_stargatecount
+		#accessible_internal_civilian_stargatecount
+		#stargate_connection_mult
+		country_event = { id = stargate.3 days = 1 }
+	}
+}
+
+country_event = {
+	id = stargate.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_global_flag = stargate_logging
+			}
+			log = "Final Internal Military Connections for [This.GetName] [This.accessible_internal_military_stargatecount]"
+			log = "Final External Military Connections for [This.GetName] [This.accessible_external_military_stargatecount]"
+			log = "Final Internal Civilian Connections for [This.GetName] [This.accessible_internal_civilian_stargatecount]"
+			log = "Final External Civilian Connections for [This.GetName] [This.accessible_external_civilian_stargatecount]"
+			log = "Final Research Connections for [This.GetName] [This.accessible_external_research_stargatecount]"
+			#log = "Stargate cost mult for [This.GetName] [This.stargate_connection_mult]"
+		}
+		every_owned_planet = {
+			limit = {
+				has_deposit = d_stargate
+				num_pops > 0
+			}
+			set_variable = { which = accessible_internal_military_stargatecount value = ROOT.accessible_internal_military_stargatecount }
+			set_variable = { which = accessible_external_military_stargatecount value = ROOT.accessible_external_military_stargatecount }
+			set_variable = { which = accessible_internal_civilian_stargatecount value = ROOT.accessible_internal_civilian_stargatecount }
+			set_variable = { which = accessible_external_civilian_stargatecount value = ROOT.accessible_external_civilian_stargatecount }
+			set_variable = { which = accessible_external_research_stargatecount value = ROOT.accessible_external_research_stargatecount }
+		}
+	}
+	after = {
+		every_owned_planet = {
+			limit = {
+				has_deposit = d_stargate
+				num_pops > 0
+			}
+			if = {
+				limit = {
+					has_global_flag = stargate_logging
+				}
+				log = "Valid connection planet found for [PREV.GetName]"
+			}
+			random_list = {
+				10 = {
+					planet_event = { id = stargate.4 days = 1 }
+				}
+				10 = {
+					planet_event = { id = stargate.4 days = 16 }
+				}
+				10 = {
+					planet_event = { id = stargate.4 days = 31 }
+				}
+				10 = {
+					planet_event = { id = stargate.4 days = 46 }
+				}
+				10 = {
+					planet_event = { id = stargate.4 days = 61 }
+				}
+				10 = {
+					planet_event = { id = stargate.4 days = 76 }
+				}
+				10 = {
+					planet_event = { id = stargate.4 days = 91 }
+				}
+				10 = {
+					planet_event = { id = stargate.4 days = 106 }
+				}
+				10 = {
+					planet_event = { id = stargate.4 days = 121 }
+				}
+				10 = {
+					planet_event = { id = stargate.4 days = 136 }
+				}
+				10 = {
+					planet_event = { id = stargate.4 days = 151 }
+				}
+				10 = {
+					planet_event = { id = stargate.4 days = 166 }
+				}
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = stargate.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_global_flag = stargate_logging
+			}
+			log = "Available Internal Military Connections on [This.GetName] for [owner.GetName] [This.accessible_internal_military_stargatecount]"
+			log = "Available External Military Connections on [This.GetName] for [owner.GetName] [This.accessible_external_military_stargatecount]"
+			log = "Available Internal Civilian Connections on [This.GetName] for [owner.GetName] [This.accessible_internal_civilian_stargatecount]"
+			log = "Available External Civilian Connections on [This.GetName] for [owner.GetName] [This.accessible_external_civilian_stargatecount]"
+			log = "Available Research Connections for on [This.GetName] [owner.GetName] [This.accessible_external_research_stargatecount]"
+			#log = "Stargate cost mult for [This.GetName] [This.stargate_connection_mult]"
+		}
+		every_deposit = {
+			limit = {
+				is_deposit_type = d_stargate_internal_civilian_network
+			}
+			remove_deposit = yes
+			prev.owner = { change_variable = { which = stargate_economic_connections_int_con value = -1 } }
+		}
+		every_deposit = {
+			limit = {
+				is_deposit_type = d_stargate_external_civilian_network
+			}
+			remove_deposit = yes
+			prev.owner = { change_variable = { which = stargate_economic_connections_ex_con value = -1 } }
+		}
+		every_deposit = {
+			limit = {
+				is_deposit_type = d_stargate_internal_military_network
+			}
+			remove_deposit = yes
+			prev.owner = { change_variable = { which = stargate_military_connections_int_con value = -1 } }
+		}
+		every_deposit = {
+			limit = {
+				is_deposit_type = d_stargate_external_military_network
+			}
+			remove_deposit = yes
+			prev.owner = { change_variable = { which = stargate_military_connections_ex_con value = -1 } }
+		}
+		every_deposit = {
+			limit = {
+				is_deposit_type = d_stargate_external_research_network
+			}
+			remove_deposit = yes
+			prev.owner = { change_variable = { which = stargate_research_connections_ex_con value = -1 } }
+		}
+		remove_modifier = stargate_connection_cost
+		set_variable = { which = stargate_connections value = 0 }
+		set_stargate_connection_caps = yes
+	}
+	after = {
+		while = {
+			count = 90
+			limit = {
+				OR = {
+					OR = {
+						count_deposit = { limit = { is_deposit_type = d_stargate_internal_civilian_network } count < int_civ_stargatecount_cap }
+						NOT = { check_variable = { which = int_civ_stargatecount_cap value > 1 } }
+					}
+					OR = {
+						count_deposit = { limit = { is_deposit_type = d_stargate_external_civilian_network } count < ex_civ_stargatecount_cap }
+						NOT = { check_variable = { which = ex_civ_stargatecount_cap value > 1 } }
+					}
+					OR = {
+						count_deposit = { limit = { is_deposit_type = d_stargate_internal_military_network } count < int_mil_stargatecount_cap }
+						NOT = { check_variable = { which = int_mil_stargatecount_cap value > 1 } }
+					}
+					OR = {
+						count_deposit = { limit = { is_deposit_type = d_stargate_external_military_network } count < ex_mil_stargatecount_cap }
+						NOT = { check_variable = { which = ex_mil_stargatecount_cap value > 1 } }
+					}
+					OR = {
+						count_deposit = { limit = { is_deposit_type = d_stargate_external_research_network } count < ex_res_stargatecount_cap }
+						NOT = { check_variable = { which = ex_res_stargatecount_cap value > 1 } }
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_priority_1 = yes
+				}
+				while = {
+					count = 90
+					limit = {
+						has_int_econ_con_space = yes
+						has_int_civ_prioty_1 = yes
+					}
+					change_variable = { which = accessible_internal_civilian_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_economic_connections_int_con value = 1 } }
+					add_deposit = d_stargate_internal_civilian_network
+				}
+				while = {
+					count = 90
+					limit = {
+						has_ex_econ_con_space = yes
+						has_ex_civ_prioty_1 = yes
+					}
+					change_variable = { which = accessible_external_civilian_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_economic_connections_ex_con value = 1 } }
+					add_deposit = d_stargate_external_civilian_network
+				}
+				while = {
+					count = 90
+					limit = {
+						has_int_mil_con_space = yes
+						has_int_mil_prioty_1 = yes
+					}
+					change_variable = { which = accessible_internal_military_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_military_connections_int_con value = 1 } }
+					add_deposit = d_stargate_internal_military_network
+				}
+				while = {
+					count = 90
+					limit = {
+						has_ex_mil_con_space = yes
+						has_ex_mil_prioty_1 = yes
+					}
+					change_variable = { which = accessible_external_military_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_military_connections_ex_con value = 1 } }
+					add_deposit = d_stargate_external_military_network
+				}
+				while = {
+					count = 90
+					limit = {
+						has_ex_res_con_space = yes
+						has_ex_res_prioty_1 = yes
+					}
+					change_variable = { which = accessible_external_research_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_research_connections_ex_con value = 1 } }
+					add_deposit = d_stargate_external_research_network
+				}
+			}
+			if = {
+				limit = {
+					has_priority_2 = yes
+				}
+				while = {
+					count = 90
+					limit = {
+						has_int_econ_con_space = yes
+						has_int_civ_prioty_2 = yes
+					}
+					change_variable = { which = accessible_internal_civilian_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_economic_connections_int_con value = 1 } }
+					add_deposit = d_stargate_internal_civilian_network
+				}
+				while = {
+					count = 90
+					limit = {
+						has_ex_econ_con_space = yes
+						has_ex_civ_prioty_2 = yes
+					}
+					change_variable = { which = accessible_external_civilian_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_economic_connections_ex_con value = 1 } }
+					add_deposit = d_stargate_external_civilian_network
+				}
+				while = {
+					count = 90
+					limit = {
+						has_int_mil_con_space = yes
+						has_int_mil_prioty_2 = yes
+					}
+					change_variable = { which = accessible_internal_military_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_military_connections_int_con value = 1 } }
+					add_deposit = d_stargate_internal_military_network
+				}
+				while = {
+					count = 90
+					limit = {
+						has_ex_mil_con_space = yes
+						has_ex_mil_prioty_2 = yes
+					}
+					change_variable = { which = accessible_external_military_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_military_connections_ex_con value = 1 } }
+					add_deposit = d_stargate_external_military_network
+				}
+				while = {
+					count = 90
+					limit = {
+						has_ex_res_con_space = yes
+						has_ex_res_prioty_2 = yes
+					}
+					change_variable = { which = accessible_external_research_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_research_connections_ex_con value = 1 } }
+					add_deposit = d_stargate_external_research_network
+				}
+			}
+			if = {
+				limit = {
+					has_priority_3 = yes
+				}
+				while = {
+					count = 90
+					limit = {
+						has_int_econ_con_space = yes
+						has_int_civ_prioty_3 = yes
+					}
+					change_variable = { which = accessible_internal_civilian_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_economic_connections_int_con value = 1 } }
+					add_deposit = d_stargate_internal_civilian_network
+				}
+				while = {
+					count = 90
+					limit = {
+						has_ex_econ_con_space = yes
+						has_ex_civ_prioty_3 = yes
+					}
+					change_variable = { which = accessible_external_civilian_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_economic_connections_ex_con value = 1 } }
+					add_deposit = d_stargate_external_civilian_network
+				}
+				while = {
+					count = 90
+					limit = {
+						has_int_mil_con_space = yes
+						has_int_mil_prioty_3 = yes
+					}
+					change_variable = { which = accessible_internal_military_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_military_connections_int_con value = 1 } }
+					add_deposit = d_stargate_internal_military_network
+				}
+				while = {
+					count = 90
+					limit = {
+						has_ex_mil_con_space = yes
+						has_ex_mil_prioty_3 = yes
+					}
+					change_variable = { which = accessible_external_military_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_military_connections_ex_con value = 1 } }
+					add_deposit = d_stargate_external_military_network
+				}
+				while = {
+					count = 90
+					limit = {
+						has_ex_res_con_space = yes
+						has_ex_res_prioty_3 = yes
+					}
+					change_variable = { which = accessible_external_research_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_research_connections_ex_con value = 1 } }
+					add_deposit = d_stargate_external_research_network
+				}
+			}
+			if = {
+				limit = {
+					has_priority_4 = yes
+				}
+				while = {
+					count = 90
+					limit = {
+						has_int_econ_con_space = yes
+						has_int_civ_prioty_4 = yes
+					}
+					change_variable = { which = accessible_internal_civilian_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_economic_connections_int_con value = 1 } }
+					add_deposit = d_stargate_internal_civilian_network
+				}
+				while = {
+					count = 90
+					limit = {
+						has_ex_econ_con_space = yes
+						has_ex_civ_prioty_4 = yes
+					}
+					change_variable = { which = accessible_external_civilian_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_economic_connections_ex_con value = 1 } }
+					add_deposit = d_stargate_external_civilian_network
+				}
+				while = {
+					count = 90
+					limit = {
+						has_int_mil_con_space = yes
+						has_int_mil_prioty_4 = yes
+					}
+					change_variable = { which = accessible_internal_military_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_military_connections_int_con value = 1 } }
+					add_deposit = d_stargate_internal_military_network
+				}
+				while = {
+					count = 90
+					limit = {
+						has_ex_mil_con_space = yes
+						has_ex_mil_prioty_4 = yes
+					}
+					change_variable = { which = accessible_external_military_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_military_connections_ex_con value = 1 } }
+					add_deposit = d_stargate_external_military_network
+				}
+				while = {
+					count = 90
+					limit = {
+						has_ex_res_con_space = yes
+						has_ex_res_prioty_4 = yes
+					}
+					change_variable = { which = accessible_external_research_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_research_connections_ex_con value = 1 } }
+					add_deposit = d_stargate_external_research_network
+				}
+			}
+			if = {
+				limit = {
+					has_priority_5 = yes
+				}
+				while = {
+					count = 90
+					limit = {
+						has_int_econ_con_space = yes
+						has_int_civ_prioty_5 = yes
+					}
+					change_variable = { which = accessible_internal_civilian_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_economic_connections_int_con value = 1 } }
+					add_deposit = d_stargate_internal_civilian_network
+				}
+				while = {
+					count = 90
+					limit = {
+						has_ex_econ_con_space = yes
+						has_ex_civ_prioty_5 = yes
+					}
+					change_variable = { which = accessible_external_civilian_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_economic_connections_ex_con value = 1 } }
+					add_deposit = d_stargate_external_civilian_network
+				}
+				while = {
+					count = 90
+					limit = {
+						has_int_mil_con_space = yes
+						has_int_mil_prioty_5 = yes
+					}
+					change_variable = { which = accessible_internal_military_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_military_connections_int_con value = 1 } }
+					add_deposit = d_stargate_internal_military_network
+				}
+				while = {
+					count = 90
+					limit = {
+						has_ex_mil_con_space = yes
+						has_ex_mil_prioty_5 = yes
+					}
+					change_variable = { which = accessible_external_military_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_military_connections_ex_con value = 1 } }
+					add_deposit = d_stargate_external_military_network
+				}
+				while = {
+					count = 90
+					limit = {
+						has_ex_res_con_space = yes
+						has_ex_res_prioty_5 = yes
+					}
+					change_variable = { which = accessible_external_research_stargatecount value = -1 }
+					change_variable = { which = stargate_connections value = 1 }
+					owner = { change_variable = { which = stargate_research_connections_ex_con value = 1 } }
+					add_deposit = d_stargate_external_research_network
+				}
+			}
+		}
+		planet_event = { id = stargate.40 days = 1 }
+	}
+}
+
+planet_event = {
+	id = stargate.40
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_global_flag = stargate_logging
+			}
+			log = "Stargate Connections on [This.GetName] for [owner.GetName] [This.stargate_connections]"
+		}
+		calc_connections_upkeep_part_1 = yes
+	}
+	after = {
+		if = {
+			limit = {
+				has_global_flag = stargate_logging
+			}
+			log = "Stargate Connection mult on [This.GetName] for [owner.GetName] [This.stargate_connection_mult]"
+		}
+		add_modifier = {
+			modifier = stargate_connection_cost
+			multiplier = stargate_connection_mult
+		}
+	}
+}
+
+country_event = {
+	id = stargate.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				last_changed_policy = stargate_civilian_security
+				has_country_flag = stargate_civilian_closed
+			}
+			remove_country_flag = stargate_civilian_closed
+		}
+		else_if = {
+			limit = {
+				last_changed_policy = stargate_civilian_security
+				NOT = {
+					has_country_flag = stargate_civilian_closed
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = stargate_civilian_open
+				}
+				remove_country_flag = stargate_civilian_open
+				switch = {
+					trigger = has_policy_flag
+					stargate_civilian_economy = {
+						set_country_flag = broke_stargate_civilian_open_borders
+					}
+					stargate_civilian_science = {
+						set_country_flag = broke_stargate_civilian_open_borders
+						set_country_flag = broke_stargate_civilian_trade
+					}
+					stargate_civilian_allies = {
+						set_country_flag = broke_stargate_civilian_open_borders
+						set_country_flag = broke_stargate_civilian_trade
+						set_country_flag = broke_stargate_civilian_science
+					}
+					stargate_civilian_fed = {
+						set_country_flag = broke_stargate_civilian_open_borders
+						set_country_flag = broke_stargate_civilian_trade
+						set_country_flag = broke_stargate_civilian_science
+						set_country_flag = broke_stargate_civilian_allies
+					}
+					stargate_civilian_closed = {
+						set_country_flag = broke_stargate_civilian_open_borders
+						set_country_flag = broke_stargate_civilian_trade
+						set_country_flag = broke_stargate_civilian_science
+						set_country_flag = broke_stargate_civilian_allies
+						set_country_flag = broke_stargate_civilian_fed
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_civilian_economy
+				}
+				remove_country_flag = stargate_civilian_economy
+				switch = {
+					trigger = has_policy_flag
+					stargate_civilian_science = {
+						set_country_flag = broke_stargate_civilian_trade
+					}
+					stargate_civilian_allies = {
+						set_country_flag = broke_stargate_civilian_trade
+						set_country_flag = broke_stargate_civilian_science
+					}
+					stargate_civilian_fed = {
+						set_country_flag = broke_stargate_civilian_trade
+						set_country_flag = broke_stargate_civilian_science
+						set_country_flag = broke_stargate_civilian_allies
+					}
+					stargate_civilian_closed = {
+						set_country_flag = broke_stargate_civilian_trade
+						set_country_flag = broke_stargate_civilian_science
+						set_country_flag = broke_stargate_civilian_allies
+						set_country_flag = broke_stargate_civilian_fed
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_civilian_science
+				}
+				remove_country_flag = stargate_civilian_science
+				switch = {
+					trigger = has_policy_flag
+					stargate_civilian_allies = {
+						set_country_flag = broke_stargate_civilian_science
+					}
+					stargate_civilian_fed = {
+						set_country_flag = broke_stargate_civilian_science
+						set_country_flag = broke_stargate_civilian_allies
+					}
+					stargate_civilian_closed = {
+						set_country_flag = broke_stargate_civilian_science
+						set_country_flag = broke_stargate_civilian_allies
+						set_country_flag = broke_stargate_civilian_fed
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_civilian_allies
+				}
+				remove_country_flag = stargate_civilian_allies
+				switch = {
+					trigger = has_policy_flag
+					stargate_civilian_fed = {
+						set_country_flag = broke_stargate_civilian_allies
+					}
+					stargate_civilian_closed = {
+						set_country_flag = broke_stargate_civilian_allies
+						set_country_flag = broke_stargate_civilian_fed
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_civilian_fed
+				}
+				remove_country_flag = stargate_civilian_fed
+				switch = {
+					trigger = has_policy_flag
+					stargate_civilian_closed = {
+						set_country_flag = broke_stargate_civilian_fed
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				last_changed_policy = stargate_military_security
+				has_country_flag = stargate_military_closed
+			}
+			remove_country_flag = stargate_military_closed
+		}
+		else_if = {
+			limit = {
+				last_changed_policy = stargate_military_security
+				NOT = {
+					has_country_flag = stargate_military_closed
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = stargate_military_open
+				}
+				remove_country_flag = stargate_military_open
+				switch = {
+					trigger = has_policy_flag
+					stargate_military_nap = {
+						set_country_flag = broke_stargate_military_open_borders
+					}
+					stargate_military_defensive = {
+						set_country_flag = broke_stargate_military_open_borders
+						set_country_flag = broke_stargate_military_nap
+					}
+					stargate_military_allies = {
+						set_country_flag = broke_stargate_military_open_borders
+						set_country_flag = broke_stargate_military_nap
+						set_country_flag = broke_stargate_military_defensive
+					}
+					stargate_military_fed = {
+						set_country_flag = broke_stargate_military_open_borders
+						set_country_flag = broke_stargate_military_nap
+						set_country_flag = broke_stargate_military_defensive
+						set_country_flag = broke_stargate_military_allies
+					}
+					stargate_military_closed = {
+						set_country_flag = broke_stargate_military_open_borders
+						set_country_flag = broke_stargate_military_nap
+						set_country_flag = broke_stargate_military_defensive
+						set_country_flag = broke_stargate_military_allies
+						set_country_flag = broke_stargate_military_fed
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_military_nap
+				}
+				remove_country_flag = stargate_military_nap
+				switch = {
+					trigger = has_policy_flag
+					stargate_military_defensive = {
+						set_country_flag = broke_stargate_military_nap
+					}
+					stargate_military_allies = {
+						set_country_flag = broke_stargate_military_nap
+						set_country_flag = broke_stargate_military_defensive
+					}
+					stargate_military_fed = {
+						set_country_flag = broke_stargate_military_nap
+						set_country_flag = broke_stargate_military_defensive
+						set_country_flag = broke_stargate_military_allies
+					}
+					stargate_military_closed = {
+						set_country_flag = broke_stargate_military_nap
+						set_country_flag = broke_stargate_military_defensive
+						set_country_flag = broke_stargate_military_allies
+						set_country_flag = broke_stargate_military_fed
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_military_defensive
+				}
+				remove_country_flag = stargate_military_defensive
+				switch = {
+					trigger = has_policy_flag
+					stargate_military_allies = {
+						set_country_flag = broke_stargate_military_defensive
+					}
+					stargate_military_fed = {
+						set_country_flag = broke_stargate_military_defensive
+						set_country_flag = broke_stargate_military_allies
+					}
+					stargate_military_closed = {
+						set_country_flag = broke_stargate_military_defensive
+						set_country_flag = broke_stargate_military_allies
+						set_country_flag = broke_stargate_military_fed
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_military_allies
+				}
+				remove_country_flag = stargate_military_allies
+				switch = {
+					trigger = has_policy_flag
+					stargate_military_fed = {
+						set_country_flag = broke_stargate_military_allies
+					}
+					stargate_military_closed = {
+						set_country_flag = broke_stargate_military_allies
+						set_country_flag = broke_stargate_military_fed
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = stargate_military_fed
+				}
+				remove_country_flag = stargate_military_fed
+				switch = {
+					trigger = has_policy_flag
+					stargate_military_closed = {
+						set_country_flag = broke_stargate_military_fed
+					}
+				}
+			}
+		}
+	}
+	
+	after = {
+		if = {
+			limit = {
+				last_changed_policy = stargate_civilian_security
+				NOT = { has_country_flag = stargate_civilian_closed }
+			}
+			random_list = {
+				10 = {
+					country_event = { id = stargate.6 days = 6 }
+				}
+				10 = {
+					country_event = { id = stargate.6 days = 21 }
+				}
+				10 = {
+					country_event = { id = stargate.6 days = 36 }
+				}
+				10 = {
+					country_event = { id = stargate.6 days = 51 }
+				}
+				10 = {
+					country_event = { id = stargate.6 days = 66 }
+				}
+				10 = {
+					country_event = { id = stargate.6 days = 81 }
+				}
+				10 = {
+					country_event = { id = stargate.6 days = 96 }
+				}
+				10 = {
+					country_event = { id = stargate.6 days = 111 }
+				}
+				10 = {
+					country_event = { id = stargate.6 days = 126 }
+				}
+				10 = {
+					country_event = { id = stargate.6 days = 141 }
+				}
+				10 = {
+					country_event = { id = stargate.6 days = 156 }
+				}
+				10 = {
+					country_event = { id = stargate.6 days = 171 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				last_changed_policy = stargate_military_security
+				NOT = { has_country_flag = stargate_military_closed }
+			}
+			random_list = {
+				10 = {
+					country_event = { id = stargate.7 days = 6 }
+				}
+				10 = {
+					country_event = { id = stargate.7 days = 21 }
+				}
+				10 = {
+					country_event = { id = stargate.7 days = 36 }
+				}
+				10 = {
+					country_event = { id = stargate.7 days = 51 }
+				}
+				10 = {
+					country_event = { id = stargate.7 days = 66 }
+				}
+				10 = {
+					country_event = { id = stargate.7 days = 81 }
+				}
+				10 = {
+					country_event = { id = stargate.7 days = 96 }
+				}
+				10 = {
+					country_event = { id = stargate.7 days = 111 }
+				}
+				10 = {
+					country_event = { id = stargate.7 days = 126 }
+				}
+				10 = {
+					country_event = { id = stargate.7 days = 141 }
+				}
+				10 = {
+					country_event = { id = stargate.7 days = 156 }
+				}
+				10 = {
+					country_event = { id = stargate.7 days = 171 }
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = stargate.6
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = broke_stargate_civilian_open_borders
+			}
+			every_country = {
+				limit = {
+					has_policy_flag = stargate_civilian_open
+					has_communications = ROOT
+					has_stargate = yes
+				}
+				while = {
+					limit = {
+						ROOT = { check_variable = { which = stargate_malus_count value > 0 } }
+					}
+					ROOT = { change_variable = { which = stargate_malus_count value = -1 } }
+					add_opinion_modifier = {
+						who = root
+						modifier = opinion_stargate_revokation
+					}
+				}
+			}
+			set_variable = { which = stargate_malus_count value = stargatecount }
+		}
+		if = {
+			limit = {
+				has_country_flag = broke_stargate_civilian_trade
+			}
+			every_country = {
+				limit = {
+					OR = {
+						has_policy_flag = stargate_civilian_open
+						has_policy_flag = stargate_civilian_economy
+					}
+					has_communications = ROOT
+					has_stargate = yes
+				}
+				while = {
+					limit = {
+						ROOT = { check_variable = { which = stargate_malus_count value > 0 } }
+					}
+					ROOT = { change_variable = { which = stargate_malus_count value = -1 } }
+					add_opinion_modifier = {
+						who = root
+						modifier = opinion_stargate_revokation
+					}
+				}
+			}
+			set_variable = { which = stargate_malus_count value = stargatecount }
+		}
+		if = {
+			limit = {
+				has_country_flag = broke_stargate_civilian_science
+			}
+			every_country = {
+				limit = {
+					OR = {
+						has_policy_flag = stargate_civilian_open
+						has_policy_flag = stargate_civilian_economy
+						has_policy_flag = stargate_civilian_science
+					}
+					has_communications = ROOT
+					has_stargate = yes
+				}
+				while = {
+					limit = {
+						ROOT = { check_variable = { which = stargate_malus_count value > 0 } }
+					}
+					ROOT = { change_variable = { which = stargate_malus_count value = -1 } }
+					add_opinion_modifier = {
+						who = root
+						modifier = opinion_stargate_revokation
+					}
+				}
+			}
+			set_variable = { which = stargate_malus_count value = stargatecount }
+		}
+		if = {
+			limit = {
+				has_country_flag = broke_stargate_civilian_allies
+			}
+			every_country = {
+				limit = {
+					OR = {
+						has_policy_flag = stargate_civilian_open
+						has_policy_flag = stargate_civilian_economy
+						has_policy_flag = stargate_civilian_science
+						has_policy_flag = stargate_civilian_allies
+					}
+					has_communications = ROOT
+					has_stargate = yes
+				}
+				while = {
+					limit = {
+						ROOT = { check_variable = { which = stargate_malus_count value > 0 } }
+					}
+					ROOT = { change_variable = { which = stargate_malus_count value = -1 } }
+					add_opinion_modifier = {
+						who = root
+						modifier = opinion_stargate_revokation
+					}
+				}
+			}
+			set_variable = { which = stargate_malus_count value = stargatecount }
+		}
+		if = {
+			limit = {
+				has_country_flag = broke_stargate_civilian_fed
+			}
+			every_country = {
+				limit = {
+					OR = {
+						has_policy_flag = stargate_civilian_open
+						has_policy_flag = stargate_civilian_economy
+						has_policy_flag = stargate_civilian_science
+						has_policy_flag = stargate_civilian_allies
+						has_policy_flag = stargate_civilian_fed
+					}
+					has_communications = ROOT
+					has_stargate = yes
+				}
+				while = {
+					limit = {
+						ROOT = { check_variable = { which = stargate_malus_count value > 0 } }
+					}
+					ROOT = { change_variable = { which = stargate_malus_count value = -1 } }
+					add_opinion_modifier = {
+						who = root
+						modifier = opinion_stargate_revokation
+					}
+				}
+			}
+			set_variable = { which = stargate_malus_count value = stargatecount }
+		}
+	}
+}
+
+country_event = {
+	id = stargate.7
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = broke_stargate_military_open_borders
+			}
+			every_country = {
+				limit = {
+					has_policy_flag = stargate_military_open
+					has_communications = ROOT
+					has_stargate = yes
+				}
+				while = {
+					limit = {
+						ROOT = { check_variable = { which = stargate_malus_count value > 0 } }
+					}
+					ROOT = { change_variable = { which = stargate_malus_count value = -1 } }
+					add_opinion_modifier = {
+						who = root
+						modifier = opinion_stargate_revokation
+					}
+				}
+			}
+			set_variable = { which = stargate_malus_count value = stargatecount }
+		}
+		if = {
+			limit = {
+				has_country_flag = broke_stargate_military_nap
+			}
+			every_country = {
+				limit = {
+					OR = {
+						has_policy_flag = stargate_military_open
+						has_policy_flag = stargate_military_nap
+					}
+					has_communications = ROOT
+					has_stargate = yes
+				}
+				while = {
+					limit = {
+						ROOT = { check_variable = { which = stargate_malus_count value > 0 } }
+					}
+					ROOT = { change_variable = { which = stargate_malus_count value = -1 } }
+					add_opinion_modifier = {
+						who = root
+						modifier = opinion_stargate_revokation
+					}
+				}
+			}
+			set_variable = { which = stargate_malus_count value = stargatecount }
+		}
+		if = {
+			limit = {
+				has_country_flag = broke_stargate_military_defensive
+			}
+			every_country = {
+				limit = {
+					OR = {
+						has_policy_flag = stargate_military_open
+						has_policy_flag = stargate_military_nap
+						has_policy_flag = stargate_military_defensive
+					}
+					has_communications = ROOT
+					has_stargate = yes
+				}
+				while = {
+					limit = {
+						ROOT = { check_variable = { which = stargate_malus_count value > 0 } }
+					}
+					ROOT = { change_variable = { which = stargate_malus_count value = -1 } }
+					add_opinion_modifier = {
+						who = root
+						modifier = opinion_stargate_revokation
+					}
+				}
+			}
+			set_variable = { which = stargate_malus_count value = stargatecount }
+		}
+		if = {
+			limit = {
+				has_country_flag = broke_stargate_military_allies
+			}
+			every_country = {
+				limit = {
+					OR = {
+						has_policy_flag = stargate_military_open
+						has_policy_flag = stargate_military_nap
+						has_policy_flag = stargate_military_defensive
+						has_policy_flag = stargate_military_allies
+					}
+					has_communications = ROOT
+					has_stargate = yes
+				}
+				while = {
+					limit = {
+						ROOT = { check_variable = { which = stargate_malus_count value > 0 } }
+					}
+					ROOT = { change_variable = { which = stargate_malus_count value = -1 } }
+					add_opinion_modifier = {
+						who = root
+						modifier = opinion_stargate_revokation
+					}
+				}
+			}
+			set_variable = { which = stargate_malus_count value = stargatecount }
+		}
+		if = {
+			limit = {
+				has_country_flag = broke_stargate_military_fed
+			}
+			every_country = {
+				limit = {
+					OR = {
+						has_policy_flag = stargate_military_open
+						has_policy_flag = stargate_military_nap
+						has_policy_flag = stargate_military_defensive
+						has_policy_flag = stargate_military_allies
+						has_policy_flag = stargate_military_fed
+					}
+					has_communications = ROOT
+					has_stargate = yes
+				}
+				while = {
+					limit = {
+						ROOT = { check_variable = { which = stargate_malus_count value > 0 } }
+					}
+					ROOT = { change_variable = { which = stargate_malus_count value = -1 } }
+					add_opinion_modifier = {
+						who = root
+						modifier = opinion_stargate_revokation
+					}
+				}
+			}
+			set_variable = { which = stargate_malus_count value = stargatecount }
+		}
+	}
+}
+
+event = {
+	id = stargate.10
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = {
+				is_ai = no
+				NOT = { has_global_flag = stargate_seeding }
+			}
+			set_global_flag = stargate_seeding
+			country_event = { id = stargate.11 days = -1 }
+			stargate_starting_flags = yes
+		}
+	}
+}
+
+country_event = {
+	id = stargate.11
+	is_triggered_only = yes
+	title = "stargate.11.name"
+	desc = "stargate.11.desc"
+	
+	immediate = {
+	}
+	
+	option = {
+		name = "stargate.11.a"
+		trigger = {
+			NOT = { has_global_flag = stargate_seeding_completed }
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = stargate_seeding_completed }
+				}
+				set_global_flag = stargate_seeding_completed
+				every_system = {
+					if = {
+						limit = {
+							any_system_planet = { is_colonizable = yes }	
+						}
+						every_system_planet = {
+							limit = {
+								is_colonizable = yes
+								can_have_seed_stargate = yes
+							}
+							set_planet_flag = stargate_check
+							random_list = {
+								1 = {
+									add_stargate = yes
+								}
+								0 = { }
+							}
+						}
+					}
+					else = {
+						random_system_planet = { 
+							limit = {
+								can_have_seed_stargate = yes
+							}
+							set_planet_flag = stargate_check
+							random_list = {
+								1 = {
+									add_stargate = yes
+								}
+								0 = { }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "stargate.11.b"
+		trigger = {
+			NOT = { has_global_flag = stargate_seeding_completed }
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = stargate_seeding_completed }
+				}
+				set_global_flag = stargate_seeding_completed
+				every_system = {
+					if = {
+						limit = {
+							any_system_planet = { is_colonizable = yes }	
+						}
+						every_system_planet = {
+							limit = {
+								is_colonizable = yes
+								can_have_seed_stargate = yes
+							}
+							set_planet_flag = stargate_check
+							random_list = {
+								3 = {
+									add_stargate = yes
+								}
+								1 = { }
+							}
+						}
+					}
+					else = {
+						random_system_planet = { 
+							limit = {
+								can_have_seed_stargate = yes
+							}
+							set_planet_flag = stargate_check
+							random_list = {
+								3 = {
+									add_stargate = yes
+								}
+								1 = { }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "stargate.11.c"
+		trigger = {
+			NOT = { has_global_flag = stargate_seeding_completed }
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = stargate_seeding_completed }
+				}
+				set_global_flag = stargate_seeding_completed
+				every_system = {
+					if = {
+						limit = {
+							any_system_planet = { is_colonizable = yes }	
+						}
+						every_system_planet = {
+							limit = {
+								is_colonizable = yes
+								can_have_seed_stargate = yes
+							}
+							set_planet_flag = stargate_check
+							random_list = {
+								1 = {
+									add_stargate = yes
+								}
+								1 = { }
+							}
+						}
+					}
+					else = {
+						random_system_planet = { 
+							limit = {
+								can_have_seed_stargate = yes
+							}
+							set_planet_flag = stargate_check
+							random_list = {
+								1 = {
+									add_stargate = yes
+								}
+								1 = { }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "stargate.11.d"
+		trigger = {
+			NOT = { has_global_flag = stargate_seeding_completed }
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = stargate_seeding_completed }
+				}
+				set_global_flag = stargate_seeding_completed
+				every_system = {
+					if = {
+						limit = {
+							any_system_planet = { is_colonizable = yes }	
+						}
+						every_system_planet = {
+							limit = {
+								is_colonizable = yes
+								can_have_seed_stargate = yes
+							}
+							set_planet_flag = stargate_check
+							random_list = {
+								1 = {
+									add_stargate = yes
+								}
+								3 = { }
+							}
+						}
+					}
+					else = {
+						random_system_planet = { 
+							limit = {
+								can_have_seed_stargate = yes
+							}
+							set_planet_flag = stargate_check
+							random_list = {
+								1 = {
+									add_stargate = yes
+								}
+								3 = { }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "stargate.11.e"
+	}
+}
+
+country_event = {
+	id = stargate.400
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				last_increased_tech = tech_stargate
+				resource_income_compare = {
+					resource = sr_living_metal
+					value < 1
+				}
+			}
+			add_research_option = tech_mine_living_metal
+			random_planet_within_border = {
+				limit = {
+					NOR = {
+						is_colonizable = yes
+						is_colony = yes
+						is_under_colonization = yes
+						has_modifier = terraforming_candidate
+					}
+				}
+				add_deposit = d_living_metal_deposit
+			}
+		} 
+	}
+}
