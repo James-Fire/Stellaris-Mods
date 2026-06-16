@@ -12,10 +12,10 @@ event = {
 		every_country = {
 			limit = {
 				is_ai = no
-				any_owned_planet = {
-					has_planet_flag = CAM_destination
+				any_owned_colony = {
+					has_carrier_flag = CAM_destination
 				}
-				any_owned_planet = {
+				any_owned_colony = {
 					planet_can_migrate = yes
 				}
 			}
@@ -32,16 +32,16 @@ country_event = {
 	}
 	
 	immediate = {
-		every_owned_planet = {
+		every_owned_colony = {
 			limit = {
-				has_planet_flag = CAM_destination
+				has_carrier_flag = CAM_destination
 			}
-			planet_event = { id = CAM.2 }
+			carrier_event = { id = CAM.2 }
 		}
 	}
 }
 
-planet_event = {
+carrier_event = {
 	id = CAM.2
 	is_triggered_only = yes
 	hide_window = yes
@@ -54,13 +54,13 @@ planet_event = {
 				free_amenities >= CAM_count
 				free_housing >= CAM_count
 				owner = {
-					any_owned_planet = {
+					any_owned_colony = {
 						planet_can_migrate = yes
 					}
 				}
 			}
 			owner = { 
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						planet_can_migrate = yes
 					}

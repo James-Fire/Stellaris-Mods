@@ -2,12 +2,12 @@ decision_set_CAM_destination = {
 	owned_planets_only = yes
 	
 	potential = {
-		NOT = { has_planet_flag = CAM_destination }
+		NOT = { has_carrier_flag = CAM_destination }
 	}
 	
 	effect = {
 		hidden_effect = {
-			set_planet_flag = CAM_destination
+			set_carrier_flag = CAM_destination
 		}
 	}
 	
@@ -19,12 +19,12 @@ decision_unset_CAM_destination = {
 	owned_planets_only = yes
 	
 	potential = {
-		has_planet_flag = CAM_destination
+		has_carrier_flag = CAM_destination
 	}
 	
 	effect = {
 		hidden_effect = {
-			remove_planet_flag = CAM_destination
+			remove_carrier_flag = CAM_destination
 		}
 	}
 	
@@ -36,13 +36,13 @@ decision_set_CAM_exclusion = {
 	owned_planets_only = yes
 	
 	potential = {
-		NOT = { has_planet_flag = CAM_excluded }
-		NOT = { has_planet_flag = CAM_destination }
+		NOT = { has_carrier_flag = CAM_excluded }
+		NOT = { has_carrier_flag = CAM_destination }
 	}
 	
 	effect = {
 		hidden_effect = {
-			set_planet_flag = CAM_excluded
+			set_carrier_flag = CAM_excluded
 		}
 	}
 	
@@ -54,12 +54,12 @@ decision_unset_CAM_exclusion = {
 	owned_planets_only = yes
 	
 	potential = {
-		has_planet_flag = CAM_excluded
+		has_carrier_flag = CAM_excluded
 	}
 	
 	effect = {
 		hidden_effect = {
-			remove_planet_flag = CAM_excluded
+			remove_carrier_flag = CAM_excluded
 		}
 	}
 	

@@ -4,5 +4,5 @@ tags={
 	"Economy"
 }
 name="Civilian Auto Migration"
-supported_version="v4.1.*"
+supported_version="v4.4.*"
 remote_file_id="3599135217"

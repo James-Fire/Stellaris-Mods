@@ -1,7 +1,7 @@
 planet_can_migrate_bulk = {
 	NOT = {
-		has_planet_flag = CAM_destination
-		has_planet_flag = CAM_excluded
+		has_carrier_flag = CAM_destination
+		has_carrier_flag = CAM_excluded
 	}
 	num_assigned_jobs = { job = civilian value >= 1000 }
 	any_owned_pop_group = {
@@ -14,8 +14,8 @@ planet_can_migrate_bulk = {
 }
 planet_can_migrate_normal = {
 	NOT = {
-		has_planet_flag = CAM_destination
-		has_planet_flag = CAM_excluded
+		has_carrier_flag = CAM_destination
+		has_carrier_flag = CAM_excluded
 	}
 	num_assigned_jobs = { job = civilian value >= 100 }
 	any_owned_pop_group = {
@@ -28,8 +28,8 @@ planet_can_migrate_normal = {
 }
 planet_can_migrate_granular = {
 	NOT = {
-		has_planet_flag = CAM_destination
-		has_planet_flag = CAM_excluded
+		has_carrier_flag = CAM_destination
+		has_carrier_flag = CAM_excluded
 	}
 	num_assigned_jobs = { job = civilian value > 0 }
 	any_owned_pop_group = {
@@ -43,8 +43,8 @@ planet_can_migrate_granular = {
 
 planet_can_migrate = {
 	NOT = {
-		has_planet_flag = CAM_destination
-		has_planet_flag = CAM_excluded
+		has_carrier_flag = CAM_destination
+		has_carrier_flag = CAM_excluded
 	}
 	sapient_pop_amount > 1
 	OR = {
