@@ -1,7 +1,7 @@
 has_stargate = {
 	OR = {
 		has_technology = tech_stargate
-		any_owned_planet = {
+		any_owned_colony = {
 			has_deposit = d_stargate
 		}
 	}
@@ -16,8 +16,8 @@ can_have_seed_stargate = {
 	}
 	NOR = {
 		has_deposit = d_stargate
-		has_planet_flag = stargate_check
-		has_planet_flag = has_stargate
+		has_carrier_flag = stargate_check
+		has_carrier_flag = has_stargate
 		is_planet_class = pc_gas_giant
 	}
 }
@@ -281,7 +281,7 @@ has_priority_1 = {
 }
 has_int_civ_prioty_1 = {
 	OR = {
-		has_planet_flag = stargate_economic_connections_int_1
+		has_carrier_flag = stargate_economic_connections_int_1
 		AND = {
 			owner = { has_country_flag = stargate_economic_connections_int_1 }
 			NOT = { planet_has_int_econ_priority = yes }
@@ -290,7 +290,7 @@ has_int_civ_prioty_1 = {
 }
 has_ex_civ_prioty_1 = {
 	OR = {
-		has_planet_flag = stargate_economic_connections_ex_1
+		has_carrier_flag = stargate_economic_connections_ex_1
 		AND = {
 			owner = { has_country_flag = stargate_economic_connections_ex_1 }
 			NOT = { planet_has_ex_econ_priority = yes }
@@ -299,7 +299,7 @@ has_ex_civ_prioty_1 = {
 }
 has_int_mil_prioty_1 = {
 	OR = {
-		has_planet_flag = stargate_military_connections_int_1
+		has_carrier_flag = stargate_military_connections_int_1
 		AND = {
 			owner = { has_country_flag = stargate_military_connections_int_1 }
 			NOT = { planet_has_int_mil_priority = yes }
@@ -308,7 +308,7 @@ has_int_mil_prioty_1 = {
 }
 has_ex_mil_prioty_1 = {
 	OR = {
-		has_planet_flag = stargate_military_connections_ex_1
+		has_carrier_flag = stargate_military_connections_ex_1
 		AND = {
 			owner = { has_country_flag = stargate_military_connections_ex_1 }
 			NOT = { planet_has_ex_mil_priority = yes }
@@ -317,7 +317,7 @@ has_ex_mil_prioty_1 = {
 }
 has_ex_res_prioty_1 = {
 	OR = {
-		has_planet_flag = stargate_research_connections_ex_1
+		has_carrier_flag = stargate_research_connections_ex_1
 		AND = {
 			owner = { has_country_flag = stargate_research_connections_ex_1 }
 			NOT = { planet_has_ex_res_priority = yes }
@@ -336,7 +336,7 @@ has_priority_2 = {
 }
 has_int_civ_prioty_2 = {
 	OR = {
-		has_planet_flag = stargate_economic_connections_int_2
+		has_carrier_flag = stargate_economic_connections_int_2
 		AND = {
 			owner = { has_country_flag = stargate_economic_connections_int_2 }
 			NOT = { planet_has_int_econ_priority = yes }
@@ -345,7 +345,7 @@ has_int_civ_prioty_2 = {
 }
 has_ex_civ_prioty_2 = {
 	OR = {
-		has_planet_flag = stargate_economic_connections_ex_2
+		has_carrier_flag = stargate_economic_connections_ex_2
 		AND = {
 			owner = { has_country_flag = stargate_economic_connections_ex_2 }
 			NOT = { planet_has_ex_econ_priority = yes }
@@ -354,7 +354,7 @@ has_ex_civ_prioty_2 = {
 }
 has_int_mil_prioty_2 = {
 	OR = {
-		has_planet_flag = stargate_military_connections_int_2
+		has_carrier_flag = stargate_military_connections_int_2
 		AND = {
 			owner = { has_country_flag = stargate_military_connections_int_2 }
 			NOT = { planet_has_int_mil_priority = yes }
@@ -363,7 +363,7 @@ has_int_mil_prioty_2 = {
 }
 has_ex_mil_prioty_2 = {
 	OR = {
-		has_planet_flag = stargate_military_connections_ex_2
+		has_carrier_flag = stargate_military_connections_ex_2
 		AND = {
 			owner = { has_country_flag = stargate_military_connections_ex_2 }
 			NOT = { planet_has_ex_mil_priority = yes }
@@ -372,7 +372,7 @@ has_ex_mil_prioty_2 = {
 }
 has_ex_res_prioty_2 = {
 	OR = {
-		has_planet_flag = stargate_research_connections_ex_2
+		has_carrier_flag = stargate_research_connections_ex_2
 		AND = {
 			owner = { has_country_flag = stargate_research_connections_ex_2 }
 			NOT = { planet_has_ex_res_priority = yes }
@@ -391,7 +391,7 @@ has_priority_3 = {
 }
 has_int_civ_prioty_3 = {
 	OR = {
-		has_planet_flag = stargate_economic_connections_int_3
+		has_carrier_flag = stargate_economic_connections_int_3
 		AND = {
 			owner = { has_country_flag = stargate_economic_connections_int_3 }
 			NOT = { planet_has_int_econ_priority = yes }
@@ -400,7 +400,7 @@ has_int_civ_prioty_3 = {
 }
 has_ex_civ_prioty_3 = {
 	OR = {
-		has_planet_flag = stargate_economic_connections_ex_3
+		has_carrier_flag = stargate_economic_connections_ex_3
 		AND = {
 			owner = { has_country_flag = stargate_economic_connections_ex_3 }
 			NOT = { planet_has_ex_econ_priority = yes }
@@ -409,7 +409,7 @@ has_ex_civ_prioty_3 = {
 }
 has_int_mil_prioty_3 = {
 	OR = {
-		has_planet_flag = stargate_military_connections_int_3
+		has_carrier_flag = stargate_military_connections_int_3
 		AND = {
 			owner = { has_country_flag = stargate_military_connections_int_3 }
 			NOT = { planet_has_int_mil_priority = yes }
@@ -418,7 +418,7 @@ has_int_mil_prioty_3 = {
 }
 has_ex_mil_prioty_3 = {
 	OR = {
-		has_planet_flag = stargate_military_connections_ex_3
+		has_carrier_flag = stargate_military_connections_ex_3
 		AND = {
 			owner = { has_country_flag = stargate_military_connections_ex_3 }
 			NOT = { planet_has_ex_mil_priority = yes }
@@ -427,7 +427,7 @@ has_ex_mil_prioty_3 = {
 }
 has_ex_res_prioty_3 = {
 	OR = {
-		has_planet_flag = stargate_research_connections_ex_3
+		has_carrier_flag = stargate_research_connections_ex_3
 		AND = {
 			owner = { has_country_flag = stargate_research_connections_ex_3 }
 			NOT = { planet_has_ex_res_priority = yes }
@@ -446,7 +446,7 @@ has_priority_4 = {
 }
 has_int_civ_prioty_4 = {
 	OR = {
-		has_planet_flag = stargate_economic_connections_int_4
+		has_carrier_flag = stargate_economic_connections_int_4
 		AND = {
 			owner = { has_country_flag = stargate_economic_connections_int_4 }
 			NOT = { planet_has_int_econ_priority = yes }
@@ -455,7 +455,7 @@ has_int_civ_prioty_4 = {
 }
 has_ex_civ_prioty_4 = {
 	OR = {
-		has_planet_flag = stargate_economic_connections_ex_4
+		has_carrier_flag = stargate_economic_connections_ex_4
 		AND = {
 			owner = { has_country_flag = stargate_economic_connections_ex_4 }
 			NOT = { planet_has_ex_econ_priority = yes }
@@ -464,7 +464,7 @@ has_ex_civ_prioty_4 = {
 }
 has_int_mil_prioty_4 = {
 	OR = {
-		has_planet_flag = stargate_military_connections_int_4
+		has_carrier_flag = stargate_military_connections_int_4
 		AND = {
 			owner = { has_country_flag = stargate_military_connections_int_4 }
 			NOT = { planet_has_int_mil_priority = yes }
@@ -473,7 +473,7 @@ has_int_mil_prioty_4 = {
 }
 has_ex_mil_prioty_4 = {
 	OR = {
-		has_planet_flag = stargate_military_connections_ex_4
+		has_carrier_flag = stargate_military_connections_ex_4
 		AND = {
 			owner = { has_country_flag = stargate_military_connections_ex_4 }
 			NOT = { planet_has_ex_mil_priority = yes }
@@ -482,7 +482,7 @@ has_ex_mil_prioty_4 = {
 }
 has_ex_res_prioty_4 = {
 	OR = {
-		has_planet_flag = stargate_research_connections_ex_4
+		has_carrier_flag = stargate_research_connections_ex_4
 		AND = {
 			owner = { has_country_flag = stargate_research_connections_ex_4 }
 			NOT = { planet_has_ex_res_priority = yes }
@@ -501,7 +501,7 @@ has_priority_5 = {
 }
 has_int_civ_prioty_5 = {
 	OR = {
-		has_planet_flag = stargate_economic_connections_int_5
+		has_carrier_flag = stargate_economic_connections_int_5
 		AND = {
 			owner = { has_country_flag = stargate_economic_connections_int_5 }
 			NOT = { planet_has_int_econ_priority = yes }
@@ -510,7 +510,7 @@ has_int_civ_prioty_5 = {
 }
 has_ex_civ_prioty_5 = {
 	OR = {
-		has_planet_flag = stargate_economic_connections_ex_5
+		has_carrier_flag = stargate_economic_connections_ex_5
 		AND = {
 			owner = { has_country_flag = stargate_economic_connections_ex_5 }
 			NOT = { planet_has_ex_econ_priority = yes }
@@ -519,7 +519,7 @@ has_ex_civ_prioty_5 = {
 }
 has_int_mil_prioty_5 = {
 	OR = {
-		has_planet_flag = stargate_military_connections_int_5
+		has_carrier_flag = stargate_military_connections_int_5
 		AND = {
 			owner = { has_country_flag = stargate_military_connections_int_5 }
 			NOT = { planet_has_int_mil_priority = yes }
@@ -528,7 +528,7 @@ has_int_mil_prioty_5 = {
 }
 has_ex_mil_prioty_5 = {
 	OR = {
-		has_planet_flag = stargate_military_connections_ex_5
+		has_carrier_flag = stargate_military_connections_ex_5
 		AND = {
 			owner = { has_country_flag = stargate_military_connections_ex_5 }
 			NOT = { planet_has_ex_mil_priority = yes }
@@ -537,7 +537,7 @@ has_ex_mil_prioty_5 = {
 }
 has_ex_res_prioty_5 = {
 	OR = {
-		has_planet_flag = stargate_research_connections_ex_5
+		has_carrier_flag = stargate_research_connections_ex_5
 		AND = {
 			owner = { has_country_flag = stargate_research_connections_ex_5 }
 			NOT = { planet_has_ex_res_priority = yes }
@@ -546,39 +546,39 @@ has_ex_res_prioty_5 = {
 }
 
 planet_has_int_econ_priority = {
-	has_planet_flag = stargate_economic_connections_int_1
-	has_planet_flag = stargate_economic_connections_int_2
-	has_planet_flag = stargate_economic_connections_int_3
-	has_planet_flag = stargate_economic_connections_int_4
-	has_planet_flag = stargate_economic_connections_int_5
+	has_carrier_flag = stargate_economic_connections_int_1
+	has_carrier_flag = stargate_economic_connections_int_2
+	has_carrier_flag = stargate_economic_connections_int_3
+	has_carrier_flag = stargate_economic_connections_int_4
+	has_carrier_flag = stargate_economic_connections_int_5
 }
 planet_has_ex_econ_priority = {
-	has_planet_flag = stargate_economic_connections_ex_1
-	has_planet_flag = stargate_economic_connections_ex_2
-	has_planet_flag = stargate_economic_connections_ex_3
-	has_planet_flag = stargate_economic_connections_ex_4
-	has_planet_flag = stargate_economic_connections_ex_5
+	has_carrier_flag = stargate_economic_connections_ex_1
+	has_carrier_flag = stargate_economic_connections_ex_2
+	has_carrier_flag = stargate_economic_connections_ex_3
+	has_carrier_flag = stargate_economic_connections_ex_4
+	has_carrier_flag = stargate_economic_connections_ex_5
 }
 planet_has_int_mil_priority = {
-	has_planet_flag = stargate_military_connections_int_1
-	has_planet_flag = stargate_military_connections_int_2
-	has_planet_flag = stargate_military_connections_int_3
-	has_planet_flag = stargate_military_connections_int_4
-	has_planet_flag = stargate_military_connections_int_5
+	has_carrier_flag = stargate_military_connections_int_1
+	has_carrier_flag = stargate_military_connections_int_2
+	has_carrier_flag = stargate_military_connections_int_3
+	has_carrier_flag = stargate_military_connections_int_4
+	has_carrier_flag = stargate_military_connections_int_5
 }
 planet_has_ex_mil_priority = {
-	has_planet_flag = stargate_military_connections_ex_1
-	has_planet_flag = stargate_military_connections_ex_2
-	has_planet_flag = stargate_military_connections_ex_3
-	has_planet_flag = stargate_military_connections_ex_4
-	has_planet_flag = stargate_military_connections_ex_5
+	has_carrier_flag = stargate_military_connections_ex_1
+	has_carrier_flag = stargate_military_connections_ex_2
+	has_carrier_flag = stargate_military_connections_ex_3
+	has_carrier_flag = stargate_military_connections_ex_4
+	has_carrier_flag = stargate_military_connections_ex_5
 }
 planet_has_ex_res_priority = {
-	has_planet_flag = stargate_research_connections_ex_1
-	has_planet_flag = stargate_research_connections_ex_2
-	has_planet_flag = stargate_research_connections_ex_3
-	has_planet_flag = stargate_research_connections_ex_4
-	has_planet_flag = stargate_research_connections_ex_5
+	has_carrier_flag = stargate_research_connections_ex_1
+	has_carrier_flag = stargate_research_connections_ex_2
+	has_carrier_flag = stargate_research_connections_ex_3
+	has_carrier_flag = stargate_research_connections_ex_4
+	has_carrier_flag = stargate_research_connections_ex_5
 }
 
 #Planet Scope
@@ -590,10 +590,10 @@ has_int_econ_con_space = {
 		check_variable = { which = int_civ_stargatecount_cap value = 0 }
 	}
 	AND = {
-		NOT = { has_planet_flag = int_econ_con_disabled }
+		NOT = { has_carrier_flag = int_econ_con_disabled }
 		NAND = {
 			owner = { has_country_flag = int_econ_con_disabled }
-			has_planet_flag = int_econ_con_default
+			has_carrier_flag = int_econ_con_default
 		}
 	}
 }
@@ -605,10 +605,10 @@ has_ex_econ_con_space = {
 		check_variable = { which = ex_civ_stargatecount_cap value = 0 }
 	}
 	AND = {
-		NOT = { has_planet_flag = ex_econ_con_disabled }
+		NOT = { has_carrier_flag = ex_econ_con_disabled }
 		NAND = {
 			owner = { has_country_flag = ex_econ_con_disabled }
-			has_planet_flag = ex_econ_con_default
+			has_carrier_flag = ex_econ_con_default
 		}
 	}
 }
@@ -620,10 +620,10 @@ has_int_mil_con_space = {
 		check_variable = { which = int_mil_stargatecount_cap value = 0 }
 	}
 	AND = {
-		NOT = { has_planet_flag = int_econ_con_disabled }
+		NOT = { has_carrier_flag = int_econ_con_disabled }
 		NAND = {
 			owner = { has_country_flag = int_mil_con_disabled }
-			has_planet_flag = int_mil_con_default
+			has_carrier_flag = int_mil_con_default
 		}
 	}
 }
@@ -635,10 +635,10 @@ has_ex_mil_con_space = {
 		check_variable = { which = ex_mil_stargatecount_cap value = 0 }
 	}
 	AND = {
-		NOT = { has_planet_flag = ex_mil_con_disabled }
+		NOT = { has_carrier_flag = ex_mil_con_disabled }
 		NAND = {
 			owner = { has_country_flag = ex_mil_con_disabled }
-			has_planet_flag = ex_mil_con_default
+			has_carrier_flag = ex_mil_con_default
 		}
 	}
 }
@@ -650,10 +650,10 @@ has_ex_res_con_space = {
 		check_variable = { which = ex_res_stargatecount_cap value = 0 }
 	}
 	AND = {
-		NOT = { has_planet_flag = ex_res_con_disabled }
+		NOT = { has_carrier_flag = ex_res_con_disabled }
 		NAND = {
 			owner = { has_country_flag = ex_res_con_disabled }
-			has_planet_flag = ex_res_con_default
+			has_carrier_flag = ex_res_con_default
 		}
 	}
 }

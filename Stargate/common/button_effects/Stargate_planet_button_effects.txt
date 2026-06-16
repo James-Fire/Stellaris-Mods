@@ -1,374 +1,374 @@
 stargate_planet_default = {
-	potential = { NOT = { has_planet_flag = stargate_local_caps } }
+	potential = { NOT = { has_carrier_flag = stargate_local_caps } }
 	allow = {
 	}
 	effect = { 
 		custom_tooltip = "stargate_planet_ui_disabled"
-		hidden_effect = { set_planet_flag = stargate_local_caps }
+		hidden_effect = { set_carrier_flag = stargate_local_caps }
 	}
 }
 stargate_planet_default_off = {
-	potential = { has_planet_flag = stargate_local_caps }
+	potential = { has_carrier_flag = stargate_local_caps }
 	allow = {
 	}
-	effect = { remove_planet_flag = stargate_local_caps }
+	effect = { remove_carrier_flag = stargate_local_caps }
 }
 
 ###Stargate Priority Count Numbers
 
 planet_stargate_military_connections_int_cap_1 = {
-	potential = { has_planet_flag = stargate_military_connections_int_cap_1 }
+	potential = { has_carrier_flag = stargate_military_connections_int_cap_1 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_military_connections_int_off }
+			NOT = { has_carrier_flag = stargate_military_connections_int_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_military_connections_int_cap_1 set_planet_flag = stargate_military_connections_int_cap_2 }
+	effect = { remove_carrier_flag = stargate_military_connections_int_cap_1 set_carrier_flag = stargate_military_connections_int_cap_2 }
 }
 planet_stargate_military_connections_int_cap_2 = {
-	potential = { has_planet_flag = stargate_military_connections_int_cap_2 }
+	potential = { has_carrier_flag = stargate_military_connections_int_cap_2 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_military_connections_int_off }
+			NOT = { has_carrier_flag = stargate_military_connections_int_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_military_connections_int_cap_2 set_planet_flag = stargate_military_connections_int_cap_3 }
+	effect = { remove_carrier_flag = stargate_military_connections_int_cap_2 set_carrier_flag = stargate_military_connections_int_cap_3 }
 }
 planet_stargate_military_connections_int_cap_3 = {
-	potential = { has_planet_flag = stargate_military_connections_int_cap_3 }
+	potential = { has_carrier_flag = stargate_military_connections_int_cap_3 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_military_connections_int_off }
+			NOT = { has_carrier_flag = stargate_military_connections_int_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_military_connections_int_cap_3 set_planet_flag = stargate_military_connections_int_cap_4 }
+	effect = { remove_carrier_flag = stargate_military_connections_int_cap_3 set_carrier_flag = stargate_military_connections_int_cap_4 }
 }
 planet_stargate_military_connections_int_cap_4 = {
-	potential = { has_planet_flag = stargate_military_connections_int_cap_4 }
+	potential = { has_carrier_flag = stargate_military_connections_int_cap_4 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_military_connections_int_off }
+			NOT = { has_carrier_flag = stargate_military_connections_int_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_military_connections_int_cap_4 set_planet_flag = stargate_military_connections_int_cap_5 }
+	effect = { remove_carrier_flag = stargate_military_connections_int_cap_4 set_carrier_flag = stargate_military_connections_int_cap_5 }
 }
 planet_stargate_military_connections_int_cap_5 = {
-	potential = { has_planet_flag = stargate_military_connections_int_cap_5 }
+	potential = { has_carrier_flag = stargate_military_connections_int_cap_5 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_military_connections_int_off }
+			NOT = { has_carrier_flag = stargate_military_connections_int_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_military_connections_int_cap_5 set_planet_flag = stargate_military_connections_int_cap_1 }
+	effect = { remove_carrier_flag = stargate_military_connections_int_cap_5 set_carrier_flag = stargate_military_connections_int_cap_1 }
 }
 
 planet_stargate_military_connections_ex_cap_1 = {
-	potential = { has_planet_flag = stargate_military_connections_ex_cap_1 }
+	potential = { has_carrier_flag = stargate_military_connections_ex_cap_1 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_military_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_military_connections_ex_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_military_connections_ex_cap_1 set_planet_flag = stargate_military_connections_ex_cap_2 }
+	effect = { remove_carrier_flag = stargate_military_connections_ex_cap_1 set_carrier_flag = stargate_military_connections_ex_cap_2 }
 }
 planet_stargate_military_connections_ex_cap_2 = {
-	potential = { has_planet_flag = stargate_military_connections_ex_cap_2 }
+	potential = { has_carrier_flag = stargate_military_connections_ex_cap_2 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_military_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_military_connections_ex_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_military_connections_ex_cap_2 set_planet_flag = stargate_military_connections_ex_cap_3 }
+	effect = { remove_carrier_flag = stargate_military_connections_ex_cap_2 set_carrier_flag = stargate_military_connections_ex_cap_3 }
 }
 planet_stargate_military_connections_ex_cap_3 = {
-	potential = { has_planet_flag = stargate_military_connections_ex_cap_3 }
+	potential = { has_carrier_flag = stargate_military_connections_ex_cap_3 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_military_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_military_connections_ex_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_military_connections_ex_cap_3 set_planet_flag = stargate_military_connections_ex_cap_4 }
+	effect = { remove_carrier_flag = stargate_military_connections_ex_cap_3 set_carrier_flag = stargate_military_connections_ex_cap_4 }
 }
 planet_stargate_military_connections_ex_cap_4 = {
-	potential = { has_planet_flag = stargate_military_connections_ex_cap_4 }
+	potential = { has_carrier_flag = stargate_military_connections_ex_cap_4 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_military_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_military_connections_ex_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_military_connections_ex_cap_4 set_planet_flag = stargate_military_connections_ex_cap_5 }
+	effect = { remove_carrier_flag = stargate_military_connections_ex_cap_4 set_carrier_flag = stargate_military_connections_ex_cap_5 }
 }
 planet_stargate_military_connections_ex_cap_5 = {
-	potential = { has_planet_flag = stargate_military_connections_ex_cap_5 }
+	potential = { has_carrier_flag = stargate_military_connections_ex_cap_5 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_military_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_military_connections_ex_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_military_connections_ex_cap_5 set_planet_flag = stargate_military_connections_ex_cap_1 }
+	effect = { remove_carrier_flag = stargate_military_connections_ex_cap_5 set_carrier_flag = stargate_military_connections_ex_cap_1 }
 }
 
 planet_stargate_economic_connections_int_cap_1 = {
-	potential = { has_planet_flag = stargate_economic_connections_int_cap_1 }
+	potential = { has_carrier_flag = stargate_economic_connections_int_cap_1 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_economy_connections_int_off }
+			NOT = { has_carrier_flag = stargate_economy_connections_int_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_economic_connections_int_cap_1 set_planet_flag = stargate_economic_connections_int_cap_2 }
+	effect = { remove_carrier_flag = stargate_economic_connections_int_cap_1 set_carrier_flag = stargate_economic_connections_int_cap_2 }
 }
 planet_stargate_economic_connections_int_cap_2 = {
-	potential = { has_planet_flag = stargate_economic_connections_int_cap_2 }
+	potential = { has_carrier_flag = stargate_economic_connections_int_cap_2 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_economy_connections_int_off }
+			NOT = { has_carrier_flag = stargate_economy_connections_int_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_economic_connections_int_cap_2 set_planet_flag = stargate_economic_connections_int_cap_3 }
+	effect = { remove_carrier_flag = stargate_economic_connections_int_cap_2 set_carrier_flag = stargate_economic_connections_int_cap_3 }
 }
 planet_stargate_economic_connections_int_cap_3 = {
-	potential = { has_planet_flag = stargate_economic_connections_int_cap_3 }
+	potential = { has_carrier_flag = stargate_economic_connections_int_cap_3 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_economy_connections_int_off }
+			NOT = { has_carrier_flag = stargate_economy_connections_int_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_economic_connections_int_cap_3 set_planet_flag = stargate_economic_connections_int_cap_4 }
+	effect = { remove_carrier_flag = stargate_economic_connections_int_cap_3 set_carrier_flag = stargate_economic_connections_int_cap_4 }
 }
 planet_stargate_economic_connections_int_cap_4 = {
-	potential = { has_planet_flag = stargate_economic_connections_int_cap_4 }
+	potential = { has_carrier_flag = stargate_economic_connections_int_cap_4 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_economy_connections_int_off }
+			NOT = { has_carrier_flag = stargate_economy_connections_int_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_economic_connections_int_cap_4 set_planet_flag = stargate_economic_connections_int_cap_5 }
+	effect = { remove_carrier_flag = stargate_economic_connections_int_cap_4 set_carrier_flag = stargate_economic_connections_int_cap_5 }
 }
 planet_stargate_economic_connections_int_cap_5 = {
-	potential = { has_planet_flag = stargate_economic_connections_int_cap_5 }
+	potential = { has_carrier_flag = stargate_economic_connections_int_cap_5 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_economy_connections_int_off }
+			NOT = { has_carrier_flag = stargate_economy_connections_int_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_economic_connections_int_cap_5 set_planet_flag = stargate_economic_connections_int_cap_1 }
+	effect = { remove_carrier_flag = stargate_economic_connections_int_cap_5 set_carrier_flag = stargate_economic_connections_int_cap_1 }
 }
 
 planet_stargate_economic_connections_ex_cap_1 = {
-	potential = { has_planet_flag = stargate_economic_connections_ex_cap_1 }
+	potential = { has_carrier_flag = stargate_economic_connections_ex_cap_1 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_economy_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_economy_connections_ex_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_economic_connections_ex_cap_1 set_planet_flag = stargate_economic_connections_ex_cap_2 }
+	effect = { remove_carrier_flag = stargate_economic_connections_ex_cap_1 set_carrier_flag = stargate_economic_connections_ex_cap_2 }
 }
 planet_stargate_economic_connections_ex_cap_2 = {
-	potential = { has_planet_flag = stargate_economic_connections_ex_cap_2 }
+	potential = { has_carrier_flag = stargate_economic_connections_ex_cap_2 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_economy_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_economy_connections_ex_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_economic_connections_ex_cap_2 set_planet_flag = stargate_economic_connections_ex_cap_3 }
+	effect = { remove_carrier_flag = stargate_economic_connections_ex_cap_2 set_carrier_flag = stargate_economic_connections_ex_cap_3 }
 }
 planet_stargate_economic_connections_ex_cap_3 = {
-	potential = { has_planet_flag = stargate_economic_connections_ex_cap_3 }
+	potential = { has_carrier_flag = stargate_economic_connections_ex_cap_3 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_economy_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_economy_connections_ex_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_economic_connections_ex_cap_3 set_planet_flag = stargate_economic_connections_ex_cap_4 }
+	effect = { remove_carrier_flag = stargate_economic_connections_ex_cap_3 set_carrier_flag = stargate_economic_connections_ex_cap_4 }
 }
 planet_stargate_economic_connections_ex_cap_4 = {
-	potential = { has_planet_flag = stargate_economic_connections_ex_cap_4 }
+	potential = { has_carrier_flag = stargate_economic_connections_ex_cap_4 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_economy_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_economy_connections_ex_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_economic_connections_ex_cap_4 set_planet_flag = stargate_economic_connections_ex_cap_5 }
+	effect = { remove_carrier_flag = stargate_economic_connections_ex_cap_4 set_carrier_flag = stargate_economic_connections_ex_cap_5 }
 }
 planet_stargate_economic_connections_ex_cap_5 = {
-	potential = { has_planet_flag = stargate_economic_connections_ex_cap_5 }
+	potential = { has_carrier_flag = stargate_economic_connections_ex_cap_5 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_economy_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_economy_connections_ex_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_economic_connections_ex_cap_5 set_planet_flag = stargate_economic_connections_ex_cap_1 }
+	effect = { remove_carrier_flag = stargate_economic_connections_ex_cap_5 set_carrier_flag = stargate_economic_connections_ex_cap_1 }
 }
 
 planet_stargate_research_connections_ex_cap_1 = {
-	potential = { has_planet_flag = stargate_research_connections_ex_cap_1 }
+	potential = { has_carrier_flag = stargate_research_connections_ex_cap_1 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_research_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_research_connections_ex_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_research_connections_ex_cap_1 set_planet_flag = stargate_research_connections_ex_cap_2 }
+	effect = { remove_carrier_flag = stargate_research_connections_ex_cap_1 set_carrier_flag = stargate_research_connections_ex_cap_2 }
 }
 planet_stargate_research_connections_ex_cap_2 = {
-	potential = { has_planet_flag = stargate_research_connections_ex_cap_2 }
+	potential = { has_carrier_flag = stargate_research_connections_ex_cap_2 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_research_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_research_connections_ex_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_research_connections_ex_cap_2 set_planet_flag = stargate_research_connections_ex_cap_3 }
+	effect = { remove_carrier_flag = stargate_research_connections_ex_cap_2 set_carrier_flag = stargate_research_connections_ex_cap_3 }
 }
 planet_stargate_research_connections_ex_cap_3 = {
-	potential = { has_planet_flag = stargate_research_connections_ex_cap_3 }
+	potential = { has_carrier_flag = stargate_research_connections_ex_cap_3 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_research_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_research_connections_ex_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_research_connections_ex_cap_3 set_planet_flag = stargate_research_connections_ex_cap_4 }
+	effect = { remove_carrier_flag = stargate_research_connections_ex_cap_3 set_carrier_flag = stargate_research_connections_ex_cap_4 }
 }
 planet_stargate_research_connections_ex_cap_4 = {
-	potential = { has_planet_flag = stargate_research_connections_ex_cap_4 }
+	potential = { has_carrier_flag = stargate_research_connections_ex_cap_4 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_research_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_research_connections_ex_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_research_connections_ex_cap_4 set_planet_flag = stargate_research_connections_ex_cap_5 }
+	effect = { remove_carrier_flag = stargate_research_connections_ex_cap_4 set_carrier_flag = stargate_research_connections_ex_cap_5 }
 }
 planet_stargate_research_connections_ex_cap_5 = {
-	potential = { has_planet_flag = stargate_research_connections_ex_cap_5 }
+	potential = { has_carrier_flag = stargate_research_connections_ex_cap_5 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_research_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_research_connections_ex_off }
 		}
 	}
-	effect = { remove_planet_flag = stargate_research_connections_ex_cap_5 set_planet_flag = stargate_research_connections_ex_cap_1 }
+	effect = { remove_carrier_flag = stargate_research_connections_ex_cap_5 set_carrier_flag = stargate_research_connections_ex_cap_1 }
 }
 
 ###Stargate Priority Count
@@ -378,7 +378,7 @@ planet_stargate_mil_con_int_increase_cap = {
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = at_max_connections
@@ -389,7 +389,7 @@ planet_stargate_mil_con_int_increase_cap = {
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_military_connections_int_off }
+			NOT = { has_carrier_flag = stargate_military_connections_int_off }
 		}
 	}
 	effect = {
@@ -397,7 +397,7 @@ planet_stargate_mil_con_int_increase_cap = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_planet_flag = stargate_military_connections_int_cap_1
+					has_carrier_flag = stargate_military_connections_int_cap_1
 					check_variable = { which = stargate_connections_cap value < 90 }
 				}
 				change_variable = { which = stargate_military_connections_int_cap value = 1 }
@@ -405,7 +405,7 @@ planet_stargate_mil_con_int_increase_cap = {
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_military_connections_int_cap_2
+					has_carrier_flag = stargate_military_connections_int_cap_2
 					check_variable = { which = stargate_connections_cap value < 89 }
 				}
 				change_variable = { which = stargate_military_connections_int_cap value = 2 }
@@ -413,7 +413,7 @@ planet_stargate_mil_con_int_increase_cap = {
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_military_connections_int_cap_3
+					has_carrier_flag = stargate_military_connections_int_cap_3
 					check_variable = { which = stargate_connections_cap value < 88 }
 				}
 				change_variable = { which = stargate_military_connections_int_cap value = 3 }
@@ -421,7 +421,7 @@ planet_stargate_mil_con_int_increase_cap = {
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_military_connections_int_cap_4
+					has_carrier_flag = stargate_military_connections_int_cap_4
 					check_variable = { which = stargate_connections_cap value < 87 }
 				}
 				change_variable = { which = stargate_military_connections_int_cap value = 4 }
@@ -429,7 +429,7 @@ planet_stargate_mil_con_int_increase_cap = {
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_military_connections_int_cap_5
+					has_carrier_flag = stargate_military_connections_int_cap_5
 					check_variable = { which = stargate_connections_cap value < 86 }
 				}
 				change_variable = { which = stargate_military_connections_int_cap value = 5 }
@@ -443,7 +443,7 @@ planet_stargate_mil_con_int_decrease_cap = {
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = at_min_connections
@@ -454,7 +454,7 @@ planet_stargate_mil_con_int_decrease_cap = {
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_military_connections_int_off }
+			NOT = { has_carrier_flag = stargate_military_connections_int_off }
 		}
 	}
 	effect = {
@@ -462,35 +462,35 @@ planet_stargate_mil_con_int_decrease_cap = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_planet_flag = stargate_military_connections_int_1
+					has_carrier_flag = stargate_military_connections_int_1
 				}
 				change_variable = { which = stargate_military_connections_int_cap value = -1 }
 				change_variable = { which = stargate_connections_cap value = -1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_military_connections_int_2
+					has_carrier_flag = stargate_military_connections_int_2
 				}
 				change_variable = { which = stargate_military_connections_int_cap value = -2 }
 				change_variable = { which = stargate_connections_cap value = -2 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_military_connections_int_3
+					has_carrier_flag = stargate_military_connections_int_3
 				}
 				change_variable = { which = stargate_military_connections_int_cap value = -3 }
 				change_variable = { which = stargate_connections_cap value = -3 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_military_connections_int_4
+					has_carrier_flag = stargate_military_connections_int_4
 				}
 				change_variable = { which = stargate_military_connections_int_cap value = -4 }
 				change_variable = { which = stargate_connections_cap value = -4 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_military_connections_int_5
+					has_carrier_flag = stargate_military_connections_int_5
 				}
 				change_variable = { which = stargate_military_connections_int_cap value = -5 }
 				change_variable = { which = stargate_connections_cap value = -5 }
@@ -504,7 +504,7 @@ planet_stargate_mil_con_ex_increase_cap = {
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = at_max_connections
@@ -512,7 +512,7 @@ planet_stargate_mil_con_ex_increase_cap = {
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_military_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_military_connections_ex_off }
 		}
 	}
 	effect = {
@@ -520,7 +520,7 @@ planet_stargate_mil_con_ex_increase_cap = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_planet_flag = stargate_military_connections_ex_cap_1
+					has_carrier_flag = stargate_military_connections_ex_cap_1
 					check_variable = { which = stargate_connections_cap value < 90 }
 				}
 				change_variable = { which = stargate_military_connections_ex_cap value = 1 }
@@ -528,7 +528,7 @@ planet_stargate_mil_con_ex_increase_cap = {
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_military_connections_ex_cap_2
+					has_carrier_flag = stargate_military_connections_ex_cap_2
 					check_variable = { which = stargate_connections_cap value < 89 }
 				}
 				change_variable = { which = stargate_military_connections_ex_cap value = 2 }
@@ -536,7 +536,7 @@ planet_stargate_mil_con_ex_increase_cap = {
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_military_connections_ex_cap_3
+					has_carrier_flag = stargate_military_connections_ex_cap_3
 					check_variable = { which = stargate_connections_cap value < 88 }
 				}
 				change_variable = { which = stargate_military_connections_ex_cap value = 3 }
@@ -544,7 +544,7 @@ planet_stargate_mil_con_ex_increase_cap = {
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_military_connections_ex_cap_4
+					has_carrier_flag = stargate_military_connections_ex_cap_4
 					check_variable = { which = stargate_connections_cap value < 87 }
 				}
 				change_variable = { which = stargate_military_connections_ex_cap value = 4 }
@@ -552,7 +552,7 @@ planet_stargate_mil_con_ex_increase_cap = {
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_military_connections_ex_cap_5
+					has_carrier_flag = stargate_military_connections_ex_cap_5
 					check_variable = { which = stargate_connections_cap value < 86 }
 				}
 				change_variable = { which = stargate_military_connections_ex_cap value = 5 }
@@ -566,7 +566,7 @@ planet_stargate_mil_con_ex_decrease_cap = {
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = at_min_connections
@@ -574,7 +574,7 @@ planet_stargate_mil_con_ex_decrease_cap = {
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_military_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_military_connections_ex_off }
 		}
 	}
 	effect = {
@@ -582,35 +582,35 @@ planet_stargate_mil_con_ex_decrease_cap = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_planet_flag = stargate_military_connections_ex_1
+					has_carrier_flag = stargate_military_connections_ex_1
 				}
 				change_variable = { which = stargate_military_connections_ex_cap value = -1 }
 				change_variable = { which = stargate_connections_cap value = -1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_military_connections_ex_2
+					has_carrier_flag = stargate_military_connections_ex_2
 				}
 				change_variable = { which = stargate_military_connections_ex_cap value = -2 }
 				change_variable = { which = stargate_connections_cap value = -2 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_military_connections_ex_3
+					has_carrier_flag = stargate_military_connections_ex_3
 				}
 				change_variable = { which = stargate_military_connections_ex_cap value = -3 }
 				change_variable = { which = stargate_connections_cap value = -3 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_military_connections_ex_4
+					has_carrier_flag = stargate_military_connections_ex_4
 				}
 				change_variable = { which = stargate_military_connections_ex_cap value = -4 }
 				change_variable = { which = stargate_connections_cap value = -4 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_military_connections_ex_5
+					has_carrier_flag = stargate_military_connections_ex_5
 				}
 				change_variable = { which = stargate_military_connections_ex_cap value = -5 }
 				change_variable = { which = stargate_connections_cap value = -5 }
@@ -624,7 +624,7 @@ planet_stargate_econ_con_int_increase_cap = {
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = at_max_connections
@@ -632,7 +632,7 @@ planet_stargate_econ_con_int_increase_cap = {
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_economy_connections_int_off }
+			NOT = { has_carrier_flag = stargate_economy_connections_int_off }
 		}
 	}
 	effect = {
@@ -640,7 +640,7 @@ planet_stargate_econ_con_int_increase_cap = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_planet_flag = stargate_economic_connections_int_cap_1
+					has_carrier_flag = stargate_economic_connections_int_cap_1
 					check_variable = { which = stargate_connections_cap value < 90 }
 				}
 				change_variable = { which = stargate_economic_connections_int_cap value = 1 }
@@ -648,7 +648,7 @@ planet_stargate_econ_con_int_increase_cap = {
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_economic_connections_int_cap_2
+					has_carrier_flag = stargate_economic_connections_int_cap_2
 					check_variable = { which = stargate_connections_cap value < 89 }
 				}
 				change_variable = { which = stargate_economic_connections_int_cap value = 2 }
@@ -656,7 +656,7 @@ planet_stargate_econ_con_int_increase_cap = {
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_economic_connections_int_cap_3
+					has_carrier_flag = stargate_economic_connections_int_cap_3
 					check_variable = { which = stargate_connections_cap value < 88 }
 				}
 				change_variable = { which = stargate_economic_connections_int_cap value = 3 }
@@ -664,7 +664,7 @@ planet_stargate_econ_con_int_increase_cap = {
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_economic_connections_int_cap_4
+					has_carrier_flag = stargate_economic_connections_int_cap_4
 					check_variable = { which = stargate_connections_cap value < 87 }
 				}
 				change_variable = { which = stargate_economic_connections_int_cap value = 4 }
@@ -672,7 +672,7 @@ planet_stargate_econ_con_int_increase_cap = {
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_economic_connections_int_cap_5
+					has_carrier_flag = stargate_economic_connections_int_cap_5
 					check_variable = { which = stargate_connections_cap value < 86 }
 				}
 				change_variable = { which = stargate_economic_connections_int_cap value = 5 }
@@ -686,7 +686,7 @@ planet_stargate_econ_con_int_decrease_cap = {
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = at_min_connections
@@ -694,7 +694,7 @@ planet_stargate_econ_con_int_decrease_cap = {
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_economy_connections_int_off }
+			NOT = { has_carrier_flag = stargate_economy_connections_int_off }
 		}
 	}
 	effect = {
@@ -702,35 +702,35 @@ planet_stargate_econ_con_int_decrease_cap = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_planet_flag = stargate_economic_connections_int_1
+					has_carrier_flag = stargate_economic_connections_int_1
 				}
 				change_variable = { which = stargate_economic_connections_int_cap value = -1 }
 				change_variable = { which = stargate_connections_cap value = -1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_economic_connections_int_2
+					has_carrier_flag = stargate_economic_connections_int_2
 				}
 				change_variable = { which = stargate_economic_connections_int_cap value = -2 }
 				change_variable = { which = stargate_connections_cap value = -2 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_economic_connections_int_3
+					has_carrier_flag = stargate_economic_connections_int_3
 				}
 				change_variable = { which = stargate_economic_connections_int_cap value = -3 }
 				change_variable = { which = stargate_connections_cap value = -3 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_economic_connections_int_4
+					has_carrier_flag = stargate_economic_connections_int_4
 				}
 				change_variable = { which = stargate_economic_connections_int_cap value = -4 }
 				change_variable = { which = stargate_connections_cap value = -4 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_economic_connections_int_5
+					has_carrier_flag = stargate_economic_connections_int_5
 				}
 				change_variable = { which = stargate_economic_connections_int_cap value = -5 }
 				change_variable = { which = stargate_connections_cap value = -5 }
@@ -744,7 +744,7 @@ planet_stargate_econ_con_ex_increase_cap = {
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = at_max_connections
@@ -752,7 +752,7 @@ planet_stargate_econ_con_ex_increase_cap = {
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_economy_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_economy_connections_ex_off }
 		}
 	}
 	effect = {
@@ -760,7 +760,7 @@ planet_stargate_econ_con_ex_increase_cap = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_planet_flag = stargate_economic_connections_ex_cap_1
+					has_carrier_flag = stargate_economic_connections_ex_cap_1
 					check_variable = { which = stargate_connections_cap value < 90 }
 				}
 				change_variable = { which = stargate_economic_connections_ex_cap value = 1 }
@@ -768,7 +768,7 @@ planet_stargate_econ_con_ex_increase_cap = {
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_economic_connections_ex_cap_2
+					has_carrier_flag = stargate_economic_connections_ex_cap_2
 					check_variable = { which = stargate_connections_cap value < 89 }
 				}
 				change_variable = { which = stargate_economic_connections_ex_cap value = 2 }
@@ -776,7 +776,7 @@ planet_stargate_econ_con_ex_increase_cap = {
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_economic_connections_ex_cap_3
+					has_carrier_flag = stargate_economic_connections_ex_cap_3
 					check_variable = { which = stargate_connections_cap value < 88 }
 				}
 				change_variable = { which = stargate_economic_connections_ex_cap value = 3 }
@@ -784,7 +784,7 @@ planet_stargate_econ_con_ex_increase_cap = {
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_economic_connections_ex_cap_4
+					has_carrier_flag = stargate_economic_connections_ex_cap_4
 					check_variable = { which = stargate_connections_cap value < 87 }
 				}
 				change_variable = { which = stargate_economic_connections_ex_cap value = 4 }
@@ -792,7 +792,7 @@ planet_stargate_econ_con_ex_increase_cap = {
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_economic_connections_ex_cap_5
+					has_carrier_flag = stargate_economic_connections_ex_cap_5
 					check_variable = { which = stargate_connections_cap value < 86 }
 				}
 				change_variable = { which = stargate_economic_connections_ex_cap value = 5 }
@@ -806,7 +806,7 @@ planet_stargate_econ_con_ex_decrease_cap = {
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = at_min_connections
@@ -814,7 +814,7 @@ planet_stargate_econ_con_ex_decrease_cap = {
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_economy_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_economy_connections_ex_off }
 		}
 	}
 	effect = {
@@ -822,35 +822,35 @@ planet_stargate_econ_con_ex_decrease_cap = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_planet_flag = stargate_economic_connections_ex_1
+					has_carrier_flag = stargate_economic_connections_ex_1
 				}
 				change_variable = { which = stargate_economic_connections_ex_cap value = -1 }
 				change_variable = { which = stargate_connections_cap value = -1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_economic_connections_ex_2
+					has_carrier_flag = stargate_economic_connections_ex_2
 				}
 				change_variable = { which = stargate_economic_connections_ex_cap value = -2 }
 				change_variable = { which = stargate_connections_cap value = -2 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_economic_connections_ex_3
+					has_carrier_flag = stargate_economic_connections_ex_3
 				}
 				change_variable = { which = stargate_economic_connections_ex_cap value = -3 }
 				change_variable = { which = stargate_connections_cap value = -3 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_economic_connections_ex_4
+					has_carrier_flag = stargate_economic_connections_ex_4
 				}
 				change_variable = { which = stargate_economic_connections_ex_cap value = -4 }
 				change_variable = { which = stargate_connections_cap value = -4 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_economic_connections_ex_5
+					has_carrier_flag = stargate_economic_connections_ex_5
 				}
 				change_variable = { which = stargate_economic_connections_ex_cap value = -5 }
 				change_variable = { which = stargate_connections_cap value = -5 }
@@ -864,7 +864,7 @@ planet_stargate_res_con_ex_increase_cap = {
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = at_max_connections
@@ -872,7 +872,7 @@ planet_stargate_res_con_ex_increase_cap = {
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_research_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_research_connections_ex_off }
 		}
 	}
 	effect = {
@@ -880,7 +880,7 @@ planet_stargate_res_con_ex_increase_cap = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_planet_flag = stargate_research_connections_ex_cap_1
+					has_carrier_flag = stargate_research_connections_ex_cap_1
 					check_variable = { which = stargate_connections_cap value < 90 }
 				}
 				change_variable = { which = stargate_research_connections_ex_cap value = 1 }
@@ -888,7 +888,7 @@ planet_stargate_res_con_ex_increase_cap = {
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_research_connections_ex_cap_2
+					has_carrier_flag = stargate_research_connections_ex_cap_2
 					check_variable = { which = stargate_connections_cap value < 89 }
 				}
 				change_variable = { which = stargate_research_connections_ex_cap value = 2 }
@@ -896,7 +896,7 @@ planet_stargate_res_con_ex_increase_cap = {
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_research_connections_ex_cap_3
+					has_carrier_flag = stargate_research_connections_ex_cap_3
 					check_variable = { which = stargate_connections_cap value < 88 }
 				}
 				change_variable = { which = stargate_research_connections_ex_cap value = 3 }
@@ -904,7 +904,7 @@ planet_stargate_res_con_ex_increase_cap = {
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_research_connections_ex_cap_4
+					has_carrier_flag = stargate_research_connections_ex_cap_4
 					check_variable = { which = stargate_connections_cap value < 87 }
 				}
 				change_variable = { which = stargate_research_connections_ex_cap value = 4 }
@@ -912,7 +912,7 @@ planet_stargate_res_con_ex_increase_cap = {
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_research_connections_ex_cap_5
+					has_carrier_flag = stargate_research_connections_ex_cap_5
 					check_variable = { which = stargate_connections_cap value < 86 }
 				}
 				change_variable = { which = stargate_research_connections_ex_cap value = 5 }
@@ -926,7 +926,7 @@ planet_stargate_res_con_ex_decrease_cap = {
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = at_min_connections
@@ -934,7 +934,7 @@ planet_stargate_res_con_ex_decrease_cap = {
 		}
 		custom_tooltip = {
 			fail_text = connection_type_disabled
-			NOT = { has_planet_flag = stargate_research_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_research_connections_ex_off }
 		}
 	}
 	effect = {
@@ -942,35 +942,35 @@ planet_stargate_res_con_ex_decrease_cap = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_planet_flag = stargate_research_connections_ex_1
+					has_carrier_flag = stargate_research_connections_ex_1
 				}
 				change_variable = { which = stargate_research_connections_ex_cap value = -1 }
 				change_variable = { which = stargate_connections_cap value = -1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_research_connections_ex_2
+					has_carrier_flag = stargate_research_connections_ex_2
 				}
 				change_variable = { which = stargate_research_connections_ex_cap value = -2 }
 				change_variable = { which = stargate_connections_cap value = -2 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_research_connections_ex_3
+					has_carrier_flag = stargate_research_connections_ex_3
 				}
 				change_variable = { which = stargate_research_connections_ex_cap value = -3 }
 				change_variable = { which = stargate_connections_cap value = -3 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_research_connections_ex_4
+					has_carrier_flag = stargate_research_connections_ex_4
 				}
 				change_variable = { which = stargate_research_connections_ex_cap value = -4 }
 				change_variable = { which = stargate_connections_cap value = -4 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = stargate_research_connections_ex_5
+					has_carrier_flag = stargate_research_connections_ex_5
 				}
 				change_variable = { which = stargate_research_connections_ex_cap value = -5 }
 				change_variable = { which = stargate_connections_cap value = -5 }
@@ -982,341 +982,341 @@ planet_stargate_res_con_ex_decrease_cap = {
 ###Stargate Active Buttons
 
 planet_stargate_military_connections_int_off = {
-	potential = { has_planet_flag = stargate_military_connections_int_off }
+	potential = { has_carrier_flag = stargate_military_connections_int_off }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		} hidden_trigger = { always = yes } }
-	effect = { custom_tooltip = "stargate_connection_off" remove_planet_flag = stargate_military_connections_int_off }
+	effect = { custom_tooltip = "stargate_connection_off" remove_carrier_flag = stargate_military_connections_int_off }
 }
 planet_stargate_military_connections_int_on = {
-	potential = { NOT = { has_planet_flag = stargate_military_connections_int_off } }
+	potential = { NOT = { has_carrier_flag = stargate_military_connections_int_off } }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		} hidden_trigger = { always = yes } }
 	effect = {
 		custom_tooltip = "stargate_connection_on"
-		set_planet_flag = stargate_military_connections_int_off
+		set_carrier_flag = stargate_military_connections_int_off
 	}
 }
 planet_stargate_military_connections_ex_off = {
-	potential = { has_planet_flag = stargate_military_connections_ex_off }
+	potential = { has_carrier_flag = stargate_military_connections_ex_off }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		} hidden_trigger = { always = yes } }
-	effect = { custom_tooltip = "stargate_connection_off" remove_planet_flag = stargate_military_connections_ex_off }
+	effect = { custom_tooltip = "stargate_connection_off" remove_carrier_flag = stargate_military_connections_ex_off }
 }
 planet_stargate_military_connections_ex_on = {
-	potential = { NOT = { has_planet_flag = stargate_military_connections_ex_off } }
+	potential = { NOT = { has_carrier_flag = stargate_military_connections_ex_off } }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		} hidden_trigger = { always = yes } }
 	effect = {
 		custom_tooltip = "stargate_connection_on"
-		set_planet_flag = stargate_military_connections_ex_off
+		set_carrier_flag = stargate_military_connections_ex_off
 	}
 }
 planet_stargate_economy_connections_int_off = {
-	potential = { has_planet_flag = stargate_economy_connections_int_off }
+	potential = { has_carrier_flag = stargate_economy_connections_int_off }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		} hidden_trigger = { always = yes } }
-	effect = { custom_tooltip = "stargate_connection_off" remove_planet_flag = stargate_economy_connections_int_off }
+	effect = { custom_tooltip = "stargate_connection_off" remove_carrier_flag = stargate_economy_connections_int_off }
 }
 planet_stargate_economy_connections_int_on = {
-	potential = { NOT = { has_planet_flag = stargate_economy_connections_int_off } }
+	potential = { NOT = { has_carrier_flag = stargate_economy_connections_int_off } }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 	}
 	effect = {
 		custom_tooltip = "stargate_connection_on"
-		set_planet_flag = stargate_economy_connections_int_off
+		set_carrier_flag = stargate_economy_connections_int_off
 	}
 }
 planet_stargate_economy_connections_ex_off = {
-	potential = { has_planet_flag = stargate_economy_connections_ex_off }
+	potential = { has_carrier_flag = stargate_economy_connections_ex_off }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		} hidden_trigger = { always = yes } }
-	effect = { custom_tooltip = "stargate_connection_off" remove_planet_flag = stargate_economy_connections_ex_off }
+	effect = { custom_tooltip = "stargate_connection_off" remove_carrier_flag = stargate_economy_connections_ex_off }
 }
 planet_stargate_economy_connections_ex_on = {
-	potential = { NOT = { has_planet_flag = stargate_economy_connections_ex_off } }
+	potential = { NOT = { has_carrier_flag = stargate_economy_connections_ex_off } }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		} hidden_trigger = { always = yes } }
 	effect = {
 		custom_tooltip = "stargate_connection_on"
-		set_planet_flag = stargate_economy_connections_ex_off
+		set_carrier_flag = stargate_economy_connections_ex_off
 	}
 }
 planet_stargate_research_connections_ex_off = {
-	potential = { has_planet_flag = stargate_research_connections_ex_off }
+	potential = { has_carrier_flag = stargate_research_connections_ex_off }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		} hidden_trigger = { always = yes } }
-	effect = { custom_tooltip = "stargate_connection_off" remove_planet_flag = stargate_research_connections_ex_off }
+	effect = { custom_tooltip = "stargate_connection_off" remove_carrier_flag = stargate_research_connections_ex_off }
 }
 planet_stargate_research_connections_ex_on = {
-	potential = { NOT = { has_planet_flag = stargate_research_connections_ex_off } }
+	potential = { NOT = { has_carrier_flag = stargate_research_connections_ex_off } }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		} hidden_trigger = { always = yes } }
 	effect = {
 		custom_tooltip = "stargate_connection_on"
-		set_planet_flag = stargate_research_connections_ex_off
+		set_carrier_flag = stargate_research_connections_ex_off
 	}
 }
 
 ###Stargate Priority Numbers
 
 planet_stargate_military_connections_int_1 = {
-	potential = { has_planet_flag = stargate_military_connections_int_1 }
+	potential = { has_carrier_flag = stargate_military_connections_int_1 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_military_connections_int_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_military_connections_int_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 planet_stargate_military_connections_int_2 = {
-	potential = { has_planet_flag = stargate_military_connections_int_2 }
+	potential = { has_carrier_flag = stargate_military_connections_int_2 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_military_connections_int_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_military_connections_int_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 planet_stargate_military_connections_int_3 = {
-	potential = { has_planet_flag = stargate_military_connections_int_3 }
+	potential = { has_carrier_flag = stargate_military_connections_int_3 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_military_connections_int_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_military_connections_int_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 planet_stargate_military_connections_int_4 = {
-	potential = { has_planet_flag = stargate_military_connections_int_4 }
+	potential = { has_carrier_flag = stargate_military_connections_int_4 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_military_connections_int_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_military_connections_int_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 planet_stargate_military_connections_int_5 = {
-	potential = { has_planet_flag = stargate_military_connections_int_5 }
+	potential = { has_carrier_flag = stargate_military_connections_int_5 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_military_connections_int_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_military_connections_int_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 
 planet_stargate_military_connections_ex_1 = {
-	potential = { has_planet_flag = stargate_military_connections_ex_1 }
+	potential = { has_carrier_flag = stargate_military_connections_ex_1 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_military_connections_ex_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_military_connections_ex_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 planet_stargate_military_connections_ex_2 = {
-	potential = { has_planet_flag = stargate_military_connections_ex_2 }
+	potential = { has_carrier_flag = stargate_military_connections_ex_2 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_military_connections_ex_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_military_connections_ex_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 planet_stargate_military_connections_ex_3 = {
-	potential = { has_planet_flag = stargate_military_connections_ex_3 }
+	potential = { has_carrier_flag = stargate_military_connections_ex_3 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_military_connections_ex_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_military_connections_ex_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 planet_stargate_military_connections_ex_4 = {
-	potential = { has_planet_flag = stargate_military_connections_ex_4 }
+	potential = { has_carrier_flag = stargate_military_connections_ex_4 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_military_connections_ex_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_military_connections_ex_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 planet_stargate_military_connections_ex_5 = {
-	potential = { has_planet_flag = stargate_military_connections_ex_5 }
+	potential = { has_carrier_flag = stargate_military_connections_ex_5 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_military_connections_ex_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_military_connections_ex_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 
 planet_stargate_economic_connections_int_1 = {
-	potential = { has_planet_flag = stargate_economic_connections_int_1 }
+	potential = { has_carrier_flag = stargate_economic_connections_int_1 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_economy_connections_int_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_economy_connections_int_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 planet_stargate_economic_connections_int_2 = {
-	potential = { has_planet_flag = stargate_economic_connections_int_2 }
+	potential = { has_carrier_flag = stargate_economic_connections_int_2 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_economy_connections_int_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_economy_connections_int_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 planet_stargate_economic_connections_int_3 = {
-	potential = { has_planet_flag = stargate_economic_connections_int_3 }
+	potential = { has_carrier_flag = stargate_economic_connections_int_3 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_economy_connections_int_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_economy_connections_int_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 planet_stargate_economic_connections_int_4 = {
-	potential = { has_planet_flag = stargate_economic_connections_int_4 }
+	potential = { has_carrier_flag = stargate_economic_connections_int_4 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_economy_connections_int_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_economy_connections_int_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 planet_stargate_economic_connections_int_5 = {
-	potential = { has_planet_flag = stargate_economic_connections_int_5 }
+	potential = { has_carrier_flag = stargate_economic_connections_int_5 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_economy_connections_int_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_economy_connections_int_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 
 planet_stargate_economic_connections_ex_1 = {
-	potential = { has_planet_flag = stargate_economic_connections_ex_1 }
+	potential = { has_carrier_flag = stargate_economic_connections_ex_1 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_economy_connections_ex_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_economy_connections_ex_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 planet_stargate_economic_connections_ex_2 = {
-	potential = { has_planet_flag = stargate_economic_connections_ex_2 }
+	potential = { has_carrier_flag = stargate_economic_connections_ex_2 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_economy_connections_ex_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_economy_connections_ex_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 planet_stargate_economic_connections_ex_3 = {
-	potential = { has_planet_flag = stargate_economic_connections_ex_3 }
+	potential = { has_carrier_flag = stargate_economic_connections_ex_3 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_economy_connections_ex_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_economy_connections_ex_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 planet_stargate_economic_connections_ex_4 = {
-	potential = { has_planet_flag = stargate_economic_connections_ex_4 }
+	potential = { has_carrier_flag = stargate_economic_connections_ex_4 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_economy_connections_ex_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_economy_connections_ex_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 planet_stargate_economic_connections_ex_5 = {
-	potential = { has_planet_flag = stargate_economic_connections_ex_5 }
+	potential = { has_carrier_flag = stargate_economic_connections_ex_5 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_economy_connections_ex_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_economy_connections_ex_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 
 planet_stargate_research_connections_ex_1 = {
-	potential = { has_planet_flag = stargate_research_connections_ex_1 }
+	potential = { has_carrier_flag = stargate_research_connections_ex_1 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_research_connections_ex_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_research_connections_ex_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 planet_stargate_research_connections_ex_2 = {
-	potential = { has_planet_flag = stargate_research_connections_ex_2 }
+	potential = { has_carrier_flag = stargate_research_connections_ex_2 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_research_connections_ex_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_research_connections_ex_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 planet_stargate_research_connections_ex_3 = {
-	potential = { has_planet_flag = stargate_research_connections_ex_3 }
+	potential = { has_carrier_flag = stargate_research_connections_ex_3 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_research_connections_ex_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_research_connections_ex_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 planet_stargate_research_connections_ex_4 = {
-	potential = { has_planet_flag = stargate_research_connections_ex_4 }
+	potential = { has_carrier_flag = stargate_research_connections_ex_4 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_research_connections_ex_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_research_connections_ex_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 planet_stargate_research_connections_ex_5 = {
-	potential = { has_planet_flag = stargate_research_connections_ex_5 }
+	potential = { has_carrier_flag = stargate_research_connections_ex_5 }
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
-		} hidden_trigger = { NOT = { has_planet_flag = stargate_research_connections_ex_off } } }
+			has_carrier_flag = stargate_local_caps
+		} hidden_trigger = { NOT = { has_carrier_flag = stargate_research_connections_ex_off } } }
 	effect = { custom_tooltip = "stargate_connection_priority" }
 }
 
@@ -1327,138 +1327,138 @@ planet_stargate_mil_con_int_increase_priority = {
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = "already_maximum_priority"
 		hidden_trigger = {
-			NOT = { has_planet_flag = stargate_military_connections_int_1 }
-			NOT = { has_planet_flag = stargate_military_connections_int_off }
+			NOT = { has_carrier_flag = stargate_military_connections_int_1 }
+			NOT = { has_carrier_flag = stargate_military_connections_int_off }
 		}
 	}
 	effect = {
 		custom_tooltip = "increase_connection_priority"
 		hidden_effect = {
 			switch = {
-				trigger = has_planet_flag
+				trigger = has_carrier_flag
 				stargate_military_connections_int_1 = {
 				}
 				stargate_military_connections_int_2 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_military_connections_int_1 = { }
 						stargate_military_connections_ex_1 = { 
-							remove_planet_flag = stargate_military_connections_ex_1
-							remove_planet_flag = stargate_military_connections_int_2
-							set_planet_flag = stargate_military_connections_ex_2
-							set_planet_flag = stargate_military_connections_int_1
+							remove_carrier_flag = stargate_military_connections_ex_1
+							remove_carrier_flag = stargate_military_connections_int_2
+							set_carrier_flag = stargate_military_connections_ex_2
+							set_carrier_flag = stargate_military_connections_int_1
 						}
 						stargate_economic_connections_int_1 = { 
-							remove_planet_flag = stargate_economic_connections_int_1
-							remove_planet_flag = stargate_military_connections_int_2
-							set_planet_flag = stargate_economic_connections_int_2
-							set_planet_flag = stargate_military_connections_int_1
+							remove_carrier_flag = stargate_economic_connections_int_1
+							remove_carrier_flag = stargate_military_connections_int_2
+							set_carrier_flag = stargate_economic_connections_int_2
+							set_carrier_flag = stargate_military_connections_int_1
 						}
 						stargate_economic_connections_ex_1 = { 
-							remove_planet_flag = stargate_economic_connections_ex_1
-							remove_planet_flag = stargate_military_connections_int_2
-							set_planet_flag = stargate_economic_connections_ex_2
-							set_planet_flag = stargate_military_connections_int_1
+							remove_carrier_flag = stargate_economic_connections_ex_1
+							remove_carrier_flag = stargate_military_connections_int_2
+							set_carrier_flag = stargate_economic_connections_ex_2
+							set_carrier_flag = stargate_military_connections_int_1
 						}
 						stargate_research_connections_ex_1 = { 
-							remove_planet_flag = stargate_research_connections_ex_1
-							remove_planet_flag = stargate_military_connections_int_2
-							set_planet_flag = stargate_research_connections_ex_2
-							set_planet_flag = stargate_military_connections_int_1
+							remove_carrier_flag = stargate_research_connections_ex_1
+							remove_carrier_flag = stargate_military_connections_int_2
+							set_carrier_flag = stargate_research_connections_ex_2
+							set_carrier_flag = stargate_military_connections_int_1
 						}
 					}
 				}
 				stargate_military_connections_int_3 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_military_connections_int_2 = { }
 						stargate_military_connections_ex_2 = { 
-							remove_planet_flag = stargate_military_connections_ex_2
-							remove_planet_flag = stargate_military_connections_int_3
-							set_planet_flag = stargate_military_connections_ex_3
-							set_planet_flag = stargate_military_connections_int_2
+							remove_carrier_flag = stargate_military_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_int_3
+							set_carrier_flag = stargate_military_connections_ex_3
+							set_carrier_flag = stargate_military_connections_int_2
 						}
 						stargate_economic_connections_int_2 = { 
-							remove_planet_flag = stargate_economic_connections_int_2
-							remove_planet_flag = stargate_military_connections_int_3
-							set_planet_flag = stargate_economic_connections_int_3
-							set_planet_flag = stargate_military_connections_int_2
+							remove_carrier_flag = stargate_economic_connections_int_2
+							remove_carrier_flag = stargate_military_connections_int_3
+							set_carrier_flag = stargate_economic_connections_int_3
+							set_carrier_flag = stargate_military_connections_int_2
 						}
 						stargate_economic_connections_ex_2 = { 
-							remove_planet_flag = stargate_economic_connections_ex_2
-							remove_planet_flag = stargate_military_connections_int_3
-							set_planet_flag = stargate_economic_connections_ex_3
-							set_planet_flag = stargate_military_connections_int_2
+							remove_carrier_flag = stargate_economic_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_int_3
+							set_carrier_flag = stargate_economic_connections_ex_3
+							set_carrier_flag = stargate_military_connections_int_2
 						}
 						stargate_research_connections_ex_2 = { 
-							remove_planet_flag = stargate_research_connections_ex_2
-							remove_planet_flag = stargate_military_connections_int_3
-							set_planet_flag = stargate_research_connections_ex_3
-							set_planet_flag = stargate_military_connections_int_2
+							remove_carrier_flag = stargate_research_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_int_3
+							set_carrier_flag = stargate_research_connections_ex_3
+							set_carrier_flag = stargate_military_connections_int_2
 						}
 					}
 				}
 				stargate_military_connections_int_4 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_military_connections_int_3 = { }
 						stargate_military_connections_ex_3 = { 
-							remove_planet_flag = stargate_military_connections_ex_3
-							remove_planet_flag = stargate_military_connections_int_4
-							set_planet_flag = stargate_military_connections_ex_4
-							set_planet_flag = stargate_military_connections_int_3
+							remove_carrier_flag = stargate_military_connections_ex_3
+							remove_carrier_flag = stargate_military_connections_int_4
+							set_carrier_flag = stargate_military_connections_ex_4
+							set_carrier_flag = stargate_military_connections_int_3
 						}
 						stargate_economic_connections_int_3 = { 
-							remove_planet_flag = stargate_economic_connections_int_3
-							remove_planet_flag = stargate_military_connections_int_4
-							set_planet_flag = stargate_economic_connections_int_4
-							set_planet_flag = stargate_military_connections_int_3
+							remove_carrier_flag = stargate_economic_connections_int_3
+							remove_carrier_flag = stargate_military_connections_int_4
+							set_carrier_flag = stargate_economic_connections_int_4
+							set_carrier_flag = stargate_military_connections_int_3
 						}
 						stargate_economic_connections_ex_3 = { 
-							remove_planet_flag = stargate_economic_connections_ex_3
-							remove_planet_flag = stargate_military_connections_int_4
-							set_planet_flag = stargate_economic_connections_ex_4
-							set_planet_flag = stargate_military_connections_int_3
+							remove_carrier_flag = stargate_economic_connections_ex_3
+							remove_carrier_flag = stargate_military_connections_int_4
+							set_carrier_flag = stargate_economic_connections_ex_4
+							set_carrier_flag = stargate_military_connections_int_3
 						}
 						stargate_research_connections_ex_3 = { 
-							remove_planet_flag = stargate_research_connections_ex_3
-							remove_planet_flag = stargate_military_connections_int_4
-							set_planet_flag = stargate_research_connections_ex_4
-							set_planet_flag = stargate_military_connections_int_3
+							remove_carrier_flag = stargate_research_connections_ex_3
+							remove_carrier_flag = stargate_military_connections_int_4
+							set_carrier_flag = stargate_research_connections_ex_4
+							set_carrier_flag = stargate_military_connections_int_3
 						}
 					}
 				}
 				stargate_military_connections_int_5 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_military_connections_int_4 = { }
 						stargate_military_connections_ex_4 = { 
-							remove_planet_flag = stargate_military_connections_ex_4
-							remove_planet_flag = stargate_military_connections_int_5
-							set_planet_flag = stargate_military_connections_ex_5
-							set_planet_flag = stargate_military_connections_int_4
+							remove_carrier_flag = stargate_military_connections_ex_4
+							remove_carrier_flag = stargate_military_connections_int_5
+							set_carrier_flag = stargate_military_connections_ex_5
+							set_carrier_flag = stargate_military_connections_int_4
 						}
 						stargate_economic_connections_int_4 = { 
-							remove_planet_flag = stargate_economic_connections_int_4
-							remove_planet_flag = stargate_military_connections_int_5
-							set_planet_flag = stargate_economic_connections_int_5
-							set_planet_flag = stargate_military_connections_int_4
+							remove_carrier_flag = stargate_economic_connections_int_4
+							remove_carrier_flag = stargate_military_connections_int_5
+							set_carrier_flag = stargate_economic_connections_int_5
+							set_carrier_flag = stargate_military_connections_int_4
 						}
 						stargate_economic_connections_ex_4 = { 
-							remove_planet_flag = stargate_economic_connections_ex_4
-							remove_planet_flag = stargate_military_connections_int_5
-							set_planet_flag = stargate_economic_connections_ex_5
-							set_planet_flag = stargate_military_connections_int_4
+							remove_carrier_flag = stargate_economic_connections_ex_4
+							remove_carrier_flag = stargate_military_connections_int_5
+							set_carrier_flag = stargate_economic_connections_ex_5
+							set_carrier_flag = stargate_military_connections_int_4
 						}
 						stargate_research_connections_ex_4 = { 
-							remove_planet_flag = stargate_research_connections_ex_4
-							remove_planet_flag = stargate_military_connections_int_5
-							set_planet_flag = stargate_research_connections_ex_5
-							set_planet_flag = stargate_military_connections_int_4
+							remove_carrier_flag = stargate_research_connections_ex_4
+							remove_carrier_flag = stargate_military_connections_int_5
+							set_carrier_flag = stargate_research_connections_ex_5
+							set_carrier_flag = stargate_military_connections_int_4
 						}
 					}
 				}
@@ -1471,136 +1471,136 @@ planet_stargate_mil_con_int_decrease_priority = {
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = "already_minimum_priority"
 		hidden_trigger = {
-			NOT = { has_planet_flag = stargate_military_connections_int_5 }
-			NOT = { has_planet_flag = stargate_military_connections_int_off }
+			NOT = { has_carrier_flag = stargate_military_connections_int_5 }
+			NOT = { has_carrier_flag = stargate_military_connections_int_off }
 		}
 	}
 	effect = {
 		custom_tooltip = "decrease_connection_priority"
 		hidden_effect = {
 			switch = {
-				trigger = has_planet_flag
+				trigger = has_carrier_flag
 				stargate_military_connections_int_1 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_military_connections_int_2 = { }
 						stargate_military_connections_ex_2 = { 
-							remove_planet_flag = stargate_military_connections_ex_2
-							remove_planet_flag = stargate_military_connections_int_1
-							set_planet_flag = stargate_military_connections_ex_1
-							set_planet_flag = stargate_military_connections_int_2
+							remove_carrier_flag = stargate_military_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_int_1
+							set_carrier_flag = stargate_military_connections_ex_1
+							set_carrier_flag = stargate_military_connections_int_2
 						}
 						stargate_economic_connections_int_2 = { 
-							remove_planet_flag = stargate_economic_connections_int_2
-							remove_planet_flag = stargate_military_connections_int_1
-							set_planet_flag = stargate_economic_connections_int_1
-							set_planet_flag = stargate_military_connections_int_2
+							remove_carrier_flag = stargate_economic_connections_int_2
+							remove_carrier_flag = stargate_military_connections_int_1
+							set_carrier_flag = stargate_economic_connections_int_1
+							set_carrier_flag = stargate_military_connections_int_2
 						}
 						stargate_economic_connections_ex_2 = { 
-							remove_planet_flag = stargate_economic_connections_ex_2
-							remove_planet_flag = stargate_military_connections_int_1
-							set_planet_flag = stargate_economic_connections_ex_1
-							set_planet_flag = stargate_military_connections_int_2
+							remove_carrier_flag = stargate_economic_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_int_1
+							set_carrier_flag = stargate_economic_connections_ex_1
+							set_carrier_flag = stargate_military_connections_int_2
 						}
 						stargate_research_connections_ex_2 = { 
-							remove_planet_flag = stargate_research_connections_ex_2
-							remove_planet_flag = stargate_military_connections_int_1
-							set_planet_flag = stargate_research_connections_ex_1
-							set_planet_flag = stargate_military_connections_int_2
+							remove_carrier_flag = stargate_research_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_int_1
+							set_carrier_flag = stargate_research_connections_ex_1
+							set_carrier_flag = stargate_military_connections_int_2
 						}
 					}
 				}
 				stargate_military_connections_int_2 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_military_connections_int_3 = { }
 						stargate_military_connections_ex_3 = { 
-							remove_planet_flag = stargate_military_connections_ex_3
-							remove_planet_flag = stargate_military_connections_int_2
-							set_planet_flag = stargate_military_connections_ex_2
-							set_planet_flag = stargate_military_connections_int_3
+							remove_carrier_flag = stargate_military_connections_ex_3
+							remove_carrier_flag = stargate_military_connections_int_2
+							set_carrier_flag = stargate_military_connections_ex_2
+							set_carrier_flag = stargate_military_connections_int_3
 						}
 						stargate_economic_connections_int_3 = { 
-							remove_planet_flag = stargate_economic_connections_int_3
-							remove_planet_flag = stargate_military_connections_int_2
-							set_planet_flag = stargate_economic_connections_int_2
-							set_planet_flag = stargate_military_connections_int_3
+							remove_carrier_flag = stargate_economic_connections_int_3
+							remove_carrier_flag = stargate_military_connections_int_2
+							set_carrier_flag = stargate_economic_connections_int_2
+							set_carrier_flag = stargate_military_connections_int_3
 						}
 						stargate_economic_connections_ex_3 = { 
-							remove_planet_flag = stargate_economic_connections_ex_3
-							remove_planet_flag = stargate_military_connections_int_2
-							set_planet_flag = stargate_economic_connections_ex_2
-							set_planet_flag = stargate_military_connections_int_3
+							remove_carrier_flag = stargate_economic_connections_ex_3
+							remove_carrier_flag = stargate_military_connections_int_2
+							set_carrier_flag = stargate_economic_connections_ex_2
+							set_carrier_flag = stargate_military_connections_int_3
 						}
 						stargate_research_connections_ex_3 = { 
-							remove_planet_flag = stargate_research_connections_ex_3
-							remove_planet_flag = stargate_military_connections_int_2
-							set_planet_flag = stargate_research_connections_ex_2
-							set_planet_flag = stargate_military_connections_int_3
+							remove_carrier_flag = stargate_research_connections_ex_3
+							remove_carrier_flag = stargate_military_connections_int_2
+							set_carrier_flag = stargate_research_connections_ex_2
+							set_carrier_flag = stargate_military_connections_int_3
 						}
 					}
 				}
 				stargate_military_connections_int_3 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_military_connections_int_4 = { }
 						stargate_military_connections_ex_4 = { 
-							remove_planet_flag = stargate_military_connections_ex_4
-							remove_planet_flag = stargate_military_connections_int_3
-							set_planet_flag = stargate_military_connections_ex_3
-							set_planet_flag = stargate_military_connections_int_4
+							remove_carrier_flag = stargate_military_connections_ex_4
+							remove_carrier_flag = stargate_military_connections_int_3
+							set_carrier_flag = stargate_military_connections_ex_3
+							set_carrier_flag = stargate_military_connections_int_4
 						}
 						stargate_economic_connections_int_4 = { 
-							remove_planet_flag = stargate_economic_connections_int_4
-							remove_planet_flag = stargate_military_connections_int_3
-							set_planet_flag = stargate_economic_connections_int_3
-							set_planet_flag = stargate_military_connections_int_4
+							remove_carrier_flag = stargate_economic_connections_int_4
+							remove_carrier_flag = stargate_military_connections_int_3
+							set_carrier_flag = stargate_economic_connections_int_3
+							set_carrier_flag = stargate_military_connections_int_4
 						}
 						stargate_economic_connections_ex_4 = { 
-							remove_planet_flag = stargate_economic_connections_ex_4
-							remove_planet_flag = stargate_military_connections_int_3
-							set_planet_flag = stargate_economic_connections_ex_3
-							set_planet_flag = stargate_military_connections_int_4
+							remove_carrier_flag = stargate_economic_connections_ex_4
+							remove_carrier_flag = stargate_military_connections_int_3
+							set_carrier_flag = stargate_economic_connections_ex_3
+							set_carrier_flag = stargate_military_connections_int_4
 						}
 						stargate_research_connections_ex_4 = { 
-							remove_planet_flag = stargate_research_connections_ex_4
-							remove_planet_flag = stargate_military_connections_int_3
-							set_planet_flag = stargate_research_connections_ex_3
-							set_planet_flag = stargate_military_connections_int_4
+							remove_carrier_flag = stargate_research_connections_ex_4
+							remove_carrier_flag = stargate_military_connections_int_3
+							set_carrier_flag = stargate_research_connections_ex_3
+							set_carrier_flag = stargate_military_connections_int_4
 						}
 					}
 				}
 				stargate_military_connections_int_4 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_military_connections_int_5 = { }
 						stargate_military_connections_ex_5 = { 
-							remove_planet_flag = stargate_military_connections_ex_5
-							remove_planet_flag = stargate_military_connections_int_4
-							set_planet_flag = stargate_military_connections_ex_4
-							set_planet_flag = stargate_military_connections_int_5
+							remove_carrier_flag = stargate_military_connections_ex_5
+							remove_carrier_flag = stargate_military_connections_int_4
+							set_carrier_flag = stargate_military_connections_ex_4
+							set_carrier_flag = stargate_military_connections_int_5
 						}
 						stargate_economic_connections_int_5 = { 
-							remove_planet_flag = stargate_economic_connections_int_5
-							remove_planet_flag = stargate_military_connections_int_4
-							set_planet_flag = stargate_economic_connections_int_4
-							set_planet_flag = stargate_military_connections_int_5
+							remove_carrier_flag = stargate_economic_connections_int_5
+							remove_carrier_flag = stargate_military_connections_int_4
+							set_carrier_flag = stargate_economic_connections_int_4
+							set_carrier_flag = stargate_military_connections_int_5
 						}
 						stargate_economic_connections_ex_5 = { 
-							remove_planet_flag = stargate_economic_connections_ex_5
-							remove_planet_flag = stargate_military_connections_int_4
-							set_planet_flag = stargate_economic_connections_ex_4
-							set_planet_flag = stargate_military_connections_int_5
+							remove_carrier_flag = stargate_economic_connections_ex_5
+							remove_carrier_flag = stargate_military_connections_int_4
+							set_carrier_flag = stargate_economic_connections_ex_4
+							set_carrier_flag = stargate_military_connections_int_5
 						}
 						stargate_research_connections_ex_5 = { 
-							remove_planet_flag = stargate_research_connections_ex_5
-							remove_planet_flag = stargate_military_connections_int_4
-							set_planet_flag = stargate_research_connections_ex_4
-							set_planet_flag = stargate_military_connections_int_5
+							remove_carrier_flag = stargate_research_connections_ex_5
+							remove_carrier_flag = stargate_military_connections_int_4
+							set_carrier_flag = stargate_research_connections_ex_4
+							set_carrier_flag = stargate_military_connections_int_5
 						}
 					}
 				}
@@ -1616,138 +1616,138 @@ planet_stargate_mil_con_ex_increase_priority = {
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = "already_maximum_priority"
 		hidden_trigger = {
-			NOT = { has_planet_flag = stargate_military_connections_ex_1 }
-			NOT = { has_planet_flag = stargate_military_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_military_connections_ex_1 }
+			NOT = { has_carrier_flag = stargate_military_connections_ex_off }
 		}
 	}
 	effect = {
 		custom_tooltip = "increase_connection_priority"
 		hidden_effect = {
 			switch = {
-				trigger = has_planet_flag
+				trigger = has_carrier_flag
 				stargate_military_connections_ex_1 = {
 				}
 				stargate_military_connections_ex_2 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_military_connections_ex_1 = { }
 						stargate_military_connections_int_1 = { 
-							remove_planet_flag = stargate_military_connections_int_1
-							remove_planet_flag = stargate_military_connections_ex_2
-							set_planet_flag = stargate_military_connections_int_2
-							set_planet_flag = stargate_military_connections_ex_1
+							remove_carrier_flag = stargate_military_connections_int_1
+							remove_carrier_flag = stargate_military_connections_ex_2
+							set_carrier_flag = stargate_military_connections_int_2
+							set_carrier_flag = stargate_military_connections_ex_1
 						}
 						stargate_economic_connections_int_1 = { 
-							remove_planet_flag = stargate_economic_connections_int_1
-							remove_planet_flag = stargate_military_connections_ex_2
-							set_planet_flag = stargate_economic_connections_int_2
-							set_planet_flag = stargate_military_connections_ex_1
+							remove_carrier_flag = stargate_economic_connections_int_1
+							remove_carrier_flag = stargate_military_connections_ex_2
+							set_carrier_flag = stargate_economic_connections_int_2
+							set_carrier_flag = stargate_military_connections_ex_1
 						}
 						stargate_economic_connections_ex_1 = { 
-							remove_planet_flag = stargate_economic_connections_ex_1
-							remove_planet_flag = stargate_military_connections_ex_2
-							set_planet_flag = stargate_economic_connections_ex_2
-							set_planet_flag = stargate_military_connections_ex_1
+							remove_carrier_flag = stargate_economic_connections_ex_1
+							remove_carrier_flag = stargate_military_connections_ex_2
+							set_carrier_flag = stargate_economic_connections_ex_2
+							set_carrier_flag = stargate_military_connections_ex_1
 						}
 						stargate_research_connections_ex_1 = { 
-							remove_planet_flag = stargate_research_connections_ex_1
-							remove_planet_flag = stargate_military_connections_ex_2
-							set_planet_flag = stargate_research_connections_ex_2
-							set_planet_flag = stargate_military_connections_ex_1
+							remove_carrier_flag = stargate_research_connections_ex_1
+							remove_carrier_flag = stargate_military_connections_ex_2
+							set_carrier_flag = stargate_research_connections_ex_2
+							set_carrier_flag = stargate_military_connections_ex_1
 						}
 					}
 				}
 				stargate_military_connections_ex_3 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_military_connections_ex_2 = { }
 						stargate_military_connections_int_2 = {
-							remove_planet_flag = stargate_military_connections_int_2
-							remove_planet_flag = stargate_military_connections_ex_3
-							set_planet_flag = stargate_military_connections_int_3
-							set_planet_flag = stargate_military_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_int_2
+							remove_carrier_flag = stargate_military_connections_ex_3
+							set_carrier_flag = stargate_military_connections_int_3
+							set_carrier_flag = stargate_military_connections_ex_2
 						}
 						stargate_economic_connections_int_2 = { 
-							remove_planet_flag = stargate_economic_connections_int_2
-							remove_planet_flag = stargate_military_connections_ex_3
-							set_planet_flag = stargate_economic_connections_int_3
-							set_planet_flag = stargate_military_connections_ex_2
+							remove_carrier_flag = stargate_economic_connections_int_2
+							remove_carrier_flag = stargate_military_connections_ex_3
+							set_carrier_flag = stargate_economic_connections_int_3
+							set_carrier_flag = stargate_military_connections_ex_2
 						}
 						stargate_economic_connections_ex_2 = { 
-							remove_planet_flag = stargate_economic_connections_ex_2
-							remove_planet_flag = stargate_military_connections_ex_3
-							set_planet_flag = stargate_economic_connections_ex_3
-							set_planet_flag = stargate_military_connections_ex_2
+							remove_carrier_flag = stargate_economic_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_ex_3
+							set_carrier_flag = stargate_economic_connections_ex_3
+							set_carrier_flag = stargate_military_connections_ex_2
 						}
 						stargate_research_connections_ex_2 = { 
-							remove_planet_flag = stargate_research_connections_ex_2
-							remove_planet_flag = stargate_military_connections_ex_3
-							set_planet_flag = stargate_research_connections_ex_3
-							set_planet_flag = stargate_military_connections_ex_2
+							remove_carrier_flag = stargate_research_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_ex_3
+							set_carrier_flag = stargate_research_connections_ex_3
+							set_carrier_flag = stargate_military_connections_ex_2
 						}
 					}
 				}
 				stargate_military_connections_ex_4 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_military_connections_ex_3 = { }
 						stargate_military_connections_int_3 = { 
-							remove_planet_flag = stargate_military_connections_int_3
-							remove_planet_flag = stargate_military_connections_ex_4
-							set_planet_flag = stargate_military_connections_int_4
-							set_planet_flag = stargate_military_connections_ex_3
+							remove_carrier_flag = stargate_military_connections_int_3
+							remove_carrier_flag = stargate_military_connections_ex_4
+							set_carrier_flag = stargate_military_connections_int_4
+							set_carrier_flag = stargate_military_connections_ex_3
 						}
 						stargate_economic_connections_int_3 = { 
-							remove_planet_flag = stargate_economic_connections_int_3
-							remove_planet_flag = stargate_military_connections_ex_4
-							set_planet_flag = stargate_economic_connections_int_4
-							set_planet_flag = stargate_military_connections_ex_3
+							remove_carrier_flag = stargate_economic_connections_int_3
+							remove_carrier_flag = stargate_military_connections_ex_4
+							set_carrier_flag = stargate_economic_connections_int_4
+							set_carrier_flag = stargate_military_connections_ex_3
 						}
 						stargate_economic_connections_ex_3 = { 
-							remove_planet_flag = stargate_economic_connections_ex_3
-							remove_planet_flag = stargate_military_connections_ex_4
-							set_planet_flag = stargate_economic_connections_ex_4
-							set_planet_flag = stargate_military_connections_ex_3
+							remove_carrier_flag = stargate_economic_connections_ex_3
+							remove_carrier_flag = stargate_military_connections_ex_4
+							set_carrier_flag = stargate_economic_connections_ex_4
+							set_carrier_flag = stargate_military_connections_ex_3
 						}
 						stargate_research_connections_ex_3 = { 
-							remove_planet_flag = stargate_research_connections_ex_3
-							remove_planet_flag = stargate_military_connections_ex_4
-							set_planet_flag = stargate_research_connections_ex_4
-							set_planet_flag = stargate_military_connections_ex_3
+							remove_carrier_flag = stargate_research_connections_ex_3
+							remove_carrier_flag = stargate_military_connections_ex_4
+							set_carrier_flag = stargate_research_connections_ex_4
+							set_carrier_flag = stargate_military_connections_ex_3
 						}
 					}
 				}
 				stargate_military_connections_ex_5 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_military_connections_ex_4 = { }
 						stargate_military_connections_int_4 = { 
-							remove_planet_flag = stargate_military_connections_int_4
-							remove_planet_flag = stargate_military_connections_ex_5
-							set_planet_flag = stargate_military_connections_int_5
-							set_planet_flag = stargate_military_connections_ex_4
+							remove_carrier_flag = stargate_military_connections_int_4
+							remove_carrier_flag = stargate_military_connections_ex_5
+							set_carrier_flag = stargate_military_connections_int_5
+							set_carrier_flag = stargate_military_connections_ex_4
 						}
 						stargate_economic_connections_int_4 = { 
-							remove_planet_flag = stargate_economic_connections_int_4
-							remove_planet_flag = stargate_military_connections_ex_5
-							set_planet_flag = stargate_economic_connections_int_5
-							set_planet_flag = stargate_military_connections_ex_4
+							remove_carrier_flag = stargate_economic_connections_int_4
+							remove_carrier_flag = stargate_military_connections_ex_5
+							set_carrier_flag = stargate_economic_connections_int_5
+							set_carrier_flag = stargate_military_connections_ex_4
 						}
 						stargate_economic_connections_ex_4 = { 
-							remove_planet_flag = stargate_economic_connections_ex_4
-							remove_planet_flag = stargate_military_connections_ex_5
-							set_planet_flag = stargate_economic_connections_ex_5
-							set_planet_flag = stargate_military_connections_ex_4
+							remove_carrier_flag = stargate_economic_connections_ex_4
+							remove_carrier_flag = stargate_military_connections_ex_5
+							set_carrier_flag = stargate_economic_connections_ex_5
+							set_carrier_flag = stargate_military_connections_ex_4
 						}
 						stargate_research_connections_ex_4 = { 
-							remove_planet_flag = stargate_research_connections_ex_4
-							remove_planet_flag = stargate_military_connections_ex_5
-							set_planet_flag = stargate_research_connections_ex_5
-							set_planet_flag = stargate_military_connections_ex_4
+							remove_carrier_flag = stargate_research_connections_ex_4
+							remove_carrier_flag = stargate_military_connections_ex_5
+							set_carrier_flag = stargate_research_connections_ex_5
+							set_carrier_flag = stargate_military_connections_ex_4
 						}
 					}
 				}
@@ -1760,136 +1760,136 @@ planet_stargate_mil_con_ex_decrease_priority = {
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = "already_minimum_priority"
 		hidden_trigger = {
-			NOT = { has_planet_flag = stargate_military_connections_ex_5 }
-			NOT = { has_planet_flag = stargate_military_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_military_connections_ex_5 }
+			NOT = { has_carrier_flag = stargate_military_connections_ex_off }
 		}
 	}
 	effect = {
 		custom_tooltip = "decrease_connection_priority"
 		hidden_effect = {
 			switch = {
-				trigger = has_planet_flag
+				trigger = has_carrier_flag
 				stargate_military_connections_ex_1 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_military_connections_ex_2 = { }
 						stargate_military_connections_int_2 = { 
-							remove_planet_flag = stargate_military_connections_int_2
-							remove_planet_flag = stargate_military_connections_ex_1
-							set_planet_flag = stargate_military_connections_int_1
-							set_planet_flag = stargate_military_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_int_2
+							remove_carrier_flag = stargate_military_connections_ex_1
+							set_carrier_flag = stargate_military_connections_int_1
+							set_carrier_flag = stargate_military_connections_ex_2
 						}
 						stargate_economic_connections_int_2 = { 
-							remove_planet_flag = stargate_economic_connections_int_2
-							remove_planet_flag = stargate_military_connections_ex_1
-							set_planet_flag = stargate_economic_connections_int_1
-							set_planet_flag = stargate_military_connections_ex_2
+							remove_carrier_flag = stargate_economic_connections_int_2
+							remove_carrier_flag = stargate_military_connections_ex_1
+							set_carrier_flag = stargate_economic_connections_int_1
+							set_carrier_flag = stargate_military_connections_ex_2
 						}
 						stargate_economic_connections_ex_2 = { 
-							remove_planet_flag = stargate_economic_connections_ex_2
-							remove_planet_flag = stargate_military_connections_ex_1
-							set_planet_flag = stargate_economic_connections_ex_1
-							set_planet_flag = stargate_military_connections_ex_2
+							remove_carrier_flag = stargate_economic_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_ex_1
+							set_carrier_flag = stargate_economic_connections_ex_1
+							set_carrier_flag = stargate_military_connections_ex_2
 						}
 						stargate_research_connections_ex_2 = { 
-							remove_planet_flag = stargate_research_connections_ex_2
-							remove_planet_flag = stargate_military_connections_ex_1
-							set_planet_flag = stargate_research_connections_ex_1
-							set_planet_flag = stargate_military_connections_ex_2
+							remove_carrier_flag = stargate_research_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_ex_1
+							set_carrier_flag = stargate_research_connections_ex_1
+							set_carrier_flag = stargate_military_connections_ex_2
 						}
 					}
 				}
 				stargate_military_connections_ex_2 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_military_connections_ex_3 = { }
 						stargate_military_connections_int_3 = {
-							remove_planet_flag = stargate_military_connections_int_3
-							remove_planet_flag = stargate_military_connections_ex_2
-							set_planet_flag = stargate_military_connections_int_2
-							set_planet_flag = stargate_military_connections_ex_3
+							remove_carrier_flag = stargate_military_connections_int_3
+							remove_carrier_flag = stargate_military_connections_ex_2
+							set_carrier_flag = stargate_military_connections_int_2
+							set_carrier_flag = stargate_military_connections_ex_3
 						}
 						stargate_economic_connections_int_3 = { 
-							remove_planet_flag = stargate_economic_connections_int_3
-							remove_planet_flag = stargate_military_connections_ex_2
-							set_planet_flag = stargate_economic_connections_int_2
-							set_planet_flag = stargate_military_connections_ex_3
+							remove_carrier_flag = stargate_economic_connections_int_3
+							remove_carrier_flag = stargate_military_connections_ex_2
+							set_carrier_flag = stargate_economic_connections_int_2
+							set_carrier_flag = stargate_military_connections_ex_3
 						}
 						stargate_economic_connections_ex_3 = { 
-							remove_planet_flag = stargate_economic_connections_ex_3
-							remove_planet_flag = stargate_military_connections_ex_2
-							set_planet_flag = stargate_economic_connections_ex_2
-							set_planet_flag = stargate_military_connections_ex_3
+							remove_carrier_flag = stargate_economic_connections_ex_3
+							remove_carrier_flag = stargate_military_connections_ex_2
+							set_carrier_flag = stargate_economic_connections_ex_2
+							set_carrier_flag = stargate_military_connections_ex_3
 						}
 						stargate_research_connections_ex_3 = { 
-							remove_planet_flag = stargate_research_connections_ex_2
-							remove_planet_flag = stargate_military_connections_ex_3
-							set_planet_flag = stargate_research_connections_ex_2
-							set_planet_flag = stargate_military_connections_ex_3
+							remove_carrier_flag = stargate_research_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_ex_3
+							set_carrier_flag = stargate_research_connections_ex_2
+							set_carrier_flag = stargate_military_connections_ex_3
 						}
 					}
 				}
 				stargate_military_connections_ex_3 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_military_connections_ex_4 = { }
 						stargate_military_connections_int_4 = { 
-							remove_planet_flag = stargate_military_connections_int_4
-							remove_planet_flag = stargate_military_connections_ex_3
-							set_planet_flag = stargate_military_connections_int_3
-							set_planet_flag = stargate_military_connections_ex_4
+							remove_carrier_flag = stargate_military_connections_int_4
+							remove_carrier_flag = stargate_military_connections_ex_3
+							set_carrier_flag = stargate_military_connections_int_3
+							set_carrier_flag = stargate_military_connections_ex_4
 						}
 						stargate_economic_connections_int_4 = { 
-							remove_planet_flag = stargate_economic_connections_int_4
-							remove_planet_flag = stargate_military_connections_ex_3
-							set_planet_flag = stargate_economic_connections_int_3
-							set_planet_flag = stargate_military_connections_ex_4
+							remove_carrier_flag = stargate_economic_connections_int_4
+							remove_carrier_flag = stargate_military_connections_ex_3
+							set_carrier_flag = stargate_economic_connections_int_3
+							set_carrier_flag = stargate_military_connections_ex_4
 						}
 						stargate_economic_connections_ex_4 = { 
-							remove_planet_flag = stargate_economic_connections_ex_4
-							remove_planet_flag = stargate_military_connections_ex_3
-							set_planet_flag = stargate_economic_connections_ex_3
-							set_planet_flag = stargate_military_connections_ex_4
+							remove_carrier_flag = stargate_economic_connections_ex_4
+							remove_carrier_flag = stargate_military_connections_ex_3
+							set_carrier_flag = stargate_economic_connections_ex_3
+							set_carrier_flag = stargate_military_connections_ex_4
 						}
 						stargate_research_connections_ex_4 = { 
-							remove_planet_flag = stargate_research_connections_ex_4
-							remove_planet_flag = stargate_military_connections_ex_3
-							set_planet_flag = stargate_research_connections_ex_3
-							set_planet_flag = stargate_military_connections_ex_4
+							remove_carrier_flag = stargate_research_connections_ex_4
+							remove_carrier_flag = stargate_military_connections_ex_3
+							set_carrier_flag = stargate_research_connections_ex_3
+							set_carrier_flag = stargate_military_connections_ex_4
 						}
 					}
 				}
 				stargate_military_connections_ex_4 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_military_connections_ex_5 = { }
 						stargate_military_connections_int_5 = { 
-							remove_planet_flag = stargate_military_connections_int_5
-							remove_planet_flag = stargate_military_connections_ex_4
-							set_planet_flag = stargate_military_connections_int_4
-							set_planet_flag = stargate_military_connections_ex_5
+							remove_carrier_flag = stargate_military_connections_int_5
+							remove_carrier_flag = stargate_military_connections_ex_4
+							set_carrier_flag = stargate_military_connections_int_4
+							set_carrier_flag = stargate_military_connections_ex_5
 						}
 						stargate_economic_connections_int_5 = { 
-							remove_planet_flag = stargate_economic_connections_int_5
-							remove_planet_flag = stargate_military_connections_ex_4
-							set_planet_flag = stargate_economic_connections_int_4
-							set_planet_flag = stargate_military_connections_ex_5
+							remove_carrier_flag = stargate_economic_connections_int_5
+							remove_carrier_flag = stargate_military_connections_ex_4
+							set_carrier_flag = stargate_economic_connections_int_4
+							set_carrier_flag = stargate_military_connections_ex_5
 						}
 						stargate_economic_connections_ex_5 = { 
-							remove_planet_flag = stargate_economic_connections_ex_5
-							remove_planet_flag = stargate_military_connections_ex_4
-							set_planet_flag = stargate_economic_connections_ex_4
-							set_planet_flag = stargate_military_connections_ex_5
+							remove_carrier_flag = stargate_economic_connections_ex_5
+							remove_carrier_flag = stargate_military_connections_ex_4
+							set_carrier_flag = stargate_economic_connections_ex_4
+							set_carrier_flag = stargate_military_connections_ex_5
 						}
 						stargate_research_connections_ex_5 = { 
-							remove_planet_flag = stargate_research_connections_ex_5
-							remove_planet_flag = stargate_military_connections_ex_4
-							set_planet_flag = stargate_research_connections_ex_4
-							set_planet_flag = stargate_military_connections_ex_5
+							remove_carrier_flag = stargate_research_connections_ex_5
+							remove_carrier_flag = stargate_military_connections_ex_4
+							set_carrier_flag = stargate_research_connections_ex_4
+							set_carrier_flag = stargate_military_connections_ex_5
 						}
 					}
 				}
@@ -1905,138 +1905,138 @@ planet_stargate_econ_con_int_increase_priority = {
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = "already_maximum_priority"
 		hidden_trigger = {
-			NOT = { has_planet_flag = stargate_economic_connections_int_1 }
-			NOT = { has_planet_flag = stargate_economy_connections_int_off }
+			NOT = { has_carrier_flag = stargate_economic_connections_int_1 }
+			NOT = { has_carrier_flag = stargate_economy_connections_int_off }
 		}
 	}
 	effect = {
 		custom_tooltip = "increase_connection_priority"
 		hidden_effect = {
 			switch = {
-				trigger = has_planet_flag
+				trigger = has_carrier_flag
 				stargate_economic_connections_int_1 = {
 				}
 				stargate_economic_connections_int_2 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_economic_connections_int_1 = { }
 						stargate_military_connections_int_1 = { 
-							remove_planet_flag = stargate_military_connections_int_1
-							remove_planet_flag = stargate_economic_connections_int_2
-							set_planet_flag = stargate_military_connections_int_2
-							set_planet_flag = stargate_economic_connections_int_1
+							remove_carrier_flag = stargate_military_connections_int_1
+							remove_carrier_flag = stargate_economic_connections_int_2
+							set_carrier_flag = stargate_military_connections_int_2
+							set_carrier_flag = stargate_economic_connections_int_1
 						}
 						stargate_military_connections_ex_1 = { 
-							remove_planet_flag = stargate_military_connections_ex_1
-							remove_planet_flag = stargate_economic_connections_int_2
-							set_planet_flag = stargate_military_connections_ex_2
-							set_planet_flag = stargate_economic_connections_int_1
+							remove_carrier_flag = stargate_military_connections_ex_1
+							remove_carrier_flag = stargate_economic_connections_int_2
+							set_carrier_flag = stargate_military_connections_ex_2
+							set_carrier_flag = stargate_economic_connections_int_1
 						}
 						stargate_economic_connections_ex_1 = { 
-							remove_planet_flag = stargate_economic_connections_ex_1
-							remove_planet_flag = stargate_economic_connections_int_2
-							set_planet_flag = stargate_economic_connections_ex_2
-							set_planet_flag = stargate_economic_connections_int_1
+							remove_carrier_flag = stargate_economic_connections_ex_1
+							remove_carrier_flag = stargate_economic_connections_int_2
+							set_carrier_flag = stargate_economic_connections_ex_2
+							set_carrier_flag = stargate_economic_connections_int_1
 						}
 						stargate_research_connections_ex_1 = { 
-							remove_planet_flag = stargate_research_connections_ex_1
-							remove_planet_flag = stargate_economic_connections_int_2
-							set_planet_flag = stargate_research_connections_ex_2
-							set_planet_flag = stargate_economic_connections_int_1
+							remove_carrier_flag = stargate_research_connections_ex_1
+							remove_carrier_flag = stargate_economic_connections_int_2
+							set_carrier_flag = stargate_research_connections_ex_2
+							set_carrier_flag = stargate_economic_connections_int_1
 						}
 					}
 				}
 				stargate_economic_connections_int_3 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_economic_connections_int_2 = { }
 						stargate_military_connections_int_2 = {
-							remove_planet_flag = stargate_military_connections_int_2
-							remove_planet_flag = stargate_economic_connections_int_3
-							set_planet_flag = stargate_military_connections_int_3
-							set_planet_flag = stargate_economic_connections_int_2
+							remove_carrier_flag = stargate_military_connections_int_2
+							remove_carrier_flag = stargate_economic_connections_int_3
+							set_carrier_flag = stargate_military_connections_int_3
+							set_carrier_flag = stargate_economic_connections_int_2
 						}
 						stargate_military_connections_ex_2 = { 
-							remove_planet_flag = stargate_military_connections_ex_2
-							remove_planet_flag = stargate_economic_connections_int_3
-							set_planet_flag = stargate_military_connections_ex_3
-							set_planet_flag = stargate_economic_connections_int_2
+							remove_carrier_flag = stargate_military_connections_ex_2
+							remove_carrier_flag = stargate_economic_connections_int_3
+							set_carrier_flag = stargate_military_connections_ex_3
+							set_carrier_flag = stargate_economic_connections_int_2
 						}
 						stargate_economic_connections_ex_2 = { 
-							remove_planet_flag = stargate_economic_connections_ex_2
-							remove_planet_flag = stargate_economic_connections_int_3
-							set_planet_flag = stargate_economic_connections_ex_3
-							set_planet_flag = stargate_economic_connections_int_2
+							remove_carrier_flag = stargate_economic_connections_ex_2
+							remove_carrier_flag = stargate_economic_connections_int_3
+							set_carrier_flag = stargate_economic_connections_ex_3
+							set_carrier_flag = stargate_economic_connections_int_2
 						}
 						stargate_research_connections_ex_2 = { 
-							remove_planet_flag = stargate_research_connections_ex_2
-							remove_planet_flag = stargate_economic_connections_int_3
-							set_planet_flag = stargate_research_connections_ex_3
-							set_planet_flag = stargate_economic_connections_int_2
+							remove_carrier_flag = stargate_research_connections_ex_2
+							remove_carrier_flag = stargate_economic_connections_int_3
+							set_carrier_flag = stargate_research_connections_ex_3
+							set_carrier_flag = stargate_economic_connections_int_2
 						}
 					}
 				}
 				stargate_economic_connections_int_4 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_economic_connections_int_3 = { }
 						stargate_military_connections_int_3 = { 
-							remove_planet_flag = stargate_military_connections_int_3
-							remove_planet_flag = stargate_economic_connections_int_4
-							set_planet_flag = stargate_military_connections_int_4
-							set_planet_flag = stargate_economic_connections_int_3
+							remove_carrier_flag = stargate_military_connections_int_3
+							remove_carrier_flag = stargate_economic_connections_int_4
+							set_carrier_flag = stargate_military_connections_int_4
+							set_carrier_flag = stargate_economic_connections_int_3
 						}
 						stargate_military_connections_ex_3 = { 
-							remove_planet_flag = stargate_military_connections_ex_3
-							remove_planet_flag = stargate_economic_connections_int_4
-							set_planet_flag = stargate_military_connections_ex_4
-							set_planet_flag = stargate_economic_connections_int_3
+							remove_carrier_flag = stargate_military_connections_ex_3
+							remove_carrier_flag = stargate_economic_connections_int_4
+							set_carrier_flag = stargate_military_connections_ex_4
+							set_carrier_flag = stargate_economic_connections_int_3
 						}
 						stargate_economic_connections_ex_3 = { 
-							remove_planet_flag = stargate_economic_connections_ex_3
-							remove_planet_flag = stargate_economic_connections_int_4
-							set_planet_flag = stargate_economic_connections_ex_4
-							set_planet_flag = stargate_economic_connections_int_3
+							remove_carrier_flag = stargate_economic_connections_ex_3
+							remove_carrier_flag = stargate_economic_connections_int_4
+							set_carrier_flag = stargate_economic_connections_ex_4
+							set_carrier_flag = stargate_economic_connections_int_3
 						}
 						stargate_research_connections_ex_3 = { 
-							remove_planet_flag = stargate_research_connections_ex_3
-							remove_planet_flag = stargate_economic_connections_int_4
-							set_planet_flag = stargate_research_connections_ex_4
-							set_planet_flag = stargate_economic_connections_int_3
+							remove_carrier_flag = stargate_research_connections_ex_3
+							remove_carrier_flag = stargate_economic_connections_int_4
+							set_carrier_flag = stargate_research_connections_ex_4
+							set_carrier_flag = stargate_economic_connections_int_3
 						}
 					}
 				}
 				stargate_economic_connections_int_5 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_economic_connections_int_4 = { }
 						stargate_military_connections_int_4 = { 
-							remove_planet_flag = stargate_military_connections_int_4
-							remove_planet_flag = stargate_economic_connections_int_5
-							set_planet_flag = stargate_military_connections_int_5
-							set_planet_flag = stargate_economic_connections_int_4
+							remove_carrier_flag = stargate_military_connections_int_4
+							remove_carrier_flag = stargate_economic_connections_int_5
+							set_carrier_flag = stargate_military_connections_int_5
+							set_carrier_flag = stargate_economic_connections_int_4
 						}
 						stargate_military_connections_ex_4 = { 
-							remove_planet_flag = stargate_military_connections_ex_4
-							remove_planet_flag = stargate_economic_connections_int_5
-							set_planet_flag = stargate_military_connections_ex_5
-							set_planet_flag = stargate_economic_connections_int_4
+							remove_carrier_flag = stargate_military_connections_ex_4
+							remove_carrier_flag = stargate_economic_connections_int_5
+							set_carrier_flag = stargate_military_connections_ex_5
+							set_carrier_flag = stargate_economic_connections_int_4
 						}
 						stargate_economic_connections_ex_4 = { 
-							remove_planet_flag = stargate_economic_connections_ex_4
-							remove_planet_flag = stargate_economic_connections_int_5
-							set_planet_flag = stargate_economic_connections_ex_5
-							set_planet_flag = stargate_economic_connections_int_4
+							remove_carrier_flag = stargate_economic_connections_ex_4
+							remove_carrier_flag = stargate_economic_connections_int_5
+							set_carrier_flag = stargate_economic_connections_ex_5
+							set_carrier_flag = stargate_economic_connections_int_4
 						}
 						stargate_research_connections_ex_4 = { 
-							remove_planet_flag = stargate_research_connections_ex_4
-							remove_planet_flag = stargate_economic_connections_int_5
-							set_planet_flag = stargate_research_connections_ex_5
-							set_planet_flag = stargate_economic_connections_int_4
+							remove_carrier_flag = stargate_research_connections_ex_4
+							remove_carrier_flag = stargate_economic_connections_int_5
+							set_carrier_flag = stargate_research_connections_ex_5
+							set_carrier_flag = stargate_economic_connections_int_4
 						}
 					}
 				}
@@ -2049,136 +2049,136 @@ planet_stargate_econ_con_int_decrease_priority = {
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = "already_minimum_priority"
 		hidden_trigger = {
-			NOT = { has_planet_flag = stargate_economic_connections_int_5 }
-			NOT = { has_planet_flag = stargate_economy_connections_int_off }
+			NOT = { has_carrier_flag = stargate_economic_connections_int_5 }
+			NOT = { has_carrier_flag = stargate_economy_connections_int_off }
 		}
 	}
 	effect = {
 		custom_tooltip = "decrease_connection_priority"
 		hidden_effect = {
 			switch = {
-				trigger = has_planet_flag
+				trigger = has_carrier_flag
 				stargate_economic_connections_int_1 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_economic_connections_int_2 = { }
 						stargate_military_connections_int_2 = { 
-							remove_planet_flag = stargate_military_connections_int_2
-							remove_planet_flag = stargate_economic_connections_int_1
-							set_planet_flag = stargate_military_connections_int_1
-							set_planet_flag = stargate_economic_connections_int_2
+							remove_carrier_flag = stargate_military_connections_int_2
+							remove_carrier_flag = stargate_economic_connections_int_1
+							set_carrier_flag = stargate_military_connections_int_1
+							set_carrier_flag = stargate_economic_connections_int_2
 						}
 						stargate_military_connections_ex_2 = { 
-							remove_planet_flag = stargate_military_connections_ex_2
-							remove_planet_flag = stargate_economic_connections_int_1
-							set_planet_flag = stargate_military_connections_ex_1
-							set_planet_flag = stargate_economic_connections_int_2
+							remove_carrier_flag = stargate_military_connections_ex_2
+							remove_carrier_flag = stargate_economic_connections_int_1
+							set_carrier_flag = stargate_military_connections_ex_1
+							set_carrier_flag = stargate_economic_connections_int_2
 						}
 						stargate_economic_connections_ex_2 = { 
-							remove_planet_flag = stargate_economic_connections_ex_2
-							remove_planet_flag = stargate_economic_connections_int_1
-							set_planet_flag = stargate_economic_connections_ex_1
-							set_planet_flag = stargate_economic_connections_int_2
+							remove_carrier_flag = stargate_economic_connections_ex_2
+							remove_carrier_flag = stargate_economic_connections_int_1
+							set_carrier_flag = stargate_economic_connections_ex_1
+							set_carrier_flag = stargate_economic_connections_int_2
 						}
 						stargate_research_connections_ex_2 = { 
-							remove_planet_flag = stargate_research_connections_ex_2
-							remove_planet_flag = stargate_economic_connections_int_1
-							set_planet_flag = stargate_research_connections_ex_1
-							set_planet_flag = stargate_economic_connections_int_2
+							remove_carrier_flag = stargate_research_connections_ex_2
+							remove_carrier_flag = stargate_economic_connections_int_1
+							set_carrier_flag = stargate_research_connections_ex_1
+							set_carrier_flag = stargate_economic_connections_int_2
 						}
 					}
 				}
 				stargate_economic_connections_int_2 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_economic_connections_int_3 = { }
 						stargate_military_connections_int_3 = {
-							remove_planet_flag = stargate_military_connections_int_3
-							remove_planet_flag = stargate_economic_connections_int_2
-							set_planet_flag = stargate_military_connections_int_2
-							set_planet_flag = stargate_economic_connections_int_3
+							remove_carrier_flag = stargate_military_connections_int_3
+							remove_carrier_flag = stargate_economic_connections_int_2
+							set_carrier_flag = stargate_military_connections_int_2
+							set_carrier_flag = stargate_economic_connections_int_3
 						}
 						stargate_military_connections_ex_3 = { 
-							remove_planet_flag = stargate_military_connections_ex_3
-							remove_planet_flag = stargate_economic_connections_int_2
-							set_planet_flag = stargate_military_connections_ex_2
-							set_planet_flag = stargate_economic_connections_int_3
+							remove_carrier_flag = stargate_military_connections_ex_3
+							remove_carrier_flag = stargate_economic_connections_int_2
+							set_carrier_flag = stargate_military_connections_ex_2
+							set_carrier_flag = stargate_economic_connections_int_3
 						}
 						stargate_economic_connections_ex_3 = { 
-							remove_planet_flag = stargate_economic_connections_ex_3
-							remove_planet_flag = stargate_economic_connections_int_2
-							set_planet_flag = stargate_economic_connections_ex_2
-							set_planet_flag = stargate_economic_connections_int_3
+							remove_carrier_flag = stargate_economic_connections_ex_3
+							remove_carrier_flag = stargate_economic_connections_int_2
+							set_carrier_flag = stargate_economic_connections_ex_2
+							set_carrier_flag = stargate_economic_connections_int_3
 						}
 						stargate_research_connections_ex_3 = { 
-							remove_planet_flag = stargate_research_connections_ex_3
-							remove_planet_flag = stargate_economic_connections_int_2
-							set_planet_flag = stargate_research_connections_ex_2
-							set_planet_flag = stargate_economic_connections_int_3
+							remove_carrier_flag = stargate_research_connections_ex_3
+							remove_carrier_flag = stargate_economic_connections_int_2
+							set_carrier_flag = stargate_research_connections_ex_2
+							set_carrier_flag = stargate_economic_connections_int_3
 						}
 					}
 				}
 				stargate_economic_connections_int_3 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_economic_connections_int_4 = { }
 						stargate_military_connections_int_4 = { 
-							remove_planet_flag = stargate_military_connections_int_4
-							remove_planet_flag = stargate_economic_connections_int_3
-							set_planet_flag = stargate_military_connections_int_3
-							set_planet_flag = stargate_economic_connections_int_4
+							remove_carrier_flag = stargate_military_connections_int_4
+							remove_carrier_flag = stargate_economic_connections_int_3
+							set_carrier_flag = stargate_military_connections_int_3
+							set_carrier_flag = stargate_economic_connections_int_4
 						}
 						stargate_military_connections_ex_4 = { 
-							remove_planet_flag = stargate_military_connections_ex_4
-							remove_planet_flag = stargate_economic_connections_int_3
-							set_planet_flag = stargate_military_connections_ex_3
-							set_planet_flag = stargate_economic_connections_int_4
+							remove_carrier_flag = stargate_military_connections_ex_4
+							remove_carrier_flag = stargate_economic_connections_int_3
+							set_carrier_flag = stargate_military_connections_ex_3
+							set_carrier_flag = stargate_economic_connections_int_4
 						}
 						stargate_economic_connections_ex_4 = { 
-							remove_planet_flag = stargate_economic_connections_ex_4
-							remove_planet_flag = stargate_economic_connections_int_3
-							set_planet_flag = stargate_economic_connections_ex_3
-							set_planet_flag = stargate_economic_connections_int_4
+							remove_carrier_flag = stargate_economic_connections_ex_4
+							remove_carrier_flag = stargate_economic_connections_int_3
+							set_carrier_flag = stargate_economic_connections_ex_3
+							set_carrier_flag = stargate_economic_connections_int_4
 						}
 						stargate_research_connections_ex_4 = { 
-							remove_planet_flag = stargate_research_connections_ex_4
-							remove_planet_flag = stargate_economic_connections_int_3
-							set_planet_flag = stargate_research_connections_ex_3
-							set_planet_flag = stargate_economic_connections_int_4
+							remove_carrier_flag = stargate_research_connections_ex_4
+							remove_carrier_flag = stargate_economic_connections_int_3
+							set_carrier_flag = stargate_research_connections_ex_3
+							set_carrier_flag = stargate_economic_connections_int_4
 						}
 					}
 				}
 				stargate_economic_connections_int_4 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_economic_connections_int_5 = { }
 						stargate_military_connections_int_5 = { 
-							remove_planet_flag = stargate_military_connections_int_5
-							remove_planet_flag = stargate_economic_connections_int_4
-							set_planet_flag = stargate_military_connections_int_4
-							set_planet_flag = stargate_economic_connections_int_5
+							remove_carrier_flag = stargate_military_connections_int_5
+							remove_carrier_flag = stargate_economic_connections_int_4
+							set_carrier_flag = stargate_military_connections_int_4
+							set_carrier_flag = stargate_economic_connections_int_5
 						}
 						stargate_military_connections_ex_5 = { 
-							remove_planet_flag = stargate_military_connections_ex_5
-							remove_planet_flag = stargate_economic_connections_int_4
-							set_planet_flag = stargate_military_connections_ex_4
-							set_planet_flag = stargate_economic_connections_int_5
+							remove_carrier_flag = stargate_military_connections_ex_5
+							remove_carrier_flag = stargate_economic_connections_int_4
+							set_carrier_flag = stargate_military_connections_ex_4
+							set_carrier_flag = stargate_economic_connections_int_5
 						}
 						stargate_economic_connections_ex_5 = { 
-							remove_planet_flag = stargate_economic_connections_ex_5
-							remove_planet_flag = stargate_economic_connections_int_4
-							set_planet_flag = stargate_economic_connections_ex_4
-							set_planet_flag = stargate_economic_connections_int_5
+							remove_carrier_flag = stargate_economic_connections_ex_5
+							remove_carrier_flag = stargate_economic_connections_int_4
+							set_carrier_flag = stargate_economic_connections_ex_4
+							set_carrier_flag = stargate_economic_connections_int_5
 						}
 						stargate_research_connections_ex_5 = { 
-							remove_planet_flag = stargate_research_connections_ex_5
-							remove_planet_flag = stargate_economic_connections_int_4
-							set_planet_flag = stargate_research_connections_ex_4
-							set_planet_flag = stargate_economic_connections_int_5
+							remove_carrier_flag = stargate_research_connections_ex_5
+							remove_carrier_flag = stargate_economic_connections_int_4
+							set_carrier_flag = stargate_research_connections_ex_4
+							set_carrier_flag = stargate_economic_connections_int_5
 						}
 					}
 				}
@@ -2194,138 +2194,138 @@ planet_stargate_econ_con_ex_increase_priority = {
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = already_maximum_priority
-			NOT = { has_planet_flag = stargate_economic_connections_ex_1 }
-			NOT = { has_planet_flag = stargate_economy_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_economic_connections_ex_1 }
+			NOT = { has_carrier_flag = stargate_economy_connections_ex_off }
 		}
 	}
 	effect = {
 		custom_tooltip = "increase_connection_priority"
 		hidden_effect = {
 			switch = {
-				trigger = has_planet_flag
+				trigger = has_carrier_flag
 				stargate_economic_connections_ex_1 = {
 				}
 				stargate_economic_connections_ex_2 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_economic_connections_ex_1 = { }
 						stargate_military_connections_int_1 = { 
-							remove_planet_flag = stargate_military_connections_int_1
-							remove_planet_flag = stargate_economic_connections_ex_2
-							set_planet_flag = stargate_military_connections_int_2
-							set_planet_flag = stargate_economic_connections_ex_1
+							remove_carrier_flag = stargate_military_connections_int_1
+							remove_carrier_flag = stargate_economic_connections_ex_2
+							set_carrier_flag = stargate_military_connections_int_2
+							set_carrier_flag = stargate_economic_connections_ex_1
 						}
 						stargate_military_connections_ex_1 = { 
-							remove_planet_flag = stargate_military_connections_ex_1
-							remove_planet_flag = stargate_economic_connections_ex_2
-							set_planet_flag = stargate_military_connections_ex_2
-							set_planet_flag = stargate_economic_connections_ex_1
+							remove_carrier_flag = stargate_military_connections_ex_1
+							remove_carrier_flag = stargate_economic_connections_ex_2
+							set_carrier_flag = stargate_military_connections_ex_2
+							set_carrier_flag = stargate_economic_connections_ex_1
 						}
 						stargate_economic_connections_int_1 = { 
-							remove_planet_flag = stargate_economic_connections_int_1
-							remove_planet_flag = stargate_economic_connections_ex_2
-							set_planet_flag = stargate_economic_connections_int_2
-							set_planet_flag = stargate_economic_connections_ex_1
+							remove_carrier_flag = stargate_economic_connections_int_1
+							remove_carrier_flag = stargate_economic_connections_ex_2
+							set_carrier_flag = stargate_economic_connections_int_2
+							set_carrier_flag = stargate_economic_connections_ex_1
 						}
 						stargate_research_connections_ex_1 = { 
-							remove_planet_flag = stargate_research_connections_ex_1
-							remove_planet_flag = stargate_economic_connections_ex_2
-							set_planet_flag = stargate_research_connections_ex_2
-							set_planet_flag = stargate_economic_connections_ex_1
+							remove_carrier_flag = stargate_research_connections_ex_1
+							remove_carrier_flag = stargate_economic_connections_ex_2
+							set_carrier_flag = stargate_research_connections_ex_2
+							set_carrier_flag = stargate_economic_connections_ex_1
 						}
 					}
 				}
 				stargate_economic_connections_ex_3 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_economic_connections_ex_2 = { }
 						stargate_military_connections_int_2 = {
-							remove_planet_flag = stargate_military_connections_int_2
-							remove_planet_flag = stargate_economic_connections_ex_3
-							set_planet_flag = stargate_military_connections_int_3
-							set_planet_flag = stargate_economic_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_int_2
+							remove_carrier_flag = stargate_economic_connections_ex_3
+							set_carrier_flag = stargate_military_connections_int_3
+							set_carrier_flag = stargate_economic_connections_ex_2
 						}
 						stargate_military_connections_ex_2 = { 
-							remove_planet_flag = stargate_military_connections_ex_2
-							remove_planet_flag = stargate_economic_connections_ex_3
-							set_planet_flag = stargate_military_connections_ex_3
-							set_planet_flag = stargate_economic_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_ex_2
+							remove_carrier_flag = stargate_economic_connections_ex_3
+							set_carrier_flag = stargate_military_connections_ex_3
+							set_carrier_flag = stargate_economic_connections_ex_2
 						}
 						stargate_economic_connections_int_2 = { 
-							remove_planet_flag = stargate_economic_connections_int_2
-							remove_planet_flag = stargate_economic_connections_ex_3
-							set_planet_flag = stargate_economic_connections_int_3
-							set_planet_flag = stargate_economic_connections_ex_2
+							remove_carrier_flag = stargate_economic_connections_int_2
+							remove_carrier_flag = stargate_economic_connections_ex_3
+							set_carrier_flag = stargate_economic_connections_int_3
+							set_carrier_flag = stargate_economic_connections_ex_2
 						}
 						stargate_research_connections_ex_2 = { 
-							remove_planet_flag = stargate_research_connections_ex_2
-							remove_planet_flag = stargate_economic_connections_ex_3
-							set_planet_flag = stargate_research_connections_ex_3
-							set_planet_flag = stargate_economic_connections_ex_2
+							remove_carrier_flag = stargate_research_connections_ex_2
+							remove_carrier_flag = stargate_economic_connections_ex_3
+							set_carrier_flag = stargate_research_connections_ex_3
+							set_carrier_flag = stargate_economic_connections_ex_2
 						}
 					}
 				}
 				stargate_economic_connections_ex_4 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_economic_connections_ex_3 = { }
 						stargate_military_connections_int_3 = { 
-							remove_planet_flag = stargate_military_connections_int_3
-							remove_planet_flag = stargate_economic_connections_ex_4
-							set_planet_flag = stargate_military_connections_int_4
-							set_planet_flag = stargate_economic_connections_ex_3
+							remove_carrier_flag = stargate_military_connections_int_3
+							remove_carrier_flag = stargate_economic_connections_ex_4
+							set_carrier_flag = stargate_military_connections_int_4
+							set_carrier_flag = stargate_economic_connections_ex_3
 						}
 						stargate_military_connections_ex_3 = { 
-							remove_planet_flag = stargate_military_connections_ex_3
-							remove_planet_flag = stargate_economic_connections_ex_4
-							set_planet_flag = stargate_military_connections_ex_4
-							set_planet_flag = stargate_economic_connections_ex_3
+							remove_carrier_flag = stargate_military_connections_ex_3
+							remove_carrier_flag = stargate_economic_connections_ex_4
+							set_carrier_flag = stargate_military_connections_ex_4
+							set_carrier_flag = stargate_economic_connections_ex_3
 						}
 						stargate_economic_connections_int_3 = { 
-							remove_planet_flag = stargate_economic_connections_int_3
-							remove_planet_flag = stargate_economic_connections_ex_4
-							set_planet_flag = stargate_economic_connections_int_4
-							set_planet_flag = stargate_economic_connections_ex_3
+							remove_carrier_flag = stargate_economic_connections_int_3
+							remove_carrier_flag = stargate_economic_connections_ex_4
+							set_carrier_flag = stargate_economic_connections_int_4
+							set_carrier_flag = stargate_economic_connections_ex_3
 						}
 						stargate_research_connections_ex_3 = { 
-							remove_planet_flag = stargate_research_connections_ex_3
-							remove_planet_flag = stargate_economic_connections_ex_4
-							set_planet_flag = stargate_research_connections_ex_4
-							set_planet_flag = stargate_economic_connections_ex_3
+							remove_carrier_flag = stargate_research_connections_ex_3
+							remove_carrier_flag = stargate_economic_connections_ex_4
+							set_carrier_flag = stargate_research_connections_ex_4
+							set_carrier_flag = stargate_economic_connections_ex_3
 						}
 					}
 				}
 				stargate_economic_connections_ex_5 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_economic_connections_ex_4 = { }
 						stargate_military_connections_int_4 = { 
-							remove_planet_flag = stargate_military_connections_int_4
-							remove_planet_flag = stargate_economic_connections_ex_5
-							set_planet_flag = stargate_military_connections_int_5
-							set_planet_flag = stargate_economic_connections_ex_4
+							remove_carrier_flag = stargate_military_connections_int_4
+							remove_carrier_flag = stargate_economic_connections_ex_5
+							set_carrier_flag = stargate_military_connections_int_5
+							set_carrier_flag = stargate_economic_connections_ex_4
 						}
 						stargate_military_connections_ex_4 = { 
-							remove_planet_flag = stargate_military_connections_ex_4
-							remove_planet_flag = stargate_economic_connections_ex_5
-							set_planet_flag = stargate_military_connections_ex_5
-							set_planet_flag = stargate_economic_connections_ex_4
+							remove_carrier_flag = stargate_military_connections_ex_4
+							remove_carrier_flag = stargate_economic_connections_ex_5
+							set_carrier_flag = stargate_military_connections_ex_5
+							set_carrier_flag = stargate_economic_connections_ex_4
 						}
 						stargate_economic_connections_int_4 = { 
-							remove_planet_flag = stargate_economic_connections_int_4
-							remove_planet_flag = stargate_economic_connections_ex_5
-							set_planet_flag = stargate_economic_connections_int_5
-							set_planet_flag = stargate_economic_connections_ex_4
+							remove_carrier_flag = stargate_economic_connections_int_4
+							remove_carrier_flag = stargate_economic_connections_ex_5
+							set_carrier_flag = stargate_economic_connections_int_5
+							set_carrier_flag = stargate_economic_connections_ex_4
 						}
 						stargate_research_connections_ex_4 = { 
-							remove_planet_flag = stargate_research_connections_ex_4
-							remove_planet_flag = stargate_economic_connections_ex_5
-							set_planet_flag = stargate_research_connections_ex_5
-							set_planet_flag = stargate_economic_connections_ex_4
+							remove_carrier_flag = stargate_research_connections_ex_4
+							remove_carrier_flag = stargate_economic_connections_ex_5
+							set_carrier_flag = stargate_research_connections_ex_5
+							set_carrier_flag = stargate_economic_connections_ex_4
 						}
 					}
 				}
@@ -2338,136 +2338,136 @@ planet_stargate_econ_con_ex_decrease_priority = {
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = already_minimum_priority
-			NOT = { has_planet_flag = stargate_economic_connections_ex_5 }
-			NOT = { has_planet_flag = stargate_economy_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_economic_connections_ex_5 }
+			NOT = { has_carrier_flag = stargate_economy_connections_ex_off }
 		}
 	}
 	effect = {
 		custom_tooltip = "decrease_connection_priority"
 		hidden_effect = {
 			switch = {
-				trigger = has_planet_flag
+				trigger = has_carrier_flag
 				stargate_economic_connections_ex_1 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_economic_connections_ex_2 = { }
 						stargate_military_connections_int_2 = { 
-							remove_planet_flag = stargate_military_connections_int_2
-							remove_planet_flag = stargate_economic_connections_ex_1
-							set_planet_flag = stargate_military_connections_int_1
-							set_planet_flag = stargate_economic_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_int_2
+							remove_carrier_flag = stargate_economic_connections_ex_1
+							set_carrier_flag = stargate_military_connections_int_1
+							set_carrier_flag = stargate_economic_connections_ex_2
 						}
 						stargate_military_connections_ex_2 = { 
-							remove_planet_flag = stargate_military_connections_ex_2
-							remove_planet_flag = stargate_economic_connections_ex_1
-							set_planet_flag = stargate_military_connections_ex_1
-							set_planet_flag = stargate_economic_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_ex_2
+							remove_carrier_flag = stargate_economic_connections_ex_1
+							set_carrier_flag = stargate_military_connections_ex_1
+							set_carrier_flag = stargate_economic_connections_ex_2
 						}
 						stargate_economic_connections_int_2 = { 
-							remove_planet_flag = stargate_economic_connections_int_2
-							remove_planet_flag = stargate_economic_connections_ex_1
-							set_planet_flag = stargate_economic_connections_int_1
-							set_planet_flag = stargate_economic_connections_ex_2
+							remove_carrier_flag = stargate_economic_connections_int_2
+							remove_carrier_flag = stargate_economic_connections_ex_1
+							set_carrier_flag = stargate_economic_connections_int_1
+							set_carrier_flag = stargate_economic_connections_ex_2
 						}
 						stargate_research_connections_ex_2 = { 
-							remove_planet_flag = stargate_research_connections_ex_2
-							remove_planet_flag = stargate_economic_connections_ex_1
-							set_planet_flag = stargate_research_connections_ex_1
-							set_planet_flag = stargate_economic_connections_ex_2
+							remove_carrier_flag = stargate_research_connections_ex_2
+							remove_carrier_flag = stargate_economic_connections_ex_1
+							set_carrier_flag = stargate_research_connections_ex_1
+							set_carrier_flag = stargate_economic_connections_ex_2
 						}
 					}
 				}
 				stargate_economic_connections_ex_2 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_economic_connections_ex_3 = { }
 						stargate_military_connections_int_3 = {
-							remove_planet_flag = stargate_military_connections_int_3
-							remove_planet_flag = stargate_economic_connections_ex_2
-							set_planet_flag = stargate_military_connections_int_2
-							set_planet_flag = stargate_economic_connections_ex_3
+							remove_carrier_flag = stargate_military_connections_int_3
+							remove_carrier_flag = stargate_economic_connections_ex_2
+							set_carrier_flag = stargate_military_connections_int_2
+							set_carrier_flag = stargate_economic_connections_ex_3
 						}
 						stargate_military_connections_ex_3 = { 
-							remove_planet_flag = stargate_military_connections_ex_3
-							remove_planet_flag = stargate_economic_connections_ex_2
-							set_planet_flag = stargate_military_connections_ex_2
-							set_planet_flag = stargate_economic_connections_ex_3
+							remove_carrier_flag = stargate_military_connections_ex_3
+							remove_carrier_flag = stargate_economic_connections_ex_2
+							set_carrier_flag = stargate_military_connections_ex_2
+							set_carrier_flag = stargate_economic_connections_ex_3
 						}
 						stargate_economic_connections_int_3 = { 
-							remove_planet_flag = stargate_economic_connections_int_3
-							remove_planet_flag = stargate_economic_connections_ex_2
-							set_planet_flag = stargate_economic_connections_int_2
-							set_planet_flag = stargate_economic_connections_ex_3
+							remove_carrier_flag = stargate_economic_connections_int_3
+							remove_carrier_flag = stargate_economic_connections_ex_2
+							set_carrier_flag = stargate_economic_connections_int_2
+							set_carrier_flag = stargate_economic_connections_ex_3
 						}
 						stargate_research_connections_ex_3 = { 
-							remove_planet_flag = stargate_research_connections_ex_3
-							remove_planet_flag = stargate_economic_connections_ex_2
-							set_planet_flag = stargate_research_connections_ex_2
-							set_planet_flag = stargate_economic_connections_ex_3
+							remove_carrier_flag = stargate_research_connections_ex_3
+							remove_carrier_flag = stargate_economic_connections_ex_2
+							set_carrier_flag = stargate_research_connections_ex_2
+							set_carrier_flag = stargate_economic_connections_ex_3
 						}
 					}
 				}
 				stargate_economic_connections_ex_3 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_economic_connections_ex_4 = { }
 						stargate_military_connections_int_4 = { 
-							remove_planet_flag = stargate_military_connections_int_4
-							remove_planet_flag = stargate_economic_connections_ex_3
-							set_planet_flag = stargate_military_connections_int_3
-							set_planet_flag = stargate_economic_connections_ex_4
+							remove_carrier_flag = stargate_military_connections_int_4
+							remove_carrier_flag = stargate_economic_connections_ex_3
+							set_carrier_flag = stargate_military_connections_int_3
+							set_carrier_flag = stargate_economic_connections_ex_4
 						}
 						stargate_military_connections_ex_4 = { 
-							remove_planet_flag = stargate_military_connections_ex_4
-							remove_planet_flag = stargate_economic_connections_ex_3
-							set_planet_flag = stargate_military_connections_ex_3
-							set_planet_flag = stargate_economic_connections_ex_4
+							remove_carrier_flag = stargate_military_connections_ex_4
+							remove_carrier_flag = stargate_economic_connections_ex_3
+							set_carrier_flag = stargate_military_connections_ex_3
+							set_carrier_flag = stargate_economic_connections_ex_4
 						}
 						stargate_economic_connections_int_4 = { 
-							remove_planet_flag = stargate_economic_connections_int_4
-							remove_planet_flag = stargate_economic_connections_ex_3
-							set_planet_flag = stargate_economic_connections_int_3
-							set_planet_flag = stargate_economic_connections_ex_4
+							remove_carrier_flag = stargate_economic_connections_int_4
+							remove_carrier_flag = stargate_economic_connections_ex_3
+							set_carrier_flag = stargate_economic_connections_int_3
+							set_carrier_flag = stargate_economic_connections_ex_4
 						}
 						stargate_research_connections_ex_4 = { 
-							remove_planet_flag = stargate_research_connections_ex_4
-							remove_planet_flag = stargate_economic_connections_ex_3
-							set_planet_flag = stargate_research_connections_ex_3
-							set_planet_flag = stargate_economic_connections_ex_4
+							remove_carrier_flag = stargate_research_connections_ex_4
+							remove_carrier_flag = stargate_economic_connections_ex_3
+							set_carrier_flag = stargate_research_connections_ex_3
+							set_carrier_flag = stargate_economic_connections_ex_4
 						}
 					}
 				}
 				stargate_economic_connections_ex_4 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_economic_connections_ex_5 = { }
 						stargate_military_connections_int_5 = { 
-							remove_planet_flag = stargate_military_connections_int_5
-							remove_planet_flag = stargate_economic_connections_ex_4
-							set_planet_flag = stargate_military_connections_int_4
-							set_planet_flag = stargate_economic_connections_ex_5
+							remove_carrier_flag = stargate_military_connections_int_5
+							remove_carrier_flag = stargate_economic_connections_ex_4
+							set_carrier_flag = stargate_military_connections_int_4
+							set_carrier_flag = stargate_economic_connections_ex_5
 						}
 						stargate_military_connections_ex_5 = { 
-							remove_planet_flag = stargate_military_connections_ex_5
-							remove_planet_flag = stargate_economic_connections_ex_4
-							set_planet_flag = stargate_military_connections_ex_4
-							set_planet_flag = stargate_economic_connections_ex_5
+							remove_carrier_flag = stargate_military_connections_ex_5
+							remove_carrier_flag = stargate_economic_connections_ex_4
+							set_carrier_flag = stargate_military_connections_ex_4
+							set_carrier_flag = stargate_economic_connections_ex_5
 						}
 						stargate_economic_connections_int_5 = { 
-							remove_planet_flag = stargate_economic_connections_int_5
-							remove_planet_flag = stargate_economic_connections_ex_4
-							set_planet_flag = stargate_economic_connections_int_4
-							set_planet_flag = stargate_economic_connections_ex_5
+							remove_carrier_flag = stargate_economic_connections_int_5
+							remove_carrier_flag = stargate_economic_connections_ex_4
+							set_carrier_flag = stargate_economic_connections_int_4
+							set_carrier_flag = stargate_economic_connections_ex_5
 						}
 						stargate_research_connections_ex_5 = { 
-							remove_planet_flag = stargate_research_connections_ex_5
-							remove_planet_flag = stargate_economic_connections_ex_4
-							set_planet_flag = stargate_research_connections_ex_4
-							set_planet_flag = stargate_economic_connections_ex_5
+							remove_carrier_flag = stargate_research_connections_ex_5
+							remove_carrier_flag = stargate_economic_connections_ex_4
+							set_carrier_flag = stargate_research_connections_ex_4
+							set_carrier_flag = stargate_economic_connections_ex_5
 						}
 					}
 				}
@@ -2483,138 +2483,138 @@ planet_stargate_res_con_ex_increase_priority = {
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = already_maximum_priority
-			NOT = { has_planet_flag = stargate_research_connections_ex_1 }
-			NOT = { has_planet_flag = stargate_research_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_research_connections_ex_1 }
+			NOT = { has_carrier_flag = stargate_research_connections_ex_off }
 		}
 	}
 	effect = {
 		custom_tooltip = "increase_connection_priority"
 		hidden_effect = {
 			switch = {
-				trigger = has_planet_flag
+				trigger = has_carrier_flag
 				stargate_research_connections_ex_1 = {
 				}
 				stargate_research_connections_ex_2 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_research_connections_ex_1 = { }
 						stargate_military_connections_int_1 = { 
-							remove_planet_flag = stargate_military_connections_int_1
-							remove_planet_flag = stargate_research_connections_ex_2
-							set_planet_flag = stargate_military_connections_int_2
-							set_planet_flag = stargate_research_connections_ex_1
+							remove_carrier_flag = stargate_military_connections_int_1
+							remove_carrier_flag = stargate_research_connections_ex_2
+							set_carrier_flag = stargate_military_connections_int_2
+							set_carrier_flag = stargate_research_connections_ex_1
 						}
 						stargate_military_connections_ex_1 = { 
-							remove_planet_flag = stargate_military_connections_ex_1
-							remove_planet_flag = stargate_research_connections_ex_2
-							set_planet_flag = stargate_military_connections_ex_2
-							set_planet_flag = stargate_research_connections_ex_1
+							remove_carrier_flag = stargate_military_connections_ex_1
+							remove_carrier_flag = stargate_research_connections_ex_2
+							set_carrier_flag = stargate_military_connections_ex_2
+							set_carrier_flag = stargate_research_connections_ex_1
 						}
 						stargate_economic_connections_int_1 = { 
-							remove_planet_flag = stargate_economic_connections_int_1
-							remove_planet_flag = stargate_research_connections_ex_2
-							set_planet_flag = stargate_economic_connections_int_2
-							set_planet_flag = stargate_research_connections_ex_1
+							remove_carrier_flag = stargate_economic_connections_int_1
+							remove_carrier_flag = stargate_research_connections_ex_2
+							set_carrier_flag = stargate_economic_connections_int_2
+							set_carrier_flag = stargate_research_connections_ex_1
 						}
 						stargate_economic_connections_ex_1 = { 
-							remove_planet_flag = stargate_economic_connections_ex_1
-							remove_planet_flag = stargate_research_connections_ex_2
-							set_planet_flag = stargate_economic_connections_ex_2
-							set_planet_flag = stargate_research_connections_ex_1
+							remove_carrier_flag = stargate_economic_connections_ex_1
+							remove_carrier_flag = stargate_research_connections_ex_2
+							set_carrier_flag = stargate_economic_connections_ex_2
+							set_carrier_flag = stargate_research_connections_ex_1
 						}
 					}
 				}
 				stargate_research_connections_ex_3 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_research_connections_ex_2 = { }
 						stargate_military_connections_int_2 = {
-							remove_planet_flag = stargate_military_connections_int_2
-							remove_planet_flag = stargate_research_connections_ex_3
-							set_planet_flag = stargate_military_connections_int_3
-							set_planet_flag = stargate_research_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_int_2
+							remove_carrier_flag = stargate_research_connections_ex_3
+							set_carrier_flag = stargate_military_connections_int_3
+							set_carrier_flag = stargate_research_connections_ex_2
 						}
 						stargate_military_connections_ex_2 = { 
-							remove_planet_flag = stargate_military_connections_ex_2
-							remove_planet_flag = stargate_research_connections_ex_3
-							set_planet_flag = stargate_military_connections_ex_3
-							set_planet_flag = stargate_research_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_ex_2
+							remove_carrier_flag = stargate_research_connections_ex_3
+							set_carrier_flag = stargate_military_connections_ex_3
+							set_carrier_flag = stargate_research_connections_ex_2
 						}
 						stargate_economic_connections_int_2 = { 
-							remove_planet_flag = stargate_economic_connections_int_2
-							remove_planet_flag = stargate_research_connections_ex_3
-							set_planet_flag = stargate_economic_connections_int_3
-							set_planet_flag = stargate_research_connections_ex_2
+							remove_carrier_flag = stargate_economic_connections_int_2
+							remove_carrier_flag = stargate_research_connections_ex_3
+							set_carrier_flag = stargate_economic_connections_int_3
+							set_carrier_flag = stargate_research_connections_ex_2
 						}
 						stargate_economic_connections_ex_2 = { 
-							remove_planet_flag = stargate_economic_connections_ex_2
-							remove_planet_flag = stargate_research_connections_ex_3
-							set_planet_flag = stargate_economic_connections_ex_3
-							set_planet_flag = stargate_research_connections_ex_2
+							remove_carrier_flag = stargate_economic_connections_ex_2
+							remove_carrier_flag = stargate_research_connections_ex_3
+							set_carrier_flag = stargate_economic_connections_ex_3
+							set_carrier_flag = stargate_research_connections_ex_2
 						}
 					}
 				}
 				stargate_research_connections_ex_4 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_research_connections_ex_3 = { }
 						stargate_military_connections_int_3 = { 
-							remove_planet_flag = stargate_military_connections_int_3
-							remove_planet_flag = stargate_research_connections_ex_4
-							set_planet_flag = stargate_military_connections_int_4
-							set_planet_flag = stargate_research_connections_ex_3
+							remove_carrier_flag = stargate_military_connections_int_3
+							remove_carrier_flag = stargate_research_connections_ex_4
+							set_carrier_flag = stargate_military_connections_int_4
+							set_carrier_flag = stargate_research_connections_ex_3
 						}
 						stargate_military_connections_ex_3 = { 
-							remove_planet_flag = stargate_military_connections_ex_3
-							remove_planet_flag = stargate_research_connections_ex_4
-							set_planet_flag = stargate_military_connections_ex_4
-							set_planet_flag = stargate_research_connections_ex_3
+							remove_carrier_flag = stargate_military_connections_ex_3
+							remove_carrier_flag = stargate_research_connections_ex_4
+							set_carrier_flag = stargate_military_connections_ex_4
+							set_carrier_flag = stargate_research_connections_ex_3
 						}
 						stargate_economic_connections_int_3 = { 
-							remove_planet_flag = stargate_economic_connections_int_3
-							remove_planet_flag = stargate_research_connections_ex_4
-							set_planet_flag = stargate_economic_connections_int_4
-							set_planet_flag = stargate_research_connections_ex_3
+							remove_carrier_flag = stargate_economic_connections_int_3
+							remove_carrier_flag = stargate_research_connections_ex_4
+							set_carrier_flag = stargate_economic_connections_int_4
+							set_carrier_flag = stargate_research_connections_ex_3
 						}
 						stargate_economic_connections_ex_3 = { 
-							remove_planet_flag = stargate_economic_connections_ex_3
-							remove_planet_flag = stargate_research_connections_ex_4
-							set_planet_flag = stargate_economic_connections_ex_4
-							set_planet_flag = stargate_research_connections_ex_3
+							remove_carrier_flag = stargate_economic_connections_ex_3
+							remove_carrier_flag = stargate_research_connections_ex_4
+							set_carrier_flag = stargate_economic_connections_ex_4
+							set_carrier_flag = stargate_research_connections_ex_3
 						}
 					}
 				}
 				stargate_research_connections_ex_5 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_research_connections_ex_4 = { }
 						stargate_military_connections_int_4 = { 
-							remove_planet_flag = stargate_military_connections_int_4
-							remove_planet_flag = stargate_research_connections_ex_5
-							set_planet_flag = stargate_military_connections_int_5
-							set_planet_flag = stargate_research_connections_ex_4
+							remove_carrier_flag = stargate_military_connections_int_4
+							remove_carrier_flag = stargate_research_connections_ex_5
+							set_carrier_flag = stargate_military_connections_int_5
+							set_carrier_flag = stargate_research_connections_ex_4
 						}
 						stargate_military_connections_ex_4 = { 
-							remove_planet_flag = stargate_military_connections_ex_4
-							remove_planet_flag = stargate_research_connections_ex_5
-							set_planet_flag = stargate_military_connections_ex_5
-							set_planet_flag = stargate_research_connections_ex_4
+							remove_carrier_flag = stargate_military_connections_ex_4
+							remove_carrier_flag = stargate_research_connections_ex_5
+							set_carrier_flag = stargate_military_connections_ex_5
+							set_carrier_flag = stargate_research_connections_ex_4
 						}
 						stargate_economic_connections_int_4 = { 
-							remove_planet_flag = stargate_economic_connections_int_4
-							remove_planet_flag = stargate_research_connections_ex_5
-							set_planet_flag = stargate_economic_connections_int_5
-							set_planet_flag = stargate_research_connections_ex_4
+							remove_carrier_flag = stargate_economic_connections_int_4
+							remove_carrier_flag = stargate_research_connections_ex_5
+							set_carrier_flag = stargate_economic_connections_int_5
+							set_carrier_flag = stargate_research_connections_ex_4
 						}
 						stargate_economic_connections_ex_4 = { 
-							remove_planet_flag = stargate_economic_connections_ex_4
-							remove_planet_flag = stargate_research_connections_ex_5
-							set_planet_flag = stargate_economic_connections_ex_5
-							set_planet_flag = stargate_research_connections_ex_4
+							remove_carrier_flag = stargate_economic_connections_ex_4
+							remove_carrier_flag = stargate_research_connections_ex_5
+							set_carrier_flag = stargate_economic_connections_ex_5
+							set_carrier_flag = stargate_research_connections_ex_4
 						}
 					}
 				}
@@ -2627,136 +2627,136 @@ planet_stargate_res_con_ex_decrease_priority = {
 	allow = {
 		custom_tooltip = {
 			fail_text = country_caps_used
-			has_planet_flag = stargate_local_caps
+			has_carrier_flag = stargate_local_caps
 		}
 		custom_tooltip = {
 			fail_text = already_minimum_priority
-			NOT = { has_planet_flag = stargate_research_connections_ex_5 }
-			NOT = { has_planet_flag = stargate_research_connections_ex_off }
+			NOT = { has_carrier_flag = stargate_research_connections_ex_5 }
+			NOT = { has_carrier_flag = stargate_research_connections_ex_off }
 		}
 	}
 	effect = {
 		custom_tooltip = "decrease_connection_priority"
 		hidden_effect = {
 			switch = {
-				trigger = has_planet_flag
+				trigger = has_carrier_flag
 				stargate_research_connections_ex_1 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_research_connections_ex_2 = { }
 						stargate_military_connections_int_2 = { 
-							remove_planet_flag = stargate_military_connections_int_2
-							remove_planet_flag = stargate_research_connections_ex_1
-							set_planet_flag = stargate_military_connections_int_1
-							set_planet_flag = stargate_research_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_int_2
+							remove_carrier_flag = stargate_research_connections_ex_1
+							set_carrier_flag = stargate_military_connections_int_1
+							set_carrier_flag = stargate_research_connections_ex_2
 						}
 						stargate_military_connections_ex_2 = { 
-							remove_planet_flag = stargate_military_connections_ex_2
-							remove_planet_flag = stargate_research_connections_ex_1
-							set_planet_flag = stargate_military_connections_ex_1
-							set_planet_flag = stargate_research_connections_ex_2
+							remove_carrier_flag = stargate_military_connections_ex_2
+							remove_carrier_flag = stargate_research_connections_ex_1
+							set_carrier_flag = stargate_military_connections_ex_1
+							set_carrier_flag = stargate_research_connections_ex_2
 						}
 						stargate_economic_connections_int_2 = { 
-							remove_planet_flag = stargate_economic_connections_int_2
-							remove_planet_flag = stargate_research_connections_ex_1
-							set_planet_flag = stargate_economic_connections_int_1
-							set_planet_flag = stargate_research_connections_ex_2
+							remove_carrier_flag = stargate_economic_connections_int_2
+							remove_carrier_flag = stargate_research_connections_ex_1
+							set_carrier_flag = stargate_economic_connections_int_1
+							set_carrier_flag = stargate_research_connections_ex_2
 						}
 						stargate_economic_connections_ex_2 = { 
-							remove_planet_flag = stargate_economic_connections_ex_2
-							remove_planet_flag = stargate_research_connections_ex_1
-							set_planet_flag = stargate_economic_connections_ex_1
-							set_planet_flag = stargate_research_connections_ex_2
+							remove_carrier_flag = stargate_economic_connections_ex_2
+							remove_carrier_flag = stargate_research_connections_ex_1
+							set_carrier_flag = stargate_economic_connections_ex_1
+							set_carrier_flag = stargate_research_connections_ex_2
 						}
 					}
 				}
 				stargate_research_connections_ex_2 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_research_connections_ex_3 = { }
 						stargate_military_connections_int_3 = {
-							remove_planet_flag = stargate_military_connections_int_3
-							remove_planet_flag = stargate_research_connections_ex_2
-							set_planet_flag = stargate_military_connections_int_2
-							set_planet_flag = stargate_research_connections_ex_3
+							remove_carrier_flag = stargate_military_connections_int_3
+							remove_carrier_flag = stargate_research_connections_ex_2
+							set_carrier_flag = stargate_military_connections_int_2
+							set_carrier_flag = stargate_research_connections_ex_3
 						}
 						stargate_military_connections_ex_3 = { 
-							remove_planet_flag = stargate_military_connections_ex_3
-							remove_planet_flag = stargate_research_connections_ex_2
-							set_planet_flag = stargate_military_connections_ex_2
-							set_planet_flag = stargate_research_connections_ex_3
+							remove_carrier_flag = stargate_military_connections_ex_3
+							remove_carrier_flag = stargate_research_connections_ex_2
+							set_carrier_flag = stargate_military_connections_ex_2
+							set_carrier_flag = stargate_research_connections_ex_3
 						}
 						stargate_economic_connections_int_3 = { 
-							remove_planet_flag = stargate_economic_connections_int_3
-							remove_planet_flag = stargate_research_connections_ex_2
-							set_planet_flag = stargate_economic_connections_int_2
-							set_planet_flag = stargate_research_connections_ex_3
+							remove_carrier_flag = stargate_economic_connections_int_3
+							remove_carrier_flag = stargate_research_connections_ex_2
+							set_carrier_flag = stargate_economic_connections_int_2
+							set_carrier_flag = stargate_research_connections_ex_3
 						}
 						stargate_economic_connections_ex_3 = { 
-							remove_planet_flag = stargate_economic_connections_ex_3
-							remove_planet_flag = stargate_research_connections_ex_2
-							set_planet_flag = stargate_economic_connections_ex_2
-							set_planet_flag = stargate_research_connections_ex_3
+							remove_carrier_flag = stargate_economic_connections_ex_3
+							remove_carrier_flag = stargate_research_connections_ex_2
+							set_carrier_flag = stargate_economic_connections_ex_2
+							set_carrier_flag = stargate_research_connections_ex_3
 						}
 					}
 				}
 				stargate_research_connections_ex_3 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_research_connections_ex_4 = { }
 						stargate_military_connections_int_4 = { 
-							remove_planet_flag = stargate_military_connections_int_4
-							remove_planet_flag = stargate_research_connections_ex_3
-							set_planet_flag = stargate_military_connections_int_3
-							set_planet_flag = stargate_research_connections_ex_4
+							remove_carrier_flag = stargate_military_connections_int_4
+							remove_carrier_flag = stargate_research_connections_ex_3
+							set_carrier_flag = stargate_military_connections_int_3
+							set_carrier_flag = stargate_research_connections_ex_4
 						}
 						stargate_military_connections_ex_4 = { 
-							remove_planet_flag = stargate_military_connections_ex_4
-							remove_planet_flag = stargate_research_connections_ex_3
-							set_planet_flag = stargate_military_connections_ex_3
-							set_planet_flag = stargate_research_connections_ex_4
+							remove_carrier_flag = stargate_military_connections_ex_4
+							remove_carrier_flag = stargate_research_connections_ex_3
+							set_carrier_flag = stargate_military_connections_ex_3
+							set_carrier_flag = stargate_research_connections_ex_4
 						}
 						stargate_economic_connections_int_4 = { 
-							remove_planet_flag = stargate_economic_connections_int_4
-							remove_planet_flag = stargate_research_connections_ex_3
-							set_planet_flag = stargate_economic_connections_int_3
-							set_planet_flag = stargate_research_connections_ex_4
+							remove_carrier_flag = stargate_economic_connections_int_4
+							remove_carrier_flag = stargate_research_connections_ex_3
+							set_carrier_flag = stargate_economic_connections_int_3
+							set_carrier_flag = stargate_research_connections_ex_4
 						}
 						stargate_economic_connections_ex_4 = { 
-							remove_planet_flag = stargate_economic_connections_ex_4
-							remove_planet_flag = stargate_research_connections_ex_3
-							set_planet_flag = stargate_economic_connections_ex_3
-							set_planet_flag = stargate_research_connections_ex_4
+							remove_carrier_flag = stargate_economic_connections_ex_4
+							remove_carrier_flag = stargate_research_connections_ex_3
+							set_carrier_flag = stargate_economic_connections_ex_3
+							set_carrier_flag = stargate_research_connections_ex_4
 						}
 					}
 				}
 				stargate_research_connections_ex_4 = {
 					switch = {
-						trigger = has_planet_flag
+						trigger = has_carrier_flag
 						stargate_research_connections_ex_5 = { }
 						stargate_military_connections_int_5 = { 
-							remove_planet_flag = stargate_military_connections_int_5
-							remove_planet_flag = stargate_research_connections_ex_4
-							set_planet_flag = stargate_military_connections_int_4
-							set_planet_flag = stargate_research_connections_ex_5
+							remove_carrier_flag = stargate_military_connections_int_5
+							remove_carrier_flag = stargate_research_connections_ex_4
+							set_carrier_flag = stargate_military_connections_int_4
+							set_carrier_flag = stargate_research_connections_ex_5
 						}
 						stargate_military_connections_ex_5 = { 
-							remove_planet_flag = stargate_military_connections_ex_5
-							remove_planet_flag = stargate_research_connections_ex_4
-							set_planet_flag = stargate_military_connections_ex_4
-							set_planet_flag = stargate_research_connections_ex_5
+							remove_carrier_flag = stargate_military_connections_ex_5
+							remove_carrier_flag = stargate_research_connections_ex_4
+							set_carrier_flag = stargate_military_connections_ex_4
+							set_carrier_flag = stargate_research_connections_ex_5
 						}
 						stargate_economic_connections_int_5 = { 
-							remove_planet_flag = stargate_economic_connections_int_5
-							remove_planet_flag = stargate_research_connections_ex_4
-							set_planet_flag = stargate_economic_connections_int_4
-							set_planet_flag = stargate_research_connections_ex_5
+							remove_carrier_flag = stargate_economic_connections_int_5
+							remove_carrier_flag = stargate_research_connections_ex_4
+							set_carrier_flag = stargate_economic_connections_int_4
+							set_carrier_flag = stargate_research_connections_ex_5
 						}
 						stargate_economic_connections_ex_5 = { 
-							remove_planet_flag = stargate_economic_connections_ex_5
-							remove_planet_flag = stargate_research_connections_ex_4
-							set_planet_flag = stargate_economic_connections_ex_4
-							set_planet_flag = stargate_research_connections_ex_5
+							remove_carrier_flag = stargate_economic_connections_ex_5
+							remove_carrier_flag = stargate_research_connections_ex_4
+							set_carrier_flag = stargate_economic_connections_ex_4
+							set_carrier_flag = stargate_research_connections_ex_5
 						}
 					}
 				}

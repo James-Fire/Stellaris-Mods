@@ -41,15 +41,15 @@ country_event = {
 		#set_variable = { which = stargate_military_connections_ex_con value = 0 }
 		#set_variable = { which = stargate_research_connections_ex_con value = 0 }
 		
-		set_variable = { which = stargate_owned_planets value = 0 }
-		every_owned_planet = {
+		set_variable = { which = stargate_owned_colonys value = 0 }
+		every_owned_colony = {
 			limit = {
 				num_pops > 0
 			}
 			set_stargate_variables = yes
-			PREV = { change_variable = { which = stargate_owned_planets value = 1 } }
+			PREV = { change_variable = { which = stargate_owned_colonys value = 1 } }
 		}
-		every_owned_planet = {
+		every_owned_colony = {
 			limit = {
 				has_deposit = d_stargate
 				num_pops > 0
@@ -69,7 +69,7 @@ country_event = {
 	after = {
 		set_variable = { which = stargate_fraction value = stargatecount }
 		set_variable = { which = stargate_malus_count value = stargatecount }
-		divide_variable = { which = stargate_fraction value = stargate_owned_planets }
+		divide_variable = { which = stargate_fraction value = stargate_owned_colonys }
 		set_variable = { which = accessible_internal_civilian_stargatecount value = stargatecount }
 		set_variable = { which = accessible_internal_military_stargatecount value = stargatecount }
 		subtract_variable = { which = accessible_internal_civilian_stargatecount value = 1 }
@@ -199,7 +199,7 @@ country_event = {
 			log = "Final Research Connections for [This.GetName] [This.accessible_external_research_stargatecount]"
 			#log = "Stargate cost mult for [This.GetName] [This.stargate_connection_mult]"
 		}
-		every_owned_planet = {
+		every_owned_colony = {
 			limit = {
 				has_deposit = d_stargate
 				num_pops > 0
@@ -212,7 +212,7 @@ country_event = {
 		}
 	}
 	after = {
-		every_owned_planet = {
+		every_owned_colony = {
 			limit = {
 				has_deposit = d_stargate
 				num_pops > 0
@@ -225,47 +225,47 @@ country_event = {
 			}
 			random_list = {
 				10 = {
-					planet_event = { id = stargate.4 days = 1 }
+					colony_event = { id = stargate.4 days = 1 }
 				}
 				10 = {
-					planet_event = { id = stargate.4 days = 16 }
+					colony_event = { id = stargate.4 days = 16 }
 				}
 				10 = {
-					planet_event = { id = stargate.4 days = 31 }
+					colony_event = { id = stargate.4 days = 31 }
 				}
 				10 = {
-					planet_event = { id = stargate.4 days = 46 }
+					colony_event = { id = stargate.4 days = 46 }
 				}
 				10 = {
-					planet_event = { id = stargate.4 days = 61 }
+					colony_event = { id = stargate.4 days = 61 }
 				}
 				10 = {
-					planet_event = { id = stargate.4 days = 76 }
+					colony_event = { id = stargate.4 days = 76 }
 				}
 				10 = {
-					planet_event = { id = stargate.4 days = 91 }
+					colony_event = { id = stargate.4 days = 91 }
 				}
 				10 = {
-					planet_event = { id = stargate.4 days = 106 }
+					colony_event = { id = stargate.4 days = 106 }
 				}
 				10 = {
-					planet_event = { id = stargate.4 days = 121 }
+					colony_event = { id = stargate.4 days = 121 }
 				}
 				10 = {
-					planet_event = { id = stargate.4 days = 136 }
+					colony_event = { id = stargate.4 days = 136 }
 				}
 				10 = {
-					planet_event = { id = stargate.4 days = 151 }
+					colony_event = { id = stargate.4 days = 151 }
 				}
 				10 = {
-					planet_event = { id = stargate.4 days = 166 }
+					colony_event = { id = stargate.4 days = 166 }
 				}
 			}
 		}
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = stargate.4
 	hide_window = yes
 	is_triggered_only = yes
@@ -649,11 +649,11 @@ planet_event = {
 				}
 			}
 		}
-		planet_event = { id = stargate.40 days = 1 }
+		colony_event = { id = stargate.40 days = 1 }
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = stargate.40
 	hide_window = yes
 	is_triggered_only = yes
@@ -1363,7 +1363,7 @@ country_event = {
 								is_colonizable = yes
 								can_have_seed_stargate = yes
 							}
-							set_planet_flag = stargate_check
+							set_carrier_flag = stargate_check
 							random_list = {
 								1 = {
 									add_stargate = yes
@@ -1377,7 +1377,7 @@ country_event = {
 							limit = {
 								can_have_seed_stargate = yes
 							}
-							set_planet_flag = stargate_check
+							set_carrier_flag = stargate_check
 							random_list = {
 								1 = {
 									add_stargate = yes
@@ -1411,7 +1411,7 @@ country_event = {
 								is_colonizable = yes
 								can_have_seed_stargate = yes
 							}
-							set_planet_flag = stargate_check
+							set_carrier_flag = stargate_check
 							random_list = {
 								3 = {
 									add_stargate = yes
@@ -1425,7 +1425,7 @@ country_event = {
 							limit = {
 								can_have_seed_stargate = yes
 							}
-							set_planet_flag = stargate_check
+							set_carrier_flag = stargate_check
 							random_list = {
 								3 = {
 									add_stargate = yes
@@ -1459,7 +1459,7 @@ country_event = {
 								is_colonizable = yes
 								can_have_seed_stargate = yes
 							}
-							set_planet_flag = stargate_check
+							set_carrier_flag = stargate_check
 							random_list = {
 								1 = {
 									add_stargate = yes
@@ -1473,7 +1473,7 @@ country_event = {
 							limit = {
 								can_have_seed_stargate = yes
 							}
-							set_planet_flag = stargate_check
+							set_carrier_flag = stargate_check
 							random_list = {
 								1 = {
 									add_stargate = yes
@@ -1507,7 +1507,7 @@ country_event = {
 								is_colonizable = yes
 								can_have_seed_stargate = yes
 							}
-							set_planet_flag = stargate_check
+							set_carrier_flag = stargate_check
 							random_list = {
 								1 = {
 									add_stargate = yes
@@ -1521,7 +1521,7 @@ country_event = {
 							limit = {
 								can_have_seed_stargate = yes
 							}
-							set_planet_flag = stargate_check
+							set_carrier_flag = stargate_check
 							random_list = {
 								1 = {
 									add_stargate = yes

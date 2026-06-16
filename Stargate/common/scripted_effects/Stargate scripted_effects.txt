@@ -47,17 +47,17 @@ stargate_starting_flags = {
 
 add_stargate = {
 	add_deposit = d_stargate
-	set_planet_flag = has_stargate
-	set_planet_flag = stargate_military_connections_int_1
-	set_planet_flag = stargate_military_connections_ex_2
-	set_planet_flag = stargate_economic_connections_int_3
-	set_planet_flag = stargate_economic_connections_ex_4
-	set_planet_flag = stargate_research_connections_ex_5
-	set_planet_flag = stargate_military_connections_int_cap_1
-	set_planet_flag = stargate_military_connections_ex_cap_1
-	set_planet_flag = stargate_economic_connections_int_cap_1
-	set_planet_flag = stargate_economic_connections_ex_cap_1
-	set_planet_flag = stargate_research_connections_ex_cap_1
+	set_carrier_flag = has_stargate
+	set_carrier_flag = stargate_military_connections_int_1
+	set_carrier_flag = stargate_military_connections_ex_2
+	set_carrier_flag = stargate_economic_connections_int_3
+	set_carrier_flag = stargate_economic_connections_ex_4
+	set_carrier_flag = stargate_research_connections_ex_5
+	set_carrier_flag = stargate_military_connections_int_cap_1
+	set_carrier_flag = stargate_military_connections_ex_cap_1
+	set_carrier_flag = stargate_economic_connections_int_cap_1
+	set_carrier_flag = stargate_economic_connections_ex_cap_1
+	set_carrier_flag = stargate_research_connections_ex_cap_1
 }
 
 reset_stargate_menu_settings_country = {
@@ -101,41 +101,41 @@ reset_stargate_menu_settings_country = {
 }
 
 reset_stargate_menu_settings_planet = {
-	remove_planet_flag = stargate_military_connections_int_cap_1
-	remove_planet_flag = stargate_military_connections_int_cap_2
-	remove_planet_flag = stargate_military_connections_int_cap_3
-	remove_planet_flag = stargate_military_connections_int_cap_4
-	remove_planet_flag = stargate_military_connections_int_cap_5
+	remove_carrier_flag = stargate_military_connections_int_cap_1
+	remove_carrier_flag = stargate_military_connections_int_cap_2
+	remove_carrier_flag = stargate_military_connections_int_cap_3
+	remove_carrier_flag = stargate_military_connections_int_cap_4
+	remove_carrier_flag = stargate_military_connections_int_cap_5
 	
-	remove_planet_flag = stargate_military_connections_ex_cap_1
-	remove_planet_flag = stargate_military_connections_int_cap_2
-	remove_planet_flag = stargate_military_connections_int_cap_3
-	remove_planet_flag = stargate_military_connections_int_cap_4
-	remove_planet_flag = stargate_military_connections_int_cap_5
+	remove_carrier_flag = stargate_military_connections_ex_cap_1
+	remove_carrier_flag = stargate_military_connections_int_cap_2
+	remove_carrier_flag = stargate_military_connections_int_cap_3
+	remove_carrier_flag = stargate_military_connections_int_cap_4
+	remove_carrier_flag = stargate_military_connections_int_cap_5
 	
-	remove_planet_flag = stargate_economic_connections_int_cap_1
-	remove_planet_flag = stargate_economic_connections_int_cap_2
-	remove_planet_flag = stargate_economic_connections_int_cap_3
-	remove_planet_flag = stargate_economic_connections_int_cap_4
-	remove_planet_flag = stargate_economic_connections_int_cap_5
+	remove_carrier_flag = stargate_economic_connections_int_cap_1
+	remove_carrier_flag = stargate_economic_connections_int_cap_2
+	remove_carrier_flag = stargate_economic_connections_int_cap_3
+	remove_carrier_flag = stargate_economic_connections_int_cap_4
+	remove_carrier_flag = stargate_economic_connections_int_cap_5
 	
-	remove_planet_flag = stargate_economic_connections_ex_cap_1
-	remove_planet_flag = stargate_economic_connections_ex_cap_2
-	remove_planet_flag = stargate_economic_connections_ex_cap_3
-	remove_planet_flag = stargate_economic_connections_ex_cap_4
-	remove_planet_flag = stargate_economic_connections_ex_cap_5
+	remove_carrier_flag = stargate_economic_connections_ex_cap_1
+	remove_carrier_flag = stargate_economic_connections_ex_cap_2
+	remove_carrier_flag = stargate_economic_connections_ex_cap_3
+	remove_carrier_flag = stargate_economic_connections_ex_cap_4
+	remove_carrier_flag = stargate_economic_connections_ex_cap_5
 	
-	remove_planet_flag = stargate_research_connections_ex_cap_1
-	remove_planet_flag = stargate_research_connections_ex_cap_2
-	remove_planet_flag = stargate_research_connections_ex_cap_3
-	remove_planet_flag = stargate_research_connections_ex_cap_4
-	remove_planet_flag = stargate_research_connections_ex_cap_5
+	remove_carrier_flag = stargate_research_connections_ex_cap_1
+	remove_carrier_flag = stargate_research_connections_ex_cap_2
+	remove_carrier_flag = stargate_research_connections_ex_cap_3
+	remove_carrier_flag = stargate_research_connections_ex_cap_4
+	remove_carrier_flag = stargate_research_connections_ex_cap_5
 	
-	set_planet_flag = stargate_military_connections_int_cap_1
-	set_planet_flag = stargate_military_connections_ex_cap_1
-	set_planet_flag = stargate_economic_connections_int_cap_1
-	set_planet_flag = stargate_economic_connections_ex_cap_1
-	set_planet_flag = stargate_research_connections_ex_cap_1
+	set_carrier_flag = stargate_military_connections_int_cap_1
+	set_carrier_flag = stargate_military_connections_ex_cap_1
+	set_carrier_flag = stargate_economic_connections_int_cap_1
+	set_carrier_flag = stargate_economic_connections_ex_cap_1
+	set_carrier_flag = stargate_research_connections_ex_cap_1
 	
 	set_stargate_variables = yes
 }
@@ -321,7 +321,7 @@ calc_connections_upkeep_part_4 = {
 set_stargate_connection_caps = {
 	if = {
 		limit = {
-			NOT = { has_planet_flag = stargate_local_caps }
+			NOT = { has_carrier_flag = stargate_local_caps }
 		}
 		set_variable = { which = int_civ_stargatecount_cap value = owner.int_civ_stargatecount_cap }
 		set_variable = { which = ex_civ_stargatecount_cap value = owner.ex_civ_stargatecount_cap }
@@ -336,7 +336,7 @@ check_galaxy_stargate_deposit = {
 	every_system = {
 		limit = {
 			any_system_planet = {
-				has_planet_flag = has_stargate
+				has_carrier_flag = has_stargate
 				NOT = {
 					has_deposit = d_stargate
 				}
@@ -344,7 +344,7 @@ check_galaxy_stargate_deposit = {
 		}
 		every_system_planet = {
 			limit = {
-				has_planet_flag = has_stargate
+				has_carrier_flag = has_stargate
 				NOT = {
 					has_deposit = d_stargate
 				}

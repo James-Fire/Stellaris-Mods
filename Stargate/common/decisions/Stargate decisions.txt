@@ -40,7 +40,7 @@ build_stargate = {
 }
 
 decision_manage_stargate = {
-	owned_planets_only = yes
+	owned_colonys_only = yes
 	#sound = event_administrative_work
 	icon = decision_autofab
 	
@@ -51,7 +51,7 @@ decision_manage_stargate = {
 	}
 	
 	potential = {
-		has_planet_flag = has_stargate
+		has_carrier_flag = has_stargate
 	}
 
 	effect = {
@@ -59,7 +59,7 @@ decision_manage_stargate = {
 		hidden_effect = {
 			reset_stargate_menu_settings_planet = yes
 		}
-		planet_event = { id = stargate_menu.10 }
+		colony_event = { id = stargate_menu.10 }
 	}
 	
 	ai_weight = {

@@ -41,7 +41,7 @@ country_event = { ###Country Terminal
 	}
 }
 
-planet_event = { ###Planet Terminal
+colony_event = { ###Planet Terminal
 	id = stargate_menu.10
 	title = "stargate_menu.10.name"
 	desc = "stargate_menu.10.desc"
@@ -67,7 +67,7 @@ planet_event = { ###Planet Terminal
 		name = "stargate_menu.1.refresh"
 		#custom_tooltip = "stargate_menu.1.refresh.tooltip"
 		custom_gui = "stargate_planet_menu_confirm"
-		planet_event = { id = stargate_menu.10 }
+		colony_event = { id = stargate_menu.10 }
 	}
 	option = {
 		name = "stargate_menu.10.confirm"
