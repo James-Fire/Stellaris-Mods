@@ -64,6 +64,21 @@ tech_jump_drive_1 = {
 		jump_method
 	}
 
+	technology_swap = {
+		name = tech_bio_jump_drive_1
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			country_uses_bio_ships = yes
+		}
+		prereqfor_desc = {
+			custom = {
+				title = "TECH_UNLOCK_BIO_JUMPDRIVE_1_TITLE"
+				desc = "TECH_UNLOCK_BIO_JUMPDRIVE_1_DESC"
+			}
+		}
+	}
+
 	weight_modifier = {
 		factor = 0.1
 		modifier = {

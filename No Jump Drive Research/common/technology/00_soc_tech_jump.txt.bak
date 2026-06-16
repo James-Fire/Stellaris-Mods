@@ -72,34 +72,14 @@ tech_psi_jump_drive_1 = {
 	}
 
 	potential = {
-		OR = {
-			has_shroud_dlc = yes
-			NOT = { has_ethic = ethic_gestalt_consciousness }
-		}
-	}
-
-	technology_swap = {
-		name = tech_bio_psi_jump_drive_1
-		inherit_icon = no
-		inherit_effects = no
-		trigger = {
-			country_uses_bio_ships = yes
-		}
-		prereqfor_desc = {
-			custom = {
-				title = "TECH_UNLOCK_BIO_PSI_JUMPDRIVE_1_TITLE"
-				desc = "TECH_UNLOCK_BIO_PSI_JUMPDRIVE_1_DESC"
-			}
-		}
-		weight = {
-			factor = 1
-		}
+		NOT = { has_ethic = ethic_gestalt_consciousness }
 	}
 
 	weight_modifier = {
 		factor = 0.1
 		modifier = {
 			factor = 0
+			host_has_dlc = "Utopia"
 		}
 		modifier = {
 			factor = 0.1

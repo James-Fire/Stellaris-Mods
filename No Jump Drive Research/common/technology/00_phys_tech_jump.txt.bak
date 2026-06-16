@@ -47,64 +47,29 @@
 @tier5weight2 = 25
 @tier5weight3 = 20
 
-tech_psi_jump_drive_1 = {
-	cost = @tier5cost2
-	area = society
+
+tech_jump_drive_1 = {
+	cost = @tier5cost1
+	area = physics
 	tier = 5
-	category = { psionics }
+	category = { particles }
 	ai_update_type = all
+	is_reverse_engineerable = yes
 	is_rare = yes
 	is_dangerous = yes
-	prerequisites = { "tech_precognition_interface" }
 	weight = 0
-	is_dangerous = yes
-	is_reverse_engineerable = no
+	prerequisites = { "tech_zero_point_power" }
 
 	feature_flags = {
 		jump_method
 	}
 
-	prereqfor_desc = {
-		component = {
-			title = "TECH_UNLOCK_PSI_JUMPDRIVE_1_TITLE"
-			desc = "TECH_UNLOCK_PSI_JUMPDRIVE_1_DESC"
-		}
-	}
-
-	potential = {
-		OR = {
-			has_shroud_dlc = yes
-			NOT = { has_ethic = ethic_gestalt_consciousness }
-		}
-	}
-
-	technology_swap = {
-		name = tech_bio_psi_jump_drive_1
-		inherit_icon = no
-		inherit_effects = no
-		trigger = {
-			country_uses_bio_ships = yes
-		}
-		prereqfor_desc = {
-			custom = {
-				title = "TECH_UNLOCK_BIO_PSI_JUMPDRIVE_1_TITLE"
-				desc = "TECH_UNLOCK_BIO_PSI_JUMPDRIVE_1_DESC"
-			}
-		}
-		weight = {
-			factor = 1
-		}
-	}
-
 	weight_modifier = {
 		factor = 0.1
 		modifier = {
-			factor = 0
-		}
-		modifier = {
 			factor = 0.1
 			NOR = {
-				has_trait_in_council = { TRAIT = leader_trait_expertise_psionics }
+				has_trait_in_council = { TRAIT = leader_trait_expertise_particles }
 				has_trait_in_council = { TRAIT = leader_trait_curator }
 				has_trait_in_council = { TRAIT = leader_trait_spark_of_genius }
 				has_trait_in_council = { TRAIT = leader_trait_spark_of_genius_2 }
@@ -115,7 +80,7 @@ tech_psi_jump_drive_1 = {
 		}
 		inline_script = {
 			script = technologies/rare_technologies_weight_modifiers
-			TECHNOLOGY = tech_psi_jump_drive_1
+			TECHNOLOGY = tech_jump_drive_1
 		}
 		modifier = {
 			factor = @ap_grasp_the_void_travel_tech
@@ -126,8 +91,18 @@ tech_psi_jump_drive_1 = {
 			is_eager_explorer_empire = yes
 		}
 		modifier = {
-			factor = @ap_grasp_the_void_travel_tech
-			has_country_flag = jaunted_traveler_secret_revealed
+			factor = 1.25
+			has_tradition = tr_discovery_adopt
+		}
+	}
+
+	ai_weight = {
+	}
+
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_JUMPDRIVE_1_TITLE"
+			desc = "TECH_UNLOCK_JUMPDRIVE_1_DESC"
 		}
 	}
 }

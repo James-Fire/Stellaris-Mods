@@ -1,0 +1,41 @@
+weapon_component_template = {
+	key = "PERDITION_BEAM_AUTO_DREADNOUGHT"
+	size = titanic
+	entity = "invisible_turret_entity"
+	type = instant
+	prio_projectile = yes
+	power = -500
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @titanic_t6_cost
+			rare_crystals = @titanic_t6_rare
+		}		
+		upkeep = {
+			energy = @titanic_t6_upkeep_energy
+			alloys = @titanic_t6_upkeep_alloys
+		}
+	}
+	icon = "GFX_ship_part_perdition_beam"
+	icon_frame = 1
+	damage = { min = 5000 max = 10000 }
+	windup = { min = 30.0 max = 45.0 }
+	#cooldown = 180
+	total_fire_time = 180
+	range = 250
+	accuracy = 0.85
+	tracking = 0
+	shield_damage = 0.75
+	armor_damage = 1.5
+	hull_damage = 1.25
+	type = instant
+	
+	firing_arc = 10.0
+	min_range = 30.0
+	use_ship_kill_target = no
+	
+	prerequisites = { "tech_titans" }
+	component_set = "PERDITION_BEAM"
+	projectile_gfx = "perdition_beam"
+	size_restriction = { buildable_dreadnought buildable_executor buildable_battlecruiser buildable_yamato }
+}
