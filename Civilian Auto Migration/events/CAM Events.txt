@@ -36,12 +36,12 @@ country_event = {
 			limit = {
 				has_carrier_flag = CAM_destination
 			}
-			carrier_event = { id = CAM.2 }
+			colony_event = { id = CAM.2 }
 		}
 	}
 }
 
-carrier_event = {
+colony_event = {
 	id = CAM.2
 	is_triggered_only = yes
 	hide_window = yes
