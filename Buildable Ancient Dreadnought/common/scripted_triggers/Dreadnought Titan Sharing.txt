@@ -1,0 +1,15 @@
+ship_uses_titan_components = {
+	OR = {
+		is_ship_size = titan
+		is_ship_size = bio_titan
+		is_ship_size = cosmo_crisis_titan
+		is_ship_size = large_fallen_stinger
+		is_ship_size = cosmo_crisis_stinger
+		
+		#Dreadnoughts
+		is_ship_size = buildable_dreadnought
+		is_ship_size = buildable_executor
+		is_ship_size = buildable_battlecruiser
+		is_ship_size = buildable_yamato
+	}
+}
