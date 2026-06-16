@@ -3,6 +3,5 @@ tags={
 	"Gaia"
 }
 picture="thumbnail.png"
-supported_version="3.11.*"
-path="C:/Users/godis/Documents/Paradox Interactive/Stellaris/mod/Gaiaforming"
+supported_version="v4.4.*"
 remote_file_id="1638317740"

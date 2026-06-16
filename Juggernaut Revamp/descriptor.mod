@@ -6,6 +6,5 @@ tags={
 }
 name="Juggernaut Revamp"
 picture="thumbnail.png"
-supported_version="3.11.*"
-path="C:/Users/godis/Documents/Paradox Interactive/Stellaris/mod/Juggernaut Revamp"
+supported_version="v4.4.*"
 remote_file_id="2032224652"

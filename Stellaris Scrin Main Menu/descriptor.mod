@@ -3,6 +3,5 @@ tags={
 	"Main Menu"
 }
 picture="thumbnail.jpg"
-supported_version="3.11.*"
-path="C:/Users/godis/Documents/Paradox Interactive/Stellaris/mod/Stellaris Scrin Main Menu"
+supported_version="v3.13.*"
 remote_file_id="1796981547"
