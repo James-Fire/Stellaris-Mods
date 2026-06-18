@@ -22,7 +22,9 @@ building_university = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_researcher_per_pop = 0.1
+			job_physicist_per_pop = 0.033
+			job_biologist_per_pop = 0.033
+			job_engineer_per_pop = 0.033
 		}
 	}
 
@@ -45,7 +47,7 @@ building_university = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 5
+		planet_housing_add = 500
 		pop_government_ethic_attraction = 0.10
 		planet_jobs_produces_mult = 0.05
 	}
@@ -93,7 +95,7 @@ building_university_2 = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 10
+		planet_housing_add = 1000
 		pop_government_ethic_attraction = 0.20
 		planet_jobs_produces_mult = 0.10
 	}
@@ -104,8 +106,10 @@ building_university_2 = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_researcher_per_pop = 0.15
-			job_head_researcher_per_pop = 0.01
+			job_physicist_per_pop = 0.05
+			job_biologist_per_pop = 0.05
+			job_engineer_per_pop = 0.05
+			job_politician_per_pop = 0.01
 		}
 	}
 
@@ -185,8 +189,10 @@ building_university_3 = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_researcher_per_pop = 0.25
-			job_head_researcher_per_pop = 0.04
+			job_physicist_per_pop = 0.083
+			job_biologist_per_pop = 0.083
+			job_engineer_per_pop = 0.083
+			job_politician_per_pop = 0.04
 		}
 	}
 
@@ -203,7 +209,7 @@ building_university_3 = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 20
+		planet_housing_add = 2000
 		pop_government_ethic_attraction = 0.20
 		planet_jobs_produces_mult = 0.10
 	}
@@ -252,7 +258,9 @@ building_university_gestalt = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_per_pop = 0.1
+			job_brain_drone_physicist_per_pop = 0.1
+			job_brain_drone_biologist_per_pop = 0.1
+			job_brain_drone_engineer_per_pop = 0.1
 		}
 	}
 
@@ -262,7 +270,9 @@ building_university_gestalt = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_calculator_per_pop = 0.1
+			job_calculator_physicist_per_pop = 0.1
+			job_calculator_biologist_per_pop = 0.1
+			job_calculator_engineer_per_pop = 0.1
 		}
 	}
 
@@ -293,7 +303,7 @@ building_university_gestalt = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 5
+		planet_housing_add = 500
 		planet_jobs_produces_mult = 0.05
 	}
 
@@ -340,7 +350,7 @@ building_university_gestalt_2 = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 10
+		planet_housing_add = 1000
 		planet_jobs_produces_mult = 0.10
 	}
 
@@ -350,7 +360,9 @@ building_university_gestalt_2 = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_per_pop = 0.17
+			job_brain_drone_physicist_per_pop = 0.17
+			job_brain_drone_biologist_per_pop = 0.17
+			job_brain_drone_engineer_per_pop = 0.17
 		}
 	}
 
@@ -360,7 +372,9 @@ building_university_gestalt_2 = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_calculator_per_pop = 0.17
+			job_calculator_physicist_per_pop = 0.17
+			job_calculator_biologist_per_pop = 0.17
+			job_calculator_engineer_per_pop = 0.17
 		}
 	}
 
@@ -444,7 +458,9 @@ building_university_gestalt_3 = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_per_pop = 0.33
+			job_brain_drone_physicist_per_pop = 0.33
+			job_brain_drone_biologist_per_pop = 0.33
+			job_brain_drone_engineer_per_pop = 0.33
 		}
 	}
 
@@ -454,7 +470,9 @@ building_university_gestalt_3 = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_calculator_per_pop = 0.33
+			job_calculator_physicist_per_pop = 0.33
+			job_calculator_biologist_per_pop = 0.33
+			job_calculator_engineer_per_pop = 0.33
 		}
 	}
 
@@ -475,7 +493,7 @@ building_university_gestalt_3 = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 20
+		planet_housing_add = 2000
 		planet_jobs_produces_mult = 0.10
 	}
 
