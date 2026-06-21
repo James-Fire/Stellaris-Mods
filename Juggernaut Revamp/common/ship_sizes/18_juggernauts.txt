@@ -8,12 +8,9 @@ juggernaut = {
 	max_hitpoints = @juggernaut_hp
 	modifier = {
 		ship_evasion_add = @juggernaut_evasion
-		starbase_shipyard_capacity_add = 4
+		starbase_shipyard_capacity_add = 10
 	}
-	ship_modifier = {
-		ship_starting_experience_add = 100
-	}
-	
+
 	base_buildtime = @juggernaut_build_time
 	resources = {
 		category = ships
@@ -23,8 +20,10 @@ juggernaut = {
 		}
 	}
 
-	combat_size_multiplier = 5
-	size_multiplier = 32
+	combat_size_multiplier = 100
+	size_multiplier = 100
+	map_counter_icon = ship_counter_128
+	icon = ship_size_military_64
 	fleet_slot_size = 32
 	section_slots = {
 		"port" = { locator = "part2" }
@@ -33,56 +32,11 @@ juggernaut = {
 	}
 
 	potential_construction = {
-		OR = {
-			AND = {
-				is_scope_type = starbase
-				NOT = {
-					has_starbase_size = juggernaut
-				}
-			}
-			AND = {
-				is_scope_type = megastructure
-				OR = {
-					is_megastructure_type = mega_shipyard_3
-					is_megastructure_type = mega_shipyard_restored
-				}
-			}
-		}
+		juggernaut_potential_construction = yes
 	}
 
 	possible_construction = {
-		custom_tooltip = {
-			fail_text = starbase_citadel_trigger
-			OR = {
-				AND = {
-					is_scope_type = megastructure
-					OR = {
-						is_megastructure_type = mega_shipyard_3
-						is_megastructure_type = mega_shipyard_restored
-					}
-				}
-				AND = {
-					is_scope_type = starbase
-					has_starbase_size >= starbase_citadel
-				}
-			}
-		}
-		custom_tooltip = {
-			fail_text = starbase_colossal_yards_trigger
-			OR = {
-				AND = {
-					is_scope_type = megastructure
-					OR = {
-						is_megastructure_type = mega_shipyard_3
-						is_megastructure_type = mega_shipyard_restored
-					}
-				}
-				AND = {
-					is_scope_type = starbase
-					has_starbase_building = colossus_yards
-				}
-			}
-		}
+		juggernaut_possible_construction = yes
 	}
 
 	num_target_locators = 0
@@ -91,7 +45,6 @@ juggernaut = {
 	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
 	can_disable = no
 	icon_frame = 7 #probably unused, but mobile starbases are special
-	icon = ship_size_military_64
 	ship_class_icon_frame = 35
 	selectable = { host_has_dlc = "Federations" }
 
@@ -112,6 +65,8 @@ juggernaut = {
 	min_upgrade_cost = {
 		alloys = 50
 	}
+
+	available_to_everyone = yes
 }
 
 juggernaut_nosh = {
@@ -227,4 +182,6 @@ juggernaut_nosh = {
 	min_upgrade_cost = {
 		alloys = 50
 	}
+
+	available_to_everyone = yes
 }
