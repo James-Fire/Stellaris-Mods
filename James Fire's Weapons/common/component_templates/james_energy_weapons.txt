@@ -316,9 +316,12 @@ weapon_component_template = {
 			alloys = 1.14
 			rare_crystals = 0.38
 		}
-	}	
+	}
+	
+	collateral_damage = 106 #Significant fraction of main weapon damage
+	collateral_range = 10 #Very Short Range
 	entity = "large_laser_gun_entity"
-	damage = { min = 4 max = 424 }
+	damage = { min = 4 max = 212 }
 	windup = { min = 9 max = 34 }
 	cooldown = 50
 	range = 60
@@ -355,9 +358,11 @@ weapon_component_template = {
 			alloys = 9.75
 			rare_crystals = 3.25
 		}
-	}	
+	}
+	collateral_damage = 1940 #Significant fraction of main weapon damage
+	collateral_range = 20 #Short Range
 	entity = "invisible_turret_entity"
-	damage = { min = 8 max = 6760 }
+	damage = { min = 8 max = 3880 }
 	windup = { min = 12.0 max = 48.0 }
 	cooldown = 71
 	range = 150.0
@@ -415,8 +420,10 @@ weapon_component_template = {
 			rare_crystals = 5
 		}
 	}
+	collateral_damage = 1000 #Ssmall fraction of main weapon damage
+	collateral_range = 40 #Decent Range
 	entity = "invisible_turret_entity"
-	damage = { min = 20000 max = 40000 }
+	damage = { min = 10000 max = 20000 }
 	windup = { min = 30 max = 120 }
 	cooldown = 180
 	range = 250.0
