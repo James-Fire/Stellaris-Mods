@@ -13,22 +13,55 @@ autofab = {
 		potential = {
 			exists = owner
 			owner = {
-				has_active_tradition = tr_autofab_networking
+				has_active_tradition = tr_autofab_infrastructure_support
 			}
 		}
 		modifier = {
-			planet_crime_no_happiness_mult = -0.05
+			planet_max_districts_add = 2
 		}
 	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = {
-				has_active_tradition = tr_autofab_factory_housing
+				has_active_tradition = tr_autofab_environmental_studies
 			}
 		}
 		modifier = {
-			pop_housing_usage_mult = -0.05
+			pop_environment_tolerance = 0.05
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_autofab_optimization
+			}
+		}
+		modifier = {
+			bonus_automated_workforce_mult = 0.05
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_autofab_finish
+			}
+		}
+		modifier = {
+			bonus_automated_workforce_mult = 0.25
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_autofab_networking
+			}
+		}
+		modifier = {
+			planet_crime_no_happiness_mult = -0.05
 		}
 	}
 	triggered_planet_modifier = {
@@ -67,7 +100,7 @@ autofab = {
 			}
 		}
 		modifier = {
-			bonus_automated_workforce_mult = 0.4
+			bonus_automated_workforce_mult = 0.3
 		}
 	}
 	triggered_planet_modifier = {
@@ -79,7 +112,7 @@ autofab = {
 			}
 		}
 		modifier = {
-			planet_automated_jobs_energy_upkeep_mult = -0.1
+			bonus_automated_workforce_mult = 0.1
 		}
 	}
 	
@@ -143,3 +176,4 @@ autofab = {
 		weight = 0
 	}
 }
+

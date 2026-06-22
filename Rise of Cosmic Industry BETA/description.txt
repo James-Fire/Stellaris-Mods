@@ -1,0 +1,90 @@
+[url=https://discord.gg/fdqys7WcuS][img]https://i.imgur.com/daBft2H.png[/img][/url]
+
+Note: Given how this mod affects development, it is not recommended to try adding it to an existing save.
+
+Industry in Stellaris is simple, and abstracted to the point of not making much sense. Not only that, but critical methods of industry that should be utilized by space-faring empires are missing entirely. I've set out to fix this, introducing new mechanics, with the intention of being as compatible as possible.
+
+[img]https://i.imgur.com/jOg9Tu3.png[/img]
+
+Rise of Cosmic Industry is composed of 7 modules; Factory Automation, Space Exploitation, Orbital Infrastructure, Realistic Development, Fallen Empire Buildings, Cargo Ships, and Shipping Costs. Each module focuses on industry of a specific type, and can be disabled at game start through the settings menu.
+
+
+Orbital Infrastructure is an implementation of Orbital Districts on planets, opening up more options for planetary development.
+
+
+Realistic Development overhauls how things are built, using a Labour-like system called Industrial Production, so that 2 planets don't build twice as fast as 1 for some reason.
+
+
+Factory Automation implements Automated Factories, for making resources without pops.
+
+
+Space Exploitation is an expansion to Space Mining using Minor Colonies, allowing you to exploit celestial bodies more thoroughly.
+
+
+Fallen Empire Buildings provides a third tier of Buff Buildings, that increase the production of their appropriate job, as well as produce some resources on their own.
+
+
+Cargo Ships provides Cargo Ships that can be used to form trade routes with other empire's planets, granting both planets resources based on their existing production.
+
+
+Shipping Costs makes planet-level deficits cost some energy credits to represent shipping in materials to cover the deficit.
+
+
+[img]https://i.imgur.com/cLvn8UX.png[/img]
+
+[img]https://imgur.com/I7H1aNf.png[/img]
+
+
+[img]https://imgur.com/XZGQhBj.png[/img]
+
+
+Cargo Ships are ships that will be used for loading cargo in between planets involved in its trade route.
+
+Foreign Trade Routes give planets resources based on the pop jobs of each pop for a short while when a planet gets cargo from a cargo fleet. The cargo amount is based on the pop jobs of the destination planet and vice-versa. There is a cap (~1 million-ish) for each resource gain.
+
+To set up a trade route:
+If you want to trade with an AI empire, they must have +25 or more opinion on you. If you are a Gestalt, only empires that you have a Non-Aggression Pact/Defensive Pact/Federation with can be traded with.
+
+You must have the Colonial Centralization tech, which will unlock 2 decisions and 2 edicts. The planetary decision "Add a Trade Route" requires a planet with 20 pops and at least 3 buildings on it. An unmergeable fleet of one cargo ship will spawn which you must send to antrade_value empire's planet. Doing so will give a notification that you finished setting up the trade route.
+
+The fleet will now automatically move to and from both target planets. Modifiers will pop up for both planets based on the resource output of both planets. Check the Trade Hub planetary feature of all involved planets you have a trade route with for more information.
+Once the trade route makes two round trips, each cargo ship in that trade route increases the AI opinion of the recieving empire of you by +3, and provides 1 intel every trip to both parties.
+You may also change a cargo fleet's origin planet while you are setting up its trade route. To do this, just orbit the planet you want to change their origin planet to. Its fleet name will change to accommodate.
+You may also increase the amount of cargo size in a trade route's cargo fleet by using the planetary decision "Bolster/Renew Cargo Fleet" and select the desired cargo fleet. Changing your mind will refund you the resources.
+Corporate empires' have a 1.5x multiplier for cargo.
+Cargo ships have an upkeep of 2 energy per cargo size.
+Trade routes are cancelled if the following happens:
+The cargo fleet is destroyed or disbanded. If the fleet is disbanded, you will get some resources back.
+The destination planet's owner closes borders to you or declared war on you.
+The origin or destination planet is no longer a colony.
+The maximum number of trade routes (this includes trade routes being set up) and the max cargo fleet size per trade route you can have initially is 4. The following techs will increase these by 1:
+Tier 2 Commercial Building tech
+Tier 2 CGs Building Tech
+Tier 3 CGs Building Tech
+Galactic Stock Exchange Tech (increases max cargo fleet size per trade route by 3 instead)
+To view information on your trade routes, you can use the Check Cargo Ships and Foreign Trade edict. If you do not see a number beside a resource, then you can assume that the value is 0.
+
+
+[img]https://imgur.com/tjUbDO3.png[/img]
+
+
+[img]https://i.imgur.com/T9WHnL6.png[/img]
+
+Compatibility:
+
+I overwrite specific vanilla buildings so that my Fallen Empire buildings are an upgrade to them. These overwrites are only important if you use the Fallen Empire Buildings module.
+
+There may be compatibility issues arising from things like Production Revolution, since it is intended to remove pops, which I do not account for in Realistic Development.
+
+A UI mod that expands the number of districts you can see is necessary to use Orbital Infrastructure. I prefer UI Overhaul Dynamic.
+
+[h3]Credits[/h3]
+Thanks to Hive for the thumbnail, and all trade_value art. You can find them [url=https://steamcommunity.com/id/thomasstone/]here[/url], and their repository  [url=https://drive.google.com/drive/folders/1eGGG4HfWPESbWm7wOYfmhPQa7MoNTM1S?usp=sharing]here[/url]
+
+[url=https://discord.gg/UFyMvwZ][img]https://i.imgur.com/4Und3QN.png[/img][/url]
+
+Support James if you like this mod
+
+[url=https://www.patreon.com/user?u=6831316][img]https://i.imgur.com/H7KEFJ7.png[/img][/url]
+
+[url=https://ko-fi.com/jamesfire][img]https://i.imgur.com/j5EnFli.png[/img][/url]

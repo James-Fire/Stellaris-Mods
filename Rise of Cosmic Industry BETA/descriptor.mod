@@ -4,6 +4,5 @@ tags={
 	"Economy"
 	"Gameplay"
 }
-name="Rise of Cosmic Industry BETA"
-supported_version="v3.13.*"
-remote_file_id="2670609971"
+name="Rise of Cosmic Industry"
+supported_version="v4.4.*"

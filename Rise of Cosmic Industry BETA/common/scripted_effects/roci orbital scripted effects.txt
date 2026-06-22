@@ -133,7 +133,7 @@ update_oi_modifiers = {
 		}
 		solar_system = {
 			every_system_planet = {
-				remove_planet_flag = orbitalinfra_shipyard_update
+				remove_carrier_flag = orbitalinfra_shipyard_update
 			}
 			
 			starbase = {
@@ -141,15 +141,15 @@ update_oi_modifiers = {
 					while = {
 						limit = {
 							any_system_planet = {
-								NOT = { has_planet_flag = orbitalinfra_shipyard_update }
+								NOT = { has_carrier_flag = orbitalinfra_shipyard_update }
 							}
 						}
 						random_system_planet = {
 							limit = {
 								check_variable = { which = orbitalinfra_shipyard value > 0 }
-								NOT = { has_planet_flag = orbitalinfra_shipyard_update }
+								NOT = { has_carrier_flag = orbitalinfra_shipyard_update }
 							}
-							set_planet_flag = orbitalinfra_shipyard_update
+							set_carrier_flag = orbitalinfra_shipyard_update
 							solar_system = {
 								if = {
 									limit = {
@@ -323,7 +323,7 @@ oi_update_platforms = {
 			}
 		}
 	}
-	planet_event = { id = orbitalinfra.6 days = 30 }
+	colony_event = { id = orbitalinfra.6 days = 30 }
 }
 
 alloy_ai_orbital_cost = {

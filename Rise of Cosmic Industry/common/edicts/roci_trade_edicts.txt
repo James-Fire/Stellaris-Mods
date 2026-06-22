@@ -47,16 +47,6 @@ kiyo_trade_add_ships_to_trade_route = {
 	length = 0
 	resources = {
 		category = campaign_kiyo_mod_trade
-		cost = {
-			#trigger = { owner = { is_ai = no } }
-			energy = 750
-			consumer_goods = 750
-		}
-		#cost = {
-		#	trigger = { owner = { is_ai = yes } }
-		#	energy = 500
-		#	minerals = 1000
-		#}
 	}
 	effect = {
 		hidden_effect = {
@@ -66,11 +56,12 @@ kiyo_trade_add_ships_to_trade_route = {
 	
 	potential = {
 		NOT = { has_global_flag = no_trade_routes }
-		any_owned_fleet = { has_fleet_flag = kiyo_trade_has_trade_route }
+		any_owned_fleet = { any_owned_ship = { is_ship_size = kiyo_trade } }
 		has_technology = tech_space_trading
 	}
 	
 	allow = {
+		can_afford_trade_cargo_expansion = yes
 		custom_tooltip = {
 			fail_text = edict_kiyo_trade_add_ships_to_trade_route_any_fleet_has_room
 			any_owned_colony = {

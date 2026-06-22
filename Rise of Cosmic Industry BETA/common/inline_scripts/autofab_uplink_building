@@ -1,0 +1,39 @@
+base_buildtime = $BUILD_TIME$
+district_limit = 1
+category = pop_assembly
+
+building_sets = {
+	$BUILDING_SET$
+}
+
+potential = {
+	has_autofab = yes
+}
+
+allow = {
+}
+
+destroy_trigger = {
+	exists = owner
+	owner = { is_wilderness_empire = yes }
+}
+
+planet_modifier = {
+	planet_automated_jobs_energy_upkeep_add = 1
+	job_$JOB$_automated_workforce_mult = value:roci_uplink_workforce|$AMOUNT$|$FE_BUILDING$||$BUILDING_AMOUNT$|$FE_BUILDING_2$|$BUILDING_AMOUNT_2$|
+	job_$GESTALT_JOB$_automated_workforce_mult = value:roci_uplink_workforce|$AMOUNT$|$FE_BUILDING$|$BUILDING_AMOUNT$|$FE_BUILDING_2$|$BUILDING_AMOUNT_2$|
+	bonus_automated_workforce_mult = value:roci_uplink_workforce_bonus|$AMOUNT$|$FE_BUILDING$|$BUILDING_AMOUNT$|$FE_BUILDING_2$|$BUILDING_AMOUNT_2$|$BUILDING_AMOUNT_2$|
+}
+
+resources = {
+	category = planet_autofab_uplink
+	cost = {
+		minerals = 300
+		energy = 100
+		alloys = 100
+	}
+	upkeep = {
+		energy = $ENERGYUPKEEP$
+		minerals = $MINERALUPKEEP$
+	}
+}

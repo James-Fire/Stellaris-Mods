@@ -15,7 +15,7 @@ log_all_countries_realdev_values = {
 log_all_country_realdev_values = {
 	print_realdev_values = yes
 	
-	every_owned_planet = {
+	every_owned_colony = {
 		print_realdev_values = yes
 	}
 }
@@ -77,7 +77,7 @@ print_realdev_values = {
 		log = "Planet IP assembly speed: \\[This.realdev_assembly_speed]"
 		if = {
 			limit = {
-				has_planet_flag = realdev_variables_set
+				has_carrier_flag = realdev_variables_set
 			}
 			log = "Realdev Planet Variables are set"
 		}
@@ -93,7 +93,7 @@ print_realdev_values = {
 		if = {
 			limit = {
 				has_building_construction = no
-				NOT = { has_planet_flag = factory_expanding }
+				NOT = { has_carrier_flag = factory_expanding }
 			}
 			log = "Planet not building anything"
 		}

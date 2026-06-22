@@ -1,4 +1,31 @@
 
+can_afford_trade_cargo_expansion = {
+	OR = {
+		AND = {
+			country_uses_consumer_goods = yes
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 750
+			}
+			resource_stockpile_compare = {
+				resource = consumer_goods
+				value >= 750
+			}
+		}
+		AND = {
+			country_uses_consumer_goods = no
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 1000
+			}
+			resource_stockpile_compare = {
+				resource = minerals
+				value >= 1000
+			}
+		}
+	}
+}
+
 # THIS = Planet
 has_cargo_ship_trade_route = {
 	has_deposit = d_kiyo_mod_trade
@@ -27,6 +54,15 @@ kiyo_mod_trade_opinion_modifier_valid = {
 roci_can_trade_with_country = {
 	#Can only trade with normal countries. No FEs, Marauders, or other special empires
 	is_country_type = default
+	#Check some obvious things, like you can't trade with those you're currently at war with
+	NOT = {
+		is_country = prev.owner
+		has_closed_borders = prev.owner
+		is_at_war_with = prev.owner
+		prev.owner = {
+			has_closed_borders = prev
+		}
+	}
 	OR = {
 		#Check if the opinion is high enough, either on its own, or with improving relations from either side
 		custom_tooltip = {
@@ -61,15 +97,6 @@ roci_can_trade_with_country = {
 		custom_tooltip = {
 			text = "roci_trade_routes_federation"
 			is_in_federation_with = prev.owner
-		}
-	}
-	#Check some obvious things, like you can't trade with those you're currently at war with
-	NOT = {
-		is_country = prev.owner
-		has_closed_borders = prev.owner
-		is_at_war_with = prev.owner
-		prev.owner = {
-			has_closed_borders = prev
 		}
 	}
 }

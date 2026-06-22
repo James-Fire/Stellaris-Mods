@@ -49,6 +49,13 @@ shipping = {
 }
 
 #Autofab Categories
+planet_automated_jobs = {
+	modifier_category = planet
+	generate_mult_modifiers = {
+		add
+		upkeep
+	}
+}
 planet_autofab = {
 	parent = planet_technician
 

@@ -5,4 +5,4 @@ tags={
 	"Gameplay"
 }
 name="Rise of Cosmic Industry"
-supported_version="4.4.*"
+supported_version="v4.4.*"

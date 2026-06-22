@@ -1,4 +1,4 @@
-autofab_manage = {
+autofab_build_all = {
 	icon = "GFX_edict_type_policy"
 	length = 0
 	resources = {
@@ -15,17 +15,54 @@ autofab_manage = {
 	}
 	
 	effect = {
-		country_event = { id = autofab_menu.1 }
-		hidden_effect = {
-			factory_reset_all_country_flags = yes
-			document_factory_country = yes
-			factory_set_default_queue = yes
+		every_owned_planet = {
+			limit = {
+				has_autofab = no
+			}
+			select_decision = {
+				name = decision_build_autofab
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+autofab_dismantle_all = {
+	icon = "GFX_edict_type_policy"
+	length = 0
+	resources = {
+		category = campaigns
+		cost = {
+		}
+	}
+
+	modifier = {
+	}
+	
+	potential = {
+		is_ai = no
+		any_owned_planet = {
+			has_autofab = yes
+		}
+	}
+	
+	effect = {
+		every_owned_planet = {
+			limit = {
+				has_autofab = yes
+			}
+			select_decision = {
+				name = decision_dismantle_autofab
+			}
 		}
 	}
 	
 	ai_weight = {
 		weight = 0
-	}	
+	}
 }
 
 realdev_manage = {

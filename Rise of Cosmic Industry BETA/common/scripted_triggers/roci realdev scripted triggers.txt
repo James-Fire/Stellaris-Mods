@@ -1,13 +1,13 @@
 bonus_production_active = {
 	exists = owner
 	OR = {
-		has_planet_flag = realdev_production
+		has_carrier_flag = realdev_production
 		AND = {
 			owner = {
 				has_country_flag = realdev_production
 			}
 			NOT = {
-				has_planet_flag = realdev_assembly
+				has_carrier_flag = realdev_assembly
 			}
 		}
 	}
@@ -31,9 +31,9 @@ can_pops_assemble_on_planet = {
 
 planet_uses_target_auto = {
 	OR = {
-		has_planet_flag = realdev_target_auto
+		has_carrier_flag = realdev_target_auto
 		AND = {
-			has_planet_flag = realdev_target_country
+			has_carrier_flag = realdev_target_country
 			exists = owner
 			owner = {
 				has_country_flag = realdev_target_auto
@@ -43,9 +43,9 @@ planet_uses_target_auto = {
 }
 planet_uses_target_manual = {
 	OR = {
-		has_planet_flag = realdev_target_manual
+		has_carrier_flag = realdev_target_manual
 		AND = {
-			has_planet_flag = realdev_target_country
+			has_carrier_flag = realdev_target_country
 			exists = owner
 			owner = {
 				has_country_flag = realdev_target_manual
@@ -59,6 +59,20 @@ country_has_megastructures_building = {
 	check_variable = { which = realdev_building_megas value > 0 }
 }
 country_has_minor_colonies_building = {
-	check_variable = { which = exploit_minor_colonies_building value > 0 }
 	roci_exploit_module_active = yes
+	check_variable = { which = exploit_minor_colonies_building value > 0 }
+}
+
+log_realdev = {
+	OR = {
+		has_global_flag = realdev_logging
+		AND = {
+			is_scope_type = country
+			has_country_flag = realdev_logging
+		}
+		AND = {
+			is_scope_type = planet
+			has_planet_flag = realdev_logging
+		}
+	}
 }
