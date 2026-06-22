@@ -47,20 +47,7 @@ buildable_dreadnought = {
 	}
 	
 	potential_construction = {
-		OR = {
-			AND = {
-				is_scope_type = starbase
-				NOT = { has_starbase_size = juggernaut }
-				has_starbase_building = dreadnought_yards
-			}
-			AND = {
-				is_scope_type = megastructure
-				OR = {
-					is_megastructure_type = mega_shipyard_3
-					is_megastructure_type = mega_shipyard_restored
-				}
-			}
-		}
+		juggernaut_possible_construction = yes
 	}
 	
 	min_upgrade_cost = {
