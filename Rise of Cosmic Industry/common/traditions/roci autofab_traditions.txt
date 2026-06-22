@@ -1,16 +1,7 @@
 
 tr_autofab_adopt = {
 	modifier = {
-		planet_autofab_energy_upkeep_mult = -0.05
-		planet_autofab_generator_energy_upkeep_mult = -0.05
-		planet_autofab_farm_energy_upkeep_mult = -0.05
-		planet_autofab_mine_energy_upkeep_mult = -0.05
-		planet_autofab_foundry_energy_upkeep_mult = -0.05
-		planet_autofab_factory_energy_upkeep_mult = -0.05
-		planet_autofab_motes_energy_upkeep_mult = -0.05
-		planet_autofab_gases_energy_upkeep_mult = -0.05
-		planet_autofab_crystals_energy_upkeep_mult = -0.05
-		planet_autofab_srs_energy_upkeep_mult = -0.05
+		planet_automated_jobs_energy_upkeep_mult = -0.05
 	}
 }
 
@@ -110,27 +101,9 @@ tr_autofab_optimization = {
 	}
 
 	modifier = {
-		planet_autofab_upkeep_mult = -0.05
-		planet_autofab_generator_upkeep_mult = -0.05
-		planet_autofab_farm_upkeep_mult = -0.05
-		planet_autofab_mine_upkeep_mult = -0.05
-		planet_autofab_foundry_upkeep_mult = -0.05
-		planet_autofab_factory_upkeep_mult = -0.05
-		planet_autofab_motes_upkeep_mult = -0.05
-		planet_autofab_gases_upkeep_mult = -0.05
-		planet_autofab_crystals_upkeep_mult = -0.05
-		planet_autofab_srs_upkeep_mult = -0.05
+		planet_automated_jobs_energy_upkeep_mult = -0.05
 		
-		planet_autofab_produces_mult = 0.05
-		planet_autofab_generator_produces_mult = 0.05
-		planet_autofab_farm_produces_mult = 0.05
-		planet_autofab_mine_produces_mult = 0.05
-		planet_autofab_foundry_produces_mult = 0.05
-		planet_autofab_factory_produces_mult = 0.05
-		planet_autofab_motes_produces_mult = 0.05
-		planet_autofab_gases_produces_mult = 0.05
-		planet_autofab_crystals_produces_mult = 0.05
-		planet_autofab_srs_produces_mult = 0.05
+		bonus_automated_workforce_mult = 0.25
 	}
 
 	ai_weight = {

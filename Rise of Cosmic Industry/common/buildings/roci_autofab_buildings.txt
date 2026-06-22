@@ -1,278 +1,286 @@
-@Lv1 = 1
-@Lv2 = 2
-@Lv3 = 3
+@Auto_Lvl_1 = 0.25
+@Auto_Lvl_2 = 0.5
+@Auto_Lvl_3 = 0.75
+@Auto_Lvl_4 = 1
 
-building_autofab_uplink_1 = {
-	base_buildtime = @b1_time
-	district_limit = 1
-	category = pop_assembly
+@EnergyUpkeep1 = 5
+@EnergyUpkeep2 = 10
+@EnergyUpkeep3 = 15
+@MineralsUpkeep1 = 1
+@MineralsUpkeep2 = 2
+@MineralsUpkeep3 = 3
 
-	building_sets = {
-		generator
-		mining
-		farming
-		urban
-	}
-
-	potential = {
-		has_autofab = yes
-	}
-
+building_autofab_energy_uplink_1 = {
 	upgrades = {
-		building_autofab_uplink_2
+		building_autofab_energy_uplink_2
 	}
-
-	allow = {
-	}
-
-
-	planet_modifier = {
-		district_automated_workforce = 0.25
-	}
-
-	resources = {
-		category = planet_autofab_uplink
-		cost = {
-			minerals = 300
-			energy = 100
-			alloys = 100
-		}
-		upkeep = {
-			energy = @Lv1
-			mult = value:autofab_uplink_upkeep
-		}
+	inline_script = {
+		script = autofab_uplink_building
+		BUILD_TIME = @b0_time
+		BUILDING_SET = generator
+		AMOUNT = @Auto_Lvl_1
+		JOB = technician
+		GESTALT_JOB = technician_drone
+		FE_BUILDING = building_class_3_singularity
+		FE_BUILDING_2 = building_class_4_singularity
+		BUILDING_AMOUNT = @Auto_Lvl_3
+		BUILDING_AMOUNT_2 = @Auto_Lvl_4
+		ENERGYUPKEEP = @EnergyUpkeep1
+		MINERALUPKEEP = @MineralsUpkeep1
 	}
 }
-
-building_autofab_uplink_2 = {
-	base_buildtime = @b2_time
-	category = pop_assembly
-	can_build = no
-
-	building_sets = {
-		generator
-		mining
-		farming
-		urban
-	}
-
-	potential = {
-		has_autofab = yes
-	}
-
+building_autofab_energy_uplink_2 = {
 	upgrades = {
-		building_autofab_uplink_3
+		building_autofab_energy_uplink_3
 	}
-
-	allow = {
+	inline_script = {
+		script = autofab_uplink_building
+		BUILD_TIME = @b1_time
+		BUILDING_SET = generator
+		AMOUNT = @Auto_Lvl_2
+		JOB = technician
+		GESTALT_JOB = technician_drone
+		FE_BUILDING = building_class_3_singularity
+		FE_BUILDING_2 = building_class_4_singularity
+		BUILDING_AMOUNT = @Auto_Lvl_3
+		BUILDING_AMOUNT_2 = @Auto_Lvl_4
+		ENERGYUPKEEP = @EnergyUpkeep2
+		MINERALUPKEEP = @MineralsUpkeep2
 	}
-
-	destroy_trigger = {
-		exists = owner
-		owner = { is_wilderness_empire = yes }
-	}
-
-	planet_modifier = {
-		district_automated_workforce = 0.5
-	}
-
-	resources = {
-		category = planet_autofab_uplink
-		cost = {
-			minerals = 300
-			energy = 150
-			alloys = 100
-		}
-		upkeep = {
-			energy = @Lv2
-			mult = value:count_any_districts
-		}
+}
+building_autofab_energy_uplink_3 = {
+	inline_script = {
+		script = autofab_uplink_building
+		BUILD_TIME = @b2_time
+		BUILDING_SET = generator
+		AMOUNT = @Auto_Lvl_3
+		JOB = technician
+		GESTALT_JOB = technician_drone
+		FE_BUILDING = building_class_3_singularity
+		FE_BUILDING_2 = building_class_4_singularity
+		BUILDING_AMOUNT = @Auto_Lvl_3
+		BUILDING_AMOUNT_2 = @Auto_Lvl_4
+		ENERGYUPKEEP = @EnergyUpkeep3
+		MINERALUPKEEP = @MineralsUpkeep3
 	}
 }
 
-building_autofab_uplink_3 = {
-	base_buildtime = @b3_time
-	category = pop_assembly
-	can_build = no
-
-	building_sets = {
-		generator
-		mining
-		farming
-		urban
-	}
-
-	potential = {
-		has_autofab = yes
-	}
-
-	destroy_trigger = {
-		exists = owner
-		owner = { is_wilderness_empire = yes }
-	}
-
-	planet_modifier = {
-		district_automated_workforce = 0.75
-	}
-
-	resources = {
-		category = planet_autofab_uplink
-		cost = {
-			minerals = 300
-			energy = 200
-			alloys = 200
-		}
-		upkeep = {
-			energy = @Lv3
-			mult = value:count_any_districts
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_autofab_finish
-			}
-		}
-		modifier = {
-			district_automated_workforce = 0.25
-		}
-	}
-}
-
-building_autofab_uplink_1_city = {
-	base_buildtime = @b1_time
-	district_limit = 1
-	category = pop_assembly
-	icon = building_autofab_uplink_1
-
-	building_sets = {
-		government
-		urban_automation
-	}
-
-	potential = {
-		has_autofab = yes
-	}
-
+building_autofab_mineral_uplink_1 = {
 	upgrades = {
-		building_autofab_uplink_2_city
+		building_autofab_mineral_uplink_2
 	}
-
-	allow = {
-	}
-
-
-	planet_modifier = {
-		district_automated_workforce = 0.125
-	}
-
-	resources = {
-		category = planet_autofab_uplink
-		cost = {
-			minerals = 300
-			energy = 100
-			alloys = 100
-		}
-		upkeep = {
-			energy = @Lv1
-			mult = value:autofab_uplink_upkeep
-		}
+	inline_script = {
+		script = autofab_uplink_building
+		BUILD_TIME = @b0_time
+		BUILDING_SET = mining
+		AMOUNT = @Auto_Lvl_1
+		JOB = miner
+		GESTALT_JOB = mining_drone
+		FE_BUILDING = building_class_3_singularity
+		FE_BUILDING_2 = building_class_4_singularity
+		BUILDING_AMOUNT = @Auto_Lvl_3
+		BUILDING_AMOUNT_2 = @Auto_Lvl_4
+		ENERGYUPKEEP = @EnergyUpkeep1
+		MINERALUPKEEP = @MineralsUpkeep1
 	}
 }
-
-building_autofab_uplink_2_city = {
-	base_buildtime = @b2_time
-	category = pop_assembly
-	can_build = no
-	icon = building_autofab_uplink_2
-
-	building_sets = {
-		government
-		urban_automation
-	}
-
-	potential = {
-		has_autofab = yes
-	}
-
+building_autofab_mineral_uplink_2 = {
 	upgrades = {
-		building_autofab_uplink_3_city
+		building_autofab_mineral_uplink_3
 	}
-
-	allow = {
+	inline_script = {
+		script = autofab_uplink_building
+		BUILD_TIME = @b1_time
+		BUILDING_SET = mining
+		AMOUNT = @Auto_Lvl_2
+		JOB = miner
+		GESTALT_JOB = mining_drone
+		FE_BUILDING = building_class_3_singularity
+		FE_BUILDING_2 = building_class_4_singularity
+		BUILDING_AMOUNT = @Auto_Lvl_3
+		BUILDING_AMOUNT_2 = @Auto_Lvl_4
+		ENERGYUPKEEP = @EnergyUpkeep2
+		MINERALUPKEEP = @MineralsUpkeep2
 	}
-
-	destroy_trigger = {
-		exists = owner
-		owner = { is_wilderness_empire = yes }
-	}
-
-	planet_modifier = {
-		district_automated_workforce = 0.25
-	}
-
-	resources = {
-		category = planet_autofab_uplink
-		cost = {
-			minerals = 300
-			energy = 150
-			alloys = 100
-		}
-		upkeep = {
-			energy = @Lv2
-			mult = value:count_any_districts
-		}
+}
+building_autofab_mineral_uplink_3 = {
+	inline_script = {
+		script = autofab_uplink_building
+		BUILD_TIME = @b2_time
+		BUILDING_SET = mining
+		AMOUNT = @Auto_Lvl_3
+		JOB = miner
+		GESTALT_JOB = mining_drone
+		FE_BUILDING = building_class_3_singularity
+		FE_BUILDING_2 = building_class_4_singularity
+		BUILDING_AMOUNT = @Auto_Lvl_3
+		BUILDING_AMOUNT_2 = @Auto_Lvl_4
+		ENERGYUPKEEP = @EnergyUpkeep3
+		MINERALUPKEEP = @MineralsUpkeep3
 	}
 }
 
-building_autofab_uplink_3_city = {
-	base_buildtime = @b3_time
-	category = pop_assembly
-	can_build = no
-	icon = building_autofab_uplink_3
-
-	building_sets = {
-		government
-		urban_automation
+building_autofab_food_uplink_1 = {
+	upgrades = {
+		building_autofab_food_uplink_2
 	}
-
-	potential = {
-		has_autofab = yes
+	inline_script = {
+		script = autofab_uplink_building
+		BUILD_TIME = @b0_time
+		BUILDING_SET = farming
+		AMOUNT = @Auto_Lvl_1
+		JOB = farmer
+		GESTALT_JOB = agri_drone
+		FE_BUILDING = building_class_3_singularity
+		FE_BUILDING_2 = building_class_4_singularity
+		BUILDING_AMOUNT = @Auto_Lvl_3
+		BUILDING_AMOUNT_2 = @Auto_Lvl_4
+		ENERGYUPKEEP = @EnergyUpkeep1
+		MINERALUPKEEP = @MineralsUpkeep1
 	}
-
-	destroy_trigger = {
-		exists = owner
-		owner = { is_wilderness_empire = yes }
+}
+building_autofab_food_uplink_2 = {
+	upgrades = {
+		building_autofab_food_uplink_3
 	}
-
-	planet_modifier = {
-		district_automated_workforce = 0.375
+	inline_script = {
+		script = autofab_uplink_building
+		BUILD_TIME = @b1_time
+		BUILDING_SET = farming
+		AMOUNT = @Auto_Lvl_2
+		JOB = farmer
+		GESTALT_JOB = agri_drone
+		FE_BUILDING = building_class_3_singularity
+		FE_BUILDING_2 = building_class_4_singularity
+		BUILDING_AMOUNT = @Auto_Lvl_3
+		BUILDING_AMOUNT_2 = @Auto_Lvl_4
+		ENERGYUPKEEP = @EnergyUpkeep2
+		MINERALUPKEEP = @MineralsUpkeep2
 	}
-
-	resources = {
-		category = planet_autofab_uplink
-		cost = {
-			minerals = 300
-			energy = 200
-			alloys = 200
-		}
-		upkeep = {
-			energy = @Lv3
-			mult = value:count_any_districts
-		}
+}
+building_autofab_food_uplink_3 = {
+	inline_script = {
+		script = autofab_uplink_building
+		BUILD_TIME = @b2_time
+		BUILDING_SET = farming
+		AMOUNT = @Auto_Lvl_3
+		JOB = farmer
+		GESTALT_JOB = agri_drone
+		FE_BUILDING = building_class_3_singularity
+		FE_BUILDING_2 = building_class_4_singularity
+		BUILDING_AMOUNT = @Auto_Lvl_3
+		BUILDING_AMOUNT_2 = @Auto_Lvl_4
+		ENERGYUPKEEP = @EnergyUpkeep3
+		MINERALUPKEEP = @MineralsUpkeep3
 	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_autofab_finish
-			}
-		}
-		modifier = {
-			district_automated_workforce = 0.125
-		}
+}
+
+building_autofab_factory_uplink_1 = {
+	upgrades = {
+		building_autofab_factory_uplink_2
+	}
+	inline_script = {
+		script = autofab_uplink_building
+		BUILD_TIME = @b0_time
+		BUILDING_SET = factory
+		AMOUNT = @Auto_Lvl_1
+		JOB = artisan
+		GESTALT_JOB = artisan_drone
+		FE_BUILDING = building_class_3_singularity
+		FE_BUILDING_2 = building_class_4_singularity
+		BUILDING_AMOUNT = @Auto_Lvl_1
+		BUILDING_AMOUNT_2 = @Auto_Lvl_2
+		ENERGYUPKEEP = @EnergyUpkeep1
+		MINERALUPKEEP = @MineralsUpkeep1
+	}
+}
+building_autofab_factory_uplink_2 = {
+	upgrades = {
+		building_autofab_factory_uplink_3
+	}
+	inline_script = {
+		script = autofab_uplink_building
+		BUILD_TIME = @b1_time
+		BUILDING_SET = factory
+		AMOUNT = @Auto_Lvl_2
+		JOB = artisan
+		GESTALT_JOB = artisan_drone
+		FE_BUILDING = building_class_3_singularity
+		FE_BUILDING_2 = building_class_4_singularity
+		BUILDING_AMOUNT = @Auto_Lvl_1
+		BUILDING_AMOUNT_2 = @Auto_Lvl_2
+		ENERGYUPKEEP = @EnergyUpkeep2
+		MINERALUPKEEP = @MineralsUpkeep2
+	}
+}
+building_autofab_factory_uplink_3 = {
+	inline_script = {
+		script = autofab_uplink_building
+		BUILD_TIME = @b2_time
+		BUILDING_SET = factory
+		AMOUNT = @Auto_Lvl_3
+		JOB = artisan
+		GESTALT_JOB = artisan_drone
+		FE_BUILDING = building_class_3_singularity
+		FE_BUILDING_2 = building_class_4_singularity
+		BUILDING_AMOUNT = @Auto_Lvl_1
+		BUILDING_AMOUNT_2 = @Auto_Lvl_2
+		ENERGYUPKEEP = @EnergyUpkeep3
+		MINERALUPKEEP = @MineralsUpkeep3
+	}
+}
+
+building_autofab_foundry_uplink_1 = {
+	upgrades = {
+		building_autofab_foundry_uplink_2
+	}
+	inline_script = {
+		script = autofab_uplink_building
+		BUILD_TIME = @b0_time
+		BUILDING_SET = foundry
+		AMOUNT = @Auto_Lvl_1
+		JOB = foundry
+		GESTALT_JOB = fabricator
+		FE_BUILDING = building_class_3_singularity
+		FE_BUILDING_2 = building_class_4_singularity
+		BUILDING_AMOUNT = @Auto_Lvl_1
+		BUILDING_AMOUNT_2 = @Auto_Lvl_2
+		ENERGYUPKEEP = @EnergyUpkeep1
+		MINERALUPKEEP = @MineralsUpkeep1
+	}
+}
+building_autofab_foundry_uplink_2 = {
+	upgrades = {
+		building_autofab_foundry_uplink_3
+	}
+	inline_script = {
+		script = autofab_uplink_building
+		BUILD_TIME = @b1_time
+		BUILDING_SET = foundry
+		AMOUNT = @Auto_Lvl_2
+		JOB = foundry
+		GESTALT_JOB = fabricator
+		FE_BUILDING = building_class_3_singularity
+		FE_BUILDING_2 = building_class_4_singularity
+		BUILDING_AMOUNT = @Auto_Lvl_1
+		BUILDING_AMOUNT_2 = @Auto_Lvl_2
+		ENERGYUPKEEP = @EnergyUpkeep2
+		MINERALUPKEEP = @MineralsUpkeep2
+	}
+}
+building_autofab_foundry_uplink_3 = {
+	inline_script = {
+		script = autofab_uplink_building
+		BUILD_TIME = @b2_time
+		BUILDING_SET = foundry
+		AMOUNT = @Auto_Lvl_3
+		JOB = foundry
+		GESTALT_JOB = fabricator
+		FE_BUILDING = building_class_3_singularity
+		FE_BUILDING_2 = building_class_4_singularity
+		BUILDING_AMOUNT = @Auto_Lvl_1
+		BUILDING_AMOUNT_2 = @Auto_Lvl_2
+		ENERGYUPKEEP = @EnergyUpkeep3
+		MINERALUPKEEP = @MineralsUpkeep3
 	}
 }

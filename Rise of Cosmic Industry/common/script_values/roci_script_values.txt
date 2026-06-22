@@ -164,6 +164,52 @@ roci_trade_route_value = {
 
 ###Autofab
 
+#Colony Scope
+#Calc for how much automated workforce autofab uplink gives
+roci_uplink_workforce = {
+	base = $base_amount$
+	modifier = {
+ 		has_active_building = $building$
+		subtract = $building_amount$
+ 	}
+	modifier = {
+ 		has_active_building = $building_2$
+		subtract = $building_amount_2$
+ 	}
+	modifier = {
+ 		owner = { has_active_tradition = tr_autofab_finish }
+		add = 0.25
+ 	}
+	add = 1
+	min = 0
+	max = 1
+}
+#roci_uplink_workforce|base_amount|<number>|building|<building>|building_amount|<number>|building_2|<building>|building_amount_2|<number>|
+
+#Colony Scope
+#Calc for how much bonus automated workforce autofab uplink gives
+roci_uplink_workforce_bonus = {
+	base = $base_amount$
+	modifier = {
+ 		has_active_building = $building$
+		add = $building_amount$
+ 	}
+	modifier = {
+ 		has_active_building = $building_2$
+		add = $building_amount_2$
+ 	}
+	modifier = {
+ 		owner = { has_active_tradition = tr_autofab_finish }
+		add = 0.25
+ 	}
+	subtract = 1
+	divide = 2
+	min = 0
+	max = 1
+}
+#roci_uplink_workforce|base_amount|<number>|building|<building>|building_amount|<number>|building_2|<building>|building_amount_2|<number>|
+
+
 #Planet Scope
 #Total calculation for how much production a module should have. Calculate per job first, then multiply by number of jobs.
 roci_autofab_job_multiplier = {
