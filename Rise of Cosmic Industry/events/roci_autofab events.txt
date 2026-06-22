@@ -238,7 +238,7 @@ country_event = {
 						}
 						every_system_planet = {
 							limit = {
-								has_planet_flag = energy_habitat
+								has_carrier_flag = energy_habitat
 							}
 							add_deposit = autofab_power
 							change_variable = { which = autofab_power value = 1 }
@@ -256,7 +256,7 @@ country_event = {
 						}
 						every_system_planet = {
 							limit = {
-								has_planet_flag = mining_habitat
+								has_carrier_flag = mining_habitat
 							}
 							while = {
 								limit = {
@@ -273,7 +273,7 @@ country_event = {
 						}
 						every_system_planet = {
 							limit = {
-								has_planet_flag = research_habitat
+								has_carrier_flag = research_habitat
 							}
 							if = {
 								limit = {
@@ -473,11 +473,11 @@ country_event = {
 							}
 							add_building = building_spawning_pool
 						}
-						planet_event = { id = autofab.31 days = 2 }
+						colony_event = { id = autofab.31 days = 2 }
 						every_owned_pop = { clear_pop_category = yes }
 					}
 					else = {
-						planet_event = { id = autofab.11 }
+						colony_event = { id = autofab.11 }
 					}
 				}
 			}
@@ -496,7 +496,7 @@ country_event = {
 	}
 
 	immediate = {
-		every_owned_planet = {
+		every_owned_colony = {
 			limit = {
 				has_autofab = yes
 			}
@@ -505,7 +505,7 @@ country_event = {
 		}
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab.11
 	is_triggered_only = yes
 	title = "autofab.11.name"
@@ -522,7 +522,7 @@ planet_event = {
 }
 
 #Vanilla Swapping
-planet_event = {
+colony_event = {
 	id = autofab.20
 	is_triggered_only = yes
 	hide_window = yes
@@ -539,17 +539,17 @@ planet_event = {
 					can_use_autofab = yes
 				}
 				OR = {
-					has_planet_flag = factory_vanilla_swapping
+					has_carrier_flag = factory_vanilla_swapping
 					AND = {
 						owner = { has_country_flag = factory_vanilla_swapping }
 						NOT = {
-							has_planet_flag = autofab_ignore_vanilla
+							has_carrier_flag = autofab_ignore_vanilla
 						}
 					}
 				}
 				NOR = {
 					owner = { has_country_flag = autofab_ignore_vanilla }
-					has_planet_flag = autofab_ignore_vanilla
+					has_carrier_flag = autofab_ignore_vanilla
 				}
 				has_autofab = yes
 			}
@@ -689,7 +689,7 @@ planet_event = {
 		}
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab.21
 	is_triggered_only = yes
 	hide_window = yes
@@ -855,17 +855,17 @@ event = {
 				NOT = { has_global_flag = no_autofab }
 				can_use_autofab = yes
 			}
-			every_owned_planet = {
+			every_owned_colony = {
 				limit = {
-					has_planet_flag = has_autofab
+					has_carrier_flag = has_autofab
 				}
-				planet_event = { id = autofab.31 }
+				colony_event = { id = autofab.31 }
 			}
 		}
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = autofab.31
 	is_triggered_only = yes
 	hide_window = yes
@@ -979,7 +979,7 @@ planet_event = {
 	}
 	if = {
 		limit = {
-			has_planet_flag = has_autofab
+			has_carrier_flag = has_autofab
 			NOT = {
 				has_deposit = autofab
 			}
@@ -988,7 +988,7 @@ planet_event = {
 	}
 	if = {
 		limit = {
-			has_planet_flag = has_autofab_extractor
+			has_carrier_flag = has_autofab_extractor
 			NOT = {
 				has_deposit = autofab_refinery_extractor
 			}
@@ -1000,7 +1000,7 @@ planet_event = {
 			add_deposit = autofab_refinery_extractor
 		}
 		else = {
-			remove_planet_flag = has_autofab_extractor
+			remove_carrier_flag = has_autofab_extractor
 		}
 	}
 	if = {

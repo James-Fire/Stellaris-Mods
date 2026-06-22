@@ -32,7 +32,7 @@ exodus_system = {
 		size = { min = 20 max = 30 }
 		has_ring = no
 		init_effect = {
-			set_planet_flag = exodus_star
+			set_carrier_flag = exodus_star
 		}
 	}
 	planet = { #Gauranteed moltens, will have Minerals, Alloys, or Energy
@@ -42,7 +42,7 @@ exodus_system = {
 		orbit_angle = { min = 90 max = 270 }	
 		change_orbit = 10
 		init_effect = {
-			set_planet_flag = exodus_molten
+			set_carrier_flag = exodus_molten
 		}
 		moon = {
 			count = 1
@@ -50,7 +50,7 @@ exodus_system = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 			init_effect = {
-				set_planet_flag = exodus_motes_candiate
+				set_carrier_flag = exodus_motes_candiate
 			}
 		}
 	}
@@ -65,7 +65,7 @@ exodus_system = {
 		init_effect = {
 			generate_empire_home_planet = yes
 			prevent_anomaly = yes
-			set_planet_flag = exodus_homeworld
+			set_carrier_flag = exodus_homeworld
 		}
 		moon = {
 			count = 2
@@ -73,7 +73,7 @@ exodus_system = {
 			orbit_angle = 120
 			orbit_distance = 15
 			init_effect = {
-				set_planet_flag = exodus_research
+				set_carrier_flag = exodus_research
 			}
 		}
 	}
@@ -85,7 +85,7 @@ exodus_system = {
 		size = 20
 		modifiers = none
 		init_effect = {
-			set_planet_flag = exodus_colony
+			set_carrier_flag = exodus_colony
 		}
 		moon = {
 			count = 1
@@ -93,7 +93,7 @@ exodus_system = {
 			orbit_angle = 90
 			orbit_distance = 15
 			init_effect = {
-				set_planet_flag = exodus_research
+				set_carrier_flag = exodus_research
 			}
 		}
 	}
@@ -103,7 +103,7 @@ exodus_system = {
 		class = pc_toxic
 		orbit_angle = { min = 90 max = 270 }
 		init_effect = {
-			set_planet_flag = exodus_gases_candiate
+			set_carrier_flag = exodus_gases_candiate
 		}
 
 		moon = {
@@ -112,7 +112,7 @@ exodus_system = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 			init_effect = {
-				set_planet_flag = exodus_cold_barren
+				set_carrier_flag = exodus_cold_barren
 			}
 		}
 	}
@@ -122,7 +122,7 @@ exodus_system = {
 		class = pc_gas_giant
 		orbit_angle = { min = 90 max = 270 }
 		init_effect = {
-			set_planet_flag = exodus_gases_candiate
+			set_carrier_flag = exodus_gases_candiate
 		}
 
 		moon = { #Frozen World for Crystals
@@ -131,7 +131,7 @@ exodus_system = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 			init_effect = {
-				set_planet_flag = exodus_crystals_candiate
+				set_carrier_flag = exodus_crystals_candiate
 			}
 		}
 	}
@@ -169,7 +169,7 @@ binary_exodus_system = {
 		size = { min = 30 max = 35 }
 		has_ring = no
 		init_effect = {
-			set_planet_flag = exodus_star
+			set_carrier_flag = exodus_star
 		}
 	}
 
@@ -189,7 +189,7 @@ binary_exodus_system = {
 			orbit_angle = { min = 90 max = 270 }	
 			change_orbit = 10
 			init_effect = {
-				set_planet_flag = exodus_molten
+				set_carrier_flag = exodus_molten
 			}
 			moon = {
 				count = 1
@@ -197,7 +197,7 @@ binary_exodus_system = {
 				orbit_angle = { min = 90 max = 270 }
 				orbit_distance = 5
 				init_effect = {
-					set_planet_flag = exodus_motes_candiate
+					set_carrier_flag = exodus_motes_candiate
 				}
 			}
 		}
@@ -210,7 +210,7 @@ binary_exodus_system = {
 			modifiers = none
 			init_effect = {
 				prevent_anomaly = yes
-				set_planet_flag = exodus_colony
+				set_carrier_flag = exodus_colony
 			}
 			moon = {
 				count = 1
@@ -218,7 +218,7 @@ binary_exodus_system = {
 				orbit_angle = 90
 				orbit_distance = 15
 				init_effect = {
-					set_planet_flag = exodus_research
+					set_carrier_flag = exodus_research
 				}
 			}
 		}
@@ -228,7 +228,7 @@ binary_exodus_system = {
 			class = pc_toxic
 			orbit_angle = { min = 90 max = 270 }
 			init_effect = {
-				set_planet_flag = exodus_gases_candiate
+				set_carrier_flag = exodus_gases_candiate
 			}
 
 			moon = {
@@ -237,7 +237,7 @@ binary_exodus_system = {
 				orbit_angle = { min = 90 max = 270 }
 				orbit_distance = 5
 				init_effect = {
-					set_planet_flag = exodus_cold_barren
+					set_carrier_flag = exodus_cold_barren
 				}
 			}
 		}
@@ -251,7 +251,7 @@ binary_exodus_system = {
 		orbit_angle = { min = 90 max = 270 }	
 		change_orbit = 10
 		init_effect = {
-			set_planet_flag = exodus_cold_barren
+			set_carrier_flag = exodus_cold_barren
 		}
 		moon = {
 			count = 1
@@ -259,7 +259,7 @@ binary_exodus_system = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 			init_effect = {
-				set_planet_flag = exodus_motes_candiate
+				set_carrier_flag = exodus_motes_candiate
 			}
 		}
 	}
@@ -274,7 +274,7 @@ binary_exodus_system = {
 		init_effect = {
 			generate_empire_home_planet = yes
 			prevent_anomaly = yes
-			set_planet_flag = exodus_homeworld
+			set_carrier_flag = exodus_homeworld
 		}
 		moon = {
 			count = 2
@@ -282,7 +282,7 @@ binary_exodus_system = {
 			orbit_angle = 120
 			orbit_distance = 15
 			init_effect = {
-				set_planet_flag = exodus_research
+				set_carrier_flag = exodus_research
 			}
 		}
 	}
@@ -292,7 +292,7 @@ binary_exodus_system = {
 		class = pc_gas_giant
 		orbit_angle = { min = 90 max = 270 }
 		init_effect = {
-			set_planet_flag = exodus_gases_candiate
+			set_carrier_flag = exodus_gases_candiate
 		}
 
 		moon = { #Frozen World for Crystals
@@ -301,7 +301,7 @@ binary_exodus_system = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 			init_effect = {
-				set_planet_flag = exodus_crystals_candiate
+				set_carrier_flag = exodus_crystals_candiate
 			}
 		}
 	}
@@ -339,7 +339,7 @@ trinary_exodus_system = {
 		size = { min = 30 max = 35 }
 		has_ring = no
 		init_effect = {
-			set_planet_flag = exodus_star
+			set_carrier_flag = exodus_star
 		}
 	}
 
@@ -359,7 +359,7 @@ trinary_exodus_system = {
 			orbit_angle = { min = 90 max = 270 }	
 			change_orbit = 10
 			init_effect = {
-				set_planet_flag = exodus_molten
+				set_carrier_flag = exodus_molten
 			}
 			moon = {
 				count = 1
@@ -367,7 +367,7 @@ trinary_exodus_system = {
 				orbit_angle = { min = 90 max = 270 }
 				orbit_distance = 5
 				init_effect = {
-					set_planet_flag = exodus_motes_candiate
+					set_carrier_flag = exodus_motes_candiate
 				}
 			}
 		}
@@ -389,7 +389,7 @@ trinary_exodus_system = {
 			orbit_angle = { min = 90 max = 270 }	
 			change_orbit = 10
 			init_effect = {
-				set_planet_flag = exodus_molten
+				set_carrier_flag = exodus_molten
 			}
 			moon = {
 				count = 1
@@ -397,7 +397,7 @@ trinary_exodus_system = {
 				orbit_angle = { min = 90 max = 270 }
 				orbit_distance = 5
 				init_effect = {
-					set_planet_flag = exodus_motes_candiate
+					set_carrier_flag = exodus_motes_candiate
 				}
 			}
 		}
@@ -415,7 +415,7 @@ trinary_exodus_system = {
 		init_effect = {
 			generate_empire_home_planet = yes
 			prevent_anomaly = yes
-			set_planet_flag = exodus_homeworld
+			set_carrier_flag = exodus_homeworld
 		}
 		moon = {
 			count = 2
@@ -423,7 +423,7 @@ trinary_exodus_system = {
 			orbit_angle = 120
 			orbit_distance = 15
 			init_effect = {
-				set_planet_flag = exodus_research
+				set_carrier_flag = exodus_research
 			}
 		}
 	}
@@ -436,7 +436,7 @@ trinary_exodus_system = {
 		modifiers = none
 		init_effect = {
 			prevent_anomaly = yes
-			set_planet_flag = exodus_colony
+			set_carrier_flag = exodus_colony
 		}
 		moon = {
 			count = 1
@@ -444,7 +444,7 @@ trinary_exodus_system = {
 			orbit_angle = 90
 			orbit_distance = 15
 			init_effect = {
-				set_planet_flag = exodus_research
+				set_carrier_flag = exodus_research
 			}
 		}
 	}
@@ -454,7 +454,7 @@ trinary_exodus_system = {
 		class = pc_toxic
 		orbit_angle = { min = 90 max = 270 }
 		init_effect = {
-			set_planet_flag = exodus_gases_candiate
+			set_carrier_flag = exodus_gases_candiate
 		}
 
 		moon = {
@@ -463,7 +463,7 @@ trinary_exodus_system = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 			init_effect = {
-				set_planet_flag = exodus_cold_barren
+				set_carrier_flag = exodus_cold_barren
 			}
 		}
 	}
@@ -473,7 +473,7 @@ trinary_exodus_system = {
 		class = pc_gas_giant
 		orbit_angle = { min = 90 max = 270 }
 		init_effect = {
-			set_planet_flag = exodus_gases_candiate
+			set_carrier_flag = exodus_gases_candiate
 		}
 
 		moon = { #Frozen World for Crystals
@@ -482,7 +482,7 @@ trinary_exodus_system = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 			init_effect = {
-				set_planet_flag = exodus_crystals_candiate
+				set_carrier_flag = exodus_crystals_candiate
 			}
 		}
 	}

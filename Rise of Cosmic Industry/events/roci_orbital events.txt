@@ -18,7 +18,7 @@ country_event = {
 					OR = {
 						has_modifier = extensive_moon_system
 						has_modifier = asteroid_belt
-						has_planet_flag = mining_habitat
+						has_carrier_flag = mining_habitat
 						AND = {
 							OR = {
 								is_moon = yes
@@ -97,7 +97,7 @@ country_event = {
 			capital_scope = {
 				#log = "Orbital Infrastructure on [This.GetName] for [PREV.GetName]"
 				set_infrastructure_amount = yes
-				set_planet_flag = has_orbital_infrastructure
+				set_carrier_flag = has_orbital_infrastructure
 				add_building = building_roci_space_elevator
 				set_variable = { which = orbital_infrastructure value = 7 }
 				add_district = district_orbital_platform_city
@@ -119,7 +119,7 @@ country_event = {
 			}
 			set_variable = { which = orbitalinfra_military_platforms value = 2 }
 			set_variable = { which = orbitalinfra_military_ion_cannons value = 0 }
-			every_owned_planet = {
+			every_owned_colony = {
 				add_building = building_roci_space_elevator
 				set_infrastructure_amount = yes
 				if = {
@@ -134,7 +134,7 @@ country_event = {
 				}
 				else_if = {
 					limit = {
-						has_planet_flag = energy_habitat
+						has_carrier_flag = energy_habitat
 					}
 					add_district = district_orbital_platform_solar_array
 					add_district = district_orbital_platform_solar_array
@@ -142,7 +142,7 @@ country_event = {
 				}
 				else_if = {
 					limit = {
-						has_planet_flag = mining_habitat
+						has_carrier_flag = mining_habitat
 					}
 					add_district = district_orbital_platform_mining
 					set_variable = { which = orbital_infrastructure value = 1 }
@@ -172,7 +172,7 @@ country_event = {
 				}
 			}
 			change_variable = { which = orbitalinfra_military_platforms value = 1 }
-			every_owned_planet = {
+			every_owned_colony = {
 				limit = {
 					has_oi_space_elevator = yes
 				}
@@ -194,7 +194,7 @@ country_event = {
 			else = {
 				change_variable = { which = orbitalinfra_military_platforms value = 2 }
 			}
-			every_owned_planet = {
+			every_owned_colony = {
 				limit = {
 					has_oi_space_elevator = yes
 				}
@@ -209,7 +209,7 @@ country_event = {
 					last_increased_tech = tech_habitat_3
 				}
 			}
-			every_owned_planet = {
+			every_owned_colony = {
 				limit = {
 					has_oi_space_elevator = yes
 				}
@@ -218,7 +218,7 @@ country_event = {
 		}
 	}
 }
-planet_event = {
+colony_event = {
 	id = orbitalinfra.2
 	hide_window = yes
 	is_triggered_only = yes
@@ -547,7 +547,7 @@ event = {
 			every_country = {
 				set_variable = { which = orbitalinfra_shipyard value = 0 }
 				remove_modifier = oi_shipyard
-				every_owned_planet = {
+				every_owned_colony = {
 					limit = {
 						check_variable = { which = orbitalinfra_shipyard value > 0 }
 					}
@@ -569,7 +569,7 @@ event = {
 			limit = {
 				is_ai = yes
 			}
-			every_owned_planet = {
+			every_owned_colony = {
 				limit = {
 					has_space_elevator_support = yes
 					free_district_slots < 1
@@ -767,7 +767,7 @@ country_event = {
 						limit = {
 							has_district = district_orbital_platform_military
 						}
-						planet_event = { id = orbitalinfra.6 days = 1 }
+						colony_event = { id = orbitalinfra.6 days = 1 }
 					}
 				}
 			}
@@ -782,14 +782,14 @@ country_event = {
 						limit = {
 							has_district = district_orbital_platform_military
 						}
-						planet_event = { id = orbitalinfra.6 days = 1 }
+						colony_event = { id = orbitalinfra.6 days = 1 }
 					}
 				}
 			}
 		}
 	}
 }
-planet_event = {
+colony_event = {
 	id = orbitalinfra.6
 	hide_window = yes
 	is_triggered_only = yes
@@ -811,11 +811,11 @@ planet_event = {
 			oi_update_platforms = yes
 		}
 		else = {
-			planet_event = { id = orbitalinfra.6 days = 30 }
+			colony_event = { id = orbitalinfra.6 days = 30 }
 		}
 	}
 }
-planet_event = {
+colony_event = {
 	id = orbitalinfra.7
 	hide_window = yes
 	is_triggered_only = yes
@@ -968,7 +968,7 @@ country_event = {
 				kill_leader = no
 			}
 			orbit = {
-				planet_event = { id = orbitalinfra.6 }
+				colony_event = { id = orbitalinfra.6 }
 			}
 		}
 	}
@@ -1012,7 +1012,7 @@ event = {
 }
 
 #Mandates
-planet_event = {
+colony_event = {
 	id = orbitalinfra.20
 	hide_window = yes
 	is_triggered_only = yes

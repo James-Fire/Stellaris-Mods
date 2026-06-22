@@ -123,7 +123,7 @@ fleet_event = {
 			owner = {
 				is_country_type = default
 				is_same_value = root.owner
-				any_owned_planet = {
+				any_owned_colony = {
 					is_same_value = prev
 					num_buildings = { type = any value >= 5 }
 					num_pops >= 20

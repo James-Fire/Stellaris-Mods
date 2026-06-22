@@ -16,19 +16,19 @@ event = {
 				OR = {
 					has_autofab_queue = yes
 					check_variable = { which = autofab_alloy_debt value > 0 }
-					any_owned_planet = {
+					any_owned_colony = {
 						can_expand_factory = yes
 						has_autofab_queue = yes
 					}
-					any_owned_planet = {
+					any_owned_colony = {
 						can_expand_factory = yes
 					}
-					any_owned_planet = {
+					any_owned_colony = {
 						NOT = {
-							has_planet_flag = has_autofab
-							has_planet_flag = building_autofab
+							has_carrier_flag = has_autofab
+							has_carrier_flag = building_autofab
 							OR = {
-								has_planet_flag = factory_autofab_construction_off
+								has_carrier_flag = factory_autofab_construction_off
 								PREV = {
 									has_country_flag = factory_autofab_construction_off
 								}
@@ -139,7 +139,7 @@ country_event = {
 	immediate = {
 		while = {
 			limit = {
-				any_owned_planet = {
+				any_owned_colony = {
 					OR = {
 						owner = { is_ai = yes }
 						owner = {
@@ -156,7 +156,7 @@ country_event = {
 				}
 				log = "Autofab Autofab Queue for [This.GetName]"
 			}
-			random_owned_planet = {
+			random_owned_colony = {
 				limit = {
 					can_build_autofab = yes
 				}
@@ -166,13 +166,13 @@ country_event = {
 					}
 					log = "Autofab Autofab Queue found planet [This.GetName] for [PREV.GetName]"
 				}
-				planet_event = { id = autofab_queue.4 days = -1 } #Autofab
+				colony_event = { id = autofab_queue.4 days = -1 } #Autofab
 			}
 		}
 	}
 }
 #Autofab
-planet_event = {
+colony_event = {
 	id = autofab_queue.4
 	is_triggered_only = yes
 	hide_window = yes
@@ -185,7 +185,7 @@ planet_event = {
 		start_autofab = yes
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab_queue.5
 	is_triggered_only = yes
 	hide_window = yes
@@ -200,7 +200,7 @@ planet_event = {
 }
 
 #Planet Queue Event
-planet_event = {
+colony_event = {
 	id = autofab_queue.8
 	is_triggered_only = yes
 	hide_window = yes
@@ -227,7 +227,7 @@ planet_event = {
 				}
 				log = "Planet Autofab has Autofab Queue on [This.GetName] for [PREV.GetName]"
 			}
-			planet_event = { id = autofab_queue.4 days = -1 }
+			colony_event = { id = autofab_queue.4 days = -1 }
 			change_variable = { which = autofab_queue value = -1 }
 		}
 		else_if = {
@@ -241,7 +241,7 @@ planet_event = {
 				}
 				log = "Planet Autofab has Generator Queue on [This.GetName] for [PREV.GetName]"
 			}
-			planet_event = { id = autofab_queue.20 days = -1 }
+			colony_event = { id = autofab_queue.20 days = -1 }
 			change_variable = { which = autofab_energy_queue value = -1 }
 		}
 		else_if = {
@@ -255,7 +255,7 @@ planet_event = {
 				}
 				log = "Planet Autofab has Mine Queue on [This.GetName] for [PREV.GetName]"
 			}
-			planet_event = { id = autofab_queue.22 days = -1 }
+			colony_event = { id = autofab_queue.22 days = -1 }
 			change_variable = { which = autofab_mineral_queue value = -1 }
 		}
 		else_if = {
@@ -269,7 +269,7 @@ planet_event = {
 				}
 				log = "Planet Autofab has Farm Queue on [This.GetName] for [PREV.GetName]"
 			}
-			planet_event = { id = autofab_queue.24 days = -1 }
+			colony_event = { id = autofab_queue.24 days = -1 }
 			change_variable = { which = autofab_food_queue value = -1 }
 		}
 		else_if = {
@@ -283,7 +283,7 @@ planet_event = {
 				}
 				log = "Planet Autofab has Foundry Queue on [This.GetName] for [PREV.GetName]"
 			}
-			planet_event = { id = autofab_queue.26 days = -1 }
+			colony_event = { id = autofab_queue.26 days = -1 }
 			change_variable = { which = autofab_alloys_queue value = -1 }
 		}
 		else_if = {
@@ -297,7 +297,7 @@ planet_event = {
 				}
 				log = "Planet Autofab has Factory Queue on [This.GetName] for [PREV.GetName]"
 			}
-			planet_event = { id = autofab_queue.28 days = -1 }
+			colony_event = { id = autofab_queue.28 days = -1 }
 			change_variable = { which = autofab_congoods_queue value = -1 }
 		}
 		else_if = {
@@ -311,7 +311,7 @@ planet_event = {
 				}
 				log = "Planet Autofab has Chemical Queue on [This.GetName] for [PREV.GetName]"
 			}
-			planet_event = { id = autofab_queue.30 days = -1 }
+			colony_event = { id = autofab_queue.30 days = -1 }
 			change_variable = { which = autofab_motes_queue value = -1 }
 		}
 		else_if = {
@@ -325,7 +325,7 @@ planet_event = {
 				}
 				log = "Planet Autofab has Refinery Queue on [This.GetName] for [PREV.GetName]"
 			}
-			planet_event = { id = autofab_queue.32 days = -1 }
+			colony_event = { id = autofab_queue.32 days = -1 }
 			change_variable = { which = autofab_gases_queue value = -1 }
 		}
 		else_if = {
@@ -339,7 +339,7 @@ planet_event = {
 				}
 				log = "Planet Autofab has Translucer Queue on [This.GetName] for [PREV.GetName]"
 			}
-			planet_event = { id = autofab_queue.34 days = -1 }
+			colony_event = { id = autofab_queue.34 days = -1 }
 			change_variable = { which = autofab_crystals_queue value = -1 }
 		}
 		else_if = {
@@ -353,7 +353,7 @@ planet_event = {
 				}
 				log = "Planet Autofab has Extractor Queue on [This.GetName] for [PREV.GetName]"
 			}
-			planet_event = { id = autofab_queue.36 days = -1 }
+			colony_event = { id = autofab_queue.36 days = -1 }
 			change_variable = { which = autofab_extractor_queue value = -1 }
 		}
 		###Retooling
@@ -361,63 +361,63 @@ planet_event = {
 			limit = {
 				check_variable = { which = autofab_energy_queue value < 0 }
 			}
-			planet_event = { id = autofab_queue.61 days = -1 }
+			colony_event = { id = autofab_queue.61 days = -1 }
 			change_variable = { which = autofab_energy_queue value = 1 }
 		}
 		else_if = {
 			limit = {
 				check_variable = { which = autofab_mineral_queue value < 0 }
 			}
-			planet_event = { id = autofab_queue.63 days = -1 }
+			colony_event = { id = autofab_queue.63 days = -1 }
 			change_variable = { which = autofab_mineral_queue value = 1 }
 		}
 		else_if = {
 			limit = {
 				check_variable = { which = autofab_food_queue value < 0 }
 			}
-			planet_event = { id = autofab_queue.65 days = -1 }
+			colony_event = { id = autofab_queue.65 days = -1 }
 			change_variable = { which = autofab_food_queue value = 1 }
 		}
 		else_if = {
 			limit = {
 				check_variable = { which = autofab_alloys_queue value < 0 }
 			}
-			planet_event = { id = autofab_queue.67 days = -1 }
+			colony_event = { id = autofab_queue.67 days = -1 }
 			change_variable = { which = autofab_alloys_queue value = 1 }
 		}
 		else_if = {
 			limit = {
 				check_variable = { which = autofab_congoods_queue value < 0 }
 			}
-			planet_event = { id = autofab_queue.69 days = -1 }
+			colony_event = { id = autofab_queue.69 days = -1 }
 			change_variable = { which = autofab_congoods_queue value = 1 }
 		}
 		else_if = {
 			limit = {
 				check_variable = { which = autofab_motes_queue value < 0 }
 			}
-			planet_event = { id = autofab_queue.71 days = -1 }
+			colony_event = { id = autofab_queue.71 days = -1 }
 			change_variable = { which = autofab_motes_queue value = 1 }
 		}
 		else_if = {
 			limit = {
 				check_variable = { which = autofab_gases_queue value < 0 }
 			}
-			planet_event = { id = autofab_queue.73 days = -1 }
+			colony_event = { id = autofab_queue.73 days = -1 }
 			change_variable = { which = autofab_gases_queue value = 1 }
 		}
 		else_if = {
 			limit = {
 				check_variable = { which = autofab_crystals_queue value < 0 }
 			}
-			planet_event = { id = autofab_queue.75 days = -1 }
+			colony_event = { id = autofab_queue.75 days = -1 }
 			change_variable = { which = autofab_crystals_queue value = 1 }
 		}
 		else_if = {
 			limit = {
 				check_variable = { which = autofab_extractor_queue value < 0 }
 			}
-			planet_event = { id = autofab_queue.77 days = -1 }
+			colony_event = { id = autofab_queue.77 days = -1 }
 			change_variable = { which = autofab_extractor_queue value = 1 }
 		}
 	}
@@ -434,14 +434,14 @@ country_event = {
 	}
 	
 	immediate = {
-		every_owned_planet = {
+		every_owned_colony = {
 			limit = {
 				has_autofab_queue = yes
 			}
 			if = {
 				limit = {
 					NOT = {
-						has_planet_flag = factory_expanding
+						has_carrier_flag = factory_expanding
 					}
 					#can_queue_factory = yes
 				}
@@ -641,7 +641,7 @@ country_event = {
 		while = {
 			limit = {
 				check_variable = { which = autofab_energy_queue value > 0 }
-				any_owned_planet = {
+				any_owned_colony = {
 					can_afford_module = yes
 					can_expand_factory = yes
 					can_queue_factory = yes
@@ -659,14 +659,14 @@ country_event = {
 			}
 			if = {
 				limit = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_afford_module = yes
 						can_expand_factory = yes
 						can_queue_factory = yes
 						is_energy_colony = yes
 					}
 				}
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_afford_module = yes
 						can_expand_factory = yes
@@ -679,12 +679,12 @@ country_event = {
 						}
 						log = "Autofab Energy Queue found planet [This.GetName] for [PREV.GetName]"
 					}
-					planet_event = { id = autofab_queue.20 days = -1 } #Energy
+					colony_event = { id = autofab_queue.20 days = -1 } #Energy
 					owner = { change_variable = { which = autofab_energy_queue value = -1 } }
 				}
 			}
 			else = {
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_afford_module = yes
 						can_expand_factory = yes
@@ -697,7 +697,7 @@ country_event = {
 						}
 						log = "Autofab Energy Queue found planet [This.GetName] for [PREV.GetName]"
 					}
-					planet_event = { id = autofab_queue.20 days = -1 } #Energy
+					colony_event = { id = autofab_queue.20 days = -1 } #Energy
 					owner = { change_variable = { which = autofab_energy_queue value = -1 } }
 				}
 			}
@@ -718,7 +718,7 @@ country_event = {
 		while = {
 			limit = {
 				check_variable = { which = autofab_mineral_queue value > 0 }
-				any_owned_planet = {
+				any_owned_colony = {
 					can_afford_module = yes
 					can_expand_factory = yes
 					can_queue_factory = yes
@@ -736,12 +736,12 @@ country_event = {
 			}
 			if = {
 				limit = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_expand_factory = yes
 						is_mining_colony = yes
 					}
 				}
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_expand_factory = yes
 						is_mining_colony = yes
@@ -752,17 +752,17 @@ country_event = {
 						}
 						log = "Autofab Mineral Queue found planet [This.GetName] for [PREV.GetName]"
 					}
-					planet_event = { id = autofab_queue.22 days = -1 } #Minerals
+					colony_event = { id = autofab_queue.22 days = -1 } #Minerals
 					owner = { change_variable = { which = autofab_mineral_queue value = -1 } }
 				}
 			}
 			else = {
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_expand_factory = yes
 						OR = {
 							ROOT = { has_country_flag = factory_fallback }
-							has_planet_flag = factory_fallback
+							has_carrier_flag = factory_fallback
 						}
 					}
 					if = {
@@ -771,7 +771,7 @@ country_event = {
 						}
 						log = "Autofab Mineral Queue found planet [This.GetName] for [PREV.GetName]"
 					}
-					planet_event = { id = autofab_queue.22 days = -1 } #Minerals
+					colony_event = { id = autofab_queue.22 days = -1 } #Minerals
 					owner = { change_variable = { which = autofab_mineral_queue value = -1 } }
 				}
 			}
@@ -792,7 +792,7 @@ country_event = {
 		while = {
 			limit = {
 				check_variable = { which = autofab_food_queue value > 0 }
-				any_owned_planet = {
+				any_owned_colony = {
 					can_afford_module = yes
 					can_expand_factory = yes
 					can_queue_factory = yes
@@ -810,12 +810,12 @@ country_event = {
 			}
 			if = {
 				limit = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_expand_factory = yes
 						is_farming_colony = yes
 					}
 				}
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_expand_factory = yes
 						is_farming_colony = yes
@@ -826,17 +826,17 @@ country_event = {
 						}
 						log = "Autofab Food Queue found planet [This.GetName] for [PREV.GetName]"
 					}
-					planet_event = { id = autofab_queue.24 days = -1 } #Food
+					colony_event = { id = autofab_queue.24 days = -1 } #Food
 					owner = { change_variable = { which = autofab_food_queue value = -1 } }
 				}
 			}
 			else = {
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_expand_factory = yes
 						OR = {
 							ROOT = { has_country_flag = factory_fallback }
-							has_planet_flag = factory_fallback
+							has_carrier_flag = factory_fallback
 						}
 					}
 					if = {
@@ -845,7 +845,7 @@ country_event = {
 						}
 						log = "Autofab Food Queue found planet [This.GetName] for [PREV.GetName]"
 					}
-					planet_event = { id = autofab_queue.24 days = -1 } #Food
+					colony_event = { id = autofab_queue.24 days = -1 } #Food
 					owner = { change_variable = { which = autofab_food_queue value = -1 } }
 				}
 			}
@@ -866,7 +866,7 @@ country_event = {
 		while = {
 			limit = {
 				check_variable = { which = autofab_alloys_queue value > 0 }
-				any_owned_planet = {
+				any_owned_colony = {
 					can_afford_module = yes
 					can_expand_factory = yes
 					can_queue_factory = yes
@@ -884,7 +884,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_expand_factory = yes
 						is_alloys_colony = yes
 					}
@@ -895,7 +895,7 @@ country_event = {
 					}
 					log = "Autofab Alloys Queue found Alloys planet for [PREV.GetName]"
 				}
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_expand_factory = yes
 						is_alloys_colony = yes
@@ -906,7 +906,7 @@ country_event = {
 						}
 						log = "Autofab Alloys Queue found planet [This.GetName] for [PREV.GetName]"
 					}
-					planet_event = { id = autofab_queue.26 days = -1 } #Alloys
+					colony_event = { id = autofab_queue.26 days = -1 } #Alloys
 					owner = { change_variable = { which = autofab_alloys_queue value = -1 } }
 				}
 			}
@@ -917,12 +917,12 @@ country_event = {
 					}
 					log = "Autofab Alloys Queue found fallback Alloys planet for [PREV.GetName]"
 				}
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_expand_factory = yes
 						OR = {
 							ROOT = { has_country_flag = factory_fallback }
-							has_planet_flag = factory_fallback
+							has_carrier_flag = factory_fallback
 						}
 					}
 					if = {
@@ -931,7 +931,7 @@ country_event = {
 						}
 						log = "Autofab Alloys Queue found planet [This.GetName] for [PREV.GetName]"
 					}
-					planet_event = { id = autofab_queue.26 days = -1 } #Alloys
+					colony_event = { id = autofab_queue.26 days = -1 } #Alloys
 					owner = { change_variable = { which = autofab_alloys_queue value = -1 } }
 				}
 			}
@@ -952,7 +952,7 @@ country_event = {
 		while = {
 			limit = {
 				check_variable = { which = autofab_congoods_queue value > 0 }
-				any_owned_planet = {
+				any_owned_colony = {
 					can_afford_module = yes
 					can_expand_factory = yes
 					can_queue_factory = yes
@@ -970,12 +970,12 @@ country_event = {
 			}
 			if = {
 				limit = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_expand_factory = yes
 						is_congood_colony = yes
 					}
 				}
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_expand_factory = yes
 						is_congood_colony = yes
@@ -986,17 +986,17 @@ country_event = {
 						}
 						log = "Autofab Consumer Goods Queue found planet [This.GetName] for [PREV.GetName]"
 					}
-					planet_event = { id = autofab_queue.28 days = -1 } #ConGoods
+					colony_event = { id = autofab_queue.28 days = -1 } #ConGoods
 					owner = { change_variable = { which = autofab_congoods_queue value = -1 } }
 				}
 			}
 			else = {
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_expand_factory = yes
 						OR = {
 							ROOT = { has_country_flag = factory_fallback }
-							has_planet_flag = factory_fallback
+							has_carrier_flag = factory_fallback
 						}
 					}
 					if = {
@@ -1005,7 +1005,7 @@ country_event = {
 						}
 						log = "Autofab Consumer Goods Queue found planet [This.GetName] for [PREV.GetName]"
 					}
-					planet_event = { id = autofab_queue.28 days = -1 } #ConGoods
+					colony_event = { id = autofab_queue.28 days = -1 } #ConGoods
 					owner = { change_variable = { which = autofab_congoods_queue value = -1 } }
 				}
 			}
@@ -1026,7 +1026,7 @@ country_event = {
 		while = {
 			limit = {
 				check_variable = { which = autofab_motes_queue value > 0 }
-				any_owned_planet = {
+				any_owned_colony = {
 					can_afford_module = yes
 					can_expand_factory = yes
 					can_queue_factory = yes
@@ -1044,12 +1044,12 @@ country_event = {
 			}
 			if = {
 				limit = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_expand_factory = yes
 						is_refinery_colony = yes
 					}
 				}
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_expand_factory = yes
 						is_refinery_colony = yes
@@ -1060,17 +1060,17 @@ country_event = {
 						}
 						log = "Autofab Motes Queue found planet [This.GetName] for [PREV.GetName]"
 					}
-					planet_event = { id = autofab_queue.30 days = -1 } #Motes
+					colony_event = { id = autofab_queue.30 days = -1 } #Motes
 					owner = { change_variable = { which = autofab_motes_queue value = -1 } }
 				}
 			}
 			else = {
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_expand_factory = yes
 						OR = {
 							ROOT = { has_country_flag = factory_fallback }
-							has_planet_flag = factory_fallback
+							has_carrier_flag = factory_fallback
 						}
 					}
 					if = {
@@ -1079,7 +1079,7 @@ country_event = {
 						}
 						log = "Autofab Motes Queue found planet [This.GetName] for [PREV.GetName]"
 					}
-					planet_event = { id = autofab_queue.30 days = -1 } #Motes
+					colony_event = { id = autofab_queue.30 days = -1 } #Motes
 					owner = { change_variable = { which = autofab_motes_queue value = -1 } }
 				}
 			}
@@ -1100,7 +1100,7 @@ country_event = {
 		while = {
 			limit = {
 				check_variable = { which = autofab_gases_queue value > 0 }
-				any_owned_planet = {
+				any_owned_colony = {
 					can_afford_module = yes
 					can_expand_factory = yes
 					can_queue_factory = yes
@@ -1118,12 +1118,12 @@ country_event = {
 			}
 			if = {
 				limit = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_expand_factory = yes
 						is_refinery_colony = yes
 					}
 				}
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_expand_factory = yes
 						is_refinery_colony = yes
@@ -1134,17 +1134,17 @@ country_event = {
 						}
 						log = "Autofab Gases Queue found planet [This.GetName] for [PREV.GetName]"
 					}
-					planet_event = { id = autofab_queue.32 days = -1 } #Gases
+					colony_event = { id = autofab_queue.32 days = -1 } #Gases
 					owner = { change_variable = { which = autofab_gases_queue value = -1 } }
 				}
 			}
 			else = {
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_expand_factory = yes
 						OR = {
 							ROOT = { has_country_flag = factory_fallback }
-							has_planet_flag = factory_fallback
+							has_carrier_flag = factory_fallback
 						}
 					}
 					if = {
@@ -1153,7 +1153,7 @@ country_event = {
 						}
 						log = "Autofab Gases Queue found planet [This.GetName] for [PREV.GetName]"
 					}
-					planet_event = { id = autofab_queue.32 days = -1 } #Gases
+					colony_event = { id = autofab_queue.32 days = -1 } #Gases
 					owner = { change_variable = { which = autofab_gases_queue value = -1 } }
 				}
 			}
@@ -1174,7 +1174,7 @@ country_event = {
 		while = {
 			limit = {
 				check_variable = { which = autofab_crystals_queue value > 0 }
-				any_owned_planet = {
+				any_owned_colony = {
 					can_afford_module = yes
 					can_expand_factory = yes
 					can_queue_factory = yes
@@ -1192,12 +1192,12 @@ country_event = {
 			}
 			if = {
 				limit = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_expand_factory = yes
 						is_refinery_colony = yes
 					}
 				}
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_expand_factory = yes
 						is_refinery_colony = yes
@@ -1208,17 +1208,17 @@ country_event = {
 						}
 						log = "Autofab Crystals Queue found planet [This.GetName] for [PREV.GetName]"
 					}
-					planet_event = { id = autofab_queue.34 days = -1 } #Crystals
+					colony_event = { id = autofab_queue.34 days = -1 } #Crystals
 					owner = { change_variable = { which = autofab_crystals_queue value = -1 } }
 				}
 			}
 			else = {
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_expand_factory = yes
 						OR = {
 							ROOT = { has_country_flag = factory_fallback }
-							has_planet_flag = factory_fallback
+							has_carrier_flag = factory_fallback
 						}
 					}
 					if = {
@@ -1227,7 +1227,7 @@ country_event = {
 						}
 						log = "Autofab Crystals Queue found planet [This.GetName] for [PREV.GetName]"
 					}
-					planet_event = { id = autofab_queue.34 days = -1 } #Crystals
+					colony_event = { id = autofab_queue.34 days = -1 } #Crystals
 					owner = { change_variable = { which = autofab_crystals_queue value = -1 } }
 				}
 			}
@@ -1248,8 +1248,8 @@ country_event = {
 		while = {
 			limit = {
 				check_variable = { which = autofab_extractor_queue value > 0 }
-				any_owned_planet = {
-					NOT = { has_planet_flag = has_autofab_extractor }
+				any_owned_colony = {
+					NOT = { has_carrier_flag = has_autofab_extractor }
 					has_rare_resource_deposit = yes
 					can_queue_factory = yes
 					can_afford_module = yes
@@ -1261,10 +1261,10 @@ country_event = {
 				}
 				log = "Autofab Extractor Queue can afford for [This.GetName]"
 			}
-			random_owned_planet = {
+			random_owned_colony = {
 				limit = {
 					can_expand_factory = yes
-					NOT = { has_planet_flag = has_autofab_extractor }
+					NOT = { has_carrier_flag = has_autofab_extractor }
 					has_rare_resource_deposit = yes
 				}
 				if = {
@@ -1273,7 +1273,7 @@ country_event = {
 					}
 					log = "Autofab Extractor Queue found planet [This.GetName] for [PREV.GetName]"
 				}
-				planet_event = { id = autofab_queue.36 days = -1 } #Extractor
+				colony_event = { id = autofab_queue.36 days = -1 } #Extractor
 				owner = { change_variable = { which = autofab_extractor_queue value = -1 } }
 			}
 		}
@@ -1284,7 +1284,7 @@ country_event = {
 ###Script Events
 
 #Generator
-planet_event = {
+colony_event = {
 	id = autofab_queue.20
 	is_triggered_only = yes
 	hide_window = yes
@@ -1303,7 +1303,7 @@ planet_event = {
 		}
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab_queue.21
 	is_triggered_only = yes
 	hide_window = yes
@@ -1318,7 +1318,7 @@ planet_event = {
 }
 
 #Mine
-planet_event = {
+colony_event = {
 	id = autofab_queue.22
 	is_triggered_only = yes
 	hide_window = yes
@@ -1337,7 +1337,7 @@ planet_event = {
 		}
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab_queue.23
 	is_triggered_only = yes
 	hide_window = yes
@@ -1352,7 +1352,7 @@ planet_event = {
 }
 
 #Farm
-planet_event = {
+colony_event = {
 	id = autofab_queue.24
 	is_triggered_only = yes
 	hide_window = yes
@@ -1371,7 +1371,7 @@ planet_event = {
 		}
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab_queue.25
 	is_triggered_only = yes
 	hide_window = yes
@@ -1386,7 +1386,7 @@ planet_event = {
 }
 
 #Foundry
-planet_event = {
+colony_event = {
 	id = autofab_queue.26
 	is_triggered_only = yes
 	hide_window = yes
@@ -1404,7 +1404,7 @@ planet_event = {
 		}
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab_queue.27
 	is_triggered_only = yes
 	hide_window = yes
@@ -1419,7 +1419,7 @@ planet_event = {
 }
 
 #Factory
-planet_event = {
+colony_event = {
 	id = autofab_queue.28
 	is_triggered_only = yes
 	hide_window = yes
@@ -1437,7 +1437,7 @@ planet_event = {
 		}
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab_queue.29
 	is_triggered_only = yes
 	hide_window = yes
@@ -1452,7 +1452,7 @@ planet_event = {
 }
 
 #Chemical
-planet_event = {
+colony_event = {
 	id = autofab_queue.30
 	is_triggered_only = yes
 	hide_window = yes
@@ -1470,7 +1470,7 @@ planet_event = {
 		}
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab_queue.31
 	is_triggered_only = yes
 	hide_window = yes
@@ -1485,7 +1485,7 @@ planet_event = {
 }
 
 #Refinery
-planet_event = {
+colony_event = {
 	id = autofab_queue.32
 	is_triggered_only = yes
 	hide_window = yes
@@ -1503,7 +1503,7 @@ planet_event = {
 		}
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab_queue.33
 	is_triggered_only = yes
 	hide_window = yes
@@ -1518,7 +1518,7 @@ planet_event = {
 }
 
 #Translucer
-planet_event = {
+colony_event = {
 	id = autofab_queue.34
 	is_triggered_only = yes
 	hide_window = yes
@@ -1536,7 +1536,7 @@ planet_event = {
 		}
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab_queue.35
 	is_triggered_only = yes
 	hide_window = yes
@@ -1551,7 +1551,7 @@ planet_event = {
 }
 
 #Extractor
-planet_event = {
+colony_event = {
 	id = autofab_queue.36
 	is_triggered_only = yes
 	hide_window = yes
@@ -1569,7 +1569,7 @@ planet_event = {
 		}
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab_queue.37
 	is_triggered_only = yes
 	hide_window = yes
@@ -1600,11 +1600,11 @@ country_event = {
 			limit = {
 				check_variable = { which = autofab_energy_queue value < 0 }
 				OR = {
-					any_owned_planet = {
+					any_owned_colony = {
 						has_energy_factory = yes
 						can_queue_factory = yes
 					}
-					any_owned_planet = {
+					any_owned_colony = {
 						is_energy_colony = yes
 						has_energy_factory = yes
 						can_queue_factory = yes
@@ -1613,7 +1613,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						has_energy_factory = yes
 						NOT = {
@@ -1621,7 +1621,7 @@ country_event = {
 						}
 					}
 				}
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_queue_factory = yes
 						has_energy_factory = yes
@@ -1629,17 +1629,17 @@ country_event = {
 							is_energy_colony = yes
 						}
 					}
-					planet_event = { id = autofab_queue.61 days = -1 } #Retool Energy
+					colony_event = { id = autofab_queue.61 days = -1 } #Retool Energy
 					owner = { change_variable = { which = autofab_energy_queue value = 1 } }
 				}
 			}
 			else = {
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_queue_factory = yes
 						has_energy_factory = yes
 					}
-					planet_event = { id = autofab_queue.61 days = -1 } #Retool Energy
+					colony_event = { id = autofab_queue.61 days = -1 } #Retool Energy
 					owner = { change_variable = { which = autofab_energy_queue value = 1 } }
 				}
 			}
@@ -1662,11 +1662,11 @@ country_event = {
 			limit = {
 				check_variable = { which = autofab_mineral_queue value < 0 }
 				OR = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						has_minerals_factory = yes
 					}
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						is_mining_colony = yes
 						has_minerals_factory = yes
@@ -1675,7 +1675,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						has_minerals_factory = yes
 						NOT = {
@@ -1683,7 +1683,7 @@ country_event = {
 						}
 					}
 				}
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_queue_factory = yes
 						has_minerals_factory = yes
@@ -1691,17 +1691,17 @@ country_event = {
 							is_mining_colony = yes
 						}
 					}
-					planet_event = { id = autofab_queue.63 days = -1 } #Retool Minerals
+					colony_event = { id = autofab_queue.63 days = -1 } #Retool Minerals
 					owner = { change_variable = { which = autofab_mineral_queue value = 1 } }
 				}
 			}
 			else = {
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_queue_factory = yes
 						has_minerals_factory = yes
 					}
-					planet_event = { id = autofab_queue.63 days = -1 } #Retool Minerals
+					colony_event = { id = autofab_queue.63 days = -1 } #Retool Minerals
 					owner = { change_variable = { which = autofab_mineral_queue value = 1 } }
 				}
 			}
@@ -1724,11 +1724,11 @@ country_event = {
 			limit = {
 				check_variable = { which = autofab_food_queue value < 0 }
 				OR = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						has_food_factory = yes
 					}
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						is_farming_colony = yes
 						has_food_factory = yes
@@ -1737,7 +1737,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						has_food_factory = yes
 						NOT = {
@@ -1745,7 +1745,7 @@ country_event = {
 						}
 					}
 				}
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_queue_factory = yes
 						has_food_factory = yes
@@ -1753,17 +1753,17 @@ country_event = {
 							is_farming_colony = yes
 						}
 					}
-					planet_event = { id = autofab_queue.65 days = -1 } #Retool Food
+					colony_event = { id = autofab_queue.65 days = -1 } #Retool Food
 					owner = { change_variable = { which = autofab_food_queue value = 1 } }
 				}
 			}
 			else = {
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_queue_factory = yes
 						has_food_factory = yes
 					}
-					planet_event = { id = autofab_queue.65 days = -1 } #Retool Food
+					colony_event = { id = autofab_queue.65 days = -1 } #Retool Food
 					owner = { change_variable = { which = autofab_food_queue value = 1 } }
 				}
 			}
@@ -1786,11 +1786,11 @@ country_event = {
 			limit = {
 				check_variable = { which = autofab_alloys_queue value < 0 }
 				OR = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						has_alloys_factory = yes
 					}
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						is_alloys_colony = yes
 						has_alloys_factory = yes
@@ -1799,7 +1799,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						has_alloys_factory = yes
 						NOT = {
@@ -1807,7 +1807,7 @@ country_event = {
 						}
 					}
 				}
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_queue_factory = yes
 						has_alloys_factory = yes
@@ -1815,17 +1815,17 @@ country_event = {
 							is_alloys_colony = yes
 						}
 					}
-					planet_event = { id = autofab_queue.67 days = -1 } #Retool Alloys
+					colony_event = { id = autofab_queue.67 days = -1 } #Retool Alloys
 					owner = { change_variable = { which = autofab_alloys_queue value = 1 } }
 				}
 			}
 			else = {
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_queue_factory = yes
 						has_alloys_factory = yes
 					}
-					planet_event = { id = autofab_queue.67 days = -1 } #Retool Alloys
+					colony_event = { id = autofab_queue.67 days = -1 } #Retool Alloys
 					owner = { change_variable = { which = autofab_alloys_queue value = 1 } }
 				}
 			}
@@ -1848,11 +1848,11 @@ country_event = {
 			limit = {
 				check_variable = { which = autofab_congoods_queue value < 0 }
 				OR = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						has_congoods_factory = yes
 					}
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						is_congood_colony = yes
 						has_congoods_factory = yes
@@ -1861,7 +1861,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						has_congoods_factory = yes
 						NOT = {
@@ -1869,7 +1869,7 @@ country_event = {
 						}
 					}
 				}
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_queue_factory = yes
 						has_congoods_factory = yes
@@ -1877,17 +1877,17 @@ country_event = {
 							is_congood_colony = yes
 						}
 					}
-					planet_event = { id = autofab_queue.69 days = -1 } #Retool ConGoods
+					colony_event = { id = autofab_queue.69 days = -1 } #Retool ConGoods
 					owner = { change_variable = { which = autofab_congoods_queue value = 1 } }
 				}
 			}
 			else = {
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_queue_factory = yes
 						has_congoods_factory = yes
 					}
-					planet_event = { id = autofab_queue.69 days = -1 } #Retool ConGoods
+					colony_event = { id = autofab_queue.69 days = -1 } #Retool ConGoods
 					owner = { change_variable = { which = autofab_congoods_queue value = 1 } }
 				}
 			}
@@ -1910,11 +1910,11 @@ country_event = {
 			limit = {
 				check_variable = { which = autofab_motes_queue value < 0 }
 				OR = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						has_motes_factory = yes
 					}
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						is_refinery_colony = yes
 						has_motes_factory = yes
@@ -1923,7 +1923,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						has_motes_factory = yes
 						NOT = {
@@ -1931,7 +1931,7 @@ country_event = {
 						}
 					}
 				}
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_queue_factory = yes
 						has_motes_factory = yes
@@ -1939,17 +1939,17 @@ country_event = {
 							is_refinery_colony = yes
 						}
 					}
-					planet_event = { id = autofab_queue.71 days = -1 } #Retool Motes
+					colony_event = { id = autofab_queue.71 days = -1 } #Retool Motes
 					owner = { change_variable = { which = autofab_motes_queue value = 1 } }
 				}
 			}
 			else = {
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_queue_factory = yes
 						has_motes_factory = yes
 					}
-					planet_event = { id = autofab_queue.71 days = -1 } #Retool Motes
+					colony_event = { id = autofab_queue.71 days = -1 } #Retool Motes
 					owner = { change_variable = { which = autofab_motes_queue value = 1 } }
 				}
 			}
@@ -1972,11 +1972,11 @@ country_event = {
 			limit = {
 				check_variable = { which = autofab_gases_queue value < 0 }
 				OR = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						has_gases_factory = yes
 					}
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						is_refinery_colony = yes
 						has_gases_factory = yes
@@ -1985,7 +1985,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						has_gases_factory = yes
 						NOT = {
@@ -1993,7 +1993,7 @@ country_event = {
 						}
 					}
 				}
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_queue_factory = yes
 						has_gases_factory = yes
@@ -2001,17 +2001,17 @@ country_event = {
 							is_refinery_colony = yes
 						}
 					}
-					planet_event = { id = autofab_queue.73 days = -1 } #Retool Gases
+					colony_event = { id = autofab_queue.73 days = -1 } #Retool Gases
 					owner = { change_variable = { which = autofab_gases_queue value = 1 } }
 				}
 			}
 			else = {
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_queue_factory = yes
 						has_gases_factory = yes
 					}
-					planet_event = { id = autofab_queue.73 days = -1 } #Retool Gases
+					colony_event = { id = autofab_queue.73 days = -1 } #Retool Gases
 					owner = { change_variable = { which = autofab_gases_queue value = 1 } }
 				}
 			}
@@ -2034,11 +2034,11 @@ country_event = {
 			limit = {
 				check_variable = { which = autofab_crystals_queue value < 0 }
 				OR = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						has_crystals_factory = yes
 					}
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						is_refinery_colony = yes
 						has_crystals_factory = yes
@@ -2047,7 +2047,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						has_crystals_factory = yes
 						NOT = {
@@ -2055,7 +2055,7 @@ country_event = {
 						}
 					}
 				}
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_queue_factory = yes
 						has_crystals_factory = yes
@@ -2063,17 +2063,17 @@ country_event = {
 							is_refinery_colony = yes
 						}
 					}
-					planet_event = { id = autofab_queue.75 days = -1 } #Retool Crystals
+					colony_event = { id = autofab_queue.75 days = -1 } #Retool Crystals
 					owner = { change_variable = { which = autofab_crystals_queue value = 1 } }
 				}
 			}
 			else = {
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_queue_factory = yes
 						has_crystals_factory = yes
 					}
-					planet_event = { id = autofab_queue.75 days = -1 } #Retool Crystals
+					colony_event = { id = autofab_queue.75 days = -1 } #Retool Crystals
 					owner = { change_variable = { which = autofab_crystals_queue value = 1 } }
 				}
 			}
@@ -2096,46 +2096,46 @@ country_event = {
 			limit = {
 				check_variable = { which = autofab_extractor_queue value < 0 }
 				OR = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
-						has_planet_flag = has_autofab_extractor
+						has_carrier_flag = has_autofab_extractor
 					}
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
 						is_refinery_colony = yes
-						has_planet_flag = has_autofab_extractor
+						has_carrier_flag = has_autofab_extractor
 					}
 				}
 			}
 			if = {
 				limit = {
-					any_owned_planet = {
+					any_owned_colony = {
 						can_queue_factory = yes
-						has_planet_flag = has_autofab_extractor
+						has_carrier_flag = has_autofab_extractor
 						NOT = {
 							is_refinery_colony = yes
 						}
 					}
 				}
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_queue_factory = yes
-						has_planet_flag = has_autofab_extractor
+						has_carrier_flag = has_autofab_extractor
 						NOT = {
 							is_refinery_colony = yes
 						}
 					}
-					planet_event = { id = autofab_queue.77 days = -1 } #Retool Extractor
+					colony_event = { id = autofab_queue.77 days = -1 } #Retool Extractor
 					owner = { change_variable = { which = autofab_extractor_queue value = 1 } }
 				}
 			}
 			else = {
-				random_owned_planet = {
+				random_owned_colony = {
 					limit = {
 						can_queue_factory = yes
-						has_planet_flag = has_autofab_extractor
+						has_carrier_flag = has_autofab_extractor
 					}
-					planet_event = { id = autofab_queue.77 days = -1 } #Retool Extractor
+					colony_event = { id = autofab_queue.77 days = -1 } #Retool Extractor
 					owner = { change_variable = { which = autofab_extractor_queue value = 1 } }
 				}
 			}
@@ -2146,7 +2146,7 @@ country_event = {
 ##Retooling Script Events
 
 #Generator
-planet_event = {
+colony_event = {
 	id = autofab_queue.61
 	is_triggered_only = yes
 	hide_window = yes
@@ -2159,7 +2159,7 @@ planet_event = {
 		start_autofab_power_retool = yes
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab_queue.62
 	is_triggered_only = yes
 	hide_window = yes
@@ -2174,7 +2174,7 @@ planet_event = {
 }
 
 #Mine
-planet_event = {
+colony_event = {
 	id = autofab_queue.63
 	is_triggered_only = yes
 	hide_window = yes
@@ -2187,7 +2187,7 @@ planet_event = {
 		start_autofab_mine_retool = yes
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab_queue.64
 	is_triggered_only = yes
 	hide_window = yes
@@ -2202,7 +2202,7 @@ planet_event = {
 }
 
 #Farm
-planet_event = {
+colony_event = {
 	id = autofab_queue.65
 	is_triggered_only = yes
 	hide_window = yes
@@ -2215,7 +2215,7 @@ planet_event = {
 		start_autofab_farm_retool = yes
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab_queue.66
 	is_triggered_only = yes
 	hide_window = yes
@@ -2230,7 +2230,7 @@ planet_event = {
 }
 
 #Foundry
-planet_event = {
+colony_event = {
 	id = autofab_queue.67
 	is_triggered_only = yes
 	hide_window = yes
@@ -2243,7 +2243,7 @@ planet_event = {
 		start_autofab_foundry_retool = yes
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab_queue.68
 	is_triggered_only = yes
 	hide_window = yes
@@ -2258,7 +2258,7 @@ planet_event = {
 }
 
 #Factory
-planet_event = {
+colony_event = {
 	id = autofab_queue.69
 	is_triggered_only = yes
 	hide_window = yes
@@ -2271,7 +2271,7 @@ planet_event = {
 		start_autofab_factory_retool = yes
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab_queue.70
 	is_triggered_only = yes
 	hide_window = yes
@@ -2286,7 +2286,7 @@ planet_event = {
 }
 
 #Chemical
-planet_event = {
+colony_event = {
 	id = autofab_queue.71
 	is_triggered_only = yes
 	hide_window = yes
@@ -2299,7 +2299,7 @@ planet_event = {
 		start_autofab_chemical_retool = yes
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab_queue.72
 	is_triggered_only = yes
 	hide_window = yes
@@ -2314,7 +2314,7 @@ planet_event = {
 }
 
 #Refinery
-planet_event = {
+colony_event = {
 	id = autofab_queue.73
 	is_triggered_only = yes
 	hide_window = yes
@@ -2327,7 +2327,7 @@ planet_event = {
 		start_autofab_refinery_retool = yes
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab_queue.74
 	is_triggered_only = yes
 	hide_window = yes
@@ -2342,7 +2342,7 @@ planet_event = {
 }
 
 #Translucer
-planet_event = {
+colony_event = {
 	id = autofab_queue.75
 	is_triggered_only = yes
 	hide_window = yes
@@ -2355,7 +2355,7 @@ planet_event = {
 		start_autofab_translucer_retool = yes
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab_queue.76
 	is_triggered_only = yes
 	hide_window = yes
@@ -2370,7 +2370,7 @@ planet_event = {
 }
 
 #Extractor
-planet_event = {
+colony_event = {
 	id = autofab_queue.77
 	is_triggered_only = yes
 	hide_window = yes
@@ -2383,7 +2383,7 @@ planet_event = {
 		start_autofab_extractor_retool = yes
 	}
 }
-planet_event = {
+colony_event = {
 	id = autofab_queue.78
 	is_triggered_only = yes
 	hide_window = yes

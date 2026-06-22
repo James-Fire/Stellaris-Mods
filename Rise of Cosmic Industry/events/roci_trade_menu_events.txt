@@ -341,7 +341,7 @@ country_event = {
 		set_variable = { which = kiyo_trade_engineering_research_end value = 0 }
 		set_variable = { which = kiyo_trade_trade_value_end value = 0 }
 		
-		every_owned_planet = {
+		every_owned_colony = {
 			limit = {
 				has_cargo_ship_trade_route = yes
 			}
@@ -451,7 +451,7 @@ country_event = {
 				any_owned_fleet = {
 					any_owned_ship = { is_ship_size = kiyo_trade }
 					prevprev = {
-						any_owned_planet = {
+						any_owned_colony = {
 							prevprev = { has_fleet_flag = kiyo_trade_end@PREV }
 						}
 					}
@@ -466,7 +466,7 @@ country_event = {
 					any_owned_fleet = {
 						any_owned_ship = { is_ship_size = kiyo_trade }
 						prevprev = {
-							any_owned_planet = {
+							any_owned_colony = {
 								prevprev = { has_fleet_flag = kiyo_trade_end@PREV }
 							}
 						}
@@ -547,7 +547,7 @@ country_event = {
 					any_owned_ship = { is_ship_size = kiyo_trade }
 					has_fleet_flag = kiyo_trade_has_trade_route
 					root = {
-						any_owned_planet = {
+						any_owned_colony = {
 							prevprev = { has_fleet_flag = kiyo_trade_end@PREV }
 						}
 					}

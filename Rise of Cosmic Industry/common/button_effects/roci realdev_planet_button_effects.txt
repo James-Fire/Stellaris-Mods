@@ -103,24 +103,24 @@ realdev_assembly_or_jobs = {
 			if = {
 				limit = {
 					NOR = { 
-						has_planet_flag = realdev_production
-						has_planet_flag = realdev_assembly
+						has_carrier_flag = realdev_production
+						has_carrier_flag = realdev_assembly
 					}
 				}
-				set_planet_flag = realdev_production
+				set_carrier_flag = realdev_production
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = realdev_production
+					has_carrier_flag = realdev_production
 				}
-				remove_planet_flag = realdev_production
-				set_planet_flag = realdev_assembly
+				remove_carrier_flag = realdev_production
+				set_carrier_flag = realdev_assembly
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = realdev_assembly
+					has_carrier_flag = realdev_assembly
 				}
-				remove_planet_flag = realdev_assembly
+				remove_carrier_flag = realdev_assembly
 			}
 		}
 	}
@@ -342,24 +342,24 @@ realdev_target_mode_swap_planet = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_planet_flag = realdev_target_auto
+					has_carrier_flag = realdev_target_auto
 				}
-				remove_planet_flag = realdev_target_auto
-				set_planet_flag = realdev_target_manual
+				remove_carrier_flag = realdev_target_auto
+				set_carrier_flag = realdev_target_manual
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = realdev_target_manual
+					has_carrier_flag = realdev_target_manual
 				}
-				remove_planet_flag = realdev_target_manual
-				set_planet_flag = realdev_target_country
+				remove_carrier_flag = realdev_target_manual
+				set_carrier_flag = realdev_target_country
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = realdev_target_country
+					has_carrier_flag = realdev_target_country
 				}
-				remove_planet_flag = realdev_target_country
-				set_planet_flag = realdev_target_auto
+				remove_carrier_flag = realdev_target_country
+				set_carrier_flag = realdev_target_auto
 			}
 		}
 	}

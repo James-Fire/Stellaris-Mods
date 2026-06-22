@@ -266,7 +266,7 @@ country_event = {
 						has_global_flag = no_exploit
 					}
 				}
-				every_owned_planet = {
+				every_owned_colony = {
 					limit = {
 						OR = {
 							has_autofab = yes
@@ -277,7 +277,7 @@ country_event = {
 						count = 5
 						add_deposit = roci_cheat_deposit
 					}
-					planet_event = { id = roci_menu.41 }
+					colony_event = { id = roci_menu.41 }
 					every_deposit = {
 						limit = {
 							is_deposit_type = roci_cheat_deposit

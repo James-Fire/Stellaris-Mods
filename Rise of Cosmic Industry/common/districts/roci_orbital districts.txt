@@ -65,7 +65,7 @@ district_orbital_platform_city = {
 		NOT = { has_global_flag = no_orbital_infra }
 		has_oi_space_elevator = yes
 		OR = {
-			NOT = { has_planet_flag = orbitalinfra_district_hide }
+			NOT = { has_carrier_flag = orbitalinfra_district_hide }
 			has_district = district_orbital_platform_city
 		}
 	}
@@ -162,7 +162,7 @@ district_orbital_platform_city = {
 	on_built = {
 		remove_deposit = orbital_platform_neg
 		update_oi_modifiers = yes
-		planet_event = { id = orbitalinfra.20 }
+		colony_event = { id = orbitalinfra.20 }
 	}
 }
 
@@ -178,7 +178,7 @@ district_orbital_platform_industrial = {
 		NOT = { has_global_flag = no_orbital_infra }
 		has_oi_space_elevator = yes
 		OR = {
-			NOT = { has_planet_flag = orbitalinfra_district_hide }
+			NOT = { has_carrier_flag = orbitalinfra_district_hide }
 			has_district = district_orbital_platform_industrial
 		}
 	}
@@ -383,7 +383,7 @@ district_orbital_platform_research = {
 	potential = {
 		NOT = { has_global_flag = no_orbital_infra }
 		OR = {
-			NOT = { has_planet_flag = orbitalinfra_district_hide }
+			NOT = { has_carrier_flag = orbitalinfra_district_hide }
 			has_district = district_orbital_platform_research
 		}
 		has_oi_space_elevator = yes
@@ -519,7 +519,7 @@ district_orbital_platform_refinery = {
 	potential = {
 		NOT = { has_global_flag = no_orbital_infra }
 		OR = {
-			NOT = { has_planet_flag = orbitalinfra_district_hide }
+			NOT = { has_carrier_flag = orbitalinfra_district_hide }
 			has_district = district_orbital_platform_refinery
 		}
 		has_oi_space_elevator = yes
@@ -676,7 +676,7 @@ district_orbital_platform_shipyard = {
 	potential = {
 		NOT = { has_global_flag = no_orbital_infra }
 		OR = {
-			NOT = { has_planet_flag = orbitalinfra_district_hide }
+			NOT = { has_carrier_flag = orbitalinfra_district_hide }
 			has_district = district_orbital_platform_shipyard
 		}
 		has_oi_space_elevator = yes
@@ -791,7 +791,7 @@ district_orbital_platform_military = {
 	potential = {
 		NOT = { has_global_flag = no_orbital_infra }
 		OR = {
-			NOT = { has_planet_flag = orbitalinfra_district_hide }
+			NOT = { has_carrier_flag = orbitalinfra_district_hide }
 			has_district = district_orbital_platform_military
 		}
 		has_oi_space_elevator = yes
@@ -999,7 +999,7 @@ district_orbital_platform_solar_array = {
 	potential = {
 		NOT = { has_global_flag = no_orbital_infra }
 		OR = {
-			NOT = { has_planet_flag = orbitalinfra_district_hide }
+			NOT = { has_carrier_flag = orbitalinfra_district_hide }
 			has_district = district_orbital_platform_solar_array
 		}
 		has_oi_space_elevator = yes
@@ -1105,7 +1105,7 @@ district_orbital_platform_solar_array = {
 	on_built = {
 		remove_deposit = orbital_platform_neg
 		update_oi_modifiers = yes
-		planet_event = { id = orbitalinfra.20 }
+		colony_event = { id = orbitalinfra.20 }
 	}
 }
 
@@ -1120,7 +1120,7 @@ district_orbital_platform_commercial = {
 	potential = {
 		NOT = { has_global_flag = no_orbital_infra }
 		OR = {
-			NOT = { has_planet_flag = orbitalinfra_district_hide }
+			NOT = { has_carrier_flag = orbitalinfra_district_hide }
 			has_district = district_orbital_platform_commercial
 		}
 		has_oi_space_elevator = yes
@@ -1233,7 +1233,7 @@ district_orbital_platform_mining = {
 	potential = {
 		NOT = { has_global_flag = no_orbital_infra }
 		OR = {
-			NOT = { has_planet_flag = orbitalinfra_district_hide }
+			NOT = { has_carrier_flag = orbitalinfra_district_hide }
 			has_district = district_orbital_platform_mining
 		}
 		has_oi_space_elevator = yes
@@ -1246,7 +1246,7 @@ district_orbital_platform_mining = {
 			is_homeworld = yes
 			has_modifier = extensive_moon_system
 			has_modifier = asteroid_belt
-			has_planet_flag = mining_habitat
+			has_carrier_flag = mining_habitat
 			AND = {
 				OR = {
 					is_moon = yes
@@ -1303,7 +1303,7 @@ district_orbital_platform_mining = {
 			is_homeworld = yes
 			has_modifier = extensive_moon_system
 			has_modifier = asteroid_belt
-			has_planet_flag = mining_habitat
+			has_carrier_flag = mining_habitat
 			AND = {
 				OR = {
 					is_moon = yes
@@ -1415,7 +1415,7 @@ district_orbital_platform_mining = {
 	on_built = {
 		remove_deposit = orbital_platform_neg
 		update_oi_modifiers = yes
-		planet_event = { id = orbitalinfra.20 }
+		colony_event = { id = orbitalinfra.20 }
 	}
 }
 
@@ -1431,7 +1431,7 @@ district_orbital_platform_farming = {
 		NOT = { has_global_flag = no_orbital_infra }
 		has_oi_space_elevator = yes
 		OR = {
-			NOT = { has_planet_flag = orbitalinfra_district_hide }
+			NOT = { has_carrier_flag = orbitalinfra_district_hide }
 			has_district = district_orbital_platform_farming
 		}
 	}
@@ -1519,7 +1519,7 @@ district_orbital_platform_farming = {
 	on_built = {
 		remove_deposit = orbital_platform_neg
 		update_oi_modifiers = yes
-		planet_event = { id = orbitalinfra.20 }
+		colony_event = { id = orbitalinfra.20 }
 	}
 }
 
@@ -1535,7 +1535,7 @@ district_orbital_platform_admin = {
 		NOT = { has_global_flag = no_orbital_infra }
 		has_oi_space_elevator = yes
 		OR = {
-			NOT = { has_planet_flag = orbitalinfra_district_hide }
+			NOT = { has_carrier_flag = orbitalinfra_district_hide }
 			has_district = district_orbital_platform_admin
 		}
 	}

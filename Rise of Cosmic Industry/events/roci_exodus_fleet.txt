@@ -32,7 +32,7 @@ country_event = {
 							set_star_flag = exodus_home_taken
 							random_system_planet = {
 								limit = {
-									has_planet_flag = exodus_parent_home
+									has_carrier_flag = exodus_parent_home
 								}
 								generate_start_deposits_and_blockers = yes
 								random_list = {
@@ -364,17 +364,17 @@ country_event = {
 					limit = {
 						any_system_planet = {
 							is_colonizable = no
-							NOT = { has_planet_flag = exodus_resources_placed }
+							NOT = { has_carrier_flag = exodus_resources_placed }
 						}
 					}
 					random_system_planet = {
 						limit = {
 							is_colonizable = no
-							NOT = { has_planet_flag = exodus_resources_placed }
+							NOT = { has_carrier_flag = exodus_resources_placed }
 						}
-						set_planet_flag = exodus_resources_placed
+						set_carrier_flag = exodus_resources_placed
 						switch = {
-							trigger = has_planet_flag
+							trigger = has_carrier_flag
 							exodus_star = {
 								add_deposit = d_energy_10
 								add_deposit = d_energy_5
@@ -448,7 +448,7 @@ country_event = {
 			solar_system = {
 				every_system_planet = {
 					limit = {
-						has_planet_flag = exodus_colony
+						has_carrier_flag = exodus_colony
 					}
 					
 					add_deposit = d_black_soil
@@ -742,7 +742,7 @@ country_event = {
 	immediate = {
 		set_variable = { which = ExodusPlanetCount value = 0 }
 		set_variable = { which = ExodusHappyPlanetCount value = 0 }
-		every_owned_planet = {
+		every_owned_colony = {
 			prev = { change_variable = { which = ExodusPlanetCount value = 1 } }
 			if = {
 				limit = {

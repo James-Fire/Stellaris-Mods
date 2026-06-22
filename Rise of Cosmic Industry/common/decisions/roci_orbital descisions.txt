@@ -1,5 +1,5 @@
 decision_toggle_platform_districts = {
-	owned_planets_only = yes
+	owned_colonys_only = yes
 	sound = event_administrative_work
 	icon = decision_habitat
 	
@@ -18,12 +18,12 @@ decision_toggle_platform_districts = {
 		custom_tooltip = toggle_platform_districts
 		if = {
 			limit = {
-				has_planet_flag = orbitalinfra_district_hide
+				has_carrier_flag = orbitalinfra_district_hide
 			}
-			remove_planet_flag = orbitalinfra_district_hide
+			remove_carrier_flag = orbitalinfra_district_hide
 		}
 		else = {
-			set_planet_flag = orbitalinfra_district_hide
+			set_carrier_flag = orbitalinfra_district_hide
 		}
 	}
 	
@@ -33,7 +33,7 @@ decision_toggle_platform_districts = {
 }
 
 decision_add_to_orbital_platform = {
-	owned_planets_only = yes
+	owned_colonys_only = yes
 	sound = event_administrative_work
 	icon = decision_habitat
 	

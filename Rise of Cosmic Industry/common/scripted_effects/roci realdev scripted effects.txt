@@ -35,8 +35,8 @@ set_realdev_planet_variables = {
 	set_variable = { which = realdev_industry_construction_ratio value = 0.8 }
 	set_variable = { which = realdev_take_ratio value = 0 }
 	set_variable = { which = realdev_assembly_cap value = 200 }
-	set_planet_flag = realdev_variables_set
-	set_planet_flag = realdev_target_country
+	set_carrier_flag = realdev_variables_set
+	set_carrier_flag = realdev_target_country
 	set_variable = { which = realdev_ip_target_display value = realdev_ip_target }
 }
 

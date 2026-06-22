@@ -32,17 +32,17 @@ has_autofab_civic = {
 
 can_build_autofab = { #Planet Scope
 	OR = {
-		has_planet_flag = factory_autofab_construction_on
+		has_carrier_flag = factory_autofab_construction_on
 		AND = {
 			owner = {
 				has_country_flag = factory_autofab_construction_on
 			}
-			NOT = { has_planet_flag = factory_autofab_construction_off }
+			NOT = { has_carrier_flag = factory_autofab_construction_off }
 		}
 	}
 	NOT = {
-		has_planet_flag = has_autofab
-		has_planet_flag = building_autofab
+		has_carrier_flag = has_autofab
+		has_carrier_flag = building_autofab
 	}
 	has_supported_district_set = yes
 	can_afford_autofab = yes
@@ -51,14 +51,14 @@ can_build_autofab = { #Planet Scope
 can_expand_factory = {
 	free_district_slots > value:roci_autofab_districts
 	has_autofab = yes
-	NOT = { has_planet_flag = factory_expanding }
+	NOT = { has_carrier_flag = factory_expanding }
 	can_afford_module = yes
 }
 
 has_autofab = {
 	OR = {
 		has_deposit = autofab
-		has_planet_flag = has_autofab
+		has_carrier_flag = has_autofab
 	}
 }
 
@@ -148,7 +148,7 @@ has_energy_available = {
 				AND = {
 					uses_district_set = habitat
 					OR = {
-						has_planet_flag = energy_habitat
+						has_carrier_flag = energy_habitat
 						AND = {
 							exists = from
 							from = { is_gestalt = yes }
@@ -177,7 +177,7 @@ has_minerals_available = {
 				uses_district_set = shattered_ring_world
 				AND = {
 					uses_district_set = habitat
-					has_planet_flag = mining_habitat
+					has_carrier_flag = mining_habitat
 				}
 			}
 			free_district_slots > 0

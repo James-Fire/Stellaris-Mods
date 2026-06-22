@@ -653,7 +653,7 @@ country_event = { ###Country Automation Controls
 
 
 
-planet_event = { ###Planet Terminal
+colony_event = { ###Planet Terminal
 	id = autofab_menu.10
 	title = "autofab_menu.10.name"
 	desc = "autofab_menu.10.desc"
@@ -677,7 +677,7 @@ planet_event = { ###Planet Terminal
 		#custom_tooltip = "autofab_menu.1.refresh.tooltip"
 		custom_gui = "autofab_planet_menu_confirm"
 		document_factory_planet = yes
-		planet_event = { id = autofab_menu.10 }
+		colony_event = { id = autofab_menu.10 }
 	}
 	option = {
 		name = "autofab_menu.10.confirm"

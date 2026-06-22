@@ -68,7 +68,7 @@ event = {
 			every_owned_fleet = {
 				limit = {
 					num_ships < 1
-					prev = { any_owned_planet = { prevprev = { has_fleet_flag = kiyo_trade_start@PREV } } }
+					prev = { any_owned_colony = { prevprev = { has_fleet_flag = kiyo_trade_start@PREV } } }
 				}
 				set_fleet_flag = kiyo_event_trade_deleted_cargo 
 				delete_fleet = this
@@ -112,7 +112,7 @@ country_event = {
 				queue_actions = { orbit_planet = event_target:kiyo_trade_end }
 			}
 			else_if = { limit = { OR = { has_fleet_flag = kiyo_trade_ending has_fleet_flag = kiyo_event_trade_expired_cargo } }
-				root = { random_owned_planet = { limit = { root.fromfrom = { has_fleet_flag = kiyo_trade_start@PREV } } save_event_target_as = kiyo_trade_start } }
+				root = { random_owned_colony = { limit = { root.fromfrom = { has_fleet_flag = kiyo_trade_start@PREV } } save_event_target_as = kiyo_trade_start } }
 				queue_actions = { orbit_planet = event_target:kiyo_trade_start }
 			}
 			else = {
@@ -132,7 +132,7 @@ country_event = {
 	trigger = { NOT = { has_global_flag = no_trade_routes } fromfrom = { has_fleet_flag = kiyo_trade_has_trade_route } }
 	
 	immediate = {
-		random_owned_planet = { limit = { root.fromfrom = { has_fleet_flag = kiyo_trade_start@PREV } }
+		random_owned_colony = { limit = { root.fromfrom = { has_fleet_flag = kiyo_trade_start@PREV } }
 			kiyo_mod_trade_clear_trade_modifiers = yes
 			
 			if = { limit = { root.fromfrom = { NOT = { has_fleet_flag = kiyo_trade_start_expired } } }
@@ -264,7 +264,7 @@ country_event = {
 				}
 			}
 			else = {
-				owner = { random_owned_planet = { limit = { prevprev = { has_fleet_flag = kiyo_trade_start@PREV } } save_event_target_as = kiyo_trade_start } }
+				owner = { random_owned_colony = { limit = { prevprev = { has_fleet_flag = kiyo_trade_start@PREV } } save_event_target_as = kiyo_trade_start } }
 				random_galaxy_planet = { limit = { prev = { has_fleet_flag = kiyo_trade_end@PREV } } save_event_target_as = kiyo_trade_end }
 				
 				set_name = {
@@ -308,7 +308,7 @@ country_event = {
 	trigger = { NOT = { has_global_flag = no_trade_routes } from = { has_fleet_flag = kiyo_trade_has_trade_route NOT = { has_fleet_flag = kiyo_event_trade_deleted_cargo } } }
 	
 	immediate = {
-		random_owned_planet = { limit = { root.from = { has_fleet_flag = kiyo_trade_start@PREV } }
+		random_owned_colony = { limit = { root.from = { has_fleet_flag = kiyo_trade_start@PREV } }
 			kiyo_mod_trade_clear_trade_modifiers = yes
 			
 			if = { limit = { root.from = { NOT = { has_fleet_flag = kiyo_trade_start_expired } } }
@@ -439,10 +439,10 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	
-	trigger = { NOT = { has_global_flag = no_trade_routes } any_owned_planet = { root.from = { has_fleet_flag = kiyo_trade_start@PREV } } from = { NOT = { has_fleet_flag = kiyo_event_trade_deleted_cargo has_fleet_flag = kiyo_trade_has_trade_route } } }
+	trigger = { NOT = { has_global_flag = no_trade_routes } any_owned_colony = { root.from = { has_fleet_flag = kiyo_trade_start@PREV } } from = { NOT = { has_fleet_flag = kiyo_event_trade_deleted_cargo has_fleet_flag = kiyo_trade_has_trade_route } } }
 	
 	immediate = {
-		random_owned_planet = { limit = { root.from = { has_fleet_flag = kiyo_trade_start@PREV } }
+		random_owned_colony = { limit = { root.from = { has_fleet_flag = kiyo_trade_start@PREV } }
 			root.from = { remove_fleet_flag = kiyo_trade_start@PREV  }
 			kiyo_mod_trade_check_trade_route_exist = yes
 		}
@@ -501,7 +501,7 @@ country_event = {
 				is_fleet_idle = yes
 				owner = { is_ai = yes }
 			}
-			prev = { random_owned_planet = { limit = { prevprev = { has_fleet_flag = kiyo_trade_start@PREV } } save_event_target_as = kiyo_trade_start } }
+			prev = { random_owned_colony = { limit = { prevprev = { has_fleet_flag = kiyo_trade_start@PREV } } save_event_target_as = kiyo_trade_start } }
 			#Find the planet in the galaxy that has the best trade route value that can be traded with
 			ordered_galaxy_planet = {
 				limit = { exists = owner owner = { roci_can_trade_with_country = yes } }

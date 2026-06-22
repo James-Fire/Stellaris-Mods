@@ -5,24 +5,24 @@ automation_active = {
 		owner = {
 			is_ai = yes
 		}
-		has_planet_flag = autofab_automation
+		has_carrier_flag = autofab_automation
 		AND = {
 			owner = {
 				has_country_flag = autofab_automation
 			}
 			NOT = {
-				has_planet_flag = autofab_automation_off
+				has_carrier_flag = autofab_automation_off
 			}
 		}
 	}
 	has_autofab_queue = no
-	NOT = { has_planet_flag = automation_queued_this_cycle }
+	NOT = { has_carrier_flag = automation_queued_this_cycle }
 }
 
 #Planet Scope
 can_afford_automation_autofab = {
 	has_supported_district_set = yes
-	NOT = { has_planet_flag = automation_queued_this_cycle }
+	NOT = { has_carrier_flag = automation_queued_this_cycle }
 	owner = {
 		check_variable = { which = autofab_alloys_tracking value > @autofaballoycost }
 	}

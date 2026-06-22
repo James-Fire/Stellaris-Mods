@@ -24,7 +24,7 @@ kiyo_trade_check = {
 						NOT = { has_fleet_flag = kiyo_event_trade_deleted_cargo } has_fleet_flag = kiyo_trade_has_trade_route
 						any_owned_ship = { is_ship_size = kiyo_trade }
 						prevprev.owner = {
-							any_owned_planet = {
+							any_owned_colony = {
 								prevprev = { has_fleet_flag = kiyo_trade_end@PREV }
 							}
 						}
@@ -73,7 +73,7 @@ kiyo_trade_add_ships_to_trade_route = {
 	allow = {
 		custom_tooltip = {
 			fail_text = edict_kiyo_trade_add_ships_to_trade_route_any_fleet_has_room
-			any_owned_planet = {
+			any_owned_colony = {
 				prev = {
 					any_owned_fleet = {
 						has_fleet_flag = kiyo_trade_start@PREVPREV

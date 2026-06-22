@@ -90,17 +90,17 @@ factory_vanilla_swapping_fire_country = {
 	potential = { has_country_flag = factory_vanilla_swapping }
 	allow = {
 		custom_tooltip = "swapping_country_tooltip"
-		hidden_trigger = { any_owned_planet = { has_vanilla_swap_candidate = yes NOT = { has_planet_flag = autofab_ignore_vanilla } } }
+		hidden_trigger = { any_owned_colony = { has_vanilla_swap_candidate = yes NOT = { has_carrier_flag = autofab_ignore_vanilla } } }
 	}
 	effect = {
 		custom_tooltip = "swapping_country_effects_tooltip"
 		hidden_effect = {
-			every_owned_planet = {
+			every_owned_colony = {
 				limit = {
 					has_vanilla_swap_candidate = yes
-					NOT = { has_planet_flag = autofab_ignore_vanilla }
+					NOT = { has_carrier_flag = autofab_ignore_vanilla }
 				}
-				planet_event = { id = autofab.21 }
+				colony_event = { id = autofab.21 }
 			}
 		}
 	}

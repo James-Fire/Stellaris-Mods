@@ -87,7 +87,7 @@ building_roci_space_elevator = {
 	on_built = {
 		log = "[Owner.GetName] built T1 Elevator on [This.GetName]"
 		add_modifier = { modifier = orbital_space }
-		set_planet_flag = has_orbital_infrastructure
+		set_carrier_flag = has_orbital_infrastructure
 		owner = {
 			if = {
 				limit = {

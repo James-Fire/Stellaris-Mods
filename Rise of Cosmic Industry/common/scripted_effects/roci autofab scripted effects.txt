@@ -262,7 +262,7 @@ document_factory_country = {
 	set_variable = { which = planet_autofab_refinery_queue value = 0 }
 	set_variable = { which = planet_autofab_motes_building_queue value = 0 }
 	set_variable = { which = planet_autofab_translucer_queue value = 0 }
-	every_owned_planet = {
+	every_owned_colony = {
 		document_factory_planet = yes
 		PREV = {
 			change_variable = { which = autofabs_available value = PREV.autofabs_available }
@@ -353,8 +353,8 @@ document_factory_planet = {
 	if = {
 		limit = {
 			NOR = {
-				has_planet_flag = has_autofab
-				has_planet_flag = building_autofab
+				has_carrier_flag = has_autofab
+				has_carrier_flag = building_autofab
 				check_variable = { which = autofab_queue value > 0 }
 			}
 		}
@@ -363,19 +363,19 @@ document_factory_planet = {
 	else_if = {
 		limit = {
 			OR = {
-				has_planet_flag = has_autofab
-				has_planet_flag = building_autofab
+				has_carrier_flag = has_autofab
+				has_carrier_flag = building_autofab
 			}
 		}
 		if = {
 			limit = {
-				has_planet_flag = building_autofab
+				has_carrier_flag = building_autofab
 			}
 			set_variable = { which = autofabs_building value = 1 }
 		}
 		else_if = {
 			limit = {
-				has_planet_flag = has_autofab
+				has_carrier_flag = has_autofab
 			}
 			set_variable = { which = autofabs value = 1 }
 		}
@@ -388,7 +388,7 @@ document_factory_planet = {
 		}
 		else_if = {
 			limit = {
-				has_planet_flag = has_autofab_extractor
+				has_carrier_flag = has_autofab_extractor
 			}
 			set_variable = { which = autofab_extractor value = 1 }
 		}
@@ -396,120 +396,120 @@ document_factory_planet = {
 			limit = {
 				has_rare_resource_deposit = yes
 				NOT = {	
-					has_planet_flag = has_autofab_extractor
+					has_carrier_flag = has_autofab_extractor
 				}
 			}
 			set_variable = { which = autofab_extractor_avail value = 1 }
 		}
 		if = {
 			limit = {
-				has_planet_flag = factory_expanding
+				has_carrier_flag = factory_expanding
 			}
 			if = {
 				limit = {
-					has_planet_flag = factory_retooling_generator
+					has_carrier_flag = factory_retooling_generator
 				}
 				change_variable = { which = autofab_energy_building value = -1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = factory_retooling_mine
+					has_carrier_flag = factory_retooling_mine
 				}
 				change_variable = { which = autofab_minerals_building value = -1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = factory_retooling_farm
+					has_carrier_flag = factory_retooling_farm
 				}
 				change_variable = { which = autofab_food_building value = -1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = factory_retooling_foundry
+					has_carrier_flag = factory_retooling_foundry
 				}
 				change_variable = { which = autofab_alloys_building value = -1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = factory_retooling_factory
+					has_carrier_flag = factory_retooling_factory
 				}
 				change_variable = { which = autofab_congoods_building value = -1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = factory_retooling_refinery
+					has_carrier_flag = factory_retooling_refinery
 				}
 				change_variable = { which = autofab_gases_building value = -1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = factory_retooling_chemical
+					has_carrier_flag = factory_retooling_chemical
 				}
 				change_variable = { which = autofab_motes_building value = -1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = factory_retooling_translucer
+					has_carrier_flag = factory_retooling_translucer
 				}
 				change_variable = { which = autofab_crystals_building value = -1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = factory_retooling_extractor
+					has_carrier_flag = factory_retooling_extractor
 				}
 				change_variable = { which = autofab_extractor_building value = -1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = factory_building_generator
+					has_carrier_flag = factory_building_generator
 				}
 				change_variable = { which = autofab_energy_building value = 1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = factory_building_mine
+					has_carrier_flag = factory_building_mine
 				}
 				change_variable = { which = autofab_minerals_building value = 1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = factory_building_farm
+					has_carrier_flag = factory_building_farm
 				}
 				change_variable = { which = autofab_food_building value = 1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = factory_building_foundry
+					has_carrier_flag = factory_building_foundry
 				}
 				change_variable = { which = autofab_alloys_building value = 1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = factory_building_factory
+					has_carrier_flag = factory_building_factory
 				}
 				change_variable = { which = autofab_congoods_building value = 1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = factory_building_refinery
+					has_carrier_flag = factory_building_refinery
 				}
 				change_variable = { which = autofab_gases_building value = 1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = factory_building_chemical
+					has_carrier_flag = factory_building_chemical
 				}
 				change_variable = { which = autofab_motes_building value = 1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = factory_building_translucer
+					has_carrier_flag = factory_building_translucer
 				}
 				change_variable = { which = autofab_crystals_building value = 1 }
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = factory_building_extractor
+					has_carrier_flag = factory_building_extractor
 				}
 				change_variable = { which = autofab_extractor_building value = 1 }
 			}
@@ -953,7 +953,7 @@ reset_factory_part_1 = {
 	}
 	if = {
 		limit = {
-			has_planet_flag = has_autofab
+			has_carrier_flag = has_autofab
 			NOT = {
 				has_deposit = autofab
 			}
@@ -962,7 +962,7 @@ reset_factory_part_1 = {
 	}
 	if = {
 		limit = {
-			has_planet_flag = has_autofab_extractor
+			has_carrier_flag = has_autofab_extractor
 			NOT = {
 				has_deposit = autofab_refinery_extractor
 			}
@@ -974,7 +974,7 @@ reset_factory_part_1 = {
 			add_deposit = autofab_refinery_extractor
 		}
 		else = {
-			remove_planet_flag = has_autofab_extractor
+			remove_carrier_flag = has_autofab_extractor
 		}
 	}
 	if = {
@@ -1071,7 +1071,7 @@ autofab_log_all_countries = {
 autofab_log_everything = {
 	document_factory_country = yes
 	autofab_log_all_values = yes
-	every_owned_planet = {
+	every_owned_colony = {
 		autofab_log_all_values = yes
 	}
 }

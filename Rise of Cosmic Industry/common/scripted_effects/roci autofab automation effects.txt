@@ -1,8 +1,8 @@
 reset_autofab_automation_cycle = {
 	set_variable = { which = autofab_done_today value = 0 }
 	set_variable = { which = autofab_done_cycle value = 0 }
-	every_owned_planet = {
-		remove_planet_flag = automation_queued_this_cycle
+	every_owned_colony = {
+		remove_carrier_flag = automation_queued_this_cycle
 	}
 }
 

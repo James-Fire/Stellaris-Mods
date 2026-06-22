@@ -14,7 +14,7 @@ kiyo_mod_trade_opinion_modifier_valid = {
 		has_fleet_flag = kiyo_event_trade_deleted_cargo
 	}
 	prevprev = {
-		any_owned_planet = {
+		any_owned_colony = {
 			prevprev = {
 				has_fleet_flag = kiyo_trade_end@PREV
 			}
@@ -101,7 +101,7 @@ roci_no_existing_trade_route = {
 # For the AI to see which empire they should trade with
 kiyo_mod_trade_is_country_to_trade_with = {
 	roci_can_trade_with_country = yes
-	any_owned_planet = {		
+	any_owned_colony = {		
 		#Doesn't already have a trade route
 		
 		root.owner = {

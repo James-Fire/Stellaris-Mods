@@ -25,7 +25,7 @@ country_event = {
 }
 
 #General purpose event to put the shipping deposit on a planet if it's not already there.
-planet_event = {
+colony_event = {
 	id = shipping.1
 	is_triggered_only = yes
 	hide_window = yes
@@ -72,7 +72,7 @@ country_event = {
 					limit = {
 						is_colony = yes
 					}
-					planet_event = { id = shipping.8 days = 5 }
+					colony_event = { id = shipping.8 days = 5 }
 				}
 			}
 		}
@@ -247,7 +247,7 @@ system_event = {
 	}
 }
 #Planet event to export deficits, then calculate shipping costs from it
-planet_event = {
+colony_event = {
 	id = shipping.8
 	is_triggered_only = yes
 	hide_window = yes

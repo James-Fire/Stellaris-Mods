@@ -18,16 +18,16 @@ can_build_fallback = {
 	OR = {
 		AND = {
 			has_country_flag = factory_fallback
-			any_owned_planet = {
+			any_owned_colony = {
 				NOT = {
-					has_planet_flag = factory_fallback_off
-					has_planet_flag = factory_fallback
+					has_carrier_flag = factory_fallback_off
+					has_carrier_flag = factory_fallback
 				}
 				can_expand_factory = yes
 			}
 		}
-		any_owned_planet = {
-			has_planet_flag = factory_fallback
+		any_owned_colony = {
+			has_carrier_flag = factory_fallback
 			can_expand_factory = yes
 		}
 	}
@@ -40,9 +40,9 @@ can_build_fallback_planet = {
 			owner = {
 				has_country_flag = factory_fallback
 			}
-			NOT = {	has_planet_flag = factory_fallback_off }
+			NOT = {	has_carrier_flag = factory_fallback_off }
 		}
-		has_planet_flag = factory_fallback
+		has_carrier_flag = factory_fallback
 	}
 }
 

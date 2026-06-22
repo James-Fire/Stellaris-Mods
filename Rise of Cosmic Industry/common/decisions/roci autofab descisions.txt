@@ -1,5 +1,5 @@
 decision_manage_autofab = {
-	owned_planets_only = yes
+	owned_colonys_only = yes
 	#sound = event_administrative_work
 	icon = decision_autofab
 	
@@ -20,10 +20,10 @@ decision_manage_autofab = {
 		custom_tooltip = "autofab_factory_manage"
 		hidden_effect = {
 			document_factory_planet = yes
-			factory_reset_all_planet_flags = yes
+			factory_reset_all_carrier_flags = yes
 			factory_set_default_queue_planet = yes
 		}
-		planet_event = { id = autofab_menu.10 }
+		colony_event = { id = autofab_menu.10 }
 	}
 	
 	ai_weight = {
@@ -32,7 +32,7 @@ decision_manage_autofab = {
 }
 
 decision_manage_realdev = {
-	owned_planets_only = yes
+	owned_colonys_only = yes
 	#sound = event_administrative_work
 	icon = decision_autofab
 	
@@ -50,7 +50,7 @@ decision_manage_realdev = {
 		custom_tooltip = "realdev_ip_manage"
 		hidden_effect = {
 		}
-		planet_event = { id = realdev_menu.10 }
+		colony_event = { id = realdev_menu.10 }
 	}
 	
 	ai_weight = {

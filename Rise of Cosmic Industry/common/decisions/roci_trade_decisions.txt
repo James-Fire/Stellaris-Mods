@@ -1,6 +1,6 @@
 # Set up trade route
 decision_kiyo_mod_trade_setup_trade_route = {
-	owned_planets_only = yes
+	owned_colonys_only = yes
 	
 	potential = {
 		NOT = { has_global_flag = no_trade_routes }
