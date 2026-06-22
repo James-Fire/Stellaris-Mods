@@ -20,9 +20,27 @@ destroy_trigger = {
 
 planet_modifier = {
 	planet_automated_jobs_energy_upkeep_add = 1
-	job_$JOB$_automated_workforce_mult = value:roci_uplink_workforce|$AMOUNT$|$FE_BUILDING$||$BUILDING_AMOUNT$|$FE_BUILDING_2$|$BUILDING_AMOUNT_2$|
-	job_$GESTALT_JOB$_automated_workforce_mult = value:roci_uplink_workforce|$AMOUNT$|$FE_BUILDING$|$BUILDING_AMOUNT$|$FE_BUILDING_2$|$BUILDING_AMOUNT_2$|
-	bonus_automated_workforce_mult = value:roci_uplink_workforce_bonus|$AMOUNT$|$FE_BUILDING$|$BUILDING_AMOUNT$|$FE_BUILDING_2$|$BUILDING_AMOUNT_2$|$BUILDING_AMOUNT_2$|
+}
+
+triggered_planet_modifier = {
+	potential = {
+		owner = { is_gestalt = no }
+	}
+	job_$JOB$_automated_workforce_mult = 1
+	mult = value:roci_uplink_workforce|base_amount|$AMOUNT$|building|$FE_BUILDING$|building_amount|$BUILDING_AMOUNT$|building_2|$FE_BUILDING_2$|building_amount_2|$BUILDING_AMOUNT_2$|
+}
+
+triggered_planet_modifier = {
+	potential = {
+		owner = { is_gestalt = yes }
+	}
+	job_$GESTALT_JOB$_automated_workforce_mult = 1
+	mult = value:roci_uplink_workforce|base_amount|$AMOUNT$|building|$FE_BUILDING$|building_amount|$BUILDING_AMOUNT$|building_2|$FE_BUILDING_2$|building_amount_2|$BUILDING_AMOUNT_2$|
+}
+
+triggered_planet_modifier = {
+	bonus_automated_workforce_mult = 1
+	mult = value:roci_uplink_workforce_bonus|base_amount|$AMOUNT$|building|$FE_BUILDING$|building_amount|$BUILDING_AMOUNT$|building_2|$FE_BUILDING_2$|building_amount_2|$BUILDING_AMOUNT_2$|
 }
 
 resources = {

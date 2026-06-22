@@ -51,8 +51,10 @@ shipping = {
 #Autofab Categories
 planet_automated_jobs = {
 	modifier_category = planet
+	generate_add_modifiers = {
+		upkeep
+	}
 	generate_mult_modifiers = {
-		add
 		upkeep
 	}
 }

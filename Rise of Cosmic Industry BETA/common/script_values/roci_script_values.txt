@@ -158,7 +158,6 @@ roci_uplink_workforce = {
  		owner = { has_active_tradition = tr_autofab_finish }
 		add = 0.25
  	}
-	add = 1
 	min = 0
 	max = 1
 }
@@ -180,12 +179,12 @@ roci_uplink_workforce_bonus = {
  		owner = { has_active_tradition = tr_autofab_finish }
 		add = 0.25
  	}
-	subtract = 1
+	subtract = value:roci_uplink_workforce|base_amount|$base_amount$|building|$building$|building_amount|$building_amount$|building_2|$building_2$|building_amount_2|$building_amount_2$|
 	divide = 2
 	min = 0
 	max = 1
 }
-#roci_uplink_workforce|base_amount|<number>|building|<building>|building_amount|<number>|building_2|<building>|building_amount_2|<number>|
+#roci_uplink_workforce_bonus|base_amount|<number>|building|<building>|building_amount|<number>|building_2|<building>|building_amount_2|<number>|
 
 
 #Planet Scope
