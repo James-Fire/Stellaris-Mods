@@ -106,39 +106,39 @@ country_event = {
 			}
 			set_realdev_country_variables = yes
 		}
-		every_owned_planet = {
+		every_owned_colony = {
 			if = {
 				limit = {
-					NOT = { has_planet_flag = realdev_variables_set }
+					NOT = { has_carrier_flag = realdev_variables_set }
 				}
 				set_realdev_planet_variables = yes
 			}
 			reset_realdev_variables = yes
 			#Start of game stuff to immediately apply the modifiers
-			planet_event = { id = realdev.1 }
-			planet_event = { id = realdev.2 }
-			planet_event = { id = realdev.3 }
+			colony_event = { id = realdev.1 }
+			colony_event = { id = realdev.2 }
+			colony_event = { id = realdev.3 }
 		}
 		
 		#Country start of game stuff after planets have figured out their stuff.
 		country_event = { id = realdev.4 }
-		every_owned_planet = {
-			planet_event = { id = realdev.11 }
+		every_owned_colony = {
+			colony_event = { id = realdev.11 }
 		}
 		country_event = { id = realdev.5 }
 		
-		every_owned_planet = {
+		every_owned_colony = {
 			if = {
 				limit = {
-					NOT = { has_planet_flag = realdev_variables_set }
+					NOT = { has_carrier_flag = realdev_variables_set }
 				}
 				set_realdev_planet_variables = yes
 			}
 			reset_realdev_variables = yes
 		
-			planet_event = { id = realdev.1 days = 1 random = 5 }
-			planet_event = { id = realdev.2 days = 6 random = 5 }
-			planet_event = { id = realdev.3 days = 11 random = 5 }
+			colony_event = { id = realdev.1 days = 1 random = 5 }
+			colony_event = { id = realdev.2 days = 6 random = 5 }
+			colony_event = { id = realdev.3 days = 11 random = 5 }
 		}
 		country_event = { id = realdev.4 days = 16 }
 	}
@@ -183,24 +183,24 @@ country_event = { #Monthly Country event
 			}
 			set_realdev_country_variables = yes
 		}
-		every_owned_planet = {
+		every_owned_colony = {
 			if = {
 				limit = {
-					NOT = { has_planet_flag = realdev_variables_set }
+					NOT = { has_carrier_flag = realdev_variables_set }
 				}
 				set_realdev_planet_variables = yes
 			}
 
-			planet_event = { id = realdev.1 days = 1 random = 6 }
-			planet_event = { id = realdev.2 days = 8 random = 6 }
-			planet_event = { id = realdev.3 days = 14 random = 6 }
+			colony_event = { id = realdev.1 days = 1 random = 6 }
+			colony_event = { id = realdev.2 days = 8 random = 6 }
+			colony_event = { id = realdev.3 days = 14 random = 6 }
 		}
 		country_event = { id = realdev.4 days = 21 random = 3 }
 	}
 }
 
 #First event for planet math
-planet_event = {
+colony_event = {
 	id = realdev.1
 	is_triggered_only = yes
 	hide_window = yes
@@ -212,7 +212,7 @@ planet_event = {
 	immediate = {
 		if = {
 			limit = {
-				NOT = { has_planet_flag = realdev_variables_set }
+				NOT = { has_carrier_flag = realdev_variables_set }
 			}
 			set_realdev_planet_variables = yes
 		}	
@@ -276,7 +276,7 @@ planet_event = {
 }
 
 #Second event for planet math
-planet_event = {
+colony_event = {
 	id = realdev.2
 	is_triggered_only = yes
 	hide_window = yes
@@ -342,7 +342,7 @@ planet_event = {
 }
 
 #Second event for planet math
-planet_event = {
+colony_event = {
 	id = realdev.3
 	is_triggered_only = yes
 	hide_window = yes
@@ -414,7 +414,7 @@ planet_event = {
 		else_if = {
 			limit = {
 				planet_uses_target_manual = yes
-				has_planet_flag = realdev_target_country
+				has_carrier_flag = realdev_target_country
 			}
 			set_variable = { which = realdev_ip_target value = owner.realdev_ip_target }	
 		}
@@ -479,7 +479,7 @@ planet_event = {
 			if = {
 				limit = {
 					has_building_construction = no
-					NOT = { has_planet_flag = factory_expanding }
+					NOT = { has_carrier_flag = factory_expanding }
 				}
 				if = {
 					limit = {
@@ -554,7 +554,7 @@ country_event = {
 		set_variable = { which = realdev_country_industry value = 0 }
 		
 		#Pull build speed dedicated to the country from all planets
-		every_owned_planet = {
+		every_owned_colony = {
 			limit = {
 				is_occupied_flag = no
 				has_orbital_bombardment = no
@@ -665,7 +665,7 @@ country_event = {
 		
 		#Give IP to planets that request it, then have them evaluate their stuff.
 		set_variable = { which = realdev_ip_distributed value = 0 }
-		every_owned_planet = {
+		every_owned_colony = {
 			limit = {
 				check_variable = { which = realdev_ip_target value > 0 }
 			}
@@ -685,7 +685,7 @@ country_event = {
 					PREV = { change_variable = { which = realdev_ip_distributed value = prev.realdev_ip_request } }
 				}
 			}
-			planet_event = { id = realdev.11 days = 2 random = 2 }
+			colony_event = { id = realdev.11 days = 2 random = 2 }
 		}
 		set_variable = { which = realdev_country_industry_pre_split value = realdev_country_industry }
 		
@@ -778,7 +778,7 @@ country_event = {
 		set_variable = { which = realdev_industry_display value = 0 }
 		set_variable = { which = realdev_total_ip_previous value = realdev_total_ip }
 		set_variable = { which = realdev_total_ip value = 0 }
-		every_owned_planet = {
+		every_owned_colony = {
 			#Pull final IP values
 			PREV = { change_variable = { which = realdev_total_ip value = prev.realdev_total_ip } }
 		
@@ -1176,7 +1176,7 @@ country_event = {
 	}
 }
 
-planet_event = {
+colony_event = {
 	id = realdev.11
 	is_triggered_only = yes
 	hide_window = yes
@@ -1191,7 +1191,7 @@ planet_event = {
 		if = {
 			limit = {
 				has_building_construction = no
-				NOT = { has_planet_flag = factory_expanding }
+				NOT = { has_carrier_flag = factory_expanding }
 			}
 			if = {
 				limit = {
