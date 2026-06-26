@@ -8,7 +8,13 @@ autofab = {
 		produces = {
 		}		
 	}
-	
+	#Convert Job Efficiency into Automated Job Efficiency
+	#triggered_planet_modifier = {
+	#	modifier = {
+	#		bonus_automated_workforce_mult = 2
+	#		mult = modifier:
+	#	}
+	#}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner

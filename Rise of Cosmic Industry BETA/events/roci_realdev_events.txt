@@ -724,7 +724,7 @@ country_event = {
 		
 		#Give IP to planets that request it, then have them evaluate their stuff. Consistently give IP to newest planets first
 		set_variable = { which = realdev_ip_distributed value = 0 }
-		ordered_owned_carrier = {
+		ordered_owned_colony = {
 			limit = {
 				check_variable = { which = realdev_ip_request value > 0 }
 			}

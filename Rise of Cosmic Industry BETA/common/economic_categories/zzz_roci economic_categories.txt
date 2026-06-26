@@ -50,7 +50,7 @@ shipping = {
 
 #Autofab Categories
 planet_automated_jobs = {
-	modifier_category = planet
+	modifier_category = colony
 	generate_add_modifiers = {
 		upkeep
 	}
@@ -70,104 +70,8 @@ planet_autofab = {
 		upkeep
 	}
 }
-planet_autofab_generator = {
-	parent = planet_technician
-
-	generate_mult_modifiers = {
-		produces
-		upkeep
-	}
-	generate_add_modifiers = {
-		produces
-		upkeep
-	}
-}
-planet_autofab_farm = {
-	parent = planet_farmers
-
-	generate_mult_modifiers = {
-		produces
-		upkeep
-	}
-	generate_add_modifiers = {
-		produces
-		upkeep
-	}
-}
-planet_autofab_mine = {
-	parent = planet_miners
-
-	generate_mult_modifiers = {
-		produces
-		upkeep
-	}
-	generate_add_modifiers = {
-		produces
-		upkeep
-	}
-}
-planet_autofab_foundry = {
-	parent = planet_metallurgists
-
-	generate_mult_modifiers = {
-		produces
-		upkeep
-	}
-	generate_add_modifiers = {
-		produces
-		upkeep
-	}
-}
-planet_autofab_factory = {
-	parent = planet_artisans
-
-	generate_mult_modifiers = {
-		produces
-		upkeep
-	}
-	generate_add_modifiers = {
-		produces
-		upkeep
-	}
-}
-planet_autofab_motes = {
-	parent = planet_chemists
-
-	generate_mult_modifiers = {
-		produces
-		upkeep
-	}
-	generate_add_modifiers = {
-		produces
-		upkeep
-	}
-}
-planet_autofab_gases = {
-	parent = planet_refiners
-
-	generate_mult_modifiers = {
-		produces
-		upkeep
-	}
-	generate_add_modifiers = {
-		produces
-		upkeep
-	}
-}
-planet_autofab_crystals = {
-	parent = planet_translucers
-
-	generate_mult_modifiers = {
-		produces
-		upkeep
-	}
-	generate_add_modifiers = {
-		produces
-		upkeep
-	}
-}
-planet_autofab_srs = {
-	parent = planet_miners
+planet_autofab_uplink = {
+	parent = colony
 
 	generate_mult_modifiers = {
 		produces

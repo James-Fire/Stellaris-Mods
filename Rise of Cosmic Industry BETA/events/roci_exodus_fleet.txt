@@ -333,6 +333,17 @@ country_event = {
 			give_technology = { message = no tech = tech_massive_glacier }
 		}
 		
+		#Give some extra starting resources
+		add_resource = {
+			food = 500
+		}
+		add_resource = {
+			minerals = 500
+		}
+		add_resource = {
+			energy = 500
+		}
+		
 		#Temp boost, decays yearly
 		set_variable = { which = ExodusAttractionBoost value = 20 }
 		add_modifier = {
@@ -709,6 +720,17 @@ country_event = {
 				zone = zone_foundry
 				zone_slot = 1
 			}
+			remove_zone = {
+				district = district_city
+				zone = zone_industrial
+				zone_slot = 2
+				all = no
+			}
+			add_zone = {
+				district = district_city
+				zone = zone_factory
+				zone_slot = 2
+			}
 			add_building = building_capital
 			add_building = building_robot_assembly_plant
 			add_building = building_foundry_1
@@ -716,21 +738,21 @@ country_event = {
 			add_district = district_farming
 			add_district = district_mining
 			add_district = district_generator
-			
+			#add_district = district_generator
 			add_building = {
 				district = district_mining
 				zone = zone_minerals
-				building = building_autofab_uplink_2
+				building = building_autofab_mineral_uplink_1
 			}
 			add_building = {
 				district = district_generator
 				zone = zone_energy
-				building = building_autofab_uplink_2
+				building = building_autofab_energy_uplink_2
 			}
 			add_building = {
 				district = district_farming
 				zone = zone_food
-				building = building_autofab_uplink_2
+				building = building_autofab_food_uplink_1
 			}
 		}
 	}

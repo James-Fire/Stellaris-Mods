@@ -186,6 +186,31 @@ roci_uplink_workforce_bonus = {
 }
 #roci_uplink_workforce_bonus|base_amount|<number>|building|<building>|building_amount|<number>|building_2|<building>|building_amount_2|<number>|
 
+#Colony Scope
+#Count how many uplink buildings exist
+roci_uplink_workforce_cost = {
+	base = 1
+	modifier = {
+ 		has_food_uplink = yes
+		subtract = 0.05
+ 	}
+	modifier = {
+ 		has_mineral_uplink = yes
+		subtract = 0.05
+ 	}
+	modifier = {
+ 		has_energy_uplink = yes
+		subtract = 0.05
+ 	}
+	modifier = {
+ 		has_cg_uplink = yes
+		subtract = 0.05
+ 	}
+	modifier = {
+ 		has_alloy_uplink = yes
+		subtract = 0.05
+ 	}
+}
 
 #Planet Scope
 autofab_uplink_upkeep = {

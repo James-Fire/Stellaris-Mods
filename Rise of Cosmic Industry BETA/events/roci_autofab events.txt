@@ -217,17 +217,17 @@ country_event = {
 								add_building = {
 									district = district_mining
 									zone = zone_minerals
-									building = building_autofab_uplink_1
+									building = building_autofab_mineral_uplink_1
 								}
 								add_building = {
 									district = district_generator
 									zone = zone_energy
-									building = building_autofab_uplink_1
+									building = building_autofab_energy_uplink_1
 								}
 								add_building = {
 									district = district_farming
 									zone = zone_food
-									building = building_autofab_uplink_1
+									building = building_autofab_food_uplink_1
 								}
 							}
 						}

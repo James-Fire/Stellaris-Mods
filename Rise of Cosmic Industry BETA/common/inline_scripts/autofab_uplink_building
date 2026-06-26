@@ -18,8 +18,12 @@ destroy_trigger = {
 	owner = { is_wilderness_empire = yes }
 }
 
-planet_modifier = {
-	planet_automated_jobs_energy_upkeep_add = 1
+triggered_planet_modifier = {
+	potential = {
+		owner = { is_gestalt = no }
+	}
+	planet_automated_jobs_energy_upkeep_add = 0.5
+	mult = value:roci_uplink_workforce_cost
 }
 
 triggered_planet_modifier = {

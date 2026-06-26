@@ -25,7 +25,7 @@ set_realdev_target = {
 		limit = {
 			log_realdev = yes
 		}
-		log = "Realdev set Target at [this.realdev_ip_target] on [This.GetName] for [Owner.GetName]"
+		log = "Realdev set Target at \[this.realdev_ip_target] on \[This.GetName] for \[Owner.GetName]"
 	}
 }
 
