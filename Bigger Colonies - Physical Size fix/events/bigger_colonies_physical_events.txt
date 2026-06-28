@@ -6,17 +6,17 @@ event = {
 	is_triggered_only = yes
 	immediate = {
 		set_global_flag = bigger_colonies_defines_active
-		every_galaxy_planet = {
-			limit = { 
-				OR = { 
-					habitable_planet = yes 
-					is_planet_class = pc_nuked 
-				} 
-				NOT = { has_planet_flag = bigger_colony_checked }
-			}
-			set_planet_flag = bigger_colony_checked
-			planet_event = { id = BiggerColonies.1 days = 1 }
-		}
+		#every_galaxy_planet = {
+		#	limit = { 
+		#		OR = { 
+		#			habitable_planet = yes 
+		#			is_planet_class = pc_nuked 
+		#		} 
+		#		NOT = { has_planet_flag = bigger_colony_checked }
+		#	}
+		#	set_planet_flag = bigger_colony_checked
+		#	planet_event = { id = BiggerColonies.1 days = 1 }
+		#}
 	}
 }
 

@@ -1,10 +1,15 @@
 @base_cost = 300
 @city_cost = 500
+@rural_district_ai_coefficient = 0.75
 
 district_generator = {
+	shared_capacity_modifier = district_generator
 	expansion_planner = yes
-
 	base_buildtime = 240
+	overlay_icon = GFX_district_energy
+	is_uncapped = {
+		is_generator_district_uncapped = yes
+	}
 
 	min_for_deposits_on_planet = 3
 	max_for_deposits_on_planet = 30
@@ -14,14 +19,20 @@ district_generator = {
 	}
 
 	show_on_uncolonized = {
-		uses_district_set = standard
+		OR = {
+			uses_district_set = standard
+			uses_district_set = shattered_ring_world
+		}
 		exists = from
 		from = { is_wilderness_empire = no }
 		NOT = { has_modifier = resort_colony }
 	}
 
 	potential = {
-		uses_district_set = standard
+		OR = {
+			uses_district_set = standard
+			uses_district_set = shattered_ring_world
+		}
 		OR = {
 			NOT = { exists = owner }
 			AND = {
@@ -32,13 +43,20 @@ district_generator = {
 		NOT = { has_modifier = resort_colony }
 	}
 
+	allow = {
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_carrier_flag = arcology_project_construction }
+		}
+	}
+
 	conversion_ratio = 1
 	convert_to = {
-		district_generator_uncapped
 		district_photosynthesis_fields
-		district_photosynthesis_fields_uncapped
+		district_geothermal
 		district_nexus_1
 		district_hive_1
+		district_ark_generator
 	}
 
 	resources = {
@@ -71,7 +89,6 @@ district_generator = {
 			planet_housing_add = 300
 		}
 	}
-
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -94,14 +111,22 @@ district_generator = {
 		tech_power_plant_1
 	}
 
-	ai_weight_coefficient = 0.8
+	show_tech_unlock_if = {
+		is_nomadic = no
+		is_wilderness_empire = no
+	}
+
+	ai_weight_coefficient = @rural_district_ai_coefficient
 }
 
 district_mining = {
+	shared_capacity_modifier = district_mining
 	expansion_planner = yes
-
 	base_buildtime = 240
-
+	overlay_icon = GFX_district_minerals
+	is_uncapped = {
+		is_mining_district_uncapped = yes
+	}
 	min_for_deposits_on_planet = 1
 	max_for_deposits_on_planet = 30
 
@@ -109,25 +134,34 @@ district_mining = {
 		slot_minerals
 	}
 
-	show_on_uncolonized = {
-		uses_district_set = standard
-		NAND = {
-			exists = from
-			from = {
-				OR = {
-					is_subterranean_empire = yes
-					is_wilderness_empire = yes
-				}
-			}
+	desc = {
+		trigger = {
+			NOT = { uses_district_set = shattered_ring_world }
 		}
+		text = district_mining_desc
+	}
+
+	desc = {
+		trigger = {
+			uses_district_set = shattered_ring_world
+		}
+		text = district_srw_mining_desc
+	}
+
+	show_on_uncolonized = {
+		OR = {
+			uses_district_set = standard
+			uses_district_set = shattered_ring_world
+		}
+		exists = from
+		from = { is_wilderness_empire = no }
 		NOT = { has_modifier = resort_colony }
 	}
 
 	potential = {
-		uses_district_set = standard
-		NAND = {
-			exists = owner
-			owner = { is_subterranean_empire = yes }
+		OR = {
+			uses_district_set = standard
+			uses_district_set = shattered_ring_world
 		}
 		OR = {
 			NOT = { exists = owner }
@@ -139,13 +173,21 @@ district_mining = {
 		NOT = { has_modifier = resort_colony }
 	}
 
+	allow = {
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_carrier_flag = arcology_project_construction }
+		}
+	}
+
 	conversion_ratio = 1
 	convert_to = {
-		district_mining_uncapped
 		district_hollow_mountains
-		district_hollow_mountains_uncapped
 		district_nexus_2
 		district_hive_2
+		district_melting
+		district_ark_military
+		district_ark_forever_cruise
 	}
 
 	resources = {
@@ -174,18 +216,12 @@ district_mining = {
 				has_valid_civic = civic_agrarian_idyll
 			}
 		}
-		modifier = {
-			planet_housing_add = 300
-		}
+		planet_housing_add = 300
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			has_modifier = metal_planet
-		}
-		modifier = {
-			planet_housing_add = 500
-		}
+		planet_housing_add = 1
+		mult = modifier:mining_district_housing_add
 	}
 
 	triggered_planet_modifier = {
@@ -193,9 +229,7 @@ district_mining = {
 			exists = owner
 			owner = { is_gestalt = yes }
 		}
-		modifier = {
-			planet_housing_add = 100
-		}
+		planet_housing_add = 100
 	}
 
 	inline_script = {
@@ -210,12 +244,22 @@ district_mining = {
 		tech_mechanized_mining
 	}
 
-	ai_weight_coefficient = 0.8
+	show_tech_unlock_if = {
+		is_nomadic = no
+		is_wilderness_empire = no
+	}
+
+	ai_weight_coefficient = @rural_district_ai_coefficient
 }
 
 district_farming = {
+	shared_capacity_modifier = district_farming
 	expansion_planner = yes
 	base_buildtime = 240
+	overlay_icon = GFX_district_food
+	is_uncapped = {
+		is_farming_district_uncapped = yes
+	}
 
 	min_for_deposits_on_planet = 3
 	max_for_deposits_on_planet = 30
@@ -225,21 +269,19 @@ district_farming = {
 	}
 
 	show_on_uncolonized = {
+		OR = {
+			uses_district_set = standard
+			uses_district_set = shattered_ring_world
+		}
 		exists = from
 		from = { is_wilderness_empire = no }
-		uses_district_set = standard
 		NOT = { has_modifier = resort_colony }
 	}
 
 	potential = {
-		uses_district_set = standard
 		OR = {
-			NOT = { exists = owner }
-			NOT = { owner = { is_anglers_empire = yes } }
-			AND = {
-				owner = { is_anglers_empire = yes }
-				NOT = { is_planet_class = pc_ocean }
-			}
+			uses_district_set = standard
+			uses_district_set = shattered_ring_world
 		}
 		NOT = {
 			AND = {
@@ -260,12 +302,19 @@ district_farming = {
 		NOT = { has_modifier = resort_colony }
 	}
 
+	allow = {
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_carrier_flag = arcology_project_construction }
+		}
+	}
+
 	conversion_ratio = 1
 	convert_to = {
-		district_farming_uncapped
 		district_orchard_forests
-		district_orchard_forests_uncapped
+		district_nexus_3
 		district_hive_3
+		district_ark_basic
 	}
 
 	resources = {
@@ -324,7 +373,6 @@ district_farming = {
 			planet_housing_add = 400
 		}
 	}
-
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -360,6 +408,11 @@ district_farming = {
 		tech_industrial_farming
 	}
 
+	show_tech_unlock_if = {
+		is_nomadic = no
+		is_wilderness_empire = no
+	}
+
 	destroy_trigger = {
 		exists = owner
 		AND = {
@@ -368,5 +421,5 @@ district_farming = {
 		}
 	}
 
-	ai_weight_coefficient = 0.8
+	ai_weight_coefficient = @rural_district_ai_coefficient
 }
