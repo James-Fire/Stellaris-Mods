@@ -166,25 +166,19 @@ roci_uplink_workforce = {
 #Colony Scope
 #Calc for how much bonus automated workforce autofab uplink gives
 roci_uplink_workforce_bonus = {
-	base = $base_amount$
+	base = 0
 	modifier = {
- 		has_active_building = $building$
-		add = $building_amount$
+ 		owner = { is_gestalt = no }
+		add = modifier:job_$JOB$_automated_workforce_mult
  	}
 	modifier = {
- 		has_active_building = $building_2$
-		add = $building_amount_2$
+ 		owner = { is_gestalt = yes }
+		add = modifier:job_$GESTALT_JOB$_automated_workforce_mult
  	}
-	modifier = {
- 		owner = { has_active_tradition = tr_autofab_finish }
-		add = 0.25
- 	}
-	subtract = value:roci_uplink_workforce|base_amount|$base_amount$|building|$building$|building_amount|$building_amount$|building_2|$building_2$|building_amount_2|$building_amount_2$|
-	divide = 2
+	subtract = 1
 	min = 0
-	max = 1
 }
-#roci_uplink_workforce_bonus|base_amount|<number>|building|<building>|building_amount|<number>|building_2|<building>|building_amount_2|<number>|
+#roci_uplink_workforce_bonus|JOB|<job>|GESTALT_JOB|<gestalt job>|
 
 #Colony Scope
 #Count how many uplink buildings exist
