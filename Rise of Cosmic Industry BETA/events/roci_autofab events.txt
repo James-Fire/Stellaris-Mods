@@ -166,22 +166,32 @@ country_event = {
 					ethic_gestalt_consciousness = { }
 				}
 				capital_scope = {
-					set_planet_size = 25
 					add_autofab = yes
-					add_building = {
-						district = district_mining
-						zone = zone_minerals
-						building = building_autofab_mineral_uplink_2
-					}
 					add_building = {
 						district = district_generator
 						zone = zone_energy
 						building = building_autofab_energy_uplink_2
 					}
-					add_building = {
-						district = district_farming
-						zone = zone_food
-						building = building_autofab_food_uplink_2
+					if = {
+						limit = {
+							is_nomadic = yes
+						}
+						add_building = {
+							district = district_ark_basic
+							zone = zone_food
+							building = building_autofab_food_uplink_2
+						}
+					else = {
+						add_building = {
+							district = district_farming
+							zone = zone_food
+							building = building_autofab_food_uplink_2
+						}
+						add_building = {
+							district = district_mining
+							zone = zone_minerals
+							building = building_autofab_mineral_uplink_2
+						}
 					}
 					every_owned_pop_group = {
 						limit = {
@@ -215,19 +225,30 @@ country_event = {
 									}
 								}
 								add_building = {
-									district = district_mining
-									zone = zone_minerals
-									building = building_autofab_mineral_uplink_1
-								}
-								add_building = {
 									district = district_generator
 									zone = zone_energy
 									building = building_autofab_energy_uplink_1
 								}
-								add_building = {
-									district = district_farming
-									zone = zone_food
-									building = building_autofab_food_uplink_1
+								if = {
+									limit = {
+										is_nomadic = yes
+									}
+									add_building = {
+										district = district_ark_basic
+										zone = zone_food
+										building = building_autofab_food_uplink_1
+									}
+								else = {
+									add_building = {
+										district = district_farming
+										zone = zone_food
+										building = building_autofab_food_uplink_1
+									}
+									add_building = {
+										district = district_mining
+										zone = zone_minerals
+										building = building_autofab_mineral_uplink_1
+									}
 								}
 							}
 						}
@@ -240,19 +261,30 @@ country_event = {
 				}
 				capital_scope = {
 					add_building = {
-						district = district_mining
-						zone = zone_minerals
-						building = building_autofab_mineral_uplink_1
-					}
-					add_building = {
 						district = district_generator
 						zone = zone_energy
 						building = building_autofab_energy_uplink_1
 					}
-					add_building = {
-						district = district_farming
-						zone = zone_food
-						building = building_autofab_food_uplink_1
+					if = {
+						limit = {
+							is_nomadic = yes
+						}
+						add_building = {
+							district = district_ark_basic
+							zone = zone_food
+							building = building_autofab_food_uplink_1
+						}
+					else = {
+						add_building = {
+							district = district_farming
+							zone = zone_food
+							building = building_autofab_food_uplink_1
+						}
+						add_building = {
+							district = district_mining
+							zone = zone_minerals
+							building = building_autofab_mineral_uplink_1
+						}
 					}
 				}
 			}

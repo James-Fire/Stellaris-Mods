@@ -1,5 +1,4 @@
 base_buildtime = $BUILD_TIME$
-district_limit = 1
 category = pop_assembly
 
 building_sets = {
@@ -11,6 +10,7 @@ potential = {
 }
 
 allow = {
+	always = yes
 }
 
 destroy_trigger = {
