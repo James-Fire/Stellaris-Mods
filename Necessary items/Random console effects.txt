@@ -118,13 +118,11 @@ effect change_government = {
 
 effect every_country = { limit = { has_country_flag = copy_dest } copy_ethos_and_authority = FROM }
 
-effect while = {
-	count = 30
-	create_pop = {
-				species = owner_species
-				ethos = ethic_materialist
-			}
-}
+effect create_pop_group = {
+		species = owner_species
+		size = 2400
+		ethos = ethic_materialist
+	}
 
 effect add_modifier = {
 	modifier = galatron_naval_cap1

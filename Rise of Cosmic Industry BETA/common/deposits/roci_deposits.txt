@@ -31,24 +31,12 @@ b_exodus_stasis = {
 						NOT = { has_trait = trait_hive_mind }
 						is_robot_pop = no
 					}
-					root = {
-						create_pop = {
-							species = prev
-							ethos = random
-							size = 100
-						}
-					}
+					add_pop_amount = 100
 				}
 			}
 			else = {
 				random_owned_pop_group = {
-					root = {
-						create_pop = {
-							species = prev
-							ethos = random
-							size = 100
-						}
-					}
+					add_pop_amount = 100
 				}
 			}
 		}
