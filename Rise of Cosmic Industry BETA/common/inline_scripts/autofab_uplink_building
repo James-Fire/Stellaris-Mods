@@ -28,6 +28,26 @@ triggered_planet_modifier = {
 
 triggered_planet_modifier = {
 	potential = {
+		owner = {
+			is_gestalt = no
+			has_active_tradition = tr_autofab_finish
+		}
+	}
+	job_$JOB$_automated_workforce_mult = 0.25
+}
+
+triggered_planet_modifier = {
+	potential = {
+		owner = {
+			is_gestalt = yes
+			has_active_tradition = tr_autofab_finish
+		}
+	}
+	job_$GESTALT_JOB$_automated_workforce_mult = 0.25
+}
+
+triggered_planet_modifier = {
+	potential = {
 		owner = { is_gestalt = no }
 	}
 	job_$JOB$_automated_workforce_mult = $AMOUNT$

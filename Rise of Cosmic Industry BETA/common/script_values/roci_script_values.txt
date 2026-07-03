@@ -207,6 +207,11 @@ roci_uplink_workforce_cost = {
  	}
 }
 
+#Colony Scope
+roci_base_workforce = {
+	base = modifier:pop_bonus_workforce_mult
+}
+
 #Planet Scope
 autofab_uplink_upkeep = {
 	base = 3

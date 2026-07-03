@@ -9,12 +9,13 @@ autofab = {
 		}		
 	}
 	#Convert Job Efficiency into Automated Job Efficiency
-	#triggered_planet_modifier = {
-	#	modifier = {
-	#		bonus_automated_workforce_mult = 2
-	#		mult = modifier:
-	#	}
-	#}
+	triggered_planet_modifier = {
+		modifier = {
+			bonus_automated_workforce_mult = 1
+		}
+		mult = modifier:pop_bonus_workforce_mult
+	}
+	#Actual modifiers that isn't a fix for vanilla
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -157,7 +158,7 @@ autofab = {
 			owner = { has_technology = tech_housing_1 }
 		}
 		modifier = {
-			planet_max_districts_add = 1
+			bonus_automated_workforce_mult = 0.05
 		}
 	}
 	triggered_planet_modifier = {
@@ -166,7 +167,7 @@ autofab = {
 			owner = { has_technology = tech_housing_2 }
 		}
 		modifier = {
-			planet_max_districts_add = 1
+			bonus_automated_workforce_mult = 0.05
 		}
 	}
 	

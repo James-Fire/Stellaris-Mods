@@ -174,7 +174,7 @@ country_event = {
 					}
 					if = {
 						limit = {
-							is_nomadic = yes
+							root = { is_nomadic = yes }
 						}
 						add_building = {
 							district = district_ark_basic
@@ -267,7 +267,7 @@ country_event = {
 					}
 					if = {
 						limit = {
-							is_nomadic = yes
+							root = { is_nomadic = yes }
 						}
 						add_building = {
 							district = district_ark_basic
