@@ -52,8 +52,8 @@ mega_art_installation_0 = {
 		custom_tooltip = {
 			fail_text = "requires_no_existing_megastructure"
 			NOR = {
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				is_planet_class = pc_habitat
 				is_planet_class = pc_cosmogenesis_world
 			}
@@ -70,7 +70,7 @@ mega_art_installation_0 = {
 			}
 		}
 		custom_tooltip = {
-			fail_text = "requires_no_existing_megastructure"
+			fail_text = "requires_no_existing_mega_art_installation"
 			from = {
 				OR = {
 					is_ai = no
@@ -116,7 +116,7 @@ mega_art_installation_0 = {
 			}
 			custom_tooltip = {
 				fail_text = "requires_no_existing_megastructure"
-				NOT = { has_planet_flag = megastructure }
+				NOT = { has_carrier_flag = megastructure }
 			}
 		}
 	}

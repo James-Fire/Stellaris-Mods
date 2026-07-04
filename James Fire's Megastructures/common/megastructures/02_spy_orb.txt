@@ -56,8 +56,8 @@ spy_orb_0 = {
 		custom_tooltip = {
 			fail_text = "requires_no_existing_megastructure"
 			NOR = {
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				is_planet_class = pc_habitat
 				is_planet_class = pc_cosmogenesis_world
 			}
@@ -114,7 +114,7 @@ spy_orb_0 = {
 			}
 			custom_tooltip = {
 				fail_text = "requires_no_existing_megastructure"
-				NOT = { has_planet_flag = megastructure }
+				NOT = { has_carrier_flag = megastructure }
 			}
 		}
 	}
@@ -144,10 +144,7 @@ spy_orb_0 = {
 		modifier = {
 			factor = 2.0
 			from = {
-				OR = {
-					has_ethic = ethic_militarist
-					has_ethic = ethic_fanatic_militarist
-				}
+				is_militarist = yes
 			}
 		}
 	}

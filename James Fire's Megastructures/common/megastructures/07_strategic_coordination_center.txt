@@ -53,8 +53,8 @@ strategic_coordination_center_0 = {
 		custom_tooltip = {
 			fail_text = "requires_no_existing_megastructure"
 			NOR = {
-				has_planet_flag = megastructure
-				has_planet_flag = has_megastructure
+				has_carrier_flag = megastructure
+				has_carrier_flag = has_megastructure
 				is_planet_class = pc_habitat
 				is_planet_class = pc_cosmogenesis_world
 			}
@@ -111,7 +111,7 @@ strategic_coordination_center_0 = {
 			}
 			custom_tooltip = {
 				fail_text = "requires_no_existing_megastructure"
-				NOT = { has_planet_flag = megastructure }
+				NOT = { has_carrier_flag = megastructure }
 			}
 		}
 	}
@@ -198,7 +198,7 @@ strategic_coordination_center_1 = {
 	prerequisites = { "tech_strategic_coordination" }
 
 	country_modifier = {
-		country_naval_cap_add = 50
+		country_naval_cap_add = 200
 		country_starbase_capacity_add = 2
 		starbase_defense_platform_capacity_add = 4
 		ship_speed_mult = 0.05
@@ -257,7 +257,7 @@ strategic_coordination_center_2 = {
 	prerequisites = { "tech_strategic_coordination" }
 
 	country_modifier = {
-		country_naval_cap_add = 100
+		country_naval_cap_add = 200
 		country_starbase_capacity_add = 4
 		starbase_defense_platform_capacity_add = 8
 		ship_speed_mult = 0.10
@@ -316,7 +316,7 @@ strategic_coordination_center_3 = {
 	show_prereqs = yes
 
 	country_modifier = {
-		country_naval_cap_add = 150
+		country_naval_cap_add = 300
 		country_starbase_capacity_add = 6
 		starbase_defense_platform_capacity_add = 12
 		ship_speed_mult = 0.15
@@ -403,7 +403,7 @@ strategic_coordination_center_restored = {
 	}
 
 	country_modifier = {
-		country_naval_cap_add = 150
+		country_naval_cap_add = 300
 		country_starbase_capacity_add = 6
 		starbase_defense_platform_capacity_add = 12
 		ship_speed_mult = 0.15

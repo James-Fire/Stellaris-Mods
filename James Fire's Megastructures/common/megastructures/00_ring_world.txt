@@ -66,7 +66,7 @@ ring_world_1 = {
 			NOT = {
 				any_system_planet = {
 					AND = {
-						NOT = { has_planet_flag = habitat }
+						NOT = { has_carrier_flag = habitat }
 						colonizable_planet = yes
 					}
 				}
@@ -78,22 +78,8 @@ ring_world_1 = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_no_binary_trinary"
-			NOR = {
-				is_star_class = sc_binary_1
-				is_star_class = sc_binary_2
-				is_star_class = sc_binary_3
-				is_star_class = sc_binary_4
-				is_star_class = sc_binary_5
-				is_star_class = sc_binary_6
-				is_star_class = sc_binary_7
-				is_star_class = sc_binary_8
-				is_star_class = sc_binary_9
-				is_star_class = sc_binary_10
-				is_star_class = sc_trinary_1
-				is_star_class = sc_trinary_2
-				is_star_class = sc_trinary_3
-				is_star_class = sc_trinary_4
-			}
+			is_binary_star = no
+			is_trinary_star = no
 		}
 
 		custom_tooltip = {
@@ -115,6 +101,12 @@ ring_world_1 = {
 
 	placement_rules = {
 		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_no_protostar"
+				NOT = {
+					is_planet_class = pc_protostar
+				}
+			}
 			custom_tooltip = {
 				fail_text = "must_build_around_star"
 				is_star = yes
@@ -201,7 +193,7 @@ ring_world_2_intermediate = {
 		every_system_planet = {
 			limit = {
 				is_star = no
-				NOT = { has_planet_flag = habitat }
+				NOT = { has_carrier_flag = habitat }
 			}
 			remove_planet = yes
 		}
@@ -322,7 +314,7 @@ ring_world_3_intermediate = {
 					surveyor = FROM
 				}
 				set_all_comms_surveyed = yes
-				set_planet_flag = megastructure
+				set_carrier_flag = megastructure
 			}
 		}
 		spawn_planet = {
@@ -339,7 +331,7 @@ ring_world_3_intermediate = {
 					surveyor = FROM
 				}
 				set_all_comms_surveyed = yes
-				set_planet_flag = megastructure
+				set_carrier_flag = megastructure
 			}
 		}
 		spawn_planet = {
@@ -360,11 +352,11 @@ ring_world_3_intermediate = {
 				clear_blockers = yes
 				save_event_target_as = ring_section
 				trigger_megastructure_icon = yes
-				set_planet_flag = megastructure
+				set_carrier_flag = megastructure
 			}
 		}
 		fromfrom.planet = {
-			set_planet_flag = has_megastructure
+			set_carrier_flag = has_megastructure
 		}
 		remove_megastructure = fromfrom
 		if = {
@@ -508,7 +500,7 @@ ring_world_restored = {
 					surveyor = FROM
 				}
 				set_all_comms_surveyed = yes
-				set_planet_flag = megastructure
+				set_carrier_flag = megastructure
 			}
 		}
 		spawn_planet = {
@@ -526,7 +518,7 @@ ring_world_restored = {
 					surveyor = FROM
 				}
 				set_all_comms_surveyed = yes
-				set_planet_flag = megastructure
+				set_carrier_flag = megastructure
 			}
 		}
 		spawn_planet = {
@@ -547,7 +539,7 @@ ring_world_restored = {
 				clear_blockers = yes
 				save_event_target_as = ring_section
 				trigger_megastructure_icon = yes
-				set_planet_flag = megastructure
+				set_carrier_flag = megastructure
 			}
 		}
 		remove_megastructure = fromfrom
