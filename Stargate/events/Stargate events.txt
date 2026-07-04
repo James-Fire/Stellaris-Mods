@@ -44,7 +44,7 @@ country_event = {
 		set_variable = { which = stargate_owned_colonys value = 0 }
 		every_owned_colony = {
 			limit = {
-				num_pops > 0
+				sapient_pop_amount > 0
 			}
 			set_stargate_variables = yes
 			PREV = { change_variable = { which = stargate_owned_colonys value = 1 } }
@@ -52,7 +52,7 @@ country_event = {
 		every_owned_colony = {
 			limit = {
 				has_deposit = d_stargate
-				num_pops > 0
+				sapient_pop_amount > 0
 			}
 			PREV = { change_variable = { which = stargatecount value = 1 } }
 			if = {
@@ -202,7 +202,7 @@ country_event = {
 		every_owned_colony = {
 			limit = {
 				has_deposit = d_stargate
-				num_pops > 0
+				sapient_pop_amount > 0
 			}
 			set_variable = { which = accessible_internal_military_stargatecount value = ROOT.accessible_internal_military_stargatecount }
 			set_variable = { which = accessible_external_military_stargatecount value = ROOT.accessible_external_military_stargatecount }
@@ -215,7 +215,7 @@ country_event = {
 		every_owned_colony = {
 			limit = {
 				has_deposit = d_stargate
-				num_pops > 0
+				sapient_pop_amount > 0
 			}
 			if = {
 				limit = {
@@ -1354,37 +1354,12 @@ country_event = {
 				}
 				set_global_flag = stargate_seeding_completed
 				every_system = {
-					if = {
+					every_system_planet = { 
 						limit = {
-							any_system_planet = { is_colonizable = yes }	
+							can_have_seed_stargate = yes
 						}
-						every_system_planet = {
-							limit = {
-								is_colonizable = yes
-								can_have_seed_stargate = yes
-							}
-							set_carrier_flag = stargate_check
-							random_list = {
-								1 = {
-									add_stargate = yes
-								}
-								0 = { }
-							}
-						}
-					}
-					else = {
-						random_system_planet = { 
-							limit = {
-								can_have_seed_stargate = yes
-							}
-							set_carrier_flag = stargate_check
-							random_list = {
-								1 = {
-									add_stargate = yes
-								}
-								0 = { }
-							}
-						}
+						set_carrier_flag = stargate_check
+						add_stargate = yes
 					}
 				}
 			}

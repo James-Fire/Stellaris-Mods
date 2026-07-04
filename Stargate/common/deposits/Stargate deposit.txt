@@ -20,8 +20,8 @@ d_stargate = {
 	
 	planet_modifier = {
 		planet_stability_add = 5
-		planet_immigration_pull_mult = 0.1
-		planet_resettlement_unemployed_mult = 3.00
+		planet_resettlement_unemployed_mult = 3
+		planet_resettlement_mult = 3
 		planet_jobs_unity_produces_mult = 0.05
 	}
 	
@@ -34,7 +34,7 @@ d_stargate = {
 			}
 		}
 		modifier = {
-			job_stargate_manager_add = 1
+			job_stargate_manager_add = 100
 		}
 	}
 	triggered_planet_modifier = {
@@ -46,7 +46,7 @@ d_stargate = {
 			}
 		}
 		modifier = {
-			job_gestalt_stargate_manager_add = 1
+			job_gestalt_stargate_manager_add = 100
 		}
 	}
 	
@@ -144,6 +144,7 @@ d_stargate_external_civilian_network = {
 	}
 	
 	planet_modifier = {
+		trade_value_mult = 0.02
 	}
 	
 	triggered_planet_modifier = {
@@ -155,7 +156,6 @@ d_stargate_external_civilian_network = {
 		}
 		modifier = {	
 			planet_immigration_pull_add = 50
-			trade_value_mult = 0.02
 			planet_amenities_mult = 0.01
 		}
 	}
@@ -168,7 +168,6 @@ d_stargate_external_civilian_network = {
 			}
 		}
 		modifier = {
-			planet_jobs_simple_drone_produces_mult = 0.01
 			planet_amenities_no_happiness_mult = 0.01
 		}
 	}
@@ -209,7 +208,7 @@ d_stargate_external_military_network = {
 	planet_modifier = {
 	}
 	country_modifier = {
-		country_naval_cap_add = 1
+		country_naval_cap_add = 2
 	}
 }
 
