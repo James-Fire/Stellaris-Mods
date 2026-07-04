@@ -1,63 +1,128 @@
 # noscope
 hms_generator_cluster = {
-	random_system = {
+	if = {
+		#Hubs are randomly selected
 		limit = {
-			NOT = {
-				exists = space_owner
-			}
-			NOT = {
-				hms_isolated_system = yes
+			NOR = {
+				has_global_flag = hms_hub_home_system
+				has_global_flag = hms_hub_home_system_all
 			}
 		}
-		set_star_flag = hms_hyperlane_hub_primary
-		set_star_flag = hms_hyperlane_hub
-		log = "Primary Hyperlane Hub on \\[This.GetName]"
-		set_variable = {
-			which = hms_hubs
-			value = 1
-		}
-		set_variable = {
-			which = cluster_connection_range
-			value = 1
-		}
-		save_global_event_target_as = hms_hyperlane_hub_primary
-	}
-	while = {
-		count = 70
 		random_system = {
 			limit = {
 				NOT = {
-					has_star_flag = hms_hyperlane_hub
-				}
-				NOT = {
-					has_star_flag = sealed_system
-				}
-				NOT = {
 					exists = space_owner
 				}
-				closest_system = {
-					limit = {
-						has_star_flag = hms_hyperlane_hub
-					}
-					min_steps = 1
-					max_steps = 200
-					distance = {
-						source = prev
-						min_distance >= 80
-						max_distance <= 120
-						type = euclidean
-					}
+				NOT = {
+					hms_isolated_system = yes
 				}
 			}
+			set_star_flag = hms_hyperlane_hub_primary
 			set_star_flag = hms_hyperlane_hub
-			log = "Hyperlane Hub on \\[This.GetName]"
-			event_target:hms_hyperlane_hub_primary = {
-				change_variable = {
-					which = hms_hubs
-					value = 1
+			log = "Primary Hyperlane Hub on \\[This.GetName]"
+			set_variable = {
+				which = hms_hubs
+				value = 1
+			}
+			set_variable = {
+				which = cluster_connection_range
+				value = 1
+			}
+			save_global_event_target_as = hms_hyperlane_hub_primary
+		}
+		while = {
+			count = 70
+			random_system = {
+				limit = {
+					NOT = {
+						has_star_flag = hms_hyperlane_hub
+					}
+					NOT = {
+						has_star_flag = sealed_system
+					}
+					NOT = {
+						exists = space_owner
+					}
+					closest_system = {
+						limit = {
+							has_star_flag = hms_hyperlane_hub
+						}
+						min_steps = 1
+						max_steps = 200
+						distance = {
+							source = prev
+							min_distance >= 80
+							max_distance <= 120
+							type = euclidean
+						}
+					}
+				}
+				set_star_flag = hms_hyperlane_hub
+				log = "Hyperlane Hub on \\[This.GetName]"
+				event_target:hms_hyperlane_hub_primary = {
+					change_variable = {
+						which = hms_hubs
+						value = 1
+					}
 				}
 			}
 		}
+	}
+	else = {
+		#Hubs are home systems
+		every_country = {
+			limit = {
+				if = {
+					limit = {
+						has_global_flag = hms_hub_home_system
+					}
+					OR = {
+						is_country_type = default
+						is_country_type = fallen_empire
+					}	
+				}
+			}
+			capital_scope.solar_system? = {
+				set_star_flag = hms_hyperlane_hub
+				log = "Hyperlane Hub on \\[This.GetName]"
+				set_variable = {
+					which = hms_hubs
+					value = 1
+				}
+				owner = {
+					set_country_flag = encountered_first_gateway
+					add_seen_bypass_type = gateway
+				}
+			}
+		}
+		random_system = {
+			limit = {
+				has_star_flag = hms_hyperlane_hub
+			}
+			set_star_flag = hms_hyperlane_hub_primary
+			log = "Primary Hyperlane Hub on \\[This.GetName]"
+			set_variable = {
+				which = hms_hubs
+				value = 0
+			}
+			set_variable = {
+				which = cluster_connection_range
+				value = 1
+			}
+			save_global_event_target_as = hms_hyperlane_hub_primary
+			every_system = {
+				limit = {
+					has_star_flag = hms_hyperlane_hub
+				}
+				event_target:hms_hyperlane_hub_primary = {
+					change_variable = {
+						which = hms_hubs
+						value = 1
+					}
+				}
+			}
+		}
+		
 	}
 	log = "\\[event_target:hms_hyperlane_hub_primary.hms_hubs] Hyperlane Hubs"
 	log = "Remove all hyperlanes"
@@ -70,7 +135,7 @@ hms_generator_cluster = {
 }
 
 # noscope
-# ONLY WORK WITH DISABLED AI
+# ONLY WORK WITH DISABLED AI (When it was lasted tested in 3.10 or something)
 hms_generator_full = {
 	set_spawn_system_batch = begin
 	hms_utilities_clear_hyperlanes = yes

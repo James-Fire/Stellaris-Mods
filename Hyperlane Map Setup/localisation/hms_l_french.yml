@@ -1,14 +1,17 @@
-﻿l_french:
+﻿l_english:
     hyperlane_map_setup.dmm_name: "Hyperlane Map Setup"
-    HMS_HUB_WETWORK: "REPLACE_ME"
-    HMS_HUB_WETWORK_DESC: "REPLACE_ME"
+    HMS_HUB_NETWORK: "Hub Gateway"
+    HMS_HUB_NETWORK_DESC: "A network of gateways connecting the galaxies clusters."
+    hms_gateway: "Hub Gateway"
+    hms_gateway_DESC: "One node in the galactic-spanning network that connects all the clusters together."
     hms_menu.1.refresh: "REPLACE_ME"
     edict_hms_menu: "§HHMS§! §YMod Menu§!"
     edict_hms_menu_desc: "Open the HMS Mod Menu."
     #UI
     hms_generation_formula_title: "Generation Type"
     generation_options_title: "Generation Options"
-    hyperlane_manipulation_title: "Manipulation Options"
+    hyperlane_manipulation_title: "Manipulation"
+    hyperlane_manipulation_title_2: "Options"
     hyperlane_saving_title: "Save States"
 
     hms_menu.2.name: "Hyperlane Map Setup"
@@ -36,7 +39,7 @@
     hms_hub_hyperlanes: "Hub Hyperlanes"
     hms_hub_hyperlanes_tooltip: "This setting connects clusters through the hubs using hyperlanes."
     hms_hub_wormholes: "Hub Wormholes"
-    hms_hub_wormholes_tooltip: "This setting connects clusters through the hubs using Wormholes."
+    hms_hub_wormholes_tooltip: "This setting connects clusters using Wormholes. Wormholes are placed in the hubs and all adjacent systems."
     hms_hub_gateways: "Hub Gateway Network"
     hms_hub_gateways_tooltip: "This setting connects clusters through the hubs using a Gateway Network. The Gateways are active, but cannot be used until you have the Gateway Activation tech."
     hms_standard_hyperlanes: "Standard Hyperlanes"
@@ -50,6 +53,10 @@
     hms_hub_neutron_star_tooltip: "This setting turns all hubs into Neutron Stars."
     hms_hub_pulsar: "Hub: Pulsar"
     hms_hub_pulsar_tooltip: "This setting turns all hubs into Pulsars."
+    hms_hub_home_system: "Hub: Home Systems"
+    hms_hub_home_system_tooltip: "This setting makes all Default and Fallen Empire Home Systems hubs."
+    hms_hub_home_system_all: "Hub: Home Systems All"
+    hms_hub_home_system_all_tooltip: "This setting makes all Home Systems hubs."
 
     hms_cluster_hyperlanes_neighbour: "Cluster: Neighbours"
     hms_cluster_hyperlanes_neighbour_tooltip: "This setting has cluster systems connected to their immediate neighbours in the same cluster."
