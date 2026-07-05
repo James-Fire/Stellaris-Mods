@@ -67,11 +67,10 @@ kiyo_trade_add_ships_to_trade_route = {
 			any_owned_colony = {
 				prev = {
 					any_owned_fleet = {
-						has_fleet_flag = kiyo_trade_start@PREVPREV
-						any_owned_ship = { is_ship_size = kiyo_trade }
-						OR = {
+						has_fleet_flag = kiyo_trade_has_trade_route
+						any_owned_ship = { 
+							is_ship_size = kiyo_trade
 							check_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value < prev.kiyo_trade_max_cargo_ships_per_fleet }
-							has_fleet_flag = kiyo_event_trade_expired_cargo
 						}
 					}
 				}

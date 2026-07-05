@@ -165,7 +165,7 @@ building_autofab = {
 			owner = {
 				has_ascension_perk = ap_autofab
 				OR = {
-					has_origin = roci_origin_autofab
+					has_autofab_origin = yes
 					has_autofab_civic = yes
 					has_global_flag = autofab_for_all
 				}
@@ -179,7 +179,7 @@ building_autofab = {
 		potential = {
 			exists = owner
 			owner = {
-				has_origin = roci_origin_autofab
+				has_autofab_origin = yes
 				has_autofab_civic = yes
 			}
 		}

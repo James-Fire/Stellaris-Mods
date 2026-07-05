@@ -277,7 +277,7 @@
     
     roci_civic_autofab_tooltip_1:0 "Workers are unhappy in their occupation, as the population is ready to transfer production over to Automatic Factory Modules."
     roci_civic_autofab_tooltip_2:0 "If taken as a starting civic: You start with an Automatic Factory, and Level 1 Automatic Factory Uplink Buildings in each of the basic resource zones."
-    roci_civic_autofab_tooltip_3:0 "Using this in combination with the Origin makes the Automatic Factory give a §G10%§! bonus to automated workforce."
+    roci_civic_autofab_tooltip_3:0 "Using this in combination with an Origin that gives you the Automatic Factory, the Automatic Factory give a §G10%§! bonus to automated workforce."
     civic_tooltip_autofab_effects:0 "- $roci_civic_autofab_tooltip_1$ \n- $roci_civic_autofab_tooltip_2$ \n- $roci_civic_autofab_tooltip_3$\n- $autofab_script_replace$"
     roci_civic_autofab_desc: "Having recently achieved Automated Factory production, our society is ready to give up their burden."
     roci_civic_autofab:0 "Factory Automation"
@@ -292,7 +292,7 @@
     ap_autofab:0 "Automation Revolution"
     ap_autofab_desc:0 "Our society has progressed to the point where our population expects certain things, and are unwilling to do it themselves. Automated Factories can handle the required tasks."
     
-    can_use_autofab:0 "Unlock the ability to build Automated Factories on your planets, reducing your reliance on labour from people and machines. \nIf you have the Origin or Civic, this makes the Automatic Factory give §G+30%§! automated workforce efficiency instead."
+    can_use_autofab:0 "Unlock the ability to build Automated Factories on your planets, reducing your reliance on labour from people and machines. \nIf you have an Automatic Factory Origin or Civic, this makes the Automatic Factory give §G+30%§! automated workforce efficiency instead."
     
     autofab_script_replace: "§RThis Origin or Civic is replaced by script if Autofab is disabled after game start.§!"
     

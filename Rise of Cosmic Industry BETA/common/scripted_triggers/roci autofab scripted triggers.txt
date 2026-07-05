@@ -30,6 +30,13 @@ has_autofab_civic = {
 	}
 }
 
+has_autofab_origin = {
+	OR = {
+		has_origin = roci_origin_exodus_fleet
+		has_origin = roci_origin_autofab
+	}
+}
+
 can_build_autofab = { #Planet Scope
 	OR = {
 		has_carrier_flag = factory_autofab_construction_on
