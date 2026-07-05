@@ -144,11 +144,11 @@
     tradition_autofab_desc: "As our civilization grows, so too will the capability of our Factories."
     
     tr_autofab_adopt: "Automation"
-    tr_autofab_adopt_desc: "Factory Uplink Building Upkeep Per District: §G-1§! £energy£ Energy"
-    tr_autofab_finish_desc: "§G+25%§! Automation Bonus Workforce from Automatic Factory Deposit \n§G+25%§! Automation Workforce from level 3 Automatic Factory Uplinks"
+    tr_autofab_adopt_desc: "Automated Workforce Energy Upkeep: §G-10%§! £energy£ Energy"
+    tr_autofab_finish_desc: "Automation Engineer Jobs from Autofab Buildings: §G+500§! \n§G+25%§! Automation Workforce from Automatic Factory Uplinks"
     
     tr_autofab_infrastructure_support: "Infrastructure"
-    tr_autofab_infrastructure_support_desc: "The Automatic Factory deposit provides §G+2§! district slots."
+    tr_autofab_infrastructure_support_desc: "The Automatic Factory provides §G+2§! district slots."
     tr_autofab_infrastructure_support_delayed: "The Factory is capable of supporting some critical colony infrastructure. We should use this."
     tr_autofab_environmental_studies: "Environmentalist"
     tr_autofab_environmental_studies_desc: "§Y$MOD_POP_ENVIRONMENT_TOLERANCE$§! on planets with an Autofab increased by §G+5%§!."
@@ -157,7 +157,7 @@
     tr_autofab_networking_desc: "§Y$MOD_PLANET_CRIME_NO_HAPPINESS_ADD$§! is reduced by §G5%§! on planets with an Autofab."
     tr_autofab_networking_delayed: "Using Factory facilities to expand our network reduces deviant behaviour in nearby drones."
     tr_autofab_commercial_connections: "Factory Logistics"
-    tr_autofab_commercial_connections_desc: "§G+0.5§! £trade_value£ Trade Value per district on a planet with an Automatic Factory"
+    tr_autofab_commercial_connections_desc: "§G+1§! £trade_value£ Trade Value per 100 Automation Engineers"
     tr_autofab_commercial_connections_delayed: "Using the Factory to optimize and take over some of our logistics is bound to result in efficiencies."
     tr_autofab_pride: "Pride"
     tr_autofab_pride_desc: "£pop£ §Y$pop_citizen_happiness$§! on Planets with an Autofab: §G+5%§!"
@@ -166,7 +166,7 @@
     tr_autofab_services_desc: "§G+5%§! £mod_pop_amenities_usage_no_happiness_mult£ Amenities on planets with an Autofab"
     tr_autofab_services_delayed: "Using the Factory to provide some essential services can relieve the burden of normal service providers."
     tr_autofab_optimization: "Factory Optimization"
-    tr_autofab_optimization_desc: "Automated Bonus Workforce From Autofab: §G+5%§!\nFactory Uplinks Upkeep: §G-5%§!"
+    tr_autofab_optimization_desc: "Automation Engineer Jobs from Autofab Buildings: §G+100§!\nAutomated Workforce £energy£ Energy Upkeep: §G-5%§!"
     tr_autofab_optimization_delayed: "Optimizing the input/output of the Factory can save large amounts of resources, and increase production."
     
     tech_roci_autofab_uplinks: "Automatic Factory Uplinks"
@@ -174,18 +174,26 @@
   #Deposits
     autofab:0 "Automatic Factory"
     autofab_desc:0 "This planet's Automated Factory. Allows building Factory Uplinks."
+	
+    building_autofab:0 "Automatic Factory"
+    building_autofab_desc:0 "This planet's Automated Factory. Allows building Factory Uplinks."
     building_autofab_uplink_1: "Automatic Factory Connection"
     building_autofab_uplink_1_desc: "A link to the Automatic Factory, allowing it to interface and operate some of the infrastructure of this zone."
     building_autofab_uplink_2: "Automatic Factory Uplink"
     building_autofab_uplink_2_desc: "A stronger connection to the Automatic Factory, increasing how much of the zone's infrastructure can be automated."
     building_autofab_uplink_3: "Automatic Factory Core"
     building_autofab_uplink_3_desc: "A complete connection to the Automatic Factory, allowing maximum automation of this zone."
-    building_autofab_uplink_1_city: "Automatic Factory Connection"
-    building_autofab_uplink_1_city_desc: "A link to the Automatic Factory, allowing it to interface and operate some of the infrastructure of this zone."
-    building_autofab_uplink_2_city: "Automatic Factory Uplink"
-    building_autofab_uplink_2_city_desc: "A stronger connection to the Automatic Factory, increasing how much of the zone's infrastructure can be automated."
-    building_autofab_uplink_3_city: "Automatic Factory Core"
-    building_autofab_uplink_3_city_desc: "A complete connection to the Automatic Factory, allowing maximum automation of this zone."
+
+	job_roci_automation_engineer: "Automation Engineer"
+	job_roci_automation_engineer_plural: "Automation Engineers"
+	mod_job_roci_automation_engineer_add: "Automation Engineer Jobs"
+	job_roci_automation_engineer_desc: "Responsible for maintenance of the Automatic Factory Infrastructure"
+	job_roci_automation_gestalt_engineer: "Automation Drone"
+	job_roci_automation_gestalt_engineer_plural: "Automation Drones"
+	mod_job_roci_automation_gestalt_engineer_add: "Automation Drone Jobs"
+	job_roci_automation_gestalt_engineer_desc: "Responsible for maintenance of the Automatic Factory Infrastructure"
+	
+	roci_automation_engineer: "Automation Engineers"
   #Buildings
 	building_autofab_energy_uplink_1: "$building_autofab_uplink_1$"
 	building_autofab_energy_uplink_1_desc: "$building_autofab_uplink_1_desc$"
@@ -259,17 +267,17 @@
    
   #Origin and Civic
     origin_autofab_tooltip_1:0 "The living standards of your main species will be set to a high standard. Ethic specific ones are used first, then Social Welfare."
-    origin_autofab_tooltip_2:0 "You start with an Automatic Factory deposit, and Level 2 Automatic Factory Uplink Buildings in each of the basic resource zones."
+    origin_autofab_tooltip_2:0 "You start with an Automatic Factory, and Level 2 Automatic Factory Uplink Buildings in each of the basic resource zones."
     origin_autofab_tooltip_3:0 "You start with less £pop£ Pops, those that would have been working physical resource jobs removed."
     origin_autofab_tooltip_4:0 "£pop£ Pop Growth is slower, due to massive societal changes from living a life of luxury."
-    origin_autofab_tooltip_5:0 "Using this in combination with the Civic makes the Automatic Factory deposit give a §G10%§! bonus to automated workforce."
+    origin_autofab_tooltip_5:0 "Using this in combination with the Civic makes the Automatic Factory give a §G10%§! bonus to automated workforce."
     roci_origin_autofab:0 "Factory Automation"
     roci_origin_autofab_desc:0 "Ever since the Industrial Revolution, this species has been obsessed with increasing automation in their factories. Achieving fully automatic factories, in operation and expansion, has allowed them to greatly reduce the labour required by their species, and catapult themselves to spacefaring before the expected population levels."
     origin_tooltip_autofab_effects:0 "- $origin_autofab_tooltip_1$ \n- $origin_autofab_tooltip_2$ \n- $origin_autofab_tooltip_3$ \n- $origin_autofab_tooltip_4$ \n- $origin_autofab_tooltip_5$\n- $autofab_script_replace$"
     
     roci_civic_autofab_tooltip_1:0 "Workers are unhappy in their occupation, as the population is ready to transfer production over to Automatic Factory Modules."
-    roci_civic_autofab_tooltip_2:0 "You start with an Automatic Factory deposit, and Level 1 Automatic Factory Uplink Buildings in each of the basic resource zones."
-    roci_civic_autofab_tooltip_3:0 "Using this in combination with the Origin makes the Automatic Factory deposit give a §G10%§! bonus to automated workforce."
+    roci_civic_autofab_tooltip_2:0 "If taken as a starting civic: You start with an Automatic Factory, and Level 1 Automatic Factory Uplink Buildings in each of the basic resource zones."
+    roci_civic_autofab_tooltip_3:0 "Using this in combination with the Origin makes the Automatic Factory give a §G10%§! bonus to automated workforce."
     civic_tooltip_autofab_effects:0 "- $roci_civic_autofab_tooltip_1$ \n- $roci_civic_autofab_tooltip_2$ \n- $roci_civic_autofab_tooltip_3$\n- $autofab_script_replace$"
     roci_civic_autofab_desc: "Having recently achieved Automated Factory production, our society is ready to give up their burden."
     roci_civic_autofab:0 "Factory Automation"
@@ -284,9 +292,22 @@
     ap_autofab:0 "Automation Revolution"
     ap_autofab_desc:0 "Our society has progressed to the point where our population expects certain things, and are unwilling to do it themselves. Automated Factories can handle the required tasks."
     
-    can_use_autofab:0 "Unlock the ability to build Automated Factories on your planets, reducing your reliance on labour from people and machines. \nIf you have the Origin or Civic, this makes the Automatic Factory deposit give §G+30%§! automated workforce efficiency instead."
+    can_use_autofab:0 "Unlock the ability to build Automated Factories on your planets, reducing your reliance on labour from people and machines. \nIf you have the Origin or Civic, this makes the Automatic Factory give §G+30%§! automated workforce efficiency instead."
     
     autofab_script_replace: "§RThis Origin or Civic is replaced by script if Autofab is disabled after game start.§!"
+    
+
+   councilor_automation_minister: "Automation Minister"
+   councilor_automation_minister_female: "$councilor_automation_minister$"
+   councilor_automation_minister_desc: "The $TITLE$ is in charge of ensuring our Automatic Factories are working at peak efficiency."
+   councilor_automation_executive: "Automation Executive"
+   councilor_automation_executive_female: "$councilor_automation_executive$"
+   councilor_automation_executive_desc: "The $TITLE$ is in charge of ensuring our Automatic Factories are working at peak profitability."
+   
+   councilor_automation_machine: "Automation Directive"
+   councilor_automation_machine_desc: "The $TITLE$ is in charge of ensuring our Automatic Factories are working at peak efficiency."
+   councilor_automation_hive: "Automation Node"
+   councilor_automation_hive_desc: "The $TITLE$ is in charge of ensuring our Automatic Factories are working at peak efficiency."
     
   #Events
     autofab.2.name: "Factory For Everyone"

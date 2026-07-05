@@ -87,7 +87,7 @@ roci_origin_autofab = {
 
 roci_civic_autofab = {
 	description = "civic_tooltip_autofab_effects"
-	modification = no
+	modification = yes
 	
 	playable = {
 		always = yes
@@ -97,6 +97,8 @@ roci_civic_autofab = {
 		authority = { 
 			NOR = {
 				value = auth_corporate
+				value = auth_bugged_corporate_democratic
+				value = auth_bugged_corporate_imperial
 				value = auth_hive_mind
 				value = auth_machine_intelligence
 			}
@@ -118,7 +120,7 @@ roci_civic_autofab = {
 }
 roci_civic_autofab_machine = {
 	description = "civic_tooltip_autofab_effects"
-	modification = no
+	modification = yes
 	
 	playable = {
 		always = yes
@@ -142,7 +144,7 @@ roci_civic_autofab_machine = {
 }
 roci_civic_autofab_hive = {
 	description = "civic_tooltip_autofab_effects"
-	modification = no
+	modification = yes
 	
 	playable = {
 		always = yes
@@ -166,7 +168,7 @@ roci_civic_autofab_hive = {
 }
 roci_civic_autofab_megacorp = {
 	description = "civic_tooltip_autofab_effects"
-	modification = no
+	modification = yes
 	
 	playable = {
 		always = yes

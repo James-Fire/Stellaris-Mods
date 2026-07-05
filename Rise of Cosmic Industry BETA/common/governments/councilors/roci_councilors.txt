@@ -1,0 +1,28 @@
+councilor_automation_minister = {
+	civic = roci_civic_autofab
+	
+	inline_script = {
+		script = roci_councilors
+	}
+}
+councilor_automation_directive = {
+	civic = roci_civic_autofab_machine
+	
+	inline_script = {
+		script = roci_councilors
+	}
+}
+councilor_automation_node = {
+	civic = roci_civic_autofab_hive
+	
+	inline_script = {
+		script = roci_councilors
+	}
+}
+councilor_automation_executive = {
+	civic = roci_civic_autofab_megacorp
+	
+	inline_script = {
+		script = roci_councilors
+	}
+}

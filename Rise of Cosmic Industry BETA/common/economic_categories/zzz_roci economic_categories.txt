@@ -59,7 +59,19 @@ planet_automated_jobs = {
 	}
 }
 planet_autofab = {
-	parent = planet_technician
+	parent = planet_buildings
+
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+roci_automation_engineer = {
+	parent = planet_jobs
 
 	generate_mult_modifiers = {
 		produces
@@ -71,7 +83,7 @@ planet_autofab = {
 	}
 }
 planet_autofab_uplink = {
-	parent = colony
+	parent = planet_buildings
 
 	generate_mult_modifiers = {
 		produces

@@ -3,12 +3,242 @@
 @Auto_Lvl_3 = 0.75
 @Auto_Lvl_4 = 1
 
-@EnergyUpkeep1 = 5
-@EnergyUpkeep2 = 10
-@EnergyUpkeep3 = 15
-@MineralsUpkeep1 = 1
-@MineralsUpkeep2 = 2
-@MineralsUpkeep3 = 3
+@EnergyUpkeep1 = 3
+@EnergyUpkeep2 = 6
+@EnergyUpkeep3 = 9
+
+building_autofab = {
+	planet_limit = 1
+	icon = "building_autofab"
+	base_buildtime = 480
+	category = manufacturing
+
+	building_sets = {
+		urban
+		factory
+		foundry
+	}
+
+	potential = {
+		owner = { can_use_autofab = yes }
+	}
+
+	allow = {
+		always = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { is_wilderness_empire = yes }
+	}
+	resources = {
+		category = planet_autofab
+		cost = {
+			energy = @autofab_cost
+			minerals = @autofab_cost
+			alloys = @autofaballoycost 
+		}
+		produces = {
+		}		
+	}
+	#Convert Job Efficiency into Automated Job Efficiency
+	triggered_planet_modifier = {
+		modifier = {
+			bonus_automated_workforce_mult = 1
+		}
+		mult = value:roci_bonus_workforce
+	}
+	#Jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_roci_automation_engineer_add = 100
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			job_roci_automation_engineer_gestalt_add = 100
+		}
+	}
+	#Automation Minister Jobs
+	triggered_planet_modifier = {
+		modifier = {
+			job_roci_automation_engineer_add = 100
+		}
+		mult = value:roci_automation_minister_10
+	}
+	#Actual modifiers that isn't a fix for vanilla
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_autofab_infrastructure_support
+			}
+		}
+		modifier = {
+			planet_max_districts_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_autofab_environmental_studies
+			}
+		}
+		modifier = {
+			pop_environment_tolerance = 0.05
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				has_active_tradition = tr_autofab_finish
+			}
+		}
+		modifier = {
+			job_roci_automation_engineer_add = 500
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				has_active_tradition = tr_autofab_finish
+			}
+		}
+		modifier = {
+			job_roci_automation_engineer_gestalt_add = 500
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_autofab_networking
+			}
+		}
+		modifier = {
+			planet_crime_no_happiness_mult = -0.05
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_autofab_pride
+			}
+		}
+		modifier = {
+			pop_happiness = 0.05
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_autofab_services
+			}
+		}
+		modifier = {
+			planet_amenities_no_happiness_mult = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_ascension_perk = ap_autofab
+				OR = {
+					has_origin = roci_origin_autofab
+					has_autofab_civic = yes
+					has_global_flag = autofab_for_all
+				}
+			}
+		}
+		modifier = {
+			bonus_automated_workforce_mult = 0.3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_origin = roci_origin_autofab
+				has_autofab_civic = yes
+			}
+		}
+		modifier = {
+			bonus_automated_workforce_mult = 0.1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					has_active_tradition = tr_prosperity_administrative_operations
+					#has_active_tradition = tr_prosperity_administrative_operations_hive
+					#has_active_tradition = tr_prosperity_administrative_operations_machine
+				}
+			}
+		}
+		modifier = {
+			planet_automated_jobs_energy_upkeep_mult = -0.1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					has_valid_civic = civic_functional_architecture
+					has_valid_civic = civic_machine_builder
+				}
+			}
+		}
+		modifier = {
+			planet_automated_jobs_energy_upkeep_mult = -0.1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_housing_1 }
+		}
+		modifier = {
+			bonus_automated_workforce_mult = 0.05
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_housing_2 }
+		}
+		modifier = {
+			bonus_automated_workforce_mult = 0.05
+		}
+	}
+	on_built = {
+		hidden_effect = { remove_deposit = autofab }
+	}
+}
 
 building_autofab_energy_uplink_1 = {
 	district_limit = 1
@@ -24,7 +254,6 @@ building_autofab_energy_uplink_1 = {
 		JOB = technician
 		GESTALT_JOB = technician_drone
 		ENERGYUPKEEP = @EnergyUpkeep1
-		MINERALUPKEEP = @MineralsUpkeep1
 	}
 }
 building_autofab_energy_uplink_2 = {
@@ -41,7 +270,6 @@ building_autofab_energy_uplink_2 = {
 		JOB = technician
 		GESTALT_JOB = technician_drone
 		ENERGYUPKEEP = @EnergyUpkeep2
-		MINERALUPKEEP = @MineralsUpkeep2
 	}
 }
 building_autofab_energy_uplink_3 = {
@@ -55,7 +283,6 @@ building_autofab_energy_uplink_3 = {
 		JOB = technician
 		GESTALT_JOB = technician_drone
 		ENERGYUPKEEP = @EnergyUpkeep3
-		MINERALUPKEEP = @MineralsUpkeep3
 	}
 }
 
@@ -73,7 +300,6 @@ building_autofab_mineral_uplink_1 = {
 		JOB = miner
 		GESTALT_JOB = mining_drone
 		ENERGYUPKEEP = @EnergyUpkeep1
-		MINERALUPKEEP = @MineralsUpkeep1
 	}
 }
 building_autofab_mineral_uplink_2 = {
@@ -90,7 +316,6 @@ building_autofab_mineral_uplink_2 = {
 		JOB = miner
 		GESTALT_JOB = mining_drone
 		ENERGYUPKEEP = @EnergyUpkeep2
-		MINERALUPKEEP = @MineralsUpkeep2
 	}
 }
 building_autofab_mineral_uplink_3 = {
@@ -104,7 +329,6 @@ building_autofab_mineral_uplink_3 = {
 		JOB = miner
 		GESTALT_JOB = mining_drone
 		ENERGYUPKEEP = @EnergyUpkeep3
-		MINERALUPKEEP = @MineralsUpkeep3
 	}
 }
 
@@ -122,7 +346,6 @@ building_autofab_food_uplink_1 = {
 		JOB = farmer
 		GESTALT_JOB = agri_drone
 		ENERGYUPKEEP = @EnergyUpkeep1
-		MINERALUPKEEP = @MineralsUpkeep1
 	}
 }
 building_autofab_food_uplink_2 = {
@@ -139,7 +362,6 @@ building_autofab_food_uplink_2 = {
 		JOB = farmer
 		GESTALT_JOB = agri_drone
 		ENERGYUPKEEP = @EnergyUpkeep2
-		MINERALUPKEEP = @MineralsUpkeep2
 	}
 }
 building_autofab_food_uplink_3 = {
@@ -153,7 +375,6 @@ building_autofab_food_uplink_3 = {
 		JOB = farmer
 		GESTALT_JOB = agri_drone
 		ENERGYUPKEEP = @EnergyUpkeep3
-		MINERALUPKEEP = @MineralsUpkeep3
 	}
 }
 
@@ -171,7 +392,6 @@ building_autofab_factory_uplink_1 = {
 		JOB = artisan
 		GESTALT_JOB = artisan_drone
 		ENERGYUPKEEP = @EnergyUpkeep1
-		MINERALUPKEEP = @MineralsUpkeep1
 	}
 }
 building_autofab_factory_uplink_2 = {
@@ -188,7 +408,6 @@ building_autofab_factory_uplink_2 = {
 		JOB = artisan
 		GESTALT_JOB = artisan_drone
 		ENERGYUPKEEP = @EnergyUpkeep2
-		MINERALUPKEEP = @MineralsUpkeep2
 	}
 }
 building_autofab_factory_uplink_3 = {
@@ -202,7 +421,6 @@ building_autofab_factory_uplink_3 = {
 		JOB = artisan
 		GESTALT_JOB = artisan_drone
 		ENERGYUPKEEP = @EnergyUpkeep3
-		MINERALUPKEEP = @MineralsUpkeep3
 	}
 }
 
@@ -220,7 +438,6 @@ building_autofab_foundry_uplink_1 = {
 		JOB = foundry
 		GESTALT_JOB = fabricator
 		ENERGYUPKEEP = @EnergyUpkeep1
-		MINERALUPKEEP = @MineralsUpkeep1
 	}
 }
 building_autofab_foundry_uplink_2 = {
@@ -237,7 +454,6 @@ building_autofab_foundry_uplink_2 = {
 		JOB = foundry
 		GESTALT_JOB = fabricator
 		ENERGYUPKEEP = @EnergyUpkeep2
-		MINERALUPKEEP = @MineralsUpkeep2
 	}
 }
 building_autofab_foundry_uplink_3 = {
@@ -251,6 +467,5 @@ building_autofab_foundry_uplink_3 = {
 		JOB = foundry
 		GESTALT_JOB = fabricator
 		ENERGYUPKEEP = @EnergyUpkeep3
-		MINERALUPKEEP = @MineralsUpkeep3
 	}
 }

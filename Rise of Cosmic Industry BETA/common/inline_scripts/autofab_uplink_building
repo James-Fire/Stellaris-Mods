@@ -1,5 +1,5 @@
 base_buildtime = $BUILD_TIME$
-category = pop_assembly
+category = manufacturing
 
 building_sets = {
 	$BUILDING_SET$
@@ -18,6 +18,62 @@ destroy_trigger = {
 	owner = { is_wilderness_empire = yes }
 }
 
+#Jobs
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+		}
+	}
+	modifier = {
+		job_roci_automation_engineer_add = 100
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+		}
+	}
+	modifier = {
+		job_roci_automation_engineer_gestalt_add = 100
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+			has_active_tradition = tr_autofab_finish
+		}
+	}
+	modifier = {
+		job_roci_automation_engineer_add = 500
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+			has_active_tradition = tr_autofab_finish
+		}
+	}
+	modifier = {
+		job_roci_automation_engineer_gestalt_add = 500
+	}
+}
+#Automation Minister Jobs
+triggered_planet_modifier = {
+	modifier = {
+		job_roci_automation_engineer_add = 100
+	}
+	mult = value:roci_automation_minister_10
+}
+
+#Other Modifiers
 triggered_planet_modifier = {
 	potential = {
 		owner = { is_gestalt = no }
@@ -74,6 +130,5 @@ resources = {
 	}
 	upkeep = {
 		energy = $ENERGYUPKEEP$
-		minerals = $MINERALUPKEEP$
 	}
 }

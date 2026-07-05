@@ -1,0 +1,14 @@
+leader_class = { official scientist }
+is_leader_possible = {
+	OR = {
+		leader_class = scientist
+		leader_class = official
+	}
+}
+modifier = {
+	planet_automated_jobs_energy_upkeep_mult = 0.025
+}
+icon = "GFX_icon_councilor_ruler"
+ai_hiring_weight = {
+	inline_script = councilor_leader_weights
+}

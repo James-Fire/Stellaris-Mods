@@ -66,13 +66,13 @@ country_has_minor_colonies_building = {
 log_realdev = {
 	OR = {
 		has_global_flag = realdev_logging
-		AND = {
-			is_scope_type = country
+		if = {
+			limit = { is_scope_type = country }
 			has_country_flag = realdev_logging
 		}
-		AND = {
-			is_scope_type = planet
-			has_planet_flag = realdev_logging
+		else_if = {
+			limit = { is_scope_type = planet }
+			has_colony_flag = realdev_logging
 		}
 	}
 }

@@ -419,9 +419,11 @@ colony_event = {
 		#Include Bonus from orbiting Construction Ships
 		if = {
 			limit = {
-				count_fleet_in_orbit = {
-					count > 0
-					limit = { any_owned_ship = { is_ship_size = constructor } }
+				planet = {
+					count_fleet_in_orbit = {
+						count > 0
+						limit = { any_owned_ship = { is_ship_size = constructor } }
+					}
 				}
 			}
 			set_variable = { which = realdev_construction_ship_industry value = 25 }
@@ -937,23 +939,7 @@ country_event = {
 				limit = {
 					NOT = { has_global_flag = realdev_ignore_assembly }
 				}
-				if = {
-					limit = {
-						bonus_production_active = no
-					}
-					add_modifier = {
-						modifier = realdev_planet_assembly
-						multiplier = realdev_assembly_speed
-						days = 30
-					}
-				}
-				else = {
-					add_modifier = {
-						modifier = realdev_planet_job_output
-						multiplier = realdev_assembly_speed
-						days = 30
-					}
-				}
+				production_boost_update = yes
 			}
 			reset_realdev_variables = yes
 		}

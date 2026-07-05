@@ -1,6 +1,12 @@
 building_roci_infrastructure_construction = {
 	base_buildtime = 180
 	category = manufacturing
+	
+	building_sets = {
+		urban
+		foundry
+		factory
+	}
 
 	potential = {
 		NOT = { has_global_flag = no_realdev }
@@ -160,6 +166,12 @@ building_roci_infrastructure_construction_2 = {
 	base_buildtime = 180
 	can_build = no
 	category = manufacturing
+	
+	building_sets = {
+		urban
+		foundry
+		factory
+	}
 
 	potential = {
 		NOT = { has_global_flag = no_realdev }
@@ -293,6 +305,12 @@ building_roci_infrastructure_construction_3 = {
 	base_buildtime = 180
 	can_build = no
 	category = manufacturing
+	
+	building_sets = {
+		urban
+		foundry
+		factory
+	}
 
 	potential = {
 		NOT = { has_global_flag = no_realdev }

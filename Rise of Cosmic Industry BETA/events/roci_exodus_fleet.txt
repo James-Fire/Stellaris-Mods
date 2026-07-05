@@ -696,7 +696,7 @@ country_event = {
 			}
 			while = {
 				count = 9
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 					ethos = random
 					size = 50

@@ -25,7 +25,7 @@ set_realdev_target = {
 		limit = {
 			log_realdev = yes
 		}
-		log = "Realdev set Target at \[this.realdev_ip_target] on \[This.GetName] for \[Owner.GetName]"
+		log = "Realdev set Target at \\[this.realdev_ip_target] on \\[This.GetName] for \\[Owner.GetName]"
 	}
 }
 
@@ -54,8 +54,8 @@ set_realdev_planet_variables = {
 			set_variable = { which = realdev_assembly_cap value = 300 }
 		}
 	}
-	set_planet_flag = realdev_variables_set
-	set_planet_flag = realdev_target_country
+	set_carrier_flag = realdev_variables_set
+	set_carrier_flag = realdev_target_country
 	set_variable = { which = realdev_ip_target_display value = realdev_ip_target }
 }
 
@@ -111,4 +111,26 @@ set_realdev_country_variables = {
 
 log_realdev_variables = {
 
+}
+
+production_boost_update = {
+	multiply_variable = { which = realdev_production_boost value = 0.9 } #Loses 10% effectiveness
+	if = {
+		limit = {
+			bonus_production_active = no
+		}
+		add_modifier = {
+			modifier = realdev_planet_assembly
+			multiplier = realdev_assembly_speed
+			days = 30
+		}
+	}
+	else = {
+		add_variable = { which = realdev_production_boost value = realdev_assembly_speed }
+		add_modifier = {
+			modifier = realdev_planet_job_output
+			multiplier = realdev_production_boost
+			days = 30
+		}
+	}
 }

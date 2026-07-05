@@ -182,6 +182,16 @@ roci_uplink_workforce_bonus = {
 #roci_uplink_workforce_bonus|JOB|<job>|GESTALT_JOB|<gestalt job>|
 
 #Colony Scope
+#
+roci_bonus_workforce = {
+	base = 0
+	add = realdev_production_boost
+	divide = 2000
+	subtract = modifier:pop_bonus_workforce_mult
+	mult = -1
+	min = 0
+}
+#Colony Scope
 #Count how many uplink buildings exist
 roci_uplink_workforce_cost = {
 	base = 1
@@ -208,8 +218,44 @@ roci_uplink_workforce_cost = {
 }
 
 #Colony Scope
-roci_base_workforce = {
-	base = modifier:pop_bonus_workforce_mult
+#Return 1 if any of these councilors are above level 10
+roci_automation_minister_10 = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = get_councilor_level
+		trigger_scope = owner
+		parameters = {
+			type = councilor_automation_minister
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = get_councilor_level
+		trigger_scope = owner
+		parameters = {
+			type = councilor_automation_directive
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = get_councilor_level
+		trigger_scope = owner
+		parameters = {
+			type = councilor_automation_node
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = get_councilor_level
+		trigger_scope = owner
+		parameters = {
+			type = councilor_automation_executive
+		}
+		mode = add
+	}
+	subtract = 10
+	min = 0
+	max = 1
 }
 
 #Planet Scope

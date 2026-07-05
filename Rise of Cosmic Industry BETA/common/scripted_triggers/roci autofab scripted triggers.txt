@@ -60,6 +60,7 @@ has_autofab = {
 	OR = {
 		has_deposit = autofab
 		has_carrier_flag = has_autofab
+		has_active_building = building_autofab
 	}
 }
 
@@ -87,7 +88,7 @@ has_energy_uplink = {
 	}
 }
 
-has_cgs_uplink = {
+has_cg_uplink = {
 	OR = {
 		has_active_building = building_autofab_factory_uplink_1
 		has_active_building = building_autofab_factory_uplink_2

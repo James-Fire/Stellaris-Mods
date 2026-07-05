@@ -1,0 +1,77 @@
+roci_automation_engineer = {
+	category = specialist
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible_precalc = can_fill_specialist_job
+
+	planet_modifier = {
+		bonus_automated_workforce_mult = 0.02
+	}
+
+	resources = {
+		category = roci_automation_engineer
+		produces = {
+			unity = 1
+		}
+		produces = {
+			trigger = {
+				owner = { has_active_tradition = tr_autofab_commercial_connections }
+			}
+			trade = 1
+		}
+		upkeep = {
+			energy = 0.5
+			trade = 0.5
+			alloys = 1
+		}
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+	}
+}
+
+roci_automation_engineer_gestalt = {
+	category = complex_drone
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+	
+	resources = {
+		category = roci_automation_engineer
+		produces = {
+			unity = 1
+		}
+		produces = {
+			trigger = {
+				owner = { has_active_tradition = tr_autofab_commercial_connections }
+			}
+			trade = 1
+		}
+		upkeep = {
+			energy = 0.5
+			trade = 0.5
+			alloys = 1
+		}
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	planet_modifier = {
+		bonus_automated_workforce_mult = 0.02
+	}
+
+	weight = {
+		weight = @complex_drone_job_weight
+	}
+}
