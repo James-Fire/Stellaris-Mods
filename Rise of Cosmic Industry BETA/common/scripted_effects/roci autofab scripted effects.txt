@@ -2,9 +2,9 @@
 add_autofab = {
 	if = {
 		limit = {
-			NOT = { has_deposit = autofab }
+			NOT = { has_building = building_autofab }
 		}
-		add_deposit = autofab
+		add_building = building_autofab
 	}
 	set_carrier_flag = has_autofab
 }

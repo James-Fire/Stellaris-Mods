@@ -1,0 +1,144 @@
+exodus_random_boon_modifiers = {
+	while = {
+		limit = {
+			check_variable = { which = ExodusModifiers value > 0 }
+		}
+		random_list = {
+			1 = {
+				modifier = {
+					factor = 0
+					has_planet_modifier = pm_strong_magnetic_field
+				}
+				modifier = {
+					factor = 0
+					check_variable = { which = ExodusModifiers value < 1 }
+				}
+				add_modifier = {
+					modifier = strong_magnetic_field
+					days = -1
+				}
+				change_variable = { which = ExodusModifiers value = -1 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_planet_modifier = pm_abundant_geothermal_activity
+				}
+				modifier = {
+					factor = 0
+					check_variable = { which = ExodusModifiers value < 2 }
+				}
+				add_modifier = {
+					modifier = abundant_geothermal_activity
+					days = -1
+				}
+				change_variable = { which = ExodusModifiers value = -2 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_planet_modifier = pm_mineral_rich
+				}
+				modifier = {
+					factor = 0
+					check_variable = { which = ExodusModifiers value < 2 }
+				}
+				add_modifier = {
+					modifier = mineral_rich
+					days = -1
+				}
+				change_variable = { which = ExodusModifiers value = -2 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_planet_modifier = pm_ultra_rich
+				}
+				modifier = {
+					factor = 0
+					check_variable = { which = ExodusModifiers value < 3 }
+				}
+				add_modifier = {
+					modifier = ultra_rich
+					days = -1
+				}
+				change_variable = { which = ExodusModifiers value = -3 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_planet_modifier = pm_subterranean_wildlife
+				}
+				modifier = {
+					factor = 0
+					check_variable = { which = ExodusModifiers value < 3 }
+				}
+				add_modifier = {
+					modifier = subterranean_wildlife
+					days = -1
+				}
+				change_variable = { which = ExodusModifiers value = -3 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_planet_modifier = pm_asteroid_belt
+				}
+				modifier = {
+					factor = 0
+					check_variable = { which = ExodusModifiers value < 2 }
+				}
+				add_modifier = {
+					modifier = asteroid_belt
+					days = -1
+				}
+				change_variable = { which = ExodusModifiers value = -2 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_planet_modifier = pm_lush
+				}
+				modifier = {
+					factor = 0
+					check_variable = { which = ExodusModifiers value < 2 }
+				}
+				add_modifier = {
+					modifier = lush_planet
+					days = -1
+				}
+				change_variable = { which = ExodusModifiers value = -2 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_planet_modifier = pm_rich_mircoflora
+				}
+				modifier = {
+					factor = 0
+					check_variable = { which = ExodusModifiers value < 2 }
+				}
+				add_modifier = {
+					modifier = rich_mircoflora
+					days = -1
+				}
+				change_variable = { which = ExodusModifiers value = -2 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_planet_modifier = pm_natural_beauty
+				}
+				modifier = {
+					factor = 0
+					check_variable = { which = ExodusModifiers value < 1 }
+				}
+				add_modifier = {
+					modifier = natural_beauty
+					days = -1
+				}
+				change_variable = { which = ExodusModifiers value = -1 }
+			}
+		}
+	}
+}

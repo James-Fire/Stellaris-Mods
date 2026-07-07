@@ -177,6 +177,7 @@ roci_uplink_workforce_bonus = {
 		add = modifier:job_$GESTALT_JOB$_automated_workforce_mult
  	}
 	subtract = 1
+	divide = 4
 	min = 0
 }
 #roci_uplink_workforce_bonus|JOB|<job>|GESTALT_JOB|<gestalt job>|
