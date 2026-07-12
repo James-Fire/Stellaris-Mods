@@ -21,7 +21,7 @@ roci_automation_engineer = {
 		}
 		produces = {
 			trigger = {
-				owner = { has_active_tradition = tr_autofab_commercial_connections }
+				owner? = { has_active_tradition = tr_autofab_commercial_connections }
 			}
 			trade = 1
 		}
@@ -54,7 +54,7 @@ roci_automation_engineer_gestalt = {
 		}
 		produces = {
 			trigger = {
-				owner = { has_active_tradition = tr_autofab_commercial_connections }
+				owner? = { has_active_tradition = tr_autofab_commercial_connections }
 			}
 			trade = 1
 		}

@@ -24,9 +24,8 @@ fleet_event = {
 			has_fleet_flag = kiyo_trade_start@ORBIT
 			has_fleet_flag = kiyo_trade_has_trade_route
 		}
-		#Trade Fleet must have an origin planet
 
-		#exists = event_target:kiyo_trade_start@this
+		#Trade Fleet must have an origin planet
 		event_target:kiyo_trade_start@this = {
 			exists = this
 			NOT = { is_same_value = root.orbit }
@@ -64,6 +63,9 @@ fleet_event = {
 		#Prevent expire event from firing immediately after starting a trade route
 		set_fleet_flag = kiyo_trade_start_expired
 		set_fleet_flag = kiyo_trade_end_expired
+
+		#Calculate Trade penalty for being over trade route limit
+		owner = { roci_trade_route_limit_penalty = yes }
 		
 		#Message for fleet owner that trade route has been started
 		event_target:kiyo_trade_start@root = {

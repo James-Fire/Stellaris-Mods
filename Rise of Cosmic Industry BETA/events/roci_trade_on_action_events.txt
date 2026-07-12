@@ -32,8 +32,9 @@ country_event = {
 			change_variable = { which = kiyo_trade_max_trade_routes value = 1 }
 			change_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value = 1 }
 			set_country_flag = kiyo_trade_has_max_trade_routes_tech_1
+			set_country_flag = roci_new_routes
 		}
-		if = { limit = { last_increased_tech = tech_luxuries_2 NOT = { has_country_flag = kiyo_trade_has_max_trade_routes_tech_2 } }
+		else_if = { limit = { last_increased_tech = tech_luxuries_2 NOT = { has_country_flag = kiyo_trade_has_max_trade_routes_tech_2 } }
 			if = {
 				limit = {
 					is_megacorp = yes
@@ -43,8 +44,9 @@ country_event = {
 			change_variable = { which = kiyo_trade_max_trade_routes value = 1 }
 			change_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value = 1 }
 			set_country_flag = kiyo_trade_has_max_trade_routes_tech_2
+			set_country_flag = roci_new_routes
 		}
-		if = { limit = { last_increased_tech = tech_interstellar_economics NOT = { has_country_flag = kiyo_trade_has_max_trade_routes_tech_3 } }
+		else_if = { limit = { last_increased_tech = tech_interstellar_economics NOT = { has_country_flag = kiyo_trade_has_max_trade_routes_tech_3 } }
 			if = {
 				limit = {
 					is_megacorp = yes
@@ -54,8 +56,9 @@ country_event = {
 			change_variable = { which = kiyo_trade_max_trade_routes value = 1 }
 			change_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value = 1 }
 			set_country_flag = kiyo_trade_has_max_trade_routes_tech_3
+			set_country_flag = roci_new_routes
 		}
-		if = { limit = { last_increased_tech = tech_galactic_markets NOT = { has_country_flag = kiyo_trade_has_max_trade_routes_tech_4 } }
+		else_if = { limit = { last_increased_tech = tech_galactic_markets NOT = { has_country_flag = kiyo_trade_has_max_trade_routes_tech_4 } }
 			if = {
 				limit = {
 					is_megacorp = yes
@@ -65,6 +68,39 @@ country_event = {
 			change_variable = { which = kiyo_trade_max_trade_routes value = 1 }
 			change_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value = 3 }
 			set_country_flag = kiyo_trade_has_max_trade_routes_tech_4
+			set_country_flag = roci_new_routes
+		}
+		if = {
+			limit = {
+				has_country_flag = roci_new_routes
+			}
+			remove_country_flag = roci_new_routes
+			#Use the decision for them on their capital planet if they have either a federation partner to trade with, or have room for more trade routes
+			capital_scope = {
+				if = {
+					limit = {
+						owner = {
+							is_ai = yes
+							can_afford_trade_cargo_expansion = yes
+						}
+						OR = {
+							any_country = {
+								roci_can_trade_with_country = yes
+								is_in_federation_with = prev.owner
+							}
+							AND = {
+								any_country = {
+									roci_can_trade_with_country = yes
+								}
+								owner = { check_variable = { which = kiyo_trade_max_trade_routes value > value:roci_trade_route_count } }
+							}
+						}
+					}
+					select_decision = {
+						name = decision_kiyo_mod_trade_setup_trade_route
+					}
+				}
+			}
 		}
 	}
 }
@@ -480,7 +516,7 @@ country_event = {
 
 }
 
-# (ON YEARLY COUNTRY PULSE) If a trade fleet is doing nothing, then make them do something! Also recount how many trade fleets we have
+# (ON YEARLY COUNTRY PULSE) If a trade fleet is doing nothing, then make them do something! Also recount how many trade fleets we have. Also spawn one in for the AI if they have room
 country_event = {
 	id = kiyo_trade_triggered_event.8
 	hide_window = yes
@@ -491,14 +527,34 @@ country_event = {
 	}
 	
 	immediate = {
-		#Recount fleets
-		set_variable = { which = kiyo_trade_num_trade_routes value = 0 }
-		every_owned_fleet = {
-			limit = {
-				any_owned_ship = { is_ship_size = kiyo_trade }
+		#Use the decision for them on their capital planet if they have either a federation partner to trade with, or have room for more trade routes
+		capital_scope = {
+			if = {
+				limit = {
+					owner = {
+						is_ai = yes
+						can_afford_trade_cargo_expansion = yes
+					}
+					OR = {
+						any_country = {
+							roci_can_trade_with_country = yes
+							is_in_federation_with = prev.owner
+						}
+						AND = {
+							any_country = {
+								roci_can_trade_with_country = yes
+							}
+							owner = { check_variable = { which = kiyo_trade_max_trade_routes value > value:roci_trade_route_count } }
+						}
+					}
+				}
+				select_decision = {
+					name = decision_kiyo_mod_trade_setup_trade_route
+				}
 			}
-			owner = { change_variable = { which = kiyo_trade_num_trade_routes value = 1 } }
 		}
+		#Recount fleets
+		set_variable = { which = kiyo_trade_num_trade_routes value = value:roci_trade_route_count }
 		#Get fleets back on the path, or if this is an AI and they don't have a path, get them a path
 		if = {
 			limit = {

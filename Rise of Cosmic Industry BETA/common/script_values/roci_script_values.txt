@@ -139,6 +139,44 @@ roci_trade_route_value = {
 	}
 	
 	add = trigger:sapient_pop_amount
+	
+}
+
+#Country Scope
+#Count how many trade routes you have
+roci_trade_route_count = {
+	base = 0
+	complex_trigger_modifier = {
+		trigger = count_owned_fleet
+		trigger_scope = this
+		parameters = {
+			limit = {
+				NOT = { has_fleet_flag = roci_trade_close_country } #Only count fleets that are not with a close ally
+			}
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = count_owned_fleet
+		trigger_scope = this
+		parameters = {
+			limit = {
+				has_fleet_flag = roci_trade_close_country #Only count fleets that are with a close ally
+			}
+		}
+		mode = add
+		mult = 0.5
+	}
+}
+
+#Country Scope
+#Calculate many over limit you are
+roci_trade_route_limit_penalty = {
+	base = 0
+	add = value:roci_trade_route_count
+	subtract = kiyo_trade_max_trade_routes
+	min = 0
+	round = yess
 }
 
 ###Autofab
@@ -176,6 +214,14 @@ roci_uplink_workforce_bonus = {
  		owner = { is_gestalt = yes }
 		add = modifier:job_$GESTALT_JOB$_automated_workforce_mult
  	}
+	modifier = {
+ 		owner = { is_gestalt = no }
+		add = modifier:job_$JOB$_jobs_bonus_workforce_mult
+ 	}
+	modifier = {
+ 		owner = { is_gestalt = yes }
+		add = modifier:job_$GESTALT_JOB$_jobs_bonus_workforce_mult
+ 	}
 	subtract = 1
 	divide = 4
 	min = 0
@@ -183,14 +229,62 @@ roci_uplink_workforce_bonus = {
 #roci_uplink_workforce_bonus|JOB|<job>|GESTALT_JOB|<gestalt job>|
 
 #Colony Scope
-#
+#Convert Job Efficiency into bonus automation workforce
 roci_bonus_workforce = {
 	base = 0
+	#Gotta not include the realdev Production Boost
 	add = realdev_production_boost
 	divide = 2000
+
 	subtract = modifier:pop_bonus_workforce_mult
 	mult = -1
 	min = 0
+	#Include Active Subsidy Edicts
+	modifier = {
+		owner = {
+			OR = {
+	 			has_edict = capacity_subsidies
+	 			has_edict = capacity_subsidies_wilderness
+			}
+		}
+		add = 0.05
+ 	}
+	modifier = {
+		owner = {
+			OR = {
+				has_edict = mining_subsidies
+				has_edict = mining_subsidies_wilderness
+				has_edict = mining_subsidies_nomadic
+			}
+		}
+		add = 0.05
+ 	}
+	modifier = {
+		owner = {
+			OR = {
+				has_edict = farming_subsidies
+				has_edict = farming_subsidies_wilderness
+			}
+		}
+		add = 0.05
+ 	}
+	modifier = {
+		owner = {
+			OR = {
+				has_edict = industrial_subsidies
+			}
+		}
+		add = 0.05
+ 	}
+	modifier = {
+		owner = {
+			OR = {
+				has_edict = forge_subsidies
+				has_edict = forge_subsidies_wilderness
+			}
+		}
+		add = 0.05
+ 	}
 }
 #Colony Scope
 #Count how many uplink buildings exist

@@ -11,11 +11,6 @@ decision_kiyo_mod_trade_setup_trade_route = {
 	}
 	
 	allow = {
-		custom_tooltip = {
-			# Has enough trade routes
-			fail_text = decision_kiyo_mod_trade_setup_trade_route_max_trade_routes
-			owner = { check_variable = { which = kiyo_trade_num_trade_routes value < kiyo_trade_max_trade_routes } }
-		}
 		num_buildings = { type = any value >= 3 }
 		sapient_pop_amount > 1900
 		OR = {
@@ -61,6 +56,12 @@ decision_kiyo_mod_trade_setup_trade_route = {
 	
 	effect = {
 		custom_tooltip = decision_kiyo_mod_trade_setup_trade_route_effects
+		if = {
+			limit = {
+				owner = { check_variable = { which = kiyo_trade_max_trade_routes value <= value:roci_trade_route_count } }
+			}
+			custom_tooltip = roci_over_trade_route_limit
+		}
 		hidden_effect = {
 			save_event_target_as = kiyo_trade_orbit
 			create_fleet = {
@@ -92,9 +93,35 @@ decision_kiyo_mod_trade_setup_trade_route = {
 					set_fleet_flag = kiyo_trade_fleet
 					set_fleet_flag = kiyo_trade_start@PREV
 					fleet_event = { id = kiyo_trade_manual_event.0 }
-					
-					#Find the planet in the galaxy that has the best trade route value that can be traded with if AI
-					if = { limit = { owner = { is_ai = yes } }
+
+					#Find the planet in the galaxy that has the best trade route value that can be traded with if AI, preferring federation members
+					if = {
+						limit = { 
+							owner = {
+								is_ai = yes
+								capital_scope = {
+									any_country = {
+										roci_can_trade_with_country = yes
+										is_in_federation_with = prev.owner
+									}
+								}
+							}
+						}
+						ordered_galaxy_planet = {
+							limit = {
+								owner = {
+									roci_can_trade_with_country = yes
+									is_in_federation_with = prev.owner
+								} 
+							}
+							position = 0
+							order_by = value:roci_trade_route_value
+							save_event_target_as = kiyo_trade_partner
+						}
+						queue_actions = { orbit_planet = event_target:kiyo_trade_partner }
+						event_target:kiyo_trade_partner = { prev = { set_fleet_flag = kiyo_trade_going@PREV } }
+					}
+					else_if = { limit = { owner = { is_ai = yes } }
 						ordered_galaxy_planet = {
 							limit = { owner = { roci_can_trade_with_country = yes } }
 							position = 0
@@ -113,9 +140,6 @@ decision_kiyo_mod_trade_setup_trade_route = {
 					spawn_debris = yes
 				}
 			}
-		
-			#Add 1 to number of current trade routes
-			owner = { change_variable = { which = kiyo_trade_num_trade_routes value = 1 } }
 		}
 	}
 	

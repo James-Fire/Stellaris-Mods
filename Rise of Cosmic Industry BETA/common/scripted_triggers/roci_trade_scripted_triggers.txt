@@ -54,6 +54,7 @@ roci_can_trade_with_country = {
 	#Can only trade with normal countries. No FEs, Marauders, or other special empires
 	is_country_type = default
 	#Check some obvious things, like you can't trade with those you're currently at war with
+	has_communications = prev.owner
 	NOT = {
 		is_country = prev.owner
 		has_closed_borders = prev.owner
@@ -93,6 +94,7 @@ roci_can_trade_with_country = {
 				is_same_value = prev.prev.owner
 			}
 		}
+		#Check if the countries are in the same federation
 		custom_tooltip = {
 			text = "roci_trade_routes_federation"
 			is_in_federation_with = prev.owner
@@ -129,9 +131,7 @@ kiyo_mod_trade_is_country_to_trade_with = {
 	roci_can_trade_with_country = yes
 	any_owned_colony = {		
 		#Doesn't already have a trade route
-		
 		root.owner = {
-			
 			NOT = {
 				any_owned_fleet = {
 					has_fleet_flag = kiyo_trade_start@ROOT

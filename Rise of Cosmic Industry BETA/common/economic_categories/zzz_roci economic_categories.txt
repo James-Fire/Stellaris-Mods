@@ -23,7 +23,11 @@ planet_elevator = {
 
 #Trade Categories
 
-planet_kiyo_mod_trader = { }
+planet_kiyo_mod_trader = { 
+	generate_mult_modifiers = {
+		produces
+	}
+}
 
 campaign_kiyo_mod_trade = {
 	use_for_ai_budget = yes

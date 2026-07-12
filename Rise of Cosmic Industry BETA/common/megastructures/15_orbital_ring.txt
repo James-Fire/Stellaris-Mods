@@ -110,8 +110,9 @@ orbital_ring = {
 						is_artificial = yes
 					}
 				}
-				else = { #If overwrite is active, we're only blocked from building it on ringworlds
+				else = { #If overwrite is active, we're only blocked from building it on ringworlds, and planets that already have an orbital ring
 					NOR = {
+						exists = orbital_defence
 						is_planet_class = pc_ringworld_habitable_damaged
 						is_planet_class = pc_ringworld_tech
 						is_planet_class = pc_ringworld_tech_damaged

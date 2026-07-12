@@ -122,6 +122,11 @@ kiyo_trade_calculate_resources = {
 	#Add intel and opinion modifiers to both parties. Opinion does not stack, intel does.
 	fleet_event = { id = kiyo_trade_manual_event.51 }
 	
+	#Check if trading partners are close allies
+	orbit = {
+		roci_check_if_trade_partner_close_ally = yes
+	}
+	
 	#Ensure the fleet has the correct upkeep
 	kiyo_correct_fleet_upkeep = yes
 	
@@ -354,6 +359,28 @@ kiyo_trade_calculate_resources = {
 		multiply_variable = { which = kiyo_trade_engineering_research value = 1.25 }
 		multiply_variable = { which = kiyo_trade_trade_value value = 1.25 }
 	}
+
+	#1.25x based on agreements in place
+	if = {
+		limit = {
+			owner = { has_commercial_pact = orbit.owner }
+		}
+		multiply_variable = { which = kiyo_trade_trade_value value = 1.25 }
+	}
+	if = {
+		limit = {
+			owner = { has_research_agreement = orbit.owner }
+		}
+		multiply_variable = { which = kiyo_trade_physics_research value = 1.25 }
+		multiply_variable = { which = kiyo_trade_society_research value = 1.25 }
+		multiply_variable = { which = kiyo_trade_engineering_research value = 1.25 }
+	}
+	if = {
+		limit = {
+			owner = { has_diplo_migration_treaty = orbit.owner }
+		}
+		multiply_variable = { which = kiyo_trade_unity value = 1.25 }
+	}
 	
 	#Make it 5% of production
 	multiply_variable = { which = kiyo_trade_minerals value = 0.05 }
@@ -426,3 +453,36 @@ roci_expand_trade_fleet = {
 	change_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value = 1 }
 	fleet_event = { id = kiyo_trade_manual_event.50 }
 }
+
+#THIS = Trade Partner
+#PREV = Trade Fleet
+roci_check_if_trade_partner_close_ally = {
+	if = { 
+		limit = {
+			is_in_federation_with = prev.owner
+		}
+		prev = { set_fleet_flag = roci_trade_close_country }
+	}
+}
+
+#THIS = Country
+roci_trade_route_limit_penalty = {
+	if = {
+		limit = {
+			check_variable = { which = kiyo_trade_max_trade_routes value < value:roci_trade_route_count }
+		}
+		remove_modifier = roci_trade_route_penalty
+		set_variable = { which = roci_trade_while value = 1 }
+		while = {
+			count =	value:roci_trade_route_limit_penalty
+			multiply_variable = { which = roci_trade_while value = 0.9 }
+		}
+		subtract_variable = { which = roci_trade_while value = 1 }
+		add_modifier = {
+			modifier = roci_trade_route_penalty
+			multiplier = roci_trade_while
+		}
+}
+
+
+
