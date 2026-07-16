@@ -93,8 +93,8 @@ juggernaut_nosh = {
 		}
 	}
 
-	combat_size_multiplier = 5
-	size_multiplier = 32
+	combat_size_multiplier = 100
+	size_multiplier = 100
 	fleet_slot_size = 32
 	section_slots = {
 		"port" = { locator = "part2" }
@@ -103,56 +103,11 @@ juggernaut_nosh = {
 	}
 
 	potential_construction = {
-		OR = {
-			AND = {
-				is_scope_type = starbase
-				NOT = {
-					has_starbase_size = juggernaut
-				}
-			}
-			AND = {
-				is_scope_type = megastructure
-				OR = {
-					is_megastructure_type = mega_shipyard_3
-					is_megastructure_type = mega_shipyard_restored
-				}
-			}
-		}
+		juggernaut_potential_construction = yes
 	}
 
 	possible_construction = {
-		custom_tooltip = {
-			fail_text = starbase_citadel_trigger
-			OR = {
-				AND = {
-					is_scope_type = megastructure
-					OR = {
-						is_megastructure_type = mega_shipyard_3
-						is_megastructure_type = mega_shipyard_restored
-					}
-				}
-				AND = {
-					is_scope_type = starbase
-					has_starbase_size >= starbase_citadel
-				}
-			}
-		}
-		custom_tooltip = {
-			fail_text = starbase_colossal_yards_trigger
-			OR = {
-				AND = {
-					is_scope_type = megastructure
-					OR = {
-						is_megastructure_type = mega_shipyard_3
-						is_megastructure_type = mega_shipyard_restored
-					}
-				}
-				AND = {
-					is_scope_type = starbase
-					has_starbase_building = colossus_yards
-				}
-			}
-		}
+		juggernaut_potential_construction = yes
 	}
 
 	num_target_locators = 0
@@ -161,7 +116,6 @@ juggernaut_nosh = {
 	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
 	can_disable = no
 	icon_frame = 7 #probably unused, but mobile starbases are special
-	icon = ship_size_military_64
 	ship_class_icon_frame = 35
 	selectable = { host_has_dlc = "Federations" }
 
