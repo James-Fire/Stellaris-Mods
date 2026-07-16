@@ -118,7 +118,10 @@ decision_kiyo_mod_trade_setup_trade_route = {
 							order_by = value:roci_trade_route_value
 							save_event_target_as = kiyo_trade_partner
 						}
-						queue_actions = { orbit_planet = event_target:kiyo_trade_partner }
+						clear_fleet_actions = this
+						clear_orders = yes
+						queue_actions = { repeat = { orbit_planet = event_target:kiyo_trade_partner wait = 5 } }
+						#queue_actions = { orbit_planet =  }
 						event_target:kiyo_trade_partner = { prev = { set_fleet_flag = kiyo_trade_going@PREV } }
 					}
 					else_if = { limit = { owner = { is_ai = yes } }

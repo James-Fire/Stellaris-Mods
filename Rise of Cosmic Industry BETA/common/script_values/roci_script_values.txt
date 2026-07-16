@@ -151,6 +151,7 @@ roci_trade_route_count = {
 		trigger_scope = this
 		parameters = {
 			limit = {
+				has_fleet_flag = kiyo_trade_fleet
 				NOT = { has_fleet_flag = roci_trade_close_country } #Only count fleets that are not with a close ally
 			}
 		}
@@ -161,6 +162,7 @@ roci_trade_route_count = {
 		trigger_scope = this
 		parameters = {
 			limit = {
+				has_fleet_flag = kiyo_trade_fleet
 				has_fleet_flag = roci_trade_close_country #Only count fleets that are with a close ally
 			}
 		}
@@ -176,7 +178,7 @@ roci_trade_route_limit_penalty = {
 	add = value:roci_trade_route_count
 	subtract = kiyo_trade_max_trade_routes
 	min = 0
-	round = yess
+	round = yes
 }
 
 ###Autofab
@@ -216,11 +218,11 @@ roci_uplink_workforce_bonus = {
  	}
 	modifier = {
  		owner = { is_gestalt = no }
-		add = modifier:job_$JOB$_jobs_bonus_workforce_mult
+		add = modifier:pop_$JOB$_bonus_workforce_mult
  	}
 	modifier = {
  		owner = { is_gestalt = yes }
-		add = modifier:job_$GESTALT_JOB$_jobs_bonus_workforce_mult
+		add = modifier:pop_$GESTALT_JOB$_bonus_workforce_mult
  	}
 	subtract = 1
 	divide = 4
@@ -239,52 +241,6 @@ roci_bonus_workforce = {
 	subtract = modifier:pop_bonus_workforce_mult
 	mult = -1
 	min = 0
-	#Include Active Subsidy Edicts
-	modifier = {
-		owner = {
-			OR = {
-	 			has_edict = capacity_subsidies
-	 			has_edict = capacity_subsidies_wilderness
-			}
-		}
-		add = 0.05
- 	}
-	modifier = {
-		owner = {
-			OR = {
-				has_edict = mining_subsidies
-				has_edict = mining_subsidies_wilderness
-				has_edict = mining_subsidies_nomadic
-			}
-		}
-		add = 0.05
- 	}
-	modifier = {
-		owner = {
-			OR = {
-				has_edict = farming_subsidies
-				has_edict = farming_subsidies_wilderness
-			}
-		}
-		add = 0.05
- 	}
-	modifier = {
-		owner = {
-			OR = {
-				has_edict = industrial_subsidies
-			}
-		}
-		add = 0.05
- 	}
-	modifier = {
-		owner = {
-			OR = {
-				has_edict = forge_subsidies
-				has_edict = forge_subsidies_wilderness
-			}
-		}
-		add = 0.05
- 	}
 }
 #Colony Scope
 #Count how many uplink buildings exist

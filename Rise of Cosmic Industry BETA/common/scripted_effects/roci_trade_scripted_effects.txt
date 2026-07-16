@@ -478,10 +478,12 @@ roci_trade_route_limit_penalty = {
 			multiply_variable = { which = roci_trade_while value = 0.9 }
 		}
 		subtract_variable = { which = roci_trade_while value = 1 }
+		multiply_variable = { which = roci_trade_while value = -100 }
 		add_modifier = {
 			modifier = roci_trade_route_penalty
 			multiplier = roci_trade_while
 		}
+	}
 }
 
 
