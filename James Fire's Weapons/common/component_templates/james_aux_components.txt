@@ -41,7 +41,6 @@ utility_component_template = {
 	size = aux
 	icon = "GFX_ship_part_wormhole"
 	icon_frame = 1
-	power = 400
 	resources = {
 		category = ship_components
 		cost = {
@@ -56,7 +55,11 @@ utility_component_template = {
 	}	
 	prerequisites = { "tech_hyperconductors_2i" }
 	component_set = "WORMHOLE_REACTOR_BOOSTER"
-
+	
+	modifier = {
+		ship_reactor_power_mult = 1
+	}
+	
 	ai_weight = {
 		weight = 10000
 	}
