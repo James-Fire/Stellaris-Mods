@@ -442,67 +442,80 @@ stargate_primitive_connections = {
 }
 
 reset_stargate_resettle = {
-	remove_modifier = stargate_resettle_9
-	remove_modifier = stargate_resettle_8
-	remove_modifier = stargate_resettle_7
-	remove_modifier = stargate_resettle_6
-	remove_modifier = stargate_resettle_5
-	remove_modifier = stargate_resettle_4
-	remove_modifier = stargate_resettle_3
-	remove_modifier = stargate_resettle_2
-	remove_modifier = stargate_resettle_1
-	if = {
-		limit = {
-			ROOT = { check_variable = { which = stargate_fraction value >= 0.9 } }
-		}
-		add_modifier = { modifier = stargate_resettle_9 days = -1 }
+	remove_modifier = stargate_resettle
+	add_modifier = {
+		modifier = stargate_resettle
+		mult = value:stargate_resettle_modifier
+		days = -1
 	}
-	else_if = {
+}
+
+stargate_reset_everything = {
+	every_country = {
 		limit = {
-			ROOT = { check_variable = { which = stargate_fraction value >= 0.8 } }
+			has_stargate = yes
 		}
-		add_modifier = { modifier = stargate_resettle_8 days = -1 }
-	}
-	else_if = {
-		limit = {
-			ROOT = { check_variable = { which = stargate_fraction value >= 0.7 } }
+		#Reset all country stuff
+		set_variable = { which = stargatecount value = 0 }
+		set_variable = { which = accessible_internal_military_stargatecount value = 0 }
+		set_variable = { which = stargate_military_connections_int_cap value = 0 }
+		set_variable = { which = accessible_external_military_stargatecount value = 0 }
+		set_variable = { which = stargate_military_connections_ex_cap value = 0 }
+		set_variable = { which = accessible_internal_civilian_stargatecount value = 0 }
+		set_variable = { which = stargate_economic_connections_int_cap value = 0 }
+		set_variable = { which = accessible_external_civilian_stargatecount value = 0 }
+		set_variable = { which = stargate_economic_connections_ex_cap value = 0 }
+		set_variable = { which = accessible_external_research_stargatecount value = 0 }
+		set_variable = { which = stargate_research_connections_ex_cap value = 0 }
+		set_variable = { which = stargate_military_connections_int_con value = 0 }
+		set_variable = { which = stargate_military_connections_ex_con value = 0 }
+		set_variable = { which = stargate_economic_connections_int_con value = 0 }
+		set_variable = { which = stargate_economic_connections_ex_con value = 0 }
+		set_variable = { which = stargate_research_connections_ex_con value = 0 }
+		set_variable = { which = int_civ_stargatecount_cap value = 0 }
+		set_variable = { which = ex_civ_stargatecount_cap value = 0 }
+		set_variable = { which = int_mil_stargatecount_cap value = 0 }
+		set_variable = { which = ex_mil_stargatecount_cap value = 0 }
+		set_variable = { which = ex_res_stargatecount_cap value = 0 }
+		
+		#Remove everything on all planets
+		every_owned_colony = {
+			limit = {
+				has_carrier_flag = has_stargate
+			}
+			set_variable = { which = stargatecount value = 0 }
+			set_variable = { which = accessible_internal_military_stargatecount value = 0 }
+			set_variable = { which = stargate_military_connections_int_cap value = 0 }
+			set_variable = { which = accessible_external_military_stargatecount value = 0 }
+			set_variable = { which = stargate_military_connections_ex_cap value = 0 }
+			set_variable = { which = accessible_internal_civilian_stargatecount value = 0 }
+			set_variable = { which = stargate_economic_connections_int_cap value = 0 }
+			set_variable = { which = accessible_external_civilian_stargatecount value = 0 }
+			set_variable = { which = stargate_economic_connections_ex_cap value = 0 }
+			set_variable = { which = accessible_external_research_stargatecount value = 0 }
+			set_variable = { which = stargate_research_connections_ex_cap value = 0 }
+			set_variable = { which = stargate_military_connections_int_con value = 0 }
+			set_variable = { which = stargate_military_connections_ex_con value = 0 }
+			set_variable = { which = stargate_economic_connections_int_con value = 0 }
+			set_variable = { which = stargate_economic_connections_ex_con value = 0 }
+			set_variable = { which = stargate_research_connections_ex_con value = 0 }
+			set_variable = { which = int_civ_stargatecount_cap value = 0 }
+			set_variable = { which = ex_civ_stargatecount_cap value = 0 }
+			set_variable = { which = int_mil_stargatecount_cap value = 0 }
+			set_variable = { which = ex_mil_stargatecount_cap value = 0 }
+			set_variable = { which = ex_res_stargatecount_cap value = 0 }
+			
+			while = {
+				count = 90
+				remove_deposit = d_stargate_internal_civilian_network
+				remove_deposit = d_stargate_external_civilian_network
+				remove_deposit = d_stargate_internal_military_network
+				remove_deposit = d_stargate_external_military_network
+				remove_deposit = d_stargate_external_research_network
+			}
+			remove_modifier = stargate_connection_cost
+			set_variable = { which = stargate_connections value = 0 }
+			
 		}
-		add_modifier = { modifier = stargate_resettle_7 days = -1 }
-	}
-	else_if = {
-		limit = {
-			ROOT = { check_variable = { which = stargate_fraction value >= 0.6 } }
-		}
-		add_modifier = { modifier = stargate_resettle_6 days = -1 }
-	}
-	else_if = {
-		limit = {
-			ROOT = { check_variable = { which = stargate_fraction value >= 0.5 } }
-		}
-		add_modifier = { modifier = stargate_resettle_5 days = -1 }
-	}
-	else_if = {
-		limit = {
-			ROOT = { check_variable = { which = stargate_fraction value >= 0.4 } }
-		}
-		add_modifier = { modifier = stargate_resettle_4 days = -1 }
-	}
-	else_if = {
-		limit = {
-			ROOT = { check_variable = { which = stargate_fraction value >= 0.3 } }
-		}
-		add_modifier = { modifier = stargate_resettle_3 days = -1 }
-	}
-	else_if = {
-		limit = {
-			ROOT = { check_variable = { which = stargate_fraction value >= 0.2 } }
-		}
-		add_modifier = { modifier = stargate_resettle_2 days = -1 }
-	}
-	else_if = {
-		limit = {
-			ROOT = { check_variable = { which = stargate_fraction value >= 0.1 } }
-		}
-		add_modifier = { modifier = stargate_resettle_1 days = -1 }
 	}
 }

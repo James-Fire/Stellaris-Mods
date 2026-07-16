@@ -62,3 +62,41 @@ empire_active_stargates = {
  		mode = add
  	}
 }
+
+stargate_resettle_modifier = {
+	base = 0
+	complex_trigger_modifier = {
+ 		trigger = count_owned_colony
+ 		parameters = {
+ 			limit = { has_deposit = d_stargate }
+ 		}
+ 		mode = add
+ 	}
+	complex_trigger_modifier = {
+ 		trigger = count_owned_colony
+ 		parameters = {
+ 		}
+ 		mode = divide
+ 	}
+	mult = 10
+	max = 9
+}
+
+
+#(a*a)/160+1.9a-0.9
+
+stargate_upkeep_calc_1 = {
+	base = 0
+	add = stargate_connections
+	mult = stargate_connections
+	divide = 160
+	add = value:stargate_upkeep_calc_2
+	subtract = 0.9
+}
+
+stargate_upkeep_calc_2 = {
+	base = 0
+	
+	add = stargate_connections
+	mult = 1.9
+}

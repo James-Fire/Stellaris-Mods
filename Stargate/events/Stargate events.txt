@@ -67,9 +67,7 @@ country_event = {
 	
 	
 	after = {
-		set_variable = { which = stargate_fraction value = stargatecount }
 		set_variable = { which = stargate_malus_count value = stargatecount }
-		divide_variable = { which = stargate_fraction value = stargate_owned_colonys }
 		set_variable = { which = accessible_internal_civilian_stargatecount value = stargatecount }
 		set_variable = { which = accessible_internal_military_stargatecount value = stargatecount }
 		subtract_variable = { which = accessible_internal_civilian_stargatecount value = 1 }
@@ -317,6 +315,14 @@ colony_event = {
 			remove_deposit = yes
 			prev.owner = { change_variable = { which = stargate_research_connections_ex_con value = -1 } }
 		}
+		while = {
+			count = 90
+			remove_deposit = d_stargate_internal_civilian_network
+			remove_deposit = d_stargate_external_civilian_network
+			remove_deposit = d_stargate_internal_military_network
+			remove_deposit = d_stargate_external_military_network
+			remove_deposit = d_stargate_external_research_network
+		}
 		remove_modifier = stargate_connection_cost
 		set_variable = { which = stargate_connections value = 0 }
 		set_stargate_connection_caps = yes
@@ -325,358 +331,277 @@ colony_event = {
 		while = {
 			count = 90
 			limit = {
-				OR = {
-					OR = {
-						count_deposit = { limit = { is_deposit_type = d_stargate_internal_civilian_network } count < int_civ_stargatecount_cap }
-						NOT = { check_variable = { which = int_civ_stargatecount_cap value > 1 } }
-					}
-					OR = {
-						count_deposit = { limit = { is_deposit_type = d_stargate_external_civilian_network } count < ex_civ_stargatecount_cap }
-						NOT = { check_variable = { which = ex_civ_stargatecount_cap value > 1 } }
-					}
-					OR = {
-						count_deposit = { limit = { is_deposit_type = d_stargate_internal_military_network } count < int_mil_stargatecount_cap }
-						NOT = { check_variable = { which = int_mil_stargatecount_cap value > 1 } }
-					}
-					OR = {
-						count_deposit = { limit = { is_deposit_type = d_stargate_external_military_network } count < ex_mil_stargatecount_cap }
-						NOT = { check_variable = { which = ex_mil_stargatecount_cap value > 1 } }
-					}
-					OR = {
-						count_deposit = { limit = { is_deposit_type = d_stargate_external_research_network } count < ex_res_stargatecount_cap }
-						NOT = { check_variable = { which = ex_res_stargatecount_cap value > 1 } }
-					}
-				}
+				has_int_econ_con_space = yes
+				has_int_civ_prioty_1 = yes
 			}
-			if = {
-				limit = {
-					has_priority_1 = yes
-				}
-				while = {
-					count = 90
-					limit = {
-						has_int_econ_con_space = yes
-						has_int_civ_prioty_1 = yes
-					}
-					change_variable = { which = accessible_internal_civilian_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_economic_connections_int_con value = 1 } }
-					add_deposit = d_stargate_internal_civilian_network
-				}
-				while = {
-					count = 90
-					limit = {
-						has_ex_econ_con_space = yes
-						has_ex_civ_prioty_1 = yes
-					}
-					change_variable = { which = accessible_external_civilian_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_economic_connections_ex_con value = 1 } }
-					add_deposit = d_stargate_external_civilian_network
-				}
-				while = {
-					count = 90
-					limit = {
-						has_int_mil_con_space = yes
-						has_int_mil_prioty_1 = yes
-					}
-					change_variable = { which = accessible_internal_military_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_military_connections_int_con value = 1 } }
-					add_deposit = d_stargate_internal_military_network
-				}
-				while = {
-					count = 90
-					limit = {
-						has_ex_mil_con_space = yes
-						has_ex_mil_prioty_1 = yes
-					}
-					change_variable = { which = accessible_external_military_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_military_connections_ex_con value = 1 } }
-					add_deposit = d_stargate_external_military_network
-				}
-				while = {
-					count = 90
-					limit = {
-						has_ex_res_con_space = yes
-						has_ex_res_prioty_1 = yes
-					}
-					change_variable = { which = accessible_external_research_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_research_connections_ex_con value = 1 } }
-					add_deposit = d_stargate_external_research_network
-				}
-			}
-			if = {
-				limit = {
-					has_priority_2 = yes
-				}
-				while = {
-					count = 90
-					limit = {
-						has_int_econ_con_space = yes
-						has_int_civ_prioty_2 = yes
-					}
-					change_variable = { which = accessible_internal_civilian_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_economic_connections_int_con value = 1 } }
-					add_deposit = d_stargate_internal_civilian_network
-				}
-				while = {
-					count = 90
-					limit = {
-						has_ex_econ_con_space = yes
-						has_ex_civ_prioty_2 = yes
-					}
-					change_variable = { which = accessible_external_civilian_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_economic_connections_ex_con value = 1 } }
-					add_deposit = d_stargate_external_civilian_network
-				}
-				while = {
-					count = 90
-					limit = {
-						has_int_mil_con_space = yes
-						has_int_mil_prioty_2 = yes
-					}
-					change_variable = { which = accessible_internal_military_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_military_connections_int_con value = 1 } }
-					add_deposit = d_stargate_internal_military_network
-				}
-				while = {
-					count = 90
-					limit = {
-						has_ex_mil_con_space = yes
-						has_ex_mil_prioty_2 = yes
-					}
-					change_variable = { which = accessible_external_military_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_military_connections_ex_con value = 1 } }
-					add_deposit = d_stargate_external_military_network
-				}
-				while = {
-					count = 90
-					limit = {
-						has_ex_res_con_space = yes
-						has_ex_res_prioty_2 = yes
-					}
-					change_variable = { which = accessible_external_research_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_research_connections_ex_con value = 1 } }
-					add_deposit = d_stargate_external_research_network
-				}
-			}
-			if = {
-				limit = {
-					has_priority_3 = yes
-				}
-				while = {
-					count = 90
-					limit = {
-						has_int_econ_con_space = yes
-						has_int_civ_prioty_3 = yes
-					}
-					change_variable = { which = accessible_internal_civilian_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_economic_connections_int_con value = 1 } }
-					add_deposit = d_stargate_internal_civilian_network
-				}
-				while = {
-					count = 90
-					limit = {
-						has_ex_econ_con_space = yes
-						has_ex_civ_prioty_3 = yes
-					}
-					change_variable = { which = accessible_external_civilian_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_economic_connections_ex_con value = 1 } }
-					add_deposit = d_stargate_external_civilian_network
-				}
-				while = {
-					count = 90
-					limit = {
-						has_int_mil_con_space = yes
-						has_int_mil_prioty_3 = yes
-					}
-					change_variable = { which = accessible_internal_military_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_military_connections_int_con value = 1 } }
-					add_deposit = d_stargate_internal_military_network
-				}
-				while = {
-					count = 90
-					limit = {
-						has_ex_mil_con_space = yes
-						has_ex_mil_prioty_3 = yes
-					}
-					change_variable = { which = accessible_external_military_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_military_connections_ex_con value = 1 } }
-					add_deposit = d_stargate_external_military_network
-				}
-				while = {
-					count = 90
-					limit = {
-						has_ex_res_con_space = yes
-						has_ex_res_prioty_3 = yes
-					}
-					change_variable = { which = accessible_external_research_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_research_connections_ex_con value = 1 } }
-					add_deposit = d_stargate_external_research_network
-				}
-			}
-			if = {
-				limit = {
-					has_priority_4 = yes
-				}
-				while = {
-					count = 90
-					limit = {
-						has_int_econ_con_space = yes
-						has_int_civ_prioty_4 = yes
-					}
-					change_variable = { which = accessible_internal_civilian_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_economic_connections_int_con value = 1 } }
-					add_deposit = d_stargate_internal_civilian_network
-				}
-				while = {
-					count = 90
-					limit = {
-						has_ex_econ_con_space = yes
-						has_ex_civ_prioty_4 = yes
-					}
-					change_variable = { which = accessible_external_civilian_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_economic_connections_ex_con value = 1 } }
-					add_deposit = d_stargate_external_civilian_network
-				}
-				while = {
-					count = 90
-					limit = {
-						has_int_mil_con_space = yes
-						has_int_mil_prioty_4 = yes
-					}
-					change_variable = { which = accessible_internal_military_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_military_connections_int_con value = 1 } }
-					add_deposit = d_stargate_internal_military_network
-				}
-				while = {
-					count = 90
-					limit = {
-						has_ex_mil_con_space = yes
-						has_ex_mil_prioty_4 = yes
-					}
-					change_variable = { which = accessible_external_military_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_military_connections_ex_con value = 1 } }
-					add_deposit = d_stargate_external_military_network
-				}
-				while = {
-					count = 90
-					limit = {
-						has_ex_res_con_space = yes
-						has_ex_res_prioty_4 = yes
-					}
-					change_variable = { which = accessible_external_research_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_research_connections_ex_con value = 1 } }
-					add_deposit = d_stargate_external_research_network
-				}
-			}
-			if = {
-				limit = {
-					has_priority_5 = yes
-				}
-				while = {
-					count = 90
-					limit = {
-						has_int_econ_con_space = yes
-						has_int_civ_prioty_5 = yes
-					}
-					change_variable = { which = accessible_internal_civilian_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_economic_connections_int_con value = 1 } }
-					add_deposit = d_stargate_internal_civilian_network
-				}
-				while = {
-					count = 90
-					limit = {
-						has_ex_econ_con_space = yes
-						has_ex_civ_prioty_5 = yes
-					}
-					change_variable = { which = accessible_external_civilian_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_economic_connections_ex_con value = 1 } }
-					add_deposit = d_stargate_external_civilian_network
-				}
-				while = {
-					count = 90
-					limit = {
-						has_int_mil_con_space = yes
-						has_int_mil_prioty_5 = yes
-					}
-					change_variable = { which = accessible_internal_military_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_military_connections_int_con value = 1 } }
-					add_deposit = d_stargate_internal_military_network
-				}
-				while = {
-					count = 90
-					limit = {
-						has_ex_mil_con_space = yes
-						has_ex_mil_prioty_5 = yes
-					}
-					change_variable = { which = accessible_external_military_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_military_connections_ex_con value = 1 } }
-					add_deposit = d_stargate_external_military_network
-				}
-				while = {
-					count = 90
-					limit = {
-						has_ex_res_con_space = yes
-						has_ex_res_prioty_5 = yes
-					}
-					change_variable = { which = accessible_external_research_stargatecount value = -1 }
-					change_variable = { which = stargate_connections value = 1 }
-					owner = { change_variable = { which = stargate_research_connections_ex_con value = 1 } }
-					add_deposit = d_stargate_external_research_network
-				}
-			}
+			change_variable = { which = accessible_internal_civilian_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_economic_connections_int_con value = 1 } }
+			add_deposit = d_stargate_internal_civilian_network
 		}
-		colony_event = { id = stargate.40 days = 1 }
-	}
-}
-
-colony_event = {
-	id = stargate.40
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		if = {
+		while = {
+			count = 90
 			limit = {
-				has_global_flag = stargate_logging
+				has_ex_econ_con_space = yes
+				has_ex_civ_prioty_1 = yes
 			}
-			log = "Stargate Connections on [This.GetName] for [owner.GetName] [This.stargate_connections]"
+			change_variable = { which = accessible_external_civilian_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_economic_connections_ex_con value = 1 } }
+			add_deposit = d_stargate_external_civilian_network
 		}
-		calc_connections_upkeep_part_1 = yes
-	}
-	after = {
-		if = {
+		while = {
+			count = 90
 			limit = {
-				has_global_flag = stargate_logging
+				has_int_mil_con_space = yes
+				has_int_mil_prioty_1 = yes
 			}
-			log = "Stargate Connection mult on [This.GetName] for [owner.GetName] [This.stargate_connection_mult]"
+			change_variable = { which = accessible_internal_military_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_military_connections_int_con value = 1 } }
+			add_deposit = d_stargate_internal_military_network
 		}
-		add_modifier = {
-			modifier = stargate_connection_cost
-			multiplier = stargate_connection_mult
+		while = {
+			count = 90
+			limit = {
+				has_ex_mil_con_space = yes
+				has_ex_mil_prioty_1 = yes
+			}
+			change_variable = { which = accessible_external_military_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_military_connections_ex_con value = 1 } }
+			add_deposit = d_stargate_external_military_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_ex_res_con_space = yes
+				has_ex_res_prioty_1 = yes
+			}
+			change_variable = { which = accessible_external_research_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_research_connections_ex_con value = 1 } }
+			add_deposit = d_stargate_external_research_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_int_econ_con_space = yes
+				has_int_civ_prioty_2 = yes
+			}
+			change_variable = { which = accessible_internal_civilian_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_economic_connections_int_con value = 1 } }
+			add_deposit = d_stargate_internal_civilian_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_ex_econ_con_space = yes
+				has_ex_civ_prioty_2 = yes
+			}
+			change_variable = { which = accessible_external_civilian_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_economic_connections_ex_con value = 1 } }
+			add_deposit = d_stargate_external_civilian_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_int_mil_con_space = yes
+				has_int_mil_prioty_2 = yes
+			}
+			change_variable = { which = accessible_internal_military_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_military_connections_int_con value = 1 } }
+			add_deposit = d_stargate_internal_military_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_ex_mil_con_space = yes
+				has_ex_mil_prioty_2 = yes
+			}
+			change_variable = { which = accessible_external_military_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_military_connections_ex_con value = 1 } }
+			add_deposit = d_stargate_external_military_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_ex_res_con_space = yes
+				has_ex_res_prioty_2 = yes
+			}
+			change_variable = { which = accessible_external_research_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_research_connections_ex_con value = 1 } }
+			add_deposit = d_stargate_external_research_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_int_econ_con_space = yes
+				has_int_civ_prioty_3 = yes
+			}
+			change_variable = { which = accessible_internal_civilian_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_economic_connections_int_con value = 1 } }
+			add_deposit = d_stargate_internal_civilian_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_ex_econ_con_space = yes
+				has_ex_civ_prioty_3 = yes
+			}
+			change_variable = { which = accessible_external_civilian_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_economic_connections_ex_con value = 1 } }
+			add_deposit = d_stargate_external_civilian_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_int_mil_con_space = yes
+				has_int_mil_prioty_3 = yes
+			}
+			change_variable = { which = accessible_internal_military_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_military_connections_int_con value = 1 } }
+			add_deposit = d_stargate_internal_military_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_ex_mil_con_space = yes
+				has_ex_mil_prioty_3 = yes
+			}
+			change_variable = { which = accessible_external_military_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_military_connections_ex_con value = 1 } }
+			add_deposit = d_stargate_external_military_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_ex_res_con_space = yes
+				has_ex_res_prioty_3 = yes
+			}
+			change_variable = { which = accessible_external_research_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_research_connections_ex_con value = 1 } }
+			add_deposit = d_stargate_external_research_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_int_econ_con_space = yes
+				has_int_civ_prioty_4 = yes
+			}
+			change_variable = { which = accessible_internal_civilian_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_economic_connections_int_con value = 1 } }
+			add_deposit = d_stargate_internal_civilian_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_ex_econ_con_space = yes
+				has_ex_civ_prioty_4 = yes
+			}
+			change_variable = { which = accessible_external_civilian_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_economic_connections_ex_con value = 1 } }
+			add_deposit = d_stargate_external_civilian_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_int_mil_con_space = yes
+				has_int_mil_prioty_4 = yes
+			}
+			change_variable = { which = accessible_internal_military_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_military_connections_int_con value = 1 } }
+			add_deposit = d_stargate_internal_military_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_ex_mil_con_space = yes
+				has_ex_mil_prioty_4 = yes
+			}
+			change_variable = { which = accessible_external_military_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_military_connections_ex_con value = 1 } }
+			add_deposit = d_stargate_external_military_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_ex_res_con_space = yes
+				has_ex_res_prioty_4 = yes
+			}
+			change_variable = { which = accessible_external_research_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_research_connections_ex_con value = 1 } }
+			add_deposit = d_stargate_external_research_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_int_econ_con_space = yes
+				has_int_civ_prioty_5 = yes
+			}
+			change_variable = { which = accessible_internal_civilian_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_economic_connections_int_con value = 1 } }
+			add_deposit = d_stargate_internal_civilian_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_ex_econ_con_space = yes
+				has_ex_civ_prioty_5 = yes
+			}
+			change_variable = { which = accessible_external_civilian_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_economic_connections_ex_con value = 1 } }
+			add_deposit = d_stargate_external_civilian_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_int_mil_con_space = yes
+				has_int_mil_prioty_5 = yes
+			}
+			change_variable = { which = accessible_internal_military_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_military_connections_int_con value = 1 } }
+			add_deposit = d_stargate_internal_military_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_ex_mil_con_space = yes
+				has_ex_mil_prioty_5 = yes
+			}
+			change_variable = { which = accessible_external_military_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_military_connections_ex_con value = 1 } }
+			add_deposit = d_stargate_external_military_network
+		}
+		while = {
+			count = 90
+			limit = {
+				has_ex_res_con_space = yes
+				has_ex_res_prioty_5 = yes
+			}
+			change_variable = { which = accessible_external_research_stargatecount value = -1 }
+			change_variable = { which = stargate_connections value = 1 }
+			owner = { change_variable = { which = stargate_research_connections_ex_con value = 1 } }
+			add_deposit = d_stargate_external_research_network
 		}
 	}
 }
