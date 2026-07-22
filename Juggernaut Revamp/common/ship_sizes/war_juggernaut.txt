@@ -1,4 +1,4 @@
-juggernaut = {
+juggernaut_nosh = {
 	entity = juggernaut_core_section_entity
 	formation_priority = @juggernaut_formation_priority
 	max_speed = @speed_slow
@@ -8,9 +8,11 @@ juggernaut = {
 	max_hitpoints = @juggernaut_hp
 	modifier = {
 		ship_evasion_add = @juggernaut_evasion
-		starbase_shipyard_capacity_add = 10
 	}
-
+	ship_modifier = {
+		ship_starting_experience_add = 100
+	}
+	
 	base_buildtime = @juggernaut_build_time
 	resources = {
 		category = ships
