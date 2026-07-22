@@ -14,61 +14,30 @@ country_event = {
 			last_increased_tech = tech_luxuries_2
 			last_increased_tech = tech_interstellar_economics
 			last_increased_tech = tech_galactic_markets
+			category_last_picked_tradition = tradition_mercantile
+			category_last_picked_tradition = tradition_prosperity
+			AND = {
+				has_ascension_perk = ap_universal_transactions
+				NOT = { has_country_flag = roci_trade_universal_transactions }
+			}
 		}
 	}
 	
 	immediate = {
+		set_variable = { which = kiyo_trade_max_trade_routes value = value:roci_trade_route_cap }
+		set_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value = value:roci_trade_route_size_cap }
+		create_message = {
+			type = EVENT_MESSAGE_TYPE
+			localization = roci_trade_cap_increased_message
+			target = root
+			days = 30
+		}
 		if = {
 			limit = {
-				last_increased_tech = tech_luxuries_1
-				NOT = { has_country_flag = kiyo_trade_has_max_trade_routes_tech_1 }
+				has_ascension_perk = ap_universal_transactions
+				NOT = { has_country_flag = roci_trade_universal_transactions }
 			}
-			if = {
-				limit = {
-					is_megacorp = yes
-				}
-				change_variable = { which = kiyo_trade_max_trade_routes value = 1 }
-			}
-			change_variable = { which = kiyo_trade_max_trade_routes value = 1 }
-			change_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value = 1 }
-			set_country_flag = kiyo_trade_has_max_trade_routes_tech_1
-			set_country_flag = roci_new_routes
-		}
-		else_if = { limit = { last_increased_tech = tech_luxuries_2 NOT = { has_country_flag = kiyo_trade_has_max_trade_routes_tech_2 } }
-			if = {
-				limit = {
-					is_megacorp = yes
-				}
-				change_variable = { which = kiyo_trade_max_trade_routes value = 1 }
-			}
-			change_variable = { which = kiyo_trade_max_trade_routes value = 1 }
-			change_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value = 1 }
-			set_country_flag = kiyo_trade_has_max_trade_routes_tech_2
-			set_country_flag = roci_new_routes
-		}
-		else_if = { limit = { last_increased_tech = tech_interstellar_economics NOT = { has_country_flag = kiyo_trade_has_max_trade_routes_tech_3 } }
-			if = {
-				limit = {
-					is_megacorp = yes
-				}
-				change_variable = { which = kiyo_trade_max_trade_routes value = 1 }
-			}
-			change_variable = { which = kiyo_trade_max_trade_routes value = 1 }
-			change_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value = 1 }
-			set_country_flag = kiyo_trade_has_max_trade_routes_tech_3
-			set_country_flag = roci_new_routes
-		}
-		else_if = { limit = { last_increased_tech = tech_galactic_markets NOT = { has_country_flag = kiyo_trade_has_max_trade_routes_tech_4 } }
-			if = {
-				limit = {
-					is_megacorp = yes
-				}
-				change_variable = { which = kiyo_trade_max_trade_routes value = 1 }
-			}
-			change_variable = { which = kiyo_trade_max_trade_routes value = 1 }
-			change_variable = { which = kiyo_trade_max_cargo_ships_per_fleet value = 3 }
-			set_country_flag = kiyo_trade_has_max_trade_routes_tech_4
-			set_country_flag = roci_new_routes
+			set_country_flag = roci_trade_universal_transactions
 		}
 		if = {
 			limit = {

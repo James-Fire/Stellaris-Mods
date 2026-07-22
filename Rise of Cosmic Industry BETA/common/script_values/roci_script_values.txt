@@ -181,6 +181,86 @@ roci_trade_route_limit_penalty = {
 	round = yes
 }
 
+#Country Scope
+#Count trade route cap
+roci_trade_route_cap = {
+	base = 3
+	modifier = {
+ 		has_technology = tech_luxuries_1
+		add = 1
+ 	}
+	modifier = {
+ 		has_technology = tech_luxuries_2
+		add = 1
+ 	}
+	modifier = {
+ 		has_technology = tech_interstellar_economics
+		add = 1
+ 	}
+	modifier = {
+ 		has_technology = tech_global_production_strategy
+		add = 1
+ 	}
+	modifier = {
+ 		has_technology = tech_galactic_markets
+		add = 1
+ 	}
+	modifier = {
+ 		has_active_tradition = tr_mercantile_adopt
+		add = 1
+ 	}
+	modifier = {
+ 		has_active_tradition = tr_prosperity_finish
+		add = 1
+ 	}
+	modifier = {
+ 		has_ascension_perk = ap_universal_transactions
+		add = 1
+ 	}
+	modifier = {
+ 		is_megacorp = yes
+		mult = 2
+ 	}
+}
+
+#Country Scope
+#Trade Route size cap
+roci_trade_route_size_cap = {
+	base = 1
+	modifier = {
+ 		has_technology = tech_luxuries_1
+		add = 1
+ 	}
+	modifier = {
+ 		has_technology = tech_luxuries_2
+		add = 1
+ 	}
+	modifier = {
+ 		has_technology = tech_interstellar_economics
+		add = 1
+ 	}
+	modifier = {
+ 		has_technology = tech_global_production_strategy
+		add = 1
+ 	}
+	modifier = {
+ 		has_technology = tech_galactic_markets
+		add = 3
+ 	}
+	modifier = {
+ 		has_active_tradition = tr_mercantile_adopt
+		add = 1
+ 	}
+	modifier = {
+ 		has_active_tradition = tr_prosperity_finish
+		add = 1
+ 	}
+	modifier = {
+ 		has_ascension_perk = ap_universal_transactions
+		add = 1
+ 	}
+}
+
 ###Autofab
 
 #Colony Scope

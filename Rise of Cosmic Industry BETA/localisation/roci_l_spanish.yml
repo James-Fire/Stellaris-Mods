@@ -1,48 +1,6 @@
 ﻿l_english:
     
  ###Autofab
- 
-  #Decisions
-    decision_build_autofab: "Build Automatic Factory Hub"
-    decision_dismantle_autofab: "Dismantle Automatic Factory Hub"
-    
-    edict_autofab_build_all: "Build All Automatic Factory Hubs"
-    edict_autofab_build_all_desc: "Queue an Automatic Factory Hub to be built on every planet we own that doesn't have one already."
-    edict_autofab_dismantle_all: "Dismantle All Automatic Factory Hubs"
-    edict_autofab_dismantle_all_desc: "Queue dismantling all Automatic Factory Hubs on every planet we own that has one."
-    
-    decision_manage_factory:0 "  Factory: Manage"
-    decision_manage_factory_desc:0 "Openb/Close the Factory Management menu. Also collapses all sub menus."
-    decision_convert_factory:0 " Factory: Convert Basic Resources"
-    decision_convert_factory_desc:0 "Have the factory take over basic resource district infrastructure."
-    decision_convert_adv_factory:0 " Factory: Convert Advanced Resources"
-    decision_convert_adv_factory_desc:0 "Have the factory take over advanced resource building infrastructure."
-    
-    decision_basic_resources:0 "  Factory: Basic Resource Menu"
-    decision_basic_resources_desc:0 "Reveals/Hides basic resource expansion of the Factory."
-    decision_adv_resources:0 "  Factory: ADV Resource Menu"
-    decision_adv_resources_desc:0 "Reveals/Hides advanced resource expansion of the Factory."
-    decision_disable_vanilla_conversion:0 " Factory: Disable Vanilla Swapping"
-    decision_disable_vanilla_conversion_desc:0 "Toggles swapping out vanilla buildings/districts for the factory counterparts."
-    decision_enable_vanilla_conversion:0 " Factory: Enable Vanilla Swapping"
-    decision_enable_vanilla_conversion_desc:0 "Toggles swapping out vanilla buildings/districts for the factory counterparts."
-    decision_autofab_automation:0 " Factory: Enable Automation"
-    decision_autofab_automation_desc:0 "Toggles the Factory on this planet to expand on its own, based on a set of logical parameters designed to minimize wasted production."
-    decision_autofab_automation_off:0 " Factory: Disable Automation"
-    decision_autofab_automation_off_desc:0 "Toggles the Factory on this planet to expand on its own, based on a set of logical parameters designed to minimize wasted production."
-    
-    
-    edict_autofab_advisor:0 "Factory Advisor"
-    edict_autofab_advisor_desc:0 "Open up interaction with the Factory Advisor."
-    edict_autofab_document:0 "Document Factories"
-    edict_autofab_document_desc:0 "Bring up a conclusion of all Factories and Factory Sections in the Empire for your perusal."
-    factory_already_building:0 "The Factory cannot already be expanding!"
-    
-    automation_on:0 "Factory Automation is currently on." 
-    automation_off:0 "Factory Automation is currently off."
-    ignoring:0 "New Vanilla construction is being ignored."
-    not_ignoring:0 "New Vanilla construction is being converted."
-    
   #Resource Production
     
     planet_autofab_uplink: "Automatic Factory Uplinks"
@@ -171,19 +129,7 @@
     
     tech_roci_autofab_uplinks: "Automatic Factory Uplinks"
 
-  #Deposits
-    autofab:0 "Automatic Factory"
-    autofab_desc:0 "This planet's Automated Factory. Allows building Factory Uplinks."
-	
-    building_autofab:0 "Automatic Factory"
-    building_autofab_desc:0 "This planet's Automated Factory. Allows building Factory Uplinks."
-    building_autofab_uplink_1: "Automatic Factory Connection"
-    building_autofab_uplink_1_desc: "A link to the Automatic Factory, allowing it to interface and operate some of the infrastructure of this zone."
-    building_autofab_uplink_2: "Automatic Factory Uplink"
-    building_autofab_uplink_2_desc: "A stronger connection to the Automatic Factory, increasing how much of the zone's infrastructure can be automated."
-    building_autofab_uplink_3: "Automatic Factory Core"
-    building_autofab_uplink_3_desc: "A complete connection to the Automatic Factory, allowing maximum automation of this zone."
-
+  #Jobs
 	job_roci_automation_engineer: "Automation Engineer"
 	job_roci_automation_engineer_plural: "Automation Engineers"
 	mod_job_roci_automation_engineer_add: "Automation Engineer Jobs"
@@ -195,6 +141,16 @@
 	
 	roci_automation_engineer: "Automation Engineers"
   #Buildings
+	
+    building_autofab:0 "Automatic Factory"
+    building_autofab_desc:0 "This planet's Automated Factory. Allows building Factory Uplinks."
+    building_autofab_uplink_1: "Automatic Factory Connection"
+    building_autofab_uplink_1_desc: "A link to the Automatic Factory, allowing it to interface and operate some of the infrastructure of this zone."
+    building_autofab_uplink_2: "Automatic Factory Uplink"
+    building_autofab_uplink_2_desc: "A stronger connection to the Automatic Factory, increasing how much of the zone's infrastructure can be automated."
+    building_autofab_uplink_3: "Automatic Factory Core"
+    building_autofab_uplink_3_desc: "A complete connection to the Automatic Factory, allowing maximum automation of this zone."
+
 	building_autofab_energy_uplink_1: "$building_autofab_uplink_1$"
 	building_autofab_energy_uplink_1_desc: "$building_autofab_uplink_1_desc$"
 	building_autofab_energy_uplink_2: "$building_autofab_uplink_2$"
@@ -225,46 +181,6 @@
 	building_autofab_foundry_uplink_2_desc: "$building_autofab_uplink_2_desc$"
 	building_autofab_foundry_uplink_3: "$building_autofab_uplink_3$"
 	building_autofab_foundry_uplink_3_desc: "$building_autofab_uplink_3_desc$"
-
-    
-    autofab_refinery_extractor:0 "Factory Extractor"
-    autofab_refinery_extractor_desc:0 "The Factory extracts rare resources from the planet in this area."
-    autofab_power:0 "Factory Generator"
-    autofab_power_desc:0 "The Factory generates power using available sources in this area."
-    autofab_farm:0 "Factory Farm"
-    autofab_farm_desc:0 "The Factory produces food in this area."
-    autofab_mine:0 "Factory Mine"
-    autofab_mine_desc:0 "The Factory extracts raw materials from the planet in this area."
-    autofab_refinery:0 "Factory Refinery"
-    autofab_refinery_desc:0 "The Factory produces rare resources from raw materials in this area."
-    autofab_factory:0 "Factory Industry"
-    autofab_factory_desc:0 "The Factory produces Consumer Goods from raw materials in this area."
-    autofab_factory_2:0 "Factory Industry 2"
-    autofab_factory_2_desc:0 "An upgraded factory, outputting more consumer goods."
-    autofab_factory_3:0 "Factory Industry 3"
-    autofab_factory_3_desc:0 "An upgraded factory, outputting more consumer goods."
-    autofab_foundry:0 "Factory Foundry"
-    autofab_foundry_desc:0 "The Factory produces Alloys from raw materials in this area."
-    autofab_foundry_2:0 "Factory Foundry 2"
-    autofab_foundry_2_desc:0 "An upgraded foundry, outputting more alloys."
-    autofab_foundry_3:0 "Factory Foundry 3"
-    autofab_foundry_3_desc:0 "An upgraded foundry, outputting more alloys."
-    autofab_gases_refinery:0 "Factory Gas Refinery"
-    autofab_gases_refinery_desc:0 "The Factory produces and refines Exotic Gases here."
-    autofab_motes_refinery:0 "Factory Chemical Plant"
-    autofab_motes_refinery_desc:0 "The Factory produces Volatile Motes here."
-    autofab_crystals_refinery:0 "Factory Translucer"
-    autofab_crystals_refinery_desc:0 "The Factory creates Rare Crystals here."
-    autofab_power_habitat:0 "Habitat Factory Generator"
-    autofab_power_habitat_desc:0 "The Factory generates power using available sources in this area."
-    autofab_mine_habitat:0 "Habitat Factory Mine"
-    autofab_mine_habitat_desc:0 "The Factory extracts raw materials from the planet in this area."
-    
-    factory_expansion:0 "Factory Expansion"
-    factory_expansion_desc:0 "The Factory is expanding on this planet.\n\nBuild Progress left on current construction: [This.autofab_module_construction_time]\nCurrent Projected Days until completion: [This.projected_autofab_construction_time]\n\nBuild Progress left in the whole queue: [This.autofab_queue_time]\nCurrent Projected Days until completion: [This.projected_autofab_queue_time]\n\nCurrent Build Progress per 30 days: [This.autofab_module_progress]"
-    
-    foundry_expanding:0 "Foundry"
-   
   #Origin and Civic
     origin_autofab_tooltip_1:0 "The living standards of your main species will be set to a high standard. Ethic specific ones are used first, then Social Welfare."
     origin_autofab_tooltip_2:0 "You start with an Automatic Factory, and Level 2 Automatic Factory Uplink Buildings in each of the basic resource zones."
@@ -1161,37 +1077,6 @@
 
  ###FE Buildings
  
-  #Buildings
-    building_roci_affluence_center_mod:0 "Affluence Center"
-    building_roci_affluence_center_mod_desc:0 "Any material desire can be met here, no matter how outlandish."
-    building_roci_nourishment_center_mod:0 "Nourishment Center"
-    building_roci_nourishment_center_mod_desc:0 "If it exists as a flavor, it can be replicated here."
-    building_roci_class_4_singularity_mod:0 "Class-4 Singularity"
-    building_roci_class_4_singularity_mod_desc:0 "A contained Singularity can be a great source of power, if you know how to make it."
-    building_roci_nano_forge_mod:0 "Auto-Forge"
-    building_roci_nano_forge_mod_desc:0 "The colossal nano-replicator bays convert raw materials into advanced alloys with miraculous speed."
-    building_roci_dimensional_fabricator_mod:0 "Dimensional Fabricator"
-    building_roci_dimensional_fabricator_mod_desc:0 "This building uses dimensional technology to tunnel into other realities and siphon off their valuable resources."
-    building_roci_master_archive_mod:0 "Master Archive"
-    building_roci_master_archive_mod_desc:0 "The Archives are an invaluable asset to research, containing the sum of our knowledge, and caretakers that know how to find it."
-    building_roci_fe_dome_mod:0 "REPLACE_ME"
-    building_roci_fe_dome_mod_desc:0 "REPLACE_ME"
-  #Techs
-    tech_roci_affluence_center:0 "Affluence Center"
-    tech_roci_affluence_center_desc:0 "Any material desire can be met here, no matter how outlandish."
-    tech_roci_nourishment_center:0 "Nourishment Center"
-    tech_roci_nourishment_center_desc:0 "If it exists as a flavor, it can be replicated here."
-    tech_roci_singularity_power:0 "Class-4 Singularity"
-    tech_roci_singularity_power_desc:0 "A contained Singularity can be a great source of power, if you know how to make it."
-    tech_roci_auto_forge:0 "Auto-Forge"
-    tech_roci_auto_forge_desc:0 "The colossal nano-replicator bays convert raw materials into advanced alloys with miraculous speed."
-    tech_roci_dimensional_fabricator:0 "Dimensional Fabricator"
-    tech_roci_dimensional_fabricator_desc:0 "This building uses dimensional technology to tunnel into other realities and siphon off their valuable resources."
-    tech_roci_archival_records:0 "Master Archive"
-    tech_roci_archival_records_desc:0 "The Archives are an invaluable asset to research, containing the sum of our knowledge, and caretakers that know how to find it."
-    tech_roci_sky_dome:0 "REPLACE_ME"
-    tech_roci_sky_dome_desc:0 "REPLACE_ME"
- 
  
  ###Trade Ships
   
@@ -1308,6 +1193,8 @@
     kiyo_trade_triggered_event.9.desc:0 "Our trade route from the §Y[Root.GetName]§! was cancelled.\n\nIf the trade route was fully set up, then strained relations with your trade partner or a planet being devastated can cause this to happen. Otherwise, you may have done something really weird, like disbanding an individual cargo ship (which only harms you)."
     
     cancel_route: "Cancel Trade Route"
+    
+    roci_trade_cap_increased_message: "Our trade route cap and trade route size cap have increased to [this.kiyo_trade_max_trade_routes] and [this.kiyo_trade_max_cargo_ships_per_fleet], respectively."
     
   #Tooltips
     roci_trade_routes_opinion: "The partner empire must either have 50 opinion of us, or 25 and one of us is improving relations."
