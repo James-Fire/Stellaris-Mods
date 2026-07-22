@@ -6,5 +6,5 @@ tags={
 }
 picture="thumbnail.png"
 supported_version="v4.4.*"
-path="C:/Users/godis/Documents/Paradox Interactive/Stellaris/mod/Buildable Ancient Dreadnought - Vanilla only"
+path="/home/sam/.local/share/Paradox Interactive/Stellaris/mod/Buildable Ancient Dreadnought - Vanilla only"
 remote_file_id="1769449688"

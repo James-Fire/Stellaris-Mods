@@ -4,5 +4,5 @@ tags={
 }
 picture="thumbnail.png"
 supported_version="v4.4.*"
-path="C:/Users/godis/Documents/Paradox Interactive/Stellaris/mod/James Fire's University"
+path="/home/sam/.local/share/Paradox Interactive/Stellaris/mod/James Fire's University"
 remote_file_id="1428221285"

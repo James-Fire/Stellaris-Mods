@@ -128,3 +128,11 @@ effect add_modifier = {
 	modifier = galatron_naval_cap1
 	multiplier = 100
 }
+
+
+effect add_building = {
+	district = district_city
+	zone = zone_trade
+	zone_slot = 2
+	building = building_galactic_stock_exchange
+}

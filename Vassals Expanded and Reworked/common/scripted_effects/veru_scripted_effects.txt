@@ -22,36 +22,17 @@ get_subjects_effect = {
 		overlord = { change_variable = { which = veru_total_subjects value = 1 } }
 	}
 
-	if = {
-		inline_script = { script = effects/get_subjects_list_effect NUM = 1 }
-	}
-	if = {
-		inline_script = { script = effects/get_subjects_list_effect NUM = 2 }
-	}
-	if = {
-		inline_script = { script = effects/get_subjects_list_effect NUM = 3 }
-	}
-	if = {
-		inline_script = { script = effects/get_subjects_list_effect NUM = 4 }
-	}
-	if = {
-		inline_script = { script = effects/get_subjects_list_effect NUM = 5 }
-	}
-	if = {
-		inline_script = { script = effects/get_subjects_list_effect NUM = 6 }
-	}
-	if = {
-		inline_script = { script = effects/get_subjects_list_effect NUM = 7 }
-	}
-	if = {
-		inline_script = { script = effects/get_subjects_list_effect NUM = 8 }
-	}
-	if = {
-		inline_script = { script = effects/get_subjects_list_effect NUM = 9 }
-	}
-	if = {
-		inline_script = { script = effects/get_subjects_list_effect NUM = 10 }
-	}
+	inline_script = { script = effects/get_subjects_list_effect NUM = 1 }
+	inline_script = { script = effects/get_subjects_list_effect NUM = 2 }
+	inline_script = { script = effects/get_subjects_list_effect NUM = 3 }
+	inline_script = { script = effects/get_subjects_list_effect NUM = 4 }
+	inline_script = { script = effects/get_subjects_list_effect NUM = 5 }
+	inline_script = { script = effects/get_subjects_list_effect NUM = 6 }
+	inline_script = { script = effects/get_subjects_list_effect NUM = 7 }
+	inline_script = { script = effects/get_subjects_list_effect NUM = 8 }
+	inline_script = { script = effects/get_subjects_list_effect NUM = 9 }
+	inline_script = { script = effects/get_subjects_list_effect NUM = 10 }
+
 
 	if = {
 		limit = { any_country = { has_country_flag = subject_country } }
@@ -340,45 +321,24 @@ get_leaders_in_class = {
 	# Next, we save each subject as an Event Target
 	# As the scripting language doesn't have proper loops, we use a lot of ifs if there are more than 10, the event can be run again.
 	## If we do ordered_owned_leader and there are more than 10, some will be inaccessible.
-	if = {
-		inline_script = { script = effects/get_leaders_class_effect NUM = 1 }
-	}
-	if = {
-		inline_script = { script = effects/get_leaders_class_effect NUM = 2 }
-	}
-	if = {
-		inline_script = { script = effects/get_leaders_class_effect NUM = 3 }
-	}
-	if = {
-		inline_script = { script = effects/get_leaders_class_effect NUM = 4 }
-	}
-	if = {
-		inline_script = { script = effects/get_leaders_class_effect NUM = 5 }
-	}
-	if = {
-		inline_script = { script = effects/get_leaders_class_effect NUM = 6 }
-	}
-	if = {
-		inline_script = { script = effects/get_leaders_class_effect NUM = 7 }
-	}
-	if = {
-		inline_script = { script = effects/get_leaders_class_effect NUM = 8 }
-	}
-	if = {
-		inline_script = { script = effects/get_leaders_class_effect NUM = 9 }
-	}
-	if = {
-		inline_script = { script = effects/get_leaders_class_effect NUM = 10 }
-	}
+	inline_script = { script = effects/get_leaders_class_effect NUM = 1 }
+	inline_script = { script = effects/get_leaders_class_effect NUM = 2 }
+	inline_script = { script = effects/get_leaders_class_effect NUM = 3 }
+	inline_script = { script = effects/get_leaders_class_effect NUM = 4 }
+	inline_script = { script = effects/get_leaders_class_effect NUM = 5 }
+	inline_script = { script = effects/get_leaders_class_effect NUM = 6 }
+	inline_script = { script = effects/get_leaders_class_effect NUM = 7 }
+	inline_script = { script = effects/get_leaders_class_effect NUM = 8 }
+	inline_script = { script = effects/get_leaders_class_effect NUM = 9 }
+	inline_script = { script = effects/get_leaders_class_effect NUM = 10 }
 
-	root = { country_event = { id = veru.5100 } }
 }
 
 # Remove All Civics 
 get_remove_civics = {
 	while = {
 		limit = { civics_count >= 1 }
-		force_remove_civic = 1
+		force_remove_civic_by_index = 1
 	}
 }
 
@@ -429,11 +389,11 @@ get_ethics_check_phobe = {
 # Remove Fanatic Authoritarian and Fanatic Egalitarian
 get_ethics_check_fan = {
 	if = {
-		limit = { has_ethic = ethic_fanatic_egalitarian }
+		limit = { is_fanatic_egalitarian = yes }
 		shift_ethic = ethic_authoritarian
 	}
 	else_if = {
-		limit = { has_ethic = ethic_fanatic_authoritarian }
+		limit = { is_fanatic_authoritarian = yes }
 		shift_ethic = ethic_egalitarian
 	}
 }
@@ -477,31 +437,31 @@ vear_install_leader_effect = {
 				cooldown = no
 			}
 		}
+
 		if = {
 			limit = { event_target:chosen_leader = { is_owned_by = event_target:chosen_subject } }
 			random = {
 				chance = 30
-				ruler = { set_leader_flag = grateful_installed_vassal_leader_@this }
+				event_target:chosen_leader = { set_leader_flag = grateful_installed_vassal_leader }
 				add_opinion_modifier = {
 					who = prev
 					modifier = opinion_installed_as_vassal_leader
 				}
-				prev = { set_country_flag = vassal_installer_country_@event_target:chosen_subject.ruler }
 			}
 		}
 		else = {
-			ruler = { set_leader_flag = grateful_installed_vassal_leader_@this }
+			event_target:chosen_leader = { set_leader_flag = grateful_installed_vassal_leader }
 			add_opinion_modifier = {
 				who = prev
 				modifier = opinion_installed_as_vassal_leader
 			}
 		}
 		
-	}
-	set_country_flag = vassal_installer_country_@event_target:chosen_subject.ruler
-	event_target:chosen_subject = {
+		#####
 		set_leader = event_target:chosen_leader
-
+	}
+	set_country_flag = vassal_installer_country_@event_target:chosen_leader
+	event_target:chosen_subject = {
 		if = {
 			limit = { exists = heir }
 			if = {
@@ -707,70 +667,59 @@ get_relocation_planets = {
 			is_under_colonization = no
 			has_orbital_bombardment = no
 		}
-		set_planet_flag = relocation_planet
+		set_carrier_flag = relocation_planet
 		prev = { change_variable = { which = total_relocation_planets value = 1 } }
 	}
 
 	# Next, we save each subject as an Event Target
 	# As the scripting language doesn't have proper loops, we use a lot of ifs if there are more than 10, the event can be run again.
-	if = {
-		inline_script = { script = effects/get_relocation_planet_effect NUM = 1 }
+	inline_script = { script = effects/get_relocation_planet_effect NUM = 1 }
+	inline_script = { script = effects/get_relocation_planet_effect NUM = 2 }
+	inline_script = { script = effects/get_relocation_planet_effect NUM = 3 }
+	inline_script = { script = effects/get_relocation_planet_effect NUM = 4 }
+	inline_script = { script = effects/get_relocation_planet_effect NUM = 5 }
+	inline_script = { script = effects/get_relocation_planet_effect NUM = 6 }
+	inline_script = { script = effects/get_relocation_planet_effect NUM = 7 }
+	inline_script = { script = effects/get_relocation_planet_effect NUM = 8 }
+	inline_script = { script = effects/get_relocation_planet_effect NUM = 9 }
+	inline_script = { script = effects/get_relocation_planet_effect NUM = 10 }
+	inline_script = { script = effects/get_relocation_planet_effect NUM = 11 }
+	inline_script = { script = effects/get_relocation_planet_effect NUM = 12 }
+	inline_script = { script = effects/get_relocation_planet_effect NUM = 13 }
+	inline_script = { script = effects/get_relocation_planet_effect NUM = 14 }
+	inline_script = { script = effects/get_relocation_planet_effect NUM = 15 }
+	inline_script = { script = effects/get_relocation_planet_effect NUM = 16 }
+	inline_script = { script = effects/get_relocation_planet_effect NUM = 17 }
+	inline_script = { script = effects/get_relocation_planet_effect NUM = 18 }
+	inline_script = { script = effects/get_relocation_planet_effect NUM = 19 }
+	inline_script = { script = effects/get_relocation_planet_effect NUM = 20 }
+
+}
+
+create_ps_country = {
+	create_country = {
+		name = random
+		type = default
+		species = event_target:planet_state_species
+		ignore_initial_colony_error = yes
+		day_zero_contact = no
+		origin = origin_planet_state
+		civics = event_target:mother_country
+		flag = random
+		authority = $PS_AUTH$
+		ethos = event_target:mother_country
+		effect = {
+			save_event_target_as = new_ps_country
+			establish_communications_no_message = event_target:mother_country
+		}
 	}
-	if = {
-		inline_script = { script = effects/get_relocation_planet_effect NUM = 2 }
-	}
-	if = {
-		inline_script = { script = effects/get_relocation_planet_effect NUM = 3 }
-	}
-	if = {
-		inline_script = { script = effects/get_relocation_planet_effect NUM = 4 }
-	}
-	if = {
-		inline_script = { script = effects/get_relocation_planet_effect NUM = 5 }
-	}
-	if = {
-		inline_script = { script = effects/get_relocation_planet_effect NUM = 6 }
-	}
-	if = {
-		inline_script = { script = effects/get_relocation_planet_effect NUM = 7 }
-	}
-	if = {
-		inline_script = { script = effects/get_relocation_planet_effect NUM = 8 }
-	}
-	if = {
-		inline_script = { script = effects/get_relocation_planet_effect NUM = 9 }
-	}
-	if = {
-		inline_script = { script = effects/get_relocation_planet_effect NUM = 10 }
-	}
-	if = {
-		inline_script = { script = effects/get_relocation_planet_effect NUM = 11 }
-	}
-	if = {
-		inline_script = { script = effects/get_relocation_planet_effect NUM = 12 }
-	}
-	if = {
-		inline_script = { script = effects/get_relocation_planet_effect NUM = 13 }
-	}
-	if = {
-		inline_script = { script = effects/get_relocation_planet_effect NUM = 14 }
-	}
-	if = {
-		inline_script = { script = effects/get_relocation_planet_effect NUM = 15 }
-	}
-	if = {
-		inline_script = { script = effects/get_relocation_planet_effect NUM = 16 }
-	}
-	if = {
-		inline_script = { script = effects/get_relocation_planet_effect NUM = 17 }
-	}
-	if = {
-		inline_script = { script = effects/get_relocation_planet_effect NUM = 18 }
-	}
-	if = {
-		inline_script = { script = effects/get_relocation_planet_effect NUM = 19 }
-	}
-	if = {
-		inline_script = { script = effects/get_relocation_planet_effect NUM = 20 }
+}
+
+choose_ps_vassal_type = {
+	event_target:new_ps_country = {
+		set_subject_of = {
+			who = root
+			preset = preset_$PRESET$
+		}
 	}
 }

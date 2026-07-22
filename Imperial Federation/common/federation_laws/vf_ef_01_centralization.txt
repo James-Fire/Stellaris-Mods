@@ -990,6 +990,10 @@ centralization_low_empire = {
 			}
 		}
 	}
+	cohesion_growth = -1
+	modifier = {
+		divided_patrongage_max_subjects = 1
+	}
 	on_enact = {
 		if = {
 			limit = {
@@ -1146,6 +1150,10 @@ centralization_medium_empire = {
 				has_federation_flag = vf_law_changes_disabled
 			}
 		}
+	}
+	cohesion_growth = -2
+	modifier = {
+		divided_patrongage_max_subjects = 2
 	}
 	on_enact = {
 		if = {
@@ -1312,6 +1320,10 @@ centralization_high_empire = {
 			}
 		}
 	}
+	cohesion_growth = -3
+	modifier = {
+		divided_patrongage_max_subjects = 3
+	}
 	on_enact = {
 		if = {
 			limit = {
@@ -1475,6 +1487,9 @@ centralization_very_high_empire = {
 		}
 	}
 	cohesion_growth = -4
+	modifier = {
+		divided_patrongage_max_subjects = 4
+	}
 	on_enact = {
 		if = {
 			limit = {

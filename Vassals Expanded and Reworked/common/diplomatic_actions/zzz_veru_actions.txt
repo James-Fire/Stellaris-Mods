@@ -28,6 +28,7 @@ action_invite_to_federation = {
 				# is_overlord_to = FROM ## Seems broken
 			}
 		}
+		hidden_trigger = { NOT = { has_origin = origin_endbringers } }
 		hidden_trigger = {
 			OR = {
 				has_federation = no
@@ -75,7 +76,9 @@ action_invite_to_federation = {
 			}
 		}
 		diplomacy_is_not_homicidal = yes
+		diplomacy_is_not_scorched = yes
 		diplomacy_is_not_inward_perfection = yes
+		diplomacy_is_not_khan = yes
 		custom_tooltip = {
             fail_text = requires_30_trust_or_excellent
             OR = {
@@ -122,6 +125,17 @@ action_invite_to_federation = {
 		# Shared Borders
 		get_border_test = yes
 	}
+
+	on_accept = {
+		hidden_effect = {
+			country_event = { # Patron Objective Counter: po_establish_diplomatic_pact
+				id = shroud.10400
+				scopes = {
+					from = from
+				}
+			}
+		}
+	}
 }
 
 # Form a research agreement with another empire
@@ -136,37 +150,21 @@ action_form_research_agreement = {
 	potential = {
 		hidden_trigger = {
 			is_country_type = default
-			from = { is_country_type = default }
+			from = {
+				OR = {
+					is_country_type = default
+					is_country_type = exiled
+				}
+			}
 		}
 	}
 
 	possible = {
 		diplomacy_is_not_homicidal = yes
+		diplomacy_is_not_scorched = yes
 		diplomacy_is_not_inward_perfection = yes
-		custom_tooltip = {
-			fail_text = "federation_actor_no_separate_treaties"
-			NOT = {
-				AND = {
-					has_federation = yes
-					federation = { has_federation_law = treaties_separate_no }
-					NOT = { federation = { any_member = { is_same_value = root.from } } }
-				}
-			}
-		}
-		custom_tooltip = {
-			fail_text = "federation_recipient_no_separate_treaties"
-			from = {
-				NOT = {
-					AND = {
-						has_federation = yes
-						federation = {
-							has_federation_law = treaties_separate_no
-						}
-						NOT = { federation = { any_member = { is_same_value = root } } }
-					}
-				}
-			}
-		}
+		diplomacy_is_not_khan = yes
+		diplomacy_treaties = yes
 		custom_tooltip = {
 			fail_text = "federation_automatic_research"
 			NOT = {
@@ -254,7 +252,9 @@ action_demand_subjugation = {
 
 	possible = {
 		diplomacy_is_not_homicidal = yes
+		diplomacy_is_not_scorched = yes
 		diplomacy_recipient_is_not_pompous = yes
+		diplomacy_recipient_is_not_khan = yes
 		custom_tooltip = {
 			fail_text = "requires_recipient_not_in_galactic_empire"
 			NAND = {
@@ -289,7 +289,7 @@ action_demand_subjugation = {
 				}
 			}
 			# Requirements:
-			# - 50 Trust OR Excellent Opinion
+			# - 50 Trust OR Excellent Opinion OR Can ignore trust values
 			# - An Embassy OR the Diplomatic Networking tradition.
 			custom_tooltip = {
 				fail_text = requires_50_trust_or_excellent
@@ -304,6 +304,7 @@ action_demand_subjugation = {
 							value >= 50
 						}
 					}
+					can_ignore_trust_requirements_for_subjects = yes
 					AND = {
 						has_valid_civic = civic_hive_familiar_face
 						from = {
@@ -320,6 +321,7 @@ action_demand_subjugation = {
 				OR = {
 					has_embassy = from
 					has_active_tradition = tr_diplomacy_diplomatic_networking
+					can_ignore_trust_requirements_for_subjects = yes
 				}
 			}
 		}
@@ -356,38 +358,100 @@ action_demand_subjugation = {
 					who = root
 					value < 50
 				}
+				NOT = { has_country_flag = heir_of_the_khan_khan }
 			}
 			desc = LACK_OF_TRUST
 		}
 
 		modifier = {
-			add = -1000
-            relative_power = {
-                who = from
-                category = fleet
-                value >= equivalent
-            }
-			desc = RELATIVE_POWER
+			add = -50
+			root = {
+				is_militarist = yes
+				has_faction = imperialist
+			}
+			desc = TOO_IMPERIAL
+		}
+		modifier = { # If the Khan is bordering you, you are a lot more likely to be a subject
+			add = 50
+			from = {
+				has_country_flag = heir_of_the_khan_khan
+				is_neighbor_of = root
+			}
+			desc = NEIGHBORING_KHAN
+		}
+		modifier = { # If any of your neighbors are a satrapy, then that too makes you likely to be a subject
+			add = 25
+			from = {
+				has_country_flag = heir_of_the_khan_khan
+			}
+			any_neighbor_country = {
+				is_subject = yes
+				any_agreement = { agreement_preset = preset_satrapy }
+			}
+			desc = NEIGHBORING_SATRAPY
+		}
+		modifier = { # AI Heirs of the Khan empires will join you
+			add = 50
+			from = {
+				has_country_flag = heir_of_the_khan_khan
+			}
+			has_origin = origin_heirs_of_the_khan
+			desc = RIGHTFUL_KHAN
 		}
 
-        modifier = {
-			add = 50
-            relative_power = {
-                who = from
-                category = fleet
-                value = inferior
-            }
-			desc = RELATIVE_POWER
+		modifier = { # If you have defensive pacts then you are less likely to submit to the player Khan
+			subtract = value:num_defensive_pacts_times_25
+			from = {
+				has_country_flag = heir_of_the_khan_khan
+			}
+			desc = NUMBER_OF_DEFENSIVE_PACTS
 		}
 
 		modifier = {
-			add = 100
-            relative_power = {
-                who = from
-                category = fleet
-                value = pathetic
-            }
-			desc = RELATIVE_POWER
+			subtract = 100
+			desc = IN_GALACTIC_EMPIRE
+			has_galactic_emperor = yes
+			is_galactic_community_member = yes
+			from = {
+				has_country_flag = heir_of_the_khan_khan
+			}
+		}
+		modifier = {
+			subtract = 100
+			desc = IN_GLACTIC_COMMUNITY_CUSTODIAN
+			has_galactic_custodian = yes
+			is_galactic_community_member = yes
+			from = {
+				has_country_flag = heir_of_the_khan_khan
+			}
+		}
+
+		modifier = { # Nomads never want to be subjects
+			subtract = 100
+			desc = WANTS_TO_BE_FREE
+			is_nomadic = yes
+		}
+
+		modifier = { # Planetbound empires don't trust nomadic overlords
+			subtract = 100
+			desc = NOMADIC_OVERLORD
+			is_nomadic = no
+			from = {
+				is_nomadic = yes
+			}
+		}
+
+		modifier = { # If you are equal or stronger than the Khan, disregard all of the above modifiers
+			mult = 0
+			from = {
+				has_country_flag = heir_of_the_khan_khan
+			}
+			relative_power = {
+				who = from
+				category = all
+				value >= equivalent
+			}
+			desc = BLANK_STRING
 		}
 	}
 }
@@ -411,30 +475,9 @@ action_ask_to_become_subjugated = {
 
 	possible = {
 		diplomacy_is_not_homicidal = yes
-		custom_tooltip = {
-			fail_text = "federation_actor_no_separate_treaties"
-			NOT = {
-				AND = {
-					has_federation = yes
-					federation = { has_federation_law = treaties_separate_no }
-					NOT = { federation = { any_member = { is_same_value = root.from } } }
-				}
-			}
-		}
-		custom_tooltip = {
-			fail_text = "federation_recipient_no_separate_treaties"
-			from = {
-				NOT = {
-					AND = {
-						has_federation = yes
-						federation = {
-							has_federation_law = treaties_separate_no
-						}
-						NOT = { federation = { any_member = { is_same_value = root } } }
-					}
-				}
-			}
-		}
+		diplomacy_is_not_scorched = yes
+		diplomacy_actor_is_not_khan = yes
+		diplomacy_treaties = yes
 		custom_tooltip = {
 			fail_text = "requires_not_in_galactic_empire"
 			OR = {
@@ -467,7 +510,7 @@ action_ask_to_become_subjugated = {
 			NOT = { has_valid_civic = civic_pompous_purists	}
 		}
 		# Requirements:
-		# - 50 Trust OR Excellent Opinion
+		# - 50 Trust OR Excellent Opinion OR Can ignore trust values
 		# - An Embassy OR the Diplomatic Networking tradition.
 		custom_tooltip = {
 			fail_text = requires_50_trust_or_excellent
@@ -482,6 +525,7 @@ action_ask_to_become_subjugated = {
 						value >= 50
 					}
 				}
+				from = { can_ignore_trust_requirements_for_subjects = yes }
 				AND = {
 					has_valid_civic = civic_hive_familiar_face
 					from = {
@@ -498,12 +542,83 @@ action_ask_to_become_subjugated = {
 			OR = {
 				has_embassy = from
 				has_active_tradition = tr_diplomacy_diplomatic_networking
+				from = { can_ignore_trust_requirements_for_subjects = yes }
 			}
 		}
 		# Shared Borders
 		get_border_test = yes
 	}
 	should_ai_propose = {
+		modifier = { # If the Khan is bordering you, you are a lot more likely to be a subject
+			add = 50
+			from = {
+				has_country_flag = heir_of_the_khan_khan
+				is_neighbor_of = root
+			}
+			desc = NEIGHBORING_KHAN
+		}
+		modifier = { # If any of your neighbors are a satrapy, then that too makes you likely to be a subject
+			add = 25
+			from = {
+				has_country_flag = heir_of_the_khan_khan
+			}
+			any_neighbor_country = {
+				is_subject = yes
+				any_agreement = { agreement_preset = preset_satrapy }
+			}
+			desc = NEIGHBORING_SATRAPY
+		}
+		modifier = { # AI Heirs of the Khan empires will join you
+			add = 50
+			from = {
+				has_country_flag = heir_of_the_khan_khan
+			}
+			has_origin = origin_heirs_of_the_khan
+			desc = RIGHTFUL_KHAN
+		}
+
+		modifier = { # If you have defensive pacts then you are less likely to submit to the player Khan
+			subtract = value:num_defensive_pacts_times_25
+			from = {
+				has_country_flag = heir_of_the_khan_khan
+			}
+			desc = NUMBER_OF_DEFENSIVE_PACTS
+		}
+
+		modifier = {
+			subtract = 100
+			desc = IN_GALACTIC_EMPIRE
+			has_galactic_emperor = yes
+			is_galactic_community_member = yes
+			from = {
+				has_country_flag = heir_of_the_khan_khan
+			}
+		}
+		modifier = {
+			subtract = 100
+			desc = IN_GLACTIC_COMMUNITY_CUSTODIAN
+			has_galactic_custodian = yes
+			is_galactic_community_member = yes
+			from = {
+				has_country_flag = heir_of_the_khan_khan
+			}
+		}
+
+		modifier = { # Nomads never want to be subjects
+			subtract = 100
+			desc = WANTS_TO_BE_FREE
+			from = { is_nomadic = yes }
+		}
+
+		modifier = { # Planetbound empires don't trust nomadic overlords
+			subtract = 100
+			desc = NOMADIC_OVERLORD
+			is_nomadic = yes
+			from = {
+				is_nomadic = no
+			}
+		}
+
 		modifier = {
 			mult = 0
 			from = {
@@ -511,23 +626,17 @@ action_ask_to_become_subjugated = {
 					who = root
 					value < 50
 				}
+				NOT = { has_country_flag = heir_of_the_khan_khan }
 			}
 		}
 		modifier = {
-            mult = 0
-            OR = {
-            	relative_power = {
-            	    who = from
-            	    category = all
-            	    value >= equivalent
-            	}
-            	relative_power = {
-            	    who = from
-            	    category = fleet
-            	    value >= equivalent
-            	}
-            }
-        }
+			mult = 0
+			relative_power = {
+				who = from
+				category = all
+				value >= equivalent
+			}
+		}
 		modifier = {
 			add = -100
 			root = {
@@ -536,17 +645,19 @@ action_ask_to_become_subjugated = {
 			}
 			desc = TOO_IMPERIAL
 		}
-    }
-    ai_acceptance = {
-        modifier = {
-            add = -100
-            from = {
-                trust = {
-                    who = root
-                    value < 50
-                }
-            }
-            desc = LACK_OF_TRUST
-        }
-    }
+	}
+
+	ai_acceptance = {
+		modifier = {
+			add = -100
+			from = {
+				trust = {
+					who = root
+					value < 50
+				}
+			}
+			NOT = { has_country_flag = heir_of_the_khan_khan }
+			desc = LACK_OF_TRUST
+		}
+	}
 }

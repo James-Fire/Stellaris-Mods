@@ -140,6 +140,54 @@ roci_trade_route_value = {
 	add = trigger:sapient_pop_amount
 }
 
+#Country Scope
+#Count trade routes
+roci_trade_route_cap = {
+	base = 3
+	modifier = {
+ 		has_technology = tech_luxuries_1
+		add = 1
+ 	}
+	modifier = {
+ 		has_technology = tech_luxuries_2
+		add = 1
+ 	}
+	modifier = {
+ 		has_technology = tech_interstellar_economics
+		add = 1
+ 	}
+	modifier = {
+ 		has_technology = tech_galactic_markets
+		add = 1
+ 	}
+}
+
+#Country Scope
+#Trade Route size cap
+roci_trade_route_size_cap = {
+	base = 1
+	modifier = {
+ 		has_technology = tech_luxuries_1
+		add = 1
+ 	}
+	modifier = {
+ 		has_technology = tech_luxuries_2
+		add = 1
+ 	}
+	modifier = {
+ 		has_technology = tech_interstellar_economics
+		add = 1
+ 	}
+	modifier = {
+ 		has_technology = tech_galactic_markets
+		add = 3
+ 	}
+	modifier = {
+ 		has_active_tradition = tr_autofab_finish
+		add = 1
+ 	}
+}
+
 ###Autofab
 
 #Colony Scope

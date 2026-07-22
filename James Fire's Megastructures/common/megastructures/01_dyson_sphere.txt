@@ -53,28 +53,28 @@ dyson_sphere_0 = {
 			fail_text = "requires_inside_border"
 			is_inside_border = from
 		}
-		custom_tooltip = {
-			fail_text = "requires_no_existing_dyson_sphere"
-			from = {
-				OR = {
-					has_relic = r_contingency_core
-					NOT = { has_country_flag = built_dyson_sphere }
-				}
-			}
-		}
+		#custom_tooltip = {
+		#	fail_text = "requires_no_existing_dyson_sphere"
+		#	from = {
+		#		OR = {
+		#			has_relic = r_contingency_core
+		#			NOT = { has_country_flag = built_dyson_sphere }
+		#		}
+		#	}
+		#}
 		custom_tooltip = {
 			fail_text = "requires_no_machine_age"
 			from = { has_machine_age_dlc = no }
 		}
-		custom_tooltip = {
-			fail_text = "requires_no_existing_dyson_sphere_two"
-			from = {
-				NOR = {
-					has_country_flag = built_dyson_sphere_contingency
-					has_country_flag = built_dyson_sphere_contingency_swarm
-				}
-			}
-		}
+		#custom_tooltip = {
+		#	fail_text = "requires_no_existing_dyson_sphere_two"
+		#	from = {
+		#		NOR = {
+		#			has_country_flag = built_dyson_sphere_contingency
+		#			has_country_flag = built_dyson_sphere_contingency_swarm
+		#		}
+		#	}
+		#}
 		custom_tooltip = {
 			fail_text = "requires_surveyed_system"
 			NOT = {
@@ -193,9 +193,9 @@ dyson_sphere_0 = {
 					has_relic = r_contingency_core
 					has_country_flag = built_dyson_sphere
 				}
-				set_country_flag = built_dyson_sphere_contingency
+				#set_country_flag = built_dyson_sphere_contingency
 			}
-			set_country_flag = built_dyson_sphere
+			#set_country_flag = built_dyson_sphere
 		}
 		fromfrom.planet = {
 			if = {
@@ -321,37 +321,37 @@ dyson_sphere_2 = {
 	build_time = 3600
 	use_planet_resource = yes
 	possible = {
-		custom_tooltip = {
-			fail_text = "requires_no_existing_dyson_sphere"
-			from = {
-				OR = {
-					has_relic = r_contingency_core
-					NOT = { has_country_flag = built_dyson_sphere_swarm }
-				}
-			}
-		}
-		custom_tooltip = {
-			fail_text = "requires_no_existing_dyson_sphere_two"
-			from = {
-				NOT = { has_country_flag = built_dyson_sphere_contingency_swarm } }
-		}
-		custom_tooltip = {
-			fail_text = "requires_no_arc_furnace"
-			system_has_arc_furnace = no
-		}
-		custom_tooltip = {
-			fail_text = "requires_no_arc_furnace_construction"
-			if = {
-				limit = {
-					system_has_arc_furnace = no
-				}
-				NOT = {
-					solar_system = {
-						has_star_flag = arc_furnace_construction
-					}
-				}
-			}
-		}
+		#custom_tooltip = {
+		#	fail_text = "requires_no_existing_dyson_sphere"
+		#	from = {
+		#		OR = {
+		#			has_relic = r_contingency_core
+		#			NOT = { has_country_flag = built_dyson_sphere_swarm }
+		#		}
+		#	}
+		#}
+		#custom_tooltip = {
+		#	fail_text = "requires_no_existing_dyson_sphere_two"
+		#	from = {
+		#		NOT = { has_country_flag = built_dyson_sphere_contingency_swarm } }
+		#}
+		#custom_tooltip = {
+		#	fail_text = "requires_no_arc_furnace"
+		#	system_has_arc_furnace = no
+		#}
+		#custom_tooltip = {
+		#	fail_text = "requires_no_arc_furnace_construction"
+		#	if = {
+		#		limit = {
+		#			system_has_arc_furnace = no
+		#		}
+		#		NOT = {
+		#			solar_system = {
+		#				has_star_flag = arc_furnace_construction
+		#			}
+		#		}
+		#	}
+		#}
 		custom_tooltip = {
 			fail_text = "requires_no_colonies"
 			NOT = {
@@ -515,23 +515,23 @@ dyson_sphere_3 = {
 	}
 
 	possible = {
-		custom_tooltip = {
-			fail_text = "requires_no_arc_furnace"
-			system_has_arc_furnace = no
-		}
-		custom_tooltip = {
-			fail_text = "requires_no_arc_furnace_construction"
-			if = {
-				limit = {
-					system_has_arc_furnace = no
-				}
-				NOT = {
-					solar_system = {
-						has_star_flag = arc_furnace_construction
-					}
-				}
-			}
-		}
+		#custom_tooltip = {
+		#	fail_text = "requires_no_arc_furnace"
+		#	system_has_arc_furnace = no
+		#}
+		#custom_tooltip = {
+		#	fail_text = "requires_no_arc_furnace_construction"
+		#	if = {
+		#		limit = {
+		#			system_has_arc_furnace = no
+		#		}
+		#		NOT = {
+		#			solar_system = {
+		#				has_star_flag = arc_furnace_construction
+		#			}
+		#		}
+		#	}
+		#}
 		custom_tooltip = {
 			fail_text = "requires_no_colonies"
 			NOT = {
@@ -629,23 +629,23 @@ dyson_sphere_4 = {
 	prerequisites = { "tech_dyson_sphere" }
 
 	possible = {
-		custom_tooltip = {
-			fail_text = "requires_no_arc_furnace"
-			system_has_arc_furnace = no
-		}
-		custom_tooltip = {
-			fail_text = "requires_no_arc_furnace_construction"
-			if = {
-				limit = {
-					system_has_arc_furnace = no
-				}
-				NOT = {
-					solar_system = {
-						has_star_flag = arc_furnace_construction
-					}
-				}
-			}
-		}
+		#custom_tooltip = {
+		#	fail_text = "requires_no_arc_furnace"
+		#	system_has_arc_furnace = no
+		#}
+		#custom_tooltip = {
+		#	fail_text = "requires_no_arc_furnace_construction"
+		#	if = {
+		#		limit = {
+		#			system_has_arc_furnace = no
+		#		}
+		#		NOT = {
+		#			solar_system = {
+		#				has_star_flag = arc_furnace_construction
+		#			}
+		#		}
+		#	}
+		#}
 		custom_tooltip = {
 			fail_text = "requires_no_colonies"
 			NOT = {
@@ -744,23 +744,23 @@ dyson_sphere_5 = {
 	}
 
 	possible = {
-		custom_tooltip = {
-			fail_text = "requires_no_arc_furnace"
-			system_has_arc_furnace = no
-		}
-		custom_tooltip = {
-			fail_text = "requires_no_arc_furnace_construction"
-			if = {
-				limit = {
-					system_has_arc_furnace = no
-				}
-				NOT = {
-					solar_system = {
-						has_star_flag = arc_furnace_construction
-					}
-				}
-			}
-		}
+		#custom_tooltip = {
+		#	fail_text = "requires_no_arc_furnace"
+		#	system_has_arc_furnace = no
+		#}
+		#custom_tooltip = {
+		#	fail_text = "requires_no_arc_furnace_construction"
+		#	if = {
+		#		limit = {
+		#			system_has_arc_furnace = no
+		#		}
+		#		NOT = {
+		#			solar_system = {
+		#				has_star_flag = arc_furnace_construction
+		#			}
+		#		}
+		#	}
+		#}
 		custom_tooltip = {
 			fail_text = "requires_no_colonies"
 			NOT = {

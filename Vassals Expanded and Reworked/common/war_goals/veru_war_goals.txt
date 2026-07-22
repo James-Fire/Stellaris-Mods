@@ -1,13 +1,7 @@
 wg_claim_subject = {
 	casus_belli = cb_buffer_zone
 
-	hide_if_no_cb = yes
-
-	allowed_peace_offers = {
-		status_quo
-		surrender
-		demand_surrender
-	}
+	hide = no_cb
 
 	surrender_acceptance = -50
 

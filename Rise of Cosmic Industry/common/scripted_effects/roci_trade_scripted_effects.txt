@@ -93,6 +93,7 @@ cancel_trade_route = {
 				queue_actions = { orbit_planet = event_target:kiyo_trade_partner }
 				event_target:kiyo_trade_partner = { prev = { set_fleet_flag = kiyo_trade_going@PREV } }
 			}
+			owner = { kiyo_mod_trade_set_num_trade_routes = yes }
 		}
 		settings = {
 			can_upgrade = no
@@ -416,7 +417,14 @@ kiyo_mod_trade_check_trade_route_exist = {
 # THIS = COUNTRY
 kiyo_mod_trade_set_num_trade_routes = {
 	set_variable = { which = kiyo_trade_num_trade_routes value = 0 }
-	every_owned_fleet = { limit = { any_owned_ship = { is_ship_size = kiyo_trade } NOT = { has_fleet_flag = kiyo_event_trade_deleted_cargo } }
+	every_owned_fleet = {
+		limit = { 
+			any_owned_ship = {
+				is_ship_size = kiyo_trade
+			}
+			has_fleet_flag = kiyo_trade_has_trade_route
+			NOT = { has_fleet_flag = kiyo_event_trade_deleted_cargo }
+		}
 		prev = { change_variable = { which = kiyo_trade_num_trade_routes value = 1 } }
 	}
 }

@@ -23,6 +23,10 @@ decision_kiyo_mod_trade_setup_trade_route = {
 				is_ai = no
 			}
 			AND = {
+				any_owned_fleet = {
+					any_owned_ship = { is_ship_size = kiyo_trade }
+					NOT = { has_fleet_flag = kiyo_trade_has_trade_route }
+				}
 				owner = {
 					is_ai = yes
 					is_at_war = no

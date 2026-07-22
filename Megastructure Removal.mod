@@ -5,5 +5,5 @@ tags={
 }
 picture="megaremove.png"
 supported_version="v4.*.*"
-path="C:/Users/godis/Documents/Paradox Interactive/Stellaris/mod/Megastructure Removal"
+path="/home/sam/.local/share/Paradox Interactive/Stellaris/mod/Megastructure Removal"
 remote_file_id="1645507361"

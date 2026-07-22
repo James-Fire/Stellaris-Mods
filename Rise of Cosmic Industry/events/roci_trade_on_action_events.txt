@@ -463,63 +463,48 @@ country_event = {
 	}
 	
 	immediate = {
-		#Recount fleets
-		set_variable = { which = kiyo_trade_num_trade_routes value = 0 }
 		every_owned_fleet = {
 			limit = {
 				any_owned_ship = { is_ship_size = kiyo_trade }
 			}
-			owner = { change_variable = { which = kiyo_trade_num_trade_routes value = 1 } }
-		}
-		#Get fleets back on the path, or if this is an AI and they don't have a path, get them a path
-		if = {
-			limit = {
-				any_owned_fleet = {
-					any_owned_ship = { is_ship_size = kiyo_trade }
-					is_fleet_idle = yes
-					OR = {
-						owner = { is_ai = yes }
-						has_fleet_flag = kiyo_trade_has_trade_route
-					}
-				}
-			}
-			every_owned_fleet = {
+			#Get fleets back on the path, or if this is an AI and they don't have a path, get them a path
+			if = {
 				limit = {
-					any_owned_ship = { is_ship_size = kiyo_trade }
 					is_fleet_idle = yes
-					has_fleet_flag = kiyo_trade_has_trade_route
 				}
 				fleet_event = { id = kiyo_trade_orbit_event.2 }
-			}
-			every_owned_fleet = {
-				limit = {
-					any_owned_ship = { is_ship_size = kiyo_trade }
-					is_fleet_idle = yes
-					owner = { is_ai = yes }
-				}
-				prev = { random_owned_planet = { limit = { prevprev = { has_fleet_flag = kiyo_trade_start@PREV } } save_event_target_as = kiyo_trade_start } }
-				
-				
-				
+			
 				if = {
 					limit = {
-						NOT = { exists = event_target:kiyo_trade_start }
+						has_fleet_flag = kiyo_trade_has_trade_route
 					}
-					#Find the planet in the galaxy that has the best trade route value that can be traded with
-					ordered_galaxy_planet = {
-						limit = { exists = owner owner = { roci_can_trade_with_country = yes } }
-						position = 0
-						order_by = value:roci_trade_route_value
-						save_event_target_as = kiyo_trade_start
-					}
+					fleet_event = { id = kiyo_trade_orbit_event.2 }
 				}
-				else_if = {
+				else_if
 					limit = {
-						exists = event_target:kiyo_trade_start
+						owner = { is_ai = yes }
 					}
-					queue_actions = { orbit_planet = event_target:kiyo_trade_start }
+					prev = { random_owned_planet = { limit = { prevprev = { has_fleet_flag = kiyo_trade_start@PREV } } save_event_target_as = kiyo_trade_start } }
+					if = {
+						limit = {
+							NOT = { exists = event_target:kiyo_trade_start@this }
+						}
+						#Find the planet in the galaxy that has the best trade route value that can be traded with
+						ordered_galaxy_planet = {
+							limit = { exists = owner owner = { roci_can_trade_with_country = yes } }
+							position = 0
+							order_by = value:roci_trade_route_value
+							save_event_target_as = kiyo_trade_start@this
+						}
+					}
+					else_if = {
+						limit = {
+							exists = event_target:kiyo_trade_start@this
+						}
+						queue_actions = { orbit_planet = event_target:kiyo_trade_start }
+					}
+					else = { delete_fleet = this }
 				}
-				else = { delete_fleet = this }
 			}
 		}
 	}

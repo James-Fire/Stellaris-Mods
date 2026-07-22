@@ -5,4 +5,4 @@ tags={
 }
 name="Imperial Federation"
 supported_version="v4.1.*"
-path="C:/Users/godis/Documents/Paradox Interactive/Stellaris/mod/Imperial Federation"
+path="/home/sam/.local/share/Paradox Interactive/Stellaris/mod/Imperial Federation"

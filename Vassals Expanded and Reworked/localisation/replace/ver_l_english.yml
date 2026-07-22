@@ -16,43 +16,43 @@
  ##### Subject types #####
 
  preset_ver_foederatus: "Foederatus"
- preset_ver_foederatus_desc:"Foederati have a martial relationship with their overlord, where both parties are required to participate in the other's wars. Routine joint-military exercises with their overlord allow both armed forces to be more effective.\n\n§YSubsidy§!: §R5%§! £alloys£ §HAlloys§!\n§WSpecial Effects:§! \n§YSubject§!: £mod_ship_damage_mult£ Ship Weapons Damage: §G+10%§!, £navy_size£ Naval Capacity: §G+25%§!\n§YOverlord§!: £mod_ship_damage_mult£ Ship Weapons Damage: §G+2%§!, £navy_size£ Naval Capacity: §R-2%§!"
+ preset_ver_foederatus_desc: "Foederati have a martial relationship with their overlord, where both parties are required to participate in the other's wars. Routine joint-military exercises with their overlord allow both armed forces to be more effective.\n\n§YSubsidy§!: §R5%§! £alloys£ §HAlloys§!\n§WSpecial Effects:§! \n§YSubject§!: £mod_ship_damage_mult£ Ship Weapons Damage: §G+10%§!, £navy_size£ Naval Capacity: §G+25%§!\n§YOverlord§!: £mod_ship_damage_mult£ Ship Weapons Damage: §G+5%§!, £navy_size£ Naval Capacity: §R-7%§!"
 
  preset_ver_satellite: "Satellite State"
- preset_ver_satellite_desc:"Satellite States are restricted in their foreign affairs and have effectively been disarmed. Whatever heavy industry remains is used to bolster the military capabilities of their overlord.\n\n§YTribute§!: §G15%§! £alloys£ §HAlloys§!\n§WSpecial Effects:§! \n§YSubject§!: £navy_size£ Naval Capacity: §R-50%§!\n§YOverlord§!: £navy_size£ Naval Capacity: §G+2%§!"
+ preset_ver_satellite_desc: "Satellite States are restricted in their foreign affairs and have been effectively disarmed. Whatever heavy industry remains is used to bolster the military capabilities of their overlord.\n\n§YTribute§!: §G15%§! £alloys£ §HAlloys§!\n§WSpecial Effects:§! \n§YSubject§!: £navy_size£ Naval Capacity: §R-80%§!\n§YOverlord§!: £navy_size£ Naval Capacity: §G+10%§!"
 
  preset_ver_jrpartner: "Junior Partner"
- preset_ver_jrpartner_desc:"Junior Partners assist their overlord in their research.\n\n§YTribute§!: §G10%§! £society_research£ £engineering_research£ £physics_research£ §HResearch§!\n§YSubsidy§!: §R10%§! £exotic_gases£ §HExotic Gases§!\n§WSpecial Effects:§! \n§YSubject§!: §G-85%§! cost to known overlord Technologies\n§YOverlord§!: Research Speed: §G+2%§!"
+ preset_ver_jrpartner_desc: "Junior Partners assist their overlord in their research.\n\n§YTribute§!: §G10%§! £society_research£ £engineering_research£ £physics_research£ §HResearch§!\n§YSubsidy§!: §R10%§! £exotic_gases£ §HExotic Gases§!\n§WSpecial Effects:§! \n§YSubject§!: §G-85%§! cost to known overlord Technologies\n§YOverlord§!: Research Speed: §G+3%§!"
 
  preset_ver_dependency: "Dependency"
- preset_ver_dependency_desc:"Dependencies are responsible for producing domestic propaganda for their overlord.\n\n§YTribute§!: §G15%§! £unity£ §HUnity§!\n§YSubsidy§!: §R5%§! £energy£ §HEnergy§!\n§WSpecial Effects:§! \n§YOverlord§!: £unity£ §HUnity§!: §G+2%§!"
+ preset_ver_dependency_desc: "Dependencies are responsible for producing domestic propaganda for their overlord.\n\n§YTribute§!: §G15%§! £unity£ §HUnity§!\n§YSubsidy§!: §R20%§! £energy£ §HEnergy§!\n§WSpecial Effects:§! \n§YOverlord§!: £unity£ §HUnity§!: §G+2%§!"
 
  preset_ver_clientkingdom: "Client Kingdom"
- preset_ver_clientkingdom_desc:"Client Kingdoms usually have rulers specifically chosen by their overlord, in order to assure their loyalty.\n\n§YSubsidy§!: §R10%§! £energy£ §HEnergy§!, §R5%§! £consumer_goods£ §HConsumer Goods§!\n§WSpecial Effects:§! \n§YSubject§!: £stability£ §HStability§!: §R-5§!, £diplo_weight£ Diplomatic Weight: §R-50%§!\n§YOverlord§!: £stability£ §HStability§!: §G+3§! \n§EOverlord Special Effect:§! Will always select subject Ruler"
+ preset_ver_clientkingdom_desc: "Client Kingdoms have rulers specifically chosen by their overlord, in order to assure their loyalty.\n\n§YSubsidy§!: §R15%§! £energy£ §HEnergy§!, §R15%§! £consumer_goods£ §HConsumer Goods§!\n§WSpecial Effects:§! \n§YSubject§!: £stability£ §HStability§!: §R-5§!, £diplo_weight£ Diplomatic Weight: §R-50%§!\n§YOverlord§!: £stability£ §HStability§!: §G+3§! \n§EOverlord Special Effect:§! Will always select subject Ruler"
  
  preset_ver_devolved: "Devolved Region"
- preset_ver_devolved_desc:"Devolved Regions have complete sovereignty over domestic affairs.\n\n§YTribute§!: £influence£ §G+0.5§!\n§WSpecial Effects:§! \n§YSubject§!: £happiness£ Happiness: §G+10%§!\n§YOverlord§!: £mod_pop_government_ethic_attraction£ Governing Ethics Attraction: §G+5%§!"
+ preset_ver_devolved_desc: "Devolved Regions have complete sovereignty over domestic affairs.\n\n§YTribute§!: £influence£ §G+0.5§!\n§WSpecial Effects:§! \n§YSubject§!: £happiness£ Happiness: §G+10%§!\n§YOverlord§!: £mod_pop_government_ethic_attraction£ Governing Ethics Attraction: §G+5%§!"
 
  preset_ver_condo: "Condominium"
- preset_ver_condo_desc:"Condominia have complete sovereignty over their foreign affairs. They serve as neutral meeting locations for diplomats throughout the galaxy.\n\n§WSpecial Effects:§! \n§YSubject§!: £diplo_weight£ Diplomatic Weight: §G+20%§!\n§YOverlord§!: £diplo_weight£ Diplomatic Weight: §G+5%§!"
+ preset_ver_condo_desc: "Condominia have complete sovereignty over their foreign affairs. They serve as neutral meeting locations for diplomats throughout the galaxy.\n\n§WSpecial Effects:§! \n§YSubject§!: £diplo_weight£ Diplomatic Weight: §G+20%§!\n§YOverlord§!: £diplo_weight£ Diplomatic Weight: §G+5%§!"
 
  preset_ver_puppet: "Puppet State"
- preset_ver_puppet_desc: "Puppet States can be used to fight Proxy Wars for their overlord.\n\n§YTribute§!: §G10%§! £energy£ §HEnergy§!, §G10%§! £food£ §HFood§!\n§WSpecial Effects:§! \n§YSubject§!: £happiness£ Happiness: §R-10%§!\n§YOverlord§!: £happiness£ Happiness: §G+2%§!"
+ preset_ver_puppet_desc: "Puppet States lack any true autonomy.\n\n§YTribute§!: §G10%§! £energy£ §HEnergy§!, §G10%§! £food£ §HFood§!\n§WSpecial Effects:§! \n§YSubject§!: £happiness£ Happiness: §R-10%§!\n§YOverlord§!: £happiness£ Happiness: §G+2%§!"
 
  preset_ver_neocolony: "Neo-Colony"
- preset_ver_neocolony_desc: "Neo-Colonies are states that are economically dominated by their overlord.\n\n§YTribute§!: §G15%§! £energy£ §HEnergy§!\n§YSubsidy§!: §R5%§! £consumer_goods£ §HConsumer Goods§!\n§WSpecial Effects:§! \n§YSubject§!: £trade_value£ Trade Value: §G+10%§!, £crime£ Crime: §R+30%§!\n§YOverlord§!: £trade_value£ Trade Value: §G+2%§!"
+ preset_ver_neocolony_desc: "Neo-Colonies are states that are economically dominated by their overlord.\n\n§YTribute§!: §G15%§! £trade£ §HTrade§!\n§YSubsidy§!: §R20%§! £consumer_goods£ §HConsumer Goods§!\n§WSpecial Effects:§! \n§YSubject§!: $mod_country_trade_produces_mult$: §G+10%§!, £crime£ Crime: §R+30%§!\n§YOverlord§!: $mod_country_trade_produces_mult$: §G+2%§!"
 
  preset_ver_blood: "Blood Tributary"
- preset_ver_blood_desc:"Blood Tributaries pay a special tribute, the §YBlood Tax§!.\n\n§YTribute§!: §G5%§! of £pops£ §HPops§! every 15 years\n§WSpecial Effects:§! \n§YSubject§!: §R-1000§! £opinion£ §HOpinion§! towards Overlord"
+ preset_ver_blood_desc: "Blood Tributaries pay a special tribute, the §YBlood Tax§!.\n\n§YTribute§!: §G5%§! of £pops£ §HPops§! every 15 years\n§WSpecial Effects:§! \n§YSubject§!: §R-1000§! £opinion£ §HOpinion§! towards Overlord"
 
  preset_ver_appendage: "Appendage"
- preset_ver_appendage_desc:"Appendages can be integrated."
+ preset_ver_appendage_desc: "Appendages can be integrated."
 
  preset_ver_organic: "Organic Auxiliary"
- preset_ver_organic_desc:"Organic Auxiliaries have no diplomatic freedom, but cannot be integrated and are protected by their Overlord"
+ preset_ver_organic_desc: "Organic Auxiliaries have no diplomatic freedom, but cannot be integrated and are protected by their Overlord"
 
  preset_ver_parallel: "Parallel Processor"
- preset_ver_parallel_desc:"The combined computing power of the Subject and their Overlord allow for vast increases in efficiency.\n§WSpecial Effects:§! \nOverlord: Research Speed: §G+5%§! per §Y$preset_ver_parallel$§!"
+ preset_ver_parallel_desc: "The combined computing power of the Subject and their Overlord allow for vast increases in efficiency.\n§WSpecial Effects:§! \nOverlord: Research Speed: §G+5%§! per §Y$preset_ver_parallel$§!"
 
  # Term Window:
  preset_ver_foederatus_flavor_desc: "$preset_ver_foederatus_desc$"
@@ -147,10 +147,13 @@
  veru.1000.subject_15: "§Y[event_target:subject_15.GetName]§!"
  veru.nevermind: "Nevermind."
  veru.remain: "You shall remain as you are."
+ veru.they_remain: "They are fine as they are."
  veru.our_leaders: "Actually, we will choose one of our leaders."
  veru.their_leaders: "Actually, we will choose one of their leaders."
  veru.another_class: "Actually, we will choose another type of leader."
  veru.something_else: "Actually, we need to change something else."
+ veru.remain_vassal: "Simple Vassal"
+ veru.same_authority: "The same as us: [root.owner.GetAuthority]"
 
  # Change Subject Type or Name
  veru.1050.name: "[event_target:chosen_subject.ruler.GetTitle] §H[event_target:chosen_subject.ruler.GetName]§! of the §Y[event_target:chosen_subject.GetName]§!"
@@ -399,26 +402,36 @@
  veru.6700.disloyal.desc: "Relocating our capital? As if we weren't subject to enough humiliation. Where?"
 
  # Potential Capitals
- veru.6700.relocation_planet_1: "§Y[event_target:relocation_planet_1.GetName]§!"
- veru.6700.relocation_planet_2: "§Y[event_target:relocation_planet_2.GetName]§!"
- veru.6700.relocation_planet_3: "§Y[event_target:relocation_planet_3.GetName]§!"
- veru.6700.relocation_planet_4: "§Y[event_target:relocation_planet_4.GetName]§!"
- veru.6700.relocation_planet_5: "§Y[event_target:relocation_planet_5.GetName]§!"
- veru.6700.relocation_planet_6: "§Y[event_target:relocation_planet_6.GetName]§!"
- veru.6700.relocation_planet_7: "§Y[event_target:relocation_planet_7.GetName]§!"
- veru.6700.relocation_planet_8: "§Y[event_target:relocation_planet_8.GetName]§!"
- veru.6700.relocation_planet_9: "§Y[event_target:relocation_planet_9.GetName]§!"
- veru.6700.relocation_planet_10: "§Y[event_target:relocation_planet_10.GetName]§!"
- veru.6700.relocation_planet_11: "§Y[event_target:relocation_planet_11.GetName]§!"
- veru.6700.relocation_planet_12: "§Y[event_target:relocation_planet_12.GetName]§!"
- veru.6700.relocation_planet_13: "§Y[event_target:relocation_planet_13.GetName]§!"
- veru.6700.relocation_planet_14: "§Y[event_target:relocation_planet_14.GetName]§!"
- veru.6700.relocation_planet_15: "§Y[event_target:relocation_planet_15.GetName]§!"
- veru.6700.relocation_planet_16: "§Y[event_target:relocation_planet_16.GetName]§!"
- veru.6700.relocation_planet_17: "§Y[event_target:relocation_planet_17.GetName]§!"
- veru.6700.relocation_planet_18: "§Y[event_target:relocation_planet_18.GetName]§!"
- veru.6700.relocation_planet_19: "§Y[event_target:relocation_planet_19.GetName]§!"
- veru.6700.relocation_planet_20: "§Y[event_target:relocation_planet_20.GetName]§!"
+ veru.6700.relocation_planet_1: "§H[event_target:relocation_planet_1.GetName]§! | §Y[event_target:relocation_planet_1.solar_system.GetName]§! System"
+ veru.6700.relocation_planet_2: "§H[event_target:relocation_planet_2.GetName]§! | §Y[event_target:relocation_planet_2.solar_system.GetName]§! System"
+ veru.6700.relocation_planet_3: "§H[event_target:relocation_planet_3.GetName]§! | §Y[event_target:relocation_planet_3.solar_system.GetName]§! System"
+ veru.6700.relocation_planet_4: "§H[event_target:relocation_planet_4.GetName]§! | §Y[event_target:relocation_planet_4.solar_system.GetName]§! System"
+ veru.6700.relocation_planet_5: "§H[event_target:relocation_planet_5.GetName]§! | §Y[event_target:relocation_planet_5.solar_system.GetName]§! System"
+ veru.6700.relocation_planet_6: "§H[event_target:relocation_planet_6.GetName]§! | §Y[event_target:relocation_planet_6.solar_system.GetName]§! System"
+ veru.6700.relocation_planet_7: "§H[event_target:relocation_planet_7.GetName]§! | §Y[event_target:relocation_planet_7.solar_system.GetName]§! System"
+ veru.6700.relocation_planet_8: "§H[event_target:relocation_planet_8.GetName]§! | §Y[event_target:relocation_planet_8.solar_system.GetName]§! System"
+ veru.6700.relocation_planet_9: "§H[event_target:relocation_planet_9.GetName]§! | §Y[event_target:relocation_planet_9.solar_system.GetName]§! System"
+ veru.6700.relocation_planet_10: "§H[event_target:relocation_planet_10.GetName]§! | §Y[event_target:relocation_planet_10.solar_system.GetName]§! System"
+ veru.6700.relocation_planet_11: "§H[event_target:relocation_planet_11.GetName]§! | §Y[event_target:relocation_planet_11.solar_system.GetName]§! System"
+ veru.6700.relocation_planet_12: "§H[event_target:relocation_planet_12.GetName]§! | §Y[event_target:relocation_planet_12.solar_system.GetName]§! System"
+ veru.6700.relocation_planet_13: "§H[event_target:relocation_planet_13.GetName]§! | §Y[event_target:relocation_planet_13.solar_system.GetName]§! System"
+ veru.6700.relocation_planet_14: "§H[event_target:relocation_planet_14.GetName]§! | §Y[event_target:relocation_planet_14.solar_system.GetName]§! System"
+ veru.6700.relocation_planet_15: "§H[event_target:relocation_planet_15.GetName]§! | §Y[event_target:relocation_planet_15.solar_system.GetName]§! System"
+ veru.6700.relocation_planet_16: "§H[event_target:relocation_planet_16.GetName]§! | §Y[event_target:relocation_planet_16.solar_system.GetName]§! System"
+ veru.6700.relocation_planet_17: "§H[event_target:relocation_planet_17.GetName]§! | §Y[event_target:relocation_planet_17.solar_system.GetName]§! System"
+ veru.6700.relocation_planet_18: "§H[event_target:relocation_planet_18.GetName]§! | §Y[event_target:relocation_planet_18.solar_system.GetName]§! System"
+ veru.6700.relocation_planet_19: "§H[event_target:relocation_planet_19.GetName]§! | §Y[event_target:relocation_planet_19.solar_system.GetName]§! System"
+ veru.6700.relocation_planet_20: "§H[event_target:relocation_planet_20.GetName]§! | §Y[event_target:relocation_planet_20.solar_system.GetName]§! System"
+
+ veru.7002.name: "Service Type for [target.GetName]"
+ veru.7002.desc: "What type of vassal should §Y[target.GetName]§! be after they have been devolved?"
+
+ veru.7001.name: "Government of [target.GetName]"
+ veru.7001.desc: "What will the new governmening structure of §Y[target.GetName]§! be?"
+
+ veru.7005.name: "Devolution of [new_ps_country.capital_scope.GetName] Complete"
+ veru.7005.desc: "The devolution of §Y[new_ps_country.capital_scope.GetName]§! into the §H[new_ps_country.GetName]§! is complete. Do we want to select one of our leaders to serve as their §Y[new_ps_country.GetRulerTitle]§!?"
+ veru.7005.desc_2: "The devolution of §Y[new_ps_country.capital_scope.GetName]§! into the §H[new_ps_country.GetName]§! is complete."
 
  ####################
  # Contracts
@@ -484,17 +497,21 @@
  subject_ver_proxy_allowed: "Proxy Wars Permitted"
  subject_ver_proxy_allowed_desc: "The Overlord may force the Subject to engage in a Proxy War."
 
- resource_subsidies_ver_energy: "Energy"
- resource_subsidies_ver_minerals: "Minerals"
- resource_subsidies_ver_food: "Food"
- resource_subsidies_ver_alloys: "Alloys"
- resource_subsidies_ver_consumer_goods: "Consumer Goods"
- resource_subsidies_ver_volatile_motes: "Volatile Motes"
- resource_subsidies_ver_exotic_gases: "Exotic Gases"
- resource_subsidies_ver_rare_crystals: "Rare Crystals"
- resource_subsidies_ver_minor_artifacts: "Minor Artifacts"
- resource_subsidies_ver_research: "Research"
- resource_subsidies_ver_hidden_unity: "Unity"
+ resource_subsidies_ver_energy: "$energy$"
+ resource_subsidies_ver_minerals: "$minerals$"
+ resource_subsidies_ver_food: "$food$"
+ resource_subsidies_ver_alloys: "$alloys$"
+ resource_subsidies_ver_consumer_goods: "$consumer_goods$"
+ resource_subsidies_ver_volatile_motes: "$volatile_motes$"
+ resource_subsidies_ver_exotic_gases: "$exotic_gases$"
+ resource_subsidies_ver_rare_crystals: "$rare_crystals$"
+ resource_subsidies_ver_minor_artifacts: "$minor_artifacts$"
+ resource_subsidies_ver_research: "$research$"
+ resource_subsidies_ver_zro: "$sr_zro$"
+ resource_subsidies_ver_dark_matter: "$sr_dark_matter$"
+ resource_subsidies_ver_metals: "Advanced Metals"
+ resource_subsidies_ver_trade: "$concept_trade$"
+ resource_subsidies_ver_hidden_unity: "$concept_unity$"
 
  resource_subsidies_ver: "Contribution"
 
@@ -597,7 +614,7 @@
 
  not_allowed_for_megacorp: "$TRIGGER_FAIL$Not allowed for §YMegacorps§!."
 
- not_allowed_for_gestalt: "$TRIGGER_FAIL$Not allowed for a §Y$ethic_gestalt_consciousness$§!."
+ not_allowed_for_lt: "$TRIGGER_FAIL$Not allowed for a §Y$ethic_lt_consciousness$§!."
 
  not_allowed_for_term_subject_wars: "$TRIGGER_FAIL$Not allowed for §YSubject Conflict§! terms §Y$joins_subject_wars_offensive$§! or §Y$joins_subject_wars_all$§!."
  not_allowed_for_term_subject_diplomacy: "$TRIGGER_FAIL$Not allowed for §YDiplomatic Freedom§! terms §Y$subject_can_do_diplomacy$§! or §Y$subject_can_do_diplomacy_but_not_vote$§!."
@@ -608,15 +625,50 @@
  NAME_veru_buffer_war: "[This.MainDefender.GetAdj] Client War"
 
  # Origin
- origin_planet_state: "Client State"
- origin_planet_state_desc: "This state was founded after another state reorganized part of their territory into an a client state."
+ origin_planet_state: "Planet-State"
+ origin_planet_state_desc: "This state was founded after another state reorganized part of their territory into a vassal state."
 
  # Decisions
- decision_create_planet_state: "Create Client State"
- decision_create_planet_state_desc: "We can create a client state out of this planet."
+ decision_create_planet_state: "Create Planet-State"
+ decision_create_planet_state_desc: "We can create a vassal out of this planet."
+ decision_create_planet_state_effects_short: "We can give this planet sovereignty over itself and its system."
+ decision_create_planet_state_effects: "We will begin the process of transferring control of §Y[this.GetName]§! and the §Y[this.solar_system.GetName]§! system to a newly created government."
 
- decision_affirm_planet_state: "Client State: §YFinish§! Creation"
- decision_affirm_planet_state_desc: "We will lose control of the planet and the entire system it is within to a newly created subject state."
+ situation_planet_state: "Devolution of §Y[target.GetName]§!"
+ situation_planet_state_type: "Devolution"
+ situation_planet_state_desc: "The administrators of §Y[target.GetName]§! are working on a plan for governance of the §Y[target.solar_system.GetName]§! system."
+ situation_planet_state_monthly_change_tooltip: "Plans for self-governance take time."
+
+ situation_planet_state_completed_effect: "Control of §Y[this.target.GetName]§! and the §Y[this.target.solar_system.GetName]§! system will be transferred to a newly created government."
+ situation_planet_state_failed_effect: "The project to transfer control of §Y[this.target.GetName]§! and the §Y[this.target.solar_system.GetName]§! system to a new government will be scrapped."
+
+ planet_state_stage_1: "Self-Governance"
+ planet_state_stage_1_desc: "Details for self-governance are being worked out."
+
+ planet_state_stage_2: "Interstellar Relationship"
+ planet_state_stage_2_desc: "Details around the relationship between us and the new government are being discussed."
+
+ approach_planet_state_normal: "Normal"
+ approach_planet_state_normal_desc: "Plans for self-governnance are progressing as expected."
+ planet_state_normal_tooltip: "Plans for self-governnance will progress as expected."
+
+ approach_planet_state_rollback: "Cancel Devolution"
+ approach_planet_state_rollback_desc: "Plans for self-governnance are being rolled back."
+ planet_state_rollback_tooltip: "Plans for self-governnance will be rolled back."
+
+ planet_state_pop_req: "$TRIGGER_FAIL$Requires at least §Y1000§! £pop£ §HPops§! and for §G10%§! of §Ysentient§! £pop£ §HPops§! to be §Yunenslaved§!"
+ stability_help: "§GStability§!"
+ stability_interference: "§PStability§!"
+ stability_interference_2: "§RStability§!"
+ ps_separatists: "§RSeparatists§!"
+
+ decision_affirm_planet_state: "Planet-State: §BFinish§! Creation"
+ decision_affirm_planet_state_desc: "We will tranfer control of §Y[this.GetName]§! of the §Y[this.solar_system.GetName]§! system to a newly created planetary government."
+ decision_affirm_planet_state_effects_short: "We will give this planet sovereignty over itself and its system."
+ decision_affirm_planet_state_effects: "$decision_affirm_planet_state_desc$"
+
+ need_1000_pops: "$TRIGGER_FAIL$Requires at least §Y1000§! £pop£ §HPops§!."
+ planet_state_pop_group: "$TRIGGER_FAIL$Requires at least §G10%§! of §Ysentient§! £pop£ §HPops§! be §Yunenslaved§!"
 
  # Responses:
  WILL_FAIL: "You will fail."
