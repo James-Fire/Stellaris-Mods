@@ -18,7 +18,7 @@ weapon_component_template = {
 	}
 	entity = "turret_point_defence_entity"
 	damage = { min = 16 max = 64 }
-	windup = { min = 0.0 max = 0.0 }
+	windup = { min = 1.0 max = 4.0 }
 	cooldown = 5
 	range = 30
 	accuracy = 0.75
