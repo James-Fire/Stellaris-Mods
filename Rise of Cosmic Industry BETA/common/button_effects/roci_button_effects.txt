@@ -467,7 +467,7 @@ roci_realdev_off = {
 roci_realdev_build_adjustment = {
 	potential = { NOT = { has_global_flag = no_realdev } always = yes }
 	allow = { hidden_trigger = { always = yes } }
-	effect = { 
+	effect = {
 		custom_tooltip = "roci_realdev_build_adjustment_desc"
 	}
 }

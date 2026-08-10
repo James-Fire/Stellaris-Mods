@@ -1,0 +1,3376 @@
+guiTypes = {
+	@dynamic_extra_panel_left = 0.8
+	@dynamic_extra_panel_right = 0.8
+	@event_chain_entry_container_width = 650
+	@event_chain_entry_desc_max_width = 590
+	@event_chain_entry_width = 610
+	@event_chain_branch_connector_x = -17
+
+	@log_info_margin_left = 8
+	@view_w = 1008
+	@view_w_focus = 1182
+	@view_h = 690
+	@view_h_background = 600
+	@situation_effects_y = 350
+	@subview_width = 675
+	@situations_progress_width = 651
+	@situation_approach_entry_height = 50
+	@situation_approach_entry_width = 165
+
+	@multi_x = 15
+	@multi_y = 15
+	@multi_x_2 = 346
+	@multi_width = 320
+	@multi_height = 315
+	@multi_name_icon_x = 20
+	@multi_name_icon_y = 20
+	@multi_name_label_x = 45
+	@multi_name_label_y = 10
+	@multi_name_label_max_width = 400
+	@multi_name_label_max_height = 20
+	@multi_desc_x = 12
+	@multi_desc_y = 40
+	@multi_desc_max_width = 295
+	@multi_requirements_x = 10
+	@multi_requirements_y = 200
+	@multi_requirements_max_width = 290
+	@multi_requirements_max_height = 40
+	@multi_requirements_label_x = 10
+	@multi_requirements_label_y = 185
+	@multi_requirements_label_max_width = 290
+	@multi_requirements_label_max_height = 18
+	@multi_research_button_x = 0
+	@multi_research_button_y = 257
+	@multi_time_left_x = 160
+	@multi_time_left_y = -30
+	@multi_time_left_max_width = 150
+	@multi_time_left_max_height = 20
+	@multi_times_out_in_x = 160
+	@multi_times_out_in_y = -42
+	@multi_times_out_in_max_width = 150
+	@multi_times_out_in_max_height = 20
+	@multi_cost_icon_x = -21
+	@multi_cost_icon_y = 248
+	@multi_cost_value_x = -140
+	@multi_cost_value_y = 240
+	@multi_energy_cost_icon_x = -18
+	@multi_energy_cost_icon_y = 228
+	@multi_energy_cost_value_x = -164
+	@multi_energy_cost_value_y = 220
+	@multi_track_x = -40
+	@multi_track_y = 2
+	@multi_goto_x = -70
+	@multi_goto_y = 2
+	@multi_track_goto_scale = 0.8
+
+	@special_project_research_requirements_label_x = 10
+	@special_project_research_requirements_label_y = 0
+	@special_project_research_requirements_label_max_height = 20
+	@special_project_research_requirements_x = 10
+	@special_project_research_requirements_y = 15
+	@special_project_research_times_out_in_x = 160
+	@special_project_research_times_out_in_y = -47
+	@special_project_research_time_left_x = 160
+	@special_project_research_time_left_y = -35
+	@special_project_research_cost_icon_x = 590
+	@special_project_research_cost_icon_y = 18
+	@special_project_research_cost_value_x = 470
+	@special_project_research_cost_value_y = 10
+	@special_project_research_cost_value_max_width = 106
+	@special_project_research_cost_value_max_height = 20
+	@special_project_research_energy_cost_icon_x = 590
+	@special_project_research_energy_cost_icon_y = 38
+	@special_project_research_energy_cost_value_x = 446
+	@special_project_research_energy_cost_value_y = 30
+	@special_project_research_energy_cost_value_max_width = 130
+	@special_project_research_energy_cost_value_max_height = 20
+	@special_project_research_bottom_half_height = 60
+
+	# Used to determine extra scale for the active situation stage icon (Example: x = 25 -> scale * 1.25)
+	positionType = {
+		name = "situation_log_situation_stage_icon_active_extra_scale_percent"
+		position = { x = 40 y = 0 } # Y value not used
+	}
+
+	# Used as a default size for the situation_log container
+	positionType = {
+		name = "situation_log_size_default"
+		position = { x = @view_w y = @view_h  }
+ 	}
+
+	# Used as a default size for the galaxy_view_background_box container
+	positionType = {
+		name = "situation_log_galaxy_view_background_box_size_default"
+		position = { x = @view_w y = @view_h_background }
+ 	}
+
+	# Used as a override size for the situation_log container when focus tab is being viewed
+	positionType = {
+		name = "situation_log_size_focus"
+		position = { x = @view_w_focus y = @view_h }
+ 	}
+
+	# Used as a override size for the galaxy_view_background_box container when focus tab is being viewed
+	positionType = {
+		name = "situation_log_galaxy_view_background_box_size_focus"
+		position = { x = @view_w_focus y = @view_h_background }
+ 	}
+
+	containerWindowType = {
+		name = "situation_log"
+		hide_position = { x = -970 y = 40 }
+		show_position = { x = 35 y = 40 }
+		size = { width = @view_w height = @view_h } #set to situation_log_size_default or situation_log_size_focus depending on which tab is being displayed.
+		dynamic_extra_height = @dynamic_extra_panel_left
+		animation_type = decelerated
+		animation_time = 200
+
+		containerWindowType = {
+			name = "galaxy_view_background_box"
+			position = { x = 0 y = 0 }
+			size = { width = @view_w height = @view_h_background } #set to situation_log_galaxy_view_background_box_size_default or situation_log_galaxy_view_background_box_size_focus depending on which tab is being displayed.
+			dynamic_extra_height = @dynamic_extra_panel_left
+
+			background = {
+				name = "galaxy_view_background"
+				spriteType = "GFX_tile_large_bg"
+			}
+		}
+
+		iconType = {
+			name = "hex_bg"
+			position = { x = 5 y = -12 }
+			spriteType = "GFX_hex_bg"
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "empire_header_line"
+			position = { x = 18 y = 26 }
+			quadTextureSprite = "GFX_line_long"
+		}
+
+		instantTextBoxType={
+			name = "header"
+			position = { x = 35 y = 5 }
+			font = "malgun_goth_24"
+			text = "SITUATION_LOG_HEADER"
+			maxWidth = 808
+			maxHeight = 40
+			fixedSize = yes
+			format = left
+			alwaysTransparent = no
+		}
+
+		buttonType = {
+			name = "track"
+			orientation = "UPPER_RIGHT"
+			position = { x = -116 y = 16 }
+			spriteType = "GFX_button_track_project"
+			format = center
+			actionshortcut = "track_on_map"
+		}
+
+		buttonType = {
+			name = "goto"
+			orientation = upper_right
+			position = { x = -80 y = 16 }
+			spriteType = "GFX_fleetview_focus"
+			shortcut = "q"
+		}
+
+		# Removed from the UX layout. Kept here for modders who want to restore it.
+		# buttonType = {
+		# 	name = "track_all"
+		# 	orientation = upper_right
+		# 	position = { x = -116 y = 16 }
+		# 	spriteType = "GFX_button_track_all_projects"
+		# }
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -44 y = 16 }
+			orientation = upper_right
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			actionshortcut = "cancel"
+		}
+
+		########################
+		# general situation log header window
+		containerWindowType = {
+			name = "currently_selected_header_window"
+			size = { width = 693 height = 540 }
+			dynamic_extra_height = @dynamic_extra_panel_right
+			position = { x = 310 y = 50 }
+
+			background = {
+				name = "situation_log_selected_background"
+				quadTextureSprite = "GFX_invisible"
+				alwaysTransparent = yes
+			}
+
+			containerWindowType = {
+				name = "picture_window"
+				position = { x = 5 y = 40 }
+				size = { width = 693 height = 148 }
+				clipping = yes
+
+				iconType = {
+					name = "picture"
+					position = { x = 0 y = 0 }
+					quadTextureSprite = "GFX_evt_landing_ship"
+					scale = 1
+				}
+
+				containerWindowType = {
+					name = "picture_gradient"
+					position = { x = 0 y = 0 }
+					size = { width = 693 height = 148 }
+
+					background = {
+						name = "gradient"
+						quadTextureSprite = "GFX_situation_log_gradient"
+						alwaysTransparent = yes
+					}
+				}
+			}
+
+			containerWindowType = {
+				name = "leader_window"
+				position = { x = 6 y = 41 }
+				size = { width = 400 height = 148 }
+
+                background = {
+					name = "leader_window_bg"
+					spriteType = "GFX_faded_gradient_tile"
+                    alpha = 1.2
+                    alwaysTransparent = yes
+				}
+
+				containerWindowType = {
+					name = "portrait_window"
+					position = { x = 3 y = 37 }
+					size = { width = 400 height = 200 }
+					clipping = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "no_leader_window"
+				position = { x = 5 y = 38 }
+				size = { width = 260 height = 150 }
+
+                background = {
+					name = "leader_window_bg"
+					spriteType = "GFX_faded_gradient_tile"
+                    alpha = 1.2
+                    alwaysTransparent = yes
+				}
+
+				containerWindowType = {
+					name = "leader_frame_box"
+					position = { x = 5 y = 45 }
+					size = { width = 87 height = 101 }
+
+					background = {
+						name = "leader_frame"
+						spriteType = "GFX_tiles_frame_light"
+					}
+				}
+
+                containerWindowType = {
+                    name = "no_leader_desc"
+                    position = { x = 88 y = 50 }
+                    size = { width = 150 height = 92 }
+
+                    background = {
+					    name = "leader_window_bg"
+					    spriteType = "GFX_dark_area_cut"
+                        alwaysTransparent = yes
+				    }
+
+                    instantTextBoxType = {
+				    	name = "desc"
+				    	font = "cg_16b"
+				    	text = "AV_NO_SCIENTIST_DESC"
+				    	position = { x = 5 y = 25 }
+				        maxWidth = 150
+				    	maxHeight = 100
+				    	fixedSize = yes
+				    }
+                }
+
+				containerWindowType = {
+                    name = "no_leader_title"
+                    position = { x = 88 y = 50 }
+                    size = { width = 150 height = 20 }
+
+                    background = {
+					    name = "leader_window_bg"
+					    spriteType = "GFX_dark_area_cut"
+                        alwaysTransparent = yes
+				    }
+
+                    instantTextBoxType = {
+				    	name = "no_leader"
+				    	font = "cg_16b"
+				    	text = "AV_NO_SCIENTIST"
+				        maxWidth = 150
+				    	maxHeight = 20
+				    	fixedSize = yes
+                        position = { x = 5 y = 2 }
+				    	text_color_code = "H"
+				    }
+                }
+
+			}
+
+			containerWindowType = {
+				name = "target_container"
+				position = { x = 6 y = 137 }
+				size = { width = 200 height = 50 }
+
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_target_container_bg"
+					alwaysTransparent = yes
+				}
+
+				iconType = {
+					name = "target_icon"
+					spriteType = "GFX_situation_target_default"
+					position = { x = 28 y = 30 }
+					centerPosition = yes
+				}
+
+				buttonType = {
+					name = "target_country_button"
+					quadTextureSprite = "GFX_empire_flag_48"
+					position = { x = 0 y = 2 }
+				}
+
+				instantTextBoxType = {
+					name = "target_name"
+					position = { x = 46 y = 6 }
+					font = "cg_16b"
+					maxWidth = 150
+					maxHeight = 40
+					fixedSize = yes
+					format = left
+					vertical_alignment = center
+					text_color_code = "E"
+				}
+			}
+
+			containerWindowType = {
+				name = "title_box"
+				position = { x = 5 y = 5 }
+				size = { width = 683 height = 37 }
+
+				background = {
+					name = "background"
+					quadTextureSprite = "GFX_dark_green_gradient_frame_tile"
+					alpha = 0.7
+				}
+
+                iconType = {
+					name = "title_hex"
+					spriteType = "GFX_hex_bg"
+					position = { x = -25 y = -15 }
+				}
+			}
+
+			instantTextBoxType = {
+				name = "title"
+				font = "malgun_goth_24"
+				text = "TITLE"
+				position = { x = 15 y = 7 }
+				maxWidth = 340
+				maxHeight = 30
+				fixedSize = yes
+				format = left
+				vertical_alignment = center
+			}
+
+
+			instantTextBoxType = {
+				name = "description"
+				position = { x = 435 y = 50 }
+				font = "cg_16b"
+				text = "DESCRIPTION"
+				maxWidth = 235
+				maxHeight = 130
+				dynamic_extra_height = @dynamic_extra_panel_right
+				format = left
+				text_color_code = "W"
+				scrollbartype = "standardtext_slider_small"
+			}
+		}
+
+		########################
+		# general situation log window
+		containerWindowType = {
+			name = "log_window"
+			size = { width = 100% height = 100% }
+			position = { x = 0 y = 5 }
+
+			containerWindowType = {
+				name = "currently_selected"
+				size = { width = 683 height = 348 }
+				dynamic_extra_height = @dynamic_extra_panel_right
+				position = { x = 315 y = 232 }
+
+				background = {
+					name = "background"
+					quadTextureSprite = "GFX_dark_green_gradient_frame_tile"
+					alwaysTransparent = yes
+					alpha = 0.7
+				}
+
+                iconType = {
+					name = "situation_log_detail"
+					position = { x = 1 y = 1 }
+					spriteType = "GFX_situation_log_detail"
+				}
+
+				buttonType = {
+					name = "tts_button"
+					position = { x = 520 y = 192 }
+					spriteType = "GFX_button_tts_start"
+					buttonFont = "cg_16b"
+					shortCut = "t"
+				}
+
+				### Anomaly View ###
+				containerWindowType = {
+					name = "anomaly_subview"
+					position = { x = 6 y = 10 }
+					size = { width = @subview_width height = 320 }
+
+					background = {
+						name = "background"
+						quadTextureSprite = "GFX_invisible"
+						alwaysTransparent = yes
+					}
+
+					containerWindowType = {
+						name = "portrait_window"
+
+						buttonType = {
+							name = "portrait"
+							spriteType = "GFX_portrait_planet"
+							position = { x = -10 y = -105 }
+							alwaystransparent = yes
+						}
+
+						iconType = {
+							name = "stripes_1"
+							spriteType = "GFX_event_stripes_1"
+							position = { x= 0 y = 0 }
+							orientation = "UPPER_LEFT"
+							alwaystransparent = yes
+						}
+					}
+
+					containerWindowType = {
+						name = "anomaly_window"
+						size = { width = 410 height = 340 }
+						position = { x = 8 y = 5 }
+						dynamic_extra_height = @dynamic_extra_panel_right
+
+						containerWindowType = {
+							name = "level_window"
+							position = { x = 0 y = 0 }
+							size = { width = 240 height = 45 }
+
+							background = {
+								name = "bg"
+								quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+                                alpha = 0.5
+							}
+
+							iconType = {
+								name = "level_icon"
+								position = { x = 8 y = 8 }
+								spriteType = "GFX_discovery_level_icon"
+								alwaystransparent = yes
+							}
+
+							instantTextBoxType = {
+								name = "level_label"
+								position = { x = 37 y = 13 }
+								font = "cg_16b"
+								text = "ANOMALY_LEVEL"
+								maxWidth = 140
+								maxHeight = 20
+								fixedSize = yes
+								alwaystransparent = yes
+							}
+
+							instantTextBoxType = {
+								name = "level"
+								font = "cg_16b"
+								text = "5"
+								position = { x = 153 y = 13 }
+								maxWidth = 120
+								maxHeight = 20
+								fixedSize = yes
+								format = left
+								text_color_code = "Y"
+								alwaystransparent = yes
+							}
+						}
+
+						containerWindowType = {
+							name = "level_duration_window"
+							position = { x = 250 y = 0 }
+							size = { width = 240 height = 45 }
+
+							background = {
+								name = "bg"
+								quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+                                alpha = 0.5
+							}
+
+							iconType = {
+								name = "level_duration_icon"
+								position = { x = 10 y = 10 }
+								spriteType = "GFX_mod_ship_anomaly_research_speed"
+								alwaystransparent = yes
+							}
+
+							instantTextBoxType = {
+								name = "level_duration_label"
+								position = { x = 50 y = 13 }
+								font = "cg_16b"
+								text = "ANOMALY_TIME"
+								maxWidth = 140
+								maxHeight = 20
+								fixedSize = yes
+								alwaystransparent = yes
+							}
+
+							instantTextBoxType = {
+								name = "level_duration"
+								font = "cg_16b"
+								text = "5"
+								position = { x = 175 y = 13 }
+								maxWidth = 80
+								maxHeight = 20
+								fixedSize = yes
+								format = left
+								text_color_code = "Y"
+								alwaystransparent = no
+							}
+						}
+
+						containerWindowType = {
+							name = "progress_window"
+							position = { x = 0 y = 52 }
+							size = { width = 490 height = 60 }
+
+							background = {
+								name = "bg"
+								spriteType = "GFX_tiles_dark_area_cut_8"
+                                alpha = 0.5
+							}
+
+							instantTextBoxType = {
+								name = "progress_label"
+								font = "cg_16b"
+								text = "ANOMALY_RESEARCH_PROGRESS"
+								position = { x = 10 y = 10 }
+								maxWidth = 180
+								maxHeight = 20
+								fixedSize = yes
+								Orientation = "UPPER_LEFT"
+								text_color_code = "H"
+							}
+
+							instantTextBoxType = {
+								name = "progress_value"
+								font = "cg_16b"
+								text = "0%"
+								position = { x = 420 y = 10 }
+								maxWidth = 60
+								maxHeight = 20
+								fixedSize = yes
+								text_color_code = "H"
+								format = right
+							}
+
+							iconType = {
+								name = "progress_bar"
+								spriteType = "GFX_situation_log_progressbar_research"
+								position = { x = 10 y = 34 }
+							}
+						}
+					}
+
+					# select_leader_window
+					containerWindowType = {
+						name = "select_leader_window"
+						position = { x = 8 y = 100 }
+						size = { width = 660 height = 220 }
+						clipping = yes
+
+						background = {
+							name = "picture_background"
+							spriteType = "GFX_subwindow_tile_plain_solid"
+							alwaystransparent = yes
+						}
+
+						smoothListBoxType = {
+							name = "list"
+							position = { x = 7 y = 0 }
+							size = { x = 650 y = 214 }
+							scrollbartype = "standardlistbox_slider"
+							spacing = 5
+						}
+					}
+
+					containerWindowType = {
+						name = "anomaly_buttons_window"
+						position = { x = 507 y = 80 }
+
+						# change scientist button (anomaly tab)
+						buttonType = {
+							name = "scientist"
+							orientation = "LOWER_RIGHT"
+							position = { x = 0 y = -86 }
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							font = "cg_16b"
+							text = "ANOMALY_CHANGE_SCIENTIST"
+							multiline = yes
+							shortcut = "g"
+						}
+
+						# research button (anomaly tab)
+						buttonType = {
+							name = "research"
+							orientation = "LOWER_RIGHT"
+							position = { x = 0 y = -36 }
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							font = "cg_16b"
+							text = "RESEARCH"
+							multiline = yes
+							shortcut = "RETURN"
+						}
+					}
+				}
+
+				### Event Chain View ###
+				containerWindowType = {
+					name = "event_chain_subview"
+					position = { x = 0 y = 10 }
+					size = { width = @subview_width height = 327 }
+
+					instantTextBoxType = {
+						name = "counters_label"
+						text = "SITLOG_EVENTCHAIN_PROGRESS"
+						position = { x = 10 y = 0 }
+						font = "cg_16b"
+						maxWidth = @event_chain_entry_desc_max_width
+						maxHeight = 20
+						fixedSize = yes
+						format = left
+					}
+
+ 					instantTextBoxType = {
+						name = "counters_text"
+						text = "<COUNTERS TEXT>"
+						position = { x = 10 y = 20 }
+						font = "cg_16b"
+						maxWidth = 650
+						maxHeight = 305
+						multiline = yes
+						format = left
+					}
+
+					containerWindowType = {
+						name = "event_chain_entries_container"
+						position = { x = 0 y = 50 }
+						size = { width = @event_chain_entry_container_width height = 285 }
+						verticalScrollbar = "right_vertical_slider"
+
+						background = {
+							name = "background"
+							quadTextureSprite = "GFX_invisible"
+						}
+
+						containerWindowType = {
+							name = "event_chain_branch_line"
+							size = { width = 14 height = 0 }
+							position = { x = 4 y = 0 }
+
+							background = {
+								name = "branch_line"
+								quadTextureSprite = "GFX_event_chain_branch_line"
+								alwaysTransparent = yes
+							}
+						}
+					}
+
+					### CONTRACTS part only
+					buttonType = {
+						name = "cancel"
+						position = { x = 270 y = -10 }
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						font = "cg_16b"
+						text = "ABANDON_CONTRACT"
+						format = center
+						shortcut = "RETURN"
+					}
+
+					instantTextBoxType = {
+						name = "timeout_text"
+						position = { x = 365 y = 16 }
+						font = "cg_16b"
+						format = right
+						maxWidth = 300
+						maxHeight = 20
+						fixedSize = yes
+						text_color_code = "R"
+					}
+				}
+
+				### Special Project View ###
+				containerWindowType = {
+					name = "special_project_subview"
+					size = { width = @subview_width height = 100% }
+
+					instantTextBoxType = {
+						name = "name_label"
+						position = { x = 10 y = 10 }
+						font = "cg_16b"
+						maxWidth = @event_chain_entry_desc_max_width
+						maxHeight = @multi_name_label_max_height
+						fixedSize = yes
+						format = left
+						text = "<NAME>"
+					}
+
+					instantTextBoxType = {
+						name = "desc"
+						position = { x = @multi_desc_x y = 30 }
+						font = "cg_16b"
+						maxWidth = @event_chain_entry_desc_max_width
+						format = left
+						text = "<DESC>"
+					}
+
+					containerWindowType = {
+						name = "research_container"
+						size = { width = 410 height = 120 }
+						clipping = no
+
+						instantTextBoxType = {
+							name = "requirements_label"
+							text = "REQUIREMENTS"
+							position = { x = @special_project_research_requirements_label_x y = @special_project_research_requirements_label_y }
+							font = "cg_16b"
+							maxWidth = @event_chain_entry_desc_max_width
+							maxHeight = @special_project_research_requirements_label_max_height
+							fixedSize = yes
+						}
+
+						instantTextBoxType = {
+							name = "requirements"
+							position = { x = @special_project_research_requirements_x y = @special_project_research_requirements_y }
+							font = "cg_16b"
+							maxWidth = @event_chain_entry_desc_max_width
+							format = left
+						}
+
+						containerWindowType = {
+							name = "research_container_bottom_half"
+							size = { width = @subview_width height = @special_project_research_bottom_half_height }
+
+							instantTextBoxType={
+								name = "times_out_in"
+								orientation = lower_left
+								position = { x = @special_project_research_times_out_in_x y = @special_project_research_times_out_in_y }
+								font = "cg_16b"
+								format = left
+								maxWidth = @multi_times_out_in_max_width
+								maxHeight = @multi_times_out_in_max_height
+								fixedSize = yes
+								text_color_code = "R"
+							}
+
+							instantTextBoxType={
+								name = "time_left"
+								orientation = lower_left
+								position = { x = @special_project_research_time_left_x y = @special_project_research_time_left_y }
+								font = "cg_16b"
+								format = left
+								maxWidth = @multi_time_left_max_width
+								maxHeight = @multi_time_left_max_height
+								fixedSize = yes
+							}
+
+							iconType = {
+								name = "cost_icon"
+								position = { x = @special_project_research_cost_icon_x y = @special_project_research_cost_icon_y }
+								spriteType = "GFX_resource_physics"
+								centerPosition = yes
+							}
+
+							instantTextBoxType={
+								name = "cost_value"
+								position = { x = @special_project_research_cost_value_x y = @special_project_research_cost_value_y }
+								font = "cg_16b"
+								maxWidth = @special_project_research_cost_value_max_width
+								maxHeight = @special_project_research_cost_value_max_height
+								fixedSize = yes
+								format = right
+							}
+
+							iconType = {
+								name = "energy_cost_icon"
+								position = { x = @special_project_research_energy_cost_icon_x y = @special_project_research_energy_cost_icon_y }
+								spriteType = "GFX_resource_energy"
+								centerPosition = yes
+							}
+
+							instantTextBoxType={
+								name = "energy_cost_value"
+								position = { x = @special_project_research_energy_cost_value_x y = @special_project_research_energy_cost_value_y }
+								font = "cg_16b"
+								format = right
+								maxWidth = @special_project_research_energy_cost_value_max_width
+								maxHeight = @special_project_research_energy_cost_value_max_height
+								fixedSize = yes
+							}
+
+							# Both buttons here are mutually exclusive, so they are in the same position
+							buttonType = {
+								name = "research"
+								quadTextureSprite = "GFX_standard_button_142_34_button"
+								font = "cg_16b"
+								text = "RESEARCH"
+								format = center
+								shortcut = "RETURN"
+							}
+							buttonType = {
+								name = "cancel"
+								quadTextureSprite = "GFX_standard_button_142_34_button"
+								font = "cg_16b"
+								text = "CANCEL"
+								format = center
+								shortcut = "RETURN"
+							}
+						}
+					}
+				}
+
+				### Special Project View ###
+				### This is for special projects that share the same option group
+				### We implemented two, however if you wish to mod it and implement more, the naming pattern special_project_entry_<int> is taken automatically, where it starts at 0 and has no upper limit
+				containerWindowType = {
+					name = "special_project_multi_choice_subview"
+					size = { width = @subview_width height = 100% }
+
+					containerWindowType = {
+						name = "special_project_entry_0"
+						position = { x = @multi_x y = @multi_y }
+						size = { width = @multi_width height = @multi_height }
+						clipping = no
+
+						background = {
+							name = "background"
+							quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+						}
+
+						buttonType = {
+							name = "track"
+							orientation = "UPPER_RIGHT"
+							position = { x = @multi_track_x y = @multi_track_y }
+							spriteType = "GFX_button_track_project"
+							format = center
+							scale = @multi_track_goto_scale
+						}
+
+						buttonType = {
+							name = "goto"
+							orientation = upper_right
+							position = { x = @multi_goto_x y = @multi_goto_y }
+							spriteType = "GFX_fleetview_focus"
+							scale = @multi_track_goto_scale
+						}
+
+						iconType = {
+							name = "name_icon"
+							position = { x = @multi_name_icon_x y = @multi_name_icon_y }
+							spriteType = "GFX_pink_box"
+							centerPosition = yes
+						}
+
+						instantTextBoxType = {
+							name = "name_label"
+							position = { x = @multi_name_label_x y = @multi_name_label_y }
+							font = "cg_16b"
+							maxWidth = @multi_name_label_max_width
+							maxHeight = @multi_name_label_max_height
+							fixedSize = yes
+							format = left
+							text = "<NAME>"
+						}
+
+						instantTextBoxType = {
+							name = "multi_desc"
+							position = { x = @multi_desc_x y = @multi_desc_y }
+							font = "cg_16b"
+							maxWidth = @multi_desc_max_width
+							format = left
+							text = "<DESC>"
+						}
+
+						instantTextBoxType = {
+							name = "requirements_label"
+							position = { x = @multi_requirements_label_x y = @multi_requirements_label_y }
+							font = "cg_16b"
+							maxWidth = @multi_requirements_label_max_width
+							maxHeight = @multi_requirements_label_max_height
+							fixedSize = yes
+							format = left
+							text = "REQUIRES_LABEL"
+						}
+
+						instantTextBoxType = {
+							name = "requirements"
+							position = { x = @multi_requirements_x y = @multi_requirements_y }
+							font = "cg_16b"
+							maxWidth = @multi_requirements_max_width
+							maxHeight = @multi_requirements_max_height
+							fixedSize = yes
+							format = left
+						}
+
+						instantTextBoxType={
+							name = "times_out_in"
+							orientation = lower_left
+							position = { x = @multi_times_out_in_x y = @multi_times_out_in_y }
+							font = "cg_16b"
+							format = left
+							maxWidth = @multi_times_out_in_max_width
+							maxHeight = @multi_times_out_in_max_height
+							fixedSize = yes
+							text_color_code = "R"
+						}
+
+						instantTextBoxType={
+							name = "time_left"
+							orientation = lower_left
+							position = { x = @multi_time_left_x y = @multi_time_left_y }
+							font = "cg_16b"
+							format = left
+							maxWidth = @multi_time_left_max_width
+							maxHeight = @multi_time_left_max_height
+							fixedSize = yes
+						}
+
+						iconType = {
+							name = "cost_icon"
+							orientation = "UPPER_RIGHT"
+							position = { x = @multi_cost_icon_x y = @multi_cost_icon_y }
+							spriteType = "GFX_resource_physics"
+							centerPosition = yes
+						}
+
+						instantTextBoxType={
+							name = "cost_value"
+							orientation = "UPPER_RIGHT"
+							position = { x = @multi_cost_value_x y = @multi_cost_value_y }
+							font = "cg_16b"
+							maxWidth = 106
+							maxHeight = 20
+							fixedSize = yes
+							format = right
+						}
+
+						iconType = {
+							name = "energy_cost_icon"
+							orientation = "UPPER_RIGHT"
+							position = { x = @multi_energy_cost_icon_x y = @multi_energy_cost_icon_y }
+							spriteType = "GFX_resource_energy"
+							centerPosition = yes
+						}
+
+						instantTextBoxType={
+							name = "energy_cost_value"
+							orientation = "UPPER_RIGHT"
+							position = { x = @multi_energy_cost_value_x y = @multi_energy_cost_value_y }
+							font = "cg_16b"
+							maxWidth = 130
+							maxHeight = 20
+							fixedSize = yes
+							format = right
+						}
+
+						# Both buttons here are mutually exclusive, so they are in the same position
+						buttonType = {
+							name = "research"
+							position = { x = @multi_research_button_x y = @multi_research_button_y }
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							font = "cg_16b"
+							text = "RESEARCH"
+							format = center
+							shortcut = "RETURN"
+						}
+						buttonType = {
+							name = "cancel"
+							position = { x = @multi_research_button_x y = @multi_research_button_y }
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							font = "cg_16b"
+							text = "CANCEL"
+							format = center
+							shortcut = "RETURN"
+						}
+					}
+
+					containerWindowType = {
+						name = "special_project_entry_1"
+						position = { x = @multi_x_2 y = @multi_y }
+						size = { width = @multi_width height = @multi_height }
+						clipping = no
+
+						background = {
+							name = "background"
+							quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+						}
+
+						buttonType = {
+							name = "track"
+							orientation = "UPPER_RIGHT"
+							position = { x = @multi_track_x y = @multi_track_y }
+							spriteType = "GFX_button_track_project"
+							format = center
+							scale = @multi_track_goto_scale
+						}
+
+						buttonType = {
+							name = "goto"
+							orientation = upper_right
+							position = { x = @multi_goto_x y = @multi_goto_y }
+							spriteType = "GFX_fleetview_focus"
+							scale = @multi_track_goto_scale
+						}
+
+						iconType = {
+							name = "name_icon"
+							position = { x = @multi_name_icon_x y = @multi_name_icon_y }
+							spriteType = "GFX_pink_box"
+							centerPosition = yes
+						}
+
+						instantTextBoxType = {
+							name = "name_label"
+							position = { x = @multi_name_label_x y = @multi_name_label_y }
+							font = "cg_16b"
+							maxWidth = @multi_name_label_max_width
+							maxHeight = @multi_name_label_max_height
+							fixedSize = yes
+							format = left
+							text = "<NAME>"
+						}
+
+						instantTextBoxType = {
+							name = "multi_desc"
+							position = { x = @multi_desc_x y = @multi_desc_y }
+							font = "cg_16b"
+							maxWidth = @multi_desc_max_width
+							format = left
+							text = "<DESC>"
+						}
+
+						instantTextBoxType = {
+							name = "requirements_label"
+							position = { x = @multi_requirements_label_x y = @multi_requirements_label_y }
+							font = "cg_16b"
+							maxWidth = @multi_requirements_label_max_width
+							maxHeight = @multi_requirements_label_max_height
+							fixedSize = yes
+							format = left
+							text = "REQUIRES_LABEL"
+						}
+
+						instantTextBoxType = {
+							name = "requirements"
+							position = { x = @multi_requirements_x y = @multi_requirements_y }
+							font = "cg_16b"
+							maxWidth = @multi_requirements_max_width
+							maxHeight = @multi_requirements_max_height
+							fixedSize = yes
+							format = left
+						}
+
+						instantTextBoxType={
+							name = "times_out_in"
+							orientation = lower_left
+							position = { x = @multi_times_out_in_x y = @multi_times_out_in_y }
+							font = "cg_16b"
+							format = left
+							maxWidth = @multi_times_out_in_max_width
+							maxHeight = @multi_times_out_in_max_height
+							fixedSize = yes
+							text_color_code = "R"
+						}
+
+						instantTextBoxType={
+							name = "time_left"
+							orientation = lower_left
+							position = { x = @multi_time_left_x y = @multi_time_left_y }
+							font = "cg_16b"
+							format = left
+							maxWidth = @multi_time_left_max_width
+							maxHeight = @multi_time_left_max_height
+							fixedSize = yes
+						}
+
+						iconType = {
+							name = "cost_icon"
+							orientation = "UPPER_RIGHT"
+							position = { x = @multi_cost_icon_x y = @multi_cost_icon_y }
+							spriteType = "GFX_resource_physics"
+							centerPosition = yes
+						}
+
+						instantTextBoxType={
+							name = "cost_value"
+							orientation = "UPPER_RIGHT"
+							position = { x = @multi_cost_value_x y = @multi_cost_value_y }
+							font = "cg_16b"
+							maxWidth = 106
+							maxHeight = 20
+							fixedSize = yes
+							format = right
+						}
+
+						iconType = {
+							name = "energy_cost_icon"
+							orientation = "UPPER_RIGHT"
+							position = { x = @multi_energy_cost_icon_x y = @multi_energy_cost_icon_y }
+							spriteType = "GFX_resource_energy"
+							centerPosition = yes
+						}
+
+						instantTextBoxType={
+							name = "energy_cost_value"
+							orientation = "UPPER_RIGHT"
+							position = { x = @multi_energy_cost_value_x y = @multi_energy_cost_value_y }
+							font = "cg_16b"
+							maxWidth = 130
+							maxHeight = 20
+							fixedSize = yes
+							format = right
+						}
+
+						# Both buttons here are mutually exclusive, so they are in the same position
+						buttonType = {
+							name = "research"
+							position = { x = @multi_research_button_x y = @multi_research_button_y }
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							font = "cg_16b"
+							text = "RESEARCH"
+							format = center
+							shortcut = "RETURN"
+						}
+						buttonType = {
+							name = "cancel"
+							position = { x = @multi_research_button_x y = @multi_research_button_y }
+							quadTextureSprite = "GFX_standard_button_142_34_button"
+							font = "cg_16b"
+							text = "CANCEL"
+							format = center
+							shortcut = "RETURN"
+						}
+					}
+				}
+
+				### Contract View ###
+				containerWindowType = {
+					name = "contract_issuer_subview"
+					size = { width = @subview_width height = 100% }
+					verticalScrollbar = "right_vertical_slider"
+
+					background = {
+						name = "background"
+						quadTextureSprite = "GFX_invisible"
+						alwaysTransparent = yes
+					}
+
+					instantTextBoxType = {
+						name = "timeout_text"
+						position = { x = 365 y = 11 }
+						font = "cg_16b"
+						format = right
+						maxWidth = 300
+						maxHeight = 20
+						fixedSize = yes
+						text_color_code = "R"
+					}
+
+					containerWindowType = {
+						name = "flag_container"
+						position = { x = 10 y = 5 }
+						size = { width = 65 height = 65 }
+
+						buttonType = {
+							name = "flag_button"
+							position = { x = 0 y = 0 }
+							spriteType = "GFX_empire_flag_32"
+						}
+
+						instantTextBoxType = {
+							name = "operator_text"
+							position = { x = 36 y = 7 }
+							font = "cg_16b"
+							maxWidth = 250
+							maxHeight = 20
+							fixedSize = yes
+							format = left
+						}
+					}
+
+					instantTextBoxType = {
+						name = "counters_label"
+						text = "SITLOG_MISSION_PROGRESS"
+						position = { x = 20 y = 50 }
+						font = "cg_16b"
+						maxWidth = @event_chain_entry_desc_max_width
+						maxHeight = 20
+						fixedSize = yes
+						format = left
+					}
+
+					instantTextBoxType = {
+						name = "counters_text"
+						text = "<COUNTERS TEXT>"
+						position = { x = 17 y = 13 }
+						font = "cg_16b"
+						maxWidth = 650
+						maxHeight = 800
+						format = left
+					}
+
+					buttonType = {
+						name = "cancel"
+						position = { x = 505 y = 285 }
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						font = "cg_16b"
+						text = "REMOVE_CONTRACT"
+						format = center
+						shortcut = "RETURN"
+					}
+				}
+
+				### Situation View ###
+				containerWindowType = {
+					name = "situation_subview"
+					position = { x = @log_info_margin_left y = 0 }
+					size = { width = @subview_width height = 100% }
+
+					### "Situations" Info
+					# This item is dynamically handled in code.
+					# All windows with the same name as this one in vanilla will share functionality.
+					# All elements can be removed to ignore them in the UI.
+					containerWindowType = {
+						name = "situations_progress_subview"
+						position = { x = 0 y = 65 }
+						size = { width = @situations_progress_width height = 100 }
+						clipping = no
+
+						background = {
+							name = "background"
+							quadTextureSprite = "GFX_invisible"
+							alwaysTransparent = yes
+						}
+
+						iconType = {
+							name = "middle_indicator"
+							position = { x = 334 y = 40 }
+							spriteType = "GFX_situation_middle_indicator"
+						}
+
+						# If the progress bars are not contained in this element, short progress bars will be used
+						containerWindowType = {
+							name = "situations_progress_bar_container_large"
+							position = { x = 42 y = 0 }
+							size = { width = 584 height = 14 } # Used to position the progress pin
+
+							iconType = {
+								name = "progress_bar_monodirectional"
+								position = { x = 0 y = 40 }
+								spriteType = "GFX_situation_event_progressbar_monodirectional_neutral_large" # Set in code
+							}
+
+							iconType = {
+								name = "progress_bar_bidirectional_left"
+								position = { x = 0 y = 40 }
+								spriteType = "GFX_situation_event_progressbar_bidirectional_neutral_large_left" # Set in code
+							}
+
+							iconType = {
+								name = "progress_bar_bidirectional_right"
+								position = { x = 292 y = 40 }
+								spriteType = "GFX_situation_event_progressbar_bidirectional_neutral_large_right" # Set in code
+							}
+						}
+
+						# Removing this element will remove stage indicators
+						containerWindowType = { # Gets populated with "situation_stage_entry" elements
+							name = "stage_icon_container"
+							position = { x = 21 y = 30 } # Used as offset for stage icon placement
+							size = { width = 585 height = 22 } # Used to position the stage indicators
+						}
+
+						iconType = {
+							name = "start_indicator"
+							position = { x = 0 y = 41 } # X coordinate set in code
+							spriteType = "GFX_situation_start_indicator"
+						}
+
+						iconType = {
+							name = "outcome_right"
+							orientation = upper_right
+							position = { x = -26 y = 48 }
+							spriteType = "GFX_invisible"
+							centerPosition = yes
+						}
+
+						iconType = {
+							name = "outcome_right_frame"
+							orientation = upper_right
+							position = { x = -26 y = 48 }
+							spriteType = "GFX_invisible"
+							centerPosition = yes
+						}
+
+						iconType = {
+							name = "outcome_left"
+							position = { x = 34 y = 48 }
+							spriteType = "GFX_invisible"
+							centerPosition = yes
+						}
+
+						iconType = {
+							name = "outcome_left_frame"
+							position = { x = 34 y = 48 }
+							spriteType = "GFX_invisible"
+							centerPosition = yes
+						}
+
+						# If the pin and change text is contained in this window, they will follow the progress bar
+						containerWindowType = {
+							name = "progress_bar_pin_container"
+							position = { x = 190 y = 5 } # Conditionally moved in code to follow the progress bar
+							size = { width = 72 height = 30 }
+							clipping = no
+
+							iconType = {
+								name = "pin_bg"
+								position = { x = 0 y = 8 }
+								quadTextureSprite = "GFX_situation_progress_pin"
+								alwaysTransparent = yes
+							}
+
+							iconType = {
+								name = "pin_icon"
+								position = { x = 54 y = 20 }
+								spriteType = "GFX_situation_progress_directions" #Mirrored in code as needed
+								centerPosition = yes
+							}
+
+							# Shows all numbers as positive. "pin_icon" indicates if it's negative or positive
+							instantTextBoxType = {
+								name = "monthly_change"
+								position = { x = 0 y = 12 }
+								font = "cg_16b"
+								maxWidth = 40
+								maxHeight = 30
+								format = right
+							}
+						}
+					}
+
+					containerWindowType = {
+						name = "situations_approach_container"
+						size = { width = 672 height = 50 }
+						position = { x = 8 y = 15 }
+						clipping = no
+
+						containerWindowType = {
+							name = "situations_approach_grid_container"
+							size = { width = @situations_progress_width height = 50 }
+							verticalScrollbar = "right_vertical_slider"
+
+							background = {
+								name = "situations_approach_grid_container_bg"
+								spriteType = "GFX_invisible"
+							}
+
+							gridBoxType = {
+								name = "situations_approach_grid" # grid slots called situation_approach_entry
+								position = { x = 5 y = 0 }
+								size = { width = 100% height = 50 }
+								slotSize = { width = @situation_approach_entry_width height = @situation_approach_entry_height }
+								max_slots_horizontal = 4
+								max_slots_vertical = 2
+								format = "CENTERED_UP"
+								add_horizontal = yes
+							}
+						}
+					}
+
+					### "Situations" Effects
+					containerWindowType = {
+						name = "situations_details_container"
+						position = { x = 438 y = -173 }
+						size = { width = 240 height = 535 }
+
+
+						@detail_container_width = 320
+						@detail_container_height = 155
+						@detail_container_text_height = 100
+						@detail_container_text_width = 293
+
+						containerWindowType = {
+							name = "empire_effects"
+							position = { x = -430 y = @situation_effects_y }
+							size = { width = @detail_container_width height = @detail_container_height }
+
+							background = {
+								name = "bg"
+								quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+								alpha = 0.7
+							}
+
+							containerWindowType = {
+								name = "empire_effects_title"
+								position = { x = 0 y = 0 }
+								size = { width = @detail_container_width height = 37}
+
+								background = {
+									name = "bg"
+									quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+									alpha = 0.4
+								}
+
+								instantTextBoxType={
+									name = "situation_effects_title"
+									position = { x = 10 y = 10 }
+									font = "cg_16b"
+									maxWidth = @detail_container_text_width
+									maxHeight = 20
+									fixedSize = yes
+									format = left
+								}
+							}
+
+							instantTextBoxType={
+								name = "situation_effects"
+								position = { x = 11 y = 47 }
+								font = "cg_16b"
+								maxWidth = @detail_container_text_width
+								maxHeight = @detail_container_text_height
+								format = left
+								scrollbartype = "standardtext_slider"
+							}
+						}
+
+						containerWindowType = {
+							name = "finisher_effects"
+							position = { x = -99 y = @situation_effects_y }
+							size = { width = @detail_container_width height = @detail_container_height }
+
+							background = {
+								name = "bg"
+								quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+								alpha = 0.7
+							}
+
+							containerWindowType = {
+								name = "finisher_effects_title"
+								position = { x = 0 y = 0 }
+								size = { width = @detail_container_width height = 37}
+
+								background = {
+									name = "bg"
+									quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+									alpha = 0.4
+								}
+
+								instantTextBoxType = {
+									name = "situation_finisher_effects_title"
+									position = { x = 10 y = 10 }
+									font = "cg_16b"
+									maxWidth = @detail_container_text_width
+									maxHeight = 20
+									fixedSize = yes
+									format = left
+								}
+							}
+
+							instantTextBoxType = {
+								name = "situation_finisher_timebox"
+								position = { x = 245 y = 10 }
+								font = "cg_16b"
+								fixedSize = yes
+								format = right
+								maxWidth = 60
+								maxHeight = 20
+							}
+
+							instantTextBoxType = {
+								name = "situation_finisher_effects_text"
+								position = { x = 11 y = 46 }
+								font = "cg_16b"
+								maxWidth = @detail_container_text_width
+								maxHeight = @detail_container_text_height
+								format = left
+								scrollbartype = "standardtext_slider"
+							}
+						}
+					}
+				}
+
+				### Findings Subviews: Arc Site, Astral Rift, First Contact ###
+				@findings_requirements_max_width = 410
+				@findings_requirements_max_height= 410
+				@findings_time_x = 0
+				@findings_time_y = 30
+				@findings_time_width = 483
+				@findings_time_height = 60
+				@findings_time_progress_x = 10
+				@findings_time_progress_y = 33
+				@findings_time_left_label_x = 10
+				@findings_time_left_label_y = 10
+				@findings_time_left_label_max_width = 250
+				@findings_time_left_label_max_height = 20
+				@findings_time_left_x = 423
+				@findings_time_left_y = 10
+				@findings_time_left_max_width = 50
+				@findings_time_left_max_height = 20
+				@findings_difficulty_x = 500
+				@findings_difficulty_y = 18
+				@findings_difficulty_type_text_x = 0
+				@findings_difficulty_type_text_y = -16
+				@findings_difficulty_type_text_max_width = 100
+				@findings_difficulty_type_text_max_height = 20
+				@findings_difficulty_type_icon_x = 105
+				@findings_difficulty_type_icon_y = -21
+				@findings_difficulty_type_value_x = 140
+				@findings_difficulty_type_value_y = -16
+				@findings_difficulty_type_value_max_width = 40
+				@findings_difficulty_type_value_max_height = 20
+				@findings_view_site_x = 497
+				@findings_view_site_y = 30
+
+				containerWindowType = {
+					name = "archaeological_site_subview"
+					size = { width = @subview_width height = 100% }
+					position = { x = 15 y = 15 }
+
+					instantTextBoxType = {
+						name = "requirements"
+						font = "cg_16b"
+						maxWidth = @findings_requirements_max_width
+						maxHeight = @findings_requirements_max_height
+						fixedSize = yes
+						format = left
+                        position = { x = 1 y = 1 }
+					}
+
+					containerWindowType = {
+						name = "time_container"
+						position = { x = @findings_time_x y = @findings_time_y }
+						size = { width = @findings_time_width height = @findings_time_height }
+
+						background = {
+							name = "background"
+							quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+                            alpha = 0.5
+						}
+
+						iconType = {
+							name = "progress_bar"
+							position = { x = @findings_time_progress_x y = @findings_time_progress_y }
+							spriteType = "GFX_situation_log_progressbar_research"
+						}
+
+						instantTextBoxType = {
+							name = "time_left_label"
+							text = "CHAPTER_PROGRESS_LABEL"
+							position = { x = @findings_time_left_label_x y = @findings_time_left_label_y }
+							font = "cg_16b"
+							maxWidth = @findings_time_left_label_max_width
+							maxHeight = @findings_time_left_label_max_height
+							fixedSize = yes
+							format = left
+						}
+
+						instantTextBoxType = {
+							name = "time_left"
+							position = { x = @findings_time_left_x y = @findings_time_left_y }
+							font = "cg_16b"
+							format = right
+							maxWidth = @findings_time_left_max_width
+							maxHeight = @findings_time_left_max_height
+							fixedSize = yes
+						}
+					}
+
+					containerWindowType = {
+						name = "difficulty_container"
+						position = { x = @findings_difficulty_x y = @findings_difficulty_y }
+
+						instantTextBoxType = {
+							name = "difficulty_type_text"
+							font = "cg_16b"
+							format = right
+							position = { x = @findings_difficulty_type_text_x y = @findings_difficulty_type_text_y }
+							text = "FC_DIFFICULTY_TYPE"
+							maxWidth = @findings_difficulty_type_text_max_width
+							maxHeight = @findings_difficulty_type_text_max_height
+							fixedSize = yes
+						}
+						iconType = {
+							name = "difficulty_type_icon"
+							position = { x = @findings_difficulty_type_icon_x y = @findings_difficulty_type_icon_y }
+							spriteType = "GFX_firstcontact_difficulty_normal"
+							frame = 1
+						}
+						instantTextBoxType = {
+							name = "difficulty_type_value"
+							font = "cg_16b"
+							position = { x = @findings_difficulty_type_value_x y = @findings_difficulty_type_value_y }
+							text = "-15"
+							maxWidth = @findings_difficulty_type_value_max_width
+							maxHeight = @findings_difficulty_type_value_max_height
+							fixedSize = yes
+							format = left
+						}
+					}
+
+					buttonType = {
+						name = "view_site"
+						position = { x = @findings_view_site_x y = @findings_view_site_y }
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						font = "cg_16b"
+						text = "VIEW_SITE"
+						format = center
+						shortcut = "RETURN"
+					}
+				}
+
+				containerWindowType = {
+					name = "astral_rift_subview"
+					size = { width = @subview_width height = 100% }
+					position = { x = 15 y = 15 }
+
+					instantTextBoxType = {
+						name = "requirements"
+						font = "cg_16b"
+						maxWidth = @findings_requirements_max_width
+						maxHeight = @findings_requirements_max_height
+						fixedSize = yes
+						format = left
+						position = { x = 1 y = 1 }
+					}
+
+					containerWindowType = {
+						name = "time_container"
+						position = { x = @findings_time_x y = @findings_time_y }
+						size = { width = @findings_time_width height = @findings_time_height }
+
+						background = {
+							name = "background"
+							quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+						}
+
+						iconType = {
+							name = "progress_bar"
+							position = { x = @findings_time_progress_x y = @findings_time_progress_y }
+							spriteType = "GFX_situation_log_progressbar_research"
+						}
+
+						instantTextBoxType = {
+							name = "time_left_label"
+							text = "CHAPTER_PROGRESS_LABEL"
+							position = { x = @findings_time_left_label_x y = @findings_time_left_label_y }
+							font = "cg_16b"
+							maxWidth = @findings_time_left_label_max_width
+							maxHeight = @findings_time_left_label_max_height
+							fixedSize = yes
+							format = left
+						}
+
+						instantTextBoxType = {
+							name = "time_left"
+							position = { x = @findings_time_left_x y = @findings_time_left_y }
+							font = "cg_16b"
+							format = right
+							maxWidth = @findings_time_left_max_width
+							maxHeight = @findings_time_left_max_height
+							fixedSize = yes
+						}
+					}
+
+					containerWindowType = {
+						name = "difficulty_container"
+						position = { x = @findings_difficulty_x y = @findings_difficulty_y }
+
+						instantTextBoxType = {
+							name = "difficulty_type_text"
+							font = "cg_16b"
+							format = right
+							position = { x = @findings_difficulty_type_text_x y = @findings_difficulty_type_text_y }
+							text = "FC_DIFFICULTY_TYPE"
+							maxWidth = @findings_difficulty_type_text_max_width
+							maxHeight = @findings_difficulty_type_text_max_height
+							fixedSize = yes
+						}
+						iconType = {
+							name = "difficulty_type_icon"
+							position = { x = @findings_difficulty_type_icon_x y = @findings_difficulty_type_icon_y }
+							spriteType = "GFX_firstcontact_difficulty_normal"
+							frame = 1
+						}
+						instantTextBoxType = {
+							name = "difficulty_type_value"
+							font = "cg_16b"
+							position = { x = @findings_difficulty_type_value_x y = @findings_difficulty_type_value_y }
+							text = "-15"
+							maxWidth = @findings_difficulty_type_value_max_width
+							maxHeight = @findings_difficulty_type_value_max_height
+							fixedSize = yes
+							format = left
+						}
+					}
+
+					buttonType = {
+						name = "view_site"
+						position = { x = @findings_view_site_x y = @findings_view_site_y }
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						font = "cg_16b"
+						text = "VIEW_SITE"
+						format = center
+						shortcut = "RETURN"
+					}
+				}
+
+				containerWindowType = {
+					name = "first_contact_subview"
+					size = { width = @subview_width height = 100% }
+					position = { x = 15 y = 15 }
+
+					instantTextBoxType = {
+						name = "requirements"
+						font = "cg_16b"
+						maxWidth = @findings_requirements_max_width
+						maxHeight = @findings_requirements_max_height
+						fixedSize = yes
+						format = left
+						position = { x = 1 y = 1 }
+					}
+
+					containerWindowType = {
+						name = "time_container"
+						position = { x = @findings_time_x y = @findings_time_y }
+						size = { width = @findings_time_width height = @findings_time_height }
+
+						background = {
+							name = "background"
+							quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+						}
+
+						iconType = {
+							name = "progress_bar"
+							position = { x = @findings_time_progress_x y = @findings_time_progress_y }
+							spriteType = "GFX_situation_log_progressbar_research"
+						}
+
+						instantTextBoxType = {
+							name = "time_left_label"
+							text = "CHAPTER_PROGRESS_LABEL"
+							position = { x = @findings_time_left_label_x y = @findings_time_left_label_y }
+							font = "cg_16b"
+							maxWidth = @findings_time_left_label_max_width
+							maxHeight = @findings_time_left_label_max_height
+							fixedSize = yes
+							format = left
+						}
+
+						instantTextBoxType = {
+							name = "time_left"
+							position = { x = @findings_time_left_x y = @findings_time_left_y }
+							font = "cg_16b"
+							format = right
+							maxWidth = @findings_time_left_max_width
+							maxHeight = @findings_time_left_max_height
+							fixedSize = yes
+						}
+					}
+
+					containerWindowType = {
+						name = "difficulty_container"
+						position = { x = @findings_difficulty_x y = @findings_difficulty_y }
+
+						instantTextBoxType = {
+							name = "difficulty_type_text"
+							font = "cg_16b"
+							format = right
+							position = { x = @findings_difficulty_type_text_x y = @findings_difficulty_type_text_y }
+							text = "FC_DIFFICULTY_TYPE"
+							maxWidth = @findings_difficulty_type_text_max_width
+							maxHeight = @findings_difficulty_type_text_max_height
+							fixedSize = yes
+						}
+						iconType = {
+							name = "difficulty_type_icon"
+							position = { x = @findings_difficulty_type_icon_x y = @findings_difficulty_type_icon_y }
+							spriteType = "GFX_firstcontact_difficulty_normal"
+							frame = 1
+						}
+						instantTextBoxType = {
+							name = "difficulty_type_value"
+							font = "cg_16b"
+							position = { x = @findings_difficulty_type_value_x y = @findings_difficulty_type_value_y }
+							text = "-15"
+							maxWidth = @findings_difficulty_type_value_max_width
+							maxHeight = @findings_difficulty_type_value_max_height
+							fixedSize = yes
+							format = left
+						}
+					}
+
+					buttonType = {
+						name = "view_site"
+						position = { x = @findings_view_site_x y = @findings_view_site_y }
+						quadTextureSprite = "GFX_standard_button_142_34_button"
+						font = "cg_16b"
+						text = "VIEW_SITE"
+						format = center
+						shortcut = "RETURN"
+					}
+				}
+			}
+
+			########################
+			# general situation log entries
+
+			containerWindowType = {
+				name = "entries"
+				position = { x = 6 y = 45 }
+				size = { width = 308 height = 540 }
+				dynamic_extra_height = @dynamic_extra_panel_left
+
+				background = {
+					name = "situation_log_entries_background_2"
+					quadTextureSprite = "GFX_planet_bg_tile_frame"
+					alwaysTransparent = yes
+				}
+
+				smoothListBoxType = {
+					name = "entries"
+					position = { x = 5 y = 10 }
+					size = { x = 285 y = 520 }
+					dynamic_extra_height = @dynamic_extra_panel_left
+					scrollbarType = "standardlistbox_slider"
+				}
+			}
+		}
+
+		########################
+		# focus_window - Timeline
+		containerWindowType = {
+			name = "focus_window"
+			size = { width = 100% height = 100% }
+			position = { x = 6 y = 50 }
+
+			##############
+			# Empire Focus
+			containerWindowType = {
+				name = "focus"
+				size = { width = 100% height = 271 }
+				orientation = lower_left
+				position = { x = -11 y = -421 }
+
+				instantTextBoxType = {
+					name = "focus_empire_textbox"
+					font = "malgun_goth_24"
+					text = "FOCUS_EMPIRE"
+					position = { x = 23 y = 15 }
+					maxWidth = 440
+					maxHeight = 20
+					fixedSize = yes
+				}
+
+				buttonType = {
+					name = "focus_completed_button"
+					font = "cg_16b"
+					text = "FOCUS_COMPLETED_BUTTON"
+					spriteType = "GFX_button_157_34"
+					orientation = upper_right
+					position = { x = -336 y = 0 }
+					pdx_tooltip = "FOCUS_COMPLETED_BUTTON_TOOLTIP"
+				}
+
+				buttonType = {
+					name = "focus_progression_button"
+					font = "cg_16b"
+					text = "FOCUS_PROGRESSION_BUTTON"
+					spriteType = "GFX_button_157_34"
+					orientation = upper_right
+					position = { x = -174 y = 0 }
+					pdx_tooltip = "FOCUS_PROGRESSION_BUTTON_TOOLTIP"
+				}
+
+				containerWindowType = {
+					name = "focus_priority_container"
+					size = { width = 350 height = 232 }
+					orientation = lower_left
+					position = { x = 10 y = -232 }
+					background = {
+						name = "background"
+						quadTextureSprite = "GFX_planet_bg_tile_frame"
+					}
+
+					smoothListboxType = {
+						name = "focus_priority_listbox"
+						position = { x = 15 y = 15 }
+						backGround = ""
+						size = { x = 340 y = 232 }
+						borderSize = { x = 8 y = 8 }
+						spacing = 11
+						#dynamic_extra_height = @dynamic_extra
+						scrollbarType = "standardlistbox_slider"
+						borderSize = { x = 0 y = 0 }
+					}
+				}
+
+				containerWindowType = {
+					name = "focus_cards_container"
+					size = { width = 822 height = 232 }
+					orientation = lower_right
+					position = { x = -822 y = -232 }
+
+					background = {
+						name = "background"
+						quadTextureSprite = "GFX_planet_bg_tile_frame"
+					}
+
+					gridBoxType = {
+						name = "focus_cards_grid_box"
+						position = { x = 0 y = 0 }
+						slotSize = { width = 160 height = 216 }
+						max_slots_horizontal = 5
+						format = "UPPER_LEFT"
+						padding = { left = 11 top = 11 }
+					}
+				}
+			}
+
+			#################
+			# Empire Timeline
+			containerWindowType = {
+				name = "timeline"
+				size = { width = 100% height = 271 }
+				orientation = upper_left
+				position = { x = -11 y = 0 }
+
+				containerWindowType = {
+					name = "timeline_container"
+					size = { width = 100%% height = 260 }
+					orientation = upper_left
+					position = { x = 11 y = 11 }
+
+					background = {
+						name = "background"
+						quadTextureSprite = "GFX_planet_bg_tile_frame"
+					}
+
+					iconType = {
+						name = "timeline_background"
+						position = { x = 5 y = 5 }
+						spriteType = "GFX_timelines_background_core"
+						alwaystransparent = yes
+					}
+
+					buttonType = {
+						# timeline_horizontal_dotted_line is referenced by code, do not rename
+						name = "timeline_horizontal_dotted_line"
+						size = { x = 1145 y = 2 }
+						position = { x = 10 y = 130 }
+
+						quadTextureSprite = "GFX_pink_background"
+						alwaysTransparent = yes
+					}
+
+					buttonType = {
+						name = "timeline_zoom_in_button"
+						spriteType = "GFX_timelines_zoom_in_button"
+						orientation = upper_right
+						position = { x = -50 y = 15 }
+						pdx_tooltip = "TIMELINE_ZOOM_IN_BUTTON_TOOLTIP"
+					}
+
+					buttonType = {
+						name = "timeline_zoom_out_button"
+						spriteType = "GFX_timelines_zoom_out_button"
+						orientation = upper_right
+						position = { x = -90 y = 15 }
+						pdx_tooltip = "TIMELINE_ZOOM_OUT_BUTTON_TOOLTIP"
+					}
+
+					gridBoxType = {
+						name = "timeline_grid_box"
+						is_dynamic = yes
+						size = { width = -100 height = 232 }
+						position = { x = 20 y = 80 }
+						max_slots_horizontal = 5
+						format = "UPPER_LEFT"
+						padding = { left = 0 top = 0 }
+					}
+
+					gridBoxType = {
+						name = "timeline_navigation_grid" # grid slots called timeline_navigation_entry
+						orientation = center
+						position = { x = -50% y = 60 }
+						size = { width = 100% height = 100 }
+						slotSize = { width = 32 height = 34 }
+						format = "CENTERED_UP"
+					}
+
+					buttonType = {
+						name = "timeline_back_button"
+						spriteType = "GFX_timelines_back_button"
+						orientation = center_down
+						position = { x = -141 y = -41 } #further back to compensate for the width of the button
+						pdx_tooltip = "TIMELINE_BACK_BUTTON_TOOLTIP"
+					}
+
+					buttonType = {
+						name = "timeline_forward_button"
+						spriteType = "GFX_timelines_forward_button"
+						orientation = center_down
+						position = { x = 115 y = -41 }
+						pdx_tooltip = "TIMELINE_FORWARD_BUTTON_TOOLTIP"
+					}
+				}
+			}
+		}
+
+		########################
+		# victories_window
+		containerWindowType = {
+			name = "victories_window"
+			size = { width = 100% height = 100% }
+			position = { x = 0 y = 5 }
+
+			containerWindowType = {
+				name = "entries"
+				position = { x = 6 y = 45 }
+				size = { width = 308 height = 540 }
+				dynamic_extra_height = @dynamic_extra_panel_left
+
+				background = {
+					name = "situation_log_entries_background_2"
+					quadTextureSprite = "GFX_planet_bg_tile_frame"
+					alwaysTransparent = yes
+				}
+
+				smoothListBoxType = {
+					name = "list"
+					position = { x = 5 y = 10 }
+					size = { x = 285 y = 520 }
+					dynamic_extra_height = @dynamic_extra_panel_left
+					scrollbarType = "standardlistbox_slider"
+				}
+			}
+			containerWindowType = {
+				name = "currently_selected"
+				size = { width = 693 height = 540 }
+				dynamic_extra_height = @dynamic_extra_panel_right
+				position = { x = 310 y = 45 }
+
+				background = {
+					name = "situation_log_selected_background"
+					quadTextureSprite = "GFX_planet_bg_tile_frame"
+				}
+
+				iconType = {
+					name = "project_picture"
+					quadTextureSprite = "GFX_evt_landing_ship"
+					position = { x = 343 y = 114 }
+					centerPosition = yes
+					scale = 0.9
+				}
+
+				iconType = {
+					name = "picture_frame"
+					quadTextureSprite = "GFX_event_frame"
+					position = { x = 343 y = 114 }
+					centerPosition = yes
+					scale = 0.9
+				}
+
+				instantTextBoxType={
+					name = "title"
+					font = "malgun_goth_24"
+					text = "TITLE"
+					position = { x = 0 y = 12 }
+					maxWidth = 690
+					maxHeight = 30
+					fixedSize = yes
+					format = center
+				}
+
+				instantTextBoxType = {
+					name = "description"
+					position = { x = 0 y = 200 }
+					font = "cg_16b"
+					text = "DESCRIPTION"
+					maxWidth = 693
+					maxHeight = 230
+					dynamic_extra_height = @dynamic_extra_panel_right
+					format = center
+					text_color_code = "E"
+					scrollbartype = "standardtext_slider"
+				}
+
+				instantTextBoxType = {
+					name = "progress_desc"
+					font = "cg_16b"
+					text = "There are 132 independent left to conquer"
+					orientation = "LOWER_LEFT"
+					position = { x = 0 y = -35 }
+					maxWidth = 693
+					maxHeight = 40
+					fixedSize = yes
+					format = centre
+				}
+
+
+			}
+		}
+
+		########################
+		# THE TABS
+		########################
+
+		@tab_position = -92
+
+		buttonType = {
+			name = "tab_log"
+			quadTextureSprite = "GFX_tab_1_inactive"
+			position = { x= -20 y = @tab_position }
+			font = "cg_16b"
+			buttonText = "SITUATION_LOG_HEADER"
+			buttonFont = "cg_16b"
+			shortcut = "z"
+			clicksound = "tab_click"
+			Orientation = "LOWER_LEFT"
+			oversound = no_sound
+		}
+
+		buttonType = {
+			name = "tab_log_active"
+			quadTextureSprite = "GFX_tab_1_active"
+			position = { x= -20 y = @tab_position }
+			font = "cg_16b"
+			buttonText = "SITUATION_LOG_HEADER"
+			buttonFont = "cg_16b"
+			clicksound = "tab_click"
+			shortcut = "z"
+			Orientation = "LOWER_LEFT"
+			oversound = no_sound
+		}
+
+		buttonType = {
+			name = "tab_anomalies"
+			quadTextureSprite = "GFX_tab_2_inactive"
+			position = { x= 109 y = @tab_position }
+			font = "cg_16b"
+			buttonText = "FINDINGS"
+			buttonFont = "cg_16b"
+			shortcut = "x"
+			clicksound = "tab_click"
+			Orientation = "LOWER_LEFT"
+			oversound = no_sound
+		}
+
+		buttonType = {
+			name = "tab_anomalies_active"
+			quadTextureSprite = "GFX_tab_2_active"
+			position = { x= 109 y =@tab_position }
+			font = "cg_16b"
+			buttonText = "FINDINGS"
+			buttonFont = "cg_16b"
+			clicksound = "tab_click"
+			shortcut = "x"
+			Orientation = "LOWER_LEFT"
+			oversound = no_sound
+		}
+
+		buttonType = {
+			name = "tab_focus"
+			quadTextureSprite = "GFX_tab_2_inactive"
+			position = { x= 238 y = @tab_position }
+			font = "cg_16b"
+			buttonText = "TIMELINE"
+			buttonFont = "cg_16b"
+			shortcut = "c"
+			clicksound = "tab_click"
+			Orientation = "LOWER_LEFT"
+			oversound = no_sound
+		}
+
+		buttonType = {
+			name = "tab_focus_active"
+			quadTextureSprite = "GFX_tab_2_active"
+			position = { x= 238 y =@tab_position }
+			font = "cg_16b"
+			buttonText = "TIMELINE"
+			buttonFont = "cg_16b"
+			clicksound = "tab_click"
+			shortcut = "c"
+			Orientation = "LOWER_LEFT"
+			oversound = no_sound
+		}
+
+		buttonType = {
+			name = "tab_victories"
+			quadTextureSprite = "GFX_tab_2_inactive"
+			position = { x= 367 y = @tab_position }
+			font = "cg_16b"
+			buttonText = "VICTORIES"
+			buttonFont = "cg_16b"
+			shortcut = "v"
+			clicksound = "tab_click"
+			Orientation = "LOWER_LEFT"
+			oversound = no_sound
+		}
+
+		buttonType = {
+			name = "tab_victories_active"
+			quadTextureSprite = "GFX_tab_2_active"
+			position = { x= 367 y = @tab_position }
+			font = "cg_16b"
+			buttonText = "VICTORIES"
+			buttonFont = "cg_16b"
+			clicksound = "tab_click"
+			shortcut = "v"
+			Orientation = "LOWER_LEFT"
+			oversound = no_sound
+		}
+	}
+
+	### SITUATION LOG ENTRY
+	containerWindowType = {
+		name = "situation_log_entry"
+		size = { width = 272 height = 40 }
+
+		buttonType = {
+			name = "button"
+			quadTextureSprite = "GFX_button_entry_title"
+			position = { x = 10 y = 8 }
+			clicksound = outliner_click_tab
+			oversound = no_sound
+		}
+
+		buttonType = {
+			name = "selected"
+			quadTextureSprite = "GFX_long_button_selected"
+			size = { x = 272 y = 40 }
+			position = { x = 10 y = 5 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "entry_icon"
+			spriteType = "GFX_alert"
+			position = { x = 28 y = 24 }
+			alwaysTransparent = yes
+			centerPosition = yes
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			text = "TITLE"
+			position = { x = 50 y = 15 } # Set to "situation_log_situation_entry_name_position" for situation entries
+			maxWidth = 195
+			maxHeight = 20
+			fixedSize = yes
+			format = left
+			vertical_alignment = center
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "expand_button"
+			quadTextureSprite = "GFX_entry_expand"
+			position = { x = 255 y = 12 }
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "completed"
+			quadTextureSprite = "GFX_situation_completed"
+			position = { x = 10 y = 5 }
+			alwaysTransparent = yes
+			size = { x = 272 y = 40 }
+		}
+
+		iconType = {
+			name = "tracked"
+			spriteType = "GFX_dot_orange_icon"
+			position = { x = 12 y = 4 }
+			tooltip = "SITUATION_LOG_TRACKED_TOOLTIP"
+		}
+
+		smoothListBoxType = {
+			name = "subentries"
+			size = { x = 300 y = 90000 }
+			position = { x = 0 y = 39 }
+		}
+	}
+
+	### SUB ENTRY
+	containerWindowType = {
+		name = "situation_log_subentry"
+		size = { width = 255 height = 44 }
+
+		buttonType = {
+			name = "button"
+			quadTextureSprite = "GFX_button_subentry"
+			size = { x = 255 y = 40 }
+			position = { x = 27 y = 6 }
+		}
+
+		iconType = {
+			name = "progressbar"
+			spriteType = "GFX_situation_log_progressbar_subentry"
+			frame = 0
+			position = { x = 28 y = 7 }
+			alwaysTransparent = yes
+
+		}
+
+		iconType = {
+			name = "cost_icon"
+			spriteType = "GFX_resource_physics"
+			position = { x = 263 y = 3 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "entry_icon"
+			spriteType = "GFX_alert"
+			position = { x = 28 y = 7 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "name"
+			font = "cg_16b"
+			text = "TITLE"
+			position = { x = 68 y = 5 }
+			maxWidth = 190
+			maxHeight = 40
+			fixedSize = yes
+			format = left
+			orientation = left
+			vertical_alignment = center
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "completed"
+			spriteType = "GFX_situation_log_tick"
+			orientation = LOWER_RIGHT
+			position = { x = -24 y = -22 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "tracked"
+			spriteType = "GFX_dot_orange_icon"
+			position = { x = 33 y = 7 }
+			tooltip = "SITUATION_LOG_TRACKED_TOOLTIP"
+		}
+
+		smoothListBoxType = {
+			name = "subentries"
+			size = { x = 300 y = 3000 }
+			position = { x = 0 y = 40 }
+		}
+
+		buttonType = {
+			name = "pin_button"
+			quadTextureSprite = "GFX_button_pin_unpinned"
+			position = { x = 261 y = 10 }
+		}
+
+		# situation-only
+		iconType = {
+			name = "situation_entry_icon_background"
+			spriteType = "GFX_invisible"
+			position = { x = 50 y = 27 }
+			alwaysTransparent = yes
+			centerPosition = yes
+		}
+
+		iconType = {
+			name = "situation_entry_icon"
+			spriteType = "GFX_invisible"
+			position = { x = 40 y = 17 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "situation_name"
+			position = { x = 76 y = 15 }
+			font = "cg_16b"
+			maxWidth = 200
+			maxHeight = 15
+			fixedSize = yes
+			format = left
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "selected"
+			quadTextureSprite = "GFX_short_button_selected"
+			position = { x = 26 y = 5 }
+			alwaysTransparent = yes
+			size = { x = 255 y = 40 }
+		}
+
+		# Dynamic element - See item with same name in situation_log.gui for documentation
+		containerWindowType = {
+			name = "situations_progress_subview"
+			position = { x = 35 y = 13 }
+			size = { width = 248 height = 100% }
+
+			iconType = {
+				name = "middle_indicator"
+				position = { x = 112 y = 16 }
+				spriteType = "GFX_situation_middle_indicator"
+				alwaystransparent = yes
+			}
+
+			# TODO [AUG-55386] -- needs code handling
+			#buttonType = {
+			#	name = "situations_pin_button"
+			#	quadTextureSprite = "GFX_pink_box"
+			#	position = { x = 220 y = -5 }
+			#}
+
+			containerWindowType = {
+				name = "situations_progress_bar_container_short" # The "_short" postfix makes the progress bar use short gfx variants
+				position = { x = 42 y = 16 }
+				size = { width = 140 height = 13 } # Used to position elements along the progress bar
+
+				iconType = {
+					name = "progress_bar_monodirectional"
+					position = { x = 0  y = 0 }
+					spriteType = "GFX_situation_event_progressbar_monodirectional_neutral_short" # Set in code
+					alwaystransparent = yes
+				}
+
+				iconType = {
+					name = "progress_bar_bidirectional_left"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_situation_event_progressbar_bidirectional_neutral_short_left" # Set in code
+					alwaystransparent = yes
+				}
+
+				iconType = {
+					name = "progress_bar_bidirectional_right"
+					position = { x = 71 y = 0 }
+					spriteType = "GFX_situation_event_progressbar_bidirectional_neutral_short_right" # Set in code
+					alwaystransparent = yes
+				}
+			}
+
+			iconType = {
+				name = "start_indicator"
+				position = { x = 42 y = 20 }
+				spriteType = "GFX_situation_start_indicator"
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "pin_icon"
+				position = { x = 196 y = 22 }
+				spriteType = "GFX_situation_progress_directions" # Mirrored in code as needed
+				centerPosition = yes
+				alwaystransparent = yes
+			}
+
+			# Shows all numbers as positive. "pin_icon" indicates if it's negative or positive
+			instantTextBoxType = {
+				name = "monthly_change"
+				position = { x = 212 y = 14 }
+				font = "cg_16b"
+				maxWidth = 35
+				maxHeight = 15
+				format = left
+				vertical_alignment = center
+				fixedsize = yes
+				alwaystransparent = yes
+			}
+		}
+		#situation-only end
+	}
+
+	containerWindowType = {
+		name = "situation_log_subsubentry"
+		size = { width = 285 height = 55 }
+
+		iconType = {
+			name = "first_branch"
+			spriteType = "GFX_situation_log_branches"
+			position = { x = 37 y = 10 }
+			frame = 6
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "second_branch"
+			spriteType = "GFX_situation_log_branches"
+			position = { x = 45 y = 10 }
+			frame = 6
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "button"
+			quadTextureSprite = "GFX_button_situation_log_advisor_voice_mode"
+			size = { x = 227 y = 40 }
+			position = { x = 55 y = 15 }
+		}
+
+		iconType = {
+			name = "progressbar"
+			spriteType = "GFX_situation_log_progressbar_subsubentry"
+			frame = 0
+			position = { x = 56 y = 16 }
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "selected"
+			quadTextureSprite = "GFX_short_button_selected"
+			size = { x = 227 y = 40 }
+			position = { x = 55 y = 15 }
+		}
+
+		iconType = {
+			name = "cost_icon"
+			spriteType = "GFX_resource_physics"
+			position = { x = 284 y = 16 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "entry_icon"
+			spriteType = "GFX_alert"
+			position = { x = 54 y = 18 }
+			alwaysTransparent = yes
+			scale = 0.9
+		}
+
+		instantTextBoxType={
+			name = "name"
+			font = "cg_16b"
+			text = "TITLE"
+			position = { x = 90 y = 15 }
+			maxWidth = 190
+			maxHeight = 40
+			fixedSize = yes
+			format = left
+			orientation = left
+			vertical_alignment = center
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "completed"
+			quadTextureSprite = "GFX_situation_completed"
+			position = { x = 55 y = 15 }
+			alwaysTransparent = yes
+			size = { x = 227 y = 40 }
+		}
+
+		iconType = {
+			name = "tracked"
+			spriteType = "GFX_dot_orange_icon"
+			position = { x = 54 y = 12 }
+			tooltip = "SITUATION_LOG_TRACKED_TOOLTIP"
+		}
+
+		buttonType = {
+			name = "pin_button"
+			quadTextureSprite = "GFX_pink_box"
+			position = { x = 260 y = 10 }
+		}
+	}
+
+	### "Situations" Approach Button Entry
+	containerWindowType = {
+		name = "situation_approach_entry" # lives in situations_approach_grid
+		position = { x = 0 y = 0 }
+		size = { width = @situation_approach_entry_width height = @situation_approach_entry_height }
+		clipping = no
+
+		buttonType = {
+			name = "approach_button"
+			quadTextureSprite = "GFX_button_dark"
+			position = { x = 0 y = 0 }
+			size = { x = 156 y = 48 }
+		}
+
+		buttonType = {
+			name = "selected"
+			position = { x = 0 y = 0 }
+			size = { x = 156 y = 48 }
+			quadTextureSprite = "GFX_glow_tile_orange_no_padding"
+		}
+
+		iconType = {
+			name = "approach_icon_bg"
+			position = { x = 8 y = 6 }
+			spriteType = "GFX_invisible" # Set in situation script
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "approach_icon"
+			position = { x = 8 y = 6 }
+			spriteType = "GFX_invisible" # Set in situation script
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "approach_text"
+			position = { x = 50 y = -2 }
+			font = "cg_16b"
+			format = left
+			multiline = yes
+			maxWidth = 100
+			maxHeight = 50
+			fixedSize = yes
+			vertical_alignment = center
+			alwaysTransparent = yes
+			text_color_code = "E"
+		}
+	}
+
+	### Situations Stage Entry
+	containerWindowType = { # Created dynamically in code - lives in "stage_icon_container"
+		name = "situation_stage_entry"
+		# Position set in code
+		size = { width = 0 height = 32 } # Width set in code
+
+		buttonType = { # This is actually an icon, but icons can't scale so we're using a button
+			name = "stage_range"
+			position = { x = 0 y = -3 }
+			size = { x = 0 y = 5 } # Width set in code
+			quadTextureSprite = "GFX_situation_tile_range" # Postfixed with "_highlighted" to find highlight state gfx
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "stage_icon_background"
+			position = { x = 0 y = 15 } # X coordinate set in code
+			spriteType = "GFX_invisible"
+			scale = 0.70
+			centerPosition = yes
+		}
+
+		iconType = {
+			name = "stage_icon"
+			position = { x = 0 y = 15 } # X coordinate set in code
+			spriteType = "GFX_invisible"
+			scale = 0.70
+			centerPosition = yes
+		}
+	}
+
+	### situation_log_anomaly_item
+	containerWindowType = {
+		name = "situation_log_anomaly_item"
+		size = { width = 300 height = 48 }
+
+		buttonType = {
+			name = "button"
+			quadTextureSprite = "GFX_long_button"
+			size = { x = 272 y = 40 }
+			position = { x = 9 y = 0 }
+			clicksound = "select_click"
+		}
+
+		iconType = {
+			name = "progressbar"
+			spriteType = "GFX_situation_log_progressbar"
+			frame = 0
+			position = { x = 14 y = 6 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "selected"
+			spriteType = "GFX_long_button_selected"
+			position = { x = 13 y = 5 }
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_situation_log_anomaly_levels"
+			position = { x = 17 y = 6 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "name"
+			font = "cg_16b"
+			position = { x = 62 y = 15 }
+			maxWidth = 220
+			maxHeight = 20
+			fixedSize = yes
+			format = left
+			vertical_alignment = center
+			alwaysTransparent = yes
+		}
+	}
+
+	# Timeline Navigation Entry
+	containerWindowType = {
+		name = "timeline_navigation_entry" # lives in timeline_navigation_grid
+		clipping = no
+		position = { x = 0 y = 25 }
+
+		iconType = {
+			name = "active_icon"
+			spriteType = "GFX_timelines_navigation_active_icon"
+		}
+
+		iconType = {
+			name = "inactive_icon"
+			spriteType = "GFX_timelines_navigation_inactive_icon"
+		}
+
+		instantTextBoxType = {
+			name = "page_num"
+			font = "cg_16b"
+			text = "X"
+			maxWidth = 32
+			maxHeight = 34
+			fixedSize = yes
+			format = center
+			vertical_alignment = center
+			alwaysTransparent = yes
+		}
+	}
+
+	### VICTORY CONDITION EMPIRE ITEM
+	containerWindowType = {
+		name = "victory_empire_item"
+		size = { width = 300 height = 48 }
+
+		buttonType = {
+			name = "button"
+			quadTextureSprite = "GFX_long_button"
+			size = { x = 272 y = 40 }
+			position = { x = 9 y = 0 }
+			clicksound = outliner_click_tab
+			oversound = no_sound
+		}
+
+		buttonType = {
+			name = "empire_flag"
+			quadTextureSprite = "GFX_empire_flag_32"
+			position = { x = 18 y = 10 }
+		}
+
+		buttonType = {
+			name = "selected"
+			spriteType = "GFX_short_button_selected"
+			position = { x = 13 y = 5 }
+            size = { x = 272 y = 40 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "name"
+			font = "cg_16b"
+			text = "TITLE"
+			position = { x = 55 y = 10 }
+			maxWidth = 220
+			maxHeight = 10
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "score"
+			font = "cg_16b"
+			text = "250"
+			position = { x = 55 y = 25 }
+			maxWidth = 260
+			maxHeight = 40
+			fixedSize = yes
+			format = left
+			alwaysTransparent = yes
+		}
+	}
+
+	### FOCUS CARD ITEM
+	containerWindowType = {
+		name = "focus_card_item"
+		size = { width = 160 height = 210 }
+		clipping = yes
+
+		iconType = {
+			name = "portrait_background_icon"
+			spriteType = "GFX_focus_card_background_core_tier_1"
+		}
+
+		iconType = {
+			name = "tier_icon"
+			spriteType = "GFX_focus_card_tier"
+			position = { x = 5 y = 5 }
+		}
+
+		buttonType = {
+			name = "dismissal_button"
+			spriteType = "GFX_focus_button_dismiss"
+			orientation = upper_right
+			position = { x = -30 y = 8 }
+			size = { x = 20 y = 20 }
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			text = "FOCUS_CARD_NAME"
+			orientation = upper_left
+			position = { x = 17 y = 60 }
+			maxWidth = 130
+			multiline = yes
+		}
+
+		instantTextBoxType = {
+			name = "description"
+			font = "cg_16b"
+			text = "FOCUS_CARD_DESCRIPTION"
+			text_color_code = "t"
+			orientation = upper_left
+			position = { x = 17 y = 96 }
+			maxWidth = 130
+			multiline = yes
+		}
+
+		containerWindowType = {
+			name = "reward_background"
+			orientation = upper_left
+			position = { x = 5 y = 176 }
+
+			background = {
+				name = "focus_reward_background"
+				spriteType = "GFX_focus_reward_background"
+				alwaystransparent = yes
+			}
+		}
+
+		instantTextBoxType = {
+			name = "reward_title"
+			font = "cg_16b"
+			text = "FOCUS_CARD_REWARD"
+			position = { x = 13  y = 181 }
+			maxWidth = 140
+			multiline = yes
+			alwaystransparent = yes
+		}
+
+		containerWindowType = {
+			name = "progress_container"
+			position = { x = 17 y = 134 }
+			size = { width = 130 height = 50 }
+
+			instantTextBoxType = {
+				name = "progress_textbox_label"
+				font = "cg_16b"
+				text = "FOCUS_CARD_PROGRESS_LABEL"
+				position = { x = 0 y = 1 }
+				maxWidth = 70
+				multiline = no
+				alwaystransparent = yes
+			}
+
+			instantTextBoxType = {
+				name = "progress_textbox_numbers"
+				font = "cg_16b"
+				text = "FOCUS_CARD_PROGRESS"
+				orientation = "UPPER_RIGHT"
+				format = right
+				position = { x = -75 y = 1 }
+				maxWidth = 70
+				multiline = no
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "progress_bar"
+				position = { x = -1 y = 20 }
+				spriteType = "GFX_focus_card_progressbar"
+				alwaystransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "reward_container"
+			orientation = upper_right
+			position = { x = 0 y = 158 }
+			size = { width = 81 height = 40 }
+
+			gridBoxType = {
+				name = "reward_grid_box"
+				position = { x = -13 y = 3 }
+				slotSize = { width = 27 height = 40 }
+				max_slots_horizontal = 3
+				format = "UPPER_RIGHT"
+				padding = { left = 0 top = 0 }
+			}
+		}
+
+		buttonType = {
+			name = "highlight"
+			spriteType = "GFX_focus_card_background_highlight"
+			position = { x = 5 y = 5 }
+			size = { x = 150 y = 200 }
+			alwaystransparent = yes
+		}
+	}
+
+	### FOCUS CARD REWARD ITEM
+	containerWindowType = {
+		name = "focus_card_reward_item"
+		size = { width = 27 height = 40 }
+		clipping = yes
+
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_focus_priority_icon_conquest"
+			position = { x = -3 y = -4 }
+			scale = 0.78
+		}
+
+		instantTextBoxType = {
+			name = "amount"
+			font = "cg_16b"
+			orientation = upper_left
+			format = center
+			position = { x = 1 y = 24 }
+			maxWidth = 27
+		}
+	}
+
+	positionType = {
+		name = "situation_log_subentry_list_bottom_padding"
+		position = { x = 0 y = 6 } # X value not used
+	}
+
+	### Event Chain Subview Entries ###
+	positionType = {
+		name = "situation_log_event_chain_distance_between_entries"
+		position = { x = 0 y = 10 } # X value not used
+	}
+
+	positionType = {
+		name = "situation_log_event_chain_bottom_padding_below_counters"
+		position = { x = 0 y = 10 } # X value not used
+	}
+
+	positionType = {
+		name = "situation_log_event_chain_bottom_padding_below_desc"
+		position = { x = 0 y = 10 } # X value not used
+	}
+
+	containerWindowType = {
+		name = "event_chain_entry_mission"
+		size = { width = @event_chain_entry_width height = 100 }
+		clipping = no
+
+		containerWindowType = {
+			name = "event_chain_branch_connector"
+			position = { x = @event_chain_branch_connector_x y = 0 }
+			size = { width = 14 height = 14 }
+
+			iconType = {
+				name = "branch_nub"
+				spriteType = "GFX_event_chain_entry_branches"
+			}
+		}
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+		}
+
+		buttonType = {
+			name = "track"
+			orientation = "UPPER_RIGHT"
+			position = { x = -40 y = 2 }
+			spriteType = "GFX_button_track_project"
+			format = center
+			scale = 0.8
+		}
+
+		buttonType = {
+			name = "goto"
+			orientation = upper_right
+			position = { x = -70 y = 2 }
+			spriteType = "GFX_fleetview_focus"
+			scale = 0.8
+		}
+
+		instantTextBoxType = {
+			name = "counters_label"
+			text = "SITLOG_MISSION_PROGRESS"
+			position = { x = 10 y = 10 }
+			font = "cg_16b"
+			maxWidth = 500
+			maxHeight = 20
+			fixedSize = yes
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "counters_text"
+			text = "<COUNTERS TEXT>"
+			position = { x = 10 y = 30 }
+			font = "cg_16b"
+			maxWidth = @event_chain_entry_desc_max_width
+			maxHeight = 800
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "desc_label"
+			text = "<DESC LABEL>"
+			position = { x = 10 y = 10 } # y determines padding between this and the counters element
+			font = "cg_16b"
+			maxWidth = @event_chain_entry_desc_max_width
+			maxHeight = 20
+			fixedSize = yes
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "desc_text"
+			text = "<DESC TEXT>"
+			position = { x = 10 y = 20 } # y determines padding between this and desc_label
+			font = "cg_16b"
+			maxWidth = @event_chain_entry_desc_max_width
+			maxHeight = 800
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "reward_label"
+			position = { x = 10 y = 10 }  # y determines padding between this and desc_text
+			font = "cg_16b"
+			text = "SITLOG_MISSION_REWARD"
+			maxWidth = @event_chain_entry_desc_max_width
+			maxHeight = 20
+			fixedSize = yes
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "reward_text"
+			position = { x = 10 y = 20 }  # y determines padding between this and reward_info
+			font = "cg_16b"
+			maxWidth = @event_chain_entry_desc_max_width
+			maxHeight = 800
+			format = left
+		}
+	}
+
+	containerWindowType = {
+		name = "event_chain_entry_point_of_interest"
+		size = { width = @event_chain_entry_width height = 100 }
+		clipping = no
+
+		containerWindowType = {
+			name = "event_chain_branch_connector"
+			position = { x = @event_chain_branch_connector_x y = 0 }
+			size = { width = 14 height = 14 }
+
+			iconType = {
+				name = "branch_nub"
+				spriteType = "GFX_event_chain_entry_branches"
+			}
+		}
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+		}
+
+		buttonType = {
+			name = "track"
+			orientation = "UPPER_RIGHT"
+			position = { x = -40 y = 2 }
+			spriteType = "GFX_button_track_project"
+			format = center
+			scale = 0.8
+		}
+
+		buttonType = {
+			name = "goto"
+			orientation = upper_right
+			position = { x = -70 y = 2 }
+			spriteType = "GFX_fleetview_focus"
+			scale = 0.8
+		}
+
+		instantTextBoxType = {
+			name = "name_label"
+			position = { x = 10 y = 10 }
+			font = "cg_16b"
+			maxWidth = @event_chain_entry_desc_max_width
+			maxHeight = @multi_name_label_max_height
+			fixedSize = yes
+			format = left
+			text = "<NAME>"
+		}
+
+		instantTextBoxType = {
+			name = "desc"
+			position = { x = @multi_desc_x y = 30 }
+			font = "cg_16b"
+			maxWidth = @event_chain_entry_desc_max_width
+			maxHeight = 60
+			format = left
+			text = "<DESC>"
+		}
+	}
+
+	containerWindowType = {
+		name = "event_chain_entry_special_project"
+		size = { width = @event_chain_entry_width height = 110 }
+		clipping = no
+
+		containerWindowType = {
+			name = "event_chain_branch_connector"
+			position = { x = @event_chain_branch_connector_x y = 0 }
+			size = { width = 14 height = 14 }
+
+			iconType = {
+				name = "branch_nub"
+				spriteType = "GFX_event_chain_entry_branches"
+			}
+		}
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+		}
+
+		buttonType = {
+			name = "track"
+			orientation = "UPPER_RIGHT"
+			position = { x = -40 y = 2 }
+			spriteType = "GFX_button_track_project"
+			format = center
+			scale = 0.8
+		}
+
+		buttonType = {
+			name = "goto"
+			orientation = upper_right
+			position = { x = -70 y = 2 }
+			spriteType = "GFX_fleetview_focus"
+			scale = 0.8
+		}
+
+		instantTextBoxType = {
+			name = "name_label"
+			position = { x = 10 y = 10 }
+			font = "cg_16b"
+			maxWidth = @event_chain_entry_desc_max_width
+			maxHeight = @multi_name_label_max_height
+			fixedSize = yes
+			format = left
+			text = "<NAME>"
+		}
+
+		instantTextBoxType = {
+			name = "desc"
+			position = { x = @multi_desc_x y = 30 }
+			font = "cg_16b"
+			maxWidth = @event_chain_entry_desc_max_width
+			format = left
+			text = "<DESC>"
+		}
+
+		containerWindowType = {
+			name = "research_container"
+			# position dynamically adjusts based on desc size
+			size = { width = 100% height = 25 } # height dynamically resized in code
+
+			instantTextBoxType = {
+				name = "requirements_label"
+				text = "REQUIREMENTS"
+				position = { x = @special_project_research_requirements_label_x y = @special_project_research_requirements_label_y }
+				font = "cg_16b"
+				maxWidth = @event_chain_entry_desc_max_width
+				maxHeight = @special_project_research_requirements_label_max_height
+				fixedSize = yes
+			}
+
+			instantTextBoxType = {
+				name = "requirements"
+				position = { x = @special_project_research_requirements_x y = @special_project_research_requirements_y }
+				font = "cg_16b"
+				maxWidth = @event_chain_entry_desc_max_width
+				format = left
+			}
+
+			containerWindowType = {
+				name = "research_container_bottom_half"
+				size = { width = @subview_width height = @special_project_research_bottom_half_height }
+
+				instantTextBoxType={
+					name = "times_out_in"
+					orientation = lower_left
+					position = { x = @special_project_research_times_out_in_x y = @special_project_research_times_out_in_y }
+					font = "cg_16b"
+					format = left
+					maxWidth = @multi_times_out_in_max_width
+					maxHeight = @multi_times_out_in_max_height
+					fixedSize = yes
+					text_color_code = "R"
+				}
+
+				instantTextBoxType={
+					name = "time_left"
+					orientation = lower_left
+					position = { x = @special_project_research_time_left_x y = @special_project_research_time_left_y }
+					font = "cg_16b"
+					format = left
+					maxWidth = @multi_time_left_max_width
+					maxHeight = @multi_time_left_max_height
+					fixedSize = yes
+				}
+
+				iconType = {
+					name = "cost_icon"
+					position = { x = @special_project_research_cost_icon_x y = @special_project_research_cost_icon_y }
+					spriteType = "GFX_resource_physics"
+					centerPosition = yes
+				}
+
+				instantTextBoxType={
+					name = "cost_value"
+					position = { x = @special_project_research_cost_value_x y = @special_project_research_cost_value_y }
+					font = "cg_16b"
+					maxWidth = @special_project_research_cost_value_max_width
+					maxHeight = @special_project_research_cost_value_max_height
+					fixedSize = yes
+					format = right
+				}
+
+				iconType = {
+					name = "energy_cost_icon"
+					position = { x = @special_project_research_energy_cost_icon_x y = @special_project_research_energy_cost_icon_y }
+					spriteType = "GFX_resource_energy"
+					centerPosition = yes
+				}
+
+				instantTextBoxType={
+					name = "energy_cost_value"
+					position = { x = @special_project_research_energy_cost_value_x y = @special_project_research_energy_cost_value_y }
+					font = "cg_16b"
+					format = right
+					maxWidth = @special_project_research_energy_cost_value_max_width
+					maxHeight = @special_project_research_energy_cost_value_max_height
+					fixedSize = yes
+				}
+
+				# Both buttons here are mutually exclusive, so they are in the same position
+				buttonType = {
+					name = "research"
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					font = "cg_16b"
+					text = "RESEARCH"
+					format = center
+					shortcut = "RETURN"
+				}
+				buttonType = {
+					name = "cancel"
+					quadTextureSprite = "GFX_standard_button_142_34_button"
+					font = "cg_16b"
+					text = "CANCEL"
+					format = center
+					shortcut = "RETURN"
+				}
+			}
+		}
+	}
+
+	containerWindowType = {
+		name = "event_chain_entry_completed"
+		size = { width = @event_chain_entry_width height = 30 }
+		clipping = no
+
+		containerWindowType = {
+			name = "event_chain_branch_connector"
+			position = { x = @event_chain_branch_connector_x y = 0 }
+			size = { width = 14 height = 14 }
+
+			iconType = {
+				name = "branch_nub"
+				spriteType = "GFX_event_chain_entry_branches"
+			}
+		}
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+		}
+
+		instantTextBoxType = {
+			name = "name_label"
+			position = { x = 10 y = 7 }
+			font = "cg_16b"
+			maxWidth = @event_chain_entry_desc_max_width
+			maxHeight = @multi_name_label_max_height
+			fixedSize = yes
+			format = left
+			text = "<NAME>"
+		}
+
+		instantTextBoxType = {
+			name = "completed_label"
+			position = { x = 500 y = 7 }
+			font = "cg_16b"
+			format = right
+			maxWidth = 100
+			maxHeight = 20
+			fixedSize = yes
+			text = "COMPLETED"
+            text_color_code = "G"
+		}
+	}
+}

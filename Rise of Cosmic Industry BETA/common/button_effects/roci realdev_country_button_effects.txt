@@ -4,296 +4,481 @@ realdev_country_tooltip = {
 	effect = { custom_tooltip = "realdev_country_tooltip" }
 }
 
-#Settings!
-realdev_alt_production = {
-	potential = { always = yes }
+realdev_select_all_targets = {
+	potential = {
+		NOT = {
+			has_country_flag = realdev_planet_build_speed_change_target
+			has_country_flag = realdev_ship_build_speed_change_target
+			has_country_flag = realdev_assembly_speed_change_target
+			has_country_flag = realdev_production_boost_change_target
+			has_country_flag = realdev_mega_build_speed_change_target
+		}
+	}
 	allow = { hidden_trigger = { always = yes } }
 	effect = {
-		custom_tooltip = "realdev_alt_production_desc"
+		custom_tooltip = "realdev_select_all_targets"
+		hidden_effect = {
+			set_country_flag = realdev_planet_build_speed_change_target
+			set_country_flag = realdev_ship_build_speed_change_target
+			set_country_flag = realdev_assembly_speed_change_target
+			set_country_flag = realdev_production_boost_change_target
+			set_country_flag = realdev_mega_build_speed_change_target
+		}
 	}
 }
-realdev_alt_production_swap = {
-	potential = { }
+realdev_unselect_all_targets = {
+	potential = {
+		OR = {
+			has_country_flag = realdev_planet_build_speed_change_target
+			has_country_flag = realdev_ship_build_speed_change_target
+			has_country_flag = realdev_assembly_speed_change_target
+			has_country_flag = realdev_production_boost_change_target
+			has_country_flag = realdev_mega_build_speed_change_target
+		}
+	}
 	allow = { hidden_trigger = { always = yes } }
 	effect = {
-		custom_tooltip = "realdev_alt_production_desc"
-		if = {
-			limit = {
-				has_country_flag = realdev_assembly
-			}
-			remove_country_flag = realdev_assembly
-			set_country_flag = realdev_production
-		}
-		else_if = {
-			limit = {
-				has_country_flag = realdev_production
-			}
-			remove_country_flag = realdev_production
-			set_country_flag = realdev_assembly
+		custom_tooltip = "realdev_unselect_all_targets"
+		hidden_effect = {
+			remove_country_flag = realdev_planet_build_speed_change_target
+			remove_country_flag = realdev_ship_build_speed_change_target
+			remove_country_flag = realdev_assembly_speed_change_target
+			remove_country_flag = realdev_production_boost_change_target
+			remove_country_flag = realdev_mega_build_speed_change_target
 		}
 	}
 }
 
-#Targets
-realdev_country_target = {
-	potential = { }
-	allow = { custom_tooltip = "realdev_target_desc" hidden_trigger = { always = yes } }
-	effect = { }
-}
-realdev_target_mode_swap = {
+###Increase Targets
+realdev_increase_target_100 = {
 	potential = { }
 	allow = { hidden_trigger = { always = yes } }
 	effect = {
-		custom_tooltip = "realdev_target_desc"
+		custom_tooltip = "realdev_increase_target_100"
 		hidden_effect = {
-			set_variable = { which = realdev_ip_target_display value = realdev_ip_target }
 			if = {
 				limit = {
-					has_country_flag = realdev_target_auto
+					has_country_flag = realdev_planet_build_speed_change_target
 				}
-				remove_country_flag = realdev_target_auto
-				set_country_flag = realdev_target_manual
+				add_variable = { which = realdev_planet_build_speed_target value = 100 }
 			}
-			else_if = {
+			if = {
 				limit = {
-					has_country_flag = realdev_target_manual
+					has_country_flag = realdev_ship_build_speed_change_target
 				}
-				remove_country_flag = realdev_target_manual
-				set_country_flag = realdev_target_auto
+				add_variable = { which = realdev_ship_build_speed_target value = 100 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_assembly_speed_change_target
+				}
+				add_variable = { which = realdev_assembly_speed_target value = 100 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_production_boost_change_target
+				}
+				add_variable = { which = realdev_production_boost_target value = 100 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_mega_build_speed_change_target
+				}
+				add_variable = { which = realdev_mega_build_speed_target value = 100 }
 			}
 		}
 	}
 }
-realdev_country_target_increase = {
+realdev_increase_target_50 = {
 	potential = { }
-	allow = { hidden_trigger = { has_country_flag = realdev_target_manual } }
+	allow = { hidden_trigger = { always = yes } }
 	effect = {
-		custom_tooltip = "realdev_target_increase"
+		custom_tooltip = "realdev_increase_target_50"
 		hidden_effect = {
-			change_variable = { which = realdev_ip_target value = 1 }
-			change_variable = { which = realdev_ip_target_display value = 1 }
+			if = {
+				limit = {
+					has_country_flag = realdev_planet_build_speed_change_target
+				}
+				add_variable = { which = realdev_planet_build_speed_target value = 50 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_ship_build_speed_change_target
+				}
+				add_variable = { which = realdev_ship_build_speed_target value = 50 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_assembly_speed_change_target
+				}
+				add_variable = { which = realdev_assembly_speed_target value = 50 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_production_boost_change_target
+				}
+				add_variable = { which = realdev_production_boost_target value = 50 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_mega_build_speed_change_target
+				}
+				add_variable = { which = realdev_mega_build_speed_target value = 50 }
+			}
 		}
 	}
 }
-realdev_country_target_decrease = {
+realdev_increase_target_20 = {
 	potential = { }
-	allow = {
-		hidden_trigger = { has_country_flag = realdev_target_manual }
-		custom_tooltip = {
-			fail_text = realdev_target_minned
-			NOT = { check_variable = { which = realdev_ip_target value < 1 } }
-		}
-	}
+	allow = { hidden_trigger = { always = yes } }
 	effect = {
-		custom_tooltip = "realdev_target_decrease"
+		custom_tooltip = "realdev_increase_target_20"
 		hidden_effect = {
-			change_variable = { which = realdev_ip_target value = -1 }
-			change_variable = { which = realdev_ip_target_display value = -1 }
-		}
-	}
-}
-
-
-realdev_industry_ratio_desc = {
-	potential = { }
-	allow = { custom_tooltip = "realdev_industry_ratio_desc" hidden_trigger = { always = yes } }
-	effect = { custom_tooltip = "realdev_industry_ratio_desc" }
-}
-
-#Shipyards
-realdev_country_shipyard = {
-	potential = { }
-	allow = { custom_tooltip = "realdev_country_shipyard_desc" hidden_trigger = { always = yes } }
-	effect = { custom_tooltip = "realdev_country_shipyard_desc" }
-}
-realdev_country_shipyard_ip_increase = {
-	potential = { }
-	allow = {
-		custom_tooltip_fail = {
-			text = "realdev_all_committed"
-			check_variable_arithmetic = {
-				which = value:realdev_distribution_total
-				value < 100
+			if = {
+				limit = {
+					has_country_flag = realdev_planet_build_speed_change_target
+				}
+				add_variable = { which = realdev_planet_build_speed_target value = 20 }
 			}
-			check_variable_arithmetic = {
-				which = realdev_industry_shipyard_ratio
-				value < 100
+			if = {
+				limit = {
+					has_country_flag = realdev_ship_build_speed_change_target
+				}
+				add_variable = { which = realdev_ship_build_speed_target value = 20 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_assembly_speed_change_target
+				}
+				add_variable = { which = realdev_assembly_speed_target value = 20 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_production_boost_change_target
+				}
+				add_variable = { which = realdev_production_boost_target value = 20 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_mega_build_speed_change_target
+				}
+				add_variable = { which = realdev_mega_build_speed_target value = 20 }
 			}
 		}
 	}
-	effect = { 
-		custom_tooltip = "realdev_country_shipyard_increase_desc"
-		hidden_effect = {
-			change_variable = { which = realdev_industry_shipyard_ratio value = 1 }
-		}
-	}
 }
-realdev_country_shipyard_ip_decrease = {
+realdev_increase_target_10 = {
 	potential = { }
-	allow = {
-		custom_tooltip_fail = {
-			text = "realdev_none_committed"
-			check_variable_arithmetic = {
-				which = realdev_industry_shipyard_ratio
-				value > 0
-			}
-		}
-	}
+	allow = { hidden_trigger = { always = yes } }
 	effect = {
-		custom_tooltip = "realdev_country_shipyard_decrease_desc"
+		custom_tooltip = "realdev_increase_target_10"
 		hidden_effect = {
-			change_variable = { which = realdev_industry_shipyard_ratio value = -1 }
+			if = {
+				limit = {
+					has_country_flag = realdev_planet_build_speed_change_target
+				}
+				add_variable = { which = realdev_planet_build_speed_target value = 10 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_ship_build_speed_change_target
+				}
+				add_variable = { which = realdev_ship_build_speed_target value = 10 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_assembly_speed_change_target
+				}
+				add_variable = { which = realdev_assembly_speed_target value = 10 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_production_boost_change_target
+				}
+				add_variable = { which = realdev_production_boost_target value = 10 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_mega_build_speed_change_target
+				}
+				add_variable = { which = realdev_mega_build_speed_target value = 10 }
+			}
 		}
 	}
 }
 
-
-
-#Megastructures
-realdev_country_megastructures = {
-	potential = { NOT = { has_global_flag = realdev_megastructure_build_ignore } }
-	allow = { custom_tooltip = "realdev_country_megastructures_desc" hidden_trigger = { always = yes } }
-	effect = { custom_tooltip = "realdev_country_megastructures_desc" }
-}
-realdev_country_megastructure_ip_increase = {
-	potential = { NOT = { has_global_flag = realdev_megastructure_build_ignore } }
-	allow = {
-		custom_tooltip_fail = {
-			text = "realdev_all_committed"
-			check_variable_arithmetic = {
-				which = value:realdev_distribution_total
-				value < 100
-			}
-			check_variable_arithmetic = {
-				which = realdev_megastructure_ratio
-				value < 100
-			}
-		}
-	}
+###Decrease Targets
+realdev_decrease_target_10 = {
+	potential = { }
+	allow = { hidden_trigger = { always = yes } }
 	effect = {
-		custom_tooltip = "realdev_country_megastructure_increase_desc"
+		custom_tooltip = "realdev_decrease_target_10"
 		hidden_effect = {
-			change_variable = { which = realdev_megastructure_ratio value = 1 }
-		}
-	}
-}
-realdev_country_megastructure_ip_decrease = {
-	potential = { NOT = { has_global_flag = realdev_megastructure_build_ignore } }
-	allow = {
-		custom_tooltip_fail = {
-			text = "realdev_none_committed"
-			check_variable_arithmetic = {
-				which = realdev_megastructure_ratio
-				value > 0
+			if = {
+				limit = {
+					has_country_flag = realdev_planet_build_speed_change_target
+				}
+				subtract_variable = { which = realdev_planet_build_speed_target value = 10 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_ship_build_speed_change_target
+				}
+				subtract_variable = { which = realdev_ship_build_speed_target value = 10 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_assembly_speed_change_target
+				}
+				subtract_variable = { which = realdev_assembly_speed_target value = 10 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_production_boost_change_target
+				}
+				subtract_variable = { which = realdev_production_boost_target value = 10 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_mega_build_speed_change_target
+				}
+				subtract_variable = { which = realdev_mega_build_speed_target value = 10 }
 			}
 		}
 	}
+}
+realdev_decrease_target_20 = {
+	potential = { }
+	allow = { hidden_trigger = { always = yes } }
 	effect = {
-		custom_tooltip = "realdev_country_megastructure_decrease_desc"
+		custom_tooltip = "realdev_decrease_target_20"
 		hidden_effect = {
-			change_variable = { which = realdev_megastructure_ratio value = -1 }
+			if = {
+				limit = {
+					has_country_flag = realdev_planet_build_speed_change_target
+				}
+				subtract_variable = { which = realdev_planet_build_speed_target value = 20 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_ship_build_speed_change_target
+				}
+				subtract_variable = { which = realdev_ship_build_speed_target value = 20 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_assembly_speed_change_target
+				}
+				subtract_variable = { which = realdev_assembly_speed_target value = 20 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_production_boost_change_target
+				}
+				subtract_variable = { which = realdev_production_boost_target value = 20 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_mega_build_speed_change_target
+				}
+				subtract_variable = { which = realdev_mega_build_speed_target value = 20 }
+			}
+		}
+	}
+}
+realdev_decrease_target_50 = {
+	potential = { }
+	allow = { hidden_trigger = { always = yes } }
+	effect = {
+		custom_tooltip = "realdev_decrease_target_50"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = realdev_planet_build_speed_change_target
+				}
+				subtract_variable = { which = realdev_planet_build_speed_target value = 50 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_ship_build_speed_change_target
+				}
+				subtract_variable = { which = realdev_ship_build_speed_target value = 50 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_assembly_speed_change_target
+				}
+				subtract_variable = { which = realdev_assembly_speed_target value = 50 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_production_boost_change_target
+				}
+				subtract_variable = { which = realdev_production_boost_target value = 50 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_mega_build_speed_change_target
+				}
+				subtract_variable = { which = realdev_mega_build_speed_target value = 50 }
+			}
+		}
+	}
+}
+realdev_decrease_target_100 = {
+	potential = { }
+	allow = { hidden_trigger = { always = yes } }
+	effect = {
+		custom_tooltip = "realdev_decrease_target_100"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = realdev_planet_build_speed_change_target
+				}
+				subtract_variable = { which = realdev_planet_build_speed_target value = 100 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_ship_build_speed_change_target
+				}
+				subtract_variable = { which = realdev_ship_build_speed_target value = 100 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_assembly_speed_change_target
+				}
+				subtract_variable = { which = realdev_assembly_speed_target value = 100 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_production_boost_change_target
+				}
+				subtract_variable = { which = realdev_production_boost_target value = 100 }
+			}
+			if = {
+				limit = {
+					has_country_flag = realdev_mega_build_speed_change_target
+				}
+				subtract_variable = { which = realdev_mega_build_speed_target value = 100 }
+			}
 		}
 	}
 }
 
-#Minor Colonies
-realdev_country_minor_colonies_check = {
-	potential = { roci_exploit_module_active = yes }
-	allow = { }
+###Toggle Target Changing
+toggle_realdev_planet_build_speed = {
+	potential = { }
+	allow = { hidden_trigger = { always = yes } }
+	effect = {
+		custom_tooltip = "realdev_country_tooltip"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = realdev_planet_build_speed_change_target
+				}
+				remove_country_flag = realdev_planet_build_speed_change_target
+			}
+			else = {
+				set_country_flag = realdev_planet_build_speed_change_target
+			}
+		}
+	}
+}
+toggle_realdev_ship_build_speed = {
+	potential = { }
+	allow = { hidden_trigger = { always = yes } }
+	effect = {
+		custom_tooltip = "realdev_country_tooltip"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = realdev_ship_build_speed_change_target
+				}
+				remove_country_flag = realdev_ship_build_speed_change_target
+			}
+			else = {
+				set_country_flag = realdev_ship_build_speed_change_target
+			}
+		}
+	}
+}
+toggle_realdev_assembly_speed = {
+	potential = { }
+	allow = { hidden_trigger = { always = yes } }
+	effect = {
+		custom_tooltip = "realdev_country_tooltip"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = realdev_assembly_speed_change_target
+				}
+				remove_country_flag = realdev_assembly_speed_change_target
+			}
+			else = {
+				set_country_flag = realdev_assembly_speed_change_target
+			}
+		}
+	}
+}
+toggle_realdev_production_boost = {
+	potential = { }
+	allow = { hidden_trigger = { always = yes } }
+	effect = {
+		custom_tooltip = "realdev_country_tooltip"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = realdev_production_boost_change_target
+				}
+				remove_country_flag = realdev_production_boost_change_target
+			}
+			else = {
+				set_country_flag = realdev_production_boost_change_target
+			}
+		}
+	}
+}
+toggle_realdev_mega_build_speed = {
+	potential = { }
+	allow = { hidden_trigger = { always = yes } }
+	effect = {
+		custom_tooltip = "realdev_country_tooltip"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = realdev_mega_build_speed_change_target
+				}
+				remove_country_flag = realdev_mega_build_speed_change_target
+			}
+			else = {
+				set_country_flag = realdev_mega_build_speed_change_target
+			}
+		}
+	}
+}
+
+realdev_planet_build_speed_highlight = {
+	potential = { has_country_flag = realdev_planet_build_speed_change_target }
+	allow = { hidden_trigger = { always = yes } }
 	effect = { }
 }
-realdev_country_minor_colonies_check_null = {
-	potential = { roci_exploit_module_active = no }
-	allow = { }
+realdev_ship_build_speed_highlight = {
+	potential = { has_country_flag = realdev_ship_build_speed_change_target }
+	allow = { hidden_trigger = { always = yes } }
 	effect = { }
 }
-realdev_country_minor_colonies = {
-	potential = { roci_exploit_module_active = yes }
-	allow = { custom_tooltip = "realdev_country_minor_colonies_desc" hidden_trigger = { always = yes } }
-	effect = { custom_tooltip = "realdev_country_minor_colonies_desc" }
+realdev_assembly_speed_highlight = {
+	potential = { has_country_flag = realdev_assembly_speed_change_target }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { }
 }
-realdev_country_minor_colonies_ip_increase = {
-	potential = { roci_exploit_module_active = yes }
-	allow = {
-		custom_tooltip_fail = {
-			text = "realdev_all_committed"
-			check_variable_arithmetic = {
-				which = value:realdev_distribution_total
-				value < 100
-			}
-			check_variable_arithmetic = {
-				which = realdev_minor_colony_ratio
-				value < 100
-			}
-		}
-	}
-	effect = {
-		custom_tooltip = "realdev_country_minor_colonies_increase_desc"
-		hidden_effect = {
-			change_variable = { which = realdev_minor_colony_ratio value = 1 }
-		}
-	}
+realdev_production_boost_highlight = {
+	potential = { has_country_flag = realdev_production_boost_change_target }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { }
 }
-realdev_country_minor_colonies_ip_decrease = {
-	potential = { roci_exploit_module_active = yes }
-	allow = {
-		custom_tooltip_fail = {
-			text = "realdev_none_committed"
-			check_variable_arithmetic = {
-				which = realdev_minor_colony_ratio
-				value > 0
-			}
-		}
-	}
-	effect = {
-		custom_tooltip = "realdev_country_minor_colonies_decrease_desc"
-		hidden_effect = {
-			change_variable = { which = realdev_minor_colony_ratio value = -1 }
-		}
-	}
-}
-
-#Trade Value
-realdev_country_tv = {
-	potential = { }
-	allow = { custom_tooltip = "realdev_country_tv_desc" hidden_trigger = { always = yes } }
-	effect = { custom_tooltip = "realdev_country_tv_desc" }
-}
-
-#Planets
-realdev_industry_from_planets = {
-	potential = { }
-	allow = { custom_tooltip = "realdev_industry_from_planets_desc" hidden_trigger = { always = yes } }
-	effect = { custom_tooltip = "realdev_industry_from_planets_desc" }
-}
-
-#Distributed IP
-realdev_ip_distributed = {
-	potential = { }
-	allow = { custom_tooltip = "realdev_ip_distributed_desc" hidden_trigger = { always = yes } }
-	effect = { custom_tooltip = "realdev_ip_distributed_desc" }
-}
-
-#IP Totals
-realdev_country_indcap_display = {
-	potential = { }
-	allow = { custom_tooltip = "realdev_country_indcap_display_desc" hidden_trigger = { always = yes } }
-	effect = { custom_tooltip = "realdev_country_indcap_display_desc" }
-}
-realdev_total_ind_cap_display = {
-	potential = { }
-	allow = { custom_tooltip = "realdev_total_ind_cap_display_desc" hidden_trigger = { always = yes } }
-	effect = { custom_tooltip = "realdev_total_ind_cap_display_desc" }
-}
-
-#Distribution Lines
-realdev_country_split_1_display = {
-	potential = { }
-	allow = { custom_tooltip = "realdev_country_split_1_display_desc" hidden_trigger = { always = yes } }
-	effect = { custom_tooltip = "realdev_country_split_1_display_desc" }
-}
-realdev_country_split_2_display = {
-	potential = { }
-	allow = { custom_tooltip = "realdev_country_split_2_display_desc" hidden_trigger = { always = yes } }
-	effect = { custom_tooltip = "realdev_country_split_2_display_desc" }
+realdev_mega_build_speed_highlight = {
+	potential = { has_country_flag = realdev_mega_build_speed_change_target }
+	allow = { hidden_trigger = { always = yes } }
+	effect = { }
 }

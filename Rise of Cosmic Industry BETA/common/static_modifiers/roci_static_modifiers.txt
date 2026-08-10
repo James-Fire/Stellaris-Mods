@@ -42,31 +42,27 @@ orbital_space = {
 
 
 ##Realdev
-realdev_planet_speed = {
+realdev_planet_build_speed = {
 	planet_building_build_speed_mult = 0.01
 	#planet_decision_enact_speed_mult = 0.01
 }
-realdev_planet_assembly = {
+realdev_ship_build_speed = {
+	starbase_shipyard_build_speed_mult = 0.01
+}
+realdev_assembly_speed = {
 	planet_pop_assembly_mult = 0.01
 	bonus_pop_growth_mult = 0.01
 }
-realdev_planet_job_output = {
-	pop_bonus_workforce_mult = 0.0005
-	bonus_automated_workforce_mult = 0.0005
+realdev_production_boost = {
+	pop_bonus_workforce_mult = 0.01
+	bonus_automated_workforce_mult = 0.01
 }
-realdev_ship_speed = {
-	starbase_shipyard_build_speed_mult = 0.01
-}
-realdev_mega_speed = {
+realdev_mega_build_speed = {
 	megastructure_build_speed_add = 0.01
 	#megastructure_build_speed_mult = 0.01
 }
 
 realdev_no_build_cap = {
-	country_megastructure_build_cap_add = 1000
-	hide_from_country_list = yes
-}
-realdev_fleet_cap = {
 	country_megastructure_build_cap_add = 1000
 	hide_from_country_list = yes
 }

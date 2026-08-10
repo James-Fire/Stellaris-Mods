@@ -13,124 +13,101 @@ reset_realdev_variables = {
 	set_variable = { which = realdev_leader_level value = 0 }
 }
 
-set_realdev_target = {
-	set_variable = { which = realdev_ip_target value = value:realdev_ip_target }
-	if = {
-		limit = {
-			check_variable = { which = realdev_ip_target value > realdev_industry_cap }
-		}
-		set_variable = { which = realdev_ip_target value = realdev_industry_cap }	
-	}
-	if = {
-		limit = {
-			log_realdev = yes
-		}
-		log = "Realdev set Target at \\[this.realdev_ip_target] on \\[This.GetName] for \\[Owner.GetName]"
-	}
-}
-
-set_realdev_planet_variables = {
-	set_variable = { which = realdev_ip_target value = value:realdev_ip_target }
-	set_variable = { which = realdev_industry_planet_ratio value = 0.8 }
-	set_variable = { which = realdev_industry_construction_ratio value = 0.8 }
-	set_variable = { which = realdev_take_ratio value = 0 }
-	#Include adjustment
-	switch = {
-		trigger = has_global_flag
-		roci_realdev_build_adjustment_none_flag = {
-			set_variable = { which = realdev_assembly_cap value = 200 }
-		}
-		roci_realdev_build_adjustment_small_flag = {
-			set_variable = { which = realdev_assembly_cap value = 225 }
-		}
-		roci_realdev_build_adjustment_medium_flag = {
-			set_variable = { which = realdev_assembly_cap value = 250 }
-		
-		}
-		roci_realdev_build_adjustment_large_flag = {
-			set_variable = { which = realdev_assembly_cap value = 275 }
-		}
-		roci_realdev_build_adjustment_full_flag = {
-			set_variable = { which = realdev_assembly_cap value = 300 }
-		}
-	}
-	set_carrier_flag = realdev_variables_set
-	set_carrier_flag = realdev_target_country
-	set_variable = { which = realdev_ip_target_display value = realdev_ip_target }
-}
-
 set_realdev_country_variables = {
-	set_variable = { which = realdev_ip_target value = value:realdev_ip_target }
-	set_variable = { which = realdev_ip_target_display value = realdev_ip_target }
-	set_variable = { which = realdev_minor_colony_speed value = 0 }
-	if = {
-		limit = {
-			roci_exploit_module_active = yes
-		}
-		set_variable = { which = realdev_industry_shipyard_ratio value = 34 }
-		set_variable = { which = realdev_megastructure_ratio value = 33 }
-		set_variable = { which = realdev_minor_colony_ratio value = 33 }
-	}
-	else = {
-		set_variable = { which = realdev_industry_shipyard_ratio value = 50 }
-		set_variable = { which = realdev_megastructure_ratio value = 50 }
-	}
-	set_variable = { which = realdev_industry_country_stockpile value = 0.1 }
 	set_variable = { which = realdev_ship_build_cap value = 100 } #Start being able to build ships at double speed with enough industrial capacity
 	set_variable = { which = realdev_ship_build_speed_tech_bonus value = 10 }
 	set_variable = { which = realdev_building_megas value = 0 }
 	set_variable = { which = realdev_upgrading_megas value = 0 }
 	set_country_flag = realdev_variables_set
-	set_country_flag = realdev_target_auto
 	add_modifier = { modifier = realdev_no_build_cap }
-	if = { #Checing if any species the country has can be assembled at game start
-		limit = {
-			any_owned_species = {
-				is_sapient = yes
-				OR = {
-					is_robotic = yes
-					has_trait = trait_plantoid_budding
-					PREV = { has_origin = origin_clone_army }
-					PREV = { has_civic = civic_permanent_employment }
-					has_trait = trait_clone_soldier_infertile
-					has_trait = trait_clone_soldier_infertile_full_potential
-					AND = {
-						is_organic_species = yes
-						PREV = { is_hive_empire = yes }
-						has_trait = trait_hive_mind
-					}
-				}
-			}
+	start_situation = { type = situation_realdev_ip target = this }
+	set_variable = { which = realdev_planet_build_speed_target value = 100 }
+	set_variable = { which = realdev_ship_build_speed_target value = 100 }
+	set_variable = { which = realdev_assembly_speed_target value = 100 }
+	set_variable = { which = realdev_production_boost_target value = 100 }
+	set_variable = { which = realdev_mega_build_speed_target value = 100 }
+	set_country_flag = realdev_even_distribution_target
+	switch = {
+		trigger = has_global_flag
+		roci_realdev_build_adjustment_none_flag = {
 		}
-		set_country_flag = realdev_assembly
+		roci_realdev_build_adjustment_small_flag = {
+			set_variable = { which = realdev_realism_adjustment value = 25 }
+		}
+		roci_realdev_build_adjustment_medium_flag = {
+			change_variable = { which = realdev_realism_adjustment value = 50 }
+		}
+		roci_realdev_build_adjustment_large_flag = {
+			change_variable = { which = realdev_realism_adjustment value = 75 }
+		}
+		roci_realdev_build_adjustment_full_flag = {
+			change_variable = { which = realdev_realism_adjustment value = 100 }
+		}
 	}
-	else = {
-		set_country_flag = realdev_production
-	}
+}
+
+remove_realdev_target_flags = {
+	remove_country_flag = realdev_planet_build_speed_target
+	remove_country_flag = realdev_ship_build_speed_target
+	remove_country_flag = realdev_assembly_speed_target
+	remove_country_flag = realdev_production_boost_target
+	remove_country_flag = realdev_mega_build_speed_target
+	remove_country_flag = realdev_even_distribution_target
 }
 
 log_realdev_variables = {
 
 }
 
-production_boost_update = {
-	multiply_variable = { which = realdev_production_boost value = 0.9 } #Loses 10% effectiveness
+decay_modifier_update = {
+	multiply_variable = { which = $realdev_variable$_perm value = $decay_value$ } #Loses X% effectiveness
+	
+	divide_variable = { which = $realdev_variable$ value = $realdev_conversion_ratio$ } #Divide IP by conversion ratio...
+	change_variable = { which = $realdev_variable$_perm value = $realdev_variable$ } #...then add to perm variable
+	
+	set_variable = { which = $realdev_variable$_perm_display value = $realdev_variable$_perm }
+	subtract_variable = { which = $realdev_variable$_perm_display value = realdev_realism_adjustment }
+	
+	add_modifier = {
+		modifier = $realdev_modifier$
+		multiplier = value:realdev_adjustment_applicator|IP_VARIABLE|$realdev_variable$_perm|DIVISION|$division_value$|
+		days = 30
+	}
+}
+
+decay_modifier_no_adjustment_update = {
+	multiply_variable = { which = $realdev_variable$_perm value = $decay_value$ } #Loses X% effectiveness
+	
+	divide_variable = { which = $realdev_variable$ value = $realdev_conversion_ratio$ } #Divide IP by conversion ratio...
+	change_variable = { which = $realdev_variable$_perm value = $realdev_variable$ } #...then add to perm variable
+	
+	set_variable = { which = $realdev_variable$_perm_display value = $realdev_variable$_perm }
+	
+	add_modifier = {
+		modifier = $realdev_modifier$
+		multiplier = value:realdev_division_applicator|IP_VARIABLE|$realdev_variable$_perm|DIVISION|$division_value$|
+		days = 30
+	}
+}
+
+withdraw_ip = {
+	#log = "withdrawing IP for \\[this.GetName\\]"
+	#set_variable = { which = test value = $ip_withdrawn$ }
+	#log = "IP to withdraw \\[this.test\\] to $ip_target$"
+	set_variable = { which = $ip_target$_target_display value = $ip_withdrawn$ }
+	#Subtract from the target how much already exists
+	set_variable = { which = ip_to_withdraw value = $ip_withdrawn$ }
+	subtract_variable = { which = ip_to_withdraw value = $ip_target$ }
 	if = {
 		limit = {
-			bonus_production_active = no
+			check_variable = { which = realdev_total_ip value >= ip_to_withdraw }
 		}
-		add_modifier = {
-			modifier = realdev_planet_assembly
-			multiplier = realdev_assembly_speed
-			days = 30
-		}
+		subtract_variable = { which = realdev_total_ip value = ip_to_withdraw }
+		add_variable = { which = $ip_target$ value = ip_to_withdraw }
 	}
 	else = {
-		add_variable = { which = realdev_production_boost value = realdev_assembly_speed }
-		add_modifier = {
-			modifier = realdev_planet_job_output
-			multiplier = realdev_production_boost
-			days = 30
-		}
+		add_variable = { which = $ip_target$ value = realdev_total_ip }
+		set_variable = { which = realdev_total_ip value = 0 }
 	}
+	round_variable = $ip_target$
 }

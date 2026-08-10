@@ -123,7 +123,7 @@ kiyo_trade_calculate_resources = {
 	fleet_event = { id = kiyo_trade_manual_event.51 }
 	
 	#Check if trading partners are close allies
-	orbit = {
+	orbit.owner = {
 		roci_check_if_trade_partner_close_ally = yes
 	}
 	

@@ -36,6 +36,28 @@ spriteTypes = {
 	spriteType = { name = "GFX_roci_cargoships_thumb"				texturefile = "gfx/event_pictures/module_thumbnails/cargoships.dds" }
 	spriteType = { name = "GFX_roci_shipping_thumb"					texturefile = "gfx/event_pictures/module_thumbnails/shipping.dds" }
 	
+	
+	spriteType = {
+		name = "GFX_roci_settings_highlight_bg"
+		texturefile = "gfx/event_pictures/module_thumbnails/half_button_background_highlight.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 1
+		animation = {
+			animationmaskfile = "gfx/event_pictures/module_thumbnails/half_button_background_highlight.dds" #The shape of the animation. Whitespace appears to define where the animation can appear.
+			animationtexturefile = "gfx/event_pictures/module_thumbnails/half_button_background_highlight.dds" #The image to animate.
+			animationrotation = 0.0
+			animationlooping = yes
+			animationtime = 5.0
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "pulsing"  #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 }
+		}
+		legacy_lazy_load = no
+	}
+	
 	spriteType = {
 		name = "GFX_roci_border"
 		texturefile = "gfx/event_pictures/module_thumbnails/roci_module_border.dds" #The base image. Defines the size of the sprite.

@@ -29,31 +29,6 @@ can_pops_assemble_on_planet = {
 	}
 }
 
-planet_uses_target_auto = {
-	OR = {
-		has_carrier_flag = realdev_target_auto
-		AND = {
-			has_carrier_flag = realdev_target_country
-			exists = owner
-			owner = {
-				has_country_flag = realdev_target_auto
-			}
-		}
-	}
-}
-planet_uses_target_manual = {
-	OR = {
-		has_carrier_flag = realdev_target_manual
-		AND = {
-			has_carrier_flag = realdev_target_country
-			exists = owner
-			owner = {
-				has_country_flag = realdev_target_manual
-			}
-		}
-	}
-}
-
 country_has_megastructures_building = {
 	NOT = { has_global_flag = realdev_megastructure_build_ignore }
 	check_variable = { which = realdev_building_megas value > 0 }
@@ -66,13 +41,5 @@ country_has_minor_colonies_building = {
 log_realdev = {
 	OR = {
 		has_global_flag = realdev_logging
-		if = {
-			limit = { is_scope_type = country }
-			has_country_flag = realdev_logging
-		}
-		else_if = {
-			limit = { is_scope_type = planet }
-			has_colony_flag = realdev_logging
-		}
 	}
 }

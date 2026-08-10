@@ -1,0 +1,197 @@
+situation_realdev_ip = {
+	picture = GFX_evt_arctic
+	complete_icon_frame = GFX_situation_outcome_frame_blue
+	complete_icon = GFX_situation_outcome_unknown
+	situation_log_category = developments
+	custom_tooltip_with_modifiers = realdev_ip_speeds
+	override_finisher_title = realdev_ip_breakdown_title
+	override_finisher_desc = realdev_ip_breakdown
+	on_progress_complete = {
+	}
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_blue
+			end = 20000
+			custom_tooltip = ""
+		}
+	}
+	approach = {
+		name = situation_realdev_targets
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_green
+		custom_tooltip_with_modifiers = situation_realdev_targets_tooltip
+		allow = {
+			always = yes
+		}
+		on_select = {
+			hidden_effect = {
+				owner = {
+					switch = {
+						trigger = has_country_flag
+						realdev_planet_build_speed_target = {
+							PREV = { set_situation_approach = situation_realdev_development }
+						}
+						realdev_ship_build_speed_target = {
+							PREV = { set_situation_approach = situation_realdev_fleet }
+						}
+						realdev_assembly_speed_target = {
+							PREV = { set_situation_approach = situation_realdev_assembly }
+						}
+						realdev_production_boost_target = {
+							PREV = { set_situation_approach = situation_realdev_production }
+						}
+						realdev_mega_build_speed_target = {
+							PREV = { set_situation_approach = situation_realdev_megastructures }
+						}
+						realdev_even_distribution_target = {
+							PREV = { set_situation_approach = situation_realdev_even }
+						}
+					}
+					remove_country_flag = realdev_planet_build_speed_change_target
+					remove_country_flag = realdev_ship_build_speed_change_target
+					remove_country_flag = realdev_assembly_speed_change_target
+					remove_country_flag = realdev_production_boost_change_target
+					remove_country_flag = realdev_mega_build_speed_change_target
+					country_event = { id = realdev_menu.1 }
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_realdev_production
+		icon = GFX_situation_approach_alloys
+		icon_background = GFX_situation_approach_bg_green
+		custom_tooltip_with_modifiers = situation_realdev_production_tooltip
+		allow = {
+			always = yes
+		}
+		on_select = {
+			hidden_effect = {
+				owner = {
+					set_country_flag = realdev_production_boost_target
+					remove_realdev_target_flags = yes
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_realdev_assembly
+		icon = GFX_situation_icon_cloning
+		icon_background = GFX_situation_approach_bg_green
+		custom_tooltip_with_modifiers = situation_realdev_assembly_tooltip
+		allow = {
+			custom_tooltip = {
+				fail_text = realdev_no_assembly
+				owner = {
+					any_owned_species = {
+						is_sapient = yes
+						OR = {
+							is_robotic = yes
+							has_trait = trait_plantoid_budding
+							PREV = { has_origin = origin_clone_army }
+							PREV = { has_civic = civic_permanent_employment }
+							has_trait = trait_clone_soldier_infertile
+							has_trait = trait_clone_soldier_infertile_full_potential
+							AND = {
+								is_organic_species = yes
+								PREV = { is_hive_empire = yes }
+								has_trait = trait_hive_mind
+							}
+						}
+					}
+				}
+			}
+		}
+		on_select = {
+			hidden_effect = {
+				owner = {
+					set_country_flag = realdev_assembly_speed_target
+					remove_realdev_target_flags = yes
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_realdev_even
+		icon = GFX_situation_approach_scales
+		icon_background = GFX_situation_approach_bg_green
+		custom_tooltip_with_modifiers = situation_realdev_even_tooltip
+		default = yes
+		default = yes
+		allow = {
+			always = yes
+		}
+		on_select = {
+			hidden_effect = {
+				owner = {
+					set_country_flag = realdev_even_distribution_target
+					remove_realdev_target_flags = yes
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_realdev_development
+		icon = GFX_situation_approach_minerals
+		icon_background = GFX_situation_approach_bg_green
+		custom_tooltip_with_modifiers = situation_realdev_development_tooltip
+		allow = {
+			always = yes
+		}
+		on_select = {
+			hidden_effect = {
+				owner = {
+					set_country_flag = realdev_planet_build_speed_target
+					remove_realdev_target_flags = yes
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_realdev_fleet
+		icon = GFX_situation_approach_fleet
+		icon_background = GFX_situation_approach_bg_green
+		custom_tooltip_with_modifiers = situation_realdev_fleet_tooltip
+		allow = {
+			always = yes
+		}
+		on_select = {
+			hidden_effect = {
+				owner = {
+					set_country_flag = realdev_ship_build_speed_target
+					remove_realdev_target_flags = yes
+				}
+			}
+		}
+	}
+	approach = {
+		name = situation_realdev_megastructures
+		icon = GFX_situation_approach_engineering
+		icon_background = GFX_situation_approach_bg_green
+		custom_tooltip_with_modifiers = situation_realdev_megastructures_tooltip
+		allow = {
+			custom_tooltip = {
+				fail_text = realdev_no_megastructures_building
+				country_has_megastructures_building = yes
+			}
+			custom_tooltip = {
+				fail_text = realdev_no_megastructures
+				NOT = { has_global_flag = realdev_megastructure_build_ignore }
+			}
+		}
+		on_select = {
+			hidden_effect = {
+				owner = {
+					set_country_flag = realdev_mega_build_speed_target
+					remove_realdev_target_flags = yes
+				}
+			}
+		}
+	}
+	monthly_progress = {
+		base = 0
+	}
+	permanent = yes
+	initial_progress = 10000
+}
