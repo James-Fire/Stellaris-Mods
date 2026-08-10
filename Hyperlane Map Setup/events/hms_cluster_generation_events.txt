@@ -43,6 +43,7 @@ system_event = {
 					to = prev
 				}
 				set_star_flag = hms_hyperlane_hub_spread
+				set_star_flag = hms_hyperlane_cluster@root
 			}
 		}
 		set_spawn_system_batch = end
@@ -238,7 +239,13 @@ system_event = {
 				}
 			}
 			hms_hub_wormholes = {
-				hms_utilities_generate_hub_wormholes = yes
+				every_system = {
+					limit = {
+						has_star_flag = hms_hyperlane_hub
+					}
+					set_variable = { which = hms_wormhole_fails value = 0 }
+					system_event = { id = hms_hubs.6 }
+				}
 			}
 			hms_hub_gateways = {
 				every_system = {
@@ -276,5 +283,68 @@ system_event = {
 			}
 		}
 		set_spawn_system_batch = end
+	}
+}
+
+system_event = {
+	id = hms_hubs.6
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		log = "Making Wormhole connections for Cluster [this.GetName]"
+		while = {
+			limit = {
+				has_star_flag = hms_hyperlane_hub
+				check_variable = { which = hms_wormhole_fails value < 4 }
+				any_system = {
+					has_star_flag = hms_hyperlane_hub
+					distance = {
+						source = prev
+						min_distance >= 1
+						max_distance <= 170
+						type = euclidean
+					}
+					NOT = { has_star_flag = hms_wormhole_connected@prev }
+					NOT = { prev = { has_star_flag = hms_wormhole_connected@prev } }
+					NOT = { is_same_value = prev }
+				}
+			}
+			log = "Wormhole connection fails for Cluster [this.GetName]: [this.hms_wormhole_fails]"
+			save_event_target_as = hms_hub_wormhole_source
+			change_variable = { which = hms_wormhole_fails value = 1 }
+			#Check if this system has a wormhole
+			if = {
+				limit = {
+					has_natural_wormhole = no
+				}
+				system_event = { id = hms_hubs.7 }
+			}
+			#If it does we have to put it in a different system in the cluster
+			else = {
+				random_system = {
+					limit = {
+						has_natural_wormhole = no
+						NOT = { has_star_flag = hms_hyperlane_hub }
+						distance = {
+							source = prev
+							min_jumps = 1
+							max_jumps = 20
+							type = hyperlane
+						}
+					}
+					system_event = { id = hms_hubs.7 }					
+				}
+			}
+		}
+	}
+}
+system_event = {
+	id = hms_hubs.7
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hms_utilities_generate_hub_wormholes = yes
 	}
 }

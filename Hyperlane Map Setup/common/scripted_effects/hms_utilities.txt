@@ -21,170 +21,93 @@ hms_utilities_load_gateways = {
 	}
 }
 
-# noscope
+#System the wormhole is from is starting scope
 hms_utilities_generate_hub_wormholes = { #There can only be 1 wormhole per system, so they have to be spread throughout the cluster.
-	while = {
+	#Scope to one hub system within a certain distance that doesn't have a connection to this cluster
+	random_system = {
 		limit = {
-			any_system = {
-				has_star_flag = hms_hyperlane_hub
-				OR = {
-					has_natural_wormhole = no
-					count_neighbor_system = {
-						count = 5
-						limit = { has_natural_wormhole = no }
-					}
-				}
-				any_system = {
-					NOT = { is_same_value = PREV }
-					has_star_flag = hms_hyperlane_hub
-					OR = {
-						has_natural_wormhole = no
-						any_neighbor_system = {
-							has_natural_wormhole = no
-						}
-					}
-					distance = {
-						source = prev
-						min_distance >= 1
-						max_distance <= 170
-						type = euclidean
-					}
-					NOT = {
-						distance = {
-							source = prev
-							min_jumps = 1
-							max_jumps = 3
-							type = hyperlane
-						}
-					}
+			has_star_flag = hms_hyperlane_hub
+			distance = {
+				source = prev
+				min_distance >= 1
+				max_distance <= 170
+				type = euclidean
+			}
+			NOT = { has_star_flag = hms_wormhole_connected@event_target:hms_hub_wormhole_source }
+			NOT = { event_target:hms_hub_wormhole_source = { has_star_flag = hms_wormhole_connected@prev } }
+			NOT = { is_same_value = event_target:hms_hub_wormhole_source }
+		}
+		#Check if the hub system has a wormhole, make the connecting wormhole if it doesn't
+		if = {
+			limit = {
+				has_natural_wormhole = no
+			}
+			ROOT = {
+				spawn_natural_wormhole = {
+					bypass_type = wormhole
+					orbit_distance = 100
+					random_pos = yes
 				}
 			}
-		}
-		random_system = {
-			limit = {
-				has_star_flag = hms_hyperlane_hub
+			spawn_natural_wormhole = {
+				bypass_type = wormhole
+				orbit_distance = 100
+				random_pos = yes
+			}
+			link_wormholes = ROOT
+			log = "Linking wormholes between Clusters \\[this.GetName] and \\[event_target:hms_hub_wormhole_source.GetName] through systems \\[root.GetName] and \\[this.GetName]"
+			set_star_flag = hms_wormhole_connected@event_target:hms_hub_wormhole_source
+			event_target:hms_hub_wormhole_source = {
+				set_star_flag = hms_wormhole_connected@prev
 			}
 			if = {
 				limit = {
-					has_natural_wormhole = no
+					has_star_flag = hms_wormhole_connected@event_target:hms_hub_wormhole_source
 				}
-				random_system = {
-					limit = {
-						has_star_flag = hms_hyperlane_hub
-						distance = {
-							source = prev
-							min_distance >= 1
-							max_distance <= 100
-							type = euclidean
-						}
+				log = "Clusters \\[this.GetName] and \\[event_target:hms_hub_wormhole_source.GetName] linked by wormhole"
+				event_target:hms_hub_wormhole_source = {
+					change_variable = { which = hms_wormhole_fails value = -1 }
+				}
+			}
+		}
+		# If it does move to a random system in the cluster that doesn't
+		else = {
+			random_system = {
+				limit = {
+					has_natural_wormhole = no
+					distance = {
+						source = prev
+						type = hyperlane
+						min_jumps = 1
+						max_jumps = 20
+					}
+				}
+				ROOT = {
+					spawn_natural_wormhole = {
+						bypass_type = wormhole
+						orbit_distance = 100
+						random_pos = yes
+					}
+				}
+				spawn_natural_wormhole = {
+					bypass_type = wormhole
+					orbit_distance = 100
+					random_pos = yes
+				}
+				link_wormholes = ROOT
+				prev = {
+					log = "Linking wormholes between Clusters \\[this.GetName] and \\[event_target:hms_hub_wormhole_source.GetName] through systems \\[root.GetName] and \\[prev.GetName]"
+					set_star_flag = hms_wormhole_connected@event_target:hms_hub_wormhole_source
+					event_target:hms_hub_wormhole_source = {
+						set_star_flag = hms_wormhole_connected@prevprev
 					}
 					if = {
 						limit = {
-							has_natural_wormhole = no
+							has_star_flag = hms_wormhole_connected@event_target:hms_hub_wormhole_source
 						}
-						PREV = {
-							spawn_natural_wormhole = {
-								bypass_type = wormhole
-								orbit_distance = 100
-								random_pos = yes
-							}
-						}
-						spawn_natural_wormhole = {
-							bypass_type = wormhole
-							orbit_distance = 100
-							random_pos = yes
-						}
-						link_wormholes = prev
-					}
-					else_if = {
-						limit = {
-							any_neighbor_system = {
-								has_natural_wormhole = no
-							}
-						}
-						random_neighbor_system = {
-							limit = {
-								has_natural_wormhole = no
-							}
-							PREVPREV = {
-								spawn_natural_wormhole = {
-									bypass_type = wormhole
-									orbit_distance = 100
-									random_pos = yes
-								}
-							}
-							spawn_natural_wormhole = {
-								bypass_type = wormhole
-								orbit_distance = 100
-								random_pos = yes
-							}
-							link_wormholes = prevprev
-						}
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					any_neighbor_system = {
-						has_natural_wormhole = no
-					}
-				}
-				random_neighbor_system = {
-					limit = {
-						has_natural_wormhole = no
-					}
-					random_system = {
-						limit = {
-							has_star_flag = hms_hyperlane_hub
-							distance = {
-								source = prevprev
-								min_distance >= 1
-								max_distance <= 100
-								type = euclidean
-							}
-						}
-						if = {
-							limit = {
-								has_natural_wormhole = no
-							}
-							PREVPREV = {
-								spawn_natural_wormhole = {
-									bypass_type = wormhole
-									orbit_distance = 100
-									random_pos = yes
-								}
-							}
-							spawn_natural_wormhole = {
-								bypass_type = wormhole
-								orbit_distance = 100
-								random_pos = yes
-							}
-							link_wormholes = prevprev
-						}
-						else_if = {
-							limit = {
-								any_neighbor_system = {
-									has_natural_wormhole = no
-								}
-							}
-							random_neighbor_system = {
-								limit = {
-									has_natural_wormhole = no
-								}
-								PREVPREVPREV = {
-									spawn_natural_wormhole = {
-										bypass_type = wormhole
-										orbit_distance = 100
-										random_pos = yes
-									}
-								}
-								spawn_natural_wormhole = {
-									bypass_type = wormhole
-									orbit_distance = 100
-									random_pos = yes
-								}
-								link_wormholes = prevprevprev
-							}
+						log = "Clusters \\[this.GetName] and \\[event_target:hms_hub_wormhole_source.GetName] linked by wormhole"
+						event_target:hms_hub_wormhole_source = {
+							change_variable = { which = hms_wormhole_fails value = -1 }
 						}
 					}
 				}
