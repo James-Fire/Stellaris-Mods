@@ -3,13 +3,15 @@ planet_can_migrate_bulk = {
 		has_carrier_flag = CAM_destination
 		has_carrier_flag = CAM_excluded
 	}
-	num_assigned_jobs = { job = civilian value >= 1000 }
-	any_owned_pop_group = {
-		OR = {
-			is_pop_category = civilian
-			is_pop_category = maintenance_drone
+	OR = {
+		num_assigned_jobs = { job = civilian value >= 1000 }
+		any_owned_pop_group = {
+			OR = {
+				is_pop_category = civilian
+				is_pop_category = maintenance_drone
+			}
+			pop_group_size > 1000
 		}
-		pop_group_size > 1000
 	}
 }
 planet_can_migrate_normal = {
@@ -17,13 +19,15 @@ planet_can_migrate_normal = {
 		has_carrier_flag = CAM_destination
 		has_carrier_flag = CAM_excluded
 	}
-	num_assigned_jobs = { job = civilian value >= 100 }
-	any_owned_pop_group = {
-		OR = {
-			is_pop_category = civilian
-			is_pop_category = maintenance_drone
+	OR = {
+		num_assigned_jobs = { job = civilian value >= 100 }
+		any_owned_pop_group = {
+			OR = {
+				is_pop_category = civilian
+				is_pop_category = maintenance_drone
+			}
+			pop_group_size > 100
 		}
-		pop_group_size > 100
 	}
 }
 planet_can_migrate_granular = {
@@ -31,13 +35,15 @@ planet_can_migrate_granular = {
 		has_carrier_flag = CAM_destination
 		has_carrier_flag = CAM_excluded
 	}
-	num_assigned_jobs = { job = civilian value > 0 }
-	any_owned_pop_group = {
-		OR = {
-			is_pop_category = civilian
-			is_pop_category = maintenance_drone
+	OR = {
+		num_assigned_jobs = { job = civilian value >= 1 }
+		any_owned_pop_group = {
+			OR = {
+				is_pop_category = civilian
+				is_pop_category = maintenance_drone
+			}
+			pop_group_size > 1
 		}
-		pop_group_size > 1
 	}
 }
 
