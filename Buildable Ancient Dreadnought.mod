@@ -5,6 +5,6 @@ tags={
 	"Spaceships"
 }
 picture="thumbnail.png"
-supported_version="v4.4.*"
+supported_version="v4.5.*"
 path="/home/sam/.local/share/Paradox Interactive/Stellaris/mod/Buildable Ancient Dreadnought"
 remote_file_id="1358146101"

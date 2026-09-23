@@ -3,6 +3,6 @@ tags={
 	"Buildings"
 }
 picture="thumbnail.png"
-supported_version="v4.4.*"
+supported_version="v4.5.*"
 path="/home/sam/.var/app/com.valvesoftware.Steam/data/Paradox Interactive/Stellaris/C:/Users/godis/Documents/Paradox Interactive/Stellaris/mod/James Fire's University"
 remote_file_id="1428221285"

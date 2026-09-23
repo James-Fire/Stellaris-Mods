@@ -2,6 +2,6 @@ name="No Jump Drives"
 tags={
 	"FTL"
 }
-supported_version="v4.4.*"
+supported_version="v4.5.*"
 path="/home/sam/.local/share/Paradox Interactive/Stellaris/mod/No Jump Drives"
 remote_file_id="1353411125"
